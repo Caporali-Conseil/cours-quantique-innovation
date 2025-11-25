@@ -1,4 +1,21 @@
+ 
+
+# Fichiers et dossiers générés par Quarto/RStudio
 .Rproj.user
 .Rhistory
-.RData
-.Ruserdata
+.Rdata
+.quarto/
+/docs/
+**/*.html
+**/*.pdf
+**/*.docx
+**/*.ipynb
+**/*.log
+
+# Dossiers d'environnement Python
+venv/
+.venv/
+__pycache__/
+
+# Dossiers de données temporaires (si vous en utilisez)
+data/processed/
