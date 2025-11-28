@@ -1,26 +1,41 @@
- 
 project:
   type: website
-  title: "Cadre d'Innovation pour l'Architecture des Systèmes de l'Ère Quantique"
-# ... (Reste de la configuration)
+  title: "Blog Scientifique : le laboratoire de Caporali Conseil"
+  output-dir: docs
 
 website:
-  title: "stephane"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Accueil
+      - text: "Modélisation MAOS"
+        href: maos_introduction.qmd
+      - text: "Preuve Scientifique & Calculs"
+        menu:
+          - text: "Thermodynamique du Consensus"
+            href: thermodynamique_consensus.qmd
+          - text: "Quantique : Fondements Mathématiques"
+            href: pqc_math_base.qmd
+          - text: "Archives Orvium / Preprints"
+            href: publications_externes.qmd
+      - text: "Programme de Cours"
+        href: cours/plan.qmd # J'ai rétabli votre lien vers le plan de cours
+      - text: "Publications Générales"
+        href: publications.qmd # Lien générique pour les autres articles
+    right:
+      - href: contact.qmd
+        text: Contacter
+      - icon: github # Si vous utilisez GitHub pour Quarto Publish
+        href: "https://github.com/votre-compte"
+      - icon: linkedin
+        href: "https://linkedin.com/in/votre-profil"
+
+  page-footer:
+    right: "Propriété de Caporali Conseil | {{< current-year >}}"
+    left: "Basé sur les Sciences Physiques et le MAOS"
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: united
+    css: custom_styles.css
     toc: true
-    
-
-
-
-

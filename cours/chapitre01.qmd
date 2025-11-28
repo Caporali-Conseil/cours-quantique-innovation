@@ -49,3 +49,27 @@ Comment ces principes changent la façon dont nous devons concevoir les système
 ---
 
 **Le prochain chapitre (Chapitre 2) développera l'application de la Thermodynamique de l'Information pour définir les limites physiques et l'efficacité des architectures DLT.**
+
+
+```{python}
+# Importer les bibliothèques nécessaires
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Générer des données pour la sinusoïde
+x = np.linspace(0, 2 * np.pi, 400) # De 0 à 2*pi, 400 points
+y = np.sin(x) # Calculer le sinus de chaque point x
+
+# Créer le graphique
+plt.figure(figsize=(10, 6)) # Taille de la figure
+plt.plot(x, y, label='sin(x)', color='blue') # Tracer la courbe
+plt.title('Graphique de la fonction sinus') # Titre du graphique
+plt.xlabel('Valeur de x (radians)') # Étiquette de l'axe X
+plt.ylabel('Valeur de sin(x)') # Étiquette de l'axe Y
+plt.grid(True) # Afficher une grille
+plt.legend() # Afficher la légende
+
+# Afficher le graphique (Quarto le capture automatiquement)
+plt.show() 
+```
+

@@ -1,0 +1,67 @@
+📚 Feuille de Route : Risque Post-Quantique & Thermodynamique de l'Information
+
+Ce plan de cours est conçu pour les étudiants en Master et Ingénierie, spécialisés en Réseaux, Cryptographie et Sécurité des Systèmes d'Information. Il établit le lien crucial entre les principes de l'Information Physique (Thermodynamique, Entropie) et les défis opérationnels de la sécurité post-quantique (DLT, Blockchain, Systèmes de Communication).
+
+I. Les Fondamentaux du Consensus (Physique & Réseau)
+
+Chapitre 1 : Le Risque Existentiel Quantique et la Rareté
+
+Le concept de Rareté Numérique (digital scarcity) vs. Rareté Physique (information, énergie).
+
+La menace des algorithmes quantiques (Shor et Grover) sur les infrastructures PKI existantes.
+
+Introduction à la Thermodynamique de l'Information et son impact sur la confiance distribuée.
+
+Lien avec la sécurité : Pourquoi la décentralisation seule n'est pas suffisante contre une attaque quantique.
+
+Chapitre 2 : L'Émergence du Consensus (Théorie de l'Information Appliquée)
+
+Le rôle de l'entropie et de la dissipation (Proof-of-Work) dans la création de la confiance.
+
+Analyse de la Preuve de Travail (PoW) et de la Preuve d'Enjeu (PoS) sous l'angle énergétique.
+
+Introduction aux algorithmes de consensus résilients qui minimisent la dépendance à la force brute.
+
+Lien avec la sécurité : Modélisation de la robustesse des systèmes de vote et de validation.
+
+II. Ingénierie des Systèmes Résilients
+
+Chapitre 3 : Architecture et Sécurité des Réseaux DLT
+
+Modélisation des réseaux décentralisés (DLT) comme des systèmes physiques ouverts.
+
+Audit des vecteurs d'attaque spécifiques aux architectures DLT critiques.
+
+Conception d'un modèle de sécurité basé sur les propriétés intrinsèques de l'Information Non-Physique (INP).
+
+Chapitre 4 : Implémentation de la Cryptographie Post-Quantique (PQC)
+
+Présentation des familles de PQC (Cryptographie basée sur les réseaux euclidiens, codes, etc.).
+
+Méthodologie d'intégration des algorithmes PQC dans les piles de protocoles existantes (TLS, VPN).
+
+Cas Pratique Ingénierie : Plan de migration d'une PKI vers un standard PQC hybride, sans interruption de service.
+
+III. Sécurité Opérationnelle et Gouvernance (Audit MAOS)
+
+Chapitre 5 : Résilience et Modélisation du Risque (MAOS - Modèle d'Audit Opérationnel et Stratégique)
+
+Présentation détaillée de votre modèle MAOS pour l'évaluation des risques cryptographiques et réseau.
+
+Méthodes pour quantifier l'exposition à la menace quantique (Time-to-Attack vs. Time-to-Migrate).
+
+Gouvernance de la clé, gestion de la distribution et du cycle de vie des certificats à l'ère PQC.
+
+Chapitre 6 : Cadres Législatifs et Standards (NIS 2, eIDAS, NIST)
+
+Conformité réglementaire face aux exigences de résilience quantique.
+
+Rôle de la normalisation internationale dans l'adoption des solutions PQC.
+
+Chapitre 7 : Prochaines Étapes de l'Innovation
+
+Exploration des technologies émergentes basées sur la preuve de connaissance (ZKP).
+
+Stratégie d'investissement et de R&D pour un Internet résilient à long terme.
+
+Conclusion : Ce programme unique prépare les ingénieurs à penser la sécurité non pas comme un outil logiciel, mais comme un défi fondamental lié à l'information et à la physique.

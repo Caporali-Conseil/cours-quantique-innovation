@@ -1,0 +1,85 @@
+🔬 Recherche & Publications (Caporali-Conseil)
+
+👤 Bio de l'Expertise
+
+[Votre Nom/Prénom] est le fondateur de Caporali-Conseil et l'architecte du Modèle d'Audit Opérationnel et Stratégique (MAOS). Fort d'une formation en Physique Fondamentale et d'une expertise reconnue en Ingénierie de la Sécurité des Systèmes d'Information, il se spécialise dans les défis de la sécurité Post-Quantique (PQC) et l'architecture des systèmes de confiance distribuée (DLT).
+
+Son approche unique consiste à appliquer les principes de la Thermodynamique de l'Information (Principe de Landauer, Entropie) pour modéliser et résoudre les vulnérabilités du monde numérique. Cette perspective non-conventionnelle garantit des solutions de résilience avant-gardistes pour les infrastructures critiques.
+
+Nos travaux de recherche servent de fondement théorique à l'approche de conseil que nous proposons. Ils établissent le lien entre la physique fondamentale de l'information et l'ingénierie des systèmes de sécurité résilients. Chaque publication est une preuve de concept soutenant le Modèle MAOS et notre Feuille de Route PQC.
+
+1. Articles en Pré-publication & Working Papers (via Orvium ou Archive)
+
+Cette section regroupe nos travaux les plus récents, en attente d'évaluation par les pairs, qui sont la source directe de notre cours sur le risque post-quantique.
+
+Titre du Travail
+
+Plateforme / Statut
+
+Date
+
+Thèmes Clés
+
+De la Thermodynamique à la Sécurité : L'impact du principe de Landauer sur l'ingénierie du consensus distribué.
+
+Orvium (ID: OR-2025-A7)
+
+Mai 2025
+
+Information Physique, Consensus PoW/PoS, DLT, Entropie
+
+Résilience Quantique des PKI : Analyse des coûts énergétiques d'une migration hybride post-quantique.
+
+En révision interne
+
+Mars 2025
+
+Cryptographie PQC, Ingénierie Réseau, Audit
+
+Le Modèle MAOS : Application des principes de la physique aux architectures de sécurité modernes.
+
+Working Paper
+
+Janvier 2025
+
+Audit Opérationnel, Modélisation du Risque, Gouvernance
+
+2. Rapports Techniques et Études de Cas
+
+Ces documents se concentrent sur l'application pratique de nos modèles et sont destinés aux professionnels de l'ingénierie et de la conformité.
+
+Rapport d'Audit : Transition Post-Quantique d'un Système Financier Distribué
+
+Objectif : Évaluation de la vulnérabilité d'un réseau DLT de niveau 1 face à une attaque quantique de 2040.
+
+Méthodologie : Application de l'approche Time-to-Migrate (TTM) pour définir une feuille de route de 5 ans.
+
+Livrable Clé : Recommandations d'intégration des primitives PQC (Lattice-based).
+
+Étude : L'Information Non-Physique (INP) dans la Sécurité des Communications
+
+Contenu : Démonstration des limites des protocoles de communication classiques face aux manipulations d'information à basse énergie.
+
+Lien avec NIS 2 : Proposition d'un cadre de conformité augmentée pour les systèmes critiques.
+
+3. Conférences et Présentations (Sélection)
+
+Événement
+
+Sujet de la Présentation
+
+Lieu et Date
+
+Global Cyber-Security Summit
+
+Au-delà du Chiffrement : La Sécurité comme Problème Thermodynamique.
+
+Londres, Septembre 2024
+
+DLT & Innovation Forum
+
+De l'Entropie à la Confiance : Une nouvelle perspective sur le Consensus.
+
+Paris, Juin 2024
+
+Si vous souhaitez obtenir une version détaillée de nos publications ou discuter d'une collaboration en R&D, veuillez utiliser la page Contacter.

@@ -2,6 +2,49 @@
 title: "stephane"
 ---
 
-This is a Quarto website.
+🏠 Caporali-Conseil : Sécurité et Innovation Basées sur la Physique
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Bienvenue chez Caporali-Conseil, le cabinet de conseil qui repense la sécurité des systèmes d'information à partir de ses fondements les plus robustes : la physique et la thermodynamique de l'information.
+
+Notre Vision : L'Information est Physique
+
+La cryptographie et la sécurité réseau actuelles reposent sur des hypothèses qui seront bientôt caduques face à l'avènement de l'informatique quantique. Notre conviction est simple : pour créer des systèmes numériques véritablement résilients, nous devons traiter l'information comme une ressource physique rare, régie par l'entropie et la dissipation (travaux de Landauer).
+
+Nous transformons la menace quantique en une opportunité stratégique pour nos clients.
+
+💡 Notre Proposition de Valeur Unique
+
+Nous offrons une double expertise indispensable pour l'avenir :
+
+Compétence
+
+Description
+
+Impact pour l'Ingénierie
+
+Physique Fondamentale
+
+Application de la Thermodynamique et de la Théorie de la Rareté à l'information numérique.
+
+Conception de systèmes de consensus (DLT, Blockchain) intrinsèquement plus robustes.
+
+Ingénierie de la Résilience PQC
+
+Audit, modélisation du risque (via le Modèle MAOS), et intégration des primitives de Cryptographie Post-Quantique.
+
+Feuille de route claire et conforme pour la migration des infrastructures PKI critiques.
+
+Pour les Écoles d'Ingénieurs (Réseaux et Sécurité)
+
+Nous proposons un programme de cours inédit qui comble le fossé entre la théorie scientifique et l'application pratique.
+
+➡️ Consultez notre Feuille de Route : Risque Post-Quantique & Thermodynamique pour découvrir comment former la prochaine génération d'experts en sécurité qui pensent au-delà du simple code.
+
+Nos Derniers Travaux
+
+Nos recherches établissent notre leadership sur le sujet. Nous publions régulièrement sur des plateformes de pré-publication pour assurer la diffusion rapide de nos découvertes.
+
+➡️ Visitez la page Mes publications pour accéder à nos travaux sur la Quantification de la Rareté et le Modèle MAOS.
+
+Prêt à transformer la menace quantique en avantage concurrentiel ?
+Contactez Caporali-Conseil pour une consultation stratégique..
