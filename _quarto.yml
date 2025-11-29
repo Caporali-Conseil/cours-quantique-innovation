@@ -12,7 +12,7 @@ website:
         href: maos_introduction.qmd
       - text: "Preuve Scientifique & Calculs"
         menu:
-          - text: "Thermodynamique du Consensus"
+          - text: "Thermodynamique : Cycle de Carnot et DLT"
             href: thermodynamique_consensus.qmd
           - text: "Quantique : Fondements Mathématiques"
             href: pqc_math_base.qmd
