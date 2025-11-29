@@ -2,49 +2,40 @@
 title: "stephane"
 ---
 
-🏠 Caporali-Conseil : Sécurité et Innovation Basées sur la Physique
+# Introduction
 
-Bienvenue chez Caporali-Conseil, le cabinet de conseil qui repense la sécurité des systèmes d'information à partir de ses fondements les plus robustes : la physique et la thermodynamique de l'information.
+Bienvenue dans l'espace de recherche et de modélisation de Caporali Conseil. Notre laboratoire est dédié à l'ingénierie de la résilience des systèmes complexes en l'ancrant dans les lois fondamentales de la physique.
 
-Notre Vision : L'Information est Physique
+Nous transformons la cybersécurité et la gouvernance en un problème de Thermodynamique de l'Information.
 
-La cryptographie et la sécurité réseau actuelles reposent sur des hypothèses qui seront bientôt caduques face à l'avènement de l'informatique quantique. Notre conviction est simple : pour créer des systèmes numériques véritablement résilients, nous devons traiter l'information comme une ressource physique rare, régie par l'entropie et la dissipation (travaux de Landauer).
+"L'information est physique, et les lois de la physique sont les lois de l'information."
 
-Nous transformons la menace quantique en une opportunité stratégique pour nos clients.
+— Rolf Landauer, 1991
 
-💡 Notre Proposition de Valeur Unique
+# Utilisez les liens ci-dessous pour accéder aux différents travaux du laboratoire :
 
-Nous offrons une double expertise indispensable pour l'avenir :
+## 1. Fondements théoriques de la quantique
 
-Compétence
+Plongez dans les bases scientifiques de notre méthode. Découvrez comment le Principe de Landauer quantifie le coût énergétique minimal de l'effacement de l'information et comment la Divergence de Kullback-Leibler mesure la distance entre votre état de sécurité actuel et l'état de résilience PQC souhaité.
 
-Description
+Accès : Fondements Théoriques (CC-BY)
 
-Impact pour l'Ingénierie
+## 2. Le Programme de Cours 
 
-Physique Fondamentale
+Nous partageons notre expertise à travers une formation complète de 30 heures destinée aux architectes et ingénieurs. Cette formation couvre l'intégralité du cycle de l'information physique, des fondements quantiques aux primitives PQC.
 
-Application de la Thermodynamique et de la Théorie de la Rareté à l'information numérique.
+Accès : Programme de Cours
 
-Conception de systèmes de consensus (DLT, Blockchain) intrinsèquement plus robustes.
+## 3. Publications & présentations
 
-Ingénierie de la Résilience PQC
+Retrouvez ici l'ensemble de nos contributions à la communauté scientifique et technique, incluant des articles de recherche originaux, des présentations de conférence et des modélisations appliquées de la méthode MAOS.
 
-Audit, modélisation du risque (via le Modèle MAOS), et intégration des primitives de Cryptographie Post-Quantique.
+Accès : Articles de Recherche
 
-Feuille de route claire et conforme pour la migration des infrastructures PKI critiques.
+Accès : Présentations et Conférences
 
-Pour les Écoles d'Ingénieurs (Réseaux et Sécurité)
+## 🔑 Contact et Collaboration
 
-Nous proposons un programme de cours inédit qui comble le fossé entre la théorie scientifique et l'application pratique.
+Vous souhaitez discuter d'un audit de résilience, d'une modélisation de risque spécifique (PQC, DLT) ou intégrer la méthode MAOS dans votre stratégie ?
 
-➡️ Consultez notre Feuille de Route : Risque Post-Quantique & Thermodynamique pour découvrir comment former la prochaine génération d'experts en sécurité qui pensent au-delà du simple code.
-
-Nos Derniers Travaux
-
-Nos recherches établissent notre leadership sur le sujet. Nous publions régulièrement sur des plateformes de pré-publication pour assurer la diffusion rapide de nos découvertes.
-
-➡️ Visitez la page Mes publications pour accéder à nos travaux sur la Quantification de la Rareté et le Modèle MAOS.
-
-Prêt à transformer la menace quantique en avantage concurrentiel ?
-Contactez Caporali-Conseil pour une consultation stratégique..
+Accès : Contacter Caporali Conseil

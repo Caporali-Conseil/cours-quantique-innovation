@@ -33,7 +33,11 @@ Présentation détaillée du Modèle d'Audit Orienté Sécurité (MAOS).L'Outil 
 ## Chapitre 6 : Cadres Législatifs et Standards (NIS 2, eIDAS, NIST)
 
 Conformité réglementaire face aux exigences de résilience quantique (approche proactive vs. réactive).Rôle de la normalisation internationale dans l'adoption des solutions PQC.
-
+ 
 ## Chapitre 7 : Prochaines Étapes de l'Innovation
 
-Exploration des technologies émergentes basées sur la preuve de connaissance (ZKP) et leur lien avec la dissipation minimale.Stratégie d'investissement et de R&D pour un Internet résilient à long terme.Conclusion :Ce programme unique prépare les ingénieurs à penser la sécurité non pas comme un outil logiciel, mais comme un défi fondamental lié à l'information et à la physique. Il forme les Hommes de Conviction nécessaires à la transition.
+Exploration des technologies émergentes basées sur la preuve de connaissance (ZKP) et leur lien avec la dissipation minimale.Stratégie d'investissement et de R&D pour un Internet résilient à long terme.
+
+# Conclusion :
+
+Ce programme unique prépare les ingénieurs à penser la sécurité non pas comme un outil logiciel, mais comme un défi fondamental lié à l'information et à la physique. Il forme les Hommes de Conviction nécessaires à la transition.

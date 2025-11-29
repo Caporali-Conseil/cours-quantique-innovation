@@ -8,30 +8,26 @@ website:
     left:
       - href: index.qmd
         text: Accueil
-      - text: "Modélisation MAOS"
-        href: maos_introduction.qmd
-      - text: "Preuve Scientifique & Calculs"
+      - href: cours/plan.qmd
+        text: "Programme de Cours"
+      - text: "Publications"
         menu:
-          - text: "Thermodynamique : Cycle de Carnot et DLT"
-            href: thermodynamique_consensus.qmd
-          - text: "Quantique : Fondements Mathématiques"
-            href: pqc_math_base.qmd
-          - text: "Archives Orvium / Preprints"
-            href: publications_externes.qmd
-      - text: "Programme de Cours"
-        href: cours/plan.qmd # J'ai rétabli votre lien vers le plan de cours
-      - text: "Publications Générales"
-        href: publications.qmd # Lien générique pour les autres articles
+          - text: "Articles de Recherche"
+            href: publications/articles.qmd
+          - text: "Présentations et Conférences"
+            href: publications/presentations.qmd
+          - text: "Fondement theorique de la quantique (CC-BY)"
+            href: publications/fondements.qmd
     right:
       - href: contact.qmd
         text: Contacter
-      - icon: github # Si vous utilisez GitHub pour Quarto Publish
+      - icon: github
         href: "https://github.com/votre-compte"
       - icon: linkedin
         href: "https://linkedin.com/in/votre-profil"
 
   page-footer:
-    right: "Propriété de Caporali Conseil | {{< current-year >}}"
+    right: "Caporali Conseil | Tous droits réservés | 2026"
     left: "Basé sur les Sciences Physiques et le MAOS"
 
 format:
