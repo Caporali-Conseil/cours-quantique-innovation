@@ -1,15 +1,12 @@
 ---
-title: "Publications et Articles de Recherche"
+title: "Publications et articles de recherche"
 ---
-listing: false
-
-# Publications et Articles de Recherche
 
 Cette page présente la liste des publications scientifiques et des communications techniques liées aux travaux de Caporali Conseil, notamment dans l'application de l'approche MAOS (Méthode d'Analyse des Opérations Systémiques) aux systèmes décentralisés et à la physique fondamentale.
 
-# I. Articles à Comité de Lecture (Blockchain et Thermodynamique)
+# I. Blockchain et thermodynamique
 
-Ces articles explorent les liens entre les mécanismes de consensus de la blockchain et les principes de la thermodynamique et de la théorie de l'information (Landauer, DKL).
+*Ces articles explorent les liens entre les mécanismes de consensus de la blockchain et les principes de la thermodynamique et de la théorie de l'information (Landauer, DKL).*
 
 Caporali, S. (18/04/2024). "Blockchain consensus based on a work : an interpretation by the thermodynamics and application to state machine and to blockchain architecture" (Prépublication/Preprint). Communauté Blockchain, Orvium.
 
@@ -22,9 +19,9 @@ Résumé : Une approche originale, inspirée des concepts de la thermodynamique,
 
 Lien vers la publication Orvium
 
-# II. Rapports et Analyses Techniques (Gouvernance et Modélisation)
+# II. Gouvernance et modélisation
 
-Ces documents se concentrent sur la gouvernance, les défis informatiques et les pratiques industrielles associées aux technologies de registres distribués (DLT).
+*Ces documents se concentrent sur la gouvernance, les défis informatiques et les pratiques industrielles associées aux technologies de registres distribués (DLT)*.
 
 Caporali, S. (07/04/2022). "Governance with Consensus Mechanisms for Blockchain : Overview and Trends" (Article). Communauté Blockchain, Orvium.
 
@@ -42,10 +39,3 @@ Caporali, S. (27/12/2020). "Time, Consensus and Governance by Design for Blockch
 
 Résumé : Exploration de l'enjeu du paramètre temps pour la gouvernance de la blockchain, proposant le concept de structure temporelle et l'approche de la gouvernance par la conception (governance by design).Lien vers la publication Orvium
 
-# III. Communications et Présentations
-
-Caporali, S. (13/11/2025 - Date affichée). "Slide deck : discussion on issues related to security and anonymity on blockchains." (Poster/Slide Deck). Communauté Blockchain, Orvium.
-
-Résumé : Présentation de diapositives de juin 2018 pour le groupe de travail Trans Europe Experts sur les enjeux de sécurité et d'anonymat.
-
-Lien vers la publication Orvium

@@ -1,0 +1,5 @@
+Fichiers et dossiers que Quarto doit ignorer pendant la compilation
+
+Ignorer le dossier contenant le contenu que nous vendons
+
+sources_privees/

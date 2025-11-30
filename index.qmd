@@ -1,8 +1,6 @@
 ---
-title: "stephane"
+title: "Accueil"
 ---
-
-# Introduction
 
 Bienvenue dans l'espace de recherche et de modélisation de Caporali Conseil. Notre laboratoire est dédié à l'ingénierie de la résilience des systèmes complexes en l'ancrant dans les lois fondamentales de la physique.
 
@@ -20,7 +18,7 @@ Plongez dans les bases scientifiques de notre méthode. Découvrez comment le Pr
 
 Accès : Fondements Théoriques (CC-BY)
 
-## 2. Le Programme de Cours 
+## 2. Le Programme de cours 
 
 Nous partageons notre expertise à travers une formation complète de 30 heures destinée aux architectes et ingénieurs. Cette formation couvre l'intégralité du cycle de l'information physique, des fondements quantiques aux primitives PQC.
 
@@ -33,9 +31,3 @@ Retrouvez ici l'ensemble de nos contributions à la communauté scientifique et 
 Accès : Articles de Recherche
 
 Accès : Présentations et Conférences
-
-## 🔑 Contact et Collaboration
-
-Vous souhaitez discuter d'un audit de résilience, d'une modélisation de risque spécifique (PQC, DLT) ou intégrer la méthode MAOS dans votre stratégie ?
-
-Accès : Contacter Caporali Conseil

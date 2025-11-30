@@ -1,9 +1,12 @@
 project:
   type: website
-  title: "Blog Scientifique : le laboratoire de Caporali Conseil"
+  title: "Blog Scientifique : le laboratoire de Caporali Conseil" 
   output-dir: docs
 
+  
 website:
+  
+  
   navbar:
     left:
       - href: index.qmd

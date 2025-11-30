@@ -1,43 +1,27 @@
----
-title: "Plan de Cours : Risque Post-Quantique & Thermodynamique de l'Information"
----
+Plan Révisé : Cryptographie et Limites Physiques de l'Information (15h)
 
-Plan de Cours : Risque Post-Quantique & Thermodynamique de l'Information (Module 25h)
+Titre du Module : "Cyber-Résilience et Physique de l'Information : Des Algorithmes de Consensus à la Post-Quantique"
 
-Ce plan de cours est conçu pour les étudiants en Master et Ingénierie, spécialisés en Réseaux, Cryptographie et Sécurité des Systèmes d'Information. Il établit le lien crucial entre les principes de l'Information Physique (Thermodynamique, Entropie) et les défis opérationnels de la sécurité post-quantique (DLT, Blockchain, Systèmes de Communication). L'objectif est de former des ingénieurs capables de justifier des feuilles de route stratégiques, plutôt que de simples cryptographes.
+Public Cible : Administrateurs Réseau, Ingénieurs Sécurité, Apprentis.
 
-# I. Les Fondamentaux du Risque Physique (Landauer & Consensus)
+Chapitre 1 : Cryptographie Classique en Réseau et Menaces Futures (3h)
 
-## Chapitre 1 : Le Risque Existentiel Quantique et l'Énergie
+Objectif : Ancrer immédiatement le module dans leur réalité professionnelle (sécurité réseau) et introduire la menace quantique.L'essentiel de la Cryptographie appliquée (Sécurité) :Le rôle des Hachages (intégrité) et des Signatures Numériques (authentification) dans les protocoles réseau (TLS/SSL).Les piliers asymétriques : RSA et Courbes Elliptiques (ECC) – où sont-ils utilisés concrètement ?Les Limites de la Cryptographie Classique :Rappel du modèle de Turing et de la complexité (P vs NP).Présentation de la "menace quantique" : les algorithmes de Shor et de Grover (sans les détailler, juste l'impact sur les clés).
 
-Le concept de Rareté Numérique vs. Rareté Physique (information, énergie).La menace des algorithmes quantiques (Shor et Grover) sur les infrastructures PKI existantes.Introduction au Principe de Landauer : La borne inférieure thermodynamique de la sécurité et son application à l'évaluation du coût d'une attaque.Lien avec la sécurité : Pourquoi la décentralisation seule n'est pas suffisante contre une attaque quantique.
+Chapitre 2 : Consensus, Énergie et Loi de Landauer (3h)Objectif : Intégrer votre expertise unique (Landauer) en l'appliquant directement à un cas concret connu des professionnels : les protocoles de consensus et leur coût.Modélisation Énergétique des Systèmes Distribués :Le Nœud de Réseau/Serveur comme Machine Thermique.La Loi de Landauer : Coût minimal de l'effacement de l'information (introduction du concept physique).Application Pratique au Consensus :L'algorithme de Consensus (ex. Proof-of-Work ou même un protocole Raft) modélisé comme une Réduction d'Entropie de Shannon (information).Le coût énergétique du "travail" (calcul) pour établir la confiance.Transition : Pourquoi optimiser les algorithmes ne suffira pas face aux limites fondamentales (le mur énergétique).
 
-## Chapitre 2 : L'Algorithme de Consensus comme Machine Thermique
+Chapitre 3 : Les Fondamentaux de l'Information Quantique pour l'Ingénieur (3h)Objectif : Fournir le vocabulaire nécessaire pour comprendre les PQC et les enjeux futurs, en restant très conceptuel.De la Physique à l'Informatique :Passage du bit (0 ou 1) au qubit (superposition).L'intrication et la non-localité (expliquée par ses conséquences, pas par les équations). ShutterstockLes circuits quantiques et les portes (NOT, CNOT) : les briques de base du calcul.L'Algèbre Linéaire nécessaire :La notation Bra-Ket : simplement comme un outil pour représenter les états (sans formalisme excessif).Les matrices de transformation et les mesures (la décohérence comme effet de la mesure).
 
-Le rôle de l'entropie et de la dissipation (Proof-of-Work) dans la création de la confiance.Théorie du Coût : Analyse de la Preuve de Travail (PoW) et de la Preuve d'Enjeu (PoS) sous l'angle énergétique et entropique.Ingénierie des algorithmes de consensus résilients qui minimisent la dépendance à la force brute.Lien avec l'Architecture Réseau : Modélisation de la robustesse des systèmes de vote et de validation distribués (DLT).
+Chapitre 4 : La Cybersécurité Post-Quantique (PQC) : Solutions Appliquées (3h)Objectif : Le cœur du module pour les ingénieurs sécurité/réseau. Que faire aujourd'hui face à la menace quantique ?
 
-# II. Ingénierie des Systèmes Résilients (PQC & DLT)
+L'Horizon Post-Quantique :Vue d'ensemble des efforts de standardisation (NIST).Les Familles PQC : Présentation des principales familles d’algorithmes de substitution.
 
-## Chapitre 3 : Architecture et Sécurité des Réseaux DLT
+Cryptographie basée sur les Réseaux (Lattices) : (Ex: Kyber, Dilithium).
 
-Modélisation des réseaux décentralisés (DLT) comme des systèmes physiques ouverts.Audit des vecteurs d'attaque spécifiques aux architectures DLT critiques.Conception d'un modèle de sécurité basé sur les propriétés intrinsèques de l'Information Non-Physique (INP).Cas d'Étude : Conception d'une couche de résilience PQC pour les transactions dans un environnement Blockchain.
+Cryptographie basée sur le Hachage (Hash-based) : (Ex: SPHINCS+).
 
-## Chapitre 4 : Implémentation Architecturale de la Cryptographie Post-Quantique (PQC)
+Cryptographie basée sur les Codes Correcteurs (Ex: Classic McEliece).
 
-Présentation des familles de PQC (Cryptographie basée sur les réseaux euclidiens, codes, etc.) avec un accent sur les enjeux d'intégration.Méthodologie d'intégration des algorithmes PQC dans les piles de protocoles existantes (TLS, VPN, IPsec).Cas Pratique Ingénierie : Plan de migration d'une PKI vers un standard PQC hybride, en appliquant l'analogie TDM/VoIP à la gestion du changement.III. Sécurité Opérationnelle et Gouvernance (Audit MAOS)
+Défis d'Implémentation Réseau :Considérations sur la taille des clés et des signatures PQC (le défi pour le TLS/SSL).Stratégies de transition (approche hybride).
 
-## Chapitre 5 : Quantification du Risque par la Géométrie de l'Information
-
-Présentation détaillée du Modèle d'Audit Orienté Sécurité (MAOS).L'Outil $D_{KL}$ (Divergence de Kullback-Leibler) : Utilisation pour quantifier l'effort de migration (Time-to-Migrate ou TTM) et l'exposition au risque résiduel.Méthodes pour quantifier l'exposition à la menace quantique (Time-to-Attack vs. Time-to-Migrate).Gouvernance de la clé, gestion de la distribution et du cycle de vie des certificats à l'ère PQC.
-
-## Chapitre 6 : Cadres Législatifs et Standards (NIS 2, eIDAS, NIST)
-
-Conformité réglementaire face aux exigences de résilience quantique (approche proactive vs. réactive).Rôle de la normalisation internationale dans l'adoption des solutions PQC.
- 
-## Chapitre 7 : Prochaines Étapes de l'Innovation
-
-Exploration des technologies émergentes basées sur la preuve de connaissance (ZKP) et leur lien avec la dissipation minimale.Stratégie d'investissement et de R&D pour un Internet résilient à long terme.
-
-# Conclusion :
-
-Ce programme unique prépare les ingénieurs à penser la sécurité non pas comme un outil logiciel, mais comme un défi fondamental lié à l'information et à la physique. Il forme les Hommes de Conviction nécessaires à la transition.
+Chapitre 5 : Fiabilité Future et Limites Thermodynamiques (3h)Objectif : Revenir sur l'aspect théorique (votre expertise) pour donner une vision R&D et conclure sur la fiabilité.L'Entropie dans l'Ère Quantique :L'Entropie de Von Neumann : un outil pour mesurer le désordre quantique et l'information.Décohérence : source d'erreur, de dissipation, et son impact sur la fiabilité des systèmes quantiques.Vers des Systèmes plus Fiables (R&D) :Codes Correcteurs d'Erreurs Quantiques (QECC) : le concept de redondance pour protéger l'information physique.Conclusion : L'information physique et le futur de l'informatique tolérante aux fautes (FTQC).Ce plan révisé met les concepts de Cybersécurité (Ch. 1 & 4) en position de force, utilisant votre approche Landauer/Thermodynamique (Ch. 2 & 5) pour donner une profondeur unique et avant-gardiste à l'ensemble. Vous vendez ainsi une formation de pointe sur la PQC avec une fondation physique inédite, justifiant pleinement les 15 heures.

@@ -1,0 +1,22 @@
+---
+title: "Communications et Présentations"
+--- 
+
+
+Cette section regroupe les communications scientifiques (posters, slides) et les présentations publiques données lors de conférences, séminaires ou groupes de travail.
+
+# Communications clés
+
+Titre : Slide deck : discussion on issues related to security and anonymity on blockchains.
+
+Auteur : S. CaporaliType : Poster/Slide Deck
+
+Événement : Communauté Blockchain, Orvium
+
+Date : 13/11/2025 (Date affichée)
+
+Résumé : Présentation de diapositives de juin 2018 pour le groupe de travail Trans Europe Experts sur les enjeux de sécurité et d'anonymat.
+
+Lien vers la publication Orvium : [Lien vers la publication Orvium]
+
+ 
