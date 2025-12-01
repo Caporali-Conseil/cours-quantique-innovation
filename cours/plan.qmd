@@ -38,7 +38,7 @@ Public Cible : administrateurs réseau, ingénieurs sécurité.
 - L'Algèbre linéaire nécessaire : La notation Bra-Ket.
 - Les matrices de transformation et les mesures (la décohérence comme effet de la mesure).
 
-**Chapitre 4 : la Cybersécurité post-quantique (PQC) : solutions appliquées (3h)**
+**Chapitre 4 : la Cybersécurité post-quantique (PQC) : solutions appliquées (2h)**
 
 *Objectif : Le cœur du module pour les ingénieurs sécurité/réseau. Que faire aujourd'hui face à la menace quantique ?*
 
@@ -49,7 +49,7 @@ Public Cible : administrateurs réseau, ingénieurs sécurité.
 - Cryptographie basée sur les codes correcteurs (Ex: Classic McEliece).
 - Défis d'implémentation réseau : considérations sur la taille des clés et des signatures PQC (le défi pour le TLS/SSL).Stratégies de transition (approche hybride).
 
-**Chapitre 5 : fiabilité future et limites thermodynamiques (3h)**
+**Chapitre 5 : fiabilité future et limites thermodynamiques (2h)**
 
 *Objectif : Revenir sur l'aspect théorique (votre expertise) pour donner une vision R&D et conclure sur la fiabilité.*
 
@@ -57,4 +57,8 @@ Public Cible : administrateurs réseau, ingénieurs sécurité.
 - Décohérence : source d'erreur, de dissipation, et son impact sur la fiabilité des systèmes quantiques.
 - Vers des systèmes plus fiables (R&D) : Codes Correcteurs d'erreurs quantiques (QECC) : le concept de redondance pour protéger l'information physique.
 
-**Conclusion : l'information physique et le futur de l'informatique tolérante aux fautes (FTQC).**
+**Etude de cas (3 h)**
+
+Exemple : Vous êtes ingénieur en architecture de systèmes distribués auprès de l'Autorité de Régulation Financière (ARF), chargée de superviser le système de compensation des règlements interbancaires (un réseau privé de 15 nœuds majeurs). La direction vous mandate pour concevoir la prochaine génération de ce registre, qui doit être certifié "Résistant au Calcul Quantique" et garantir une sécurité du canal de communication physiquement prouvable.
+
+<!-- **Conclusion : l'information physique et le futur de l'informatique tolérante aux fautes (FTQC).** -->
