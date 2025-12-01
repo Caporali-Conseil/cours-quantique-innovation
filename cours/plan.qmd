@@ -1,27 +1,60 @@
-Plan Révisé : Cryptographie et Limites Physiques de l'Information (15h)
+---
+Title: "plan"
+---
 
-Titre du Module : "Cyber-Résilience et Physique de l'Information : Des Algorithmes de Consensus à la Post-Quantique"
+ 
+
+**Titre du Module : "Cyber-résilience et physique de l'information : des algorithmes de consensus à la post-quantique"**
 
 Public Cible : Administrateurs Réseau, Ingénieurs Sécurité, Apprentis.
 
-Chapitre 1 : Cryptographie Classique en Réseau et Menaces Futures (3h)
+**Chapitre 1 : cryptographie classique en réseau et menaces futures (3h)**
 
-Objectif : Ancrer immédiatement le module dans leur réalité professionnelle (sécurité réseau) et introduire la menace quantique.L'essentiel de la Cryptographie appliquée (Sécurité) :Le rôle des Hachages (intégrité) et des Signatures Numériques (authentification) dans les protocoles réseau (TLS/SSL).Les piliers asymétriques : RSA et Courbes Elliptiques (ECC) – où sont-ils utilisés concrètement ?Les Limites de la Cryptographie Classique :Rappel du modèle de Turing et de la complexité (P vs NP).Présentation de la "menace quantique" : les algorithmes de Shor et de Grover (sans les détailler, juste l'impact sur les clés).
+*Objectif : Ancrer immédiatement le module dans leur réalité professionnelle (sécurité réseau) et introduire la menace quantique.L'essentiel de la Cryptographie appliquée (Sécurité) :*
 
-Chapitre 2 : Consensus, Énergie et Loi de Landauer (3h)Objectif : Intégrer votre expertise unique (Landauer) en l'appliquant directement à un cas concret connu des professionnels : les protocoles de consensus et leur coût.Modélisation Énergétique des Systèmes Distribués :Le Nœud de Réseau/Serveur comme Machine Thermique.La Loi de Landauer : Coût minimal de l'effacement de l'information (introduction du concept physique).Application Pratique au Consensus :L'algorithme de Consensus (ex. Proof-of-Work ou même un protocole Raft) modélisé comme une Réduction d'Entropie de Shannon (information).Le coût énergétique du "travail" (calcul) pour établir la confiance.Transition : Pourquoi optimiser les algorithmes ne suffira pas face aux limites fondamentales (le mur énergétique).
+- Le rôle des Hachages (intégrité) et des Signatures Numériques (authentification) dans les protocoles réseau (TLS/SSL).
+- Les piliers asymétriques : RSA et Courbes Elliptiques (ECC) – où sont-ils utilisés concrètement ?
+- Les Limites de la Cryptographie Classique :
+- Rappel du modèle de Turing et de la complexité (P vs NP).
+- Présentation de la "menace quantique" : les algorithmes de Shor et de Grover (sans les détailler, juste l'impact sur les clés).
 
-Chapitre 3 : Les Fondamentaux de l'Information Quantique pour l'Ingénieur (3h)Objectif : Fournir le vocabulaire nécessaire pour comprendre les PQC et les enjeux futurs, en restant très conceptuel.De la Physique à l'Informatique :Passage du bit (0 ou 1) au qubit (superposition).L'intrication et la non-localité (expliquée par ses conséquences, pas par les équations). ShutterstockLes circuits quantiques et les portes (NOT, CNOT) : les briques de base du calcul.L'Algèbre Linéaire nécessaire :La notation Bra-Ket : simplement comme un outil pour représenter les états (sans formalisme excessif).Les matrices de transformation et les mesures (la décohérence comme effet de la mesure).
+**Chapitre 2 : consensus, énergie et loi de landauer (3h)**
 
-Chapitre 4 : La Cybersécurité Post-Quantique (PQC) : Solutions Appliquées (3h)Objectif : Le cœur du module pour les ingénieurs sécurité/réseau. Que faire aujourd'hui face à la menace quantique ?
+*Objectif : Intégrer votre expertise unique (Landauer) en l'appliquant directement à un cas concret connu des professionnels : les protocoles de consensus et leur coût.*
 
-L'Horizon Post-Quantique :Vue d'ensemble des efforts de standardisation (NIST).Les Familles PQC : Présentation des principales familles d’algorithmes de substitution.
+- Modélisation Énergétique des Systèmes Distribués : Le Nœud de Réseau/Serveur comme Machine Thermique.
+- La Loi de Landauer : Coût minimal de l'effacement de l'information (introduction du concept physique).
+- Application Pratique au Consensus :L'algorithme de Consensus (ex. Proof-of-Work ou même un protocole Raft) modélisé comme une Réduction d'Entropie de Shannon (information).
+- Le coût énergétique du "travail" (calcul) pour établir la confiance.
+- Transition : pourquoi optimiser les algorithmes ne suffira pas face aux limites fondamentales (le mur énergétique).
 
-Cryptographie basée sur les Réseaux (Lattices) : (Ex: Kyber, Dilithium).
+**Chapitre 3 : les Fondamentaux de l'information quantique pour l'ingénieur (3h)**
 
-Cryptographie basée sur le Hachage (Hash-based) : (Ex: SPHINCS+).
+*Objectif : Fournir le vocabulaire nécessaire pour comprendre les PQC et les enjeux futurs, en restant très conceptuel.*
 
-Cryptographie basée sur les Codes Correcteurs (Ex: Classic McEliece).
+- De la Physique à l'Informatique : passage du bit (0 ou 1) au qubit (superposition).
+- L'intrication et la non-localité (expliquée par ses conséquences, pas par les équations). 
+- Les circuits quantiques et les portes (NOT, CNOT) : les briques de base du calcul.
+- L'Algèbre Linéaire nécessaire : La notation Bra-Ket : simplement comme un outil pour représenter les états (sans formalisme excessif).
+- Les matrices de transformation et les mesures (la décohérence comme effet de la mesure).
 
-Défis d'Implémentation Réseau :Considérations sur la taille des clés et des signatures PQC (le défi pour le TLS/SSL).Stratégies de transition (approche hybride).
+**Chapitre 4 : la Cybersécurité post-quantique (PQC) : solutions appliquées (3h)**
 
-Chapitre 5 : Fiabilité Future et Limites Thermodynamiques (3h)Objectif : Revenir sur l'aspect théorique (votre expertise) pour donner une vision R&D et conclure sur la fiabilité.L'Entropie dans l'Ère Quantique :L'Entropie de Von Neumann : un outil pour mesurer le désordre quantique et l'information.Décohérence : source d'erreur, de dissipation, et son impact sur la fiabilité des systèmes quantiques.Vers des Systèmes plus Fiables (R&D) :Codes Correcteurs d'Erreurs Quantiques (QECC) : le concept de redondance pour protéger l'information physique.Conclusion : L'information physique et le futur de l'informatique tolérante aux fautes (FTQC).Ce plan révisé met les concepts de Cybersécurité (Ch. 1 & 4) en position de force, utilisant votre approche Landauer/Thermodynamique (Ch. 2 & 5) pour donner une profondeur unique et avant-gardiste à l'ensemble. Vous vendez ainsi une formation de pointe sur la PQC avec une fondation physique inédite, justifiant pleinement les 15 heures.
+*Objectif : Le cœur du module pour les ingénieurs sécurité/réseau. Que faire aujourd'hui face à la menace quantique ?*
+
+- L'Horizon Post-Quantique :Vue d'ensemble des efforts de standardisation (NIST).
+- Les Familles PQC : Présentation des principales familles d’algorithmes de substitution.
+- Cryptographie basée sur les Réseaux (Lattices) : (Ex: Kyber, Dilithium).
+- Cryptographie basée sur le Hachage (Hash-based) : (Ex: SPHINCS+).
+- Cryptographie basée sur les Codes Correcteurs (Ex: Classic McEliece).
+- Défis d'Implémentation Réseau :Considérations sur la taille des clés et des signatures PQC (le défi pour le TLS/SSL).Stratégies de transition (approche hybride).
+
+**Chapitre 5 : fiabilité future et limites thermodynamiques (3h)**
+
+*Objectif : Revenir sur l'aspect théorique (votre expertise) pour donner une vision R&D et conclure sur la fiabilité.*
+
+- L'Entropie dans l'Ère Quantique : L'Entropie de Von Neumann : un outil pour mesurer le désordre quantique et l'information.
+- Décohérence : source d'erreur, de dissipation, et son impact sur la fiabilité des systèmes quantiques.
+- Vers des Systèmes plus Fiables (R&D) : Codes Correcteurs d'Erreurs Quantiques (QECC) : le concept de redondance pour protéger l'information physique.
+
+**Conclusion : l'information physique et le futur de l'informatique tolérante aux fautes (FTQC).**

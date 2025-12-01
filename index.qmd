@@ -12,22 +12,22 @@ Nous transformons la cybersécurité et la gouvernance en un problème de Thermo
 
 # Utilisez les liens ci-dessous pour accéder aux différents travaux du laboratoire :
 
-## 1. Fondements théoriques de la quantique
+## 1. Fondements théoriques de la mécanique quantique :
 
-Plongez dans les bases scientifiques de notre méthode. Découvrez comment le Principe de Landauer quantifie le coût énergétique minimal de l'effacement de l'information et comment la Divergence de Kullback-Leibler mesure la distance entre votre état de sécurité actuel et l'état de résilience PQC souhaité.
+Il s'agit d'un support de cours que j'ai rédigé pour mon propre compte durant l'été 2025 sur les fondements de la mécanique quantique afin de rentrer dans le sujet. Il n'a pas d'autre vocation que d'être un cours d'introduction comme on en trouve dans les manuels universitaires. Toutefois il présente une originalité du fait des sources utilisées. J'ai choisi de le mettre en ligne mais avec une licence creative common : si vous l'utilisez merci de me citer.
 
-Accès : Fondements Théoriques (CC-BY)
+[Accès : Fondements Théoriques (CC-B)](publications/fondements.qmd)
 
-## 2. Le Programme de cours 
+## 2. Le Programme de cours :
 
-Nous partageons notre expertise à travers une formation complète de 30 heures destinée aux architectes et ingénieurs. Cette formation couvre l'intégralité du cycle de l'information physique, des fondements quantiques aux primitives PQC.
+Ceci correspond à une formation nouvelle que je propose dont voici le plan possible. Il est bien sûr à adapter au cas par cas en fonction du besoin spécifique.
 
-Accès : Programme de Cours
+[Accès : Programme de Cours](cours/plan.qmd)
 
 ## 3. Publications & présentations
 
-Retrouvez ici l'ensemble de nos contributions à la communauté scientifique et technique, incluant des articles de recherche originaux, des présentations de conférence et des modélisations appliquées de la méthode MAOS.
+Retrouvez ici l'ensemble de nos contributions à la communauté scientifique et technique, incluant des articles de recherche originaux, des présentations de conférences.
 
-Accès : Articles de Recherche
+[Accès : Articles de Recherche](publications/articles.qmd)
 
-Accès : Présentations et Conférences
+[Accès : Présentations et Conférences](publications/presentations.qmd)

@@ -5,18 +5,55 @@ title: "Communications et Présentations"
 
 Cette section regroupe les communications scientifiques (posters, slides) et les présentations publiques données lors de conférences, séminaires ou groupes de travail.
 
-# Communications clés
+***
 
-Titre : Slide deck : discussion on issues related to security and anonymity on blockchains.
+**Présentation : Discussion on issues related to security and anonymity on blockchains**.
 
-Auteur : S. CaporaliType : Poster/Slide Deck
+Auteur : S. Caporali
+Type : Poster/Slide Deck
 
 Événement : Communauté Blockchain, Orvium
 
-Date : 13/11/2025 (Date affichée)
+Date : 13/11/2025 
 
 Résumé : Présentation de diapositives de juin 2018 pour le groupe de travail Trans Europe Experts sur les enjeux de sécurité et d'anonymat.
 
-Lien vers la publication Orvium : [Lien vers la publication Orvium]
+[Lien vers la publication Orvium](https://dapp.orvium.io/deposits/6914a38104b1bc8bde37d094/view)
 
- 
+***
+
+**Présentation: Education in blockchain technology** 
+
+Auteur : S. Caporali
+Type : Slide Deck
+
+Événement : webinar seeblocks.eu "Blockchain Education & Standardisation: Navigating (beyond) the European Landscape"
+
+Date : 10 novembre 2023
+
+Introduction et Contexte : 
+
+Dans le cadre de cette section, nous introduisons les fondements théoriques et pratiques de notre approche pédagogique pour l'enseignement supérieur, spécifiquement appliquée à la technologie Blockchain.
+
+Le Trilemme Éducatif : Fondement de Notre Pédagogie
+
+Notre approche est conceptualisée autour d'un défi central dans l'enseignement des technologies émergentes : Le Trilemme Éducatif. Il représente les trois tensions majeures qui doivent être équilibrées pour garantir une formation pertinente en technologie Blockchain.Les Composantes du Trilemme Le Trilemme Éducatif en Blockchain se décline en trois axes fondamentaux :
+
+1. Hidden Complexity (Complexité Cachée)La Blockchain, souvent perçue comme un simple registre ou une monnaie, repose sur des fondations très complexes (cryptographie asymétrique, protocoles de consensus, machines virtuelles). Le défi pédagogique est de rendre cette complexité accessible sans la simplifier à l'excès, assurant que l'étudiant comprenne ce qui se passe sous le capot (e.g., les preuves à divulgation nulle de connaissance, la théorie des jeux).
+
+2. Cross Disciplinary (Transversalité Disciplinaire)La technologie ne se limite pas à l'informatique. Elle est intrinsèquement liée au droit, à la finance, à l'économie, et à la sociologie. L'enseignement doit donc adopter une approche véritablement interdisciplinaire, préparant les étudiants à interagir avec des experts de divers domaines et à comprendre les implications réglementaires et économiques de leurs développements.
+
+3. Founding Principle (Principe Fondateur)Il est essentiel de ne pas perdre de vue les principes idéologiques et philosophiques qui ont donné naissance à la Blockchain (décentralisation, immuabilité, confiance sans intermédiaire). L'approche doit revenir aux fondamentaux conceptuels pour que les étudiants puissent non seulement maîtriser la technique, mais aussi innover dans le respect de ces principes.
+
+
+<div class="presentation-link-container" style="margin-top: 20px; margin-bottom: 40px; padding: 15px; border: 1px solid #007bff; border-radius: 8px; background-color: #e9f5ff;">
+<p>
+Consultez la présentation :
+<a href="https://seeblocks.eu/sites/default/files/2023-11/3.%20St%C3%A8phane%20Caporali.pdf" target="_blank" style="color: #007bff; font-weight: bold; text-decoration: none;">
+[Education in blockchain technology]
+</a>
+</p>
+<p class="text-sm italic" style="color: #6b7280; margin-top: 5px;">
+(Le lien s'ouvrira dans un nouvel onglet.)
+</p>
+</div>

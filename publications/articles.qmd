@@ -4,38 +4,64 @@ title: "Publications et articles de recherche"
 
 Cette page présente la liste des publications scientifiques et des communications techniques liées aux travaux de Caporali Conseil, notamment dans l'application de l'approche MAOS (Méthode d'Analyse des Opérations Systémiques) aux systèmes décentralisés et à la physique fondamentale.
 
-# I. Blockchain et thermodynamique
+***
+
+# Blockchain et thermodynamique
 
 *Ces articles explorent les liens entre les mécanismes de consensus de la blockchain et les principes de la thermodynamique et de la théorie de l'information (Landauer, DKL).*
 
-Caporali, S. (18/04/2024). "Blockchain consensus based on a work : an interpretation by the thermodynamics and application to state machine and to blockchain architecture" (Prépublication/Preprint). Communauté Blockchain, Orvium.
+Caporali, S. (18/04/2024)
+**"Blockchain consensus based on a work : an interpretation by the thermodynamics and application to state machine and to blockchain architecture"** 
+
+(Prépublication/Preprint). 
+Communauté Blockchain, Orvium.
 
 Résumé : Cet article explore l'affinité entre la thermodynamique et la blockchain, comparant le processus de Proof-of-Work (PoW) à un cycle de Carnot inverse et proposant une modélisation vers une architecture basée sur un modèle de couches avec une couche de consensus.
-Lien vers la publication Orvium
 
-Caporali, S. (19/04/2023). "Consensus, Cycle of Information and Blockchain Engine" (Article). Communauté Blockchain, Orvium.
+[Lien vers la publication Orvium](https://dapp.orvium.io/deposits/66201543f05af14955cf015d/view)
+
+***
+
+Caporali, S. (19/04/2023)
+**"Consensus, Cycle of Information and Blockchain Engine"** 
+(Article). Communauté Blockchain, Orvium.
 
 Résumé : Une approche originale, inspirée des concepts de la thermodynamique, est présentée : le Moteur Blockchain (Blockchain Engine) et son cycle d'information idéal, ouvrant de nouvelles approches pour la résilience et la gouvernance industrielle de la blockchain.
 
-Lien vers la publication Orvium
+[Lien vers la publication Orvium](https://dapp.orvium.io/deposits/643ffa47afcfb96f1dd1cc6c/view)
 
-# II. Gouvernance et modélisation
+***
+
+# Gouvernance et modélisation
 
 *Ces documents se concentrent sur la gouvernance, les défis informatiques et les pratiques industrielles associées aux technologies de registres distribués (DLT)*.
 
-Caporali, S. (07/04/2022). "Governance with Consensus Mechanisms for Blockchain : Overview and Trends" (Article). Communauté Blockchain, Orvium.
+Caporali, S. (07/04/2022). 
+**"Governance with Consensus Mechanisms for Blockchain : Overview and Trends"** 
+(Article). Communauté Blockchain, Orvium.
 
 Résumé : Analyse des liens entre les mécanismes de consensus et les outils de gouvernance de la blockchain, identifiant les tendances de recherche et les besoins industriels.
 
-Lien vers la publication Orvium 
+[Lien vers la publication Orvium](https://dapp.orvium.io/deposits/624d5bd2886820ed3a5b4d13/view)
 
-Caporali, S. (21/06/2021). "Blockchain : Computation, Shutdown Problem, and Governability" (Autre/Other). Communauté Blockchain, Orvium.
+***
+
+Caporali, S. (21/06/2021). 
+**"Blockchain : Computation, Shutdown Problem, and Governability"** 
+(Autre/Other). Communauté Blockchain, Orvium.
 
 Résumé : Description des modèles de calcul associés à la blockchain, du "problème d'arrêt" (shutdown problem), et son lien avec la gouvernabilité pour l'implémentation de bonnes pratiques industrielles.
 
-Lien vers la publication Orvium 
+[Lien vers la publication Orvium](https://dapp.orvium.io/deposits/60ccbf5220c60e000900e899/view)
 
-Caporali, S. (27/12/2020). "Time, Consensus and Governance by Design for Blockchain and DLT" (Article). Communauté Blockchain, Orvium.
+***
 
-Résumé : Exploration de l'enjeu du paramètre temps pour la gouvernance de la blockchain, proposant le concept de structure temporelle et l'approche de la gouvernance par la conception (governance by design).Lien vers la publication Orvium
+Caporali, S. (27/12/2020). 
+**"Time, Consensus and Governance by Design for Blockchain and DLT"**
+
+(Article). Communauté Blockchain, Orvium.
+
+Résumé : Exploration de l'enjeu du paramètre temps pour la gouvernance de la blockchain, proposant le concept de structure temporelle et l'approche de la gouvernance par la conception (governance by design).
+
+[Lien vers la publication Orvium](https://dapp.orvium.io/deposits/5fd4a2b1961bb60008101a0c/view)
 

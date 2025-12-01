@@ -21,13 +21,7 @@ website:
             href: publications/presentations.qmd
           - text: "Fondement theorique de la quantique (CC-BY)"
             href: publications/fondements.qmd
-    right:
-      - href: contact.qmd
-        text: Contacter
-      - icon: github
-        href: "https://github.com/votre-compte"
-      - icon: linkedin
-        href: "https://linkedin.com/in/votre-profil"
+   
 
   page-footer:
     right: "Caporali Conseil | Tous droits réservés | 2026"
