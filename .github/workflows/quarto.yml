@@ -1,7 +1,6 @@
-# 1. Installer l'environnement R (si votre Quarto utilise du code R)
+  # 1. Installer l'environnement R (si votre Quarto utilise du code R)
   - name: Setup R
     uses: r-lib/actions/setup-r@v2
-    # Ne pas echouer si R n'est pas utilisé, mais recommandé pour Quarto.
     continue-on-error: true 
     
   # 2. Installer Quarto CLI
@@ -10,11 +9,10 @@
 
   # 3. Installer les dépendances R (si besoin)
   - name: Install R Dependencies
-    if: success() || failure() # S'exécute même si R setup a échoué
+    if: success() || failure() 
     run: |
       R -e 'install.packages("remotes")'
       R -e 'remotes::install_deps()'
-    # Laisse l'étape continuer même si l'installation de R/packages échoue (par exemple, si vous n'utilisez que Python/JS)
     continue-on-error: true
 
   # 4. Construire le site Quarto (C'est l'étape cruciale qui génère le _site/)
