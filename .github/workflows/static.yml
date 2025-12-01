@@ -1,24 +1,20 @@
-- name: Configuration de Quarto
-    # C'est l'action qui installe l'outil Quarto et le rend disponible
-    uses: quarto-dev/quarto-actions/setup@v2
-    
-  # Étape 1 : Construction du site Quarto (C'EST LA COMMANDE CRUCIALE)
-  - name: Exécution de Quarto Render (Génère le dossier _site)
-    # La commande par défaut 'quarto render' lit les fichiers .qmd et génère le HTML
-    run: quarto render
-    
-  # Étape 2 : Configuration de l'Artefact pour GitHub Pages
-  - name: Configuration du déploiement Pages
+steps:
+  - name: Checkout
+    uses: actions/checkout@v4
+
+  - name: Configure Pages Environment
     uses: actions/configure-pages@v5
 
-  # Étape 3 : Téléchargement des fichiers générés
-  # L'Action de Quarto utilise '_site' par défaut comme dossier de sortie
-  - name: Téléchargement de l'Artefact (Dossier _site)
+  # Cette étape crée l'artefact de déploiement
+  - name: Build and Upload Artifact
     uses: actions/upload-pages-artifact@v3
     with:
-      path: '_site' # S'assurer que le chemin est bien '_site'
+      # Déploie le contenu de la racine du dépôt
+      path: './'
+      # Nom de l'artefact (nom par défaut)
+      name: github-pages 
 
-  # Étape 4 : Déploiement vers GitHub Pages
-  - name: Déploiement sur GitHub Pages
+  # Cette étape déploie l'artefact sur GitHub Pages
+  - name: Deploy to GitHub Pages
     id: deployment
     uses: actions/deploy-pages@v4
