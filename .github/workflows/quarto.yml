@@ -1,36 +1,47 @@
-name: Quarto Publish
+name: Déploiement Quarto sur GitHub Pages
 
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  pages: write # Nécessaire pour publier les Pages
+  id-token: write # Nécessaire pour les déploiements sur Pages
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout du dépôt
         uses: actions/checkout@v4
-
-      - name: Setup Quarto
+      
+      - name: Configuration de Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render Website
+        
+      - name: Installation des dépendances (Ignoré)
+        run: |
+          echo "Aucune dépendance R/Python à installer (ignorée)."
+      
+      - name: Construction du site Quarto (Build)
+        # Quarto lira le _quarto.yml et construira dans le dossier 'docs'
         uses: quarto-dev/quarto-actions/render@v2
-        with:
-          to: html # Assurez-vous que cela construit bien le site HTML
-
-      - name: Upload artifact
+        
+      - name: Upload de l'artefact (le dossier docs/)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
-
-      - name: Deploy to GitHub Pages
+          path: docs # <-- CHANGEMENT CLÉ : Utiliser 'docs' au lieu de '_site'
+          
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+      - name: Déploiement sur GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
