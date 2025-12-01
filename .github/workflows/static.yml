@@ -1,50 +1,60 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Workflow pour construire et déployer un site Quarto sur GitHub Pages
+name: Deploy Quarto Site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Fixe les permissions et la concurrence
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Étape 1 : Construction du site Quarto
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      # Installe Quarto CLI (outil de compilation)
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
 
-      # *** CORRECTION APPORTÉE ICI ***
-      # On spécifie un nom d'artefact connu ("github-pages") 
-      # pour que l'étape de déploiement le trouve facilement.
+      # Met à jour la configuration pour le déploiement
+      # Crée un fichier _quarto.yml temporaire si nécessaire, 
+      # puis compile le site Quarto.
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+
+      # Sauvegarde le dossier de sortie (par défaut : _site) comme artefact.
+      # C'est ce dossier qui contient le index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-          name: github-pages # <--- AJOUT CRITIQUE
+          path: _site # Quarto génère les fichiers HTML dans ce dossier
+          name: github-pages
+
+  # Étape 2 : Déploiement de l'artefact compilé
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build # Dépend de la réussite de l'étape de construction
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # L'étape de déploiement trouvera automatiquement 
-        # l'artefact nommé "github-pages".
