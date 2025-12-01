@@ -12,8 +12,6 @@ Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme
 
 **Chapitre 1 : cryptographie classique en réseau et menaces futures (2h)**
 
-*Objectif : Ancrer immédiatement le module dans leur réalité professionnelle (sécurité réseau) et introduire la menace quantique. L'essentiel de la Cryptographie appliquée (Sécurité) :*
-
 - Le rôle des hachages (intégrité) et des signatures numériques (authentification) dans les protocoles réseau (TLS/SSL).
 - Les piliers asymétriques : RSA et courbes elliptiques (ECC) – où sont-ils utilisés concrètement ?
 - Les limites de la cryptographie classique :
@@ -21,8 +19,6 @@ Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme
 - Présentation de la "menace quantique" : les algorithmes de Shor et de Grover (sans les détailler, juste l'impact sur les clés).
 
 **Chapitre 2 : consensus et énergie (3h)**
-
-*Objectif : Intégrer votre expertise unique (Landauer) en l'appliquant directement à un cas concret connu des professionnels : les protocoles de consensus et leur coût.*
 
 - Modélisation énergétique des systèmes distribués : Le Nœud de réseau comme machine thermique.
 - La Loi de Landauer : coût minimal de l'effacement de l'information (introduction du concept physique).
@@ -32,8 +28,6 @@ Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme
 
 **Chapitre 3 : les fondamentaux de l'information quantique pour l'ingénieur (4h)**
 
-*Objectif : Fournir le vocabulaire nécessaire pour comprendre les PQC et les enjeux futurs, en restant très conceptuel.*
-
 - De la Physique à l'informatique : passage du bit (0 ou 1) au qubit (superposition).
 - L'intrication et la non-localité. 
 - Les circuits quantiques et les portes (NOT, CNOT) : les briques de base du calcul.
@@ -41,8 +35,6 @@ Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme
 - Les matrices de transformation et les mesures (la décohérence comme effet de la mesure).
 
 **Chapitre 4 : la Cybersécurité post-quantique (PQC) : solutions appliquées (2h)**
-
-*Objectif : Le cœur du module pour les ingénieurs sécurité/réseau. Que faire aujourd'hui face à la menace quantique ?*
 
 - L'Horizon post-Quantique : vue d'ensemble des efforts de standardisation (NIST).
 - Les Familles PQC : Présentation des principales familles d’algorithmes de substitution.
@@ -52,8 +44,6 @@ Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme
 - Défis d'implémentation réseau : considérations sur la taille des clés et des signatures PQC (le défi pour le TLS/SSL).Stratégies de transition (approche hybride).
 
 **Chapitre 5 : fiabilité future et limites thermodynamiques (2h)**
-
-*Objectif : Revenir sur l'aspect théorique (votre expertise) pour donner une vision R&D et conclure sur la fiabilité.*
 
 - L'Entropie dans l'ère quantique : l'entropie de Von Neumann : un outil pour mesurer le désordre quantique et l'information.
 - Décohérence : source d'erreur, de dissipation, et son impact sur la fiabilité des systèmes quantiques.
