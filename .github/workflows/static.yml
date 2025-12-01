@@ -1,10 +1,10 @@
   - name: Setup Pages Environment
     uses: actions/configure-pages@v5
 
-  # L'artefact est créé à partir de la racine du dépôt ('.')
   - name: Upload Static Artifact
     uses: actions/upload-pages-artifact@v3
     with:
+      # Assurez-vous que l'ensemble de votre site est dans le dossier racine
       path: '.' 
 
   - name: Deploy to GitHub Pages
