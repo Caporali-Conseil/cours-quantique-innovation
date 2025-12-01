@@ -21,11 +21,6 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install R packages (if applicable)
-        # Décommentez et ajustez si vous utilisez des blocs de code R (par ex. pour l'analyse)
-        # run: |
-        #   R -e 'install.packages(c("tidyverse", "ggplot2"))'
-
       - name: Render Website
         uses: quarto-dev/quarto-actions/render@v2
         with:
