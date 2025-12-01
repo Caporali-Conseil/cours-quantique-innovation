@@ -8,6 +8,8 @@ Title: "plan"
 
 Public Cible : administrateurs réseau, ingénieurs sécurité.
 
+Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme un ensemble d'algorithmes mathématiques, mais comme un problème fondamental de physique de l'information.
+
 **Chapitre 1 : cryptographie classique en réseau et menaces futures (2h)**
 
 *Objectif : Ancrer immédiatement le module dans leur réalité professionnelle (sécurité réseau) et introduire la menace quantique. L'essentiel de la Cryptographie appliquée (Sécurité) :*
