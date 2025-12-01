@@ -1,20 +1,12 @@
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
-
-  - name: Configure Pages Environment
+  - name: Setup Pages Environment
     uses: actions/configure-pages@v5
 
-  # Cette étape crée l'artefact de déploiement
-  - name: Build and Upload Artifact
+  # L'artefact est créé à partir de la racine du dépôt ('.')
+  - name: Upload Static Artifact
     uses: actions/upload-pages-artifact@v3
     with:
-      # Déploie le contenu de la racine du dépôt
-      path: './'
-      # Nom de l'artefact (nom par défaut)
-      name: github-pages 
+      path: '.' 
 
-  # Cette étape déploie l'artefact sur GitHub Pages
   - name: Deploy to GitHub Pages
     id: deployment
     uses: actions/deploy-pages@v4
