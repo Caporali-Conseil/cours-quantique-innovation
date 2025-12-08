@@ -8,7 +8,7 @@ Ce module pose les bases nécessaires pour comprendre pourquoi la physique quant
 
 1.1 Introduction au Monde Quantique
 
-Les limites du classique et la nécessité du quantique.Principes fondamentaux simplifiés (superposition, intrication, tunnel).Définition de la « Révolution Quantique 2.0 ».
+Les limites du classique et la nécessité du quantique.Principes fondamentaux simplifiés (superposition, intrication, tunnel). Définition de la « Révolution Quantique 2.0 ».
 
 1.2 Les Piliers Technologiques
 
