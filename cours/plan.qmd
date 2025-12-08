@@ -26,7 +26,7 @@ Révision des algorithmes de Shor et Grover et la nécessité d'une sécurité �
 1.3. Attaques par Canaux Auxiliaires (SCA)
 Lien avec l'entropie : la fuite d'information (énergie, temps, EM) comme déperdition d'entropie du secret. Méthodes d'observation et de masquage des opérations de hachage et de chiffrement.
 
-# Bloc 2 : Architectures de Confiance Distribuées et Sécurité PQC
+### Bloc 2 : Architectures de Confiance Distribuées et Sécurité PQC
 
 Ce bloc étudie l'intégration des nouvelles primitives cryptographiques dans les grands systèmes.
 
@@ -36,17 +36,17 @@ Les grandes familles d'algorithmes basés sur les problèmes difficiles (réseau
 2.2. Intégration et Migration NIST
 Passage de RSA/ECC à l'hybride PQC.Performance, taille des clés et implémentation sécurisée.
 
-# Bloc 3 : Spécialisation A : maîtrise de l'implémentation (Embarqué / PQC)
+### Bloc 3 : Spécialisation A : maîtrise de l'implémentation (Embarqué / PQC)
 
 Objectif : Concevoir des systèmes embarqués où le secret (l'entropie) est généré et utilisé sans fuite physique.
 
-3.1. Sécurisation Matérielle de l'Entropie (TRNG)
+3.1. Sécurisation matérielle de l'entropie (TRNG)
 Architectures de TRNG résistants aux manipulations externes et à la température. Certification de la qualité de l'aléa pour les environnements critiques (critères BSI, NIST SP 800-90).
 
 3.2. Contremesures Avancées contre SCA. Techniques de Masking (masquage) et de Shuffling (mélange) adaptées aux primitives PQC sur puce.
 TP Pratique : Implémentation d'un KEM PQC (Kyber) sur FPGA/Microcontrôleur avec application des contremesures SCA.
 
-# Bloc 4 : Spécialisation B : maîtrise de la distribution de l'aléa (Réseaux / QKD)
+### Bloc 4 : Spécialisation B : maîtrise de la distribution de l'aléa (Réseaux / QKD)
 
 Objectif : Intégrer la physique quantique pour générer et distribuer des clés avec une sécurité inconditionnelle sur un réseau.
 
