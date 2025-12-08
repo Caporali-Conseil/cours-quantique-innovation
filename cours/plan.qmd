@@ -2,26 +2,29 @@
 
 # Plan de Formation Ingénieur en Cybersécurité Post-Quantique
 
+### Introduction
+
 Ce plan est générique à adapter au cas par cas. Toutefois il s adresse a deux spécialités possibles d'éleves ingenieurs :
  
 Spécialisation A : Systèmes Embarqués / Microélectronique (PQC)
 
 Spécialisation B : Réseaux / Télécommunications (QKD)
 
-Il est accompagne d'un execice sous forme d'une simulation de cas d'entreprise (cas d'usage). Il peut constituer entre 15 et 20 heures d'enseignement.
+Il peut constituer entre 15 et 20 heures d'enseignement. Il est accompagne d'un exercice sous forme d'une simulation de cas d'entreprise (cas d'usage) avce une orientation gouvernance.
 
-# Bloc 1 : Fondamentaux de l'Aléa et Vulnérabilités Physiques (Commun)
+### Bloc 1 : Fondamentaux de l'Aléa et Vulnérabilités Physiques (Commun)
 
 Ce bloc établit les bases de la physique de l'information et des attaques.
 
-1.1. L'Entropie et la Génération de Secrets. 
-Qualité de l'aléa (True Random Number Generators - TRNG) vs. PRNG.Évaluation des sources d'entropie matérielles et leur résistance au bruit.
+1.1. L'Entropie et la génération de secrets. 
+Qualité de l'aléa (True Random Number Generators - TRNG) vs. PRNG.
+Évaluation des sources d'entropie matérielles et leur résistance au bruit.
 
 1.2. Menaces Quantiques Mathématiques
 Révision des algorithmes de Shor et Grover et la nécessité d'une sécurité à long terme.
 
 1.3. Attaques par Canaux Auxiliaires (SCA)
-Lien avec l'Entropie : La fuite d'information (énergie, temps, EM) comme déperdition d'entropie du secret.Méthodes d'observation et de masquage des opérations de hachage et de chiffrement.
+Lien avec l'entropie : la fuite d'information (énergie, temps, EM) comme déperdition d'entropie du secret. Méthodes d'observation et de masquage des opérations de hachage et de chiffrement.
 
 # Bloc 2 : Architectures de Confiance Distribuées et Sécurité PQC
 
@@ -37,24 +40,23 @@ Passage de RSA/ECC à l'hybride PQC.Performance, taille des clés et implémenta
 
 Objectif : Concevoir des systèmes embarqués où le secret (l'entropie) est généré et utilisé sans fuite physique.
 
-3.1. Sécurisation Matérielle de l'Entropie (TRNG)Architectures de TRNG résistants aux manipulations externes et à la température.Certification de la qualité de l'aléa pour les environnements critiques (critères BSI, NIST SP 800-90).
+3.1. Sécurisation Matérielle de l'Entropie (TRNG)
+Architectures de TRNG résistants aux manipulations externes et à la température. Certification de la qualité de l'aléa pour les environnements critiques (critères BSI, NIST SP 800-90).
 
-3.2. Contremesures Avancées contre SCATechniques de Masking (masquage) et de Shuffling (mélange) adaptées aux primitives PQC sur puce.TP Pratique : Implémentation d'un KEM PQC (Kyber) sur FPGA/Microcontrôleur avec application des contremesures SCA.
+3.2. Contremesures Avancées contre SCA. Techniques de Masking (masquage) et de Shuffling (mélange) adaptées aux primitives PQC sur puce.
+TP Pratique : Implémentation d'un KEM PQC (Kyber) sur FPGA/Microcontrôleur avec application des contremesures SCA.
 
 # Bloc 4 : Spécialisation B : maîtrise de la distribution de l'aléa (Réseaux / QKD)
 
 Objectif : Intégrer la physique quantique pour générer et distribuer des clés avec une sécurité inconditionnelle sur un réseau.
 
-4.1. Distribution Quantique de Clés (QKD)Principes physiques du QKD (BB84, Decoy State, Continuous Variable).La mécanique quantique garantit que l'observation de la clé (fuite d'entropie) est impossible sans détection.
+4.1. Distribution Quantique de Clés (QKD)
+Principes physiques du QKD (BB84, Decoy State, Continuous Variable).La mécanique quantique garantit que l'observation de la clé (fuite d'entropie) est impossible sans détection.
 
 4.2. Architecture des Réseaux Quantiques (QIN)
-
 Les Trusted Relays et le problème de la distance.
-
 Gestion des clés QKD : intégration dans les couches TLS/IPsec.
-
 Compétence Acquise : Déploiement et gestion d'une infrastructure réseau hybride PQC/QKD.
-
 Synthèse : Entropie et Rôles
 
  
