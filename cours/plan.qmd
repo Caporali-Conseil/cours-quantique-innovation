@@ -1,56 +1,61 @@
----
-Title: "plan"
----
+
+
+# Plan de Formation Ingénieur en Cybersécurité Post-Quantique
+
+Ce plan est générique à adapter au cas par cas. Toutefois il s adresse a deux spécialités possibles d'éleves ingenieurs :
+ 
+Spécialisation A : Systèmes Embarqués / Microélectronique (PQC)
+
+Spécialisation B : Réseaux / Télécommunications (QKD)
+
+Il est accompagne d'un execice sous forme d'une simulation de cas d'entreprise (cas d'usage). Il peut constituer entre 15 et 20 heures d'enseignement.
+
+# Bloc 1 : Fondamentaux de l'Aléa et Vulnérabilités Physiques (Commun)
+
+Ce bloc établit les bases de la physique de l'information et des attaques.
+
+1.1. L'Entropie et la Génération de Secrets. 
+Qualité de l'aléa (True Random Number Generators - TRNG) vs. PRNG.Évaluation des sources d'entropie matérielles et leur résistance au bruit.
+
+1.2. Menaces Quantiques Mathématiques
+Révision des algorithmes de Shor et Grover et la nécessité d'une sécurité à long terme.
+
+1.3. Attaques par Canaux Auxiliaires (SCA)
+Lien avec l'Entropie : La fuite d'information (énergie, temps, EM) comme déperdition d'entropie du secret.Méthodes d'observation et de masquage des opérations de hachage et de chiffrement.
+
+# Bloc 2 : Architectures de Confiance Distribuées et Sécurité PQC
+
+Ce bloc étudie l'intégration des nouvelles primitives cryptographiques dans les grands systèmes.
+
+2.1. Cryptographie Post-Quantique (PQC)
+Les grandes familles d'algorithmes basés sur les problèmes difficiles (réseaux, codes, multivariés).Cas d'étude : Kyber (KEM) et Dilithium (Signature).
+
+2.2. Intégration et Migration NIST
+Passage de RSA/ECC à l'hybride PQC.Performance, taille des clés et implémentation sécurisée.
+
+# Bloc 3 : Spécialisation A : maîtrise de l'implémentation (Embarqué / PQC)
+
+Objectif : Concevoir des systèmes embarqués où le secret (l'entropie) est généré et utilisé sans fuite physique.
+
+3.1. Sécurisation Matérielle de l'Entropie (TRNG)Architectures de TRNG résistants aux manipulations externes et à la température.Certification de la qualité de l'aléa pour les environnements critiques (critères BSI, NIST SP 800-90).
+
+3.2. Contremesures Avancées contre SCATechniques de Masking (masquage) et de Shuffling (mélange) adaptées aux primitives PQC sur puce.TP Pratique : Implémentation d'un KEM PQC (Kyber) sur FPGA/Microcontrôleur avec application des contremesures SCA.
+
+# Bloc 4 : Spécialisation B : maîtrise de la distribution de l'aléa (Réseaux / QKD)
+
+Objectif : Intégrer la physique quantique pour générer et distribuer des clés avec une sécurité inconditionnelle sur un réseau.
+
+4.1. Distribution Quantique de Clés (QKD)Principes physiques du QKD (BB84, Decoy State, Continuous Variable).La mécanique quantique garantit que l'observation de la clé (fuite d'entropie) est impossible sans détection.
+
+4.2. Architecture des Réseaux Quantiques (QIN)
+
+Les Trusted Relays et le problème de la distance.
+
+Gestion des clés QKD : intégration dans les couches TLS/IPsec.
+
+Compétence Acquise : Déploiement et gestion d'une infrastructure réseau hybride PQC/QKD.
+
+Synthèse : Entropie et Rôles
 
  
 
-**Titre du Module : "Cyber-résilience et physique de l'information : des algorithmes de consensus à la post-quantique"**
-
-Public Cible : administrateurs réseau, ingénieurs sécurité.
-
-Objectif : les ingénieurs apprennent à penser la cybersécurité non pas comme un ensemble d'algorithmes mathématiques, mais comme un problème fondamental de physique de l'information.
-
-**Chapitre 1 : cryptographie classique en réseau et menaces futures (2h)**
-
-- Le rôle des hachages (intégrité) et des signatures numériques (authentification) dans les protocoles réseau (TLS/SSL).
-- Les piliers asymétriques : RSA et courbes elliptiques (ECC) – où sont-ils utilisés concrètement ?
-- Les limites de la cryptographie classique :
-- Rappel du modèle de turing et de la complexité (P vs NP).
-- Présentation de la "menace quantique" : les algorithmes de Shor et de Grover (sans les détailler, juste l'impact sur les clés).
-
-**Chapitre 2 : consensus et énergie (3h)**
-
-- Modélisation énergétique des systèmes distribués : Le Nœud de réseau comme machine thermique.
-- La Loi de Landauer : coût minimal de l'effacement de l'information (introduction du concept physique).
-- Application pratique au consensus : l'algorithme de consensus (ex. Proof-of-Work ou même un protocole Raft) modélisé comme une réduction d'entropie de shannon (information).
-- Le coût énergétique du "travail" (calcul) pour établir la confiance.
-- Transition : pourquoi optimiser les algorithmes ne suffira pas face aux limites fondamentales (le mur énergétique).
-
-**Chapitre 3 : les fondamentaux de l'information quantique pour l'ingénieur (4h)**
-
-- De la Physique à l'informatique : passage du bit (0 ou 1) au qubit (superposition).
-- L'intrication et la non-localité. 
-- Les circuits quantiques et les portes (NOT, CNOT) : les briques de base du calcul.
-- L'Algèbre linéaire nécessaire : La notation Bra-Ket.
-- Les matrices de transformation et les mesures (la décohérence comme effet de la mesure).
-
-**Chapitre 4 : la Cybersécurité post-quantique (PQC) : solutions appliquées (2h)**
-
-- L'Horizon post-Quantique : vue d'ensemble des efforts de standardisation (NIST).
-- Les Familles PQC : Présentation des principales familles d’algorithmes de substitution.
-- Cryptographie basée sur les réseaux (Lattices) : (Ex: Kyber, Dilithium).
-- Cryptographie basée sur le hachage (Hash-based) : (Ex: SPHINCS+).
-- Cryptographie basée sur les codes correcteurs (Ex: Classic McEliece).
-- Défis d'implémentation réseau : considérations sur la taille des clés et des signatures PQC (le défi pour le TLS/SSL).Stratégies de transition (approche hybride).
-
-**Chapitre 5 : fiabilité future et limites thermodynamiques (2h)**
-
-- L'Entropie dans l'ère quantique : l'entropie de Von Neumann : un outil pour mesurer le désordre quantique et l'information.
-- Décohérence : source d'erreur, de dissipation, et son impact sur la fiabilité des systèmes quantiques.
-- Vers des systèmes plus fiables (R&D) : Codes Correcteurs d'erreurs quantiques (QECC) : le concept de redondance pour protéger l'information physique.
-
-**Etude de cas (3 h)**
-
-Exemple : Vous êtes ingénieur en architecture de systèmes distribués auprès de l'Autorité de Régulation Financière (ARF), chargée de superviser le système de compensation des règlements interbancaires (un réseau privé de 15 nœuds majeurs). La direction vous mandate pour concevoir la prochaine génération de ce registre, qui doit être certifié "Résistant au Calcul Quantique" et garantir une sécurité du canal de communication physiquement prouvable.
-
-<!-- **Conclusion : l'information physique et le futur de l'informatique tolérante aux fautes (FTQC).** -->
