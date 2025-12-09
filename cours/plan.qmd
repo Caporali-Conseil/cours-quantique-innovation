@@ -4,6 +4,10 @@ title: "Formation : l'innovation à l'ère quantique"
 
 Ce plan est conçu pour structurer un cours de niveau avancé, divisé en quatre grandes parties thématiques pour une progression logique de la théorie vers les applications stratégiques.
 
+**Niveau :** Avancé (Décideurs, Chefs de Projet, Ingénieurs)
+
+**Philosophie :** Vulgarisation technique et stratégique, s'appuyant sur des fondements documentaires libres et des publications reconnues.
+
 ### Module 1 : fondations et rupture quantique
 
 Ce module pose les bases nécessaires pour comprendre pourquoi la physique quantique représente une rupture technologique et non une simple amélioration incrémentale.
