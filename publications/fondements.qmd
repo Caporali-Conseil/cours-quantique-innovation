@@ -81,7 +81,7 @@ Il faut voir que ce qui interesse Heisenberg c'est l'amplitude a qu'on peut asso
 
 Il s'agit simplement d'une esquise d'interpretation qui ne se substitue pas a une travail d'historien mais a pour objectif d'etre un paragrphae introductif.
 
-![Cinquième Congrès Solvay de physique, 1927. Source : Wikipedia](Schemas/Solvay_conference_1927.jpg){fig-align="center" width="500"}
+![Cinquième Congrès Solvay de physique, 1927. Source : Wikipedia](Solvay_conference_1927.jpg){fig-align="center" width="500"}
 
 Heisenberg avait 24 ans et aps encore sa these. Mais il faut voir que la theorie quantique a bien connece par des choses petites et les developpement mathematiques sont arrives rapidement derriere. Lors du coingre Solvay de 1927 trois ans plus tard (figure 1) la dynamique etait en marche et aboutira de facom plus ou noins direct au consensus de copenhague.
 
@@ -150,7 +150,7 @@ Le corps noir n'est pas forcement noir. Il s'agit d'une cavité avec une ouvertu
 
 A un moment Planck eut l'idée d'introduire une constante h qui règle le problème qui vaut : $h=6,626.10^{-34}J.s$. Il imaginait que le corps noir se comportait comme un oscillateur harmonique de fréquence $\mu$ mais dont les niveaux énergie sont quantifiés. Il s'agissait d'une astuce afin de faire coller les résultats avec l’expérience. Planck ne prévoyait pas un très grand avenir scientifique à la constante $h$ qu'il avait introduite. C'est Einstein qui valorisa cette constante en proposant en 1905 une interprétation simple et efficace de l'effet photoélectrique en postulant que le rayonnement électromagnétique était lui même composé de quantas de lumière, appelés plus tard photons d'énergie $\epsilon=h\mu$. Ces quantas d' énergie ne furent appelées photons qu'en 1926.
 
-![Courbes de rayonnement du corps noir à différentes températures selon l'équation de Planck (courbes en couleur) comparées à une courbe établie selon la théorie classique de Rayleigh-Jeans (courbe en noir). Source : wikipedia](Schemas/Corps.png){fig-align="center" width="400"}
+![Courbes de rayonnement du corps noir à différentes températures selon l'équation de Planck (courbes en couleur) comparées à une courbe établie selon la théorie classique de Rayleigh-Jeans (courbe en noir). Source : wikipedia](Corps.png){fig-align="center" width="400"}
 
 Max Planck [@Planck1901-fc] écrit :
 
