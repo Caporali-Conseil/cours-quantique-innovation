@@ -1,8 +1,9 @@
 ---
-title: "Introduction à la théorie quantique - version avec corrigé des exercices"
+title: "Introduction à la théorie quantique version: 1.0"
 author: Stéphane Caporali
-date: "2025-08-29"
+date: "2025-12-12"
 bibliography: fichier.bib 
+version: 1.0 
 editor: visual
 format:
   html:
@@ -15,7 +16,7 @@ format:
     df-print: paged
 ---
 
-# 1. Démarche pédagogique :
+# Démarche pédagogique :
 
 Depuis l'enseignement de la quantique il y a 40 ans oú l'objectif était, pour un futur ingénieur, d’acquérir une compétence dans les semi-conducteurs, est apparu une "seconde révolution" quantique portée notamment par la vérification expérimentale de l'intrication, ouvrant la porte à l'*informatique quantique*. L’objectif pour le futur ingénieur est d'être sensibilisé aux enjeux industriels d'aujourd'hui. Bien que ne s'adressant pas directement à de futur physiciens il est décidé de ne pas trop tomber dans la simplification, l’approche de ce cours est intuitive mais rigoureuse.
 
@@ -23,7 +24,7 @@ On lit fréquemment dans les livres pédagogiques récents que l'on aborde les c
 
 Il s'agit aussi de démythifier la physique quantique. On entend dire que par rapport au monde classique le monde quantique serait quelque chose complètement contre-intuitif. Il y a la fameuse phrase de Feyman qui dit que personne ne comprend la physique quantique et que l'on sort souvent de son contexte. En réalité des exemples pris dans le domaine de l'acoustique ou de électronique donnent pas mal de clés. De plus, les notions d'algèbre linéaire sont amenées de façon très progressive pour permettre à des gens qui ne sont pas sensibilisés d'y rentrer.
 
-Veuillez noter que ce cours nécessite des connaissances préalables en physique des ondes et concernant les équations différentielles. Toutefois quelques rappels sont insérés dans le cours. Ce cours s'accompagne d'exercices essentiellements issus du livre d'Hamid Najib [@Najib2022-qq] fruit d'une expérience d'enseignement de l'auteur.
+Veuillez noter que ce cours nécessite des connaissances préalables en physique des ondes et concernant les équations différentielles. Toutefois quelques rappels sont insérés dans le cours.
 
 Ne sont pas traités dans ce cours :
 
@@ -35,33 +36,75 @@ Ne sont pas traités dans ce cours :
 
 Une attention particulière est accordée à l'onde de De Broglie, au principe d'incertitude d'Heisenberg ainsi qu'aux portes logiques quantiques, et au lien avec *le domaine des réseaux en général et à la blockchain en particulier*.
 
-# 2. Introduction historique
+Ce document est un complément didactique pour naviguer dans les concepts théoriques de mon offre de cours.
 
-On situe quelquefois la naissance de la quantique par la decouverte de la constante de planck, ou bien celle de l equation de Schrodinger, ou bien le papier de Heisenberg de 1925 qui pose un formalisme dans le document.
+# Introduction historique
+
+On situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l'équation de Schrödinger, ou bien le papier de Heisenberg de 1925 qui pose un formalisme dans le document.
 
 ![](Article_1925.png)
 
-Ainsi historiquement, avant d'etre l'homme des matrices ou du principe d'incertitude, Heisenberg s'est interesse aux series de fourier.
+Ainsi historiquement, avant d’être l'homme des matrices ou du principe d'incertitude, Heisenberg s'est intéressé aux séries de Fourier.
 
-Ainsi Heisenberg a imagine un tableau metant en correspondance les niveaux n et n+1 de le'enrgie. Chaque ligne correspond au developpement en serie de fourier d'une fonction, par exemple la fonction position. Ainsi une case peut etre vue comme une composante de la serie de fourier, On ne parle pas encore de matrice et ni d'espace vectoriel.
+Ainsi Heisenberg a imaginé un tableau mettant en correspondance les niveaux n et n+1 de l'énergie. Chaque ligne correspond au développement en séries de fourier d'une fonction, par exemple la fonction position. Ainsi une case peut être vue comme une composante de la série de fourier, On ne parle pas encore de matrice et ni d'espace vectoriel.
 
-Toutefois Heisenberg a la bonne idee de chercher a mettre l'expression sous la forme d'un devellopement de degre 2. En effet l'energie s'exprime au carre et si l'amplitude des series de fourier represente un carre alors il s'agit peur etre d'un resultat observable.
+Toutefois Heisenberg a la bonne idée de chercher a mettre l'expression sous la forme d'un développement de degré 2. En effet énergie s'exprime au carre et si l'amplitude des séries de fourier représente un carre alors il s'agit peur être d'un résultat observable.
 
-ainsi on trouve dans le document [@Heisenberg1925] l'expression suivante exprimee ici dans le formalisem de la physique classque mais l'idee y est :
+ainsi on trouve dans le document [@Heisenberg1925] l'expression suivante exprimée ici dans le formalisme de la physique classique mais l’idée y est :
 
--   tout d'abord, nous cherchons a exprimer la position x d'une particule. En supossons la fonction periodique nous allons la decomposer en serie de fourier,
+>Wohl aber kann dem Elektron auch in der Quantentheorie eine Ausstrahlung zugeordnet
+werden; diese Strahlung wird beschrieben erstens durch die Frequenzen, die als Funktionen zweier
+Variablen auftreten, quantentheoretisch in der Gestalt:
 
-> $x=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)e^{i\alpha\omega_{n}t}$ dann ist
+$\nu(n,n-\alpha)=\frac{1}{h}[W(n)-W(n-\alpha)]$
 
-Il suffit de la deriver pour prendre l'expression de v.
+>In der klassisschen theory in der form :
 
-> $m\dot{x}=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)i\alpha\omega_{n}e^{i\alpha\omega_{n}t}$ und
+$\nu(n,\alpha)=\alpha.\nu(n)=\alpha.\frac{1}{h}\frac{dW}{dn}$
 
-Heisenger s'interesse a la notion d'action, prise comme l'impact et qui peut s'exprimer comme une energie que multiplie une duree, ou comme une vitesse que multiplie une distance. H signifie deja le quantum d'action.
+Comparaison des phases : 
+
+>Klassisch
+
+$\nu(n,\alpha)+\nu(n,\beta)=\nu(n,\alpha+\beta)$
+
+si onsomme deux sinusides ca donne une courbe mais pas forcement de frequence egale a la somme des deux frequences. Toutefois pour comprendre le phenomene auqule fait reference Heisenberg il faut se referer a la frequence de la physoque de l epoque.
+
+>Quantentheoretisch
+
+$\nu(n,n − \alpha) + \nu(n − \alpha,n − \alpha − \beta) = \nu(n,n − \alpha − \beta)$
+
+
+> 1. Integration der Bewegungsgleichung
+
+$x¨ + f(x) = 0$
+
+
+
+Ici Heisenberg exprime la seconde loi de newton connue sous la forme : $\Sigma F=m.\ddot{x}$ F etant une force.
+
+>2. Bestimmung der Konstante bei periodischen Bewegungen
+durch
+
+Heisenberg s’intéresse a la notion d'action, prise comme l'impact et qui peut s'exprimer comme une énergie que multiplie une durée, ou comme une vitesse que multiplie une distance. $h$ signifie déjà le quantum d'action.
 
 > $\oint pdq=\oint m\dot{x}dx=J(=nh)$
 
-En basculant de dq en dt on introduit un carre. L'energie cinetique est une vitesse au carree. Le carre introduit qu'il s'agit d'une energie. Le terme $a$ lie a l'amplitude se retourve deux fois.
+Toutefois ici il faut se placer dans la physique de époque et considérer l'action comme un multiple de h la constante de Planck et n le niveau d'énergie. Cette formulation de l'action va etre remise en cause par Heisenberg.
+
+-   tout d'abord, nous cherchons a exprimer la position x d'une particule. En supposant la fonction périodique nous allons la décomposer en série de fourier,
+
+> $x=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)e^{i\alpha\omega_{n}t}$ dann ist
+
+Attention ici il s'agit d'une expression en physique classique. Mais nous allons voir que Heisenberg va "abandonner" $x$ car considere comme non obervable. Toutefois nous restons encore dans le cadre la la mecanique classique. Un nouvement periodique peut etre un oscillateur harmonique mais surtout la trajectoire d'un electron sur son orbite imaginee dans le modele de Bohr. On dirait que Heisenberg presuppose que le mouvement quantique est periodique. En realite il exige que si un mouvement quantique existe alors il permet un mouvement classique periodique. Dans le modele de Bohr le mouvement classique etait considere comme un cas particulier du mouvement quantique (celui ou $n$ est tres grand). C'est pour cette raison (qu'on appelle principe de correspondance) que l'on peut prendre le mouvement periodique classique comme point de depart du raisonnement. Ensuite on se detachement de la vision continue de x(t) de la physique classique. 
+
+Il suffit de la dériver pour prendre l'expression de v.
+
+> $m\dot{x}=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)i\alpha\omega_{n}e^{i\alpha\omega_{n}t}$ und
+
+
+
+En basculant de dq en dt on introduit un carre. L'énergie cinétique est une vitesse au carrée. Le carre introduit qu'il s'agit d'une énergie. Le terme $a$ lie a l'amplitude se retrouve deux fois.
 
 > $\oint m\dot{x}dx=\oint m\dot{x}^2dt=2\pi m\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)a_{-\alpha}(n)\alpha^2\omega_{n}$
 
@@ -71,25 +114,44 @@ En basculant de dq en dt on introduit un carre. L'energie cinetique est une vite
 
 > Dieses Phasenintegral hat man bisher meist; gleieh einem ganzen Vielfachen yon h, also glelch n. h gesetzt; eiae solche Bedingung fiigt sich aber nJcht nur sehr gezwungen der mechanischen Rechnung ein, sie erscheint auch selbst yore bisherigen Standpunkt aus Jm Sinne des Korrespondenzprinzips willktirlieh; denn korrespondenzmal3ig sind die J nur bis auf eine additive Konst\~nte als ganzzahtige Viel\~ache von l\~ festgelegt, und an Stelle yon (14) hatte naturgemalJ zu treten:
 
-Ici Heisenberg expliaue que cette formulation ne le satisfait pas. Ici en prefere une autre :
+Ici Heisenberg explique que cette formulation ne le satisfait pas. Il en préfère une autre :
 
 > $\frac{d}{dn}(nh)=\frac{d}{dn}\oint m\dot{x}dt$ das heist
 
+Ce qui précéde n'est pas juste algorithmiquement car n est discret mais il s'agit d'une analogie : l'action n'est pas a considérer comme lie a un n donne mais comme une différence de deux n. C'est comme si entre n1 et n2 on ne passe pas de $n1$ a $0$ puis de $0$ a $n2$ mais l'action se déroule sur un intervalle compris entre $n1$ et $n2$.*Le phénomène (l'action) est confine sur l'intervalle*. L'intervalle est une sorte de boite et chaque boite est une case qui contient tous les termes de la serie de fourrier. La notion de derivee ramene a un signale continue et il faut faire le saut vers le discert.
+
 > $h=2\pi m \Sigma_{+\infty}^{-\infty} \alpha \frac{d}{dn} a\alpha \omega_{n} |a_{\alpha}|^2$
 
-Il faut voir que ce qui interesse Heisenberg c'est l'amplitude a qu'on peut associer a chacun des composantes des series de fourier, De plus ici on s'exprime en utilisant un formalisme classique et Heisenberg avec ses tableaux propose l'amorce d'un cadre conceptuel qui precede les matrices.
+Pour comprendre ce qui se passe dans un cadre classique on peut imaginer en électronique quand on multiplie deux signaux et que l'on multiplie les amplitudes, par exemple dans le cadre d'un mélangeur. Les amplitudes sont des chiffres que lon va multiplier.
 
-Il s'agit simplement d'une esquise d'interpretation qui ne se substitue pas a une travail d'historien mais a pour objectif d'etre un paragrphae introductif.
+Il faut voir que ce qui intéresse Heisenberg c'est l'amplitude a qu'on peut associer a chacun des composantes des séries de fourier, De plus ici on s'exprime en utilisant un formalisme classique et Heisenberg avec ses tableaux propose l'amorce d'un cadre conceptuel qui précède les matrices.
+
+>Zwar besitzt eben nur Gleichung (15) eine an die Kramerssche Dispersionstheorie anknüpfende einfache quantentheoretische Verwandlung 
+:
+
+$h = 4\pi m \Sigma_{0}^{+\infty}\alpha{|a(n,n+\alpha)|^2\omega(n,n+\alpha)}-{|a(n,n-\alpha)|^2\omega(n,n-\alpha)^2}$
+ |
+
+Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le "saut". Cette formule n'est pas encore un tableau mais les indices associes aux amplitudes montrent que l'on associe pas a une apmplitude un etat mais une transition d'etat : ce sera une case du tableau. Et les tableaux deviendont des matrices : la revolution conceptuelle de la mecanique matricielle est nee.
+
+Toutefois il restait a interpeter ces amplitudes exprimee uniquement en fonction de $\nu$ et de $n$. Elle seront des amplitudes de transition d'etat. 
+
+
+
+Il s'agit simplement d'une esquisse d’interprétation qui ne se substitue pas a une travail d'historien mais a pour objectif d’être un paragraphe introductif.
 
 ![Cinquième Congrès Solvay de physique, 1927. Source : Wikipedia](Solvay_conference_1927.jpg){fig-align="center" width="500"}
 
-Heisenberg avait 24 ans et aps encore sa these. Mais il faut voir que la theorie quantique a bien connece par des choses petites et les developpement mathematiques sont arrives rapidement derriere. Lors du coingre Solvay de 1927 trois ans plus tard (figure 1) la dynamique etait en marche et aboutira de facom plus ou noins direct au consensus de copenhague.
+Heisenberg avait 24 ans. Mais il faut voir que la théorie quantique a bien commence par des choses petites et les développement mathématiques sont arrives rapidement derrière. Lors du congrès Solvay de 1927 trois ans plus tard (figure 1) la dynamique était en marche et aboutira de façon plus ou moins direct au consensus de Copenhague.
 
-# 2. Faits experimentaux :
+# Faits experimentaux :
 
-## 2.1 Le corps noir :
+## Le corps noir :
 
-Le corps noir n'est pas forcement noir. Il s'agit d'une cavité avec une ouverture qui piège les rayons lumineux à l' intérieur de la cavité. La cavité ne peut pas émettre les rayons reçus, toutefois elle se réchauffe (et donc émet de l' énergie) mais sans émission de lumière. Elle se comporte comme si elle était noire. L'émission d'énergie sous forme de chaleur suit une courbe qui n'est pas explicable par la physique classique.
+Le corps noir n'est pas forcément noir. C'est un concept théorique désignant un objet idéal qui absorbe tout le rayonnement électromagnétique qu'il reçoit. Dans la pratique, il est modélisé par une cavité avec une ouverture qui piège les rayons lumineux à l'intérieur. S'il ne reçoit aucun rayonnement extérieur, l'objet émet son propre rayonnement (chaleur ou lumière), uniquement en fonction de sa température. C'est cette émission d'énergie, dont la courbe spectrale n'est pas explicable par la physique classique, qui a conduit à la quantification de l'énergie.
+
+
+![](Noir.png){fig-align="center"}
 
 \usetikzlibrary{arrows}
 \begin{figure}
@@ -164,13 +226,15 @@ A comparer avec la valeur réelle : $6,62607015 \times 10^{-34} J.s$
 
 $h$ s'exprime en joules secondes : en physique il s'agit d'une action. Pour cette raison on appelle aussi $h$ le quantum d'action.
 
-## 2.2 L'effet photoélectrique :
+## L'effet photoélectrique :
 
 Albert Einstein écrit : [@Einstein1905-zf]
 
 > "Il me semble que les observations portant sur le "rayonnement noir" (...) apparaissent comme plus compréhensibles si on admet que l'energie de la lumière est distribuée de façon discontinue dans l'espace. Selon l’hypothèse envisagée ici, lors de la propagation d'un rayon lumineux émis par une source ponctuelle, l’énergie n'est pas distribuée de façon continue sur des espaces de plus en plus grands, mais est constituée d'un nombre fini de quantas d’énergie localises en des points de l'espace".
 
 Einstein pose dans cet article daté du 09 juin 1905 (soit environ 6 mois avant son célèbre article sur la relation masse énergie) la discontinuité de l'énergie non plus comme une constatation expérimentale mais comme un fondement théorique. Cet article lui vaudra le Prix Nobel de physique en 1921.
+
+![](Photoelectrique.png){fig-align="center"}
 
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary {decorations.pathmorphing}
@@ -222,9 +286,9 @@ $\frac {1}{2}mv^{2}$ est l'énergie cinétique finale de l'électron. L'énergie
 
 *On considère que l'effet photoélectrique a fait apparaître l'aspect corpusculaire de la lumière (en plus de ondulatoire). [@Greiner2009-sw]*
 
-## 4. Expérience des fentes d'Young :
+## Expérience des fentes d'Young :
 
-### 4.1 Fentes d'Young avec la lumière :
+### Fentes d'Young avec la lumière :
 
 En optique on admet que les trous S1 et S2 se comportent comme des sources secondaires qui, issues de la même source primaire S, mettent de sondes sphériques cohérentes entre elles. C'est le principe d'Huygens-Fresnel.
 
@@ -232,7 +296,9 @@ En tout point P du plan d'observation la fonction d'onde $\Phi$ résulte de la s
 
 $$\Phi=\Phi 1 +\Phi 2$$
 
-### 4.2 Fentes d'Young avec des électrons :
+### Fentes d'Young avec des électrons :
+
+![](Young.png){fig-align="center"}
 
 \begin{tikzpicture}
 \draw[->] (1,0) -- (3,0);
@@ -282,7 +348,7 @@ L'onde considérée en quantique est une onde de probabilité : elle diffère do
 
 *Nous reviendrons plus tard dans le cours sur l'approche statistique de la physique quantique.*
 
-# 3. Structure mathematique de la physique quantique :
+# Structure mathematique de la physique quantique :
 
 ### Definition mathematique de l'espace vectoriel
 
@@ -296,7 +362,7 @@ L'onde considérée en quantique est une onde de probabilité : elle diffère do
 
 > The state space of a quantum mechanical system is a (complex) hilbert space. A state vector of a quantum mechanical system is a vector in the state space having unit magnitude. [@Wiggins2024]
 
-## 3.7 Produit scalaire de deux vecteurs :
+## Produit scalaire de deux vecteurs :
 
 Le produit scalaire de deux vecteurs et le produit de leurs longueurs et du cosinus de l'angle qu'ils définissent.
 
@@ -328,7 +394,7 @@ Voici une definition plus mathematique :
 
 > An inner product on a vector space V is a map of an ordered pair of vectors $(\Psi, \phi)$ to the complex numbers that satisfy the following properties : 1. $(\Phi, \alpha \phi + \beta \chi)=\alpha(\Psi, \phi)+\beta(\Psi, \chi)$ 2. $(\Phi,\phi)=\overline{(\phi,\Phi)}$ 3. $(\phi, \phi)\geq 0$ and equality holds if and only if $\Phi=0$, for any $\alpha, \beta \in \mathbb{C}, \Phi, \phi, \chi \in V$.[@Wiggins2024]
 
-## 3.6 Norme d'un vecteur :
+## Norme d'un vecteur :
 
 La norme d’un vecteur est une quantité qui caractérise sa longueur ou sa taille. Elle permet de mesurer la distance entre l’origine du repère et le point représenté par le vecteur. Mathématiquement, pour un vecteur $\vec{v} = (v1, v2, ..., v_n)$ dans un espace de dimension n, la norme est donnée par la formule :
 
@@ -338,7 +404,7 @@ Voici une definition plus mathematique de la norme :
 
 > For any vector $\Phi \in V$, we define the norm of $\Phi$, denoted $\lVert \Phi \rVert$, as follow : $\lVert \Phi \rVert=\sqrt{(\Phi,\Phi)}$ [@Wiggins2024]
 
-## 3.8 Equation aux valeurs propres :
+## Equation aux valeurs propres :
 
 Nous llons commencer par une definition selon [@Wiggins2024] page 12
 
@@ -424,7 +490,7 @@ $\lambda$ est appelée valeur propre associée au vecteur propre $\left| V \righ
 
 Nous parlerons plus loin de fonction d'onde $\Psi$ pour décrire l’état d'une particule. Nous poserons que si $|\Psi_n \rangle$ est vecteur propre de l’opérateur A, avec la valeur propre $a_n$ alors : $$\boxed{A|\Psi_n\rangle=a_n|\Psi_n}$$
 
-## 3.9 Produit hermitien :
+## Produit hermitien :
 
 En anglais complex inner product.
 
@@ -478,7 +544,7 @@ Selon [@Wiggins2024] page 6
 
 $(\Psi,\phi)=\int_D \overline{\Psi(x)}\phi(x)dx$ et $L^2(D)$ denote the set of all complex value functions of the real variable x, defined on some domain $D\in\mathbb{R}$
 
-## 3.10 Matrice hermitique :
+## Matrice hermitique :
 
 Nous serons amenés à représenter les grandeurs physiques par des matrices, puis à préciser la notion de mesure.
 
@@ -507,7 +573,7 @@ $$\begin{vmatrix}
 -i & 0 
 \end{vmatrix}$$
 
-## 3.12 Valeurs propres et vecteurs propres des matrices hermitiques :
+## Valeurs propres et vecteurs propres des matrices hermitiques :
 
 *Théorème 1* : les valeurs propres d'une matrice hermitique sont toutes réelles
 
@@ -517,7 +583,7 @@ $$\begin{vmatrix}
 
 # Comment representer un operateur par une matrice et probleme de la mesure ?
 
-## 3.13 Décomposition d'un vecteur sur la base des vecteurs propres d'une matrice hermitique :
+## Décomposition d'un vecteur sur la base des vecteurs propres d'une matrice hermitique :
 
 Les vecteurs propres d'une matrice hermitique forment un *système orthogonal* c'est-à-dire un système dont les vecteurs sont orthogonaux deux à deux.
 
@@ -541,7 +607,7 @@ $$......$$
 
 $$x_n=\left\langle V_n|V \right\rangle$$
 
-## 3.14 Représentation d'un opérateur sur la base des vecteurs propres d'une matrice hermitique :
+## Représentation d'un opérateur sur la base des vecteurs propres d'une matrice hermitique :
 
 Nous nous intéressons ici à la représentation d'un opérateur linéaire donné B en adoptant pour vecteurs de base les n vecteurs propres orthogonaux et normés d'un opérateur hermitique A.
 
@@ -574,6 +640,8 @@ $$....$$
 \end{tikzpicture}
 \end{figure}
 
+![](Vecteur.png){fig-align="center"}
+
 $\left\langle V_1 \right| \left\langle V_2 \right|$ : vecteurs propres d'une matrice hermitique A
 
 $\left\langle V \right|$ vecteur quelconque du plan, décomposé sur la base $\left\langle V_1 \right|$ $\left\langle V_2 \right|$
@@ -587,7 +655,7 @@ B_2¹ & B_2² &.....&   B_2^n \\
 B_n¹ & B_n² & .... & B_n^n
 \end{pmatrix}$$
 
-## 3.15 Quelle est la représentation de la matrice hermitique A dans cette base particulière ? :
+## Quelle est la représentation de la matrice hermitique A dans cette base particulière ? :
 
 Appliquons à l'opérateur A un vecteur $\left| V \right\rangle$ quelconque.
 
@@ -611,7 +679,7 @@ $$A=
 
 C'est une matrice diagonale dont les élèments sont les valeurs propres de l'opérateur A.
 
-## 3.16 Opérations sur des fonctions et opérations sur des vecteurs :
+## Opérations sur des fonctions et opérations sur des vecteurs :
 
 Nous avons vu jusqu'ici qu'une opération linéaire portant sur un vecteur, c'est à dire une transformation linéaire qui fait passer d'un vecteur quelconque $\vec{V_1}$ à un vecteur $\vec{V_2}$ est représentable par une matrice M.
 
@@ -631,7 +699,7 @@ Les deux aspects de la mécanique quantique, celui où les phénomènes sont dé
 
 Les fondateurs de la mécanique quantique ont abordé les problèmes sous deux angles différents : Louis de Broglie, Schrödinger adoptaient pour point de départ les opérateurs différentiels tandis que Heisenberg utilisait la description matricielle, reprise sous une forme plus élaborée par Dirac.
 
-## 3.17 Opérateurs fonctionnels, fonctions propres, valeurs propres :
+## Opérateurs fonctionnels, fonctions propres, valeurs propres :
 
 On appelle opérateur fonctionnel un symbole qui exprime certaines transformations fonctionnelles.
 
@@ -651,7 +719,7 @@ On peut aussi imaginer des opérations qui ne font pas intervenir des symboles d
 
 L'opérateur sera noté ici $x \times$
 
-## 3.18 Produit d'opérateurs fonctionnels :
+## Produit d'opérateurs fonctionnels :
 
 Considérons une fonction d'une variable x; un opérateur A transforme toute fonction f(x) en une autre fonction g(x).
 
@@ -665,7 +733,7 @@ On définit ainsi un opérateur produit C, puisque on a : $h(x)=B[Af(x)]=Cf(x)$
 
 En général AB et BA définissent deux opérateurs différents. On dit que A et B ne sont pas commutables. Mais ce n'est pas toujours le cas.
 
-## 3.19 Fonction propres et valeurs propres d'un opérateur fonctionnel :
+## Fonction propres et valeurs propres d'un opérateur fonctionnel :
 
 > **Rappel :** méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : [@Delbarre2022-bb] $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
 
@@ -755,9 +823,11 @@ Mais ici il y a dégénérescence car chaque couple de fonction propre correspon
 
 De plus toute combinaisons linéaire de fonction propres est aussi fonction propre avec la même valeur b.
 
-## 3.20 Conditions aux limites :
+## Conditions aux limites :
 
 On peut imposer aux fonctions propres une condition aux limites ce qui conduira à remplacer un spectre continu par un spectre discret.
+
+![](Sinusoide.png){fig-align="center"}
 
 \begin{figure}
     
@@ -803,7 +873,7 @@ Nous pouvons considérer ces fonctions comme des vecteurs généralisés complex
 
 Il nous faut étendre à ces vecteurs fonctionnels complexes la définition du produit scalaire rencontrée dans le cas des vecteurs fonctionnels réels : il s'agira du *produit hermitien*.
 
-## 3.21 Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
+## Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
 
 Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l’intervalle O, T et $\overline{f(x)}$ et $\overline{g(x)}$ leurs conjuguées.
 
@@ -819,7 +889,7 @@ Le produit hermitien :
 
 $$\boxed{\left\langle f|g \right\rangle=\frac{1}{T}\int_{0}^{T} \overline{f(x)} g(x)\,dx}$$
 
-## 3.22 Propriété d'orthogonalité :
+## Propriété d'orthogonalité :
 
 Les vecteurs fonctionnels complexes $\left|f\right\rangle$ et $\left| g \right\rangle$ sont dit "orthogonaux" si le produit hermitique est nul. On a alors :
 
@@ -829,13 +899,13 @@ Les fonctions propres de l'opérateur $$\frac{d^2}{dx^2}$$ sont orthogonales.
 
 *Il revient au même de parler de "fonctions orthogonales" ou de "vecteurs orthogonaux" puisque nous avons montré que les fonctions envisagées sont assimilables à des vecteurs.*
 
-## 3.23 Norme :
+## Norme :
 
 On appelle norme du vecteur fonctionnel complexe : $\left|f\right\rangle$ le produit hermétique de ce vecteur par lui-même soit :
 
 $$N \left| f \right\rangle = \left\langle f \right| \left| f \right\rangle = \frac{1}{T} \int_{0}^{T} \overline{f(x)} f(x)\,dx=\frac{1}{T} \int_{0}^{T} |f(x)|^2dx$$ Lorsque nous parlerons plus tard de la fonction d'onde représentée par le vecteur $\Psi$, nous dirons que la norme au carre de $\Psi$ est : $$\langle \Psi | \Psi \rangle=|||\Psi\rangle||^2=\sum_{i}c_i^*c_i=\sum_{i}|c_i|^2$$
 
-## 3.24 Norme des fonctions propres de $\frac{d^2}{dx^2}$ :
+## Norme des fonctions propres de $\frac{d^2}{dx^2}$ :
 
 La norme des vecteurs de la suite $\left| f_k \right\rangle$ c'est à dire la norme des fonctions propres $$e^{ik\frac{2\pi}{T}x}$$ de l'opérateur $$\frac{d^2}{dx^2}$$ a pour valeur :
 
@@ -845,7 +915,7 @@ L'ensemble des vecteurs propres de l'opérateur $\frac{d^2}{dx^2}$ orthogonaux e
 
 On exprime cette propriété en disant que la suite des vecteurs propres est complète.
 
-## 3.25 Développement complexe de fourier :
+## Développement complexe de fourier :
 
 > **Rappel de traitement du signal :**
 
@@ -873,7 +943,7 @@ L’opérateur $$\frac{d^2}{dx^2}$$ est un opérateur réel car il ne contient p
 
 $$\frac{h}{i2\pi}\frac{d}{dx}$$ $$\frac{h}{i2\pi}\frac{d}{dy}$$ $$\frac{h}{i2\pi}\frac{d}{dz}$$ $$-\frac{h}{i2\pi}\frac{d}{dt}$$
 
-## 3.26 Base des fonctions propres d'un opérateur fonctionnel hermitique :
+## Base des fonctions propres d'un opérateur fonctionnel hermitique :
 
 Pour les opérateurs que nous aurons à utiliser, les n fonctions propres forment un système *complet* ce qui permet de mettre toute fonction f(x) sous la forme d'un développement qui généralise le développement de fourier soit :
 
@@ -908,7 +978,7 @@ Si on appelle $\psi(\vec(r))$ la fonction d'onde représentée par le ket $|\psi
 
 $$|\psi\rangle=\sum_{i} c_i|u_i\rangle$$ l'ensemble des vecteurs ${|u_i|}$ constituant une base de l'espace des états quantiques.
 
-## 3.27 Représentation d'un opérateur fonctionnel par une matrice :
+## Représentation d'un opérateur fonctionnel par une matrice :
 
 Considérons maintenant un opérateur fonctionnel B, hermitique ou non, distinct de A. Toute fonction f(x) est transformée par B en une autre fonction g(x) suivant :
 
@@ -975,7 +1045,7 @@ $$|B|=\begin{pmatrix}
 
 Ce sont les notations utilisées par Dirac.
 
-## 3.28 Calcul pratique des éléments de la matrice B
+## Calcul pratique des éléments de la matrice B
 
 [@Wiggins2024] page 21
 
@@ -983,7 +1053,7 @@ Ce sont les notations utilisées par Dirac.
 
 > Spectral theorem for finite dimentional self-adjoint operators : Let A : V \to V be a self adjoint linear operator on a finite dimentionnal complex inner product space. Then : - A has real eignevalues, and the eignevectors of A corresponding to distincts eignevalues are orthogonal. - the eigenvectors of A span V.
 
-### 3.28.1 Exemple 1 : opérateur dérivée.
+### Exemple 1 : opérateur dérivée.
 
 Si B est l’opérateur $$\frac{d}{dx}$$, et si nous adoptons pour base orthonormée les fonctions propres de l’opérateur $$\frac{d^2}{dx^2}$$ déterminées précédemment : $$e^{in\frac{2\pi}{T}x}$$
 
@@ -1031,7 +1101,7 @@ $-4\omega_0^2$ $-\omega_0^2$ 0 $-\omega_0^2$ $-4\omega_0^2$
 
 Selon [@Wiggins2024] : Consider an approximately defined vector space of complex valued differentiable functions of a real scalar variable x. Then a liear operator on this vector space can be defind by differentiation as follows : $(A\Phi)(x)=-i\frac{d\Phi}{dx}(x)$
 
-### 3.28.2 Exemple 2 : matrice non diagonale. Opérateur $x*$
+### Exemple 2 : matrice non diagonale. Opérateur $x*$
 
 Adoptons maintenant pour l opérateur B l'opérateur de multiplication x \*
 
@@ -1043,13 +1113,13 @@ avec $p$ et $q$ entier, et $p\neq q$
 
 # Mesure quantique
 
-## 3.29 Représentation d'une grandeur physique par un opérateur
+## Représentation d'une grandeur physique par un opérateur
 
 Un système physique en mouvement étant décrit par une fonction d'onde $\phi(x,y,z,t)$ on convient de faire correspondre des opérateurs aux grandeurs physiques qui lui sont attachées.
 
 Ainsi à la fonction $g(x,y,z,p_x,p_y,p_z,E)$ on associera l’opérateur : $$g[x,y,z,\frac{h}{i2\pi}\frac{d}{dx},\frac{h}{i2\pi}\frac{d}{dy},\frac{h}{i2\pi}\frac{d}{dz},-\frac{h}{i2\pi}\frac{d}{dt}]$$L’opérateur agit sur une fonction : la fonction $\phi$ du système.
 
-## 3.30 Nouvelle notion de mesure :
+## Nouvelle notion de mesure :
 
 Comme nous le savons, étant donné un opérateur A, il possède un spectre de fonctions propres et de valeurs propres définies par l’égalité : $A\Psi=a\Psi$
 
@@ -1058,7 +1128,7 @@ Le système étant décrit par la fonction d'onde $\Psi$, et la grandeur étudi�
 1.  Si $\Psi$ n'est pas fonction propre de A, la grandeur est inobservable, aucune mesure précise n'est possible.
 2.  Si $\Psi$ est fonction propre de A, la mesure de la grandeur, qui doit être un nombre, est la valeur propre $a$ associée.
 
-## 8.2 Mesure quantique
+## Mesure quantique
 
 Dans certaines sciences, comme l’électronique, effectuer une mesure d’un système influe sur ce dernier. Il est possible de dire que : « j’observe donc je perturbe. ». En effet, lorsque l’on effectue une mesure sur un circuit électronique, il faut prendre en compte le fait que l’appareil de mesure est également un élément du circuit. Il peut disposer de sa propre résistance par exemple. Ainsi, effectuer une mesure revient à interagir avec le système. [@cluzel:hal-04052636] .
 
@@ -1082,7 +1152,7 @@ Par exemple en théorie classique ma voix est la somme de toutes mes fréquences
 
 -   State of the system after measurement : If the measurement of A on the system that is in the state $|\Psi\rangle$ gives the outcome \lambda, when the state of the system after the measurement is given by : $$\frac{P_{\lambda}|\Psi\rangle}{\sqrt{\langle{\Psi|P_{\lambda|\Psi\rangle}}}}$$
 
-## 9.1 Historique de l'interpretation statistique :
+## Historique de l'interpretation statistique :
 
 En 1939, Fritz London et Edmond Bauer ont écrit : [@london1939theorie]
 
@@ -1090,7 +1160,7 @@ En 1939, Fritz London et Edmond Bauer ont écrit : [@london1939theorie]
 
 Einstein avait du mal à accepter que les lois de la physique "se jouent aux dés". Malgré tout, le formalisme mathématique statistique appliqué à la physique quantique a formé un cadre acceptable. A noter que la physique statistique ne concerne pas que la quantique mais par exemple la thermodynamique comme présenté dans le cours de François Chevoir [@Chevoir2013-fq].
 
-## 9.2 Précisions concernant le symbolisme matriciel :
+## Précisions concernant le symbolisme matriciel :
 
 A la fonction $\phi$ correspond le KET : $|\phi \rangle$ A la fonction conjuguée $\bar \phi$ le BRA : $\langle\phi|$
 
@@ -1152,7 +1222,7 @@ Selon [@Wiggins2024] page 17 :
 
 > Let A be a linear operator on $\mathbb{C}^2$ We consider $A|\Psi \rangle$ and the inner product of this vector with another vector $|\phi\rangle$ $(|\phi\rangle,A|\Psi \rangle)=\langle\phi|A|\Psi\rangle$ This is referred to the expectation value of A in the state $|\Psi\rangle$ $A_{ij}=\langle e_{i}|A|e_{j}\rangle$
 
-## 9.3 Récapitulatif :
+## Récapitulatif :
 
 La valeur moyenne de A dans l’état $\phi$ est définie par :
 
@@ -1164,13 +1234,13 @@ Ainsi la valeur moyenne de l'observable position $X$ et l'impulsion $P_{x}$ dans
 
 $$\langle X \rangle=\langle \Psi | X | \Psi \rangle=\int_{+\infty}^{-\infty}\Psi^*(x)x\Psi(x)dx$$ $$\langle P_{x} \rangle=\langle \Psi | P_x | \Psi \rangle=-i\hbar\int_{+\infty}^{-\infty}\Psi^*(x)\frac{d\Psi(x)}{dx}dx$$
 
-# 5. L'onde de Louis De Broglie :
+# L'onde de Louis De Broglie :
 
-## 5.1 Equation des ondes ou de d'Alembert :
+## Equation des ondes ou de d'Alembert :
 
 Le scientifique français Jean le Rond d'Alembert, qui a établi l'équation des ondes en une dimension d'espace en 1746. $$\frac {\partial ^{2}{\vec {\mathrm {E} }}}{{\partial x^{2}}} + \frac {\partial ^{2}\vec {\mathrm {E} }}{\partial y^{2}} + {\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial z^{2}}}={\frac {1}{c^{2}}}{\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial t^{2}}}$$ On remarque que le terme qui représente l'énergie est en dérivée seconde.
 
-## 5.2 La thèse de De Broglie de 1924 :
+## La thèse de De Broglie de 1924 :
 
 Dans sa thèse de 1924, Louis de Broglie écrit : [@debroglie:tel-00006807]
 
@@ -1178,7 +1248,7 @@ Dans sa thèse de 1924, Louis de Broglie écrit : [@debroglie:tel-00006807]
 
 On lit que Louis de Broglie admet une fréquence liée : c'est le début de la relation onde-corpuscule.
 
-## 5.3 Concept d'onde de matière :
+## Concept d'onde de matière :
 
 L’électron étant une particule matérielle on appelle par extension onde matérielle l'onde associée à une particule.
 
@@ -1212,9 +1282,9 @@ La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Tout
 
 Une onde plane n'étant pas de carré sommable, ce n est pas véritablement une fonction d' onde. Toutefois une onde plane peut être une première approximation d' une fonction d' onde. La fonction d'onde est une superposition linéaire d'ondes planes.
 
-# 6. Principe d'incertitude d'Heisenberg :
+# Principe d'incertitude d'Heisenberg :
 
-## 6.1 Expérience courante du principe d'incertitude :
+## Expérience courante du principe d'incertitude :
 
 *Quand un objet va vite, sa trajectoire est plus difficile à décrire (je perds sa position) comme s'il fallait choisir entre vitesse et position.* *Par exemple, pour suivre la trajectoire d'un oiseau, je suis obligé de le suivre du regard pour identifier sa trajectoire : je compense l'incertitude par la multiplicité des mesures.*
 
@@ -1234,7 +1304,7 @@ Concernant une position, par exemple, je regarde la feuille d'un arbre qui fait 
 
 Conclusion : ce paragraphe introductif pour but de vous faire vous poser des questions à partir constations simples de la vie courante.
 
-## 6.2 Principe d'incertitude des radioelectriciens :
+## Principe d'incertitude des radioelectriciens :
 
 En principe le terme de principe d'incertitude des radioelectriciens n'est pas l'objet d'un usage. Il est toutefois cité par Augustin Blaquiere [@alma991002711819705804]. Je choisis de le mettre en valeur dans ce cours car il a un intérêt pédagogique : en effet il fait le pont entre une notion classique et une notion quantique. Dans le cas classique nous sommes tous familiarisés avec le fait par exemple que le son de la voix peut être représentée par son spectre.
 
@@ -1254,7 +1324,7 @@ Il est intéressant de remarquer que dans un cas classique (électronique ou aco
 
 2.  En acoustique, le timbre d'une voix humaine est un mélange de différentes fréquences. Personne n'a une voix “monocorde". Toutefois ici encore le message utile à la compréhension d'une voix humaine est regroupé sur une bande de fréquence limitée. On peut remarquer que en cas de bruit de fond, dans une salle très bruyante par exemple, à condition de se concentrer il est possible d'isoler la conversation qui nous intéresse comme si le cerveau avait une capacité de filtrage sélective. De même l'oreille réussit à isoler des sons isolés. Autre exemple : dans une salle de restaurant bruyante, si une cuillerée tombe par terre, on isole très bien cet "évènement" du bruit de fond constitué des autres sons.
 
-## 6.3 Transposition au domaine électromagnétique :
+## Transposition au domaine électromagnétique :
 
 Toutefois on peut se demander si un principe équivalent au principe d'incertitude des radioelectriciens existe dans le cas d'ondes électromagnétiques c'est à dire d'ondes lumineuses.
 
@@ -1266,7 +1336,7 @@ Ainsi Bohr [@BOHR1928] décrit cette forme première du principe d'incertitude a
 
 Alors selon Bohr, stricto sensu la représentation d'un champ d'ondes limite exige une multiplicité d'ondes élémentaires correspondant à toutes les valeurs possibles de $\nu$ e de $\sigma$. Cependant *dans les cas les plus favorables* les valeurs moyennes des différentes grandeurs (...) seront données par la relation : $$\Delta t \Delta \nu = \Delta x \Delta \sigma x =  \Delta y \Delta \sigma y =  \Delta z \Delta \sigma z =1$$
 
-## 6.4 La publication de 1925 d'Heisenberg : vers un nouveau formalisme :
+## La publication de 1925 d'Heisenberg : vers un nouveau formalisme :
 
 Revenons un peu en arriere. En 1924 alors qu'il n'est age que de 24 ans et qu'il n'a pas encore sa thèse, Heisenberg écrit : [@Heisenberg1925]
 
@@ -1278,7 +1348,7 @@ Ceci est la première publication d'Heisenberg. Elle pose un formalisme base sur
 
 Ainsi Andre Coret [@PHSC_2001__5_1_105_0] écrit : "En s'appuyant sur l’expérience c'est a dire sur la nécessite de considérer l émission lumineuse comme issue d'un changement d'état de l electron et non de son mouvement, Heisenberg se permet une opération qu'il qualifie lui-même d'arbitraire (willkur)."
 
-## 6.5 Apport du formalisme hamiltonien :
+## Apport du formalisme hamiltonien :
 
 Sir William Rowan Hamilton était un physicien irlandais du 19 eme siècle.
 
@@ -1288,7 +1358,7 @@ Fritz London et Edmond Bauer écrivent : [@london1939theorie]
 
 On voit qu'en formalisme hamiltonien le paramètre t n'est plus visible. Le temps passe, t est sous entendu mais ce n'est pas lui qui apparaît dans la formule mais q la position et p la quantité de mouvement. On va par exemple décrire le diagramme de phase d'un oscillateur harmonique classique en fonction de p et de q. (et non pas par exemple de q et de t). *On prend l'habitude "en douceur" de lier les variables de position et de quantité de mouvement.* Ce formalisme hamiltonien est lui-même une branche de ce que l'on appelle la physique analytique.
 
-## 6.6 Approche intuitive de la non commutation des fonctions :
+## Approche intuitive de la non commutation des fonctions :
 
 Il s'agit ici, à titre préparatoire au principe d'incertitude lui-même, d'aborder les choses sous un angle différent. Il existe bien un lien la notion de commutation et le principe d'incertitude. Lorsque l'on parle de commutation on pense d,abord a des matrices. Par exemple si A et B sont des matrices, si le produit : $AB-BA=0$ on dit que les matrices commutent. On sait aussi que la plupart du temps le produit de 2 matrices n'est pas commutatif.
 
@@ -1312,7 +1382,7 @@ ou sous une forme plus condensée, par :
 
 $$\frac{d}{dx}x -x\frac{d}{dx}=1$$
 
-## 6.7 Cas limites du principe d'incertitude :
+## Cas limites du principe d'incertitude :
 
 J'appelle cas limites les situations ou soit l'incertitude sur la position est tres elevee, soit l'incertitude sur la vitesse est tres elevee, mais pas les deux en meme temps ou aucun des deux.
 
@@ -1323,6 +1393,8 @@ Ces cas sont ceux pour lesquels :
 $\Delta x \Delta p \approx 1$
 
 Au contraite nous verrons que la forme la plus generale du principe d'inceertitude sera celle d'une inegalité
+
+![](Incertitude1.png){fig-align="center"}
 
 \begin{center}
 \begin{tikzpicture}[x=3.8cm/360]
@@ -1342,6 +1414,8 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 
 2.  Si vous voulons que l'énergie cinétique soit très petite nous devons accorde assez de place a l'électron : l'incertitude sur sa position doit être grande, sa distance moyenne au noyau doit alors être grande.
 
+    ![](Incertitude2.png)
+
 \begin{center}
  \begin{tikzpicture}[x=3.8cm/360]
   \pgfplothandlerlineto
@@ -1351,7 +1425,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 \end{tikzpicture}
 \end{center}
 
-## 6.8 Premier principe d'incertitude d'Heisenberg :
+## Premier principe d'incertitude d'Heisenberg :
 
 La relation suivante limite les precisions avec lesquelles on peut mesurer la position et l'impulsion :
 
@@ -1367,7 +1441,7 @@ $\hbar$ est le symbole utilisé en physique pour représenter la constante de Pl
 
 Attention à la portée de ce principe : il ne s'agit pas d'une contrainte expérimentale liée par exemple aux instruments du laboratoire mais de plus que cela. Nous pouvons le considérer comme un fondement théorique.*C'est independant des instruments utilisés.*
 
-## 6.10 Principe d'incertitude temps energie :
+## Principe d'incertitude temps energie :
 
 On l'appelle aussi second principe d'incertitude d'Heisenberg.
 
@@ -1401,11 +1475,13 @@ Par exemple plus la durée de vie d'un état quantique est courte, plus l'incert
 
 On voit ici que c'est la condition de quantification qui fait que ce second principe existe. Cela traduit le fait que quand la fequence est elevee l'energie associee est importante. Ce fait qui fut decouvert par planck n'est pas intuitif du tout.
 
-## 6.12 Base en représentation par t :
+## Base en représentation par t :
 
 La problématique de départ est plus compliquée ici. Une derivee représente un intervalle entre 2 positions. Pour être dans une représentation en position on s’intéresse a un simple point dans l'espace. Toutefois dans notre démarche nous allons commencer par poser les choses en t et non pas en x comme si le point auquel on s’interesse mais pas un point dans l'espace mais dans le temps. Nous nous intéressons donc a un intervalle très court sur la ligne du temps et nous l'assimilons a une impulsion de Dirac.
 
 Physiquement parlant, une impulsion de Dirac peut se comparer en terme temporel a une timbale qui émet un son fort mais très bref. On va ainsi filtrer le signal sur un intervalle temporel très petit.
+
+![](Dirac.png){fig-align="center"}
 
 \begin{figure}
 \centering
@@ -1441,9 +1517,11 @@ Physiquement parlant, une impulsion de Dirac peut se comparer en terme temporel 
 
 Nous raisonnons en t. Une impulsion peut être un signal très bref en termes temporels. Toutefois en termes spatiaux cela peut se représenter par une distance très courte. Ici encore la fonction impulsion $\delta x$ s'applique
 
-## 6.13 Utilité de la fonction porte :
+## Utilité de la fonction porte :
 
 $\delta x$ est une vue théorique car sa largeur est nulle. En pratique nous allons utiliser la fonction échelon mais sur une distance très courte : c'est la fonction porte.
+
+![](Sinuscar.png){fig-align="center"}
 
 \begin{figure}
 \centering
@@ -1474,7 +1552,7 @@ Attention :
 
 2.  Contrairement au cas de la lumière, pour le particule le milieu est dit dispersif, ce qui signifie que la gaussienne (c'est a dire la densité de probabilité) va s'étaler (s'aplatir) sur une surface de plus en plus grande au cours du temps.
 
-## 6.15 Conséquence : concept de paquet d'onde :
+## Conséquence : concept de paquet d'onde :
 
 Nous devons parler ici du cas de la particule libre qui n'est pas confinée dans un espace comme c'est le cas dans un puits de potentiel.
 
@@ -1490,7 +1568,7 @@ Par addition ces fréquences vont former une gaussienne, le paquet d'ondes.
 
 Par principe de superposition, toutes ondes étant la somme d'ondes solutions de l’équation de Schrödinger est elle-même solution de l’équation de Schrödinger.
 
-## 6.16 Vitesse de phase et vitesse de groupe :
+## Vitesse de phase et vitesse de groupe :
 
 Nous continuons à parler d'une particule libre qui n'est pas soumise a un potentiel.
 
@@ -1502,9 +1580,9 @@ Vitesse de phase : $$v_{phi}=\frac{w}{k}$$
 
 Vitesse de groupe : $$v_{g}=\frac{dw}{dk|k=k_{0}}$$
 
-# 7. Équation de Schrödinger :
+# Équation de Schrödinger :
 
-## 7.1 Rappel de physique des ondes :
+## Rappel de physique des ondes :
 
 Il s'agit simplement de faire quelques rappels terminologiques pour éviter toutes confusions dans les termes.
 
@@ -1520,11 +1598,13 @@ Voici la formule de l'équation d'onde en une dimension :
 
 $$\boxed{\frac{\partial^2 u}{\partial t^2} - c^2 \frac{\partial^2 u}{\partial x^2} = 0}$$
 
-## 7.2 Exemple tiré des télécommunications :
+## Exemple tiré des télécommunications :
 
 Voici l'exemple d'un circuit RLC (filtre passe bande).
 
 Les paramètres L, C et R sont appelés des impédances.
+
+![](Electronique.png){fig-align="center"}
 
 \begin{center}
 \begin{circuitikz}
@@ -1567,7 +1647,7 @@ C'est l'équation de Schrödinger.
 
 La solution de l'équation de Schrödinger est la fonction d'onde.
 
-## 7.3 Extrait de la publication de Schrödinger de 1926
+## Extrait de la publication de Schrödinger de 1926
 
 Erwin Schrödinger écrit : [@Schrodinger1926-vy]
 
@@ -1575,9 +1655,9 @@ Erwin Schrödinger écrit : [@Schrodinger1926-vy]
 
 Cet extrait exprime la différence entre l'onde de De Broglie et la fonction d'onde solution de l'équation de Schrödinger.
 
-## 7.4 Equation de Schrödinger dépendante du temps :
+## Equation de Schrödinger dépendante du temps :
 
-### 7.4.1 Principe de conservation de l'énergie :
+### Principe de conservation de l'énergie :
 
 Exprimons que pour une particule en mouvement dans un champ de force l' énergie totale est la somme de l' énergie cinétique et de l' énergie potentielle. Nous supposons le système isolé.
 
@@ -1589,7 +1669,7 @@ Ainsi :
 
 $$p_x^2 + p_y^2 + p_z^2 -2m(E-V)=0$$
 
-### 7.4.2 Principe de correspondance :
+### Principe de correspondance :
 
 Poser une équation même si elle est juste nous conserve dans le cas de la mécanique classique.
 
@@ -1609,7 +1689,7 @@ A titre d'illustration dans le cas classique p correspond a une grandeur physiqu
 
 Un opérateur agit sur une fonction : la fonction d'onde $\Psi$ solution de l'équation de Schrödinger.
 
-### 7.4.3 Expression de l'équation de Schrodinger dépendante du temps :
+### Expression de l'équation de Schrodinger dépendante du temps :
 
 Remplaçons les termes par les opérateurs qui leurs sont associés.
 
@@ -1629,19 +1709,19 @@ Attention à l' expression de l' énergie cinétique : il ne s'agit pas d’une 
 
 Il faut remarquer que l'énergie totale du système est bien elle une fonction du temps mais il s'agit d'une dérivée première et pas d'une dérivée seconde. En cela elle se différencie de l'équation d'onde.
 
-### 7.4.4 Formulation moderne de l'équation de Schrödinger dépendante du temps :
+### Formulation moderne de l'équation de Schrödinger dépendante du temps :
 
 Nous utilisons le formalisme posé par Dirac dont nous avons longuement parlé dans ce cours avec l'utilisation des BRA et des KETS :
 
 $$\boxed{{i}\hbar {{\textrm {d}} \over {\textrm {d}}t}|\Psi (t)\rangle ={\frac {{\hat {\vec {P}}}^{2}}{2m}}|\Psi (t)\rangle +V{\Bigl (}{\hat {\vec {R}}},t{\Bigr )}|\Psi (t)\rangle}$$
 
-### 7.4.5 Fonction d'onde solution de l'équation de Schrodinger dépendante du temps :
+### Fonction d'onde solution de l'équation de Schrodinger dépendante du temps :
 
 Nous savons que l'onde de De Broglie est une solution de l'équation de Schrodinger et représente une onde plane. La fonction d'onde représente une somme d'ondes de De Broglie et il est normal qu'elle ait la forme d'une onde plane.
 
 $$\boxed{\psi(\vec{r},t)=ae^{-i\frac{(Et-\vec{p}\vec{r}}{\hbar}}}$$
 
-## 7.5 Equation de Schrodinger indépendante du temps :
+## Equation de Schrodinger indépendante du temps :
 
 On se ramene ici dans le cas ou le potentiel est independant du temps : $V(r,t)=V(r)$
 
@@ -1757,7 +1837,7 @@ $$H=\frac{h^2}{8mL^2}=\begin{pmatrix}
 
 *Pour les états stationnaires la densité de probabilité est indépendante du temps. Pour les états non stationnaires elle présente une dépendance temporelle oscillante.* Cf cours de Berkeley. [@alma991013035899705804]
 
-# 10. Intrication quantique :
+# Intrication quantique :
 
 Selon [@Degiovanni2020-yq] page 168 : la notion de système *composé* suppose que l'on peut bien séparer le système complet en deux sous systèmes sur lesquels on peut en principe faire des mesures sans que les appareils puissent mutuellement s'influencer.
 
@@ -1789,6 +1869,8 @@ Dans le cas général où plusieurs amplitudes sont non nulles l’état est dit
 
 Ainsi selon Selon [@Degiovanni2020-yq] on a la figure suivante :
 
+![](Intrication.png){fig-align="center"}
+
 \usetikzlibrary {arrows.meta}
 \begin{figure}
 \centering
@@ -1812,15 +1894,15 @@ Ainsi selon Selon [@Degiovanni2020-yq] on a la figure suivante :
 
 > In summary, the postulate of measurement in quantum mechanics says that if Alice measures a quantity when the state collapses to the state corresponding to the Eigenstate of the outcome of Alice's measurement. Therefore if Bob measure the same quantity he will obtain exactly the same value as Alice. The result of this experience seems contrary to common experience in two ways : - locality - reality
 
-# 11. Informatique et information quantique :
+# Informatique et information quantique :
 
-## 11.1 Introduction :
+## Introduction :
 
 Entre les fondements théoriques datant des années 1920-1930 abondamment développés dans ce cours, et la période actuelle a on l'impression que les choses ont peu avancées. En réalité, il a fallu du temps pour réaliser les vérifications expérimentales des prédictions théoriques. Ainsi le mécanisme de l'intrication a été vérifié seulement avec la thèse d'Alain Aspect soutenue le 1er février 1983 au centre d'Orsay de l'université Paris-Sud. [@aspect:tel-00011844] C'est ce décalage entre les prédictions théoriques et les vérifications expérimentales qui expliquent que les investissements industriels mettent beaucoup de temps à se faire. On entend quelquefois le terme "d'hiver quantique" pour qualifier cette période qui est située entre les deux révolutions quantiques, la première étant celle qui a permis le développement de l'électronique, et la seconde celle qui concerne l'ordinateur quantique. En annonçant en 2019 avoir atteint la suprématie quantique, Google a attiré l'attention du grand public. Ce terme de suprématie signifie simplement que l'ordinateur quantique a dépassé l'ordinateur classique en termes de performances.
 
 En informatique classique on a longtemps parié sur la loi de Moore pour prédire l'amélioration des capacités classiques des processeurs. Ce sont les limites atteintes aujourd'hui qui renforcent le besoin pour la quantique.
 
-## 11.3 Qbit - porte logique :
+## Qbit - porte logique :
 
 Une autre approche qui ressemble à celle de l'électronique consiste à créer des portes logiques quantiques qui serviront de briques de base. Par exemple en électronique le transistor est un composant qui est un assemblage de portes logiques élémentaires. Une porte logique possède une fonction logique.
 
@@ -1840,7 +1922,7 @@ $$
 
 Veuillez noter que contrairement au bit, le qubit n’a pas de valeur mais un état. [@cluzel:hal-04052636]. De même on pouvait voir une porte logique comme une fonction qui calcule et retourne un résultat et on peut voir une porte quantique comme une procédure qui effectue un traitement et modifie ses entrées.
 
-## 11.4 Le réseau pour la quantique :
+## Le réseau pour la quantique :
 
 La question du consensus est un angle de vue spécifique pour aborder la question.
 
@@ -1850,7 +1932,7 @@ Dans ce cas, le domaine des réseaux informatiques n'est pas une application de 
 
 Prenons la question en sens inverse dans le paragraphe suivant.
 
-## 11.5 La quantique pour la securité réseau : le consensus quantique ?
+## La quantique pour la securité réseau : le consensus quantique ?
 
 Comme le souligne Stéphane Bortzmeyer [@bortzmeyerBlogStxE9phane] dans son article de blog le protocole TCP est la pierre angulaire du réseau internet depuis 30 ans. Le couple TCP/IP est toutefois sensible de base au man-in-the-middle : il est possible par exemple avec une sonde réseau d'interférer avec une trame de donnée, que ce soit dans le sens IP ou bien TCP.
 
@@ -1892,9 +1974,9 @@ Le seminaire poincare [@PoincaréSeminar2021ITPS] met en valeur [@gheorghiu:hal-
 
 il y a plusieurs oistes possibles et les protocoles bases sur l'intrication en est une. a ce sujet l'experience du consensus pour la blockchain peut servir d'inspiration.
 
-# 12. L'écosystème de la quantique :
+# L'écosystème de la quantique :
 
-## 12.1 Les acteurs en présence :
+## Les acteurs en présence :
 
 Le 10 juin 2025, Station F a accueilli la 4ᵉ édition de la conférence France Quantum [@FranceQuantum2025] Voici les priorités technologiques presentee lors du salon :
 
@@ -1925,5 +2007,5 @@ La Commission européenne a officialisé, le 2 juillet 2025, sa Stratégie Quant
 Au niveau américain Google, IBM et Microsoft sont très engagés sur le quantique.
 
 Les chinois sont également très en pointe.
- 
+
 # Références :

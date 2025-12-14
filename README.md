@@ -57,6 +57,6 @@ Le site web complet est généré et publié automatiquement (par exemple, via G
 
 ## ✍️ Auteur et Contact
 
--   **Auteur :** Stéphane \[Votre Nom Complet\]
+-   **Auteur :** Stéphane Caporali - Caporali Conseil
 
 -   **Contact :** Voir la page `contact.qmd` pour plus de détails.
