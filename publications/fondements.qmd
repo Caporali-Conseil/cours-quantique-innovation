@@ -40,9 +40,12 @@ Ce document est un complément didactique pour naviguer dans les concepts théor
 
 # Introduction historique
 
+## Presentation du document de 1925
+
 On situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l'équation de Schrödinger, ou bien le papier de Heisenberg de 1925 qui pose un formalisme dans le document.
 
-![](Article_1925.png)
+![](Article_1925.png){fig-align="center" width="500"}
+
 
 Ainsi historiquement, avant d’être l'homme des matrices ou du principe d'incertitude, Heisenberg s'est intéressé aux séries de Fourier.
 
@@ -55,6 +58,8 @@ ainsi on trouve dans le document [@Heisenberg1925] l'expression suivante exprim�
 >Wohl aber kann dem Elektron auch in der Quantentheorie eine Ausstrahlung zugeordnet
 werden; diese Strahlung wird beschrieben erstens durch die Frequenzen, die als Funktionen zweier
 Variablen auftreten, quantentheoretisch in der Gestalt:
+
+## Le nouveau formalisme :
 
 $\nu(n,n-\alpha)=\frac{1}{h}[W(n)-W(n-\alpha)]$
 
@@ -74,6 +79,8 @@ si onsomme deux sinusides ca donne une courbe mais pas forcement de frequence eg
 
 $\nu(n,n − \alpha) + \nu(n − \alpha,n − \alpha − \beta) = \nu(n,n − \alpha − \beta)$
 
+
+## Le saut dans l'inconnu :
 
 > 1. Integration der Bewegungsgleichung
 
@@ -136,9 +143,29 @@ Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitude
 
 Toutefois il restait a interpeter ces amplitudes exprimee uniquement en fonction de $\nu$ et de $n$. Elle seront des amplitudes de transition d'etat. 
 
+## la non commutation des matrices :
 
+Puis est aborde le sujet de la non commutation : 
 
-Il s'agit simplement d'une esquisse d’interprétation qui ne se substitue pas a une travail d'historien mais a pour objectif d’être un paragraphe introductif.
+>Während klassisch x(t).y(t)
+stets gleich y(t).x(t) wird, braucht
+dies in der Quantentheorie im allgemeinen nicht der Fall zu sein. —
+
+Heisenberg faut remarquer que le produit x(t).y(t) n'est pas forcement commutatif. Toutefois ilne va pas plus loin et il posera la non commutativite et le principe d'incettitude quelques mois plus tard aide de Born et Jordan.
+
+## Consequence sur le concept de position :
+
+Cet article de Heisenberg de 1925 est tres abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l'interpretation :
+
+- le point de départ est la physique classique et la formulation de x(t) sous la forme d'une serie fourrier. Il s'agit de voir la quantique comme une extension de la physique classique (et pas l'inverse comme on le fait souvent).
+
+- on abandonne la possibilite de la position. Il s'agit quasiment d'un choix arbitraire.
+
+- en troisieme lieu la position resisssite sous forme de la matrice position X. Toutefois prendre un stylo et une feuille de papier, dessiner une matrice avec un X dedans ne suffit pas a faire une matrice position. Les composantes de la machine expreiment des transitions d'etats. C'est bien la position de X dans la relation de la non commutation ($X.Y\neq Y.X$) qui fait les proprietes de la matrice X. 
+
+On voit comment la spacialite eclate completement au profit des composantes de la matrices qui expriment des potentialites.
+
+- 
 
 ![Cinquième Congrès Solvay de physique, 1927. Source : Wikipedia](Solvay_conference_1927.jpg){fig-align="center" width="500"}
 
@@ -1360,39 +1387,71 @@ On voit qu'en formalisme hamiltonien le paramètre t n'est plus visible. Le temp
 
 ## Approche intuitive de la non commutation des fonctions :
 
-Il s'agit ici, à titre préparatoire au principe d'incertitude lui-même, d'aborder les choses sous un angle différent. Il existe bien un lien la notion de commutation et le principe d'incertitude. Lorsque l'on parle de commutation on pense d,abord a des matrices. Par exemple si A et B sont des matrices, si le produit : $AB-BA=0$ on dit que les matrices commutent. On sait aussi que la plupart du temps le produit de 2 matrices n'est pas commutatif.
 
-Toutefois Augustin Blaquiere [@alma991002711779705804] présente une approche basée sur les fonctions :
+Comme le souligne Augustin Blaquière [@alma991002711779705804], le concept de non-commutation peut être introduit par des opérations mathématiques simples appliquées à une fonction d'onde $\Psi(x)$ (que nous appellerons ici $f(x)$ à titre d'illustration).
 
-Nous allons voir que $x \times$ et $\frac{d}{dx}$ ne sont pas commutables lorsqu'on les applique à une fonction f(x).
+Considérons les deux opérateurs mathématiques suivants :
 
-On a en effet : $$\frac{d}{dx}[xf(x)]=x\frac{d}{dx}f(x) + f(x)$$
+L'opérateur de position : $\hat{x}$ (simplement la multiplication par $x$).
 
-en effet : $(uv)'=u'v+uv'$
+L'opérateur de dérivation : $\hat{D} = \frac{d}{dx}$.
 
-d'ou
+Nous allons appliquer ces opérateurs à une fonction $f(x)$ dans les deux ordres possibles et calculer leur différence, appelée commutateur.
 
-$$\frac{d}{dx}[xf(x)] -x\frac{d}{dx}f(x)=f(x)$$
+Ordre 1 : Appliquer la dérivation puis la multiplication par $x$.
 
-que l'on traduit symboliquement par :
 
-$$(\frac{d}{dx}x -x\frac{d}{dx})f(x)=f(x)$$
+$$\hat{D} \left[ x f(x) \right] = \frac{d}{dx} \left[ x f(x) \right]$$
+En utilisant la règle de dérivation d'un produit, $(uv)'=u'v+uv'$ :
 
-ou sous une forme plus condensée, par :
+$\frac{d}{dx} \left[ x f(x) \right] = \frac{dx}{dx} f(x) + x \frac{d}{dx} f(x) = f(x) + x \frac{d}{dx} f(x)$
 
-$$\frac{d}{dx}x -x\frac{d}{dx}=1$$
+Ordre 2 : Appliquer la multiplication par $x$ puis la dérivation.
 
+$\hat{x} \left[ \frac{d}{dx} f(x) \right] = x \frac{d}{dx} f(x)$
+
+Le Commutateur $\left[\hat{D}, \hat{x}\right]$
+Calculons la différence (le commutateur) des deux opérations appliquées à $f(x)$
+
+$\left( \frac{d}{dx} x - x \frac{d}{dx} \right) f(x) = \left( f(x) + x \frac{d}{dx} f(x) \right) - x \frac{d}{dx} f(x) = f(x)$
+
+En isolant l'opérateur, nous obtenons la relation de commutation purement mathématique :
+
+$\left[\frac{d}{dx}, x\right] = \frac{d}{dx} x - x \frac{d}{dx} = 1$
+
+Le Lien Quantique
+
+Cette relation mathématique devient physique en mécanique quantique grâce au Postulat de Quantification, qui définit l'opérateur d'impulsion ($\hat{p}$) :
+
+$\hat{p}_x = \frac{\hbar}{i} \frac{d}{dx} = -i \hbar \frac{d}{dx}$
+
+En utilisant ce postulat, nous pouvons remplacer $\frac{d}{dx}$ par $\frac{i}{\hbar} \hat{p}_x$ dans la relation précédente :
+
+$\left[ \frac{i}{\hbar} \hat{p}_x, \hat{x} \right] = 1$
+
+Puis, en sortant les constantes $\frac{i}{\hbar}$ du commutateur (qui est une opération linéaire) :
+
+$\frac{i}{\hbar} \left[ \hat{p}_x, \hat{x} \right] = 1$
+
+D'où, la relation de commutation fondamentale en mécanique quantique pour la position et l'impulsion :
+
+$\left[ \hat{x}, \hat{p}_x \right] = \hat{x} \hat{p}_x - \hat{p}_x \hat{x} = i\hbar$
+
+ 
 ## Cas limites du principe d'incertitude :
 
-J'appelle cas limites les situations ou soit l'incertitude sur la position est tres elevee, soit l'incertitude sur la vitesse est tres elevee, mais pas les deux en meme temps ou aucun des deux.
+On appelle cas limites les situations où l'incertitude est concentrée sur une seule des deux grandeurs : soit l'incertitude sur la position est très élevée, soit l'incertitude sur l'impulsion est très élevée, mais pas les deux en même temps ni aucun des deux.
+
+Ces cas correspondent aux situations où le produit des incertitudes atteint son minimum théorique :
+
+
+$$\Delta x \Delta p \approx \frac{\hbar}{2}$$
+
+Au contraire, dans le cas général, l'incertitude suit la forme d'une inégalité stricte : $\Delta x \Delta p > \frac{\hbar}{2}$.
 
 [@alma991013035899705804]
 
-Ces cas sont ceux pour lesquels :
-
-$\Delta x \Delta p \approx 1$
-
-Au contraite nous verrons que la forme la plus generale du principe d'inceertitude sera celle d'une inegalité
+ 
 
 ![](Incertitude1.png){fig-align="center"}
 
@@ -1425,7 +1484,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 \end{tikzpicture}
 \end{center}
 
-## Premier principe d'incertitude d'Heisenberg :
+## Premier principe d'incertitude d'Heisenberg (position-impulsion) :
 
 La relation suivante limite les precisions avec lesquelles on peut mesurer la position et l'impulsion :
 
@@ -1556,17 +1615,27 @@ Attention :
 
 Nous devons parler ici du cas de la particule libre qui n'est pas confinée dans un espace comme c'est le cas dans un puits de potentiel.
 
+*Délocalisation de la Particule Libre :*
+
 La longueur d'onde de de Broglie implique du fait du principe d'incertitude que $\Delta x=+\infty$. Dans ce cas, on ne sait pas où chercher ce qui rend la mesure impossible.
 
 On dit que la particule n'est pas normalisable.
 
-Physiquement, on est pas dans le cas de figure d'un électron qui gravite autour d'un atome mais dans celui d'une particule qui évolue librement dans un espace très grand. Du fait qu'elle est soumise a peu d’interactions d'origine électromagnétique on peut imaginer que sa vitesse est faible. Dans un cas idéal, déterminer sa position de façon très précise revient à comparer $\delta x$ une impulsion de Dirac.
+*Localisation par Superposition :*
 
-On va remplacer l'impulsion de Dirac par une fonction porte, ce qui va agir comme un filtre sur les fréquences. La bande infinie des fréquences va se retrouvée ramenée à une bande constituée d'ondes de fréquences très proches.
+Physiquement, une particule réelle (même libre) est toujours relativement localisée. Pour modéliser cette localisation, la mécanique quantique utilise le principe de superposition :
 
-Par addition ces fréquences vont former une gaussienne, le paquet d'ondes.
+Formation du Paquet d'Ondes : Pour obtenir une fonction d'onde $\psi(x,t)$ localisée dans l'espace (petit $\Delta x$), on est obligé de la construire comme la somme (superposition) d'une infinité d'ondes planes de de Broglie, chacune ayant une impulsion ($p$) légèrement différente.
 
-Par principe de superposition, toutes ondes étant la somme d'ondes solutions de l’équation de Schrödinger est elle-même solution de l’équation de Schrödinger.
+Rôle des Impulsions : Cette addition d'ondes de fréquences très proches crée une interférence constructive dans une petite région de l'espace, et une interférence destructive partout ailleurs.
+
+Le Paquet d'Ondes : La fonction d'onde résultante, $\psi(x,t)$, appelée paquet d'ondes, est localisée dans l'espace. Le cas le plus célèbre, car il représente l'état d'incertitude minimale, est le paquet d'ondes gaussien.
+
+*Linéarité de l'Équation de Schrödinger :*
+
+Le principe de superposition est valide car l'équation de Schrödinger est linéaire : toute onde qui est la somme d'ondes solutions de l’équation de Schrödinger est elle-même solution de l’équation de Schrödinger.
+$$ \Psi_{\text{paquet}} = \sum_i c_i \psi_i$$
+où chaque $\psi_i$ est une solution de l'équation.
 
 ## Vitesse de phase et vitesse de groupe :
 
@@ -1576,9 +1645,16 @@ On s'attend à ce que la vitesse de la particule soit celle de l'onde de De Brog
 
 Plus précisément :
 
-Vitesse de phase : $$v_{phi}=\frac{w}{k}$$
+Vitesse de phase : $$v_{\phi}=\frac{\omega}{k}$$
 
-Vitesse de groupe : $$v_{g}=\frac{dw}{dk|k=k_{0}}$$
+Vitesse de groupe : $$v_{g}=\frac{d\omega}{dk}|_{k=k_{0}}$$
+
+
+*Conclusion  :*
+
+La vitesse de groupe $v_{g}$ est rigoureusement égale à la vitesse classique de la particule, $v_{classique}$.
+
+En mécanique quantique, la vitesse physique d'une particule est donnée par la vitesse de groupe de son paquet d'ondes. Le paquet d'ondes est ainsi la contrepartie quantique de la particule localisée.
 
 # Équation de Schrödinger :
 
@@ -1586,11 +1662,16 @@ Vitesse de groupe : $$v_{g}=\frac{dw}{dk|k=k_{0}}$$
 
 Il s'agit simplement de faire quelques rappels terminologiques pour éviter toutes confusions dans les termes.
 
-*Onde progressive :* une onde progressive "progresse', par exemple le son se propage dans l'air.
 
-*Onde stationnaire :* C'est une onde qui apparaît immobile. Idéalement elle est la conséquences de deux ondes progressives qui arrivent en sens opposées et interfèrent. "Naturellement" il faut des conditions très précises pour s'en approcher. On peut aussi penser a la corde d'une guitare classique qui va vibrer sur elle-même.
+*Onde progressive :* une onde progressive "progresse", par exemple le son se propage dans l'air. Elle transporte de l'énergie sans transport de matière.
 
-*Onde plane :* il s'agit d'un concept plus que un onde que l'on rencontre reelement. Toutefois c'est une modélisation suffisamment approchée dans certains milieux comme les milieux homogènes. Il s'agit bien d'une sinusoïde mais qui dépend d'une seule variable spatiale.
+*Onde stationnaire :* C'est une onde qui apparaît immobile. Idéalement, elle est la conséquences de deux ondes progressives qui arrivent en sens opposées et interfèrent. "Naturellement" il faut des conditions très précises pour s'en approcher. On peut aussi penser a la corde d'une guitare classique qui va vibrer sur elle-même.
+
+ 
+
+*Onde plane :* il s'agit d'un concept plus que d'une onde que l'on rencontre réellement. Toutefois, c'est une modélisation suffisamment approchée dans certains milieux comme les milieux homogènes. Il s'agit bien d'une sinusoïde mais qui dépend d'une seule variable spatiale.
+
+ 
 
 *Équation d'onde :* Posée la première fois par Jean Le Rond d'Alembert en 1747 elle s'applique en toutes les ondes en physique classique. En physique quantique elle sera remplacée par équation de Schrödinger.
 
@@ -1643,9 +1724,9 @@ En physique quantique on aussi besoin d'une équation différentielle pour décr
 
 C'est l'équation de Schrödinger.
 
-*Elle est régi par des opérateurs qui sont l'équivalent des impédances.*
+Elle est régie par des opérateurs (comme l'Hamiltonien $\hat{H}$) qui sont l'équivalent des paramètres physiques du système (tels que les impédances $R, L, C$).
 
-La solution de l'équation de Schrödinger est la fonction d'onde.
+La solution de l'équation de Schrödinger est la fonction d'onde $\Psi(x, t)$, qui est l'équivalent quantique du vecteur d'état $X(t)$ décrivant le système.
 
 ## Extrait de la publication de Schrödinger de 1926
 
@@ -1653,7 +1734,7 @@ Erwin Schrödinger écrit : [@Schrodinger1926-vy]
 
 > Je ne saurais passer sous silence que je dois l'impulsion première qui a fait éclore ce travail pour la plus grande part a la remarquable thèse de Louis de Broglie. (...) la principale différence entre ses résultats et les nôtres consiste en ce que monsieur de Broglie imagine de sondes progressives tandis que si on interprète nos formules au moyens d'une hypothèse ondulatoire on est conduit a des vibrations d'ondes stationnaires.
 
-Cet extrait exprime la différence entre l'onde de De Broglie et la fonction d'onde solution de l'équation de Schrödinger.
+Cet extrait exprime la différence entre l'onde de De Broglie (onde progressive pour une particule libre) et la fonction d'onde solution de l'équation de Schrödinger (ondes stationnaires pour les états liés).
 
 ## Equation de Schrödinger dépendante du temps :
 
@@ -1661,7 +1742,9 @@ Cet extrait exprime la différence entre l'onde de De Broglie et la fonction d'o
 
 Exprimons que pour une particule en mouvement dans un champ de force l' énergie totale est la somme de l' énergie cinétique et de l' énergie potentielle. Nous supposons le système isolé.
 
-Soit en adoptant l'approximation non relativiste si la particule est animée d'une assez faible vitesse (devant la vitesse de la lumière) : $$E=\frac{p^2}{2m} + V(x,y,z)$$ $E$ est l’énergie totale de la particule
+Soit en adoptant l'approximation non relativiste si la particule est animée d'une assez faible vitesse (devant la vitesse de la lumière):
+
+$$E=\frac{p^2}{2m} + V(x,y,z)$$ $E$ est l’énergie totale de la particule
 
 $V(x,y,z)$ son énergie potentielle qui ne dépend que des coordonnées de position.
 
@@ -1679,41 +1762,59 @@ Voici la correspondance entre grandeurs classiques et grandeurs quantiques :
 
 | Classique |      Quantique       |
 |:----------|:--------------------:|
-| $E$       | $i\hbar\frac{d}{dt}$ |
-| $p$       |   $-i\hbar\nabla$    |
-| $x$       |         $x$          |
+| Energie $E$       | $\hat{E} =i\hbar\frac{\partial}{\partial t}$ |
+| Impulsion $p$       |   $\hat{p}=-i\hbar\nabla$    |  
+| Position $x$       |      $x=\hat{x}$          |
 
 Ceci correspond à une représentation en position. Si nous utilisons une représentation en impulsion, la base est différente et les valeurs associées aux grandeurs seront différentes.
 
-A titre d'illustration dans le cas classique p correspond a une grandeur physique et dans le cas quantique à un opérateur.
+A titre d'illustration dans le cas classique $p$ correspond a une grandeur physique et dans le cas quantique à un opérateur $\hat{p}$.
 
 Un opérateur agit sur une fonction : la fonction d'onde $\Psi$ solution de l'équation de Schrödinger.
 
+ 
+
 ### Expression de l'équation de Schrodinger dépendante du temps :
 
-Remplaçons les termes par les opérateurs qui leurs sont associés.
+Remplaçons les termes par les opérateurs qui leurs sont associés dans l'équation de l'énergie :
 
 Nous obtenons : $$\frac{h^2}{8\pi^2m}[\frac{d^2\Psi}{dx^2}+\frac{d^2\Psi}{dy^2}+\frac{d^2\Psi}{dz^2}]-\frac{h}{i2\pi}\frac{d\Psi}{dt} -V(x,y,z)\Psi=0$$ *C'est l’équation de Schrödinger.*
 
 On pose habituellement :
 
 $$\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}$$
+Où $\nabla^2$ est l'opérateur Laplacien en coordonnées cartésiennes.
 
 Et en remplacant $\frac{h}{2\pi}$ par $\hbar$
 
-on obtient :
+En utilisant l'opérateur Laplacien et en isolant le terme temporel à droite, nous retrouvons la forme canonique de l'équation de Schrödinger dépendante du temps (ESDT) :
 
 $\boxed{-\frac{\hbar}{2m}\nabla^2\Psi(r,t)+V(r,t)\Psi(r,t)=i\hbar\frac{\partial}{\partial t}\Psi(r,t)}$
 
-Attention à l' expression de l' énergie cinétique : il ne s'agit pas d’une dérivée en t mais en x. Ce n' est donc pas la représentation classique de la vitesse mais l'expression de p exprimée dans une base en x. Ainsi l' équation de Schrödinger est une représentation en x. Si on voulait une représentation en p, il s'agit d'une autre formulation de l'équation.
 
-Il faut remarquer que l'énergie totale du système est bien elle une fonction du temps mais il s'agit d'une dérivée première et pas d'une dérivée seconde. En cela elle se différencie de l'équation d'onde.
+Attention à l'expression de l'énergie cinétique : il ne s'agit pas d’une dérivée en $t$ mais en $x$. Ce n'est donc pas la représentation classique de la vitesse mais l'expression de l'opérateur impulsion $\hat{p}$ exprimée dans une base en $x$ (représentation position). Ainsi l'équation de Schrödinger est une représentation en $x$. Si on voulait une représentation en $p$, il s'agirait d'une autre formulation de l'équation.
+
+Il faut remarquer que le terme d'énergie totale du système ($i\hbar\frac{\partial}{\partial t}\Psi$) est bien une fonction du temps, mais il s'agit d'une dérivée première et non d'une dérivée seconde. En cela, elle se différencie de l'équation d'onde classique.
 
 ### Formulation moderne de l'équation de Schrödinger dépendante du temps :
 
-Nous utilisons le formalisme posé par Dirac dont nous avons longuement parlé dans ce cours avec l'utilisation des BRA et des KETS :
+ 
 
-$$\boxed{{i}\hbar {{\textrm {d}} \over {\textrm {d}}t}|\Psi (t)\rangle ={\frac {{\hat {\vec {P}}}^{2}}{2m}}|\Psi (t)\rangle +V{\Bigl (}{\hat {\vec {R}}},t{\Bigr )}|\Psi (t)\rangle}$$
+Nous utilisons le formalisme posé par Dirac dont nous avons longuement parlé dans ce cours avec l'utilisation des BRA et des KETS. Dans ce formalisme, l'état du système est représenté par le vecteur d'état $|\Psi(t)\rangle$ (le ket).
+
+L'opérateur Hamiltonien $\hat{H}$, qui représente l'énergie totale du système, est défini comme la somme des opérateurs d'énergie cinétique et d'énergie potentielle :
+
+$\hat{H} = \hat{T} + \hat{V} = \frac{{\hat{\vec{P}}}^{2}}{2m} + V({\hat{\vec{R}}}, t)$
+
+L'équation de Schrödinger dépendante du temps prend alors sa forme la plus compacte et la plus fondamentale, indépendante de la base de représentation choisie (position ou impulsion) :
+
+$\boxed{i\hbar \frac{\textrm{d}}{\textrm{d}t}|\Psi(t)\rangle = \hat{H}|\Psi(t)\rangle}$
+
+Si l'on explicite l'opérateur Hamiltonien, on retrouve la forme que vous avez mentionnée :
+
+$\boxed{{i}\hbar {{\textrm {d}} \over {\textrm {d}}t}|\Psi (t)\rangle = \left( {\frac {{\hat {\vec {P}}}^{2}}{2m}} + V{\Bigl (}{\hat {\vec {R}}},t{\Bigr )} \right)|\Psi (t)\rangle}$
+
+Cette formulation est l'expression la plus générale de l'équation fondamentale de la dynamique quantique. Elle décrit comment l'état quantique $|\Psi(t)\rangle$ évolue dans le temps sous l'influence de l'énergie $\hat{H}$.
 
 ### Fonction d'onde solution de l'équation de Schrodinger dépendante du temps :
 
@@ -1721,143 +1822,181 @@ Nous savons que l'onde de De Broglie est une solution de l'équation de Schrodin
 
 $$\boxed{\psi(\vec{r},t)=ae^{-i\frac{(Et-\vec{p}\vec{r}}{\hbar}}}$$
 
-## Equation de Schrodinger indépendante du temps :
 
-On se ramene ici dans le cas ou le potentiel est independant du temps : $V(r,t)=V(r)$
+## L'Équation de Schrödinger Indépendante du Temps (ESIT)
 
-Le terme etat stationnaire provient de l'interpretation de la norme au carre de la fonction d'onde en tant que densite d eprobabilite (la norme au carre est independante du temps).
+L'ESIT n'est pas une équation d'évolution. C'est l'équation que l'on utilise uniquement pour trouver les états stationnaires (les états d'énergie bien définie) lorsque l'opérateur Hamiltonien $\hat{H}$ est constant dans le temps (c'est-à-dire que le potentiel $V$ ne dépend pas du temps).
 
-On utilise une methode de separation de variables :
+L'ESIT est une équation aux valeurs propres de l'opérateur Hamiltonien :
 
-$\Psi(r,t)=\phi(r)f(t)$
+$$\hat{H}\phi_k(\vec{r}) = E_k\phi_k(\vec{r})$$
 
-L'équation de Schrödinger indépendante du temps s'écrit sous la forme suivante :
+$\phi_k(\vec{r})$ : Ce sont les fonctions propres, appelées états stationnaires.
 
-$$ \boxed{ \left[ -\dfrac{\hbar^2}{2m} \nabla^2 + U(r) \right] \phi(r) = E \phi(r) } $$
+$E_k$ : Ce sont les valeurs propres, représentant les énergies possibles (ou niveaux d'énergie) que le système peut posséder.
 
-où :
+## La solution de l'ESDT via les solutions de l'ESIT
 
--   $\hbar$ est la constante de Planck réduite,
--   $m$ est la masse de la particule,
--   $\nabla^2$ est l'opérateur Laplacien (en coordonnées cartésiennes : $\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2})$,
--   $U(r)$ est l'énergie potentielle en fonction de la position $r$,
--   $\phi(r)$ est la fonction d'onde indépendante du temps,
--   $E$ est l'énergie totale de la particule (valeur propre associée à la fonction d'onde).
+Lorsque le potentiel $V(\vec{r})$ est indépendant du temps, la méthode de séparation des variables permet de décomposer la fonction d'onde totale $\Psi(\vec{r}, t)$ en un produit d'une partie spatiale et d'une partie temporelle :
 
-Dans ce cas, $\phi(\vec{r})$ est la composante position de $\Psi(\vec{r},t)$
+$$\Psi(\vec{r}, t) = \phi(\vec{r}) \cdot f(t)$$
 
-$$\Psi(\vec{r},t)=\phi(\vec{r}).\underbrace{e^\frac{-iEt}{\hbar}}_{\text{Composante dependante du temps}}$$\
-Ceci ne constitue pas une solution générale mais particulière.
+En insérant cette forme séparée dans l'ESDT, on obtient deux équations distinctes :
 
-Voici la solution générale :
+L'équation pour la partie spatiale : C'est exactement l'ESIT.
 
-$$\Psi(r,t)=\Sigma c_{k}(0)e^\frac{-iEt}{\hbar}\phi_{k}(r)$$
+$$\hat{H}\phi(\vec{r}) = E\phi(\vec{r})$$
 
-## Application : etats propres de l'opérateur d'énergie pour le puit de potentiel infini:
+L'équation pour la partie temporelle :
 
-Selon [@Wiggins2024] un etat staionnaire peut decrire une particule libre a partir du moment ou elle n'est soumise a aucun potentiel. Ainsi. page 32 : We consider the general case where the potential energy is independant of time, i e : V(r,t)=V(r). The schrodinger equation can be solved using the method of separation of variables. We assume a solution on the form : $\phi(r,t)=\Phi(r)f(t)$ The time independant state equation : $\frac{-\hbar^2}{2m}\nabla^2\Phi(r) + V(r)\Phi(r)=E\Phi(r)$ A solution is given by : $\Psi(r,t)=\Phi(r)f(t)=\Phi(r)f(0)e^{\frac{-i}{h}Et}$ (2.8) f(0) is a constant : an arbitrary constant can be dealt with through normalization and the choice of initial conditions. The origin of the term stationnary state comes from the interpretation of the magnitude squared of the wave function as a probability density (the magnitude squared is independant of time). (2.8) is not the general solution. It is merely a paerticular solution : General solution : $\Psi(r,t)=\Sigma c_{k}(0) e^{\frac{-iE_{k}}{\hbar}t}\Psi_k(r)$
+$$i\hbar\frac{d}{dt}f(t) = E f(t)$$
 
-Niels Bohr décrit [@BOHR1928] ainsi l'état stationnaire :
+La solution de l'équation temporelle est :
 
-> La réalité des états stationnaires : le concept d’état stationnaire résulte, on l'a déjà dit, d'une application caractéristique du postulat quantique au système considéré. Par sa nature, ce concept exige que l'on fasse complètement abstraction d'une description temporelle (...) Strictement parlant, le concept d’état stationnaire implique l'exclusion de toute interaction avec des "individus" qui n'appartienne pas au système.
+$$f_k(t) = e^\frac{-iE_{k}t}{\hbar}$$
 
-On peut interpréter ce que dit Bohr comme la constatation de la fragilité de l’état stationnaire par rapport aux perturbations extérieurs.
+Par conséquent, chaque état propre $\phi_k(\vec{r})$ de l'ESIT correspond à une solution particulière de l'ESDT, appelée état stationnaire complet :
 
-L’énergie d'un système est mesurable s'il se trouve dans un état propre de cet opérateur. Ces états privilégiés sont appelés états stationnaires.
+$$\Psi_k(\vec{r}, t) = \phi_k(\vec{r}) e^\frac{-iE_{k}t}{\hbar}$$
 
-Les fonctions propres de l’opérateur énergie sont définies par l’équation :
+Enfin, par le principe de superposition, la solution générale de l'ESDT pour un potentiel indépendant du temps est la superposition linéaire de tous les états stationnaires complets :
 
-$$-\frac{h}{2i\pi}\frac{d\phi}{dt}=E\phi$$
+$$\Psi(\vec{r},t)=\sum_k c_{k}\Psi_{k}(\vec{r}, t) = \sum_k c_{k}e^\frac{-iE_{k}t}{\hbar}\phi_{k}(\vec{r})$$
 
-E étant la valeur propre associée à la fonction propre $$\phi{x,y,z,t}$$.
+C'est donc bien la solution générale de l'ESDT, mais elle est construite en utilisant les solutions $\phi_k$ et $E_k$ de l'ESIT.
 
-Les fonctions \phi{x,y,z,t} qui vérifient l’équation sont de la forme : $$\phi=u(x,y,z)e^{-i2\pi\frac{E}{h}t}$$ u étant une fonction qui ne dépend **que des variables d'espace**
+ 
 
-La fonction u apparaît comme une fonction propre de l'opérateur : $$H=-\frac{h^2}{8\pi^2m}\nabla^2 + V$$ avec la valeur propre associée E. On appelle H l’opérateur Hamiltonien.
+# Application : États Propres de l'Opérateur d'Énergie pour le Puits de Potentiel Infini
 
-On trouve la forme symbolique : $$H\phi(x)=E\phi(x)$$
+## Le Concept d'État Stationnaire
 
-qui représente l’équation de Schrödinger indépendante du temps. On peut l’interpréter comme le fait que les valeurs propres H sont les valeurs de E pour lesquelles l’équation admet une solution physiquement acceptable. Une condition d'acceptabilité physique est que la fonction d'onde soit de carré sommable. Dans le cas d'un puits de potentiel infiniment profond cette condition conduit à la condition que la fonction d'onde s'annule en dehors du puits.
+L'état stationnaire est un concept fondamental en mécanique quantique, décrit par Niels Bohr de la manière suivante :
 
-Certains opérateurs privilégiés commutent avec le Hamiltonien. Par exemple si NB-BH=0 la grandeur B est exactement mesurable en même temps que l’énergie, quelle que soit l’état stationnaire, c'est a dire quelque soit l' énergie du système. Les grandeurs physiques qui jouissent de cette propriété sont appelées constantes du mouvement.
+"La réalité des états stationnaires : le concept d’état stationnaire résulte, on l'a déjà dit, d'une application caractéristique du postulat quantique au système considéré. Par sa nature, ce concept exige que l'on fasse complètement abstraction d'une description temporelle (...) Strictement parlant, le concept d’état stationnaire implique l'exclusion de toute interaction avec des "individus" qui n'appartiennent pas au système." (Bohr, 1928)
 
-L’équation d'onde a dans des conditions convenables des solutions décrivant les ondes stationnaires. Les solutions en ondes stationnaires sont caractérisées par une dépendance temporelle de la forme $$exp(-i\omega t)$$ ou toutes les fréquences possibles forment un ensemble discret $\omega1$, $\omega2$, $\omega3$. L’énergie du n eme état stationnaire étant donne par $E_n=\hbar\omega_n$.
+Cette interprétation souligne la nature isolée et non perturbée de ces états. Un système ne peut posséder une énergie $E$ mesurable avec certitude que s'il est dans un état propre de l'opérateur énergie (Hamiltonien $\hat{H}$), appelé état stationnaire.
 
-Étudions le comportement d'une particule mobile dans une direction x'x soumise à aucune force. Le potentiel V est alors nul mais nous supposerons que le domaine d’évolution de la particule est limité par deux positions extrêmes P et Q qu'elle ne peut franchir. Le segment PQ a pour longueur L. Ces conditions aux limites peuvent être traduites en admettant que le potentiel devient infini aux points P et Q. La loi des potentiels affecte donc la forme d'un puits rectangulaire à une dimension aux parois impénétrables. Elles se traduisent par la nullité de la fonction d'onde aux points P et Q.
+## Les Équations aux Valeurs Propres
 
-Le hamiltonien prend la forme : $$H=-\frac{h^2}{8\pi^2m}\frac{d^2}{dx}^2$$ (V=0)
+Les fonctions propres de l’opérateur énergie, $\Psi(\vec{r}, t)$, sont définies à partir de l'Équation de Schrödinger Dépendante du Temps (ESDT), qui dans le cas d'un état d'énergie $E$ bien définie, s'écrit :
 
-On appelle ceci l’équation de Schrödinger indépendante du temps qui correspond à un état stationnaire. On peut le voir comme une équation aux valeurs propres.
+$$i\hbar\frac{\partial\Psi}{\partial t}=E\Psi$$
 
-On trouve aussi la formulation suivante, exactement identique :
+Les solutions de cette équation sont de la forme :
 
-$$-{\frac{\hbar^2}{2m}\frac{d^2}{dx}^2\phi(x)}=[E-V(x)\phi{x}]$$
+$$\Psi(\vec{r}, t) = \phi(\vec{r})e^{-\frac{iEt}{\hbar}} \quad \text{avec} \quad \hbar = \frac{h}{2\pi}$$
 
-Ses états propres sont aussi ceux de l opérateur $$\frac{d}{dx}$$
+où $\phi(\vec{r})$ est la composante spatiale qui ne dépend que des variables d'espace.
 
-dans le cas d'un état stationnaire la solution de l’équation de de Schrödinger prend une forme particulière avec une composante en t et une composante en x :
+En insérant cette solution dans l'ESDT complète ($\hat{H}\Psi = i\hbar\frac{\partial\Psi}{\partial t}$), on obtient l'équation que doit satisfaire la partie spatiale $\phi(\vec{r})$ :
 
-$$\Phi(x,t)=\phi(x)exp(\frac{-itE}{\hbar})$$ avec $\hbar = \frac{h}{2\pi}$.
+$$\hat{H}\phi(\vec{r})=E\phi(\vec{r})$$
 
-Les exponentielles complexes sont $$e^{in\frac{\pi}{L}x}$$
+Cette équation est l'Équation de Schrödinger Indépendante du Temps (ESIT). Elle est interprétée comme une équation aux valeurs propres où les valeurs $E$ pour lesquelles elle admet une solution physiquement acceptable (de carré sommable) sont les niveaux d'énergie possibles.
 
-Il y a deux conditions aux limites.
+## Constantes du Mouvement
 
-1.Pour $x=0$ alors $\phi=0$ Le cas $x=0$ impose comme solution acceptable $$\phi(x)=Csin(xk)$$.
+Certains opérateurs $\hat{B}$ privilégiés commutent avec l'Hamiltonien ($\hat{B}\hat{H} - \hat{H}\hat{B} = 0$). Dans ce cas, la grandeur physique associée à $\hat{B}$ est exactement mesurable en même temps que l’énergie, quel que soit l'état stationnaire. Les grandeurs qui jouissent de cette propriété sont appelées constantes du mouvement.
 
-*En effet pour x=0 la forme la composante en cosinus ne s'annule pas. Par contre* $\sin(0)=0$
+## Cas du Puits de Potentiel Infini à Une Dimension
 
-2.Pour $x=a$ alors $\phi=0$
+Nous étudions une particule mobile dans une direction $x$ soumise à aucune force à l'intérieur d'un domaine de longueur $L$ (entre $x=0$ et $x=L$). Le potentiel $V$ est nul à l'intérieur et infini aux limites ($V(x) = \infty$ si $x<0$ ou $x>L$).
 
-*On se positionne dans le cas classique de la corde vibrante. Attention la comparaison entre classique et quantique possède ses limites mais nous l'utilisons ici.*
+## L'Hamiltonien et l'Équation
 
-pour x=L on obtient : $\sin n\pi=1$
+Puisque $V(x)=0$ à l'intérieur du puits, l'opérateur Hamiltonien se simplifie :
 
-Les valeurs propres de l’opérateur $$\frac{d}{dx}$$ sont donc de la forme : $$in\frac{\pi}{L}$$
+$$\hat{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2} \quad \text{pour} \quad 0 < x < L$$
 
-et celles de l’opérateur H, compte tenu du facteur $$-\frac{h^2}{8\pi^2m}$$ sont :
+L'ESIT devient une équation différentielle simple :
 
-$$-\frac{h^2}{8\pi^2m}{(in\frac{\pi}{L})}^2$$
+$$-\frac{\hbar^2}{2m}\frac{d^2\phi(x)}{dx^2} = E\phi(x)$$
 
-Forme matricielle du hamiltonien :
+## Conditions aux Limites
 
-$$H=\frac{h^2}{8mL^2}=\begin{pmatrix}
-+\infty  & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-....  & ....  & .... & .....& ... & ... & ... & ... & ... & ... \\
-0  & 0 & ... & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 4 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 1  & 0 & 0 & 0 & 0 & 0 \\
-  0  & 0  & 0  & 0 & 0 &  0 & 0 & 0 & 0 & 0 \\
-   0    & 0  & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
-    0   & 0  & 0  & 0 & 0 & 0 & 0 & 4 & 0 & 0 \\
-     0 & 0  & 0  & 0 & 0 & 0 & 0 & 0 & ...  & 0 \\
-     ..    & ..  & ..  &.. & .. & ... & ... & .... & .....&....  \\
-      ..    & ..  & ..  &.. & .. & ... & ... & .... & ..... & +\infty \\
-\end{pmatrix}$$
+Le potentiel infini aux parois se traduit par l'annulation de la fonction d'onde aux frontières :
 
-*Pour les états stationnaires la densité de probabilité est indépendante du temps. Pour les états non stationnaires elle présente une dépendance temporelle oscillante.* Cf cours de Berkeley. [@alma991013035899705804]
+Pour $x=0$ : $\phi(0) = 0$
+
+Pour $x=L$ : $\phi(L) = 0$
+
+La solution générale de l'équation différentielle est de la forme $\phi(x) = A\cos(kx) + B\sin(kx)$, avec $k = \frac{\sqrt{2mE}}{\hbar}$.
+
+## Quantisation des Énergies
+
+Condition $x=0$ : $\phi(0) = A\cos(0) + B\sin(0) = A$.
+Pour que $\phi(0)=0$, on doit avoir $A=0$. La solution est donc réduite à $\phi(x) = B\sin(kx)$.
+
+Condition $x=L$ : $\phi(L) = B\sin(kL) = 0$.
+Puisque $B$ ne peut pas être nul (sinon $\phi(x)$ serait nulle partout), il faut que $\sin(kL) = 0$.
+
+Ceci impose une condition de quantification sur $k$:
+
+$$kL = n\pi \quad \text{avec} \quad n = 1, 2, 3, \dots$$
+
+Les solutions $n=0$ est exclue car elle donne $E=0$ et $\phi(x)=0$ (particule absente).
+
+En substituant $k = \frac{n\pi}{L}$ dans la formule de l'énergie ($E = \frac{\hbar^2 k^2}{2m}$), on obtient les valeurs propres d'énergie discrètes :
+
+$$E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} = \frac{n^2h^2}{8mL^2}$$
+
+## Les Fonctions Propres (États Stationnaires)
+
+Les fonctions propres de l'Hamiltonien sont donc :
+
+$$\phi_n(x) = B \sin\left(\frac{n\pi x}{L}\right)$$
+
+La solution complète de l'ESDT pour l'état stationnaire $n$ est alors :
+
+$$\Psi_n(x,t)=\phi_n(x)e^{-\frac{iE_n t}{\hbar}} = B \sin\left(\frac{n\pi x}{L}\right)e^{-\frac{iE_n t}{\hbar}}$$
+
+Note : Pour les états stationnaires, la densité de probabilité $|\Psi_n(x,t)|^2 = |\phi_n(x)|^2$ est indépendante du temps, ce qui justifie leur nom. Pour les états non stationnaires (superpositions linéaires), elle présente une dépendance temporelle oscillante.
 
 # Intrication quantique :
 
-Selon [@Degiovanni2020-yq] page 168 : la notion de système *composé* suppose que l'on peut bien séparer le système complet en deux sous systèmes sur lesquels on peut en principe faire des mesures sans que les appareils puissent mutuellement s'influencer.
+ 
 
-Lorsque Alain Aspect effectua ses premières expériences sur les paires de photons intriqués à l’université d'Orsay il veilla à ce que les mesures effectuées sur une photo ne puissent pas influencer celles effectuées sur l'autre.
+## Systèmes Composés et Influence Locale
 
-selon [@Wiggins2024] p146
+La notion de système composé suppose que l'on peut séparer le système complet en deux sous-systèmes, sur lesquels il est possible de faire des mesures sans que les appareils puissent mutuellement s'influencer [@Degiovanni2020-yq, p. 168].
 
-> Tensor product : Let $\mathcal{H}_{A}$ and $\mathcal{H}_{B}$ denote finite dimensional complex linear vector spaces. each equipped with an inner product. (i.e. finite dimensional Hilbert Spaces). The tensor product of $\mathcal{H}_{A}$ and $\mathcal{H}_{B}$ denoted $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ is a finite dimensional complex linear vector space equipped with an inner product.
+C'est cette condition d'indépendance physique et spatiale qui fut cruciale dans les expériences d'Alain Aspect à l'Université d'Orsay sur les paires de photons intriqués : il veilla à ce que les mesures effectuées sur un photon ne puissent pas influencer celles effectuées sur l'autre.
 
-We turn to the important issue of a basis for the tensor product space.
+## Espaces de Hilbert et Produit Tensoriel
 
-> Orthonormal basis for the tensor product space : Let ${|a_{i}>}, i=1,...,N_{A}$ be an orthonormal basis in $\mathcal{H}_{A}$ and let ${|b_{i}>}, i=1,...,N_{B}$ be an orthonormal basis in $\mathcal{H}_{B}$. then $|a_{i}\rangle \otimes |b_{j}\rangle, i=1,...,N_{A}, j=1,...,N_{B}$ is an orthonormal basis in $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$. Note that it follows immediately from this result that the dimension of $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ is $N_{A}N_{B}$
+Pour décrire un système quantique composé de deux sous-systèmes $A$ et $B$, on utilise le produit tensoriel de leurs espaces de Hilbert respectifs.
 
-> Product state : any state $|\phi\rangle \in \mathcal{H}_{A} \otimes \mathcal{H}_{B}$ that can be written on the form $|\phi\rangle=|\phi_{A}\rangle \otimes |\phi_{B}\rangle$ for some $|\phi_{A} \rangle \in \mathcal{H}_{A}$, $|\phi_{B} \rangle \in \mathcal{H}_{B}$ is said to be a product state
+Produit Tensoriel : Soient $\mathcal{H}_{A}$ et $\mathcal{H}_{B}$ des espaces vectoriels linéaires complexes de dimension finie munis d'un produit scalaire (espaces de Hilbert de dimension finie). Leur produit tensoriel, noté $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$, est un espace vectoriel linéaire complexe de dimension finie, également muni d'un produit scalaire [@Wiggins2024, p. 146].
 
-> Entangled state : any state $|\phi\rangle \in \mathcal{H}_{A} \otimes \mathcal{H}_{B}$ that cannot be written on the form $|\phi\rangle=|\phi_{A}\rangle \otimes |\phi_{B}\rangle$ for some $|\phi_{A} \rangle \in \mathcal{H}_{A}$, $|\phi_{B} \rangle \in \mathcal{H}_{B}$ is said to be a entangled state
+Base Orthonormale pour l'Espace Produit Tensoriel :
+Soit $\left\{|a_{i}\rangle\right\}, i=1,\dots,N_{A}$ une base orthonormale dans $\mathcal{H}_{A}$ et $\left\{|b_{j}\rangle\right\}, j=1,\dots,N_{B}$ une base orthonormale dans $\mathcal{H}_{B}$. Alors l'ensemble des vecteurs $|a_{i}\rangle \otimes |b_{j}\rangle, i=1,\dots,N_{A}, j=1,\dots,N_{B}$ forme une base orthonormale dans $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$.
 
-[@Wiggins2024] page 148 :
 
-> Linear operator and tensor product spaces : - Suppose A : $\mathcal{H}_{A} \to \mathcal{H}_{A}$ and B : $\mathcal{H}_{B} \to \mathcal{H}_{B}$ are linear operator. We construct a linear operator on $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ using A and B. - Suppose the linear operators $A$ has eigenvalues $\lambda i$ and eigenvectors $|a_{i} \rangle$ and suppose the linear operator B has eignevalues $\mu_{i}$ and eigenvectors $|b_{i} \rangle$. Then the linear operator $A \otimes B$ has eignevalues $\lambda_{i}\mu_{j}$ and eigenvectors $|a_{i}\rangle|b_{j}\rangle$.
+## États Produit et États Intriqués
+
+Un état quelconque $|\Psi\rangle$ de l'espace composé $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ peut être décomposé sur la base de produit tensoriel comme :
+
+$$|\Psi\rangle=\sum_{i,j\in I_{A} \times I_{B}} a_{ij} |\phi^{A}_{i}\rangle \otimes |\phi^{B}_{j}\rangle$$
+
+où $a_{ij}$ sont des amplitudes complexes.
+
+*État Produit (Séparable) :*
+Tout état $|\Phi\rangle \in \mathcal{H}_{A} \otimes \mathcal{H}_{B}$ qui peut être écrit sous la forme :
+
+$$|\Phi\rangle=|\phi_{A}\rangle \otimes |\phi_{B}\rangle$$
+
+pour des états $|\phi_{A} \rangle \in \mathcal{H}_{A}$ et $|\phi_{B} \rangle \in \mathcal{H}_{B}$ est dit être un état produit (ou séparable) [@Wiggins2024, p. 146].
+
+*État Intriqué (Non-Séparable) :*
+Tout état $|\Psi\rangle \in \mathcal{H}_{A} \otimes \mathcal{H}_{B}$ qui ne peut pas être écrit sous la forme simple de produit $|\phi_{A}\rangle \otimes |\phi_{B}\rangle$ est dit être un état intriqué (ou non-séparable) [@Wiggins2024, p. 146].
+
+Dans le cas général où plusieurs amplitudes $a_{ij}$ sont non nulles dans la décomposition ci-dessus, l’état est dit intriqué.
+ 
+
+## Opérateurs Linéaires sur les Espaces de Produit Tensoriel
+
+Soient $\hat{A} : \mathcal{H}_{A} \to \mathcal{H}_{A}$ et $\hat{B} : \mathcal{H}_{B} \to \mathcal{H}_{B}$ des opérateurs linéaires. On construit un opérateur linéaire sur $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ en utilisant $\hat{A}$ et $\hat{B}$. Si $\hat{A}$ a les valeurs propres $\lambda_i$ et les vecteurs propres $|a_i\rangle$, et si $\hat{B}$ a les valeurs propres $\mu_j$ et les vecteurs propres $|b_j\rangle$, alors l'opérateur produit $\hat{A} \otimes \hat{B}$ a les valeurs propres $\lambda_{i}\mu_{j}$ et les vecteurs propres $|a_{i}\rangle|b_{j}\rangle$ [@Wiggins2024, p. 148].
 
 Un état quelconque $|\Phi\rangle$ peut être décompose sur une base de $\mathcal{H}$ = $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ comme :
 
@@ -1866,6 +2005,14 @@ $$|\Psi\rangle=\Large{\sum}_{i,j\in I_{A} \times I_{B}}^{} a_{ij} |\phi^{A}_{i}\
 ou les amplitudes a\_{ij} sont des nombres complexes.
 
 Dans le cas général où plusieurs amplitudes sont non nulles l’état est dit intriqué.
+
+## L'Expérience de Mesure sur un État Intriqué
+
+Le processus de mesure sur un système intriqué illustre la non-localité quantique :
+
+Une source émet un état intriqué $|\Psi\rangle = \sum_{i,j} a_{ij} |\phi^{A}_{i}\rangle \otimes |\phi^{B}_{j}\rangle$ de deux systèmes, l'un envoyé à Alice ($A$) et l'autre à Bob ($B$).
+
+Si Bob effectue une mesure et trouve le résultat correspondant à l'état $|\phi_{j}^B\rangle$, l'état global se projette instantanément. Le système d'Alice se retrouve alors dans l'état relatif $|\psi(A|j)\rangle$, projeté par la mesure de Bob.
 
 Ainsi selon Selon [@Degiovanni2020-yq] on a la figure suivante :
 
@@ -1886,13 +2033,26 @@ Ainsi selon Selon [@Degiovanni2020-yq] on a la figure suivante :
 \caption{Une source émet un état intriqué de deux systèmes dont l'un est envoyé à Alice et l'autre a Bob. Si on considère les expériences dans lesquelles bob effectue une mesure et qu'il trouve le résultat correspondant à l'état $|\phi_{j}^B\rangle$ alors le système d'Alice est dans l'état relatif $|\psi(A|j)\rangle$.}
 \end{figure}
 
-[@Wiggins2024] page 153 : The Einstein-Podolsky-Rosen paradox
+- Source : Émet l'état intriqué $|\Psi\rangle$ à Alice et Bob.
 
-> Suppose that we have a source that creates two quantum particules of spin $\frac{1}{2}$ One is sent to Alice and one is sent to Bob
+- Bob mesure : Bob effectue une mesure et obtient le résultat $j$, l'état de Bob est projeté sur $|\phi_{j}^{B}\rangle$.
 
-[@Wiggins2024] page 156 :
+- Alice reçoit : En conséquence, le système d'Alice est instantanément projeté dans l'état relatif $|\psi(A|j)\rangle$.
 
-> In summary, the postulate of measurement in quantum mechanics says that if Alice measures a quantity when the state collapses to the state corresponding to the Eigenstate of the outcome of Alice's measurement. Therefore if Bob measure the same quantity he will obtain exactly the same value as Alice. The result of this experience seems contrary to common experience in two ways : - locality - reality
+## Le Paradoxe Einstein-Podolsky-Rosen (EPR)
+
+Le paradoxe EPR, publié en 1935, est l'un des plus célèbres défis à l'interprétation de la mécanique quantique.
+
+Il considère le cas d'une source créant deux particules de spin $\frac{1}{2}$ intriquées, l'une envoyée à Alice et l'autre à Bob [@Wiggins2024, p. 153].
+
+Conséquence du Postulat de Mesure :
+Le postulat de mesure en mécanique quantique stipule que si Alice mesure une quantité (par exemple, le spin suivant l'axe $z$), l'état quantique global "s'effondre" dans l'état propre correspondant au résultat de la mesure d'Alice. Par conséquent, si Bob mesure la même quantité, il obtiendra exactement la même valeur que Alice.
+
+Le résultat de cette expérience semble contraire à l'expérience commune de deux manières [@Wiggins2024, p. 156] :
+
+Non-localité : La corrélation semble se produire instantanément, indépendamment de la distance entre Alice et Bob.
+
+Non-réalité : La mécanique quantique implique que les propriétés n'existent pas avant la mesure, défiant la notion de réalité locale.
 
 # Informatique et information quantique :
 
@@ -1901,6 +2061,8 @@ Ainsi selon Selon [@Degiovanni2020-yq] on a la figure suivante :
 Entre les fondements théoriques datant des années 1920-1930 abondamment développés dans ce cours, et la période actuelle a on l'impression que les choses ont peu avancées. En réalité, il a fallu du temps pour réaliser les vérifications expérimentales des prédictions théoriques. Ainsi le mécanisme de l'intrication a été vérifié seulement avec la thèse d'Alain Aspect soutenue le 1er février 1983 au centre d'Orsay de l'université Paris-Sud. [@aspect:tel-00011844] C'est ce décalage entre les prédictions théoriques et les vérifications expérimentales qui expliquent que les investissements industriels mettent beaucoup de temps à se faire. On entend quelquefois le terme "d'hiver quantique" pour qualifier cette période qui est située entre les deux révolutions quantiques, la première étant celle qui a permis le développement de l'électronique, et la seconde celle qui concerne l'ordinateur quantique. En annonçant en 2019 avoir atteint la suprématie quantique, Google a attiré l'attention du grand public. Ce terme de suprématie signifie simplement que l'ordinateur quantique a dépassé l'ordinateur classique en termes de performances.
 
 En informatique classique on a longtemps parié sur la loi de Moore pour prédire l'amélioration des capacités classiques des processeurs. Ce sont les limites atteintes aujourd'hui qui renforcent le besoin pour la quantique.
+
+ 
 
 ## Qbit - porte logique :
 
@@ -1922,6 +2084,8 @@ $$
 
 Veuillez noter que contrairement au bit, le qubit n’a pas de valeur mais un état. [@cluzel:hal-04052636]. De même on pouvait voir une porte logique comme une fonction qui calcule et retourne un résultat et on peut voir une porte quantique comme une procédure qui effectue un traitement et modifie ses entrées.
 
+# Quantique et reseaux :
+
 ## Le réseau pour la quantique :
 
 La question du consensus est un angle de vue spécifique pour aborder la question.
@@ -1933,6 +2097,12 @@ Dans ce cas, le domaine des réseaux informatiques n'est pas une application de 
 Prenons la question en sens inverse dans le paragraphe suivant.
 
 ## La quantique pour la securité réseau : le consensus quantique ?
+
+*Avertissement : la convergence entre les lois de la physique quantique (intrication, superposition) et les problèmes des systèmes distribués (consensus) est un sujet de recherche avancé. Sa pertinence technique s'évalue sur deux horizons temporels distincts :*
+
+*- Immédiate (Court Terme) : Pour la sécurité des échanges cryptographiques (QKD).*
+
+*- Théorique (Long Terme) : Pour le remplacement ou l'amélioration des algorithmes de consensus classiques.*
 
 Comme le souligne Stéphane Bortzmeyer [@bortzmeyerBlogStxE9phane] dans son article de blog le protocole TCP est la pierre angulaire du réseau internet depuis 30 ans. Le couple TCP/IP est toutefois sensible de base au man-in-the-middle : il est possible par exemple avec une sonde réseau d'interférer avec une trame de donnée, que ce soit dans le sens IP ou bien TCP.
 
