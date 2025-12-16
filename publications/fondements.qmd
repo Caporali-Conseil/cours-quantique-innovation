@@ -1,9 +1,9 @@
 ---
 title: "Introduction à la théorie quantique version: 1.0"
 author: Stéphane Caporali
-date: "2025-12-12"
 bibliography: fichier.bib 
-version: 1.0 
+version: "1.0.4" 
+date_version: "16 décembre 2025"
 editor: visual
 format:
   html:
@@ -15,6 +15,8 @@ format:
     code-fold: true # Option pour plier/déplier le code source (utile pour les corrigés)
     df-print: paged
 ---
+
+Licence : Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 # Démarche pédagogique :
 
@@ -608,8 +610,6 @@ $$\begin{vmatrix}
 
 *Ainsi nous voyons que nous avons intérêt à nous ramener dans la situation d'une matrice hermitique.*
 
-# Comment representer un operateur par une matrice et probleme de la mesure ?
-
 ## Décomposition d'un vecteur sur la base des vecteurs propres d'une matrice hermitique :
 
 Les vecteurs propres d'une matrice hermitique forment un *système orthogonal* c'est-à-dire un système dont les vecteurs sont orthogonaux deux à deux.
@@ -728,7 +728,7 @@ Les fondateurs de la mécanique quantique ont abordé les problèmes sous deux a
 
 ## Opérateurs fonctionnels, fonctions propres, valeurs propres :
 
-On appelle opérateur fonctionnel un symbole qui exprime certaines transformations fonctionnelles.
+Un opérateur fonctionnel $\hat{A}$ transforme une fonction $f(x)$ en une autre fonction $g(x) = \hat{A}f(x)$. Les exemples typiques incluent les opérateurs de dérivation (comme $\frac{d}{dx}$) ou l'opérateur de multiplication par la variable ($\hat{X} = x \times$).
 
 Dans le cas des fonctions continues d'une variable $x$, on peut prendre par exemple les opérations de dérivation :
 
@@ -770,79 +770,67 @@ En général AB et BA définissent deux opérateurs différents. On dit que A et
 
 > 3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
 
-On dit qu'une fonction f est fonction propre de l'opérateur A avec la valeur propre a, nombre indépendant des variables, si on a :
 
-$$Af=af$$
+On dit qu'une fonction $f$ est fonction propre de l'opérateur $\hat{A}$ avec la valeur propre $a$ (nombre indépendant des variables) si on a :
 
-L'opération se réduit dans ce cas à une simple multiplication de la fonction f par le nombre a.
+$$\hat{A}f = af$$
 
-<u>Exemple 1 :</u>
+L'opération se réduit dans ce cas à une simple multiplication de la fonction $f$ par le nombre $a$.
 
-Cherchons les fonctions propres de l'opérateur $$A=\frac{d}{dx}$$.
+*Exemple 1 : Opérateur de dérivation du premier ordre*
 
-Si la fonction f(x) répond à la question on doit avoir :
+Cherchons les fonctions propres de l'opérateur
 
-$$\frac{d}{dx}{f(x)}=af(x)$$
+$$\hat{A} = \frac{d}{dx}$$
 
-a étant un nombre indépendant de x.
+Si la fonction $f(x)$ est propre de $\hat{A}$, on doit avoir :
 
-Cette équation différentielle s'intègre rapidement. On en tire :
+$$\frac{d}{dx}f(x) = a f(x)$$
 
-$$\frac{1}{f}\frac{df}{dx}=a$$
+où $a$ est la valeur propre.
 
-puis :
+Cette équation différentielle du premier ordre s'intègre comme suit :
 
-$$\log|f|=ax + C^{te}$$
+$$\frac{1}{f}\frac{df}{dx} = a \quad \implies \quad \log|f| = ax + C \quad \implies \quad f(x) = k e^{a x}$$
 
-et enfin :
-
-$$f=ke^{\alpha x}$$
-
-Ainsi les fonctions propres de l'opérateur $$\frac{d}{dx}$$
-
-sont de la forme : $$e^{ax}$$
-
-$a$ est la valeur propre associée.
+Les fonctions propres de $\hat{A}=\frac{d}{dx}$ sont de la forme $f(x)=ke^{ax}$, où $a$ est la valeur propre associée.
 
 *Intuitivement, la fonction exponentielle est la seule à être aussi sa dérivée d’où la solution à l'équation aux valeurs propres est une fonction exponentielle. Toutefois je vous laisse appliquer la méthode générale de résolution d'une équation différentielle du premier ordre.*
 
-Comme $a$ peut être quelconque, nous dirons que l'ensemble des fonctions propres forme un *spectre continu*.
+*Spectre Continu :*
+Comme la valeur propre $a$ peut être un nombre réel ou complexe quelconque (en l'absence de conditions aux limites), l'ensemble des valeurs propres forme un spectre continu.
 
-Nous rencontrerons des cas où les valeurs propres d'un opérateur sont une suite de nombres $a_1, a_2, ..., a_n, ...$ une fonction propre $f_n(x)$ étant attachée à chacun d'eux.
+*Spectre Discret (Rappel) :*
+Nous rencontrerons des cas où les valeurs propres d'un opérateur sont une suite de nombres discrets $a_1, a_2, \ldots, a_n, \ldots$, une fonction propre $f_n(x)$ étant attachée à chacun d'eux. Dans ce cas, on parle de spectre discret (ou spectre de raies).
 
-Dans ce cas la suite des fonctions propres $f_1(x), f_2(x),..., f_n(x)$ forme un *spectre discret*, appelé aussi pour des raisons physiques *spectre de raies*.
+*Exemple 2 : Opérateur de dérivation du second ordre :*
 
-<u>Exemple 2</u>
+Cherchons les fonctions propres de l'opérateur
 
-Cherchons les fonctions propres de l'opérateur $B=\frac{d²}{dx^2}$.
+$$\hat{B} = \frac{d^2}{dx^2}$$
 
-Si f(x) est une fonction propre de B, on doit avoir :
+Si $f(x)$ est une fonction propre de $\hat{B}$, on doit avoir :
 
-$$\frac{d²}{dx^2}f(x)=bf(x)$$
+$$\frac{d^2}{dx^2}f(x) = b f(x)$$
 
-On est conduit à la résolution de l'équation différentielle :
+On est conduit à la résolution de l'équation différentielle du second ordre à coefficients constants :
 
-$$\frac{d²}{dx^2}f - bf = 0$$ Son équation résolvante est : $$m² - b = 0$$
+ 
+$\frac{d^2}{dx^2}f - b f = 0$
 
-D’où les solutions :
+Son équation caractéristique est :
 
-$$f = k_1e^{\sqrt b\times x}$$
+$m^2 - b = 0 \quad \implies \quad m = \pm \sqrt{b}$
+ 
+La solution générale est de la forme :
 
-et
+$$f(x) = k_1 e^{\sqrt{b} x} + k_2 e^{-\sqrt{b} x}$$
+Dans le cas où $b$ est quelconque, l'opérateur $\hat{B}$ possède également un spectre continu de valeurs propres.
 
-$$f = k_2e^{-\sqrt b\times x}$$
+*Dégénérescence :*
 
-Si nous posons $k_1=k_2=1$, ceci nous conduit aux types de fonctions suivantes :
-
-$$f = e^{\sqrt b\times x}$$
-
-et
-
-$$f = e^{-\sqrt b\times x}$$
-
-Les valeurs de b étant quelconques, nous obtenons encore un spectre continu de fonctions propres.
-
-Mais ici il y a dégénérescence car chaque couple de fonction propre correspond à la *même valeur b*.
+Ici, il y a dégénérescence car la valeur propre $b$ est associée à deux fonctions propres linéairement indépendantes ($e^{\sqrt{b} x}$ et $e^{-\sqrt{b} x}$).
+De plus, toute combinaison linéaire de ces fonctions propres est aussi fonction propre avec la même valeur $b$.
 
 > Il est aise de vérifier cela sachant que avec $ar^2 + br + c=0$ on a : $a=1$, $b=0$ et $c=-b$. Le déterminant $\Delta = b^2 -4ac =0-4.1.-b=4b$. Ainsi $$x_1=\frac{0+\sqrt{4.b}}{2}=\frac{2\sqrt{b}}{2}=\sqrt{b}$$ et $$x_2=\frac{0-\sqrt{4.b}}{2}=-\sqrt{b}$$
 
@@ -851,10 +839,12 @@ Mais ici il y a dégénérescence car chaque couple de fonction propre correspon
 De plus toute combinaisons linéaire de fonction propres est aussi fonction propre avec la même valeur b.
 
 ## Conditions aux limites :
-
-On peut imposer aux fonctions propres une condition aux limites ce qui conduira à remplacer un spectre continu par un spectre discret.
+ 
+L'application de conditions aux limites (ou conditions de bord) sur l'intervalle de définition de la fonction a pour effet de restreindre les valeurs propres possibles d'un opérateur. Cela conduit typiquement au remplacement d'un spectre continu par un spectre discret (quantification).
 
 ![](Sinusoide.png){fig-align="center"}
+
+La figure montre une fonction sinusoïdale sur un intervalle $[0, T]$, illustrant comment les conditions aux limites $f(0)=0$ et $f(T)=0$ imposent des longueurs d'onde discrètes.
 
 \begin{figure}
     
@@ -886,57 +876,103 @@ On peut imposer aux fonctions propres une condition aux limites ce qui conduira 
  
 \end{figure}
 
-Par exemple, fixons nous un intervalle de définition 0, T et cherchons les fonctions propres de B qui vérifient la condition : $f(0)=f(T0)$
+Considérons à nouveau l'opérateur $\hat{B}=\frac{d^2}{dx^2}$ sur l'intervalle $[0, T]$, mais cette fois avec une condition de périodicité aux limites :
 
-d'oú pour $\omega$ la suite de valeurs :
+$$f(0) = f(T)$$
 
-$$\omega=0,\frac{2\pi}{T}, \frac{4\pi}{T}...\frac{k2\pi}{T}...$$
+L'équation aux valeurs propres est toujours :
 
-Les fonctions propres de l'opérateur $$B=\frac{d^2}{dx^2}$$ qui vérifient la condition de périodicité aux limites sur l'intervalle (O, T) sont donc de la forme :
+$$\frac{d^2}{dx^2}f(x) = b f(x)$$
 
-$$e^{\frac{ik2\pi x}{T}}$$ et $$e^{\frac{-ik2\pi x}{T}}$$
+Pour obtenir des solutions périodiques (oscillatoires), la valeur propre $b$ doit être négative. Posons $b = -\omega^2$. La solution générale est alors une combinaison linéaire d'exponentielles complexes :
 
-Nous pouvons considérer ces fonctions comme des vecteurs généralisés complexes.
+$$f(x) = C_1 e^{i\omega x} + C_2 e^{-i\omega x}$$
 
-Il nous faut étendre à ces vecteurs fonctionnels complexes la définition du produit scalaire rencontrée dans le cas des vecteurs fonctionnels réels : il s'agira du *produit hermitien*.
+En appliquant la condition aux limites $f(0) = f(T)$ :
+
+$$C_1 e^{0} + C_2 e^{0} = C_1 e^{i\omega T} + C_2 e^{-i\omega T}$$
+
+$$C_1 (1 - e^{i\omega T}) + C_2 (1 - e^{-i\omega T}) = 0$$
+
+Pour que des solutions non triviales existent, les valeurs $\omega$ doivent être discrètes. La condition la plus simple (et celle impliquée par l'utilisation d'une seule exponentielle complexe) est que $e^{i\omega T}$ soit égal à $1$.
+
+$$e^{i\omega T} = 1$$
+
+Ceci impose que l'argument $\omega T$ soit un multiple entier de $2\pi$ :
+
+$$\omega T = k 2\pi, \quad k \in \mathbb{Z}$$
+
+D'où les valeurs discrètes (quantifiées) pour $\omega$ :
+
+$$\omega_k = \frac{k 2\pi}{T}, \quad k = 0, \pm 1, \pm 2, \ldots$$
+
+Les fonctions propres de l'opérateur $\hat{B}=\frac{d^2}{dx^2}$ qui vérifient la condition de périodicité sur l'intervalle $(0, T)$ sont donc de la forme :
+
+$$f_k(x) = e^{i \frac{k 2\pi x}{T}} \quad \text{et} \quad f_{-k}(x) = e^{-i \frac{k 2\pi x}{T}}$$
+
+Les valeurs propres associées sont $b_k = -\omega_k^2 = -(\frac{k 2\pi}{T})^2$.
+
+Ceci constitue un spectre discret.
 
 ## Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
 
-Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l’intervalle O, T et $\overline{f(x)}$ et $\overline{g(x)}$ leurs conjuguées.
+Nous pouvons considérer ces fonctions propres complexes comme des vecteurs généralisés complexes.
 
-A ces fonctions correspondent les vecteurs :
+Il nous faut étendre à ces vecteurs fonctionnels complexes la définition du produit scalaire rencontrée dans le cas des vecteurs fonctionnels réels : il s'agira du \textbf{produit hermitien}.
 
-$$\left| f \right\rangle, \left| g \right\rangle$$
+Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
+
+Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l'intervalle $[0, T]$, et $\overline{f(x)}$ et $\overline{g(x)}$ leurs conjuguées complexes respectives.
+
+À ces fonctions correspondent les vecteurs (notation de Dirac, bra-ket) :
+
+$$\text{Ket : } \left| f \right\rangle, \left| g \right\rangle$$
 
 et
 
-$$\left\langle f \right|, \left\langle g \right|$$
+$$\text{Bra : } \left\langle f \right|, \left\langle g \right|$$
 
-Le produit hermitien :
+Le produit hermitien (ou produit scalaire dans l'espace de Hilbert) est défini par :
 
 $$\boxed{\left\langle f|g \right\rangle=\frac{1}{T}\int_{0}^{T} \overline{f(x)} g(x)\,dx}$$
 
+Ce produit hermitien est indispensable pour définir la norme des fonctions d'onde
+
+ 
+
 ## Propriété d'orthogonalité :
 
-Les vecteurs fonctionnels complexes $\left|f\right\rangle$ et $\left| g \right\rangle$ sont dit "orthogonaux" si le produit hermitique est nul. On a alors :
+Les vecteurs fonctionnels complexes $\left|f\right\rangle$ et $\left| g \right\rangle$ sont dits "orthogonaux" si le produit hermitien est nul. On a alors :
 
-$$\left\langle f|g \right\rangle = \left\langle g|f \right\rangle = 0$$
+$$\left\langle f|g \right\rangle = 0$$
 
-Les fonctions propres de l'opérateur $$\frac{d^2}{dx^2}$$ sont orthogonales.
+Pour des fonctions complexes, l'orthogonalité est généralement définie par $\left\langle f|g \right\rangle = 0$. Du fait de la définition du produit hermitien, l'égalité $\left\langle g|f \right\rangle = \overline{\left\langle f|g \right\rangle}$ assure que si l'un est nul, l'autre l'est aussi : $\left\langle g|f \right\rangle = \overline{0} = 0$.
 
-*Il revient au même de parler de "fonctions orthogonales" ou de "vecteurs orthogonaux" puisque nous avons montré que les fonctions envisagées sont assimilables à des vecteurs.*
+Les fonctions propres associées à des valeurs propres distinctes d'un opérateur hermitien (comme l'opérateur $\frac{d^2}{dx^2}$ sur un domaine fini) sont orthogonales.
+
+Il revient au même de parler de "fonctions orthogonales" ou de "vecteurs orthogonaux" puisque nous avons montré que les fonctions envisagées sont assimilables à des vecteurs (dans l'espace de Hilbert).
 
 ## Norme :
 
-On appelle norme du vecteur fonctionnel complexe : $\left|f\right\rangle$ le produit hermétique de ce vecteur par lui-même soit :
+On appelle norme du vecteur fonctionnel complexe $\left|f\right\rangle$ le produit hermitien de ce vecteur par lui-même, soit :
 
-$$N \left| f \right\rangle = \left\langle f \right| \left| f \right\rangle = \frac{1}{T} \int_{0}^{T} \overline{f(x)} f(x)\,dx=\frac{1}{T} \int_{0}^{T} |f(x)|^2dx$$ Lorsque nous parlerons plus tard de la fonction d'onde représentée par le vecteur $\Psi$, nous dirons que la norme au carre de $\Psi$ est : $$\langle \Psi | \Psi \rangle=|||\Psi\rangle||^2=\sum_{i}c_i^*c_i=\sum_{i}|c_i|^2$$
+$$N \left| f \right\rangle = \left\langle f | f \right\rangle = \frac{1}{T} \int_{0}^{T} \overline{f(x)} f(x)\,dx=\frac{1}{T} \int_{0}^{T} |f(x)|^2dx$$
 
+Lorsque nous parlerons plus tard de la fonction d'onde représentée par le vecteur $|\Psi\rangle$, nous dirons que la norme au carré de $|\Psi\rangle$ est :
+
+$$\langle \Psi | \Psi \rangle = |||\Psi\rangle||^2 = \sum_{i}c_i^*c_i = \sum_{i}|c_i|^2$$
+ 
 ## Norme des fonctions propres de $\frac{d^2}{dx^2}$ :
 
-La norme des vecteurs de la suite $\left| f_k \right\rangle$ c'est à dire la norme des fonctions propres $$e^{ik\frac{2\pi}{T}x}$$ de l'opérateur $$\frac{d^2}{dx^2}$$ a pour valeur :
+La norme des vecteurs de la suite $\left| f_k \right\rangle$, c'est à dire la norme des fonctions propres :
 
-$$|\vec{f}| = \left\langle f \right| \left| f \right\rangle = \frac{1}{T} \int_{0}^{T} e^{-ik\frac{2\pi}{T}x} e^{ik\frac{2\pi}{T}x} \,dx=\frac{1}{T} \int_{0}^{T}dx=1$$ Les vecteurs de la suite $\left| f_k \right\rangle$ ont donc pour norme l'unité.
+$$f_k(x) = e^{ik\frac{2\pi}{T}x}$$
+
+de l'opérateur $\frac{d^2}{dx^2}$ a pour valeur :
+
+$$||f_k||^2 = \left\langle f_k | f_k \right\rangle = \frac{1}{T} \int_{0}^{T} \overline{e^{ik\frac{2\pi}{T}x}} e^{ik\frac{2\pi}{T}x} \,dx = \frac{1}{T} \int_{0}^{T} e^{-ik\frac{2\pi}{T}x} e^{ik\frac{2\pi}{T}x} \,dx=\frac{1}{T} \int_{0}^{T}dx=1$$
+
+Les vecteurs de la suite $\left| f_k \right\rangle$ ont donc pour norme l'unité.
 
 L'ensemble des vecteurs propres de l'opérateur $\frac{d^2}{dx^2}$ orthogonaux et normés à l'unité forment un système orthonormé. On établit qu'ils peuvent être utilisés comme vecteurs de base et ainsi servir à la décomposition de n'importe quel autre vecteur.
 
@@ -944,31 +980,73 @@ On exprime cette propriété en disant que la suite des vecteurs propres est com
 
 ## Développement complexe de fourier :
 
-> **Rappel de traitement du signal :**
+Rappel de traitement du signal :
 
-> Séries de fourier : $$f(x)=\sum _{n=-\infty }^{+\infty }c_{n}(f){e}^{{i}2\pi {\tfrac {n}{T}}x}$$ Coefficients de fourrier $$c_{n}(f)={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.$$
+Séries de Fourier : [@Najib2022-qq]
 
-> Transformée de fourier appliquée à la quantique : [@Najib2022-qq]
+$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$Coefficients de Fourier$$C_{n}={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.$$
 
-> TF de f(x) périodique de période T : $$g(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+infty}f(x)e^{-ikx}dx$$ La transformation inverse est donnée par : $$f(x)= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+infty}g(k)e^{ikx}dk$$ La valeur du paramètre $k$ sera vu un peu plus loin dans un exercice.
+Sous forme algébrique, la décomposition d'un vecteur fonctionnel $\left| f \right\rangle$ sur la base des vecteurs propres $\left| f_n \right\rangle$ de l'opérateur $\frac{d^2}{dx^2}$ se traduit par l'identité :
 
-Sous forme algébrique, la décomposition d'un vecteur fonctionnel sur la base des vecteurs propres de l'opérateur $$\frac{d^2}{dx^2}$$ se traduit par l'identité :
+$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$
 
-$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$ dans laquelle nous supposerons que f(x) est une fonction réelle de la variable réelle x définie sur l'intervalle O,T. On reconnait sous cette forme le développement de f(x) en série complexe de fourier. Les coefficients C_n se calculent par la formule de fourier :
+dans laquelle nous supposons que $f(x)$ est une fonction réelle de la variable réelle $x$ définie sur l'intervalle $[0, T]$. On reconnaît sous cette forme le développement de $f(x)$ en série complexe de Fourier.
 
-$$c_{n}(f)={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.$$
+Les coefficients $C_n$ (qui sont les composantes du vecteur $\left| f \right\rangle$ dans cette base) se calculent par la formule de Fourier, qui est l'expression du produit hermitien entre $\left| f_n \right\rangle$ et $\left| f \right\rangle$ :
 
-### Théorème de Dirac :
+$$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t$$
 
-Si f(x) est fonction propre de A avec la valeur propre associé a, f(x) est également fonction propre de $A^2$ avec la valeur propre associé $a^2$ carré de la précédente.
+## Théorème de Dirac :
 
-Après avoir fait le choix d'un intervalle de définition avec des conditions aux limites, nous appellerons *opérateur fonctionnel hermétique* un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles. C'est le cas de l'opérateur $$\frac{d^2}{dx^2}$$ qui est donc un opérateur hermitique.
+Si $f(x)$ est fonction propre de $\hat{A}$ avec la valeur propre associée $a$, $f(x)$ est également fonction propre de $\hat{A}^2$ avec la valeur propre associée $a^2$ (le carré de la précédente).
 
-L'importance de opérateurs hermitiques provient de ce que tous les opérateurs de la mécanique quantique qui représentent des grandeurs physiques sont des opérateurs hermitiques.
+Démonstration simple :
 
-L’opérateur $$\frac{d^2}{dx^2}$$ est un opérateur réel car il ne contient pas le symbole "i" mais la théorie s'applique plus généralement au cas d’opérateurs complexes tels que par exemple les opérateurs que nous rencontrerons en mécanique quantique :
+$$\hat{A}f(x) = a f(x)$$
 
-$$\frac{h}{i2\pi}\frac{d}{dx}$$ $$\frac{h}{i2\pi}\frac{d}{dy}$$ $$\frac{h}{i2\pi}\frac{d}{dz}$$ $$-\frac{h}{i2\pi}\frac{d}{dt}$$
+Appliquons à nouveau $\hat{A}$ :
+
+$$\hat{A}^2 f(x) = \hat{A}(\hat{A}f(x)) = \hat{A}(a f(x)) = a (\hat{A}f(x)) = a (a f(x)) = a^2 f(x)$$
+
+Donc $\hat{A}^2 f(x) = a^2 f(x)$.
+
+## Opérateurs Hermitiques et Grandeurs Physiques
+
+Après avoir fait le choix d'un intervalle de définition avec des conditions aux limites, nous appellerons opérateur fonctionnel hermitique un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles.
+
+Définition de l'opérateur fonctionnel hermitique :
+Admet un système orthogonal complet de fonctions propres et des valeurs propres associées qui sont toutes réelles.
+
+C'est le cas de l'opérateur 
+
+$$\frac{d^2}{dx^2}$$
+
+ (avec des conditions aux limites périodiques ou nulles) qui est donc un opérateur hermitique.
+
+L'importance des opérateurs hermitiques provient de ce que tous les opérateurs de la mécanique quantique qui représentent des grandeurs physiques (observables) sont des opérateurs hermitiques. Les valeurs propres réelles des opérateurs hermitiens garantissent que les résultats de mesure sont des nombres réels.
+
+L'opérateur $\frac{d^2}{dx^2}$ est un opérateur réel car il ne contient pas le symbole "$i$" mais la théorie s'applique plus généralement au cas d’opérateurs complexes tels que par exemple les opérateurs que nous rencontrerons en mécanique quantique :
+
+- L'opérateur quantité de mouvement selon $x$: 
+
+$$\hat{P}_x = \frac{\hbar}{i}\frac{d}{dx} = \frac{h}{i2\pi}\frac{d}{dx}$$
+
+
+- L'opérateur quantité de mouvement selon $y$: 
+
+$$\hat{P}_y = \frac{h}{i2\pi}\frac{d}{dy}$$
+
+
+- L'opérateur quantité de mouvement selon $z$: 
+
+$$\hat{P}_z = \frac{h}{i2\pi}\frac{d}{dz}$$
+
+
+- L'opérateur énergie (Hamiltonien) dépendant du temps: 
+
+$$\hat{E} = -\frac{\hbar}{i}\frac{d}{dt} = -\frac{h}{i2\pi}\frac{d}{dt}$$
+
+où $\hbar = \frac{h}{2\pi}$ est la constante de Planck réduite.
 
 ## Base des fonctions propres d'un opérateur fonctionnel hermitique :
 
@@ -1005,261 +1083,506 @@ Si on appelle $\psi(\vec(r))$ la fonction d'onde représentée par le ket $|\psi
 
 $$|\psi\rangle=\sum_{i} c_i|u_i\rangle$$ l'ensemble des vecteurs ${|u_i|}$ constituant une base de l'espace des états quantiques.
 
-## Représentation d'un opérateur fonctionnel par une matrice :
+ 
 
-Considérons maintenant un opérateur fonctionnel B, hermitique ou non, distinct de A. Toute fonction f(x) est transformée par B en une autre fonction g(x) suivant :
+## Représentation d'un opérateur fonctionnel par une matrice
 
-$$g(x)=Bf(x)$$
+Considérons maintenant un opérateur fonctionnel $\hat{B}$, hermitique ou non, distinct de $\hat{A}$. Toute fonction $f(x)$ est transformée par $\hat{B}$ en une autre fonction $g(x)$ suivant :
 
-Remplacons dans cette egalite fonctionnelle la fonction f(x) par son développement, il vient :
+$$g(x)=\hat{B}f(x)$$
 
-$$g(x)=a_1Bf_1(x) + a_2Bf_2(x) + ... + a_nBf_n(x)$$
+Remplaçons dans cette égalité fonctionnelle la fonction $f(x)$ par son développement sur la base des fonctions propres de $\hat{A}$, il vient :
 
-et chacune des fonctions transformées
+$$g(x)=a_1\hat{B}f_1(x) + a_2\hat{B}f_2(x) + \cdots + a_n\hat{B}f_n(x)$$
 
-$Bf_1(x)$ $Bf_2(x)$ $...$ $Bf_n(x)$
+Et chacune des fonctions transformées $\hat{B}f_1(x), \hat{B}f_2(x), \ldots, \hat{B}f_n(x)$ est elle-même développable dans le cas général sur la base des fonctions propres $f_1(x), f_2(x), \ldots, f_n(x)$ suivant :
 
-est elle même développable dans le cas général su la base des fonctions propres :
+$$\begin{array}{rcl}
+\hat{B}f\_1(x) & = & B\_1^1f\_1(x) + B\_2^1f\_2(x) + \cdots + B\_n^1f\_n(x) \\
+\hat{B}f\_2(x) & = & B\_1^2f\_1(x) + B\_2^2f\_2(x) + \cdots + B\_n^2f\_n(x) \\
+& \vdots & \\
+\hat{B}f\_n(x) & = & B\_1^nf\_1(x) + B\_2^nf\_2(x) + \cdots + B\_n^nf\_n(x)
+\end{array}$$
 
-$f_1(x)$ $f_2(x)$ $f_n(x)$
+Ainsi sur la base des fonctions propres de $\hat{A}$, l’opérateur fonctionnel $\hat{B}$ est représentable par la matrice :
 
-suivant :
-
-$Bf_1(x)=B_1^1f_1(x) + B_2^1f_2(x) + ... + B_n^1f_n(x)$ $Bf_2(x)=B_1^2f_1(x) + B_2^2f_2(x) + ... + B_n^2f_n(x)$
-
-$Bf_n(x)=B_1^nf_1(x) + B_2^nf_2(x) + ... + B_n^nf_n(x)$
-
-Ainsi aur la base des fonctions propres de A, l’opérateur fonctionnel B est représentable par la matrice :
-
-$$|B|=\begin{pmatrix}
-B_1^1  & B_1^2 & ... & B_1^n \\
-B_2^1  & B_2^2  & .... & B_2^n \\
-.....  & .....& ....& ....\\
-B_n^1 & B_n^2 & ... & B_n^n \\ 
+$$\mathbf{B}=\begin{pmatrix}
+B\_1^1  & B\_1^2 & \cdots & B\_1^n \\
+B\_2^1  & B\_2^2  & \cdots & B\_2^n \\
+\vdots  & \vdots& \ddots& \vdots\\
+B\_n^1 & B\_n^2 & \cdots & B\_n^n \\ 
 \end{pmatrix}$$
 
-On reconnait les relations qui ont servi à définir une transformation matricielle. Elles font passer des composantes du vecteur $|f\rangle$ aux composantes du vecteur $|g\rangle$ suivant :
+On reconnaît les relations qui ont servi à définir une transformation matricielle. Elles font passer des composantes du vecteur $\left| f \right\rangle$ aux composantes du vecteur $\left| g \right\rangle$ (notées $a'_k$) suivant :
 
 $$\begin{pmatrix}
-a_1'  \\
-a_2'  \\
-.....  \\
-a_n'  \\ 
-\end{pmatrix}= \begin{pmatrix}
-B_1^1  & B_1^2 & ... & B_1^n \\
-B_2^1  & B_2^2  & .... & B_2^n \\
-.....  & .....& ....& ....\\
-B_n^1 & B_n^2 & ... & B_n^n \\ 
-\end{pmatrix}.\begin{pmatrix}
-a_1  \\
-a_2  \\
-.....  \\
-a_1  \\ 
+a\_1'  \\
+a\_2'  \\
+\vdots  \\
+a\_n'  \\ 
+\end{pmatrix}= \mathbf{B} \cdot \begin{pmatrix}
+a\_1  \\
+a\_2  \\
+\vdots  \\
+a\_n  \\ 
 \end{pmatrix}$$
 
-Pour plus d’élégance on peut écrire les intégrales sous forme vectorielle puisqu'elles représentent des produits hermitiques.
+Pour plus d’élégance, on peut écrire les intégrales (calculant les coefficients $B_i^j$) sous forme vectorielle puisqu'elles représentent des produits hermitiens.
 
-Par exemple on notera $B_2^1=\left\langle f_2\right|B|f_1\rangle$
+Par exemple, le coefficient $B_i^j$ est donné par le produit hermitien $\left\langle f_i \right| \hat{B} \left| f_j \right\rangle$. L'élément $B_2^1$ de la matrice s'écrit alors $B_2^1=\left\langle f_2\right|\hat{B}|f_1\rangle$.
 
-La matrice représentative de l’opérateur B s’écrit alors :
+La matrice représentative de l’opérateur $\hat{B}$ s’écrit alors :
 
-$$|B|=\begin{pmatrix}
- \left\langle f_1 \right|B|f_1\rangle & \left\langle f_1 \right|B|f_2\rangle & ... & \left\langle f_1 \right|B|f_n\rangle \\
-\left\langle f_2 \right|B|f_1\rangle  & \left\langle f_2 \right|B|f_2\rangle  & .... & \left\langle f_2 \right|B|f_n\rangle \\
-.....  & .....& ....& ....\\
-\left\langle f_n \right|B|f_1\rangle & \left\langle f_n \right|B|f_2\rangle & ... & \left\langle f_n \right|B|f_n\rangle \\ 
+$$\mathbf{B}=\begin{pmatrix}
+ \left\langle f\_1 \right|\hat{B}|f\_1\rangle & \left\langle f\_1 \right|\hat{B}|f\_2\rangle & \cdots & \left\langle f\_1 \right|\hat{B}|f\_n\rangle \\
+\left\langle f\_2 \right|\hat{B}|f\_1\rangle  & \left\langle f\_2 \right|\hat{B}|f\_2\rangle  & \cdots & \left\langle f\_2 \right|\hat{B}|f\_n\rangle \\
+\vdots  & \vdots& \ddots& \vdots\\
+\left\langle f\_n \right|\hat{B}|f\_1\rangle & \left\langle f\_n \right|\hat{B}|f\_2\rangle & \cdots & \left\langle f\_n \right|\hat{B}|f\_n\rangle \\ 
 \end{pmatrix}$$
 
 Ce sont les notations utilisées par Dirac.
 
-## Calcul pratique des éléments de la matrice B
+## Calcul pratique des éléments de la matrice $\mathbf{B}$
 
-[@Wiggins2024] page 21
+Nous allons calculer les éléments de la matrice $\mathbf{B}$ pour un opérateur spécifique $\hat{B}$ dans la base des fonctions propres de $\hat{A} = \frac{d^2}{dx^2}$.
 
-> Projection operator Let $P : V \to V$ be a linear operator on a vector space V. Then P is said to be a projection operator if $P^2=P$.
+Nous rappelons deux théorèmes importants de l'algèbre linéaire [@Wiggins2024] :
 
-> Spectral theorem for finite dimentional self-adjoint operators : Let A : V \to V be a self adjoint linear operator on a finite dimentionnal complex inner product space. Then : - A has real eignevalues, and the eignevectors of A corresponding to distincts eignevalues are orthogonal. - the eigenvectors of A span V.
+Opérateur de Projection :
+Soit $P : V \to V$ un opérateur linéaire sur un espace vectoriel $V$. $P$ est appelé opérateur de projection si $P^2=P$.
 
-### Exemple 1 : opérateur dérivée.
+Théorème Spectral pour les opérateurs auto-adjoints de dimension finie :
+Soit $\mathbf{A} : V \to V$ un opérateur linéaire auto-adjoint sur un espace produit scalaire complexe de dimension finie. Alors :
 
-Si B est l’opérateur $$\frac{d}{dx}$$, et si nous adoptons pour base orthonormée les fonctions propres de l’opérateur $$\frac{d^2}{dx^2}$$ déterminées précédemment : $$e^{in\frac{2\pi}{T}x}$$
+$\mathbf{A}$ a des valeurs propres réelles, et les vecteurs propres de $\mathbf{A}$ correspondant à des valeurs propres distinctes sont orthogonaux.
 
-nous trouvons :
+Les vecteurs propres de $\mathbf{A}$ engendrent $V$.
 
-$$B_2^1=\frac{1}{T}\int_{0}^{T}e^{-2i\frac{2\pi}{T}x} \frac{d}{dx} e^{i\frac{2\pi}{T}x},dx$$ $$=\frac{1}{T}i\frac{2\pi}{T}\int_{0}^{T}e^{-2i\frac{2\pi}{T}x} e^{i\frac{2\pi}{T}x},dx$$ $$=i\frac{2\pi}{T^2}\int_{0}^{T}e^{-i\frac{2\pi}{T}x}dx=0$$ Plus généralement on vérifierait que les éléments non diagonaux de la matrice représentative $\frac{d}{dx}$ sont tous nuls.
+Exemple 1 : Opérateur dérivée $\hat{B} = \frac{d}{dx}$
 
-Calculons de la même façon les éléments diagonaux de la matrice.
+Si $\hat{B}$ est l’opérateur de dérivation $\frac{d}{dx}$, et si nous adoptons pour base orthonormée les fonctions propres de l’opérateur $\hat{A} = \frac{d^2}{dx^2}$ déterminées précédemment :
 
-On obtient :
 
-$$B_n^n=\frac{1}{T}\int_{0}^{T}e^{-ni\frac{2\pi}{T}x} \frac{d}{dx} e^{ni\frac{2\pi}{T}x},dx$$
+$$f_n(x) = e^{in\omega x} \quad \text{avec } \omega = \frac{2\pi}{T}$$
 
-$$=\frac{in2\pi}{T^2}\int_{0}^{T}dx=\frac{in2\pi}{T}$$
+L'élément de matrice générique $\mathbf{B}_{kn} = \left\langle f_k \right| \hat{B} \left| f_n \right\rangle$ est donné par :
 
-Sur cette base la matrice représentative de $$\frac{d}{dx}$$ est donc de la forme:
 
-$$B=\begin{pmatrix}
--ni\omega  & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-....  & ....  & .... & .....& ... & ... & ... & ... & ... & ... \\
-0  & 0 & -3i\omega & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & -2i\omega & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & -i\omega  & 0 & 0 & 0 & 0 & 0 \\
-  0  & 0  & 0  & 0 & 0 &  0 & 0 & 0 & 0 & 0 \\
-   0    & 0  & 0 & 0 & 0 & 0 & iw & 0 & 0 & 0 \\
-    0   & 0  & 0  & 0 & 0 & 0 & 0 & 2i\omega & 0 & 0 \\
-     0 & 0  & 0  & 0 & 0 & 0 & 0 & 0 & 3i\omega  & 0 \\
-     ..    & ..  & ..  &.. & .. &...  & ... & .... & .....& ...  \\
-      ..    & ..  & ..  &.. & .. &...  & ... & .... & ..... & ni\omega \\
+$$\mathbf{B}_{kn} = \frac{1}{T}\int_{0}^{T} \overline{f_k(x)} \hat{B} f_n(x)\,dx = \frac{1}{T}\int_{0}^{T} e^{-ik\omega x} \frac{d}{dx} e^{in\omega x}\,dx$$
+
+Calcul des éléments non-diagonaux ($\mathbf{B}_{kn}$ avec $k \neq n$) :
+
+Prenons l'exemple de l'élément $\mathbf{B}_{21} = \left\langle f_2 \right| \hat{B} \left| f_1 \right\rangle$ (avec $\omega$ implicite) :
+
+
+$$\mathbf{B}_{21} = \frac{1}{T}\int_{0}^{T}e^{-i2\omega x} \frac{d}{dx} e^{i\omega x}\,dx$$
+
+$$=\frac{1}{T}\int_{0}^{T}e^{-i2\omega x} (i\omega e^{i\omega x})\,dx$$
+
+$$=\frac{i\omega}{T}\int_{0}^{T}e^{-i\omega x}\,dx$$
+
+$$=\frac{i\omega}{T}\left[ \frac{e^{-i\omega x}}{-i\omega} \right]_{0}^{T} = \frac{i\omega}{T} \left( \frac{e^{-i\omega T} - e^{0}}{-i\omega} \right)$$
+
+
+Puisque $\omega = \frac{2\pi}{T}$, on a $\omega T = 2\pi$ et $e^{-i\omega T} = e^{-i2\pi} = 1$.
+
+$$\mathbf{B}_{21} = \frac{i\omega}{T} \left( \frac{1 - 1}{-i\omega} \right) = 0$$
+
+Plus généralement, pour $k \neq n$ :
+
+
+$$\mathbf{B}_{kn} = \frac{i n \omega}{T}\int_{0}^{T}e^{-i(k-n)\omega x}\,dx = \frac{i n \omega}{T} \left[ \frac{e^{-i(k-n)\omega x}}{-i(k-n)\omega} \right]_{0}^{T}$$
+
+
+Puisque $(k-n)\omega T = (k-n)2\pi$, on a $e^{-i(k-n)\omega T} = 1$. L'expression s'annule : $\mathbf{B}_{kn} \propto (1 - 1) = 0$.
+
+Conclusion : Les éléments non diagonaux de la matrice représentative de $\frac{d}{dx}$ sont tous nuls.
+
+Calcul des éléments diagonaux ($\mathbf{B}_{nn}$ avec $k = n$) :
+
+L'élément diagonal $\mathbf{B}_{nn}$ s'obtient en remplaçant $k$ par $n$ :
+
+
+$$\mathbf{B}_{nn} = \frac{1}{T}\int_{0}^{T}e^{-in\omega x} \frac{d}{dx} e^{in\omega x}\,dx$$
+
+$$=\frac{1}{T}\int_{0}^{T}e^{-in\omega x} (in\omega e^{in\omega x})\,dx$$
+
+$$=\frac{in\omega}{T}\int_{0}^{T}dx$$
+
+$$=\frac{in\omega}{T}[x]_0^T = \frac{in\omega}{T} \cdot T$$
+
+$$\mathbf{B}_{nn} = in\omega$$
+
+où $\omega = \frac{2\pi}{T}$ est la fréquence angulaire de base.
+
+La matrice représentative de $\hat{B} = \frac{d}{dx}$ dans cette base est donc une matrice diagonale (ici, infinie, car $n \in \mathbb{Z}$), dont les éléments diagonaux sont les valeurs propres de $\hat{B}$ :
+
+$$\mathbf{B}=\begin{pmatrix}
+\ddots & & & & & & & \\
+& -i3\omega & 0 & 0 & 0 & 0 & 0 & \\
+& 0 & -i2\omega & 0 & 0 & 0 & 0 & \\
+& 0 & 0 & -i\omega  & 0 & 0 & 0 & \\
+& 0 & 0 & 0 & 0 & 0 & 0 & \\ % Pour n=0
+& 0 & 0 & 0 & 0 & i\omega & 0 & \\
+& 0 & 0 & 0 & 0 & 0 & i2\omega & \\
+& & & & & & & \ddots
 \end{pmatrix}$$
 
-Les termes diagonaux de la forme ni $\frac{2\pi}{T}$ ne sont pas réels donc la matrice n'est pas hermitienne. Mais on obtiendrait une matrice hermitienne en considérant l’opérateur : $$\frac{1}{i}.\frac{d}{dx}$$
+Les termes diagonaux sont de la forme $in\omega$ et ne sont pas réels, donc la matrice $\mathbf{B}$ n'est pas hermitienne.
 
-Le raisonnement se généralise et permet de représenter sous forme matricielle les opérateurs de dérivation successives $\frac{d^n}{dt^n}$.
+Cependant, on obtiendrait une matrice hermitienne en considérant l’opérateur $\hat{P}_x = \frac{1}{i}\frac{d}{dx}$ (qui, dans sa forme physique $\hat{P}_x = \frac{\hbar}{i}\frac{d}{dx}$, représente la quantité de mouvement).
+L'élément de matrice pour $\hat{P}_x$ serait $\mathbf{P}_{nn} = \frac{1}{i} (in\omega) = n\omega$, qui est un nombre réel.
+
+Ce raisonnement se généralise et permet de représenter sous forme matricielle les opérateurs de dérivation successives $\frac{d^k}{dt^k}$.
 
 Ces matrices sont toutes diagonales car elles ont le même système de vecteurs propres. Les valeurs propres sont les termes diagonaux, ce sont :
 
 Pour l’opérateur $\frac{d}{dt}$ :
 
-$-2i\omega_0$ $-i\omega_0$ $0$ $i\omega_0$ $2i\omega_0$
 
-Pour l’opérateur $\frac{d^2}{dt}^2$
+$$\ldots, -i2\omega_0, -i\omega_0, 0, i\omega_0, i2\omega_0, \ldots$$
 
-$-4\omega_0^2$ $-\omega_0^2$ 0 $-\omega_0^2$ $-4\omega_0^2$
+Pour l’opérateur $\frac{d^2}{dt^2}$ :
 
-Selon [@Wiggins2024] : Consider an approximately defined vector space of complex valued differentiable functions of a real scalar variable x. Then a liear operator on this vector space can be defind by differentiation as follows : $(A\Phi)(x)=-i\frac{d\Phi}{dx}(x)$
 
-### Exemple 2 : matrice non diagonale. Opérateur $x*$
+$$\ldots, -4\omega_0^2, -\omega_0^2, 0, -\omega_0^2, -4\omega_0^2, \ldots$$
 
-Adoptons maintenant pour l opérateur B l'opérateur de multiplication x \*
+Selon [@Wiggins2024] :
 
-Le terme général $B_p^q$ est :
+Consider an approximately defined vector space of complex valued differentiable functions of a real scalar variable $x$. Then a linear operator on this vector space can be defined by differentiation as follows : $(\hat{A}\Phi)(x)=-i\frac{d\Phi}{dx}(x)$.
 
-$B_p^q=\frac{1}{T}\int_{0}^{T}e^{-pi\frac{2\pi}{T}x}xe^{qi\frac{2\pi}{T}x}dx$
+Conclusion sur les opérateurs :
+L'opérateur de dérivation simple $\frac{d}{dx}$ n'est pas hermitien, car ses valeurs propres dans une base orthonormée sont purement imaginaires ($in\omega$).
+L'opérateur $\frac{1}{i}\frac{d}{dx}$ (ou $\frac{1}{i}\frac{d}{dt}$ dans le cas temporel) est, lui, hermitien, car ses valeurs propres sont réelles ($n\omega$).
 
-avec $p$ et $q$ entier, et $p\neq q$
+
+## Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$
+
+Adoptons maintenant pour l'opérateur $\hat{B}$ l'opérateur de multiplication par la variable $\hat{X} = x \times$.
+
+Le terme général $\mathbf{X}_{pq} = \left\langle f_p \right| \hat{X} \left| f_q \right\rangle$ est donné par :
+
+$$\mathbf{X}_{pq} = \frac{1}{T}\int_{0}^{T}e^{-ip\omega x}x e^{iq\omega x}\,dx \quad \text{avec } \omega = \frac{2\pi}{T}$$
+
+$$\mathbf{X}_{pq}=\frac{1}{T}\int_{0}^{T}x e^{i(q-p)\omega x}\,dx$$
+
+avec $p$ et $q$ entiers, et $\omega = \frac{2\pi}{T}$.
+
+Cas $p = q$ (Éléments diagonaux) :
+
+Si $p = q$, l'exponentielle est $e^0 = 1$. L'intégrale se simplifie :
+
+$$\mathbf{X}_{nn} = \frac{1}{T}\int_{0}^{T}x \,dx = \frac{1}{T} \left[ \frac{x^2}{2} \right]_{0}^{T} = \frac{1}{T} \frac{T^2}{2}$$
+
+$$\mathbf{X}_{nn} = \frac{T}{2}$$
+
+Tous les éléments diagonaux sont réels et égaux à $\frac{T}{2}$.
+
+Cas $p \neq q$ (Éléments non-diagonaux) :
+
+Si $p \neq q$, posons $\alpha = (q-p)\omega = (q-p)\frac{2\pi}{T}$. Nous cherchons à calculer l'intégrale :
+
+$$I_{pq} = \int_{0}^{T}x e^{i\alpha x}\,dx$$
+
+Nous utilisons l'intégration par parties : $\int u\,dv = uv - \int v\,du$.
+Posons $u = x$ (d'où $du = dx$) et $dv = e^{i\alpha x}\,dx$ (d'où $v = \frac{1}{i\alpha} e^{i\alpha x}$).
+
+$$I_{pq} = \left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} - \int_{0}^{T} \frac{e^{i\alpha x}}{i\alpha} \,dx$$
+
+Terme non intégré :
+
+$$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \left( T \frac{e^{i\alpha T}}{i\alpha} \right) - (0)$$
+
+Comme $\alpha T = (q-p)\omega T = (q-p)2\pi$, l'exponentielle vaut $e^{i\alpha T} = e^{i(q-p)2\pi} = 1$.
+
+$$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \frac{T}{i\alpha}$$
+
+Terme intégré (reste) :
+
+$$- \int_{0}^{T} \frac{e^{i\alpha x}}{i\alpha} \,dx = - \frac{1}{i\alpha} \left[ \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = - \frac{1}{(i\alpha)^2} \left[ e^{i\alpha x} \right]_{0}^{T}$$
+
+Puisque $e^{i\alpha T} = 1$, on a $e^{i\alpha T} - e^{0} = 1 - 1 = 0$. Le deuxième terme est nul.
+
+$$I_{pq} = \frac{T}{i\alpha} - 0 = \frac{T}{i\alpha}$$
+
+Calcul de l'élément de matrice $\mathbf{X}_{pq}$ :
+
+En substituant $I_{pq}$ dans l'expression du terme de matrice :
+
+$$\mathbf{X}_{pq} = \frac{1}{T} I_{pq} = \frac{1}{T} \left( \frac{T}{i\alpha} \right) = \frac{1}{i\alpha}$$
+
+En remplaçant $\alpha$ par sa valeur $\alpha = (q-p)\frac{2\pi}{T}$ :
+
+$$\mathbf{X}_{pq} = \frac{1}{i(q-p)\frac{2\pi}{T}} = \frac{T}{i(q-p)2\pi}$$
+
+Pour rendre l'expression plus propre, on peut multiplier le numérateur et le dénominateur par $i$ :
+
+$$\mathbf{X}_{pq} = \frac{i T}{i^2(q-p)2\pi} = -i \frac{T}{2\pi (q-p)}$$
+
+Ou en utilisant $\omega = \frac{2\pi}{T}$ :
+
+$$\mathbf{X}_{pq} = -i \frac{1}{\omega (q-p)}$$
+
+Conclusion sur l'opérateur $\hat{X} = x$ :
+
+La matrice représentative de l'opérateur de position $\hat{X}$ dans la base des fonctions de Fourier est une matrice non-diagonale.
+
+Éléments diagonaux ($\mathbf{X}_{nn}$) : $\frac{T}{2}$ (Réels).
+
+Éléments non-diagonaux ($\mathbf{X}_{pq}, p \neq q$) : $-i \frac{T}{2\pi (q-p)}$ (Purement imaginaires).
+
+La matrice $\mathbf{X}$ n'est donc pas réelle (elle est hermitienne).
 
 # Mesure quantique
 
+ 
+
 ## Représentation d'une grandeur physique par un opérateur
 
-Un système physique en mouvement étant décrit par une fonction d'onde $\phi(x,y,z,t)$ on convient de faire correspondre des opérateurs aux grandeurs physiques qui lui sont attachées.
+Un système physique en mouvement étant décrit par une fonction d'onde $\phi(x,y,z,t)$, on convient de faire correspondre des opérateurs aux grandeurs physiques qui lui sont attachées.
 
-Ainsi à la fonction $g(x,y,z,p_x,p_y,p_z,E)$ on associera l’opérateur : $$g[x,y,z,\frac{h}{i2\pi}\frac{d}{dx},\frac{h}{i2\pi}\frac{d}{dy},\frac{h}{i2\pi}\frac{d}{dz},-\frac{h}{i2\pi}\frac{d}{dt}]$$L’opérateur agit sur une fonction : la fonction $\phi$ du système.
+Ainsi, à une fonction classique $g(x,y,z,p_x,p_y,p_z,E)$ qui dépend de la position, des moments et de l'énergie, on associera l'opérateur $\hat{G}$ en effectuant les substitutions suivantes :
+
+Opérateur Position : Les opérateurs de position sont simplement la multiplication par la coordonnée :
+
+
+$$\hat{X} = x \times, \quad \hat{Y} = y \times, \quad \hat{Z} = z \times$$
+
+Opérateur Quantité de Mouvement : L'opérateur de la quantité de mouvement est donné par l'opérateur de dérivation spatial :
+
+
+$$\hat{P}_x = \frac{h}{i2\pi}\frac{d}{dx} = -i\hbar\frac{d}{dx}$$
+
+$$\hat{P}_y = \frac{h}{i2\pi}\frac{d}{dy} = -i\hbar\frac{d}{dy}$$
+
+$$\hat{P}_z = \frac{h}{i2\pi}\frac{d}{dz} = -i\hbar\frac{d}{dz}$$
+
+Opérateur Énergie : L'opérateur de l'énergie (souvent associé à l'Hamiltonien) est donné par l'opérateur de dérivation temporelle :
+
+
+$$\hat{E} = -\frac{h}{i2\pi}\frac{d}{dt} = i\hbar\frac{d}{dt}$$
+
+L'opérateur $\hat{G}$ associé à la grandeur physique $g$ est alors obtenu par la substitution dans la fonction classique $g$ :
+
+$$\hat{G} = g\left[x,y,z, \frac{h}{i2\pi}\frac{d}{dx}, \frac{h}{i2\pi}\frac{d}{dy}, \frac{h}{i2\pi}\frac{d}{dz}, -\frac{h}{i2\pi}\frac{d}{dt}\right]$$
+
+Cet opérateur agit sur une fonction, la fonction d'onde $\phi$ du système :
+
+$$\hat{G}\phi = g\left[x,y,z, -i\hbar\frac{d}{dx}, -i\hbar\frac{d}{dy}, -i\hbar\frac{d}{dz}, i\hbar\frac{d}{dt}\right]\phi(x,y,z,t)$$
+
+L'opérateur $\hat{G}$ ainsi construit doit être hermitique pour que ses valeurs propres (les résultats de mesure possibles) soient réelles.
 
 ## Nouvelle notion de mesure :
 
-Comme nous le savons, étant donné un opérateur A, il possède un spectre de fonctions propres et de valeurs propres définies par l’égalité : $A\Psi=a\Psi$
+Comme nous le savons, étant donné un opérateur $\hat{A}$, il possède un spectre de fonctions propres $\Psi$ et de valeurs propres $a$ définies par l’équation aux valeurs propres (ou équation de Schrödinger indépendante du temps pour l'énergie) :
 
-Le système étant décrit par la fonction d'onde $\Psi$, et la grandeur étudiée par l'opérateur A :
+$$\hat{A}\Psi = a\Psi$$
 
-1.  Si $\Psi$ n'est pas fonction propre de A, la grandeur est inobservable, aucune mesure précise n'est possible.
-2.  Si $\Psi$ est fonction propre de A, la mesure de la grandeur, qui doit être un nombre, est la valeur propre $a$ associée.
+Le système étant décrit par la fonction d'onde $\Psi$, et la grandeur physique étudiée par l'opérateur $\hat{A}$ :
 
-## Mesure quantique
+État de superposition : Si $\Psi$ n'est pas fonction propre de $\hat{A}$ (c'est-à-dire si l'état du système est une superposition linéaire de plusieurs fonctions propres de $\hat{A}$), la grandeur physique correspondante est inobservable avec une valeur unique et précise. Toute mesure donnera l'une des valeurs propres $a_n$ du spectre de $\hat{A}$, avec une certaine probabilité.
 
-Dans certaines sciences, comme l’électronique, effectuer une mesure d’un système influe sur ce dernier. Il est possible de dire que : « j’observe donc je perturbe. ». En effet, lorsque l’on effectue une mesure sur un circuit électronique, il faut prendre en compte le fait que l’appareil de mesure est également un élément du circuit. Il peut disposer de sa propre résistance par exemple. Ainsi, effectuer une mesure revient à interagir avec le système. [@cluzel:hal-04052636] .
+État propre : Si $\Psi$ est fonction propre de $\hat{A}$ associée à la valeur propre $a$, l'état $\Psi$ est un état propre de la grandeur $\hat{A}$. La mesure de cette grandeur est alors certaine et donne la valeur propre $a$ associée. La valeur propre $a$ est donc la seule mesure possible.
 
-il y a une notion irréversibilité associée à la mesure quantique comme pour la blockchain.
+Conséquence Fondamentale : Le Rôle de la Mesure
 
-Bohr [@BOHR1928] écrit :
+La mécanique quantique est fondamentalement différente de la mécanique classique sur ce point :
 
-> Des lignes spectrales qui selon la théorie classique devraient provenir d'un même état de l'atome sont attribuées, d’après le postulat quantique, a différents processus de transition entre lesquels l'atome a le choix.
+En classique : Si l'état est connu, la valeur de toute observable est déterminée.
 
-Par exemple en théorie classique ma voix est la somme de toutes mes fréquences alors qu'en quantique un état correspond a un niveau parmi plusieurs possibles.
+En quantique : Sauf si le système est dans un état propre de l'observable mesurée, la mesure est intrinsèquement probabiliste. Elle sélectionne un des états propres de l'opérateur $\hat{A}$ et force le système à y "sauter" (réduction du paquet d'ondes, Postulat V).
 
-> Selon [@Wiggins2024] page 67 : Measurement :
 
--   the state of a physical system is described by a normalized ket, $|\Psi \rangle$, in a hilbert space $\mathcal{H}$.
+## Mesure quantique : Interaction et Irréversibilité
 
--   every measurable physical quantity of a physical system is described by a self adjoint operator A acting on the Hilbert space $\mathcal{H}$. We now give a brief description of the three "rules" or postulates of measurement (..) formulated in a paper of Max Born published in 1926 : Zur Quantenmechanik der Stoßvorgänge
+Dans certaines sciences, comme l’électronique, effectuer une mesure d’un système influe sur ce dernier. Il est possible de dire que : « j’observe donc je perturbe. ». En effet, lorsque l’on effectue une mesure sur un circuit électronique, il faut prendre en compte le fait que l’appareil de mesure est également un élément du circuit. Il peut disposer de sa propre résistance par exemple. Ainsi, effectuer une mesure revient à interagir avec le système [@cluzel:hal-04052636].
 
--   outcome of a measurement : the only possible outcome of the measurement of a physical observable A is an eignevalue of A, $\lambda$.
+Ce principe de perturbation est amplifié en mécanique quantique. L'acte de mesure est l'interaction la plus violente que l'on puisse appliquer à un système quantique, car elle entraîne la perte irréversible de l'information sur l'état de superposition initial (via la réduction du paquet d'ondes). Cette notion d'irréversibilité est parfois mise en parallèle avec des concepts comme celui de la \textit{blockchain}, où un état est validé et ne peut pas être annulé.
 
--   Probability for a particular outcome of a measurement : suppose the system is in the state $|\Psi \rangle$ and the observable A is measured. When the eigenvalue of A, $\lambda$, occurs with the probability : $$prob_{\Psi}(\lambda)\equiv\langle\Psi|P_{\lambda}|\Psi\rangle=||P_{\lambda}|\Psi\rangle||^2$$ where $P_{\lambda}$ is the orthogonal projection onto the subspace spanned by the eignevectors corresponding to $\lambda$.
+Niels Bohr [@BOHR1928] écrit à propos de la nature des transitions atomiques :
 
--   State of the system after measurement : If the measurement of A on the system that is in the state $|\Psi\rangle$ gives the outcome \lambda, when the state of the system after the measurement is given by : $$\frac{P_{\lambda}|\Psi\rangle}{\sqrt{\langle{\Psi|P_{\lambda|\Psi\rangle}}}}$$
+Des lignes spectrales qui selon la théorie classique devraient provenir d'un même état de l'atome sont attribuées, d’après le postulat quantique, a différents processus de transition entre lesquels l'atome a le choix.
 
-## Historique de l'interpretation statistique :
+En d'autres termes, là où la théorie classique permet une somme continue de possibilités (comme la décomposition continue d'une voix en fréquences), la théorie quantique force l'état à choisir un niveau parmi un ensemble discret et possible.
 
-En 1939, Fritz London et Edmond Bauer ont écrit : [@london1939theorie]
+Les Postulats de la Mesure (Règles de Born)
 
-> L’interprétation statistique de la mécanique ondulatoire peut être considérée comme une tentative particulièrement conservatrice pour maintenir l'image de Bohr et d'Einstein et l'encadrer en un système théorique cohérent.
+Les trois "règles" ou postulats fondamentaux de la mesure, formalisées par Max Born en 1926 dans son article Zur Quantenmechanik der Stoßvorgänge, sont essentiels pour relier le formalisme mathématique à l'expérience physique.
 
-Einstein avait du mal à accepter que les lois de la physique "se jouent aux dés". Malgré tout, le formalisme mathématique statistique appliqué à la physique quantique a formé un cadre acceptable. A noter que la physique statistique ne concerne pas que la quantique mais par exemple la thermodynamique comme présenté dans le cours de François Chevoir [@Chevoir2013-fq].
+Selon [@Wiggins2024] page 67, ces règles sont :
+
+1. Description de l'État et de l'Observable
+
+L'état d'un système physique est décrit par un ket normalisé $|\Psi \rangle$ dans un espace de Hilbert $\mathcal{H}$.
+
+Chaque grandeur physique mesurable (observable) d'un système est décrite par un opérateur auto-adjoint $\hat{A}$ agissant sur l'espace de Hilbert $\mathcal{H}$.
+
+2. Résultat de la Mesure (Postulat sur les Valeurs)
+
+Le seul résultat possible de la mesure d'une observable physique $\hat{A}$ est une valeur propre de $\hat{A}$, notée $\lambda$.
+
+3. Probabilité pour un Résultat Particulier (Règle de Born)
+
+Supposons que le système soit dans l'état $|\Psi \rangle$ et que l'observable $\hat{A}$ soit mesurée. La probabilité que la valeur propre $\lambda$ de $\hat{A}$ soit le résultat de la mesure est donnée par :
+
+$$\boxed{Prob_{\Psi}(\lambda)\equiv\langle\Psi|\hat{P}_{\lambda}|\Psi\rangle=||\hat{P}_{\lambda}|\Psi\rangle||^2}$$
+
+où $\hat{P}_{\lambda}$ est l'opérateur de projection orthogonal sur le sous-espace propre engendré par les vecteurs propres correspondant à la valeur propre $\lambda$.
+
+4. État du Système après la Mesure (Postulat de Réduction)
+
+Si la mesure de $\hat{A}$ sur le système, initialement dans l'état $|\Psi\rangle$, donne le résultat $\lambda$, alors l'état du système immédiatement après la mesure est donné par le vecteur normalisé :
+
+$$\boxed{\left| \Psi' \right\rangle = \frac{\hat{P}_{\lambda}|\Psi\rangle}{\sqrt{\langle{\Psi|\hat{P}_{\lambda}|\Psi\rangle}}}}$$
+
+Ce postulat formalise la réduction du paquet d'ondes (Postulat V) : le système "saute" dans le sous-espace propre associé à la valeur mesurée $\lambda$.
+
+## Le Pari sur l'Aléatoire
+
+L’interprétation statistique de la mécanique quantique, qui confère une nature intrinsèquement probabiliste aux mesures, fut un point de friction majeur lors de l'établissement de la théorie. Albert Einstein, notamment, s'opposait à cette indétermination fondamentale, résumée par sa célèbre phrase : « Dieu ne joue pas aux dés ».
+
+En 1939, les physiciens Fritz London et Edmond Bauer ont formalisé cette approche dans leur ouvrage pionnier, en écrivant : [@london1939theorie]
+
+>L’interprétation statistique de la mécanique ondulatoire peut être considérée comme une tentative particulièrement conservatrice pour maintenir l'image de Bohr et d'Einstein et l'encadrer en un système théorique cohérent.
+
+Malgré les réserves d'Einstein et d'autres sur le fait que les lois de la physique "se jouent aux dés", le formalisme mathématique statistique appliqué à la physique quantique a formé un cadre théorique cohérent et expérimentalement validé, qui est aujourd'hui la base de l'Interprétation de Copenhague.
+
+Il est important de noter que l'utilisation des outils de la physique statistique ne se limite pas à la physique quantique. Elle est également fondamentale dans des domaines macroscopiques, comme la thermodynamique.
+
+Comme le présente le cours de François Chevoir [@Chevoir2013-fq], la physique statistique est l'outil qui permet de faire le pont entre le comportement microscopique d'un grand nombre de particules (atomes, molécules) et les propriétés macroscopiques d'un système, telles que la température, la pression ou l'entropie. En thermodynamique, elle permet de déduire des lois déterministes à partir de l'étude des probabilités d'états d'une collection immense d'éléments.
 
 ## Précisions concernant le symbolisme matriciel :
 
-A la fonction $\phi$ correspond le KET : $|\phi \rangle$ A la fonction conjuguée $\bar \phi$ le BRA : $\langle\phi|$
+ 
 
-La décomposition de la fonction $\phi$ sur un système orthonormal complet de fonctions propres sera symbolise vectoriellement par :
 
-$$|\phi\rangle=c_1|\phi_1\rangle + c_2|\phi-@\rangle + ... + c_3|\phi_n\rangle$$ Il faut relier le formalisme mathematique et les faits physiques.
 
-Nous associerons la décomposition du <BRA> suivant : $$\langle\phi|=\bar c_1 \langle \phi_1 | + \bar c_2 \langle \phi_2 | + ... + \bar c_n \langle \phi_n |$$
+Le formalisme de P.A.M. Dirac est la base de l'algèbre quantique, permettant de manipuler les états et les opérateurs de manière compacte et élégante.
 
-En tenant compte des lois d'orthogonalité :
+ 
 
-$$\langle \phi_i | \phi_j \rangle>=0$$
+À la fonction d'onde (ou état) $\phi$ correspond le KET (ou vecteur colonne) : $|\phi \rangle$.
+À la fonction conjuguée $\bar \phi$ (ou dual de l'état) correspond le BRA (ou vecteur ligne) : $\langle\phi|$.
 
-Ainsi en posant :
+### Formalisme KET et BRA
 
-$$\bar c_1 c_1 = |c_1|^2$$
+La décomposition de la fonction $\phi$ sur un système orthonormal complet de fonctions propres $|\phi_n\rangle$ de l'opérateur $\hat{A}$ sera symbolisée vectoriellement par :
 
-$$\bar c_2 c_2 = |c_2|^2$$
+$$|\phi\rangle=c_1|\phi_1\rangle + c_2|\phi_2\rangle + \cdots + c_n|\phi_n\rangle$$
+où $c_n$ sont les coefficients de décomposition (amplitudes de probabilité).
 
-$$\bar c_n c_n = |c_n|^2$$
+L'état dual (BRA) s'écrit alors :
 
-On obtiendra :
+$$\langle\phi|=\bar c_1 \langle \phi_1 | + \bar c_2 \langle \phi_2 | + \cdots + \bar c_n \langle \phi_n |$$
 
-$$\langle \phi | \phi \rangle = |c_1|^2 \langle \phi | \phi \rangle + |c_2|^2 \langle \phi | \phi \rangle + ... + |c_n|^2 \langle \phi | \phi \rangle$$
+### Condition d'Orthonormalité 
 
-$|c_1|^2$ est la probabilité que le système saute dans l’état $\phi_1$, $|c_2|^2$ est la probabilité que le système saute dans l’état $\phi_2$
+Les fonctions propres $|\phi_i\rangle$ d'un opérateur hermitien sont supposées former une base orthonormée, ce qui implique les lois d'orthogonalité :
 
-Si on utilise la condition de normalisation :
+$$\langle \phi_i | \phi_j \rangle = 0 \quad \text{si } i \neq j$$
 
-$$\langle \phi_i | \phi_i \rangle>=1$$
+et de normalisation (si les vecteurs sont normés à l'unité) :
 
-On obtient :
+$$\langle \phi_i | \phi_i \rangle = 1$$
+### Normalisation de l'État et Probabilités
 
-$$\langle \phi_i | \phi_i \rangle=|c_1|^2 + |c_2|^2 + ... + |c_n|^2$$
+Le produit hermitien $\langle \phi | \phi \rangle$ donne la norme au carré de l'état $|\phi\rangle$. En utilisant la décomposition et les conditions d'orthonormalité :
 
-On a deux conceptions :
+$$\langle \phi | \phi \rangle = \left( \sum_i \bar c_i \langle \phi_i | \right) \left( \sum_j c_j |\phi_j \rangle \right) = \sum_{i,j} \bar c_i c_j \langle \phi_i | \phi_j \rangle$$
 
-1.  présence simultanée de divers états selon des taux définis ou
+Puisque $\langle \phi_i | \phi_j \rangle = \delta_{ij}$ (symbole de Kronecker), la somme se réduit aux termes où $i=j$ :
 
-2.  passage du système de l état $|\phi\rangle$ à l'un ou l'autre des états propres de A.
+$$\langle \phi | \phi \rangle = \sum_{n=1}^{N} \bar c_n c_n \langle \phi_n | \phi_n \rangle$$
 
-Adoptons la seconde interprétation. Nous supposons qu'à l'instant de l'observation le système soit dans l état propre $$|\phi\rangle$$.
+En utilisant la relation $\bar c_n c_n = |c_n|^2$ et la condition de normalisation $\langle \phi_n | \phi_n \rangle = 1$, on obtient :
 
-La signification physique de l'expression : $$\langle \phi_n | A | \phi_n \rangle$$ est donc simple : c'est la mesure exacte de A lorsque le système est dans l’état $\phi_n$
+$$\langle \phi | \phi \rangle = |c_1|^2 + |c_2|^2 + \cdots + |c_n|^2$$
 
-Essayons de comprendre le sens plus général de l'expression : $$\langle\phi|A| \phi\rangle$$ (première interprétation).
+Pour un état $|\phi\rangle$ normalisé, on impose $\langle \phi | \phi \rangle = 1$. L'expression précédente devient :
 
-$$\langle\phi|A| \phi\rangle=|c_1|^2 a_1 + |c_2|^2 a_2  + ... +  |c_n|^2 a_n$$ La signification de cette expression est celle d'une moyenne prise sur tous les états propres possibles, chaque état étant pondéré par une coefficient égal à sa probabilité d'existence.
+$$\boxed{|c_1|^2 + |c_2|^2 + \cdots + |c_n|^2 = 1}$$
+ 
+Selon la Règle de Born (Postulat III de la Mesure), le carré du module des coefficients de décomposition $|c_n|^2$ est la probabilité que le système "saute" dans l'état propre $|\phi_n\rangle$ et que la mesure de l'observable $\hat{A}$ donne la valeur propre $a_n$ associée.
 
-Examinons un autre cas ou le système est dans un état propre $|\phi_{n}\rangle$ de l’opérateur A et ou on tente de mesurer une autre grandeur représenté par un opérateur B non commutable avec A. Si nous exigeons des mesures précises, cette tentative est vouée à l'échec.
+$|c_1|^2$ est la probabilité que le système saute dans l’état $|\phi_1\rangle$ et que l'on trouve la valeur $a_1$.
 
-Nous pouvons former les expressions :
+$|c_n|^2$ est la probabilité que le système saute dans l’état $|\phi_n\rangle$ et que l'on trouve la valeur $a_n$.
 
-$$\langle\phi_n|A|\phi_n\rangle$$ $$\langle\phi_n|B|\phi_n\rangle$$ La première est la mesure exacte de A, la seconde est une valeur moyenne de B.
+### L'Interprétation de la Mesure et l'Espérance Mathématique
 
-Je vous renvoi vers le livre d'Augustin Blaquiere [@alma991002711819705804] pour ces développements.
+En présence d'un état de superposition, deux conceptions sont possibles :
 
-Selon [@Wiggins2024] page 17 :
+Conception de la présence simultanée de divers états selon des taux définis (souvent associée à l'Interprétation des Mondes Multiples, non majoritaire).
 
-> Let A be a linear operator on $\mathbb{C}^2$ We consider $A|\Psi \rangle$ and the inner product of this vector with another vector $|\phi\rangle$ $(|\phi\rangle,A|\Psi \rangle)=\langle\phi|A|\Psi\rangle$ This is referred to the expectation value of A in the state $|\Psi\rangle$ $A_{ij}=\langle e_{i}|A|e_{j}\rangle$
+Conception de la réduction ou passage du système de l'état $|\phi\rangle$ à l'un ou l'autre des états propres de $\hat{A}$ (Interprétation de Copenhague).
 
-## Récapitulatif :
+Nous adoptons la seconde interprétation, celle de Copenhague.
 
-La valeur moyenne de A dans l’état $\phi$ est définie par :
+### Mesure certaine : État propre
 
-$$\langle A\rangle _{\psi }=\langle \psi |A|\psi \rangle$$
+Si le système est dans l'état propre $|\phi_{n}\rangle$ de l’opérateur $\hat{A}$ (c'est-à-dire $\phi$ est identique à $\phi_n$), la signification physique de l'expression :
 
-Ne pas confondre $A_{ij}=<u_{i}|A|u_{j}>$ qui donne la valeur des éléments matriciels dans la base discrète ${|u_{i}|}$ et $\langle A\rangle=\langle\Psi|A|\Psi\rangle$ qui est la valeur moyenne de l’opérateur A dans l’état $|\Psi\rangle$.
+$$\langle \phi_n | \hat{A} | \phi_n \rangle$$
 
-Ainsi la valeur moyenne de l'observable position $X$ et l'impulsion $P_{x}$ dans la representation ${|x\rangle}$ s'ecrivent :
+est simple : c'est la mesure exacte de $\hat{A}$ lorsque le système est dans l’état $|\phi_n\rangle$. On a en effet, puisque $\hat{A}|\phi_n\rangle = a_n |\phi_n\rangle$ :
 
-$$\langle X \rangle=\langle \Psi | X | \Psi \rangle=\int_{+\infty}^{-\infty}\Psi^*(x)x\Psi(x)dx$$ $$\langle P_{x} \rangle=\langle \Psi | P_x | \Psi \rangle=-i\hbar\int_{+\infty}^{-\infty}\Psi^*(x)\frac{d\Psi(x)}{dx}dx$$
+$$\langle \phi_n | \hat{A} | \phi_n \rangle = \langle \phi_n | (a_n |\phi_n\rangle) = a_n \langle \phi_n | \phi_n \rangle = a_n \times 1 = a_n$$
+
+### Mesure probabiliste : Valeur Moyenne (Espérance Mathématique)
+
+Essayons de comprendre le sens plus général de l'expression :
+
+$$\langle\phi|\hat{A}| \phi\rangle$$
+
+En utilisant la décomposition de $|\phi\rangle$ sur la base des états propres $|\phi_n\rangle$ de $\hat{A}$ (avec $\hat{A}|\phi_n\rangle = a_n |\phi_n\rangle$) et la condition d'orthonormalité :
+
+$$\begin{aligned}
+\langle\phi|\hat{A}| \phi\rangle &= \left( \sum\_i \bar c\_i \langle \phi\_i | \right) \hat{A} \left( \sum\_j c\_j |\phi\_j \rangle \right) \\
+&= \sum\_{i,j} \bar c\_i c\_j \langle \phi\_i | \hat{A} |\phi\_j \rangle \\
+&= \sum\_{i,j} \bar c\_i c\_j \langle \phi\_i | (a\_j |\phi\_j \rangle) \\
+&= \sum\_{i,j} \bar c\_i c\_j a\_j \langle \phi\_i | \phi\_j \rangle \\
+&= \sum\_{n} \bar c\_n c\_n a\_n \quad \text{car } \langle \phi\_i | \phi\_j \rangle = \delta\_{ij} \\
+\end{aligned}$$
+
+
+Donc :
+
+$$\boxed{\langle\phi|\hat{A}| \phi\rangle=|c_1|^2 a_1 + |c_2|^2 a_2 + \cdots + |c_n|^2 a_n}$$
+
+La signification de cette expression est celle d'une moyenne pondérée (ou Espérance Mathématique). Elle représente la moyenne des résultats que l'on obtiendrait en effectuant un grand nombre de mesures de l'observable $\hat{A}$ sur des systèmes préparés de manière identique dans l’état $|\phi\rangle$. Chaque valeur propre $a_n$ est pondérée par un coefficient égal à sa probabilité d'occurrence, $|c_n|^2$.
+
+### Cas d'opérateurs non commutables
+
+Examinons un autre cas où le système est dans un état propre $|\phi_{n}\rangle$ de l’opérateur $\hat{A}$ (la mesure de $\hat{A}$ est certaine et donne $a_n$) et où l'on tente de mesurer une autre grandeur représentée par un opérateur $\hat{B}$ non commutable avec $\hat{A}$ (c'est-à-dire $[\hat{A}, \hat{B}] \neq 0$).
+
+Le système étant dans l'état $|\phi_{n}\rangle$, nous pouvons former les expressions :
+
+Mesure de $\hat{A}$ :
+
+
+$$\langle\phi_n|\hat{A}|\phi_n\rangle = a_n$$
+
+
+C'est la mesure exacte de $\hat{A}$.
+
+Mesure de $\hat{B}$ :
+
+
+$$\langle\phi_n|\hat{B}|\phi_n\rangle$$
+
+
+Puisque $|\phi_n\rangle$ n'est pas un état propre de $\hat{B}$ (car $\hat{B}$ n'est pas commutable avec $\hat{A}$), cette expression représente une valeur moyenne de $\hat{B}$.
+
+Si nous exigeons des mesures précises et simultanées de $\hat{A}$ et $\hat{B}$, cette tentative est vouée à l'échec en raison du principe d'incertitude : l'état $|\phi_n\rangle$ qui rend certaine la mesure de $\hat{A}$ rend incertaine celle de $\hat{B}$.
+
+Je vous renvoie vers le livre d'Augustin Blaquière [@alma991002711819705804] pour ces développements.
+
+De plus, selon [@Wiggins2024] page 17 :
+
+Let $A$ be a linear operator on $\mathbb{C}^2$. We consider $A|\Psi \rangle$ and the inner product of this vector with another vector $|\phi\rangle$ $(|\phi\rangle,A|\Psi \rangle)=\langle\phi|A|\Psi\rangle$. This is referred to as the expectation value of $A$ in the state $|\Psi\rangle$ when $|\phi\rangle=|\Psi\rangle$.
+
+The matrix element of $A$ in the basis $\{|e_i\rangle\}$ is given by $A_{ij}=\langle e_{i}|A|e_{j}\rangle$.
+
 
 # L'onde de Louis De Broglie :
 
