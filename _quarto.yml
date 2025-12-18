@@ -1,13 +1,24 @@
 project:
   type: website
-  title: "Blog Scientifique : le laboratoire de Caporali Conseil" 
   output-dir: docs
+  # On exclut les fichiers .tex et le dossier tikz du processus de compilation
+  # pour éviter que GitHub ne cherche une installation LaTeX (TinyTeX)
+  render:
+    - "*.qmd"
+    - "!*.tex"
+    - "!code_tikz/*"
+  
+  # On définit ces fichiers comme ressources pour qu'ils soient quand même 
+  # copiés dans le dossier final et accessibles par lien hypertexte
+  resources:
+    - "*.tex"
+    - "code_tikz/*.tex"
 
-  
 website:
-  
+  title: "Blog Scientifique : le laboratoire de Caporali Conseil"
   
   navbar:
+    background: primary
     left:
       - href: index.qmd
         text: Accueil
@@ -19,10 +30,12 @@ website:
             href: publications/articles.qmd
           - text: "Présentations et Conférences"
             href: publications/presentations.qmd
-          - text: "Fondement theorique de la quantique (CC-BY)"
+          - text: "Fondement théorique de la quantique (CC-BY)"
             href: publications/fondements.qmd
-   
-
+    right:
+      - icon: github
+        href: https://github.com/Caporali-Conseil
+  
   page-footer:
     right: "Caporali Conseil | Tous droits réservés | 2026"
     left: "Basé sur les Sciences Physiques et le MAOS"
@@ -32,3 +45,6 @@ format:
     theme: united
     css: custom_styles.css
     toc: true
+    # Support mathématique pour la physique quantique sans avoir besoin de LaTeX
+    html-math-method: katex
+    code-copy: true
