@@ -231,7 +231,125 @@ window.Quarto = {
   <li><a href="#fentes-dyoung-avec-des-électrons" id="toc-fentes-dyoung-avec-des-électrons" class="nav-link" data-scroll-target="#fentes-dyoung-avec-des-électrons"><span class="header-section-number">3.3.2</span> Fentes d’Young avec des électrons :</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#fondements-mathématiques" id="toc-fondements-mathématiques" class="nav-link" data-scroll-target="#fondements-mathématiques"><span class="header-section-number">4</span> Fondements Mathématiques</a></li>
+  <li><a href="#fondements-mathématiques" id="toc-fondements-mathématiques" class="nav-link" data-scroll-target="#fondements-mathématiques"><span class="header-section-number">4</span> Fondements Mathématiques</a>
+  <ul class="collapse">
+  <li><a href="#discussion-sur-la-notation" id="toc-discussion-sur-la-notation" class="nav-link" data-scroll-target="#discussion-sur-la-notation"><span class="header-section-number">4.0.1</span> Discussion sur la notation</a></li>
+  <li><a href="#produit-scalaire-de-deux-vecteurs" id="toc-produit-scalaire-de-deux-vecteurs" class="nav-link" data-scroll-target="#produit-scalaire-de-deux-vecteurs"><span class="header-section-number">4.1</span> Produit scalaire de deux vecteurs :</a></li>
+  <li><a href="#norme-dun-vecteur" id="toc-norme-dun-vecteur" class="nav-link" data-scroll-target="#norme-dun-vecteur"><span class="header-section-number">4.2</span> Norme d’un vecteur :</a></li>
+  <li><a href="#equation-aux-valeurs-propres" id="toc-equation-aux-valeurs-propres" class="nav-link" data-scroll-target="#equation-aux-valeurs-propres"><span class="header-section-number">4.3</span> Equation aux valeurs propres :</a></li>
+  <li><a href="#produit-hermitien" id="toc-produit-hermitien" class="nav-link" data-scroll-target="#produit-hermitien"><span class="header-section-number">4.4</span> Produit hermitien :</a></li>
+  <li><a href="#matrice-hermitique" id="toc-matrice-hermitique" class="nav-link" data-scroll-target="#matrice-hermitique"><span class="header-section-number">4.5</span> Matrice hermitique :</a></li>
+  <li><a href="#valeurs-propres-et-vecteurs-propres-des-matrices-hermitiques" id="toc-valeurs-propres-et-vecteurs-propres-des-matrices-hermitiques" class="nav-link" data-scroll-target="#valeurs-propres-et-vecteurs-propres-des-matrices-hermitiques"><span class="header-section-number">4.6</span> Valeurs propres et vecteurs propres des matrices hermitiques :</a></li>
+  <li><a href="#décomposition-dun-vecteur-sur-la-base-des-vecteurs-propres-dune-matrice-hermitique" id="toc-décomposition-dun-vecteur-sur-la-base-des-vecteurs-propres-dune-matrice-hermitique" class="nav-link" data-scroll-target="#décomposition-dun-vecteur-sur-la-base-des-vecteurs-propres-dune-matrice-hermitique"><span class="header-section-number">4.7</span> Décomposition d’un vecteur sur la base des vecteurs propres d’une matrice hermitique :</a></li>
+  <li><a href="#représentation-dun-opérateur-sur-la-base-des-vecteurs-propres-dune-matrice-hermitique" id="toc-représentation-dun-opérateur-sur-la-base-des-vecteurs-propres-dune-matrice-hermitique" class="nav-link" data-scroll-target="#représentation-dun-opérateur-sur-la-base-des-vecteurs-propres-dune-matrice-hermitique"><span class="header-section-number">4.8</span> Représentation d’un opérateur sur la base des vecteurs propres d’une matrice hermitique :</a></li>
+  <li><a href="#quelle-est-la-représentation-de-la-matrice-hermitique-a-dans-cette-base-particulière" id="toc-quelle-est-la-représentation-de-la-matrice-hermitique-a-dans-cette-base-particulière" class="nav-link" data-scroll-target="#quelle-est-la-représentation-de-la-matrice-hermitique-a-dans-cette-base-particulière"><span class="header-section-number">4.9</span> Quelle est la représentation de la matrice hermitique A dans cette base particulière ? :</a></li>
+  <li><a href="#opérations-sur-des-fonctions-et-opérations-sur-des-vecteurs" id="toc-opérations-sur-des-fonctions-et-opérations-sur-des-vecteurs" class="nav-link" data-scroll-target="#opérations-sur-des-fonctions-et-opérations-sur-des-vecteurs"><span class="header-section-number">4.10</span> Opérations sur des fonctions et opérations sur des vecteurs :</a></li>
+  <li><a href="#opérateurs-fonctionnels-fonctions-propres-valeurs-propres" id="toc-opérateurs-fonctionnels-fonctions-propres-valeurs-propres" class="nav-link" data-scroll-target="#opérateurs-fonctionnels-fonctions-propres-valeurs-propres"><span class="header-section-number">4.11</span> Opérateurs fonctionnels, fonctions propres, valeurs propres :</a></li>
+  <li><a href="#produit-dopérateurs-fonctionnels" id="toc-produit-dopérateurs-fonctionnels" class="nav-link" data-scroll-target="#produit-dopérateurs-fonctionnels"><span class="header-section-number">4.12</span> Produit d’opérateurs fonctionnels :</a></li>
+  <li><a href="#fonction-propres-et-valeurs-propres-dun-opérateur-fonctionnel" id="toc-fonction-propres-et-valeurs-propres-dun-opérateur-fonctionnel" class="nav-link" data-scroll-target="#fonction-propres-et-valeurs-propres-dun-opérateur-fonctionnel"><span class="header-section-number">4.13</span> Fonction propres et valeurs propres d’un opérateur fonctionnel :</a></li>
+  <li><a href="#conditions-aux-limites" id="toc-conditions-aux-limites" class="nav-link" data-scroll-target="#conditions-aux-limites"><span class="header-section-number">4.14</span> Conditions aux limites :</a></li>
+  <li><a href="#produit-scalaire-hermitien-de-deux-vecteurs-fonctionnels-complexes" id="toc-produit-scalaire-hermitien-de-deux-vecteurs-fonctionnels-complexes" class="nav-link" data-scroll-target="#produit-scalaire-hermitien-de-deux-vecteurs-fonctionnels-complexes"><span class="header-section-number">4.15</span> Produit scalaire hermitien de deux vecteurs fonctionnels complexes :</a></li>
+  <li><a href="#propriété-dorthogonalité" id="toc-propriété-dorthogonalité" class="nav-link" data-scroll-target="#propriété-dorthogonalité"><span class="header-section-number">4.16</span> Propriété d’orthogonalité :</a></li>
+  <li><a href="#norme" id="toc-norme" class="nav-link" data-scroll-target="#norme"><span class="header-section-number">4.17</span> Norme :</a></li>
+  <li><a href="#norme-des-fonctions-propres-de-fracd2dx2" id="toc-norme-des-fonctions-propres-de-fracd2dx2" class="nav-link" data-scroll-target="#norme-des-fonctions-propres-de-fracd2dx2"><span class="header-section-number">4.18</span> Norme des fonctions propres de <span class="math inline">\frac{d^2}{dx^2}</span> :</a></li>
+  <li><a href="#développement-complexe-de-fourier" id="toc-développement-complexe-de-fourier" class="nav-link" data-scroll-target="#développement-complexe-de-fourier"><span class="header-section-number">4.19</span> Développement complexe de fourier :</a></li>
+  <li><a href="#théorème-de-dirac" id="toc-théorème-de-dirac" class="nav-link" data-scroll-target="#théorème-de-dirac"><span class="header-section-number">4.20</span> Théorème de Dirac :</a></li>
+  <li><a href="#opérateurs-hermitiques-et-grandeurs-physiques" id="toc-opérateurs-hermitiques-et-grandeurs-physiques" class="nav-link" data-scroll-target="#opérateurs-hermitiques-et-grandeurs-physiques"><span class="header-section-number">4.21</span> Opérateurs Hermitiques et Grandeurs Physiques</a></li>
+  <li><a href="#base-des-fonctions-propres-dun-opérateur-fonctionnel-hermitique" id="toc-base-des-fonctions-propres-dun-opérateur-fonctionnel-hermitique" class="nav-link" data-scroll-target="#base-des-fonctions-propres-dun-opérateur-fonctionnel-hermitique"><span class="header-section-number">4.22</span> Base des fonctions propres d’un opérateur fonctionnel hermitique :</a></li>
+  <li><a href="#représentation-dun-opérateur-fonctionnel-par-une-matrice" id="toc-représentation-dun-opérateur-fonctionnel-par-une-matrice" class="nav-link" data-scroll-target="#représentation-dun-opérateur-fonctionnel-par-une-matrice"><span class="header-section-number">4.23</span> Représentation d’un opérateur fonctionnel par une matrice</a></li>
+  <li><a href="#calcul-pratique-des-éléments-de-la-matrice-mathbfb" id="toc-calcul-pratique-des-éléments-de-la-matrice-mathbfb" class="nav-link" data-scroll-target="#calcul-pratique-des-éléments-de-la-matrice-mathbfb"><span class="header-section-number">4.24</span> Calcul pratique des éléments de la matrice <span class="math inline">\mathbf{B}</span></a></li>
+  <li><a href="#exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" id="toc-exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" class="nav-link" data-scroll-target="#exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times"><span class="header-section-number">4.25</span> Exemple 2 : Matrice non diagonale. Opérateur <span class="math inline">\hat{X} = x \times</span></a></li>
+  </ul></li>
+  <li><a href="#mesure-quantique" id="toc-mesure-quantique" class="nav-link" data-scroll-target="#mesure-quantique"><span class="header-section-number">5</span> Mesure quantique</a>
+  <ul class="collapse">
+  <li><a href="#représentation-dune-grandeur-physique-par-un-opérateur" id="toc-représentation-dune-grandeur-physique-par-un-opérateur" class="nav-link" data-scroll-target="#représentation-dune-grandeur-physique-par-un-opérateur"><span class="header-section-number">5.1</span> Représentation d’une grandeur physique par un opérateur</a></li>
+  <li><a href="#nouvelle-notion-de-mesure" id="toc-nouvelle-notion-de-mesure" class="nav-link" data-scroll-target="#nouvelle-notion-de-mesure"><span class="header-section-number">5.2</span> Nouvelle notion de mesure :</a></li>
+  <li><a href="#mesure-quantique-interaction-et-irréversibilité" id="toc-mesure-quantique-interaction-et-irréversibilité" class="nav-link" data-scroll-target="#mesure-quantique-interaction-et-irréversibilité"><span class="header-section-number">5.3</span> Mesure quantique : Interaction et Irréversibilité</a></li>
+  <li><a href="#le-pari-sur-laléatoire" id="toc-le-pari-sur-laléatoire" class="nav-link" data-scroll-target="#le-pari-sur-laléatoire"><span class="header-section-number">5.4</span> Le Pari sur l’Aléatoire</a></li>
+  <li><a href="#précisions-concernant-le-symbolisme-matriciel" id="toc-précisions-concernant-le-symbolisme-matriciel" class="nav-link" data-scroll-target="#précisions-concernant-le-symbolisme-matriciel"><span class="header-section-number">5.5</span> Précisions concernant le symbolisme matriciel :</a>
+  <ul class="collapse">
+  <li><a href="#formalisme-ket-et-bra" id="toc-formalisme-ket-et-bra" class="nav-link" data-scroll-target="#formalisme-ket-et-bra"><span class="header-section-number">5.5.1</span> Formalisme KET et BRA</a></li>
+  <li><a href="#condition-dorthonormalité" id="toc-condition-dorthonormalité" class="nav-link" data-scroll-target="#condition-dorthonormalité"><span class="header-section-number">5.5.2</span> Condition d’Orthonormalité</a></li>
+  <li><a href="#normalisation-de-létat-et-probabilités" id="toc-normalisation-de-létat-et-probabilités" class="nav-link" data-scroll-target="#normalisation-de-létat-et-probabilités"><span class="header-section-number">5.5.3</span> Normalisation de l’État et Probabilités</a></li>
+  <li><a href="#linterprétation-de-la-mesure-et-lespérance-mathématique" id="toc-linterprétation-de-la-mesure-et-lespérance-mathématique" class="nav-link" data-scroll-target="#linterprétation-de-la-mesure-et-lespérance-mathématique"><span class="header-section-number">5.5.4</span> L’Interprétation de la mesure et l’espérance mathématique</a></li>
+  <li><a href="#mesure-certaine-état-propre" id="toc-mesure-certaine-état-propre" class="nav-link" data-scroll-target="#mesure-certaine-état-propre"><span class="header-section-number">5.5.5</span> Mesure certaine : État propre</a></li>
+  <li><a href="#mesure-probabiliste-valeur-moyenne-espérance-mathématique" id="toc-mesure-probabiliste-valeur-moyenne-espérance-mathématique" class="nav-link" data-scroll-target="#mesure-probabiliste-valeur-moyenne-espérance-mathématique"><span class="header-section-number">5.5.6</span> Mesure probabiliste : Valeur Moyenne (Espérance Mathématique)</a></li>
+  <li><a href="#cas-dopérateurs-non-commutables" id="toc-cas-dopérateurs-non-commutables" class="nav-link" data-scroll-target="#cas-dopérateurs-non-commutables"><span class="header-section-number">5.5.7</span> Cas d’opérateurs non commutables</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#londe-de-louis-de-broglie" id="toc-londe-de-louis-de-broglie" class="nav-link" data-scroll-target="#londe-de-louis-de-broglie"><span class="header-section-number">6</span> L’onde de Louis De Broglie :</a>
+  <ul class="collapse">
+  <li><a href="#equation-des-ondes-ou-de-dalembert" id="toc-equation-des-ondes-ou-de-dalembert" class="nav-link" data-scroll-target="#equation-des-ondes-ou-de-dalembert"><span class="header-section-number">6.1</span> Equation des ondes ou de d’Alembert :</a></li>
+  <li><a href="#la-thèse-de-de-broglie-de-1924" id="toc-la-thèse-de-de-broglie-de-1924" class="nav-link" data-scroll-target="#la-thèse-de-de-broglie-de-1924"><span class="header-section-number">6.2</span> La thèse de De Broglie de 1924 :</a></li>
+  <li><a href="#concept-donde-de-matière" id="toc-concept-donde-de-matière" class="nav-link" data-scroll-target="#concept-donde-de-matière"><span class="header-section-number">6.3</span> Concept d’onde de matière :</a></li>
+  </ul></li>
+  <li><a href="#principe-dincertitude-dheisenberg" id="toc-principe-dincertitude-dheisenberg" class="nav-link" data-scroll-target="#principe-dincertitude-dheisenberg"><span class="header-section-number">7</span> Principe d’incertitude d’Heisenberg :</a>
+  <ul class="collapse">
+  <li><a href="#expérience-courante-du-principe-dincertitude" id="toc-expérience-courante-du-principe-dincertitude" class="nav-link" data-scroll-target="#expérience-courante-du-principe-dincertitude"><span class="header-section-number">7.1</span> Expérience courante du principe d’incertitude :</a></li>
+  <li><a href="#principe-dincertitude-des-radioelectriciens" id="toc-principe-dincertitude-des-radioelectriciens" class="nav-link" data-scroll-target="#principe-dincertitude-des-radioelectriciens"><span class="header-section-number">7.2</span> Principe d’incertitude des radioelectriciens :</a></li>
+  <li><a href="#transposition-au-domaine-électromagnétique" id="toc-transposition-au-domaine-électromagnétique" class="nav-link" data-scroll-target="#transposition-au-domaine-électromagnétique"><span class="header-section-number">7.3</span> Transposition au domaine électromagnétique :</a></li>
+  <li><a href="#la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" id="toc-la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" class="nav-link" data-scroll-target="#la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme"><span class="header-section-number">7.4</span> La publication de 1925 d’Heisenberg : vers un nouveau formalisme :</a></li>
+  <li><a href="#apport-du-formalisme-hamiltonien" id="toc-apport-du-formalisme-hamiltonien" class="nav-link" data-scroll-target="#apport-du-formalisme-hamiltonien"><span class="header-section-number">7.5</span> Apport du formalisme hamiltonien :</a></li>
+  <li><a href="#approche-intuitive-de-la-non-commutation-des-fonctions" id="toc-approche-intuitive-de-la-non-commutation-des-fonctions" class="nav-link" data-scroll-target="#approche-intuitive-de-la-non-commutation-des-fonctions"><span class="header-section-number">7.6</span> Approche intuitive de la non commutation des fonctions :</a></li>
+  <li><a href="#cas-limites-du-principe-dincertitude" id="toc-cas-limites-du-principe-dincertitude" class="nav-link" data-scroll-target="#cas-limites-du-principe-dincertitude"><span class="header-section-number">7.7</span> Cas limites du principe d’incertitude :</a></li>
+  <li><a href="#premier-principe-dincertitude-dheisenberg-position-impulsion" id="toc-premier-principe-dincertitude-dheisenberg-position-impulsion" class="nav-link" data-scroll-target="#premier-principe-dincertitude-dheisenberg-position-impulsion"><span class="header-section-number">7.8</span> Premier principe d’incertitude d’Heisenberg (position-impulsion) :</a></li>
+  <li><a href="#principe-dincertitude-temps-energie" id="toc-principe-dincertitude-temps-energie" class="nav-link" data-scroll-target="#principe-dincertitude-temps-energie"><span class="header-section-number">7.9</span> Principe d’incertitude temps-energie :</a></li>
+  <li><a href="#base-en-représentation-par-t" id="toc-base-en-représentation-par-t" class="nav-link" data-scroll-target="#base-en-représentation-par-t"><span class="header-section-number">7.10</span> Base en représentation par t :</a></li>
+  <li><a href="#utilité-de-la-fonction-porte" id="toc-utilité-de-la-fonction-porte" class="nav-link" data-scroll-target="#utilité-de-la-fonction-porte"><span class="header-section-number">7.11</span> Utilité de la fonction porte :</a></li>
+  <li><a href="#conséquence-concept-de-paquet-donde" id="toc-conséquence-concept-de-paquet-donde" class="nav-link" data-scroll-target="#conséquence-concept-de-paquet-donde"><span class="header-section-number">7.12</span> Conséquence : concept de paquet d’onde :</a></li>
+  <li><a href="#vitesse-de-phase-et-vitesse-de-groupe" id="toc-vitesse-de-phase-et-vitesse-de-groupe" class="nav-link" data-scroll-target="#vitesse-de-phase-et-vitesse-de-groupe"><span class="header-section-number">7.13</span> Vitesse de phase et vitesse de groupe :</a></li>
+  </ul></li>
+  <li><a href="#équation-de-schrödinger" id="toc-équation-de-schrödinger" class="nav-link" data-scroll-target="#équation-de-schrödinger"><span class="header-section-number">8</span> Équation de Schrödinger :</a>
+  <ul class="collapse">
+  <li><a href="#rappel-de-physique-des-ondes" id="toc-rappel-de-physique-des-ondes" class="nav-link" data-scroll-target="#rappel-de-physique-des-ondes"><span class="header-section-number">8.1</span> Rappel de physique des ondes :</a></li>
+  <li><a href="#exemple-tiré-des-télécommunications" id="toc-exemple-tiré-des-télécommunications" class="nav-link" data-scroll-target="#exemple-tiré-des-télécommunications"><span class="header-section-number">8.2</span> Exemple tiré des télécommunications :</a></li>
+  <li><a href="#extrait-de-la-publication-de-schrödinger-de-1926" id="toc-extrait-de-la-publication-de-schrödinger-de-1926" class="nav-link" data-scroll-target="#extrait-de-la-publication-de-schrödinger-de-1926"><span class="header-section-number">8.3</span> Extrait de la publication de Schrödinger de 1926</a></li>
+  <li><a href="#equation-de-schrödinger-dépendante-du-temps" id="toc-equation-de-schrödinger-dépendante-du-temps" class="nav-link" data-scroll-target="#equation-de-schrödinger-dépendante-du-temps"><span class="header-section-number">8.4</span> Equation de Schrödinger dépendante du temps :</a>
+  <ul class="collapse">
+  <li><a href="#principe-de-conservation-de-lénergie" id="toc-principe-de-conservation-de-lénergie" class="nav-link" data-scroll-target="#principe-de-conservation-de-lénergie"><span class="header-section-number">8.4.1</span> Principe de conservation de l’énergie :</a></li>
+  <li><a href="#principe-de-correspondance" id="toc-principe-de-correspondance" class="nav-link" data-scroll-target="#principe-de-correspondance"><span class="header-section-number">8.4.2</span> Principe de correspondance :</a></li>
+  <li><a href="#expression-de-léquation-de-schrodinger-dépendante-du-temps" id="toc-expression-de-léquation-de-schrodinger-dépendante-du-temps" class="nav-link" data-scroll-target="#expression-de-léquation-de-schrodinger-dépendante-du-temps"><span class="header-section-number">8.4.3</span> Expression de l’équation de Schrodinger dépendante du temps :</a></li>
+  <li><a href="#formulation-moderne-de-léquation-de-schrödinger-dépendante-du-temps" id="toc-formulation-moderne-de-léquation-de-schrödinger-dépendante-du-temps" class="nav-link" data-scroll-target="#formulation-moderne-de-léquation-de-schrödinger-dépendante-du-temps"><span class="header-section-number">8.4.4</span> Formulation moderne de l’équation de Schrödinger dépendante du temps :</a></li>
+  <li><a href="#fonction-donde-solution-de-léquation-de-schrodinger-dépendante-du-temps" id="toc-fonction-donde-solution-de-léquation-de-schrodinger-dépendante-du-temps" class="nav-link" data-scroll-target="#fonction-donde-solution-de-léquation-de-schrodinger-dépendante-du-temps"><span class="header-section-number">8.4.5</span> Fonction d’onde solution de l’équation de Schrodinger dépendante du temps :</a></li>
+  </ul></li>
+  <li><a href="#léquation-de-schrödinger-indépendante-du-temps-esit" id="toc-léquation-de-schrödinger-indépendante-du-temps-esit" class="nav-link" data-scroll-target="#léquation-de-schrödinger-indépendante-du-temps-esit"><span class="header-section-number">8.5</span> L’Équation de Schrödinger Indépendante du Temps (ESIT)</a></li>
+  <li><a href="#la-solution-de-lesdt-via-les-solutions-de-lesit" id="toc-la-solution-de-lesdt-via-les-solutions-de-lesit" class="nav-link" data-scroll-target="#la-solution-de-lesdt-via-les-solutions-de-lesit"><span class="header-section-number">8.6</span> La solution de l’ESDT via les solutions de l’ESIT</a></li>
+  </ul></li>
+  <li><a href="#application-états-propres-de-lopérateur-dénergie-pour-le-puits-de-potentiel-infini" id="toc-application-états-propres-de-lopérateur-dénergie-pour-le-puits-de-potentiel-infini" class="nav-link" data-scroll-target="#application-états-propres-de-lopérateur-dénergie-pour-le-puits-de-potentiel-infini"><span class="header-section-number">9</span> Application : états Propres de l’opérateur d’énergie pour le puits de potentiel infini :</a>
+  <ul class="collapse">
+  <li><a href="#le-concept-détat-stationnaire" id="toc-le-concept-détat-stationnaire" class="nav-link" data-scroll-target="#le-concept-détat-stationnaire"><span class="header-section-number">9.1</span> Le concept d’état stationnaire :</a></li>
+  <li><a href="#les-équations-aux-valeurs-propres" id="toc-les-équations-aux-valeurs-propres" class="nav-link" data-scroll-target="#les-équations-aux-valeurs-propres"><span class="header-section-number">9.2</span> Les équations aux valeurs propres :</a></li>
+  <li><a href="#constantes-du-mouvement" id="toc-constantes-du-mouvement" class="nav-link" data-scroll-target="#constantes-du-mouvement"><span class="header-section-number">9.3</span> Constantes du mouvement :</a></li>
+  <li><a href="#cas-du-puits-de-potentiel-infini-à-une-dimension" id="toc-cas-du-puits-de-potentiel-infini-à-une-dimension" class="nav-link" data-scroll-target="#cas-du-puits-de-potentiel-infini-à-une-dimension"><span class="header-section-number">9.4</span> Cas du puits de potentiel infini à une dimension :</a></li>
+  <li><a href="#lhamiltonien-et-léquation" id="toc-lhamiltonien-et-léquation" class="nav-link" data-scroll-target="#lhamiltonien-et-léquation"><span class="header-section-number">9.5</span> L’hamiltonien et l’équation :</a></li>
+  <li><a href="#conditions-aux-limites-1" id="toc-conditions-aux-limites-1" class="nav-link" data-scroll-target="#conditions-aux-limites-1"><span class="header-section-number">9.6</span> Conditions aux limites :</a></li>
+  <li><a href="#quantisation-des-énergies" id="toc-quantisation-des-énergies" class="nav-link" data-scroll-target="#quantisation-des-énergies"><span class="header-section-number">9.7</span> Quantisation des énergies :</a></li>
+  <li><a href="#les-fonctions-propres-états-stationnaires" id="toc-les-fonctions-propres-états-stationnaires" class="nav-link" data-scroll-target="#les-fonctions-propres-états-stationnaires"><span class="header-section-number">9.8</span> Les fonctions propres (états stationnaires)</a></li>
+  </ul></li>
+  <li><a href="#intrication-quantique" id="toc-intrication-quantique" class="nav-link" data-scroll-target="#intrication-quantique"><span class="header-section-number">10</span> Intrication quantique :</a>
+  <ul class="collapse">
+  <li><a href="#systèmes-composés-et-influence-locale" id="toc-systèmes-composés-et-influence-locale" class="nav-link" data-scroll-target="#systèmes-composés-et-influence-locale"><span class="header-section-number">10.1</span> Systèmes composés et influence locale :</a></li>
+  <li><a href="#espaces-de-hilbert-et-produit-tensoriel" id="toc-espaces-de-hilbert-et-produit-tensoriel" class="nav-link" data-scroll-target="#espaces-de-hilbert-et-produit-tensoriel"><span class="header-section-number">10.2</span> Espaces de hilbert et produit tensoriel :</a></li>
+  <li><a href="#états-produit-et-états-intriqués" id="toc-états-produit-et-états-intriqués" class="nav-link" data-scroll-target="#états-produit-et-états-intriqués"><span class="header-section-number">10.3</span> États produit et états intriqués :</a></li>
+  <li><a href="#opérateurs-linéaires-sur-les-espaces-de-produit-tensoriel" id="toc-opérateurs-linéaires-sur-les-espaces-de-produit-tensoriel" class="nav-link" data-scroll-target="#opérateurs-linéaires-sur-les-espaces-de-produit-tensoriel"><span class="header-section-number">10.4</span> Opérateurs linéaires sur les espaces de produit tensoriel :</a></li>
+  <li><a href="#lexpérience-de-mesure-sur-un-état-intriqué" id="toc-lexpérience-de-mesure-sur-un-état-intriqué" class="nav-link" data-scroll-target="#lexpérience-de-mesure-sur-un-état-intriqué"><span class="header-section-number">10.5</span> L’expérience de mesure sur un état intriqué :</a></li>
+  <li><a href="#le-paradoxe-einstein-podolsky-rosen-epr" id="toc-le-paradoxe-einstein-podolsky-rosen-epr" class="nav-link" data-scroll-target="#le-paradoxe-einstein-podolsky-rosen-epr"><span class="header-section-number">10.6</span> Le paradoxe Einstein-Podolsky-Rosen (EPR) :</a></li>
+  </ul></li>
+  <li><a href="#informatique-et-information-quantique" id="toc-informatique-et-information-quantique" class="nav-link" data-scroll-target="#informatique-et-information-quantique"><span class="header-section-number">11</span> Informatique et information quantique :</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">11.1</span> Introduction :</a></li>
+  <li><a href="#qbit---porte-logique" id="toc-qbit---porte-logique" class="nav-link" data-scroll-target="#qbit---porte-logique"><span class="header-section-number">11.2</span> Qbit - porte logique :</a></li>
+  </ul></li>
+  <li><a href="#quantique-et-reseaux" id="toc-quantique-et-reseaux" class="nav-link" data-scroll-target="#quantique-et-reseaux"><span class="header-section-number">12</span> Quantique et reseaux :</a>
+  <ul class="collapse">
+  <li><a href="#le-réseau-pour-la-quantique" id="toc-le-réseau-pour-la-quantique" class="nav-link" data-scroll-target="#le-réseau-pour-la-quantique"><span class="header-section-number">12.1</span> Le réseau pour la quantique :</a></li>
+  <li><a href="#la-quantique-pour-la-securité-réseau-le-consensus-quantique" id="toc-la-quantique-pour-la-securité-réseau-le-consensus-quantique" class="nav-link" data-scroll-target="#la-quantique-pour-la-securité-réseau-le-consensus-quantique"><span class="header-section-number">12.2</span> La quantique pour la securité réseau : le consensus quantique ?</a></li>
+  </ul></li>
+  <li><a href="#lécosystème-de-la-quantique" id="toc-lécosystème-de-la-quantique" class="nav-link" data-scroll-target="#lécosystème-de-la-quantique"><span class="header-section-number">13</span> L’écosystème de la quantique :</a>
+  <ul class="collapse">
+  <li><a href="#les-acteurs-en-présence" id="toc-les-acteurs-en-présence" class="nav-link" data-scroll-target="#les-acteurs-en-présence"><span class="header-section-number">13.1</span> Les acteurs en présence :</a></li>
+  </ul></li>
+  <li><a href="#références" id="toc-références" class="nav-link" data-scroll-target="#références"><span class="header-section-number">14</span> Références :</a></li>
   </ul>
 </nav>
     </div>
@@ -517,6 +635,8 @@ Définition : Espace Vectoriel
 <li><p><strong>Addition vectorielle</strong> : <span class="math inline">\forall |\psi \rangle |\phi\rangle \in \mathcal{V} \implies |\psi\rangle + |\phi\rangle \in \mathcal{V}</span></p></li>
 <li><p>Multiplication par un scalaire : <span class="math inline">\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}</span></p></li>
 </ol>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1142,6 +1262,7 @@ a\_n&nbsp; \\&nbsp;
 <p>Éléments diagonaux (<span class="math inline">\mathbf{X}_{nn}</span>) : <span class="math inline">\frac{T}{2}</span> (Réels).</p>
 <p>Éléments non-diagonaux (<span class="math inline">\mathbf{X}_{pq}, p \neq q</span>) : <span class="math inline">-i \frac{T}{2\pi (q-p)}</span> (Purement imaginaires).</p>
 <p>La matrice <span class="math inline">\mathbf{X}</span> n’est donc pas réelle (elle est hermitienne).</p>
+</section>
 </section>
 <section id="mesure-quantique" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Mesure quantique</h1>
@@ -1909,16 +2030,13 @@ Dans ce cas X(t) est un vecteur d’état qui représente par exemple le courant
 </section>
 </section>
 <section id="références" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Références :</h1>
+
+
 
 
 </section>
-</div>
-</div>
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">14 Références :</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-aspect:tel-00011844" class="csl-entry" role="listitem">
 Aspect, Alain. 1983. <span>“<span class="nocase">Trois tests exp<span class="nocase">é</span>rimentaux des in<span class="nocase">é</span>galit<span class="nocase">é</span>s de Bell par corr<span class="nocase">é</span>lation de polarisation de photons</span>.”</span> Theses, <span>Universit<span>é</span> Paris Sud - Paris XI</span>. <a href="https://pastel.hal.science/tel-00011844">https://pastel.hal.science/tel-00011844</a>.
 </div>

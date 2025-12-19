@@ -445,6 +445,8 @@ Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ense
 
 2.  Multiplication par un scalaire : $\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}$
 
+:::
+
 
 ::: {.callout-note}
 

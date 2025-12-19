@@ -14,11 +14,95 @@
     "text": "Licence : Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).\nVersion : 1.0.1 (Dernière mise à jour : 16 décembre 2025)\nInformations légales et de version :\nCe travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux.\nCe document n’a fait l’objet d’aucune évaluation par les pairs (peer-review).\nCe n’est pas non plus un doublons d’un cours de physique comme on donne aux étudiants en physique. En effet la vocation n’est pas la même.\nLicence :\nLe contenu de ce cours est distribué sous la licence Creative Commons Attribution 4.0 International (CC BY 4.0).\nVous êtes libre de :\nPartager — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats ;\nAdapter — remixer, transformer et créer à partir du matériel pour toute utilisation, y compris commerciale.\nÀ condition de citer l’auteur original, Stéphane Caporali, et Caporali Conseil."
   },
   {
+    "objectID": "publications/fondements.html#avertissement",
+    "href": "publications/fondements.html#avertissement",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.1 Avertissement :",
+    "text": "2.1 Avertissement :\nLe document de 1925 n’est pas simple du tout à lire. Il donne l’impression d’un “brouillon de fin de nuit blanche” il constitue pourtant un document charnière."
+  },
+  {
+    "objectID": "publications/fondements.html#le-document-de-rupture-de-1925",
+    "href": "publications/fondements.html#le-document-de-rupture-de-1925",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.2 Le document de rupture de 1925 :",
+    "text": "2.2 Le document de rupture de 1925 :\nOn situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l’équation de Schrödinger, ou bien le papier de Heisenberg de 1925 :“Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen” (Heisenberg 1925) qui pose un nouveau formalisme.\n\n\n\n\n\nNous allons rentrer dans le document afin d’introduire des themes nouveaux.\nPour comprendre le point de départ de la démarche d’Heisenberg il s’agit de partir de la physique classique et de considérer la physique quantique comme une extension de la physique classique. En effet n étant le niveau énergie de l’atome, pour n très grand la différence entre 2 niveau est petite ce qui donne l’illusion du continue, Cette jonction entre les deux était déjà utilisée par Bohr et s’appelait regle de correspondance. Mais l’ambition d’heisenberg va plus loin car il s’agit d’entendre le formalisme algébrique classique au quantique, au prix d’une adaptation. Ainsi bizarrement au lieu de partir des formules quantiques Heisenberg part des formules classiques."
+  },
+  {
+    "objectID": "publications/fondements.html#la-physique-classique",
+    "href": "publications/fondements.html#la-physique-classique",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.3 La physique classique :",
+    "text": "2.3 La physique classique :\nNous partions du modèle de Bohr.\n\\nu(n,n-\\alpha)=\\frac{1}{h}[W(n)-W(n-\\alpha)]\nCette formule est la règle de fréquence de Bohr (1913). Elle stipule que l’énergie d’un photon émis est la différence entre l’énergie de l’état initial et l’énergie de l’état final.\n\\nu(n,\\alpha)=\\alpha.\\nu(n)=\\alpha.\\frac{1}{h}\\frac{dW}{dn}\nCette formule décrit l’émission de radiation dans la physique classique (électromagnétisme), où l’électron rayonne de manière continue à la fréquence de son mouvement et ses harmoniques.\n\\nu(n) : C’est la fréquence fondamentale du mouvement de l’électron sur son orbite (le mouvement est périodique).\n\\frac{dW}{dn} : C’est la dérivée de l’énergie par rapport au nombre quantique n. Cela représente la variation de l’énergie pour un changement infinitésimal (continu) du nombre quantique.\n\\alpha : C’est un multiple de la fréquence fondamentale (harmonique). Dans la théorie classique, l’électron peut émettre à sa fréquence fondamentale et à tous ses harmoniques (\\alpha = 1, 2, 3, \\ldots).\nOn remarque que dans cette formule dn est petit car nous sommes dans les grands nombres.\nComparaison des phases :\n\\nu(n,\\alpha)+\\nu(n,\\beta)=\\nu(n,\\alpha+\\beta)\n\\nu(n,n − \\alpha) + \\nu(n − \\alpha,n − \\alpha − \\beta) = \\nu(n,n − \\alpha − \\beta)\nIci Heisenberg remarque que la linéarité (additivité des fréquences) de la formule classique s’applique moyennant adaptation à la quantique."
+  },
+  {
+    "objectID": "publications/fondements.html#la-non-commutation-des-matrices",
+    "href": "publications/fondements.html#la-non-commutation-des-matrices",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.4 la non commutation des matrices :",
+    "text": "2.4 la non commutation des matrices :\nPuis est aborde le sujet de la non commutation :\nHeisenberg faut remarquer que le produit x(t).y(t) n’est pas forcement commutatif. Toutefois il ne va pas plus loin et il posera la non commutativité et le principe d’incertitude quelques mois plus tard avec l’aide de Born et Jordan."
+  },
+  {
+    "objectID": "publications/fondements.html#relation-fondametale-en-physique-classique",
+    "href": "publications/fondements.html#relation-fondametale-en-physique-classique",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.5 Relation fondametale en physique classique",
+    "text": "2.5 Relation fondametale en physique classique\nC’est ici que l’on rentre dans la transition proprement dite.\n\n\n\nx¨ + f(x) = 0\nIci Heisenberg exprime la seconde loi de newton connue sous la forme : \\Sigma F=m.\\ddot{x} F etant une force.\nSi Heisenberg pose cette formule connu, ce n’est pas pour le plaisir de faire de la physique classique mais car il pense que l’on peut partir de cette formule et en trouver une extension quantique. Il cherche une algèbre. Ainsi il dit que l’on cherche à construire en théorie quantique un formalisme qui corresponde le plus étroitement possible à celui de la mécanique classique."
+  },
+  {
+    "objectID": "publications/fondements.html#definition-de-laction-pour-bohr",
+    "href": "publications/fondements.html#definition-de-laction-pour-bohr",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.6 Definition de l’action pour Bohr :",
+    "text": "2.6 Definition de l’action pour Bohr :\n\n\n\nHeisenberg s’intéresse à la notion d’action, prise comme l’impact et qui peut s’exprimer comme une énergie que multiplie une durée, ou comme une vitesse que multiplie une distance. h signifie déjà le quantum d’action.\n\\oint pdq=\\oint m\\dot{x}dx=J(=nh)\nToutefois ici il faut se placer dans la physique de époque et J représente l’action et elle est un multiple de n. Cela signifie que plus le niveau énergie est élevé plus l’action pour l’atteindre est importante. L’action peut être le produite de énergie par la durée ou du déplacement par la vitesse. Cette formulation de l’action à être profondément remise en cause par Heisenberg."
+  },
+  {
+    "objectID": "publications/fondements.html#introduction-du-parametre-position",
+    "href": "publications/fondements.html#introduction-du-parametre-position",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.7 Introduction du parametre position :",
+    "text": "2.7 Introduction du parametre position :\n\ntout d’abord, nous cherchons a exprimer la position x d’une particule. En supposant la fonction périodique nous allons la décomposer en série de fourier,\n\nx=\\Sigma_{+\\infty}^{-\\infty}a_{\\alpha}(n)e^{i\\alpha\\omega_{n}t} dann ist\nAttention ici il s’agit d’une expression en physique classique. Mais nous allons voir que Heisenberg va “abandonner” x car considere comme non observable. Toutefois nous restons encore dans le cadre la la mécanique classique. Un mouvement périodique peut être un oscillateur harmonique mais surtout la trajectoire d’un electron sur son orbite imaginée dans le modele de Bohr. On dirait que Heisenberg presuppose que le mouvement quantique est périodique. En realite il exige que si un mouvement quantique existe alors il permet un mouvement classique périodique. Dans le modèle de Bohr le mouvement classique était considéré comme un cas particulier du mouvement quantique (celui ou n est très grand). C’est pour cette raison (qu’on appelle principe de correspondance) que l’on peut prendre le mouvement périodique classique comme point de départ du raisonnement. Plus tard on se détachera de la vision continue de x(t) de la physique classique."
+  },
+  {
+    "objectID": "publications/fondements.html#mise-en-evidence-de-lenergie",
+    "href": "publications/fondements.html#mise-en-evidence-de-lenergie",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.8 Mise en evidence de l’energie",
+    "text": "2.8 Mise en evidence de l’energie\nIl suffit de la dériver pour prendre l’expression de v.\nm\\dot{x}=\\Sigma_{+\\infty}^{-\\infty}a_{\\alpha}(n)i\\alpha\\omega_{n}e^{i\\alpha\\omega_{n}t}\nEn basculant de dq en dt on introduit un carre. L’énergie cinétique est une vitesse au carrée. Le carre introduit qu’il s’agit d’une énergie. On remarque que ici on raisonne toujours en physique classique. Toutefois on se positionne a raisonner en terme d’énergie, or une transition entre un état n et un état n+1 et bien quelque chose qui coûte une certaine énergie. On voit l’intuition d’Heisenberg. Le terme a_{\\alpha}(n) \\cdot a_{-\\alpha}(n) préfigure \\left|a_{\\alpha}(n)\\right|^2. Heisenberg s’intéresse beaucoup aux amplitudes et a leurs significations physiques.\n\\oint m\\dot{x}dx=\\oint m\\dot{x}^2dt=2\\pi m\\Sigma_{+\\infty}^{-\\infty}a_{\\alpha}(n)a_{-\\alpha}(n)\\alpha^2\\omega_{n}"
+  },
+  {
+    "objectID": "publications/fondements.html#limite-classique-dans-la-formulation-de-laction",
+    "href": "publications/fondements.html#limite-classique-dans-la-formulation-de-laction",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.9 Limite classique dans la formulation de l’action :",
+    "text": "2.9 Limite classique dans la formulation de l’action :\nOn obtient ainsi le terme suivant :\n\\oint mx^2dt=2\\pi \\Sigma_{+\\infty}^{-\\infty} |a_{\\alpha}(n)|^2\\alpha^2\\omega_{n}\nIci Heisenberg explique que cette formulation ne le satisfait pas. Il en préfère une autre :\n\\frac{d}{dn}(nh)=\\frac{d}{dn}\\oint m\\dot{x}dt das heist\nPour expliquer la formule ci-dessus, on a vu que pour Bohr l’action etait un multiple de h. Parce que on a utilise la serie de fourier pour x on a abouti au memebre de droite.\nPour n grand dn est tres petit et donc la derivve de nh par rapport a n vaut h d ou la formule suivante :\n\nh=2\\pi m \\Sigma_{+\\infty}^{-\\infty} \\alpha \\frac{d}{dn} a\\alpha \\omega_{n} |a_{\\alpha}|^2\n\nOn peut remrquer que jusqu’ici on est toujours dans la physique classique."
+  },
+  {
+    "objectID": "publications/fondements.html#introduction-de-la-quantification-dans-les-indices",
+    "href": "publications/fondements.html#introduction-de-la-quantification-dans-les-indices",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.10 Introduction de la quantification dans les indices :",
+    "text": "2.10 Introduction de la quantification dans les indices :\nRevenins a la formule classique de l’action : \\oint p \\, dq = nh.\np est une impulsion (p = m \\dot{q}) et q une position. En remplacant x et v par leurs valeurs mais en ajoutant les indices on finit par obtenir la phrase suivante :\nh = 4\\pi m \\Sigma_{0}^{+\\infty}\\alpha{|a(n,n+\\alpha)|^2\\omega(n,n+\\alpha)}-{|a(n,n-\\alpha)|^2\\omega(n,n-\\alpha)^2} |\nEnfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le “saut”.\nCette formule constitue un moment clé.\nNotez qu’une somme infinie tende vers une constante."
+  },
+  {
     "objectID": "publications/fondements.html#consequence-sur-le-concept-de-position",
     "href": "publications/fondements.html#consequence-sur-le-concept-de-position",
     "title": "Introduction à la théorie quantique",
     "section": "2.11 Consequence sur le concept de position :",
     "text": "2.11 Consequence sur le concept de position :\nCet article de Heisenberg de 1925 est tres abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l’interprétation :\n\nle point de départ est la physique classique et la formulation de x(t) sous la forme d’une série de fourrier. Il s’agit de voir la quantique comme une extension de la physique classique (et pas l’inverse comme on le fait souvent).\non abandonne la possibilité de la position. Il s’agit quasiment d’un choix arbitraire.\nen troisième lieu la position ressuscite sous forme de la matrice position X. Toutefois prendre un stylo et une feuille de papier, dessiner une matrice avec un X dedans ne suffit pas a faire une matrice position. Les composantes de la machine expriment des transitions d’états (on remplace un espace des positions par un espace des transitions). C’est bien la position de X dans la relation de la non commutation (X.Y\\neq Y.X) qui fait les propriétés de la matrice X.\n\nOn voit comment la spacialité éclate complètement au profit des composantes de la matrices qui expriment des potentialités."
+  },
+  {
+    "objectID": "publications/fondements.html#loscillateur-anharmonique-en-physique-classique",
+    "href": "publications/fondements.html#loscillateur-anharmonique-en-physique-classique",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.12 L’oscillateur anharmonique en physique classique :",
+    "text": "2.12 L’oscillateur anharmonique en physique classique :\nCe paragraphe est important car il prouve la validité de la méthode de Heisenberg. Elle a des similitude avec la méthode utilisée jusqu’à présent. Tout d’abord Heisenberg par de la physique classique\nVoic la définition :\nx=\\lambda a_{0}+a_{1}coswt +\\lambda a_{2}cos2wt + \\lambda^2a_{3}cos3wt + ...+ \\lambda^{\\tau-1}a_{r}cos\\tau\\omega t\non a les relations de récurrence :\n\\omega_0^2 (\\lambda a_0) + \\lambda \\langle x^2 \\rangle = 0\nIci encore Heisenberg s’intéresse aux amplitudes : on laisse tomber x et on exprimer l’amplitude en fonction de n et de la fréquence. Ces amplitudes constituent des transitions d’états.\nSans rentrer dans les details on tombe sur :\na^2(n,n-1)=\\frac{(n+const)h}{\\pi\\omega_{0}}\net de fil en aiguille Heisenberg finie par aboutir à la formule de l’oscillateur :\nW=(n+\\frac{1}{2})hw_{0}/2\\pi)\nDans le document de 1925 la partie sur l’oscillateur harmonique et de loin la plus obscure à première lecture et pourtant le résultat est juste."
+  },
+  {
+    "objectID": "publications/fondements.html#conclusion",
+    "href": "publications/fondements.html#conclusion",
+    "title": "Introduction à la théorie quantique",
+    "section": "2.13 Conclusion :",
+    "text": "2.13 Conclusion :\nOn dit souvent que Heisenberg abouti aux résultats de la mécanique ondulatoire mais en “évitant l’onde”. De plus le document de 1925 présente une très grande cohérence d’approche dans sa structure puisque qu’il applique pour l’oscillateur anharmonique exactement la même méthode qu’avant dans le document.\nL’image ci-dessous présente les participants au congres de Solvay de 1927. En deux ans la nouvelle physique était née.\n\n\n\nCinquième Congrès Solvay de physique, 1927. Source : Wikipedia"
   },
   {
     "objectID": "publications/fondements.html#le-corps-noir",
@@ -593,96 +677,5 @@
     "title": "Communications et Présentations",
     "section": "",
     "text": "Cette section regroupe les communications scientifiques (posters, slides) et les présentations publiques données lors de conférences, séminaires ou groupes de travail.\n\nPrésentation : Discussion on issues related to security and anonymity on blockchains.\nAuteur : S. Caporali Type : Poster/Slide Deck\nÉvénement : Communauté Blockchain, Orvium\nDate : 13/11/2025\nRésumé : Présentation de diapositives de juin 2018 pour le groupe de travail Trans Europe Experts sur les enjeux de sécurité et d’anonymat.\nLien vers la publication Orvium\n\nPrésentation: Education in blockchain technology\nAuteur : S. Caporali Type : Slide Deck\nÉvénement : webinar seeblocks.eu “Blockchain Education & Standardisation: Navigating (beyond) the European Landscape”\nDate : 10 novembre 2023\nIntroduction et Contexte :\nDans le cadre de cette section, nous introduisons les fondements théoriques et pratiques de notre approche pédagogique pour l’enseignement supérieur, spécifiquement appliquée à la technologie Blockchain.\nLe Trilemme Éducatif : Fondement de Notre Pédagogie\nNotre approche est conceptualisée autour d’un défi central dans l’enseignement des technologies émergentes : Le Trilemme Éducatif. Il représente les trois tensions majeures qui doivent être équilibrées pour garantir une formation pertinente en technologie Blockchain.Les Composantes du Trilemme Le Trilemme Éducatif en Blockchain se décline en trois axes fondamentaux :\n\nHidden Complexity (Complexité Cachée)La Blockchain, souvent perçue comme un simple registre ou une monnaie, repose sur des fondations très complexes (cryptographie asymétrique, protocoles de consensus, machines virtuelles). Le défi pédagogique est de rendre cette complexité accessible sans la simplifier à l’excès, assurant que l’étudiant comprenne ce qui se passe sous le capot (e.g., les preuves à divulgation nulle de connaissance, la théorie des jeux).\nCross Disciplinary (Transversalité Disciplinaire)La technologie ne se limite pas à l’informatique. Elle est intrinsèquement liée au droit, à la finance, à l’économie, et à la sociologie. L’enseignement doit donc adopter une approche véritablement interdisciplinaire, préparant les étudiants à interagir avec des experts de divers domaines et à comprendre les implications réglementaires et économiques de leurs développements.\nFounding Principle (Principe Fondateur)Il est essentiel de ne pas perdre de vue les principes idéologiques et philosophiques qui ont donné naissance à la Blockchain (décentralisation, immuabilité, confiance sans intermédiaire). L’approche doit revenir aux fondamentaux conceptuels pour que les étudiants puissent non seulement maîtriser la technique, mais aussi innover dans le respect de ces principes.\n\n\n\nConsultez la présentation :  [Education in blockchain technology] \n\n\n(Le lien s’ouvrira dans un nouvel onglet.)"
-  },
-  {
-    "objectID": "publications/fondements.html#définition-vecteur-détat-state-vector",
-    "href": "publications/fondements.html#définition-vecteur-détat-state-vector",
-    "title": "Introduction à la théorie quantique",
-    "section": "4.1 Définition : Vecteur d’état (State Vector)",
-    "text": "4.1 Définition : Vecteur d’état (State Vector)\nL’espace des états d’un système de mécanique quantique est un espace de Hilbert complexe.\nUn vecteur d’état est un vecteur de cet espace ayant une norme unitaire :\n$$\\langle \\psi | \\psi \\rangle = 1$$"
-  },
-  {
-    "objectID": "publications/fondements.html#avertissement",
-    "href": "publications/fondements.html#avertissement",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.1 Avertissement :",
-    "text": "2.1 Avertissement :\nLe document de 1925 n’est pas simple du tout à lire. Il donne l’impression d’un “brouillon de fin de nuit blanche” il constitue pourtant un document charnière."
-  },
-  {
-    "objectID": "publications/fondements.html#le-document-de-rupture-de-1925",
-    "href": "publications/fondements.html#le-document-de-rupture-de-1925",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.2 Le document de rupture de 1925 :",
-    "text": "2.2 Le document de rupture de 1925 :\nOn situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l’équation de Schrödinger, ou bien le papier de Heisenberg de 1925 :“Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen” (Heisenberg 1925) qui pose un nouveau formalisme.\n\n\n\n\n\nNous allons rentrer dans le document afin d’introduire des themes nouveaux.\nPour comprendre le point de départ de la démarche d’Heisenberg il s’agit de partir de la physique classique et de considérer la physique quantique comme une extension de la physique classique. En effet n étant le niveau énergie de l’atome, pour n très grand la différence entre 2 niveau est petite ce qui donne l’illusion du continue, Cette jonction entre les deux était déjà utilisée par Bohr et s’appelait regle de correspondance. Mais l’ambition d’heisenberg va plus loin car il s’agit d’entendre le formalisme algébrique classique au quantique, au prix d’une adaptation. Ainsi bizarrement au lieu de partir des formules quantiques Heisenberg part des formules classiques."
-  },
-  {
-    "objectID": "publications/fondements.html#la-physique-classique",
-    "href": "publications/fondements.html#la-physique-classique",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.3 La physique classique :",
-    "text": "2.3 La physique classique :\nNous partions du modèle de Bohr.\n\\nu(n,n-\\alpha)=\\frac{1}{h}[W(n)-W(n-\\alpha)]\nCette formule est la règle de fréquence de Bohr (1913). Elle stipule que l’énergie d’un photon émis est la différence entre l’énergie de l’état initial et l’énergie de l’état final.\n\\nu(n,\\alpha)=\\alpha.\\nu(n)=\\alpha.\\frac{1}{h}\\frac{dW}{dn}\nCette formule décrit l’émission de radiation dans la physique classique (électromagnétisme), où l’électron rayonne de manière continue à la fréquence de son mouvement et ses harmoniques.\n\\nu(n) : C’est la fréquence fondamentale du mouvement de l’électron sur son orbite (le mouvement est périodique).\n\\frac{dW}{dn} : C’est la dérivée de l’énergie par rapport au nombre quantique n. Cela représente la variation de l’énergie pour un changement infinitésimal (continu) du nombre quantique.\n\\alpha : C’est un multiple de la fréquence fondamentale (harmonique). Dans la théorie classique, l’électron peut émettre à sa fréquence fondamentale et à tous ses harmoniques (\\alpha = 1, 2, 3, \\ldots).\nOn remarque que dans cette formule dn est petit car nous sommes dans les grands nombres.\nComparaison des phases :\n\\nu(n,\\alpha)+\\nu(n,\\beta)=\\nu(n,\\alpha+\\beta)\n\\nu(n,n − \\alpha) + \\nu(n − \\alpha,n − \\alpha − \\beta) = \\nu(n,n − \\alpha − \\beta)\nIci Heisenberg remarque que la linéarité (additivité des fréquences) de la formule classique s’applique moyennant adaptation à la quantique."
-  },
-  {
-    "objectID": "publications/fondements.html#la-non-commutation-des-matrices",
-    "href": "publications/fondements.html#la-non-commutation-des-matrices",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.4 la non commutation des matrices :",
-    "text": "2.4 la non commutation des matrices :\nPuis est aborde le sujet de la non commutation :\nHeisenberg faut remarquer que le produit x(t).y(t) n’est pas forcement commutatif. Toutefois il ne va pas plus loin et il posera la non commutativité et le principe d’incertitude quelques mois plus tard avec l’aide de Born et Jordan."
-  },
-  {
-    "objectID": "publications/fondements.html#relation-fondametale-en-physique-classique",
-    "href": "publications/fondements.html#relation-fondametale-en-physique-classique",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.5 Relation fondametale en physique classique",
-    "text": "2.5 Relation fondametale en physique classique\nC’est ici que l’on rentre dans la transition proprement dite.\n\n\n\nx¨ + f(x) = 0\nIci Heisenberg exprime la seconde loi de newton connue sous la forme : \\Sigma F=m.\\ddot{x} F etant une force.\nSi Heisenberg pose cette formule connu, ce n’est pas pour le plaisir de faire de la physique classique mais car il pense que l’on peut partir de cette formule et en trouver une extension quantique. Il cherche une algèbre. Ainsi il dit que l’on cherche à construire en théorie quantique un formalisme qui corresponde le plus étroitement possible à celui de la mécanique classique."
-  },
-  {
-    "objectID": "publications/fondements.html#definition-de-laction-pour-bohr",
-    "href": "publications/fondements.html#definition-de-laction-pour-bohr",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.6 Definition de l’action pour Bohr :",
-    "text": "2.6 Definition de l’action pour Bohr :\n\n\n\nHeisenberg s’intéresse à la notion d’action, prise comme l’impact et qui peut s’exprimer comme une énergie que multiplie une durée, ou comme une vitesse que multiplie une distance. h signifie déjà le quantum d’action.\n\\oint pdq=\\oint m\\dot{x}dx=J(=nh)\nToutefois ici il faut se placer dans la physique de époque et J représente l’action et elle est un multiple de n. Cela signifie que plus le niveau énergie est élevé plus l’action pour l’atteindre est importante. L’action peut être le produite de énergie par la durée ou du déplacement par la vitesse. Cette formulation de l’action à être profondément remise en cause par Heisenberg."
-  },
-  {
-    "objectID": "publications/fondements.html#introduction-du-parametre-position",
-    "href": "publications/fondements.html#introduction-du-parametre-position",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.7 Introduction du parametre position :",
-    "text": "2.7 Introduction du parametre position :\n\ntout d’abord, nous cherchons a exprimer la position x d’une particule. En supposant la fonction périodique nous allons la décomposer en série de fourier,\n\nx=\\Sigma_{+\\infty}^{-\\infty}a_{\\alpha}(n)e^{i\\alpha\\omega_{n}t} dann ist\nAttention ici il s’agit d’une expression en physique classique. Mais nous allons voir que Heisenberg va “abandonner” x car considere comme non observable. Toutefois nous restons encore dans le cadre la la mécanique classique. Un mouvement périodique peut être un oscillateur harmonique mais surtout la trajectoire d’un electron sur son orbite imaginée dans le modele de Bohr. On dirait que Heisenberg presuppose que le mouvement quantique est périodique. En realite il exige que si un mouvement quantique existe alors il permet un mouvement classique périodique. Dans le modèle de Bohr le mouvement classique était considéré comme un cas particulier du mouvement quantique (celui ou n est très grand). C’est pour cette raison (qu’on appelle principe de correspondance) que l’on peut prendre le mouvement périodique classique comme point de départ du raisonnement. Plus tard on se détachera de la vision continue de x(t) de la physique classique."
-  },
-  {
-    "objectID": "publications/fondements.html#mise-en-evidence-de-lenergie",
-    "href": "publications/fondements.html#mise-en-evidence-de-lenergie",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.8 Mise en evidence de l’energie",
-    "text": "2.8 Mise en evidence de l’energie\nIl suffit de la dériver pour prendre l’expression de v.\nm\\dot{x}=\\Sigma_{+\\infty}^{-\\infty}a_{\\alpha}(n)i\\alpha\\omega_{n}e^{i\\alpha\\omega_{n}t}\nEn basculant de dq en dt on introduit un carre. L’énergie cinétique est une vitesse au carrée. Le carre introduit qu’il s’agit d’une énergie. On remarque que ici on raisonne toujours en physique classique. Toutefois on se positionne a raisonner en terme d’énergie, or une transition entre un état n et un état n+1 et bien quelque chose qui coûte une certaine énergie. On voit l’intuition d’Heisenberg. Le terme a_{\\alpha}(n) \\cdot a_{-\\alpha}(n) préfigure \\left|a_{\\alpha}(n)\\right|^2. Heisenberg s’intéresse beaucoup aux amplitudes et a leurs significations physiques.\n\\oint m\\dot{x}dx=\\oint m\\dot{x}^2dt=2\\pi m\\Sigma_{+\\infty}^{-\\infty}a_{\\alpha}(n)a_{-\\alpha}(n)\\alpha^2\\omega_{n}"
-  },
-  {
-    "objectID": "publications/fondements.html#limite-classique-dans-la-formulation-de-laction",
-    "href": "publications/fondements.html#limite-classique-dans-la-formulation-de-laction",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.9 Limite classique dans la formulation de l’action :",
-    "text": "2.9 Limite classique dans la formulation de l’action :\nOn obtient ainsi le terme suivant :\n\\oint mx^2dt=2\\pi \\Sigma_{+\\infty}^{-\\infty} |a_{\\alpha}(n)|^2\\alpha^2\\omega_{n}\nIci Heisenberg explique que cette formulation ne le satisfait pas. Il en préfère une autre :\n\\frac{d}{dn}(nh)=\\frac{d}{dn}\\oint m\\dot{x}dt das heist\nPour expliquer la formule ci-dessus, on a vu que pour Bohr l’action etait un multiple de h. Parce que on a utilise la serie de fourier pour x on a abouti au memebre de droite.\nPour n grand dn est tres petit et donc la derivve de nh par rapport a n vaut h d ou la formule suivante :\n\nh=2\\pi m \\Sigma_{+\\infty}^{-\\infty} \\alpha \\frac{d}{dn} a\\alpha \\omega_{n} |a_{\\alpha}|^2\n\nOn peut remrquer que jusqu’ici on est toujours dans la physique classique."
-  },
-  {
-    "objectID": "publications/fondements.html#introduction-de-la-quantification-dans-les-indices",
-    "href": "publications/fondements.html#introduction-de-la-quantification-dans-les-indices",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.10 Introduction de la quantification dans les indices :",
-    "text": "2.10 Introduction de la quantification dans les indices :\nRevenins a la formule classique de l’action : \\oint p \\, dq = nh.\np est une impulsion (p = m \\dot{q}) et q une position. En remplacant x et v par leurs valeurs mais en ajoutant les indices on finit par obtenir la phrase suivante :\nh = 4\\pi m \\Sigma_{0}^{+\\infty}\\alpha{|a(n,n+\\alpha)|^2\\omega(n,n+\\alpha)}-{|a(n,n-\\alpha)|^2\\omega(n,n-\\alpha)^2} |\nEnfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le “saut”.\nCette formule constitue un moment clé.\nNotez qu’une somme infinie tende vers une constante."
-  },
-  {
-    "objectID": "publications/fondements.html#loscillateur-anharmonique-en-physique-classique",
-    "href": "publications/fondements.html#loscillateur-anharmonique-en-physique-classique",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.12 L’oscillateur anharmonique en physique classique :",
-    "text": "2.12 L’oscillateur anharmonique en physique classique :\nCe paragraphe est important car il prouve la validité de la méthode de Heisenberg. Elle a des similitude avec la méthode utilisée jusqu’à présent. Tout d’abord Heisenberg par de la physique classique\nVoic la définition :\nx=\\lambda a_{0}+a_{1}coswt +\\lambda a_{2}cos2wt + \\lambda^2a_{3}cos3wt + ...+ \\lambda^{\\tau-1}a_{r}cos\\tau\\omega t\non a les relations de récurrence :\n\\omega_0^2 (\\lambda a_0) + \\lambda \\langle x^2 \\rangle = 0\nIci encore Heisenberg s’intéresse aux amplitudes : on laisse tomber x et on exprimer l’amplitude en fonction de n et de la fréquence. Ces amplitudes constituent des transitions d’états.\nSans rentrer dans les details on tombe sur :\na^2(n,n-1)=\\frac{(n+const)h}{\\pi\\omega_{0}}\net de fil en aiguille Heisenberg finie par aboutir à la formule de l’oscillateur :\nW=(n+\\frac{1}{2})hw_{0}/2\\pi)\nDans le document de 1925 la partie sur l’oscillateur harmonique et de loin la plus obscure à première lecture et pourtant le résultat est juste."
-  },
-  {
-    "objectID": "publications/fondements.html#conclusion",
-    "href": "publications/fondements.html#conclusion",
-    "title": "Introduction à la théorie quantique",
-    "section": "2.13 Conclusion :",
-    "text": "2.13 Conclusion :\nOn dit souvent que Heisenberg abouti aux résultats de la mécanique ondulatoire mais en “évitant l’onde”. De plus le document de 1925 présente une très grande cohérence d’approche dans sa structure puisque qu’il applique pour l’oscillateur anharmonique exactement la même méthode qu’avant dans le document.\nL’image ci-dessous présente les participants au congres de Solvay de 1927. En deux ans la nouvelle physique était née.\n\n\n\nCinquième Congrès Solvay de physique, 1927. Source : Wikipedia"
   }
 ]
