@@ -20,15 +20,13 @@ format:
 
 **Version :** 1.0.1 (Dernière mise à jour : 16 décembre 2025)
 
-**Informations Légales et de Version :**
+**Informations légales et de version :**
 
 *Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux.*
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
 
 Ce n'est pas non plus un doublons d'un cours de physique comme on donne aux étudiants en physique. En effet la vocation n'est pas la même.
-
-
 
 *Licence :*
 
@@ -46,31 +44,31 @@ Adapter — remixer, transformer et créer à partir du matériel pour toute uti
 
 Ce document est l'aboutissement d'une démarche construite sur trois piliers distincts, reliant l'histoire de l'enseignement à l'innovation architecturale :
 
-1.  **Évolution de l'Enseignement Quantique : La Seconde Révolution**
+1.  **Évolution de l'enseignement quantique : La seconde révolution**
 
-    -   **Ancienne Vocation (Il y a 40 ans) :** Acquérir une compétence pratique dans le domaine des semi-conducteurs.
+    -   **Ancienne vocation (Il y a 40 ans) :** acquérir une compétence pratique dans le domaine des semi-conducteurs.
 
-    -   **Vocation Actuelle :** Sensibiliser le futur ingénieur aux enjeux industriels de la **Seconde Révolution Quantique**, qui, portée par la vérification expérimentale de l'intrication, a ouvert la porte à l'informatique quantique.
+    -   **Vocation actuelle :** sensibiliser le futur ingénieur aux enjeux industriels de la **seconde révolution quantique**, qui, portée par la vérification expérimentale de l'intrication, a ouvert la porte à l'informatique quantique.
 
-2.  **Valorisation Pédagogique : L'Approche par la Mécanique Matricielle**
+2.  **Valorisation pédagogique : l'approche par la mécanique matricielle**
 
-    -   **Source :** L'ouvrage "Calcul matriciel. Application à la physique quantique" \[\@alma991002711779705804\] (1960).
+    -   **Source :** l'ouvrage "Calcul matriciel. application à la physique quantique" [@alma991002711779705804] (1960).
 
     -   **Intérêt :** Proposer une approche progressive et ambitieuse du formalisme de l'algèbre linéaire, jugée particulièrement aidante pour l'appropriation par les non-mathématiciens.
 
-3.  **Analogie Architecturale : Nouveaux Formalismes pour la Décentralisation**
+3.  **Analogie architecturale : nouveaux formalismes pour la décentralisation**
 
     -   **Problématique :** La représentation et la modélisation des architectures décentralisées de la technologie Blockchain nécessitent de nouveaux formalismes.
 
-    -   **Hypothèse de Synergie :** Une recherche par analogie dans d'autres domaines, notamment la quantique, peut enrichir la conception de la Blockchain, créant un bénéfice structurel et conceptuel réciproque.
+    -   **Hypothèse de synergie :** Une recherche par analogie dans d'autres domaines, notamment la quantique, peut enrichir la conception de la blockchain, créant un bénéfice structurel et conceptuel réciproque.
 
 # Introduction historique à "Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen"
 
-### Avertissement :
+## Avertissement :
 
-Le document de 1925 n'est pas simple du tout à lire. Il donne l'impression d'un "brouillon de fin de nuit blanche" il constitue pourtant un document charnière.  
+Le document de 1925 n'est pas simple du tout à lire. Il donne l'impression d'un "brouillon de fin de nuit blanche" il constitue pourtant un document charnière.
 
-### Le document de rupture de 1925 :
+## Le document de rupture de 1925 :
 
 On situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l'équation de Schrödinger, ou bien le papier de Heisenberg de 1925 :"Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen" [@Heisenberg1925] qui pose un nouveau formalisme.
 
@@ -78,19 +76,15 @@ On situe quelquefois la naissance de la quantique par la découverte de la const
 
 Nous allons rentrer dans le document afin d'introduire des themes nouveaux.
 
-Pour comprendre le point de depart de la demarche d'heisenberg il s'agit de partir de la physique classique et de considerer la physique quantique comme une extension de la physique classique. En effet $n$ etant le niveau d'energie de l'atome, pour $n$ tres grand la difference entre 2 niveau est petite ce qui donne l'illusion du continue, Cette jonction entre les deux etait deaj utilisee par Bohr et s'appelait regle de correspondance. Mais l'ambition d'heisenberg va plus loin car il s'agit d'etendre le formalisme algebrique classique au quantique, au prix d'une adaptation. Ainsi bizaarement au liue de partir des formaules quantiques Heisenberg part des formules classiques.
+Pour comprendre le point de départ de la démarche d’Heisenberg il s'agit de partir de la physique classique et de considérer la physique quantique comme une extension de la physique classique. En effet $n$ étant le niveau énergie de l'atome, pour $n$ très grand la différence entre 2 niveau est petite ce qui donne l'illusion du continue, Cette jonction entre les deux était déjà utilisée par Bohr et s'appelait regle de correspondance. Mais l'ambition d'heisenberg va plus loin car il s'agit d'entendre le formalisme algébrique classique au quantique, au prix d'une adaptation. Ainsi bizarrement au lieu de partir des formules quantiques Heisenberg part des formules classiques.
 
-### La physique classique :
+## La physique classique :
 
-Nous partions du modele de Bohr.
-
- 
+Nous partions du modèle de Bohr.
 
 $\nu(n,n-\alpha)=\frac{1}{h}[W(n)-W(n-\alpha)]$
 
 Cette formule est la règle de fréquence de Bohr (1913). Elle stipule que l'énergie d'un photon émis est la différence entre l'énergie de l'état initial et l'énergie de l'état final.
-
- 
 
 $\nu(n,\alpha)=\alpha.\nu(n)=\alpha.\frac{1}{h}\frac{dW}{dn}$
 
@@ -106,144 +100,131 @@ On remarque que dans cette formule dn est petit car nous sommes dans les grands 
 
 **Comparaison des phases :**
 
- 
-
 $\nu(n,\alpha)+\nu(n,\beta)=\nu(n,\alpha+\beta)$
-
- 
 
 $\nu(n,n − \alpha) + \nu(n − \alpha,n − \alpha − \beta) = \nu(n,n − \alpha − \beta)$
 
-Ici Heisenberg remrque que la lineairite (additivite des frequences) de la formule classique s'applique moyennant adaptation à la quantique.
+Ici Heisenberg remarque que la linéarité (additivité des fréquences) de la formule classique s'applique moyennant adaptation à la quantique.
 
-### la non commutation des matrices :
+## la non commutation des matrices :
 
 Puis est aborde le sujet de la non commutation :
 
- 
+Heisenberg faut remarquer que le produit x(t).y(t) n'est pas forcement commutatif. Toutefois il ne va pas plus loin et il posera la non commutativité et le principe d'incertitude quelques mois plus tard avec l'aide de Born et Jordan.
 
-Heisenberg faut remarquer que le produit x(t).y(t) n'est pas forcement commutatif. Toutefois ilne va pas plus loin et il posera la non commutativite et le principe d'incettitude quelques mois plus tard aide de Born et Jordan.
-
- 
-
-### Relation fondametale en physique classique
+## Relation fondametale en physique classique
 
 C'est ici que l'on rentre dans la transition proprement dite.
 
-1.
+1.  
 
 $x¨ + f(x) = 0$
 
 Ici Heisenberg exprime la seconde loi de newton connue sous la forme : $\Sigma F=m.\ddot{x}$ F etant une force.
 
-Si Heisenberg pose cette formule connu, ce n'est pas pour le plaisir de faire de la physique classique mais car il pense que l'on peut partir de cette formule et en trouver une extention quantique. Il cherche une algebre. Ainsi il dit que l'on cherche à construire en theorie quantiue un formalisme qui corresponde le plus etroitement possible à celui de la mecanique classique.
+Si Heisenberg pose cette formule connu, ce n'est pas pour le plaisir de faire de la physique classique mais car il pense que l'on peut partir de cette formule et en trouver une extension quantique. Il cherche une algèbre. Ainsi il dit que l'on cherche à construire en théorie quantique un formalisme qui corresponde le plus étroitement possible à celui de la mécanique classique.
 
-### Definition de l'action pour Bohr :
+## Definition de l'action pour Bohr :
 
-2. 
+2.  
 
-Heisenberg s’intéresse a la notion d'action, prise comme l'impact et qui peut s'exprimer comme une énergie que multiplie une durée, ou comme une vitesse que multiplie une distance. $h$ signifie déjà le quantum d'action.
+Heisenberg s’intéresse à la notion d'action, prise comme l'impact et qui peut s'exprimer comme une énergie que multiplie une durée, ou comme une vitesse que multiplie une distance. $h$ signifie déjà le quantum d'action.
 
- $\oint pdq=\oint m\dot{x}dx=J(=nh)$
+$\oint pdq=\oint m\dot{x}dx=J(=nh)$
 
-Toutefois ici il faut se placer dans la physique de époque et J représente l'action et elle est un multiple de n. Cela signifie que plus le niveau énergie est élevé plus l'action pour l'atteindre est importante. L'action peut être le produite de énergie par la durée ou du déplacement par la vitesse. Cette formulation de l'action av etre profondemment remise en cause par Heisenberg.
+Toutefois ici il faut se placer dans la physique de époque et J représente l'action et elle est un multiple de n. Cela signifie que plus le niveau énergie est élevé plus l'action pour l'atteindre est importante. L'action peut être le produite de énergie par la durée ou du déplacement par la vitesse. Cette formulation de l'action à être profondément remise en cause par Heisenberg.
 
-### Introduction du parametre position :
+## Introduction du parametre position :
 
 -   tout d'abord, nous cherchons a exprimer la position x d'une particule. En supposant la fonction périodique nous allons la décomposer en série de fourier,
 
- $x=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)e^{i\alpha\omega_{n}t}$ dann ist
+$x=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)e^{i\alpha\omega_{n}t}$ dann ist
 
-Attention ici il s'agit d'une expression en physique classique. Mais nous allons voir que Heisenberg va "abandonner" $x$ car considere comme non obervable. Toutefois nous restons encore dans le cadre la la mecanique classique. Un nouvement periodique peut etre un oscillateur harmonique mais surtout la trajectoire d'un electron sur son orbite imaginee dans le modele de Bohr. On dirait que Heisenberg presuppose que le mouvement quantique est periodique. **En realite il exige que si un mouvement quantique existe alors il permet un mouvement classique periodique**. Dans le modele de Bohr le mouvement classique etait considere comme un cas particulier du mouvement quantique (celui ou $n$ est tres grand). C'est pour cette raison (qu'on appelle principe de correspondance) que l'on peut prendre le mouvement periodique classique comme point de depart du raisonnement. Plus tard on se detachera de la vision continue de x(t) de la physique classique.
+Attention ici il s'agit d'une expression en physique classique. Mais nous allons voir que Heisenberg va "abandonner" $x$ car considere comme non observable. Toutefois nous restons encore dans le cadre la la mécanique classique. Un mouvement périodique peut être un oscillateur harmonique mais surtout la trajectoire d'un electron sur son orbite imaginée dans le modele de Bohr. On dirait que Heisenberg presuppose que le mouvement quantique est périodique. **En realite il exige que si un mouvement quantique existe alors il permet un mouvement classique périodique**. Dans le modèle de Bohr le mouvement classique était considéré comme un cas particulier du mouvement quantique (celui ou $n$ est très grand). C'est pour cette raison (qu'on appelle principe de correspondance) que l'on peut prendre le mouvement périodique classique comme point de départ du raisonnement. Plus tard on se détachera de la vision continue de x(t) de la physique classique.
 
-### Mise en evidence de l'energie
+## Mise en evidence de l'energie
 
 Il suffit de la dériver pour prendre l'expression de v.
 
- $m\dot{x}=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)i\alpha\omega_{n}e^{i\alpha\omega_{n}t}$ und
+$m\dot{x}=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)i\alpha\omega_{n}e^{i\alpha\omega_{n}t}$
 
-En basculant de dq en dt on introduit un carre. L'énergie cinétique est une vitesse au carrée. **Le carre introduit qu'il s'agit d'une énergie.** On remarque que ici on raisonne toujours en physique classique. Toutefois on se positionne a raisonner en terme d'energie, or une transtion entre un etat n et un etat n+1 et bien quelaue chose qui coute une certaine energie. On voit l'intuition d'Heisenberg. Le terme a\_${\alpha}(n) \cdot a_{-\alpha}(n)$ prefigure $\left|a_{\alpha}(n)\right|^2$. heisenberg s'interesse beaucoup aux amplitudes et a leurs significations physiques.
+En basculant de dq en dt on introduit un carre. L'énergie cinétique est une vitesse au carrée. **Le carre introduit qu'il s'agit d'une énergie.** On remarque que ici on raisonne toujours en physique classique. Toutefois on se positionne a raisonner en terme d'énergie, or une transition entre un état n et un état n+1 et bien quelque chose qui coûte une certaine énergie. On voit l'intuition d'Heisenberg. Le terme a\_${\alpha}(n) \cdot a_{-\alpha}(n)$ préfigure $\left|a_{\alpha}(n)\right|^2$. Heisenberg s’intéresse beaucoup aux amplitudes et a leurs significations physiques.
 
- $\oint m\dot{x}dx=\oint m\dot{x}^2dt=2\pi m\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)a_{-\alpha}(n)\alpha^2\omega_{n}$
+$\oint m\dot{x}dx=\oint m\dot{x}^2dt=2\pi m\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)a_{-\alpha}(n)\alpha^2\omega_{n}$
 
-### Limite classique dans la formulation de l'action :
+## Limite classique dans la formulation de l'action :
 
 On obtient ainsi le terme suivant :
 
- $\oint mx^2dt=2\pi \Sigma_{+\infty}^{-\infty} |a_{\alpha}(n)|^2\alpha^2\omega_{n}$
-
+$\oint mx^2dt=2\pi \Sigma_{+\infty}^{-\infty} |a_{\alpha}(n)|^2\alpha^2\omega_{n}$
 
 Ici Heisenberg explique que cette formulation ne le satisfait pas. Il en préfère une autre :
 
- $\frac{d}{dn}(nh)=\frac{d}{dn}\oint m\dot{x}dt$ das heist
+$\frac{d}{dn}(nh)=\frac{d}{dn}\oint m\dot{x}dt$ das heist
 
-Pour expliquer la formule ci-dessus, on a vu que pour Bohr l'action etait un multiple de h. Parce que on a utilise la serie de fourier pour x on a abouti au memebre de droite. 
+Pour expliquer la formule ci-dessus, on a vu que pour Bohr l'action etait un multiple de h. Parce que on a utilise la serie de fourier pour x on a abouti au memebre de droite.
 
 Pour n grand dn est tres petit et donc la derivve de nh par rapport a n vaut h d ou la formule suivante :
- 
 
 > $h=2\pi m \Sigma_{+\infty}^{-\infty} \alpha \frac{d}{dn} a\alpha \omega_{n} |a_{\alpha}|^2$
 
 On peut remrquer que jusqu'ici on est toujours dans la physique classique.
 
-### Introduction de la quantification dans les indices :
- 
+## Introduction de la quantification dans les indices :
+
 Revenins a la formule classique de l'action : $\oint p \, dq = nh$.
 
-p est une impulsion ($p = m \dot{q}$) et q une position. En remplacant x et v par leurs valeurs mais en ajoutant les indices on finit par obtenir la phrase suivante : 
+p est une impulsion ($p = m \dot{q}$) et q une position. En remplacant x et v par leurs valeurs mais en ajoutant les indices on finit par obtenir la phrase suivante :
 
 $h = 4\pi m \Sigma_{0}^{+\infty}\alpha{|a(n,n+\alpha)|^2\omega(n,n+\alpha)}-{|a(n,n-\alpha)|^2\omega(n,n-\alpha)^2}$ \|
 
-Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le "saut".  
+Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le "saut".
 
-**Cette formule constitue un moment cle**.
+**Cette formule constitue un moment clé**.
 
-Notez qu'une somme infinie tende vers une constante. 
-
-
+Notez qu'une somme infinie tende vers une constante.
 
 ## Consequence sur le concept de position :
 
-Cet article de Heisenberg de 1925 est tres abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l'interpretation :
+Cet article de Heisenberg de 1925 est tres abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l’interprétation :
 
--   le point de départ est la physique classique et la formulation de x(t) sous la forme d'une serie fourrier. Il s'agit de voir la quantique comme une extension de la physique classique (et pas l'inverse comme on le fait souvent).
+-   le point de départ est la physique classique et la formulation de x(t) sous la forme d'une série de fourrier. Il s'agit de voir la quantique comme une extension de la physique classique (et pas l'inverse comme on le fait souvent).
 
--   on abandonne la possibilite de la position. Il s'agit quasiment d'un choix arbitraire.
+-   on abandonne la possibilité de la position. Il s'agit quasiment d'un choix arbitraire.
 
--   en troisieme lieu la position resisssite sous forme de la matrice position X. Toutefois prendre un stylo et une feuille de papier, dessiner une matrice avec un X dedans ne suffit pas a faire une matrice position. Les composantes de la machine expreiment des transitions d'etats (on remplace un espace des positions par un espace des transitions). C'est bien la position de X dans la relation de la non commutation ($X.Y\neq Y.X$) qui fait les proprietes de la matrice X.
+-   en troisième lieu la position ressuscite sous forme de la matrice position X. Toutefois prendre un stylo et une feuille de papier, dessiner une matrice avec un X dedans ne suffit pas a faire une matrice position. Les composantes de la machine expriment des transitions d’états (on remplace un espace des positions par un espace des transitions). C'est bien la position de X dans la relation de la non commutation ($X.Y\neq Y.X$) qui fait les propriétés de la matrice X.
 
-On voit comment la spacialite eclate completement au profit des composantes de la matrices qui expriment des potentialites.
+On voit comment la spacialité éclate complètement au profit des composantes de la matrices qui expriment des potentialités.
 
-### L'oscillateur anharmonique en physique classique :
+## L'oscillateur anharmonique en physique classique :
 
-Ce paragrphe est importnt car il prouve la validite de la methode de Heisenberg. Elle a des similitude avec la methode utilisee jusqu'a present. Tout d'baord Heisenberg par de la physique classique
+Ce paragraphe est important car il prouve la validité de la méthode de Heisenberg. Elle a des similitude avec la méthode utilisée jusqu’à présent. Tout d’abord Heisenberg par de la physique classique
 
-Voic la definition :
+Voic la définition :
 
 $x=\lambda a_{0}+a_{1}coswt +\lambda a_{2}cos2wt + \lambda^2a_{3}cos3wt + ...+ \lambda^{\tau-1}a_{r}cos\tau\omega t$
 
-on a les relations de recurrence :
+on a les relations de récurrence :
 
 $\omega_0^2 (\lambda a_0) + \lambda \langle x^2 \rangle = 0$
 
-Ici ensore Heisenberg s'interesse aux amplitudes : on laisse tomber x et on exprimer l'amplitude en fonction de n et de la frequence. Ces amplitudes constituent des transitions d'etats. 
+Ici encore Heisenberg s’intéresse aux amplitudes : on laisse tomber x et on exprimer l'amplitude en fonction de n et de la fréquence. Ces amplitudes constituent des transitions d’états.
 
-Sans rentrer dans les detilas on tombe sur :
+Sans rentrer dans les details on tombe sur :
 
 $a^2(n,n-1)=\frac{(n+const)h}{\pi\omega_{0}}$
 
-et  de fil en aiguille Heiserberg finie ar aboutir à la formule de l'oscillateur : 
+et de fil en aiguille Heisenberg finie par aboutir à la formule de l'oscillateur :
 
 $W=(n+\frac{1}{2})hw_{0}/2\pi)$
 
-Dans le document de 1925 la partie sur l'oscillateur harmonique et de loin la plus obscure à première lecture et pourtant le resultat est juste.
+Dans le document de 1925 la partie sur l'oscillateur harmonique et de loin la plus obscure à première lecture et pourtant le résultat est juste.
 
-### Conclusion :
+## Conclusion :
 
-On dit souvent que Heisenberg abouti aux résultats de la mecamique ondulatoire mais en "évitant l'onde".  De plus le document de 1925 présente une très grande cohérence d'approche dans sa structure puisque au'il applique pour l'oscillateur anharmonique exactement la meme méthode qu'avant dans le document. 
+On dit souvent que Heisenberg abouti aux résultats de la mécanique ondulatoire mais en "évitant l'onde". De plus le document de 1925 présente une très grande cohérence d'approche dans sa structure puisque qu’il applique pour l'oscillateur anharmonique exactement la même méthode qu'avant dans le document.
 
-L'image ci-dessous presente les participants au congres de Solvay de 1927. En deux ans la nouvelle physique était nee.
-
+L'image ci-dessous présente les participants au congres de Solvay de 1927. En deux ans la nouvelle physique était née.
 
 ![Cinquième Congrès Solvay de physique, 1927. Source : Wikipedia](Solvay_conference_1927.jpg){fig-align="center" width="500"}
 
@@ -450,19 +431,51 @@ L'onde considérée en quantique est une onde de probabilité : elle diffère do
 
 *Nous reviendrons plus tard dans le cours sur l'approche statistique de la physique quantique.*
 
-# Structure mathematique de la physique quantique :
+# Fondements Mathématiques
 
-### Definition mathematique de l'espace vectoriel
+L'informatique quantique repose sur le formalisme des espaces de Hilbert. Voici les définitions fondamentales adaptées de @Wiggins2024.
 
-> A vector space denoted v over a field $\mathcal{F}$ is a set of elements (the elements are called vectors) on which two operators are defined : - vector addition : for any $\psi, \phi \in V$, then $\psi+\phi \in V$. - scalar multiplication : for any $\alpha \in \mathcal{F}, \phi \in V$, then $\alpha \psi \in V$ $\mathcal{F}$ will be the complex number.[@Wiggins2024]
+::: {.callout-note}
 
-### defintion mathematique : Hilbert space
+## Définition : Espace Vectoriel
 
-> A vector space V with an inner product that is "complete" (i.e. every cauchy sequence converges strongly to a vector in V) is called a hilbert space. [@Wiggins2024]
+Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ensemble des nombres complexes $\mathbb{C}$, est un ensemble d'éléments (appelés vecteurs) sur lequel deux opérations sont définies :
 
-### definition mathematique : State vector
+1.  **Addition vectorielle** : $\forall |\psi \rangle |\phi\rangle \in \mathcal{V} \implies |\psi\rangle + |\phi\rangle \in \mathcal{V}$
 
-> The state space of a quantum mechanical system is a (complex) hilbert space. A state vector of a quantum mechanical system is a vector in the state space having unit magnitude. [@Wiggins2024]
+2.  Multiplication par un scalaire : $\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}$
+
+
+::: {.callout-note}
+
+## Définition : Espace de Hilbert
+
+Un espace de Hilbert est un espace vectoriel $\mathcal{V}$ muni d'un produit scalaire et qui est complet (c'est-à-dire que toute suite de Cauchy converge fortement vers un vecteur appartenant à $\mathcal{V}$).
+
+:::
+
+::: callout-important
+
+
+## Définition : Vecteur d'état (State Vector)
+
+L'espace des états d'un système de mécanique quantique est un espace de Hilbert complexe.
+
+Un vecteur d'état est un vecteur de cet espace ayant une norme unitaire :
+
+$\langle \psi | \psi \rangle = 1$
+
+:::
+
+### Discussion sur la notation
+
+Dans ce projet, nous utilisons la notation de Dirac :
+
+-   $|\psi\rangle$ représente le vecteur d'état (Ket).
+
+-   $\langle \psi|$ représente son adjoint (Bra).
+
+-   Le produit scalaire est noté $\langle \phi | \psi \rangle$.
 
 ## Produit scalaire de deux vecteurs :
 
@@ -502,13 +515,13 @@ La norme d’un vecteur est une quantité qui caractérise sa longueur ou sa tai
 
 $$\boxed{|\vec{v}| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}}$$
 
-Voici une definition plus mathematique de la norme :
+Voici une définition plus mathématique de la norme :
 
 > For any vector $\Phi \in V$, we define the norm of $\Phi$, denoted $\lVert \Phi \rVert$, as follow : $\lVert \Phi \rVert=\sqrt{(\Phi,\Phi)}$ [@Wiggins2024]
 
 ## Equation aux valeurs propres :
 
-Nous llons commencer par une definition selon [@Wiggins2024] page 12
+Nous allons commencer par une définition selon [@Wiggins2024] page 12
 
 Eigenvector, eignevalue $\Psi$ is an eignevector of an operator A with eignevalue $\lambda$ if : $A\Psi=\lambda\Psi, \lambda \in \mathbf{C}$
 
@@ -1512,7 +1525,9 @@ $$\langle \phi_i | \phi_j \rangle = 0 \quad \text{si } i \neq j$$
 
 et de normalisation (si les vecteurs sont normés à l'unité) :
 
-$$\langle \phi_i | \phi_i \rangle = 1$$ \### Normalisation de l'État et Probabilités
+$$\langle \phi_i | \phi_i \rangle = 1$$ 
+
+### Normalisation de l'État et Probabilités
 
 Le produit hermitien $\langle \phi | \phi \rangle$ donne la norme au carré de l'état $|\phi\rangle$. En utilisant la décomposition et les conditions d'orthonormalité :
 
@@ -1536,13 +1551,13 @@ $|c_1|^2$ est la probabilité que le système saute dans l’état $|\phi_1\rang
 
 $|c_n|^2$ est la probabilité que le système saute dans l’état $|\phi_n\rangle$ et que l'on trouve la valeur $a_n$.
 
-### L'Interprétation de la Mesure et l'Espérance Mathématique
+### L'Interprétation de la mesure et l'espérance mathématique
 
 En présence d'un état de superposition, deux conceptions sont possibles :
 
-Conception de la présence simultanée de divers états selon des taux définis (souvent associée à l'Interprétation des Mondes Multiples, non majoritaire).
+Conception de la présence simultanée de divers états selon des taux définis (souvent associée à l'interprétation des mondes multiples, non majoritaire).
 
-Conception de la réduction ou passage du système de l'état $|\phi\rangle$ à l'un ou l'autre des états propres de $\hat{A}$ (Interprétation de Copenhague).
+Conception de la réduction ou passage du système de l'état $|\phi\rangle$ à l'un ou l'autre des états propres de $\hat{A}$ (interprétation de Copenhague).
 
 Nous adoptons la seconde interprétation, celle de Copenhague.
 
@@ -1672,7 +1687,6 @@ Ainsi Niels Bohr [@BOHR1928] dit, en citant Heisenberg :
 
 Cette approche accorde de importance à l’expérience. Pour Heisenberg si l’expérience montre une impossibilité a déterminer avec précision une position alors il faut l'admettre comme fondement et faire avec.
 
-
 Conclusion : ce paragraphe introductif pour but de vous faire vous poser des questions à partir constations simples de la vie courante. Attention à la limite de l'exemple de la chaise : *il s'agit d'une analogie macroscopique pour illustrer un phénomène microscopique.*
 
 ## Principe d'incertitude des radioelectriciens :
@@ -1759,7 +1773,7 @@ En isolant l'opérateur, nous obtenons la relation de commutation purement math�
 
 $\left[\frac{d}{dx}, x\right] = \frac{d}{dx} x - x \frac{d}{dx} = 1$
 
-Le Lien Quantique
+Le Lien Quantique :
 
 Cette relation mathématique devient physique en mécanique quantique grâce au Postulat de Quantification, qui définit l'opérateur d'impulsion ($\hat{p}$) :
 
@@ -1822,7 +1836,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 
 ## Premier principe d'incertitude d'Heisenberg (position-impulsion) :
 
-La relation suivante limite les precisions avec lesquelles on peut mesurer la position et l'impulsion :
+La relation suivante limite les précisions avec lesquelles on peut mesurer la position et l'impulsion :
 
 $$\boxed{\Delta x \times \Delta p \geq \frac{\hbar}{2\pi}}$$ C'est le premier principe d'incertitude d'Heisenberg.
 
@@ -1836,11 +1850,11 @@ $\hbar$ est le symbole utilisé en physique pour représenter la constante de Pl
 
 Attention à la portée de ce principe : il ne s'agit pas d'une contrainte expérimentale liée par exemple aux instruments du laboratoire mais de plus que cela. Nous pouvons le considérer comme un fondement théorique.*C'est independant des instruments utilisés.*
 
-## Principe d'incertitude temps energie :
+## Principe d'incertitude temps-energie :
 
 On l'appelle aussi second principe d'incertitude d'Heisenberg.
 
-Ce n'est pas la traduction du premier principe en d'autres termes mais quelaue chose de different.
+Ce n'est pas la traduction du premier principe en d'autres termes mais quelque chose de différent.
 
 On a parlé du principe d'incertitude des radioelectriciens : $$\Delta t \times \Delta f \approx 1$$
 
@@ -2186,9 +2200,9 @@ $$\Psi(\vec{r},t)=\sum_k c_{k}\Psi_{k}(\vec{r}, t) = \sum_k c_{k}e^\frac{-iE_{k}
 
 C'est donc bien la solution générale de l'ESDT, mais elle est construite en utilisant les solutions $\phi_k$ et $E_k$ de l'ESIT.
 
-# Application : États Propres de l'Opérateur d'Énergie pour le Puits de Potentiel Infini
+# Application : états Propres de l'opérateur d'énergie pour le puits de potentiel infini : 
 
-## Le Concept d'État Stationnaire
+## Le concept d'état stationnaire :
 
 L'état stationnaire est un concept fondamental en mécanique quantique, décrit par Niels Bohr de la manière suivante :
 
@@ -2196,7 +2210,7 @@ L'état stationnaire est un concept fondamental en mécanique quantique, décrit
 
 Cette interprétation souligne la nature isolée et non perturbée de ces états. Un système ne peut posséder une énergie $E$ mesurable avec certitude que s'il est dans un état propre de l'opérateur énergie (Hamiltonien $\hat{H}$), appelé état stationnaire.
 
-## Les Équations aux Valeurs Propres
+## Les équations aux valeurs propres :
 
 Les fonctions propres de l’opérateur énergie, $\Psi(\vec{r}, t)$, sont définies à partir de l'Équation de Schrödinger Dépendante du Temps (ESDT), qui dans le cas d'un état d'énergie $E$ bien définie, s'écrit :
 
@@ -2214,15 +2228,15 @@ $$\hat{H}\phi(\vec{r})=E\phi(\vec{r})$$
 
 Cette équation est l'Équation de Schrödinger Indépendante du Temps (ESIT). Elle est interprétée comme une équation aux valeurs propres où les valeurs $E$ pour lesquelles elle admet une solution physiquement acceptable (de carré sommable) sont les niveaux d'énergie possibles.
 
-## Constantes du Mouvement
+## Constantes du mouvement :
 
 Certains opérateurs $\hat{B}$ privilégiés commutent avec l'Hamiltonien ($\hat{B}\hat{H} - \hat{H}\hat{B} = 0$). Dans ce cas, la grandeur physique associée à $\hat{B}$ est exactement mesurable en même temps que l’énergie, quel que soit l'état stationnaire. Les grandeurs qui jouissent de cette propriété sont appelées constantes du mouvement.
 
-## Cas du Puits de Potentiel Infini à Une Dimension
+## Cas du puits de potentiel infini à une dimension :
 
 Nous étudions une particule mobile dans une direction $x$ soumise à aucune force à l'intérieur d'un domaine de longueur $L$ (entre $x=0$ et $x=L$). Le potentiel $V$ est nul à l'intérieur et infini aux limites ($V(x) = \infty$ si $x<0$ ou $x>L$).
 
-## L'Hamiltonien et l'Équation
+## L'hamiltonien et l'équation :
 
 Puisque $V(x)=0$ à l'intérieur du puits, l'opérateur Hamiltonien se simplifie :
 
@@ -2232,7 +2246,7 @@ L'ESIT devient une équation différentielle simple :
 
 $$-\frac{\hbar^2}{2m}\frac{d^2\phi(x)}{dx^2} = E\phi(x)$$
 
-## Conditions aux Limites
+## Conditions aux limites :
 
 Le potentiel infini aux parois se traduit par l'annulation de la fonction d'onde aux frontières :
 
@@ -2242,7 +2256,7 @@ Pour $x=L$ : $\phi(L) = 0$
 
 La solution générale de l'équation différentielle est de la forme $\phi(x) = A\cos(kx) + B\sin(kx)$, avec $k = \frac{\sqrt{2mE}}{\hbar}$.
 
-## Quantisation des Énergies
+## Quantisation des énergies :
 
 Condition $x=0$ : $\phi(0) = A\cos(0) + B\sin(0) = A$. Pour que $\phi(0)=0$, on doit avoir $A=0$. La solution est donc réduite à $\phi(x) = B\sin(kx)$.
 
@@ -2258,7 +2272,7 @@ En substituant $k = \frac{n\pi}{L}$ dans la formule de l'énergie ($E = \frac{\h
 
 $$E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} = \frac{n^2h^2}{8mL^2}$$
 
-## Les Fonctions Propres (États Stationnaires)
+## Les fonctions propres (états stationnaires)
 
 Les fonctions propres de l'Hamiltonien sont donc :
 
@@ -2272,13 +2286,13 @@ Note : Pour les états stationnaires, la densité de probabilité $|\Psi_n(x,t)|
 
 # Intrication quantique :
 
-## Systèmes Composés et Influence Locale
+## Systèmes composés et influence locale :
 
 La notion de système composé suppose que l'on peut séparer le système complet en deux sous-systèmes, sur lesquels il est possible de faire des mesures sans que les appareils puissent mutuellement s'influencer [@Degiovanni2020-yq, p. 168].
 
 C'est cette condition d'indépendance physique et spatiale qui fut cruciale dans les expériences d'Alain Aspect à l'Université d'Orsay sur les paires de photons intriqués : il veilla à ce que les mesures effectuées sur un photon ne puissent pas influencer celles effectuées sur l'autre.
 
-## Espaces de Hilbert et Produit Tensoriel
+## Espaces de hilbert et produit tensoriel :
 
 Pour décrire un système quantique composé de deux sous-systèmes $A$ et $B$, on utilise le produit tensoriel de leurs espaces de Hilbert respectifs.
 
@@ -2286,7 +2300,7 @@ Produit Tensoriel : Soient $\mathcal{H}_{A}$ et $\mathcal{H}_{B}$ des espaces ve
 
 Base Orthonormale pour l'Espace Produit Tensoriel : Soit $\left\{|a_{i}\rangle\right\}, i=1,\dots,N_{A}$ une base orthonormale dans $\mathcal{H}_{A}$ et $\left\{|b_{j}\rangle\right\}, j=1,\dots,N_{B}$ une base orthonormale dans $\mathcal{H}_{B}$. Alors l'ensemble des vecteurs $|a_{i}\rangle \otimes |b_{j}\rangle, i=1,\dots,N_{A}, j=1,\dots,N_{B}$ forme une base orthonormale dans $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$.
 
-## États Produit et États Intriqués
+## États produit et états intriqués :
 
 Un état quelconque $|\Psi\rangle$ de l'espace composé $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ peut être décomposé sur la base de produit tensoriel comme :
 
@@ -2304,7 +2318,7 @@ pour des états $|\phi_{A} \rangle \in \mathcal{H}_{A}$ et $|\phi_{B} \rangle \i
 
 Dans le cas général où plusieurs amplitudes $a_{ij}$ sont non nulles dans la décomposition ci-dessus, l’état est dit intriqué.
 
-## Opérateurs Linéaires sur les Espaces de Produit Tensoriel
+## Opérateurs linéaires sur les espaces de produit tensoriel :
 
 Soient $\hat{A} : \mathcal{H}_{A} \to \mathcal{H}_{A}$ et $\hat{B} : \mathcal{H}_{B} \to \mathcal{H}_{B}$ des opérateurs linéaires. On construit un opérateur linéaire sur $\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ en utilisant $\hat{A}$ et $\hat{B}$. Si $\hat{A}$ a les valeurs propres $\lambda_i$ et les vecteurs propres $|a_i\rangle$, et si $\hat{B}$ a les valeurs propres $\mu_j$ et les vecteurs propres $|b_j\rangle$, alors l'opérateur produit $\hat{A} \otimes \hat{B}$ a les valeurs propres $\lambda_{i}\mu_{j}$ et les vecteurs propres $|a_{i}\rangle|b_{j}\rangle$ [@Wiggins2024, p. 148].
 
@@ -2316,7 +2330,7 @@ ou les amplitudes a\_{ij} sont des nombres complexes.
 
 Dans le cas général où plusieurs amplitudes sont non nulles l’état est dit intriqué.
 
-## L'Expérience de Mesure sur un État Intriqué
+## L'expérience de mesure sur un état intriqué :
 
 Le processus de mesure sur un système intriqué illustre la non-localité quantique :
 
@@ -2349,7 +2363,7 @@ Ainsi selon Selon [@Degiovanni2020-yq] on a la figure suivante :
 
 -   Alice reçoit : En conséquence, le système d'Alice est instantanément projeté dans l'état relatif $|\psi(A|j)\rangle$.
 
-## Le Paradoxe Einstein-Podolsky-Rosen (EPR)
+## Le paradoxe Einstein-Podolsky-Rosen (EPR) :
 
 Le paradoxe EPR, publié en 1935, est l'un des plus célèbres défis à l'interprétation de la mécanique quantique.
 
