@@ -3,7 +3,7 @@ title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
 version: "1.0.1" 
-date_version: "16 décembre 2025"
+date_version: "19 décembre 2025"
 editor: visual
 format:
   html:
@@ -18,7 +18,7 @@ format:
 
 **Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-**Version :** 1.0.1 (Dernière mise à jour : 16 décembre 2025)
+**Version :** 1.0.1 (Dernière mise à jour : 19 décembre 2025)
 
 **Informations légales et de version :**
 
@@ -40,7 +40,7 @@ Adapter — remixer, transformer et créer à partir du matériel pour toute uti
 
 À condition de citer l'auteur original, Stéphane Caporali, et Caporali Conseil.
 
-# Démarche et Motivation Pédagogique
+# Démarche et motivation pédagogique
 
 Ce document est l'aboutissement d'une démarche construite sur trois piliers distincts, reliant l'histoire de l'enseignement à l'innovation architecturale :
 
@@ -62,15 +62,15 @@ Ce document est l'aboutissement d'une démarche construite sur trois piliers dis
 
     -   **Hypothèse de synergie :** Une recherche par analogie dans d'autres domaines, notamment la quantique, peut enrichir la conception de la blockchain, créant un bénéfice structurel et conceptuel réciproque.
 
-# Introduction historique à "Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen"
+# Introduction historique :
 
-## Avertissement :
 
-Le document de 1925 n'est pas simple du tout à lire. Il donne l'impression d'un "brouillon de fin de nuit blanche" il constitue pourtant un document charnière.
 
 ## Le document de rupture de 1925 :
 
 On situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l'équation de Schrödinger, ou bien le papier de Heisenberg de 1925 :"Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen" [@Heisenberg1925] qui pose un nouveau formalisme.
+
+*Avertissement : Le document de 1925 n'est pas simple du tout à lire. Il donne l'impression d'un "brouillon de fin de nuit blanche" il constitue pourtant un document charnière.*
 
 ![](Article_1925.png){fig-align="center" width="500"}
 
@@ -1445,7 +1445,7 @@ En classique : Si l'état est connu, la valeur de toute observable est détermin
 
 En quantique : Sauf si le système est dans un état propre de l'observable mesurée, la mesure est intrinsèquement probabiliste. Elle sélectionne un des états propres de l'opérateur $\hat{A}$ et force le système à y "sauter" (réduction du paquet d'ondes, Postulat V).
 
-## Mesure quantique : Interaction et Irréversibilité
+## Mesure quantique : interaction et irréversibilité
 
 Dans certaines sciences, comme l’électronique, effectuer une mesure d’un système influe sur ce dernier. Il est possible de dire que : « j’observe donc je perturbe. ». En effet, lorsque l’on effectue une mesure sur un circuit électronique, il faut prendre en compte le fait que l’appareil de mesure est également un élément du circuit. Il peut disposer de sa propre résistance par exemple. Ainsi, effectuer une mesure revient à interagir avec le système [@cluzel:hal-04052636].
 
@@ -1457,23 +1457,23 @@ Des lignes spectrales qui selon la théorie classique devraient provenir d'un m�
 
 En d'autres termes, là où la théorie classique permet une somme continue de possibilités (comme la décomposition continue d'une voix en fréquences), la théorie quantique force l'état à choisir un niveau parmi un ensemble discret et possible.
 
-Les Postulats de la Mesure (Règles de Born)
+**Les postulats de la mesure (Règles de Born) :**
 
 Les trois "règles" ou postulats fondamentaux de la mesure, formalisées par Max Born en 1926 dans son article Zur Quantenmechanik der Stoßvorgänge, sont essentiels pour relier le formalisme mathématique à l'expérience physique.
 
 Selon [@Wiggins2024] page 67, ces règles sont :
 
-1.  Description de l'État et de l'Observable
+1.  Description de l'état et de l'observable
 
 L'état d'un système physique est décrit par un ket normalisé $|\Psi \rangle$ dans un espace de Hilbert $\mathcal{H}$.
 
 Chaque grandeur physique mesurable (observable) d'un système est décrite par un opérateur auto-adjoint $\hat{A}$ agissant sur l'espace de Hilbert $\mathcal{H}$.
 
-2.  Résultat de la Mesure (Postulat sur les Valeurs)
+2.  Résultat de la mesure (postulat sur les valeurs)
 
 Le seul résultat possible de la mesure d'une observable physique $\hat{A}$ est une valeur propre de $\hat{A}$, notée $\lambda$.
 
-3.  Probabilité pour un Résultat Particulier (Règle de Born)
+3.  Probabilité pour un résultat particulier (règle de Born)
 
 Supposons que le système soit dans l'état $|\Psi \rangle$ et que l'observable $\hat{A}$ soit mesurée. La probabilité que la valeur propre $\lambda$ de $\hat{A}$ soit le résultat de la mesure est donnée par :
 
@@ -1481,7 +1481,7 @@ $$\boxed{Prob_{\Psi}(\lambda)\equiv\langle\Psi|\hat{P}_{\lambda}|\Psi\rangle=||\
 
 où $\hat{P}_{\lambda}$ est l'opérateur de projection orthogonal sur le sous-espace propre engendré par les vecteurs propres correspondant à la valeur propre $\lambda$.
 
-4.  État du Système après la Mesure (Postulat de Réduction)
+4.  État du système après la mesure (postulat de réduction)
 
 Si la mesure de $\hat{A}$ sur le système, initialement dans l'état $|\Psi\rangle$, donne le résultat $\lambda$, alors l'état du système immédiatement après la mesure est donné par le vecteur normalisé :
 
@@ -1489,7 +1489,7 @@ $$\boxed{\left| \Psi' \right\rangle = \frac{\hat{P}_{\lambda}|\Psi\rangle}{\sqrt
 
 Ce postulat formalise la réduction du paquet d'ondes (Postulat V) : le système "saute" dans le sous-espace propre associé à la valeur mesurée $\lambda$.
 
-## Le Pari sur l'Aléatoire
+## Le Pari sur l'aléatoire
 
 L’interprétation statistique de la mécanique quantique, qui confère une nature intrinsèquement probabiliste aux mesures, fut un point de friction majeur lors de l'établissement de la théorie. Albert Einstein, notamment, s'opposait à cette indétermination fondamentale, résumée par sa célèbre phrase : « Dieu ne joue pas aux dés ».
 
@@ -1519,7 +1519,7 @@ L'état dual (BRA) s'écrit alors :
 
 $$\langle\phi|=\bar c_1 \langle \phi_1 | + \bar c_2 \langle \phi_2 | + \cdots + \bar c_n \langle \phi_n |$$
 
-### Condition d'Orthonormalité
+### Condition d'orthonormalité
 
 Les fonctions propres $|\phi_i\rangle$ d'un opérateur hermitien sont supposées former une base orthonormée, ce qui implique les lois d'orthogonalité :
 
@@ -1529,7 +1529,7 @@ et de normalisation (si les vecteurs sont normés à l'unité) :
 
 $$\langle \phi_i | \phi_i \rangle = 1$$ 
 
-### Normalisation de l'État et Probabilités
+### Normalisation de l'état et probabilités :
 
 Le produit hermitien $\langle \phi | \phi \rangle$ donne la norme au carré de l'état $|\phi\rangle$. En utilisant la décomposition et les conditions d'orthonormalité :
 
@@ -1553,7 +1553,7 @@ $|c_1|^2$ est la probabilité que le système saute dans l’état $|\phi_1\rang
 
 $|c_n|^2$ est la probabilité que le système saute dans l’état $|\phi_n\rangle$ et que l'on trouve la valeur $a_n$.
 
-### L'Interprétation de la mesure et l'espérance mathématique
+### L'Interprétation de la mesure et l'espérance mathématique :
 
 En présence d'un état de superposition, deux conceptions sont possibles :
 
@@ -1563,7 +1563,7 @@ Conception de la réduction ou passage du système de l'état $|\phi\rangle$ à 
 
 Nous adoptons la seconde interprétation, celle de Copenhague.
 
-### Mesure certaine : État propre
+### Mesure certaine : état propre :
 
 Si le système est dans l'état propre $|\phi_{n}\rangle$ de l’opérateur $\hat{A}$ (c'est-à-dire $\phi$ est identique à $\phi_n$), la signification physique de l'expression :
 
@@ -1573,7 +1573,7 @@ est simple : c'est la mesure exacte de $\hat{A}$ lorsque le système est dans l�
 
 $$\langle \phi_n | \hat{A} | \phi_n \rangle = \langle \phi_n | (a_n |\phi_n\rangle) = a_n \langle \phi_n | \phi_n \rangle = a_n \times 1 = a_n$$
 
-### Mesure probabiliste : Valeur Moyenne (Espérance Mathématique)
+### Mesure probabiliste : valeur moyenne (espérance mathématique)
 
 Essayons de comprendre le sens plus général de l'expression :
 
