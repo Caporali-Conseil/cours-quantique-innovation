@@ -18,7 +18,7 @@ format:
 
 **Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-**Version :** 1.0.1 (Dernière mise à jour : 19 décembre 2025)
+**Version :** 1.0.1 (Dernière mise à jour : 20 décembre 2025)
 
 **Informations légales et de version :**
 
