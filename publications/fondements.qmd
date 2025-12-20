@@ -69,9 +69,15 @@ Avertissement : Le document de 1925 n'est pas simple du tout à lire car certain
 
 Nous allons rentrer dans le document afin d'introduire des themes nouveaux.
 
-Pour comprendre le point de départ de la démarche d’Heisenberg il s'agit de partir de la physique classique et de considérer la physique quantique comme une extension de la physique classique. En effet $n$ étant le niveau énergie de l'atome, pour $n$ très grand la différence entre 2 niveau est petite ce qui donne l'illusion du continue, Cette jonction entre les deux était déjà utilisée par Bohr et s'appelait regle de correspondance. Mais l'ambition d'heisenberg va plus loin car il s'agit d'entendre le formalisme algébrique classique au quantique, au prix d'une adaptation. Ainsi bizarrement au lieu de partir des formules quantiques Heisenberg part des formules classiques.
+ 
 
 ## La physique classique :
+
+::: {.callout-tip}
+
+C'est semble t il une simple discussion avec Niels Bohr qui a convaincu Heisenberg de s'attaquer au problème de la détermination de la trajectoire de l’électron autour d'un atome. Ensuite Heisenberg a profité de son isolement sur l'île de Heligoland pour soigner une allergie aux pollens de fleurs pour y réfléchir.
+
+:::
 
 Nous partions du modèle de Bohr.
 
@@ -1699,6 +1705,12 @@ La vitesse de l'oiseau n’apparaît comme n’étant rien d'autre que le résul
 
 A Nice sur la promenade des anglais il y a des petites chaises bleues sur le front de mer ou les passants s'assoient. Un jour dans le vieux Nice j'ai vu un magasin de souvenirs qui vendaient les mêmes chaises bleues mais en miniature. Si j'en achete une et que le vendeur l'emballe dans une petite boite, quelle est l'incertitude sur la position de la chaise dans la boite ?
 
+::: {.callout-warning}
+
+Attention à la limite de l'exemple de la chaise : il s'agit d'une analogie macroscopique pour illustrer un phénomène microscopique.
+
+:::
+
 ![](chaise.png){fig-align="center" width="100"}
 
 Ainsi Niels Bohr [@BOHR1928] dit, en citant Heisenberg :
@@ -1707,7 +1719,7 @@ Ainsi Niels Bohr [@BOHR1928] dit, en citant Heisenberg :
 
 Cette approche accorde de importance à l’expérience. Pour Heisenberg si l’expérience montre une impossibilité a déterminer avec précision une position alors il faut l'admettre comme fondement et faire avec.
 
-Conclusion : ce paragraphe introductif pour but de vous faire vous poser des questions à partir constations simples de la vie courante. Attention à la limite de l'exemple de la chaise : *il s'agit d'une analogie macroscopique pour illustrer un phénomène microscopique.*
+Conclusion : ce paragraphe introductif pour but de vous faire vous poser des questions à partir constations simples de la vie courante. 
 
 ## Principe d'incertitude des radioelectriciens :
 
@@ -2497,7 +2509,7 @@ Le seminaire poincare [@PoincaréSeminar2021ITPS] met en valeur [@gheorghiu:hal-
 
 > if a quatum experiment solves a problem which is proven to be intractable for classical computers, how caon one verify the outcome of the experiment ?
 
-il y a plusieurs oistes possibles et les protocoles bases sur l'intrication en est une. a ce sujet l'experience du consensus pour la blockchain peut servir d'inspiration.
+il y a plusieurs pistes possibles et les protocoles bases sur l'intrication en est une. a ce sujet l'experience du consensus pour la blockchain peut servir d'inspiration.
 
 # L'écosystème de la quantique :
 
