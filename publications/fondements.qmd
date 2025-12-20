@@ -1705,13 +1705,13 @@ La vitesse de l'oiseau n’apparaît comme n’étant rien d'autre que le résul
 
 A Nice sur la promenade des anglais il y a des petites chaises bleues sur le front de mer ou les passants s'assoient. Un jour dans le vieux Nice j'ai vu un magasin de souvenirs qui vendaient les mêmes chaises bleues mais en miniature. Si j'en achete une et que le vendeur l'emballe dans une petite boite, quelle est l'incertitude sur la position de la chaise dans la boite ?
 
+![](chaise.png){fig-align="center" width="100"}
+
 ::: {.callout-warning}
 
 Attention à la limite de l'exemple de la chaise : il s'agit d'une analogie macroscopique pour illustrer un phénomène microscopique.
 
 :::
-
-![](chaise.png){fig-align="center" width="100"}
 
 Ainsi Niels Bohr [@BOHR1928] dit, en citant Heisenberg :
 
