@@ -2447,9 +2447,9 @@ Prenons la question en sens inverse dans le paragraphe suivant.
 
 Avertissement : la convergence entre les lois de la physique quantique (intrication, superposition) et les problèmes des systèmes distribués (consensus) est un sujet de recherche avancé. Sa pertinence technique s'évalue sur deux horizons temporels distincts :
 
-- Immédiate (Court Terme) : Pour la sécurité des échanges cryptographiques (QKD).
+- Immédiate (court terme) : pour la sécurité des échanges cryptographiques (QKD).
 
-- Théorique (Long Terme) : Pour le remplacement ou l'amélioration des algorithmes de consensus classiques.
+- Théorique (long terme) : pour le remplacement ou l'amélioration des algorithmes de consensus classiques.
 
 :::
 
@@ -2464,16 +2464,16 @@ Citons comme techniques d'intrication :
 -   Intrication spatiale
 -   Intrication temporelle
 
-Toutefois en matière de blockchain il existe deux grandes tendance de gouvernance :
+Toutefois en matière de blockchain il existe deux grandes tendances de gouvernance :
 
 1.  On-chain
 2.  Off-chain
 
-Par on chain je veux dire : qui est situé dans le code informatique.
+Par on-chain je veux dire : qui est situé dans le code informatique.
 
-Dans le premier cas (off-chain) les parties prenantes vont se mettre d'accord sur quelque chose qui sera dans un second temps intégré dans le code par exemple sous forme d'une règle dans un smart contract.
+Dans le second cas (off-chain) les parties prenantes vont se mettre d'accord sur quelque chose qui sera dans un second temps intégré dans le code par exemple sous forme d'une règle dans un smart contract.
 
-Dans le second cas (on-chain) un consensus peut se faire sans intervention humaine. Toutefois on peut imaginer qu'ensuite des méchanismes de contrôle off-chain interviendront. L'algorithme de consensus quantique etant base sur les lois de la physique (puis traduit sous forme de code informatique) est on chain.
+Dans le premier cas (on-chain) un consensus peut se faire sans intervention humaine. Toutefois on peut imaginer qu'ensuite des méchanismes de contrôle off-chain interviendront. L'algorithme de consensus quantique etant base sur les lois de la physique (puis traduit sous forme de code informatique) est on-chain.
 
 La dynamique on-chain / off-chain est avant tout celle d'une interaction entre ces deux facettes de la gouvernance.
 
@@ -2482,6 +2482,12 @@ La dynamique on-chain / off-chain est avant tout celle d'une interaction entre c
 | Agrement byzantin                 |  deterministe   |
 | Nakamoto consensus                |  probabiliste   |
 | Algorithme de consensus quantique |  probabiliste   |
+
+::: {.callout-warning}
+
+Ce tableau de synthèse est une esquisse. Par exemple en quantique la mesure est probabiliste, par contre l’équation de Schrödinger est déterministe.
+
+:::
 
 La problématique du consensus est fondamentale en matière de réseau car elle rejoint celle de la validation en environnement décentralisé : comment mettre d'accord des entités indépendantes.
 
