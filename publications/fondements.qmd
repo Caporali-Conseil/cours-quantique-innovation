@@ -2443,11 +2443,15 @@ Prenons la question en sens inverse dans le paragraphe suivant.
 
 ## La quantique pour la securité réseau : le consensus quantique ? :
 
-*Avertissement : la convergence entre les lois de la physique quantique (intrication, superposition) et les problèmes des systèmes distribués (consensus) est un sujet de recherche avancé. Sa pertinence technique s'évalue sur deux horizons temporels distincts :*
+::: {.callout-note}
 
-*- Immédiate (Court Terme) : Pour la sécurité des échanges cryptographiques (QKD).*
+Avertissement : la convergence entre les lois de la physique quantique (intrication, superposition) et les problèmes des systèmes distribués (consensus) est un sujet de recherche avancé. Sa pertinence technique s'évalue sur deux horizons temporels distincts :
 
-*- Théorique (Long Terme) : Pour le remplacement ou l'amélioration des algorithmes de consensus classiques.*
+- Immédiate (Court Terme) : Pour la sécurité des échanges cryptographiques (QKD).
+
+- Théorique (Long Terme) : Pour le remplacement ou l'amélioration des algorithmes de consensus classiques.
+
+:::
 
 Comme le souligne Stéphane Bortzmeyer [@bortzmeyerBlogStxE9phane] dans son article de blog le protocole TCP est la pierre angulaire du réseau internet depuis 30 ans. Le couple TCP/IP est toutefois sensible de base au man-in-the-middle : il est possible par exemple avec une sonde réseau d'interférer avec une trame de donnée, que ce soit dans le sens IP ou bien TCP.
 
