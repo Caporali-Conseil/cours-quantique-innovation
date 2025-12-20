@@ -28,19 +28,7 @@ Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
 
 Ce n'est pas non plus un doublons d'un cours de physique comme on donne aux étudiants en physique. En effet la vocation n'est pas la même.
 
-*Licence :*
-
-Le contenu de ce cours est distribué sous la licence Creative Commons Attribution 4.0 International (CC BY 4.0).
-
-Vous êtes libre de :
-
-Partager — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats ;
-
-Adapter — remixer, transformer et créer à partir du matériel pour toute utilisation, y compris commerciale.
-
-À condition de citer l'auteur original, Stéphane Caporali, et Caporali Conseil.
-
-# Démarche et motivation pédagogique
+# Démarche et motivation pédagogique :
 
 Ce document est l'aboutissement d'une démarche construite sur trois piliers distincts, reliant l'histoire de l'enseignement à l'innovation architecturale :
 
@@ -70,7 +58,12 @@ Ce document est l'aboutissement d'une démarche construite sur trois piliers dis
 
 On situe quelquefois la naissance de la quantique par la découverte de la constante de Planck, ou bien celle de l'équation de Schrödinger, ou bien le papier de Heisenberg de 1925 :"Über quantentheoretische Umdeutung kinematischer und mechanischer Beziehungen" [@Heisenberg1925] qui pose un nouveau formalisme.
 
-*Avertissement : Le document de 1925 n'est pas simple du tout à lire. Il donne l'impression d'un "brouillon de fin de nuit blanche" il constitue pourtant un document charnière.*
+
+::: {.callout-warning}
+
+Avertissement : Le document de 1925 n'est pas simple du tout à lire car certaines étapes sont peu détaillés. Il donne l'impression d'un "brouillon de fin de nuit blanche". Il constitue pourtant un document charnière.
+
+:::
 
 ![](Article_1925.png){fig-align="center" width="500"}
 
@@ -140,15 +133,23 @@ Toutefois ici il faut se placer dans la physique de époque et J représente l'a
 
 $x=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)e^{i\alpha\omega_{n}t}$ dann ist
 
+::: {.callout-tip}
+
 Attention ici il s'agit d'une expression en physique classique. Mais nous allons voir que Heisenberg va "abandonner" $x$ car considere comme non observable. Toutefois nous restons encore dans le cadre la la mécanique classique. Un mouvement périodique peut être un oscillateur harmonique mais surtout la trajectoire d'un electron sur son orbite imaginée dans le modele de Bohr. On dirait que Heisenberg presuppose que le mouvement quantique est périodique. **En realite il exige que si un mouvement quantique existe alors il permet un mouvement classique périodique**. Dans le modèle de Bohr le mouvement classique était considéré comme un cas particulier du mouvement quantique (celui ou $n$ est très grand). C'est pour cette raison (qu'on appelle principe de correspondance) que l'on peut prendre le mouvement périodique classique comme point de départ du raisonnement. Plus tard on se détachera de la vision continue de x(t) de la physique classique.
 
-## Mise en evidence de l'energie
+:::
+
+## Mise en evidence de l'energie :
 
 Il suffit de la dériver pour prendre l'expression de v.
 
 $m\dot{x}=\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)i\alpha\omega_{n}e^{i\alpha\omega_{n}t}$
 
+::: {.callout-tip}
+
 En basculant de dq en dt on introduit un carre. L'énergie cinétique est une vitesse au carrée. **Le carre introduit qu'il s'agit d'une énergie.** On remarque que ici on raisonne toujours en physique classique. Toutefois on se positionne a raisonner en terme d'énergie, or une transition entre un état n et un état n+1 et bien quelque chose qui coûte une certaine énergie. On voit l'intuition d'Heisenberg. Le terme a\_${\alpha}(n) \cdot a_{-\alpha}(n)$ préfigure $\left|a_{\alpha}(n)\right|^2$. Heisenberg s’intéresse beaucoup aux amplitudes et a leurs significations physiques.
+
+:::
 
 $\oint m\dot{x}dx=\oint m\dot{x}^2dt=2\pi m\Sigma_{+\infty}^{-\infty}a_{\alpha}(n)a_{-\alpha}(n)\alpha^2\omega_{n}$
 
@@ -168,7 +169,7 @@ Pour n grand dn est tres petit et donc la derivve de nh par rapport a n vaut h d
 
 > $h=2\pi m \Sigma_{+\infty}^{-\infty} \alpha \frac{d}{dn} a\alpha \omega_{n} |a_{\alpha}|^2$
 
-On peut remrquer que jusqu'ici on est toujours dans la physique classique.
+On peut remarquer que jusqu'ici on est toujours dans la physique classique.
 
 ## Introduction de la quantification dans les indices :
 
@@ -178,13 +179,16 @@ p est une impulsion ($p = m \dot{q}$) et q une position. En remplacant x et v pa
 
 $h = 4\pi m \Sigma_{0}^{+\infty}\alpha{|a(n,n+\alpha)|^2\omega(n,n+\alpha)}-{|a(n,n-\alpha)|^2\omega(n,n-\alpha)^2}$ \|
 
+::: {.callout-important}
+
 Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le "saut".
 
-**Cette formule constitue un moment clé**.
+Cette formule constitue un moment clé.
 
-Notez qu'une somme infinie tende vers une constante.
+:::
 
-## Conséquences sur le concept de position :
+
+::: {.callout-note}
 
 Cet article de Heisenberg de 1925 est tres abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l’interprétation :
 
@@ -195,6 +199,8 @@ Cet article de Heisenberg de 1925 est tres abstrait, en particulier le concept d
 -   en troisième lieu la position ressuscite sous forme de la matrice position X. Toutefois prendre un stylo et une feuille de papier, dessiner une matrice avec un X dedans ne suffit pas a faire une matrice position. Les composantes de la machine expriment des transitions d’états (on remplace un espace des positions par un espace des transitions). C'est bien la position de X dans la relation de la non commutation ($X.Y\neq Y.X$) qui fait les propriétés de la matrice X.
 
 On voit comment la spacialité éclate complètement au profit des composantes de la matrices qui expriment des potentialités.
+
+:::
 
 ## L'oscillateur anharmonique en physique classique :
 
@@ -218,7 +224,7 @@ et de fil en aiguille Heisenberg finie par aboutir à la formule de l'oscillateu
 
 $W=(n+\frac{1}{2})hw_{0}/2\pi)$
 
-Dans le document de 1925 la partie sur l'oscillateur harmonique et de loin la plus obscure à première lecture et pourtant le résultat est juste.
+Dans le document de 1925 la partie sur l'oscillateur harmonique est de loin la plus obscure à première lecture et pourtant le résultat est juste.
 
 ## Conclusion :
 
@@ -431,13 +437,21 @@ L'onde considérée en quantique est une onde de probabilité : elle diffère do
 
 *Nous reviendrons plus tard dans le cours sur l'approche statistique de la physique quantique.*
 
-# Fondements Mathématiques
+# Fondements Mathématiques :
+
+::: {.callout-tip}
+
+Un jour étant étudiant j'avais été invite par un camarade à une soirée et là il y a avait un étudiant en mathématique qui disait que les mathématiciens étaient des gens formidables. Puis il a dit fièrement que la veille il s'était "amusé" à travailler avec des collègues sur un espace à environ 30 dimensions. J'étais surpris et septique sur l'utilité. Pourtant en physique quantique on travaille bien sur des espaces abstraits de dimension infinie. C'est une des raisons qui font que ce formalisme est réputé difficile. 
+
+:::
 
 L'informatique quantique repose sur le formalisme des espaces de Hilbert. Voici les définitions fondamentales adaptées de @Wiggins2024.
 
 ::: {.callout-note}
 
-## Définition : Espace Vectoriel
+## Définition : Espace Vectoriel :
+
+
 
 Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ensemble des nombres complexes $\mathbb{C}$, est un ensemble d'éléments (appelés vecteurs) sur lequel deux opérations sont définies :
 
@@ -450,7 +464,7 @@ Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ense
 
 ::: {.callout-note}
 
-## Définition : Espace de Hilbert
+## Définition : Espace de Hilbert :
 
 Un espace de Hilbert est un espace vectoriel $\mathcal{V}$ muni d'un produit scalaire et qui est complet (c'est-à-dire que toute suite de Cauchy converge fortement vers un vecteur appartenant à $\mathcal{V}$).
 
@@ -459,7 +473,7 @@ Un espace de Hilbert est un espace vectoriel $\mathcal{V}$ muni d'un produit sca
 ::: callout-important
 
 
-## Définition : Vecteur d'état (State Vector)
+## Définition : Vecteur d'état (State Vector) :
 
 L'espace des états d'un système de mécanique quantique est un espace de Hilbert complexe.
 
@@ -469,7 +483,7 @@ $\langle \psi | \psi \rangle = 1$
 
 :::
 
-### Discussion sur la notation
+### Discussion sur la notation :
 
 Dans ce projet, nous utilisons la notation de Dirac :
 
@@ -858,11 +872,15 @@ En général AB et BA définissent deux opérateurs différents. On dit que A et
 
 > 3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
 
+::: {.callout-important}
+
 On dit qu'une fonction $f$ est fonction propre de l'opérateur $\hat{A}$ avec la valeur propre $a$ (nombre indépendant des variables) si on a :
 
 $$\hat{A}f = af$$
 
 L'opération se réduit dans ce cas à une simple multiplication de la fonction $f$ par le nombre $a$.
+
+:::
 
 *Exemple 1 : Opérateur de dérivation du premier ordre*
 
@@ -1090,7 +1108,7 @@ $$\hat{A}^2 f(x) = \hat{A}(\hat{A}f(x)) = \hat{A}(a f(x)) = a (\hat{A}f(x)) = a 
 
 Donc $\hat{A}^2 f(x) = a^2 f(x)$.
 
-## Opérateurs Hermitiques et Grandeurs Physiques
+## Opérateurs Hermitiques et Grandeurs Physiques :
 
 Après avoir fait le choix d'un intervalle de définition avec des conditions aux limites, nous appellerons opérateur fonctionnel hermitique un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles.
 
@@ -1124,7 +1142,7 @@ $$\hat{E} = -\frac{\hbar}{i}\frac{d}{dt} = -\frac{h}{i2\pi}\frac{d}{dt}$$
 
 où $\hbar = \frac{h}{2\pi}$ est la constante de Planck réduite.
 
-## Base des fonctions propres d'un opérateur fonctionnel hermitique :
+## Base des fonctions propres d'un opérateur fonctionnel hermitique : :
 
 Pour les opérateurs que nous aurons à utiliser, les n fonctions propres forment un système *complet* ce qui permet de mettre toute fonction f(x) sous la forme d'un développement qui généralise le développement de fourier soit :
 
@@ -1159,7 +1177,7 @@ Si on appelle $\psi(\vec(r))$ la fonction d'onde représentée par le ket $|\psi
 
 $$|\psi\rangle=\sum_{i} c_i|u_i\rangle$$ l'ensemble des vecteurs ${|u_i|}$ constituant une base de l'espace des états quantiques.
 
-## Représentation d'un opérateur fonctionnel par une matrice
+## Représentation d'un opérateur fonctionnel par une matrice :
 
 Considérons maintenant un opérateur fonctionnel $\hat{B}$, hermitique ou non, distinct de $\hat{A}$. Toute fonction $f(x)$ est transformée par $\hat{B}$ en une autre fonction $g(x)$ suivant :
 
@@ -1216,7 +1234,7 @@ $$\mathbf{B}=\begin{pmatrix}
 
 Ce sont les notations utilisées par Dirac.
 
-## Calcul pratique des éléments de la matrice $\mathbf{B}$
+## Calcul pratique des éléments de la matrice $\mathbf{B}$ :
 
 Nous allons calculer les éléments de la matrice $\mathbf{B}$ pour un opérateur spécifique $\hat{B}$ dans la base des fonctions propres de $\hat{A} = \frac{d^2}{dx^2}$.
 
@@ -1315,7 +1333,7 @@ Consider an approximately defined vector space of complex valued differentiable 
 
 Conclusion sur les opérateurs : L'opérateur de dérivation simple $\frac{d}{dx}$ n'est pas hermitien, car ses valeurs propres dans une base orthonormée sont purement imaginaires ($in\omega$). L'opérateur $\frac{1}{i}\frac{d}{dx}$ (ou $\frac{1}{i}\frac{d}{dt}$ dans le cas temporel) est, lui, hermitien, car ses valeurs propres sont réelles ($n\omega$).
 
-## Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$
+## Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$ :
 
 Adoptons maintenant pour l'opérateur $\hat{B}$ l'opérateur de multiplication par la variable $\hat{X} = x \times$.
 
@@ -1391,9 +1409,9 @@ La matrice représentative de l'opérateur de position $\hat{X}$ dans la base de
 
 La matrice $\mathbf{X}$ n'est donc pas réelle (elle est hermitienne).
 
-# Mesure quantique
+# Mesure quantique :
 
-## Représentation d'une grandeur physique par un opérateur
+## Représentation d'une grandeur physique par un opérateur :
 
 Un système physique en mouvement étant décrit par une fonction d'onde $\phi(x,y,z,t)$, on convient de faire correspondre des opérateurs aux grandeurs physiques qui lui sont attachées.
 
@@ -1445,7 +1463,7 @@ En classique : Si l'état est connu, la valeur de toute observable est détermin
 
 En quantique : Sauf si le système est dans un état propre de l'observable mesurée, la mesure est intrinsèquement probabiliste. Elle sélectionne un des états propres de l'opérateur $\hat{A}$ et force le système à y "sauter" (réduction du paquet d'ondes, Postulat V).
 
-## Mesure quantique : interaction et irréversibilité
+## Mesure quantique : interaction et irréversibilité :
 
 Dans certaines sciences, comme l’électronique, effectuer une mesure d’un système influe sur ce dernier. Il est possible de dire que : « j’observe donc je perturbe. ». En effet, lorsque l’on effectue une mesure sur un circuit électronique, il faut prendre en compte le fait que l’appareil de mesure est également un élément du circuit. Il peut disposer de sa propre résistance par exemple. Ainsi, effectuer une mesure revient à interagir avec le système [@cluzel:hal-04052636].
 
@@ -1489,7 +1507,7 @@ $$\boxed{\left| \Psi' \right\rangle = \frac{\hat{P}_{\lambda}|\Psi\rangle}{\sqrt
 
 Ce postulat formalise la réduction du paquet d'ondes (Postulat V) : le système "saute" dans le sous-espace propre associé à la valeur mesurée $\lambda$.
 
-## Le Pari sur l'aléatoire
+## Le Pari sur l'aléatoire :
 
 L’interprétation statistique de la mécanique quantique, qui confère une nature intrinsèquement probabiliste aux mesures, fut un point de friction majeur lors de l'établissement de la théorie. Albert Einstein, notamment, s'opposait à cette indétermination fondamentale, résumée par sa célèbre phrase : « Dieu ne joue pas aux dés ».
 
@@ -1509,7 +1527,7 @@ Le formalisme de P.A.M. Dirac est la base de l'algèbre quantique, permettant de
 
 À la fonction d'onde (ou état) $\phi$ correspond le KET (ou vecteur colonne) : $|\phi \rangle$. À la fonction conjuguée $\bar \phi$ (ou dual de l'état) correspond le BRA (ou vecteur ligne) : $\langle\phi|$.
 
-### Formalisme KET et BRA
+### Formalisme KET et BRA :
 
 La décomposition de la fonction $\phi$ sur un système orthonormal complet de fonctions propres $|\phi_n\rangle$ de l'opérateur $\hat{A}$ sera symbolisée vectoriellement par :
 
@@ -1519,7 +1537,7 @@ L'état dual (BRA) s'écrit alors :
 
 $$\langle\phi|=\bar c_1 \langle \phi_1 | + \bar c_2 \langle \phi_2 | + \cdots + \bar c_n \langle \phi_n |$$
 
-### Condition d'orthonormalité
+### Condition d'orthonormalité :
 
 Les fonctions propres $|\phi_i\rangle$ d'un opérateur hermitien sont supposées former une base orthonormée, ce qui implique les lois d'orthogonalité :
 
@@ -1573,7 +1591,7 @@ est simple : c'est la mesure exacte de $\hat{A}$ lorsque le système est dans l�
 
 $$\langle \phi_n | \hat{A} | \phi_n \rangle = \langle \phi_n | (a_n |\phi_n\rangle) = a_n \langle \phi_n | \phi_n \rangle = a_n \times 1 = a_n$$
 
-### Mesure probabiliste : valeur moyenne (espérance mathématique)
+### Mesure probabiliste : valeur moyenne (espérance mathématique) :
 
 Essayons de comprendre le sens plus général de l'expression :
 
@@ -1595,7 +1613,7 @@ $$\boxed{\langle\phi|\hat{A}| \phi\rangle=|c_1|^2 a_1 + |c_2|^2 a_2 + \cdots + |
 
 La signification de cette expression est celle d'une moyenne pondérée (ou Espérance Mathématique). Elle représente la moyenne des résultats que l'on obtiendrait en effectuant un grand nombre de mesures de l'observable $\hat{A}$ sur des systèmes préparés de manière identique dans l’état $|\phi\rangle$. Chaque valeur propre $a_n$ est pondérée par un coefficient égal à sa probabilité d'occurrence, $|c_n|^2$.
 
-### Cas d'opérateurs non commutables
+### Cas d'opérateurs non commutables :
 
 Examinons un autre cas où le système est dans un état propre $|\phi_{n}\rangle$ de l’opérateur $\hat{A}$ (la mesure de $\hat{A}$ est certaine et donne $a_n$) et où l'on tente de mesurer une autre grandeur représentée par un opérateur $\hat{B}$ non commutable avec $\hat{A}$ (c'est-à-dire $[\hat{A}, \hat{B}] \neq 0$).
 
@@ -1705,11 +1723,15 @@ Lorsque le signal est une impulsion brève dans le temps, la gamme de fréquence
 
 Avec le principe d'incertitude de radioelectriciens on ne prend pas en compte la condition de quantification présente dans la relation : $E=h\mu$
 
+::: {.callout-tip}
+
 Il est intéressant de remarquer que dans un cas classique (électronique ou acoustique) si il est possible d'avoir une bande de fréquence très étirée (voir infinie) ce n'est pas en général la bande de fréquence "utile". Par exemple :
 
 1.  En électronique on a l'habitude de fabriquer des filtres passe haut, passe bas ou passe bande afin d’éliminer les fréquences excentrées qui constituent du bruit.
 
 2.  En acoustique, le timbre d'une voix humaine est un mélange de différentes fréquences. Personne n'a une voix “monocorde". Toutefois ici encore le message utile à la compréhension d'une voix humaine est regroupé sur une bande de fréquence limitée. On peut remarquer que en cas de bruit de fond, dans une salle très bruyante par exemple, à condition de se concentrer il est possible d'isoler la conversation qui nous intéresse comme si le cerveau avait une capacité de filtrage sélective. De même l'oreille réussit à isoler des sons isolés. Autre exemple : dans une salle de restaurant bruyante, si une cuillerée tombe par terre, on isole très bien cet "évènement" du bruit de fond constitué des autres sons.
+
+:::
 
 ## Transposition au domaine électromagnétique :
 
@@ -2072,7 +2094,7 @@ Elle est régie par des opérateurs (comme l'Hamiltonien $\hat{H}$) qui sont l'�
 
 La solution de l'équation de Schrödinger est la fonction d'onde $\Psi(x, t)$, qui est l'équivalent quantique du vecteur d'état $X(t)$ décrivant le système.
 
-## Extrait de la publication de Schrödinger de 1926
+## Extrait de la publication de Schrödinger de 1926 :
 
 Erwin Schrödinger écrit : [@Schrodinger1926-vy]
 
@@ -2160,7 +2182,7 @@ Nous savons que l'onde de De Broglie est une solution de l'équation de Schrodin
 
 $$\boxed{\psi(\vec{r},t)=ae^{-i\frac{(Et-\vec{p}\vec{r}}{\hbar}}}$$
 
-## L'Équation de Schrödinger Indépendante du Temps (ESIT)
+## L'Équation de Schrödinger Indépendante du Temps (ESIT) :
 
 L'ESIT n'est pas une équation d'évolution. C'est l'équation que l'on utilise uniquement pour trouver les états stationnaires (les états d'énergie bien définie) lorsque l'opérateur Hamiltonien $\hat{H}$ est constant dans le temps (c'est-à-dire que le potentiel $V$ ne dépend pas du temps).
 
@@ -2172,7 +2194,7 @@ $\phi_k(\vec{r})$ : Ce sont les fonctions propres, appelées états stationnaire
 
 $E_k$ : Ce sont les valeurs propres, représentant les énergies possibles (ou niveaux d'énergie) que le système peut posséder.
 
-## La solution de l'ESDT via les solutions de l'ESIT
+## La solution de l'ESDT via les solutions de l'ESIT :
 
 Lorsque le potentiel $V(\vec{r})$ est indépendant du temps, la méthode de séparation des variables permet de décomposer la fonction d'onde totale $\Psi(\vec{r}, t)$ en un produit d'une partie spatiale et d'une partie temporelle :
 
@@ -2274,7 +2296,7 @@ En substituant $k = \frac{n\pi}{L}$ dans la formule de l'énergie ($E = \frac{\h
 
 $$E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} = \frac{n^2h^2}{8mL^2}$$
 
-## Les fonctions propres (états stationnaires)
+## Les fonctions propres (états stationnaires) :
 
 Les fonctions propres de l'Hamiltonien sont donc :
 
@@ -2419,7 +2441,7 @@ Dans ce cas, le domaine des réseaux informatiques n'est pas une application de 
 
 Prenons la question en sens inverse dans le paragraphe suivant.
 
-## La quantique pour la securité réseau : le consensus quantique ?
+## La quantique pour la securité réseau : le consensus quantique ? :
 
 *Avertissement : la convergence entre les lois de la physique quantique (intrication, superposition) et les problèmes des systèmes distribués (consensus) est un sujet de recherche avancé. Sa pertinence technique s'évalue sur deux horizons temporels distincts :*
 
