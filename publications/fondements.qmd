@@ -7,7 +7,7 @@ date_version: "19 décembre 2025"
 editor: visual
 format:
   html:
-    theme: cosmo # Un thème propre et moderne
+    theme: united # Un thème propre et moderne
     css: custom_styles.css
     number-sections: true
     toc: true
@@ -79,7 +79,7 @@ C'est semble t il une simple discussion avec Niels Bohr qui a convaincu Heisenbe
 
 :::
 
-Nous partions du modèle de Bohr.
+Nous partons du modèle de Bohr.
 
 $$\nu(n,n-\alpha)=\frac{1}{h}[W(n)-W(n-\alpha)]$$
 
