@@ -1102,7 +1102,7 @@ Les coefficients $C_n$ (qui sont les composantes du vecteur $\left| f \right\ran
 
 $$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t$$
 
-## Théorème de Dirac :
+## Théorème de dirac :
 
 Si $f(x)$ est fonction propre de $\hat{A}$ avec la valeur propre associée $a$, $f(x)$ est également fonction propre de $\hat{A}^2$ avec la valeur propre associée $a^2$ (le carré de la précédente).
 
@@ -1116,7 +1116,7 @@ $$\hat{A}^2 f(x) = \hat{A}(\hat{A}f(x)) = \hat{A}(a f(x)) = a (\hat{A}f(x)) = a 
 
 Donc $\hat{A}^2 f(x) = a^2 f(x)$.
 
-## Opérateurs Hermitiques et Grandeurs Physiques :
+## Opérateurs hermitiques et grandeurs physiques :
 
 Après avoir fait le choix d'un intervalle de définition avec des conditions aux limites, nous appellerons opérateur fonctionnel hermitique un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles.
 
@@ -1150,7 +1150,7 @@ $$\hat{E} = -\frac{\hbar}{i}\frac{d}{dt} = -\frac{h}{i2\pi}\frac{d}{dt}$$
 
 où $\hbar = \frac{h}{2\pi}$ est la constante de Planck réduite.
 
-## Base des fonctions propres d'un opérateur fonctionnel hermitique : :
+## Base des fonctions propres d'un opérateur fonctionnel hermitique : 
 
 Pour les opérateurs que nous aurons à utiliser, les n fonctions propres forment un système *complet* ce qui permet de mettre toute fonction f(x) sous la forme d'un développement qui généralise le développement de fourier soit :
 
@@ -1463,13 +1463,13 @@ Le système étant décrit par la fonction d'onde $\Psi$, et la grandeur physiqu
 
 État propre : Si $\Psi$ est fonction propre de $\hat{A}$ associée à la valeur propre $a$, l'état $\Psi$ est un état propre de la grandeur $\hat{A}$. La mesure de cette grandeur est alors certaine et donne la valeur propre $a$ associée. La valeur propre $a$ est donc la seule mesure possible.
 
-Conséquence Fondamentale : Le Rôle de la Mesure
+Conséquence fondamentale : le rôle de la mesure
 
 La mécanique quantique est fondamentalement différente de la mécanique classique sur ce point :
 
-En classique : Si l'état est connu, la valeur de toute observable est déterminée.
+En classique : si l'état est connu, la valeur de toute observable est déterminée.
 
-En quantique : Sauf si le système est dans un état propre de l'observable mesurée, la mesure est intrinsèquement probabiliste. Elle sélectionne un des états propres de l'opérateur $\hat{A}$ et force le système à y "sauter" (réduction du paquet d'ondes, Postulat V).
+En quantique : sauf si le système est dans un état propre de l'observable mesurée, la mesure est intrinsèquement probabiliste. Elle sélectionne un des états propres de l'opérateur $\hat{A}$ et force le système à y "sauter" (réduction du paquet d'ondes, Postulat V).
 
 ## Mesure quantique : interaction et irréversibilité :
 
