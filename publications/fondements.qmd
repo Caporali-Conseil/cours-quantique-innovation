@@ -3,7 +3,7 @@ title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
 version: "1.0.1" 
-date_version: "19 décembre 2025"
+date_version: "20 décembre 2025"
 editor: visual
 format:
   html:
@@ -1080,11 +1080,17 @@ On exprime cette propriété en disant que la suite des vecteurs propres est com
 
 ## Développement complexe de fourier :
 
+::: {.callout-note}
+
 Rappel de traitement du signal :
 
 Séries de Fourier : [@Najib2022-qq]
 
-$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$Coefficients de Fourier$$C_{n}={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.$$
+$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$
+Coefficients de Fourier
+
+$$C_{n}={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.$$
+:::
 
 Sous forme algébrique, la décomposition d'un vecteur fonctionnel $\left| f \right\rangle$ sur la base des vecteurs propres $\left| f_n \right\rangle$ de l'opérateur $\frac{d^2}{dx^2}$ se traduit par l'identité :
 
