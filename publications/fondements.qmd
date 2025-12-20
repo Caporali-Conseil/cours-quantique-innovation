@@ -34,15 +34,15 @@ Ce document est l'aboutissement d'une démarche construite sur trois piliers dis
 
 1.  **Évolution de l'enseignement quantique : La seconde révolution**
 
-    -   **Ancienne vocation (Il y a 40 ans) :** acquérir une compétence pratique dans le domaine des semi-conducteurs.
+    -   *Ancienne vocation (Il y a 40 ans) :* acquérir une compétence pratique dans le domaine des semi-conducteurs.
 
-    -   **Vocation actuelle :** sensibiliser le futur ingénieur aux enjeux industriels de la **seconde révolution quantique**, qui, portée par la vérification expérimentale de l'intrication, a ouvert la porte à l'informatique quantique.
+    -   *Vocation actuelle :* sensibiliser le futur ingénieur aux enjeux industriels de la **seconde révolution quantique**, qui, portée par la vérification expérimentale de l'intrication, a ouvert la porte à l'informatique quantique.
 
 2.  **Valorisation pédagogique : l'approche par la mécanique matricielle**
 
-    -   **Source :** l'ouvrage "Calcul matriciel. application à la physique quantique" [@alma991002711779705804] (1960).
+    -   *Source :* l'ouvrage "Calcul matriciel. application à la physique quantique" [@alma991002711779705804] (1960).
 
-    -   **Intérêt :** Proposer une approche progressive et ambitieuse du formalisme de l'algèbre linéaire, jugée particulièrement aidante pour l'appropriation par les non-mathématiciens.
+    -   *Intérêt :* Proposer une approche progressive et ambitieuse du formalisme de l'algèbre linéaire, jugée particulièrement aidante pour l'appropriation par les non-mathématiciens.
 
 3.  **Analogie architecturale : nouveaux formalismes pour la décentralisation**
 
@@ -183,7 +183,7 @@ $$h = 4\pi m \Sigma_{0}^{+\infty}\alpha{|a(n,n+\alpha)|^2\omega(n,n+\alpha)}-{|a
 
 ::: {.callout-important}
 
-Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a relaise le "saut".
+Enfin ici Heisenberg a utilise la théorie de Kramer qui introduit des amplitudes de transition. On a réalisé le "saut".
 
 Cette formule constitue un moment clé.
 
@@ -192,7 +192,7 @@ Cette formule constitue un moment clé.
 
 ::: {.callout-note}
 
-Cet article de Heisenberg de 1925 est tres abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l’interprétation :
+Cet article de Heisenberg de 1925 est très abstrait, en particulier le concept de position dont je rappelle les points ici, au risque de tomber dans l’interprétation :
 
 -   le point de départ est la physique classique et la formulation de x(t) sous la forme d'une série de fourrier. Il s'agit de voir la quantique comme une extension de la physique classique (et pas l'inverse comme on le fait souvent).
 
@@ -854,13 +854,17 @@ En général AB et BA définissent deux opérateurs différents. On dit que A et
 
 ## Fonction propres et valeurs propres d'un opérateur fonctionnel :
 
-> **Rappel :** méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : [@Delbarre2022-bb] $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
+::: {.callout-note}
 
-> 1.  Si $\Delta > 0$ on note r1 et r2 les deux solutions. Les solutions sont des fonctions du type $$y=A_1e^{r_1x} + A_2e^{r_2x}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
+**Rappel :** méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : [@Delbarre2022-bb] $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
 
-> 2.  Si $\Delta = 0$ on note r la solution. Les solutions sont des fonctions du type $$y=A_1e^{rx} + A_2e^{rx}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
+1.  Si $\Delta > 0$ on note r1 et r2 les deux solutions. Les solutions sont des fonctions du type $$y=A_1e^{r_1x} + A_2e^{r_2x}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
 
-> 3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
+2.  Si $\Delta = 0$ on note r la solution. Les solutions sont des fonctions du type $$y=A_1e^{rx} + A_2e^{rx}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
+
+3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
+
+:::
 
 ::: {.callout-important}
 
@@ -890,7 +894,11 @@ $$\frac{1}{f}\frac{df}{dx} = a \quad \implies \quad \log|f| = ax + C \quad \impl
 
 Les fonctions propres de $\hat{A}=\frac{d}{dx}$ sont de la forme $f(x)=ke^{ax}$, où $a$ est la valeur propre associée.
 
-*Intuitivement, la fonction exponentielle est la seule à être aussi sa dérivée d’où la solution à l'équation aux valeurs propres est une fonction exponentielle. Toutefois je vous laisse appliquer la méthode générale de résolution d'une équation différentielle du premier ordre.*
+::: {.callout-tip}
+
+Intuitivement, la fonction exponentielle est la seule à être aussi sa dérivée d’où la solution à l'équation aux valeurs propres est une fonction exponentielle. Toutefois je vous laisse appliquer la méthode générale de résolution d'une équation différentielle du premier ordre.
+
+:::
 
 *Spectre Continu :* Comme la valeur propre $a$ peut être un nombre réel ou complexe quelconque (en l'absence de conditions aux limites), l'ensemble des valeurs propres forme un spectre continu.
 
@@ -922,9 +930,13 @@ $$f(x) = k_1 e^{\sqrt{b} x} + k_2 e^{-\sqrt{b} x}$$ Dans le cas où $b$ est quel
 
 Ici, il y a dégénérescence car la valeur propre $b$ est associée à deux fonctions propres linéairement indépendantes ($e^{\sqrt{b} x}$ et $e^{-\sqrt{b} x}$). De plus, toute combinaison linéaire de ces fonctions propres est aussi fonction propre avec la même valeur $b$.
 
-> Il est aise de vérifier cela sachant que avec $ar^2 + br + c=0$ on a : $a=1$, $b=0$ et $c=-b$. Le déterminant $\Delta = b^2 -4ac =0-4.1.-b=4b$. Ainsi $$x_1=\frac{0+\sqrt{4.b}}{2}=\frac{2\sqrt{b}}{2}=\sqrt{b}$$ et $$x_2=\frac{0-\sqrt{4.b}}{2}=-\sqrt{b}$$
+::: {.callout-note}
 
-> On vérifie aisément que $\sqrt{b}$ est solution en rentrant la valeur dans l'équation initiale. Ainsi $$\frac{d^2}{dx^2}.exp{\sqrt{b}x -b.exp{\sqrt{b}x}}=\sqrt{b}^2.exp{\sqrt{b}x}-b.exp{\sqrt{b}.x}=0$$
+Il est aise de vérifier cela sachant que avec $ar^2 + br + c=0$ on a : $a=1$, $b=0$ et $c=-b$. Le déterminant $\Delta = b^2 -4ac =0-4.1.-b=4b$. Ainsi $$x_1=\frac{0+\sqrt{4.b}}{2}=\frac{2\sqrt{b}}{2}=\sqrt{b}$$ et $$x_2=\frac{0-\sqrt{4.b}}{2}=-\sqrt{b}$$
+
+On vérifie aisément que $\sqrt{b}$ est solution en rentrant la valeur dans l'équation initiale. Ainsi $$\frac{d^2}{dx^2}.exp{\sqrt{b}x -b.exp{\sqrt{b}x}}=\sqrt{b}^2.exp{\sqrt{b}x}-b.exp{\sqrt{b}.x}=0$$
+
+:::
 
 De plus toute combinaisons linéaire de fonction propres est aussi fonction propre avec la même valeur b.
 
