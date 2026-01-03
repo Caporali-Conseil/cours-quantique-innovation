@@ -14,25 +14,6 @@ project:
     - "*.tex"
     - "code_tikz/*.tex"
     
-abstract: |
-  Ce document constitue un socle théorique et pédagogique conçu pour accompagner des formations appliquées à la convergence entre physique quantique et réseaux. 
-  À travers une approche privilégiant le formalisme matriciel de Heisenberg (1925) et les séries de Fourier, il explore la dualité onde-corpuscule de De Broglie, le principe d'incertitude et l'équation de Schrödinger. 
-  L'étude propose également une réflexion originale sur les analogies entre les formalismes quantiques et les architectures décentralisées (Blockchain), offrant aux ingénieurs un cadre conceptuel pour appréhender la seconde révolution quantique.
-
-metadata:
-  keywords: 
-    - "Mécanique Quantique"
-    - "Heisenberg 1925"
-    - "Formalisme matriciel"
-    - "Louis de Broglie"
-    - "Séries de Fourier"
-    - "Équation de Schrödinger"
-    - "Intrication quantique"
-    - "Blockchain et Quantique"
-    - "Informatique Quantique"
-    - "Algèbre Linéaire Physique"
-    - "Innovation technologique"
-    - "Caporali Conseil"
 
 website:
   title: "Blog Scientifique : le laboratoire de Caporali Conseil"
