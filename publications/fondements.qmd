@@ -2,8 +2,8 @@
 title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
-version: "1.0.2" 
-date_version: "02 janvier 2026"
+version: "1.0.3" 
+date_version: "03 janvier 2026"
 editor: visual
 format:
   html:
@@ -18,15 +18,14 @@ format:
 
 **Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-**Version :** 1.0.2 (Dernière mise à jour : 02 janvier 2026)
+**Version :** 1.0.3 (Dernière mise à jour : 03 janvier 2026)
 
 **Informations légales et de version :**
 
-*Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux.*
+Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux.
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
 
-Ce n'est pas non plus un doublons d'un cours de physique comme on donne aux étudiants en physique. En effet la vocation n'est pas la même.
 
 # Démarche et motivation pédagogique :
 
