@@ -2336,7 +2336,7 @@ A l'horizon 5 ans il faudra adapter les infrastructures actuelles pour permettre
 
 Dans ce cas, le domaine des réseaux informatiques n'est pas une application de la quantique mais une infrastructure réseau adaptée aux ordinateurs quantiques constitue un besoin.
 
-Prenons la question en sens inverse dans le paragraphe suivant.
+Voici un tableau de synthèse :
 
 |  |  |  |
 |----|----|----|
@@ -2346,6 +2346,8 @@ Prenons la question en sens inverse dans le paragraphe suivant.
 | **Effet du temps** | Atténuation / Bruit | **Étalement / Décohérence** |
 | **Observation** | Copie possible (Monitoring) | **Mesure = Altération irréversible** |
 | **Objectif ingénieur** | Intégrité des données | **Maintien de la cohérence** |
+
+Prenons la question en sens inverse dans le paragraphe suivant.
 
 ## La quantique pour la securité réseau : le consensus quantique ? :
 
