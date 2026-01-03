@@ -11,7 +11,7 @@
     "href": "publications/fondements.html",
     "title": "Introduction à la théorie quantique",
     "section": "",
-    "text": "Licence : Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).\nVersion : 1.0.3 (Dernière mise à jour : 03 janvier 2026)\nInformations légales et de version :\nCe travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux.\nCe document n’a fait l’objet d’aucune évaluation par les pairs (peer-review)."
+    "text": "Licence : Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).\nVersion : 1.0.4 (Dernière mise à jour : 03 janvier 2026)\nInformations légales et de version :\nCe travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux.\nCe document n’a fait l’objet d’aucune évaluation par les pairs (peer-review)."
   },
   {
     "objectID": "publications/fondements.html#le-document-de-rupture-de-1925",
@@ -592,7 +592,7 @@
     "href": "publications/fondements.html#le-réseau-pour-la-quantique",
     "title": "Introduction à la théorie quantique",
     "section": "12.1 Le réseau pour la quantique :",
-    "text": "12.1 Le réseau pour la quantique :\nLa question du consensus est un angle de vue spécifique pour aborder la question.\nA l’horizon 5 ans il faudra adapter les infrastructures actuelles pour permettre l’émergence de l’internet quantique : à quoi ressemblera le réseau d’interconnexion des QPUs (distributed quantum computing)?\nDans ce cas, le domaine des réseaux informatiques n’est pas une application de la quantique mais une infrastructure réseau adaptée aux ordinateurs quantiques constitue un besoin.\nPrenons la question en sens inverse dans le paragraphe suivant."
+    "text": "12.1 Le réseau pour la quantique :\nLa question du consensus est un angle de vue spécifique pour aborder la question.\nA l’horizon 5 ans il faudra adapter les infrastructures actuelles pour permettre l’émergence de l’internet quantique : à quoi ressemblera le réseau d’interconnexion des QPUs (distributed quantum computing)?\nDans ce cas, le domaine des réseaux informatiques n’est pas une application de la quantique mais une infrastructure réseau adaptée aux ordinateurs quantiques constitue un besoin.\nPrenons la question en sens inverse dans le paragraphe suivant.\n\n\n\n\n\n\n\n\nConcept\nRéseaux Classiques (IP)\nRéseaux Quantiques\n\n\nVecteur d’info\nFlux de photons/électrons (Massif)\nParticule unique ou intrication\n\n\nNature du “paquet”\nSignal déterministe (0 ou 1)\nPaquet d’ondes (Potentialités)\n\n\nEffet du temps\nAtténuation / Bruit\nÉtalement / Décohérence\n\n\nObservation\nCopie possible (Monitoring)\nMesure = Altération irréversible\n\n\nObjectif ingénieur\nIntégrité des données\nMaintien de la cohérence"
   },
   {
     "objectID": "publications/fondements.html#la-quantique-pour-la-securité-réseau-le-consensus-quantique",

@@ -2,7 +2,7 @@
 title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
-version: "1.0.3" 
+version: "1.0.4" 
 date_version: "03 janvier 2026"
 editor: visual
 format:
@@ -18,14 +18,13 @@ format:
 
 **Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-**Version :** 1.0.3 (Dernière mise à jour : 03 janvier 2026)
+**Version :** 1.0.4 (Dernière mise à jour : 03 janvier 2026)
 
 **Informations légales et de version :**
 
 Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux.
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
-
 
 # Démarche et motivation pédagogique :
 
@@ -1051,7 +1050,6 @@ Les coefficients $C_n$ (qui sont les composantes du vecteur $\left| f \right\ran
 
 $$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t$$
 
-
 ## Opérateurs hermitiques et grandeurs physiques :
 
 Après avoir fait le choix d'un intervalle de définition avec des conditions aux limites, nous appellerons opérateur fonctionnel hermitique un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles.
@@ -1572,7 +1570,7 @@ Toutefois la vitesse de phase de l'onde de De Broglie n'est pas la vitesse de la
 La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Toutefois elle a permis d'arriver à la conclusion qu'il faut voir un lien entre la position de la particule et celle de l'amplitude du paquet d'ondes.
 
 |  |  |  |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Caractéristique** | **Onde Plane Standard** | **Électron de De Broglie (1924)** |
 | **Localisation** | Rigoureusement nulle (étalée partout). | Étale partout, mais **condensé** en un point. |
 | **Énergie** | Densité constante partout. | Condensée mais indivisible (atome d'énergie). |
@@ -1583,11 +1581,9 @@ La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Tout
 
 ## Expérience courante du principe d'incertitude :
 
-Dans la vie courante, est il possible de "faire l’expérience" du principe d'incertitude ? 
-A Nice sur la Promenade Des Anglais il y a des petites chaises bleues sur le front de mer oú les passants s'assoient. Un jour dans le Vieux-Nice j'ai vu un magasin de souvenirs qui vendait les mêmes chaises bleues mais en miniature. Si j'en achete une et que le vendeur l'emballe dans une petite boite, quelle est l'incertitude sur la position de la chaise dans la boite ?
+Dans la vie courante, est il possible de "faire l’expérience" du principe d'incertitude ? A Nice sur la Promenade Des Anglais il y a des petites chaises bleues sur le front de mer oú les passants s'assoient. Un jour dans le Vieux-Nice j'ai vu un magasin de souvenirs qui vendait les mêmes chaises bleues mais en miniature. Si j'en achete une et que le vendeur l'emballe dans une petite boite, quelle est l'incertitude sur la position de la chaise dans la boite ?
 
 ![Une chaise bleue miniature](chaise.png){#fig-chaise fig-align="center" width="40%"}
-
 
 ::: callout-warning
 Attention à la limite de l'exemple de la chaise : il s'agit d'une analogie macroscopique pour illustrer un phénomène microscopique.
@@ -1722,7 +1718,6 @@ Au contraire, dans le cas général, l'incertitude suit la forme d'une inégalit
 [@alma991013035899705804]
 
 ![Cas 1](Incertitude1.png){#fig-incert1 fig-align="center" width="70%"}
- 
 
 \begin{center}
 \begin{tikzpicture}[x=3.8cm/360]
@@ -1743,7 +1738,6 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 2.  Si vous voulons que l'énergie cinétique soit très petite nous devons accorde assez de place a l'électron : l'incertitude sur sa position doit être grande, sa distance moyenne au noyau doit alors être grande.
 
 ![Cas 2](Incertitude2.png){#fig-incert2 fig-align="center" width="70%"}
-
 
 \begin{center}
 \begin{tikzpicture}
@@ -2343,6 +2337,15 @@ A l'horizon 5 ans il faudra adapter les infrastructures actuelles pour permettre
 Dans ce cas, le domaine des réseaux informatiques n'est pas une application de la quantique mais une infrastructure réseau adaptée aux ordinateurs quantiques constitue un besoin.
 
 Prenons la question en sens inverse dans le paragraphe suivant.
+
+|  |  |  |
+|----|----|----|
+| **Concept** | **Réseaux Classiques (IP)** | **Réseaux Quantiques** |
+| **Vecteur d'info** | Flux de photons/électrons (Massif) | Particule unique ou intrication |
+| **Nature du "paquet"** | Signal déterministe (0 ou 1) | Paquet d'ondes (Potentialités) |
+| **Effet du temps** | Atténuation / Bruit | **Étalement / Décohérence** |
+| **Observation** | Copie possible (Monitoring) | **Mesure = Altération irréversible** |
+| **Objectif ingénieur** | Intégrité des données | **Maintien de la cohérence** |
 
 ## La quantique pour la securité réseau : le consensus quantique ? :
 
