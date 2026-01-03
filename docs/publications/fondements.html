@@ -214,7 +214,7 @@ window.Quarto = {
   <li><a href="#mise-en-evidence-de-lenergie" id="toc-mise-en-evidence-de-lenergie" class="nav-link" data-scroll-target="#mise-en-evidence-de-lenergie"><span class="header-section-number">2.5</span> Mise en evidence de l’energie :</a></li>
   <li><a href="#limite-classique-dans-la-formulation-de-laction" id="toc-limite-classique-dans-la-formulation-de-laction" class="nav-link" data-scroll-target="#limite-classique-dans-la-formulation-de-laction"><span class="header-section-number">2.6</span> Limite classique dans la formulation de l’action :</a></li>
   <li><a href="#introduction-de-la-quantification-dans-les-indices" id="toc-introduction-de-la-quantification-dans-les-indices" class="nav-link" data-scroll-target="#introduction-de-la-quantification-dans-les-indices"><span class="header-section-number">2.7</span> Introduction de la quantification dans les indices :</a></li>
-  <li><a href="#loscillateur-anharmonique-en-physique-classique" id="toc-loscillateur-anharmonique-en-physique-classique" class="nav-link" data-scroll-target="#loscillateur-anharmonique-en-physique-classique"><span class="header-section-number">2.8</span> L’oscillateur anharmonique en physique classique :</a></li>
+  <li><a href="#loscillateur-anharmonique" id="toc-loscillateur-anharmonique" class="nav-link" data-scroll-target="#loscillateur-anharmonique"><span class="header-section-number">2.8</span> L’oscillateur anharmonique :</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">2.9</span> Conclusion :</a></li>
   </ul></li>
   <li><a href="#faits-experimentaux" id="toc-faits-experimentaux" class="nav-link" data-scroll-target="#faits-experimentaux"><span class="header-section-number">3</span> Faits experimentaux :</a>
@@ -253,13 +253,12 @@ window.Quarto = {
   <li><a href="#norme" id="toc-norme" class="nav-link" data-scroll-target="#norme"><span class="header-section-number">4.17</span> Norme :</a></li>
   <li><a href="#norme-des-fonctions-propres-de-fracd2dx2" id="toc-norme-des-fonctions-propres-de-fracd2dx2" class="nav-link" data-scroll-target="#norme-des-fonctions-propres-de-fracd2dx2"><span class="header-section-number">4.18</span> Norme des fonctions propres de <span class="math inline">\frac{d^2}{dx^2}</span> :</a></li>
   <li><a href="#développement-complexe-de-fourier" id="toc-développement-complexe-de-fourier" class="nav-link" data-scroll-target="#développement-complexe-de-fourier"><span class="header-section-number">4.19</span> Développement complexe de fourier :</a></li>
-  <li><a href="#propriété-puissance-dun-opérateur-linéaire" id="toc-propriété-puissance-dun-opérateur-linéaire" class="nav-link" data-scroll-target="#propriété-puissance-dun-opérateur-linéaire"><span class="header-section-number">4.20</span> Propriété : Puissance d’un opérateur linéaire</a></li>
-  <li><a href="#opérateurs-hermitiques-et-grandeurs-physiques" id="toc-opérateurs-hermitiques-et-grandeurs-physiques" class="nav-link" data-scroll-target="#opérateurs-hermitiques-et-grandeurs-physiques"><span class="header-section-number">4.21</span> Opérateurs hermitiques et grandeurs physiques :</a></li>
-  <li><a href="#représentation-dun-opérateur-fonctionnel-par-une-matrice" id="toc-représentation-dun-opérateur-fonctionnel-par-une-matrice" class="nav-link" data-scroll-target="#représentation-dun-opérateur-fonctionnel-par-une-matrice"><span class="header-section-number">4.22</span> Représentation d’un opérateur fonctionnel par une matrice :</a></li>
-  <li><a href="#calcul-pratique-des-éléments-de-la-matrice-mathbfb" id="toc-calcul-pratique-des-éléments-de-la-matrice-mathbfb" class="nav-link" data-scroll-target="#calcul-pratique-des-éléments-de-la-matrice-mathbfb"><span class="header-section-number">4.23</span> Calcul pratique des éléments de la matrice <span class="math inline">\mathbf{B}</span> :</a>
+  <li><a href="#opérateurs-hermitiques-et-grandeurs-physiques" id="toc-opérateurs-hermitiques-et-grandeurs-physiques" class="nav-link" data-scroll-target="#opérateurs-hermitiques-et-grandeurs-physiques"><span class="header-section-number">4.20</span> Opérateurs hermitiques et grandeurs physiques :</a></li>
+  <li><a href="#représentation-dun-opérateur-fonctionnel-par-une-matrice" id="toc-représentation-dun-opérateur-fonctionnel-par-une-matrice" class="nav-link" data-scroll-target="#représentation-dun-opérateur-fonctionnel-par-une-matrice"><span class="header-section-number">4.21</span> Représentation d’un opérateur fonctionnel par une matrice :</a></li>
+  <li><a href="#calcul-pratique-des-éléments-de-la-matrice-mathbfb" id="toc-calcul-pratique-des-éléments-de-la-matrice-mathbfb" class="nav-link" data-scroll-target="#calcul-pratique-des-éléments-de-la-matrice-mathbfb"><span class="header-section-number">4.22</span> Calcul pratique des éléments de la matrice <span class="math inline">\mathbf{B}</span> :</a>
   <ul class="collapse">
-  <li><a href="#exemple-1-opérateur-dérivée-hatb-fracddx" id="toc-exemple-1-opérateur-dérivée-hatb-fracddx" class="nav-link" data-scroll-target="#exemple-1-opérateur-dérivée-hatb-fracddx"><span class="header-section-number">4.23.1</span> Exemple 1 : Opérateur dérivée <span class="math inline">\hat{B} = \frac{d}{dx}</span></a></li>
-  <li><a href="#exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" id="toc-exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" class="nav-link" data-scroll-target="#exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times"><span class="header-section-number">4.23.2</span> Exemple 2 : Matrice non diagonale. Opérateur <span class="math inline">\hat{X} = x \times</span> :</a></li>
+  <li><a href="#exemple-1-opérateur-dérivée-hatb-fracddx" id="toc-exemple-1-opérateur-dérivée-hatb-fracddx" class="nav-link" data-scroll-target="#exemple-1-opérateur-dérivée-hatb-fracddx"><span class="header-section-number">4.22.1</span> Exemple 1 : Opérateur dérivée <span class="math inline">\hat{B} = \frac{d}{dx}</span></a></li>
+  <li><a href="#exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" id="toc-exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" class="nav-link" data-scroll-target="#exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times"><span class="header-section-number">4.22.2</span> Exemple 2 : Matrice non diagonale. Opérateur <span class="math inline">\hat{X} = x \times</span> :</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#mesure-quantique" id="toc-mesure-quantique" class="nav-link" data-scroll-target="#mesure-quantique"><span class="header-section-number">5</span> Mesure quantique :</a>
@@ -448,7 +447,7 @@ Tip
 </section>
 <section id="seconde-loi-de-newton-en-physique-classique" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="seconde-loi-de-newton-en-physique-classique"><span class="header-section-number">2.2</span> Seconde loi de Newton en physique classique :</h2>
-<p>« Formulée en 1687 dans ses Principia, la seconde loi de Newton révolutionne la physique en liant la force au changement de mouvement. Elle s’exprime par la célèbre relation <span class="math inline">\vec{F} = m\vec{a}</span> qu’Heisenberg exprime sous forme simplifiée :</p>
+<p>Formulée en 1687 dans ses Principia, la seconde loi de Newton révolutionne la physique en liant la force au changement de mouvement. Elle s’exprime par la célèbre relation <span class="math inline">\vec{F} = m\vec{a}</span> qu’Heisenberg exprime sous forme simplifiée :</p>
 <p><span class="math display">\ddot{x} + f(x) = 0</span></p>
 <p>Si Heisenberg pose cette formule connu, ce n’est pas pour le plaisir de faire de la physique classique mais car il pense que l’on peut partir de cette formule et en trouver une extension quantique. Il cherche une algèbre. Ainsi il cherche à construire en théorie quantique un formalisme qui corresponde le plus étroitement possible à celui de la mécanique classique.</p>
 </section>
@@ -550,8 +549,8 @@ Note
 </ul>
 <p>On voit comment la spacialité éclate complètement au profit des composantes de la matrices qui expriment des potentialités.</p>
 </section>
-<section id="loscillateur-anharmonique-en-physique-classique" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="loscillateur-anharmonique-en-physique-classique"><span class="header-section-number">2.8</span> L’oscillateur anharmonique en physique classique :</h2>
+<section id="loscillateur-anharmonique" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="loscillateur-anharmonique"><span class="header-section-number">2.8</span> L’oscillateur anharmonique :</h2>
 <p>Ce paragraphe est important car il prouve la validité de la méthode de Heisenberg. Elle a des similitudes avec la méthode utilisée jusqu’à présent. Tout d’abord Heisenberg par de la physique classique</p>
 <p>Voici la définition :</p>
 <p><span class="math display">x=\lambda a_{0}+a_{1}coswt +\lambda a_{2}cos2wt + \lambda^2a_{3}cos3wt + ...+ \lambda^{\tau-1}a_{r}cos\tau\omega t</span></p>
@@ -1198,7 +1197,7 @@ Note
 <p>En 1807 Joseph Fourier, alors préfet de l’Isère, présente ses travaux sur la propagation de la chaleur. Il émet l’idée révolutionnaire que n’importe quelle fonction périodique, aussi “brisée” soit-elle, peut être reconstruite par une somme de fonctions sinus et cosinus parfaitement lisses.</p>
 <p><strong>Séries de Fourier :</strong> <span class="citation" data-cites="Najib2022-qq">(<a href="#ref-Najib2022-qq" role="doc-biblioref">Najib 2022</a>)</span></p>
 <p><span class="math display">f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}</span></p>
-<p>Cette formule exprime que votre fonction <span class="math inline">f(x)</span> est une superposition (une somme) d’ondes élémentaires.</p>
+<p>Cette formule exprime que la fonction <span class="math inline">f(x)</span> est une superposition (une somme) d’ondes élémentaires.</p>
 <p><strong>Coefficients de Fourier :</strong></p>
 <p><span class="math display">C_{n}={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.</span> Chaque coefficient <span class="math inline">C_n</span> agit comme un “poids” qui détermine l’importance de l’harmonique <span class="math inline">n</span> dans le signal total.</p>
 </div>
@@ -1209,16 +1208,8 @@ Note
 <p>Les coefficients <span class="math inline">C_n</span> (qui sont les composantes du vecteur <span class="math inline">\left| f \right\rangle</span> dans cette base) se calculent par la formule de Fourier, qui est l’expression du produit hermitien entre <span class="math inline">\left| f_n \right\rangle</span> et <span class="math inline">\left| f \right\rangle</span> :</p>
 <p><span class="math display">C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t</span></p>
 </section>
-<section id="propriété-puissance-dun-opérateur-linéaire" class="level2" data-number="4.20">
-<h2 data-number="4.20" class="anchored" data-anchor-id="propriété-puissance-dun-opérateur-linéaire"><span class="header-section-number">4.20</span> Propriété : Puissance d’un opérateur linéaire</h2>
-<p>Si <span class="math inline">f(x)</span> est une fonction propre de l’opérateur <span class="math inline">\hat{A}</span> associée à la valeur propre <span class="math inline">a</span>, alors <span class="math inline">f(x)</span> est également une fonction propre de l’opérateur <span class="math inline">\hat{A}^n</span> associée à la valeur propre <span class="math inline">a^n</span>.</p>
-<p>Démonstration (pour $n=2$) :</p>
-<p>$$\hat{A}f(x) = a f(x)$$</p>
-<p>En ré-appliquant l’opérateur :</p>
-<p>$$\hat{A}^2 f(x) = \hat{A}(\hat{A}f(x)) = \hat{A}(a f(x)) = a (\hat{A}f(x)) = a (a f(x)) = a^2 f(x)$$</p>
-</section>
-<section id="opérateurs-hermitiques-et-grandeurs-physiques" class="level2" data-number="4.21">
-<h2 data-number="4.21" class="anchored" data-anchor-id="opérateurs-hermitiques-et-grandeurs-physiques"><span class="header-section-number">4.21</span> Opérateurs hermitiques et grandeurs physiques :</h2>
+<section id="opérateurs-hermitiques-et-grandeurs-physiques" class="level2" data-number="4.20">
+<h2 data-number="4.20" class="anchored" data-anchor-id="opérateurs-hermitiques-et-grandeurs-physiques"><span class="header-section-number">4.20</span> Opérateurs hermitiques et grandeurs physiques :</h2>
 <p>Après avoir fait le choix d’un intervalle de définition avec des conditions aux limites, nous appellerons opérateur fonctionnel hermitique un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles.</p>
 <p>Définition de l’opérateur fonctionnel hermitique : Admet un système orthogonal complet de fonctions propres et des valeurs propres associées qui sont toutes réelles.</p>
 <p>C’est le cas de l’opérateur</p>
@@ -1244,8 +1235,8 @@ Note
 <p><span class="math display">\hat{E} = -\frac{\hbar}{i}\frac{d}{dt} = -\frac{h}{i2\pi}\frac{d}{dt}</span></p>
 <p>où <span class="math inline">\hbar = \frac{h}{2\pi}</span> est la constante de Planck réduite.</p>
 </section>
-<section id="représentation-dun-opérateur-fonctionnel-par-une-matrice" class="level2" data-number="4.22">
-<h2 data-number="4.22" class="anchored" data-anchor-id="représentation-dun-opérateur-fonctionnel-par-une-matrice"><span class="header-section-number">4.22</span> Représentation d’un opérateur fonctionnel par une matrice :</h2>
+<section id="représentation-dun-opérateur-fonctionnel-par-une-matrice" class="level2" data-number="4.21">
+<h2 data-number="4.21" class="anchored" data-anchor-id="représentation-dun-opérateur-fonctionnel-par-une-matrice"><span class="header-section-number">4.21</span> Représentation d’un opérateur fonctionnel par une matrice :</h2>
 <p>Considérons maintenant un opérateur fonctionnel <span class="math inline">\hat{B}</span>, hermitique ou non, distinct de <span class="math inline">\hat{A}</span>. Toute fonction <span class="math inline">f(x)</span> est transformée par <span class="math inline">\hat{B}</span> en une autre fonction <span class="math inline">g(x)</span> suivant :</p>
 <p><span class="math display">g(x)=\hat{B}f(x)</span></p>
 <p>Remplaçons dans cette égalité fonctionnelle la fonction <span class="math inline">f(x)</span> par son développement sur la base des fonctions propres de <span class="math inline">\hat{A}</span>, il vient :</p>
@@ -1287,16 +1278,16 @@ a\_n&nbsp; \\&nbsp;
 \end{pmatrix}</span></p>
 <p>Ce sont les notations utilisées par Dirac.</p>
 </section>
-<section id="calcul-pratique-des-éléments-de-la-matrice-mathbfb" class="level2" data-number="4.23">
-<h2 data-number="4.23" class="anchored" data-anchor-id="calcul-pratique-des-éléments-de-la-matrice-mathbfb"><span class="header-section-number">4.23</span> Calcul pratique des éléments de la matrice <span class="math inline">\mathbf{B}</span> :</h2>
+<section id="calcul-pratique-des-éléments-de-la-matrice-mathbfb" class="level2" data-number="4.22">
+<h2 data-number="4.22" class="anchored" data-anchor-id="calcul-pratique-des-éléments-de-la-matrice-mathbfb"><span class="header-section-number">4.22</span> Calcul pratique des éléments de la matrice <span class="math inline">\mathbf{B}</span> :</h2>
 <p>Nous allons calculer les éléments de la matrice <span class="math inline">\mathbf{B}</span> pour un opérateur spécifique <span class="math inline">\hat{B}</span> dans la base des fonctions propres de <span class="math inline">\hat{A} = \frac{d^2}{dx^2}</span>.</p>
 <p>Nous rappelons deux théorèmes importants de l’algèbre linéaire <span class="citation" data-cites="Wiggins2024">(<a href="#ref-Wiggins2024" role="doc-biblioref">Wiggins 2024</a>)</span> :</p>
 <p>Opérateur de Projection : Soit <span class="math inline">P : V \to V</span> un opérateur linéaire sur un espace vectoriel <span class="math inline">V</span>. <span class="math inline">P</span> est appelé opérateur de projection si <span class="math inline">P^2=P</span>.</p>
 <p>Théorème Spectral pour les opérateurs auto-adjoints de dimension finie : Soit <span class="math inline">\mathbf{A} : V \to V</span> un opérateur linéaire auto-adjoint sur un espace produit scalaire complexe de dimension finie. Alors :</p>
 <p><span class="math inline">\mathbf{A}</span> a des valeurs propres réelles, et les vecteurs propres de <span class="math inline">\mathbf{A}</span> correspondant à des valeurs propres distinctes sont orthogonaux.</p>
 <p>Les vecteurs propres de <span class="math inline">\mathbf{A}</span> engendrent <span class="math inline">V</span>.</p>
-<section id="exemple-1-opérateur-dérivée-hatb-fracddx" class="level3" data-number="4.23.1">
-<h3 data-number="4.23.1" class="anchored" data-anchor-id="exemple-1-opérateur-dérivée-hatb-fracddx"><span class="header-section-number">4.23.1</span> Exemple 1 : Opérateur dérivée <span class="math inline">\hat{B} = \frac{d}{dx}</span></h3>
+<section id="exemple-1-opérateur-dérivée-hatb-fracddx" class="level3" data-number="4.22.1">
+<h3 data-number="4.22.1" class="anchored" data-anchor-id="exemple-1-opérateur-dérivée-hatb-fracddx"><span class="header-section-number">4.22.1</span> Exemple 1 : Opérateur dérivée <span class="math inline">\hat{B} = \frac{d}{dx}</span></h3>
 <p>Si <span class="math inline">\hat{B}</span> est l’opérateur de dérivation <span class="math inline">\frac{d}{dx}</span>, et si nous adoptons pour base orthonormée les fonctions propres de l’opérateur <span class="math inline">\hat{A} = \frac{d^2}{dx^2}</span> déterminées précédemment :</p>
 <p><span class="math display">f_n(x) = e^{in\omega x} \quad \text{avec } \omega = \frac{2\pi}{T}</span></p>
 <p>L’élément de matrice générique <span class="math inline">\mathbf{B}_{kn} = \left\langle f_k \right| \hat{B} \left| f_n \right\rangle</span> est donné par :</p>
@@ -1353,13 +1344,13 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Une matrice représente une opération. Elle possède des vecteurs propres qui sont sa base privilégiée. La base n’est pas l’opération mais la structure de l’espace. Il est <strong>étonnant</strong> de voir que a partir de la série de fourier on peut construire une base, chaque harmonique étant associée à un vecteur. Cette base spécifique est base propre des fonctions : dérivées premières, secondes, … Pour cette raison l ’appelle la représentation <span class="math inline">v</span>, par opposition par exemple à la représentation en <span class="math inline">x</span>. N’importe quelle opération représentée par une matrice peut être représentée dans cette base, mais seules certaines comme les dérivés successives auront une forme diagonale. Ceci nous mène droit vers le principe d’incertitude. Cette représentation classique de la fonction dérivée dans la base de fourier a une valeur pédagogique : elle prépare la représentation en quantique du vecteur impulsion dans l’espace de Hilbert. On est bien encore ici en classique car il existe une forme classique de l’impulsion (un nombre associé à l’espace des fréquences) et une forme quantique de l’impulsion (une matrice associée a l’espace des impulsions en accord avec le formalisme hamiltonien qui tient compte de la masse m).<br>
-En acoustique on associe bien grâce aux séries de fourier un spectre a une voix. Toutefois ici on génère un espace abstrait grâce à une base donc cela va plus loin. Quelques semaines après son article de 1925 Heisenberg est allé voir Hilbert qui travaillait depuis longtemps sur les espaces abstraits infinis et Heisenberg n’en a pas voulu. La différence culturelle était trop grande. Une thèse d’historien est que si cela avait collé entre les deux l’évènement de la création de l’équation de Schrödinger par Schrödinger en 1926 serait passée plus inaperçue alors qu’elle a été accueillie comme révolutionnaire.</p>
+<p>Une matrice représente une opération. Elle possède des vecteurs propres qui sont sa base privilégiée. La base n’est pas l’opération mais la structure de l’espace. Il est <strong>étonnant</strong> de voir qu’à partir de la série de fourier on peut construire une base, chaque harmonique étant associée à un vecteur. Cette base spécifique est base propre des fonctions : dérivées premières, secondes, … Pour cette raison l ’appelle la représentation <span class="math inline">v</span>, par opposition par exemple à la représentation en <span class="math inline">x</span>. N’importe quelle opération représentée par une matrice peut être représentée dans cette base, mais seules certaines comme les dérivés successives auront une forme diagonale. Ceci nous mène droit vers le principe d’incertitude. Cette représentation classique de la fonction dérivée dans la base de fourier a une valeur pédagogique : elle prépare la représentation en quantique du vecteur impulsion dans l’espace de Hilbert. On est bien encore ici en classique car il existe une forme classique de l’impulsion (un nombre associé à l’espace des fréquences) et une forme quantique de l’impulsion (une matrice associée a l’espace des impulsions en accord avec le formalisme hamiltonien qui tient compte de la masse m).<br>
+En acoustique on associe bien grâce aux séries de fourier un spectre à une voix. Toutefois ici on génère un espace abstrait grâce à une base donc cela va plus loin. Quelques semaines après son article de 1925 Heisenberg est allé voir Hilbert qui travaillait depuis longtemps sur les espaces abstraits infinis et Heisenberg n’en a pas voulu. La différence culturelle était trop grande. Une thèse d’historien est que si cela avait collé entre les deux l’évènement de la création de l’équation de Schrödinger par Schrödinger en 1926 serait passée plus inaperçue alors qu’elle a été accueillie comme révolutionnaire.</p>
 </div>
 </div>
 </section>
-<section id="exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" class="level3" data-number="4.23.2">
-<h3 data-number="4.23.2" class="anchored" data-anchor-id="exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times"><span class="header-section-number">4.23.2</span> Exemple 2 : Matrice non diagonale. Opérateur <span class="math inline">\hat{X} = x \times</span> :</h3>
+<section id="exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times" class="level3" data-number="4.22.2">
+<h3 data-number="4.22.2" class="anchored" data-anchor-id="exemple-2-matrice-non-diagonale.-opérateur-hatx-x-times"><span class="header-section-number">4.22.2</span> Exemple 2 : Matrice non diagonale. Opérateur <span class="math inline">\hat{X} = x \times</span> :</h3>
 <p>Adoptons maintenant pour l’opérateur <span class="math inline">\hat{B}</span> l’opérateur de multiplication par la variable <span class="math inline">\hat{X} = x \times</span>.</p>
 <p>Le terme général <span class="math inline">\mathbf{X}_{pq} = \left\langle f_p \right| \hat{X} \left| f_q \right\rangle</span> est donné par :</p>
 <p><span class="math display">\mathbf{X}_{pq} = \frac{1}{T}\int_{0}^{T}e^{-ip\omega x}x e^{iq\omega x}\,dx \quad \text{avec } \omega = \frac{2\pi}{T}</span></p>
@@ -1611,10 +1602,15 @@ En acoustique on associe bien grâce aux séries de fourier un spectre a une voi
 <h1 data-number="7"><span class="header-section-number">7</span> Principe d’incertitude d’Heisenberg :</h1>
 <section id="expérience-courante-du-principe-dincertitude" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="expérience-courante-du-principe-dincertitude"><span class="header-section-number">7.1</span> Expérience courante du principe d’incertitude :</h2>
-<p>A Nice sur la Promenade Des Anglais il y a des petites chaises bleues sur le front de mer oú les passants s’assoient. Un jour dans le vieux Nice j’ai vu un magasin de souvenirs qui vendaient les mêmes chaises bleues mais en miniature. Si j’en achete une et que le vendeur l’emballe dans une petite boite, quelle est l’incertitude sur la position de la chaise dans la boite ?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="chaise.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="100"></p>
+<p>Dans la vie courante, est il possible de “faire l’expérience” du principe d’incertitude ? A Nice sur la Promenade Des Anglais il y a des petites chaises bleues sur le front de mer oú les passants s’assoient. Un jour dans le Vieux-Nice j’ai vu un magasin de souvenirs qui vendait les mêmes chaises bleues mais en miniature. Si j’en achete une et que le vendeur l’emballe dans une petite boite, quelle est l’incertitude sur la position de la chaise dans la boite ?</p>
+<div id="fig-chaise" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chaise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="chaise.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chaise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Une chaise bleue miniature
+</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -1731,7 +1727,7 @@ Tip
 <img src="Incertitude1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-incert1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Cas 1
+Figure&nbsp;7: Cas 1
 </figcaption>
 </figure>
 </div>
@@ -1746,7 +1742,7 @@ Figure&nbsp;6: Cas 1
 <img src="Incertitude2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-incert2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Cas 2
+Figure&nbsp;8: Cas 2
 </figcaption>
 </figure>
 </div>

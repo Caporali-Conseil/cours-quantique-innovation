@@ -70,7 +70,7 @@ C'est semble t il une simple discussion avec Niels Bohr qui a convaincu Heisenbe
 
 ## Seconde loi de Newton en physique classique :
 
-« Formulée en 1687 dans ses Principia, la seconde loi de Newton révolutionne la physique en liant la force au changement de mouvement. Elle s'exprime par la célèbre relation $\vec{F} = m\vec{a}$ qu'Heisenberg exprime sous forme simplifiée :
+Formulée en 1687 dans ses Principia, la seconde loi de Newton révolutionne la physique en liant la force au changement de mouvement. Elle s'exprime par la célèbre relation $\vec{F} = m\vec{a}$ qu'Heisenberg exprime sous forme simplifiée :
 
 $$\ddot{x} + f(x) = 0$$
 
@@ -156,7 +156,7 @@ Cet article de Heisenberg de 1925 est très abstrait, en particulier le concept 
 
 On voit comment la spacialité éclate complètement au profit des composantes de la matrices qui expriment des potentialités.
 
-## L'oscillateur anharmonique en physique classique :
+## L'oscillateur anharmonique :
 
 Ce paragraphe est important car il prouve la validité de la méthode de Heisenberg. Elle a des similitudes avec la méthode utilisée jusqu’à présent. Tout d’abord Heisenberg par de la physique classique
 
@@ -1035,7 +1035,7 @@ En 1807 Joseph Fourier, alors préfet de l'Isère, présente ses travaux sur la 
 
 $$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$
 
-Cette formule exprime que votre fonction $f(x)$ est une superposition (une somme) d'ondes élémentaires.
+Cette formule exprime que la fonction $f(x)$ est une superposition (une somme) d'ondes élémentaires.
 
 **Coefficients de Fourier :**
 
@@ -1052,17 +1052,6 @@ Les coefficients $C_n$ (qui sont les composantes du vecteur $\left| f \right\ran
 
 $$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t$$
 
-## Propriété : Puissance d'un opérateur linéaire
-
-Si $f(x)$ est une fonction propre de l'opérateur $\hat{A}$ associée à la valeur propre $a$, alors $f(x)$ est également une fonction propre de l'opérateur $\hat{A}^n$ associée à la valeur propre $a^n$.
-
-Démonstration (pour \$n=2\$) :
-
-\$\$\\hat{A}f(x) = a f(x)\$\$
-
-En ré-appliquant l'opérateur :
-
-\$\$\\hat{A}\^2 f(x) = \\hat{A}(\\hat{A}f(x)) = \\hat{A}(a f(x)) = a (\\hat{A}f(x)) = a (a f(x)) = a\^2 f(x)\$\$
 
 ## Opérateurs hermitiques et grandeurs physiques :
 
@@ -1255,8 +1244,8 @@ Consider an approximately defined vector space of complex valued differentiable 
 Conclusion sur les opérateurs : L'opérateur de dérivation simple $\frac{d}{dx}$ n'est pas hermitien, car ses valeurs propres dans une base orthonormée sont purement imaginaires ($in\omega$). L'opérateur $\frac{1}{i}\frac{d}{dx}$ (ou $\frac{1}{i}\frac{d}{dt}$ dans le cas temporel) est, lui, hermitien, car ses valeurs propres sont réelles ($n\omega$).
 
 ::: callout-tip
-Une matrice représente une opération. Elle possède des vecteurs propres qui sont sa base privilégiée. La base n'est pas l'opération mais la structure de l'espace. Il est **étonnant** de voir que a partir de la série de fourier on peut construire une base, chaque harmonique étant associée à un vecteur. Cette base spécifique est base propre des fonctions : dérivées premières, secondes, ... Pour cette raison l 'appelle la représentation $v$, par opposition par exemple à la représentation en $x$. N'importe quelle opération représentée par une matrice peut être représentée dans cette base, mais seules certaines comme les dérivés successives auront une forme diagonale. Ceci nous mène droit vers le principe d'incertitude. Cette représentation classique de la fonction dérivée dans la base de fourier a une valeur pédagogique : elle prépare la représentation en quantique du vecteur impulsion dans l'espace de Hilbert. On est bien encore ici en classique car il existe une forme classique de l'impulsion (un nombre associé à l’espace des fréquences) et une forme quantique de l’impulsion (une matrice associée a l'espace des impulsions en accord avec le formalisme hamiltonien qui tient compte de la masse m).\
-En acoustique on associe bien grâce aux séries de fourier un spectre a une voix. Toutefois ici on génère un espace abstrait grâce à une base donc cela va plus loin. Quelques semaines après son article de 1925 Heisenberg est allé voir Hilbert qui travaillait depuis longtemps sur les espaces abstraits infinis et Heisenberg n’en a pas voulu. La différence culturelle était trop grande. Une thèse d’historien est que si cela avait collé entre les deux l'évènement de la création de l'équation de Schrödinger par Schrödinger en 1926 serait passée plus inaperçue alors qu’elle a été accueillie comme révolutionnaire.
+Une matrice représente une opération. Elle possède des vecteurs propres qui sont sa base privilégiée. La base n'est pas l'opération mais la structure de l'espace. Il est **étonnant** de voir qu'à partir de la série de fourier on peut construire une base, chaque harmonique étant associée à un vecteur. Cette base spécifique est base propre des fonctions : dérivées premières, secondes, ... Pour cette raison l 'appelle la représentation $v$, par opposition par exemple à la représentation en $x$. N'importe quelle opération représentée par une matrice peut être représentée dans cette base, mais seules certaines comme les dérivés successives auront une forme diagonale. Ceci nous mène droit vers le principe d'incertitude. Cette représentation classique de la fonction dérivée dans la base de fourier a une valeur pédagogique : elle prépare la représentation en quantique du vecteur impulsion dans l'espace de Hilbert. On est bien encore ici en classique car il existe une forme classique de l'impulsion (un nombre associé à l’espace des fréquences) et une forme quantique de l’impulsion (une matrice associée a l'espace des impulsions en accord avec le formalisme hamiltonien qui tient compte de la masse m).\
+En acoustique on associe bien grâce aux séries de fourier un spectre à une voix. Toutefois ici on génère un espace abstrait grâce à une base donc cela va plus loin. Quelques semaines après son article de 1925 Heisenberg est allé voir Hilbert qui travaillait depuis longtemps sur les espaces abstraits infinis et Heisenberg n’en a pas voulu. La différence culturelle était trop grande. Une thèse d’historien est que si cela avait collé entre les deux l'évènement de la création de l'équation de Schrödinger par Schrödinger en 1926 serait passée plus inaperçue alors qu’elle a été accueillie comme révolutionnaire.
 :::
 
 ### Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$ :
@@ -1595,9 +1584,11 @@ La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Tout
 
 ## Expérience courante du principe d'incertitude :
 
-A Nice sur la Promenade Des Anglais il y a des petites chaises bleues sur le front de mer oú les passants s'assoient. Un jour dans le vieux Nice j'ai vu un magasin de souvenirs qui vendaient les mêmes chaises bleues mais en miniature. Si j'en achete une et que le vendeur l'emballe dans une petite boite, quelle est l'incertitude sur la position de la chaise dans la boite ?
+Dans la vie courante, est il possible de "faire l’expérience" du principe d'incertitude ? 
+A Nice sur la Promenade Des Anglais il y a des petites chaises bleues sur le front de mer oú les passants s'assoient. Un jour dans le Vieux-Nice j'ai vu un magasin de souvenirs qui vendait les mêmes chaises bleues mais en miniature. Si j'en achete une et que le vendeur l'emballe dans une petite boite, quelle est l'incertitude sur la position de la chaise dans la boite ?
 
-![](chaise.png){fig-align="center" width="100"}
+![Une chaise bleue miniature](chaise.png){#fig-chaise fig-align="center" width="40%"}
+
 
 ::: callout-warning
 Attention à la limite de l'exemple de la chaise : il s'agit d'une analogie macroscopique pour illustrer un phénomène microscopique.
