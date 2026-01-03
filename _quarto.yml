@@ -15,9 +15,9 @@ project:
     - "code_tikz/*.tex"
     
 abstract: |
-  Ce document présente les fondements théoriques de la mécanique quantique sous un angle novateur, reliant la "seconde révolution quantique" aux enjeux de l'informatique et des réseaux décentralisés. 
-  À travers une approche privilégiant le formalisme matriciel de Heisenberg (1925) et les séries de Fourier, l'auteur explore la dualité onde-corpuscule de De Broglie, le principe d'incertitude et l'équation de Schrödinger. 
-  L'ouvrage propose également une réflexion originale sur l'analogie entre les formalismes quantiques et les architectures blockchain, offrant aux ingénieurs et innovateurs un socle théorique pour comprendre la convergence entre physique fondamentale et technologies de l'information.
+  Ce document constitue un socle théorique et pédagogique conçu pour accompagner des formations appliquées à la convergence entre physique quantique et réseaux. 
+  À travers une approche privilégiant le formalisme matriciel de Heisenberg (1925) et les séries de Fourier, il explore la dualité onde-corpuscule de De Broglie, le principe d'incertitude et l'équation de Schrödinger. 
+  L'étude propose également une réflexion originale sur les analogies entre les formalismes quantiques et les architectures décentralisées (Blockchain), offrant aux ingénieurs un cadre conceptuel pour appréhender la seconde révolution quantique.
 
 metadata:
   keywords: 
