@@ -35,13 +35,13 @@ metadata:
     - "Caporali Conseil"
 ---
 
+**Informations légales et de version :**
+
 **Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 **Version :** 1.0.4 (Dernière mise à jour : 03 janvier 2026)
 
-**Informations légales et de version :**
-
-Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux.
+Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux. Il ne remplace pas un cours universitaire standard (L3/M1)
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
 
@@ -2358,7 +2358,7 @@ Dans ce cas, le domaine des réseaux informatiques n'est pas une application de 
 Voici un tableau de synthèse :
 
 |  |  |  |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Concept** | **Réseaux Classiques (IP)** | **Réseaux Quantiques** |
 | **Vecteur d'info** | Flux de photons/électrons (Massif) | Particule unique ou intrication |
 | **Nature du "paquet"** | Signal déterministe (0 ou 1) | Paquet d'ondes (Potentialités) |
@@ -2402,11 +2402,37 @@ Dans le premier cas (on-chain) un consensus peut se faire sans intervention huma
 
 La dynamique on-chain / off-chain est avant tout celle d'une interaction entre ces deux facettes de la gouvernance.
 
-| Type de consensus                 | Caractéristique |
-|:----------------------------------|:---------------:|
-| Agrement byzantin                 |  deterministe   |
-| Nakamoto consensus                |  probabiliste   |
-| Algorithme de consensus quantique |  probabiliste   |
+```text  
+[ GOUVERNANCE OFF-CHAIN ]  <-- Humains / Stratégie
+          |
+==========================================================
+[ GOUVERNANCE ON-CHAIN ]
+          |
+    +-----+-------+
+    |    SMART    |  <-- Logique métier automatisée
+    |  CONTRACTS  |      (Ex: "Si condition X alors action Y")
+    +-----+-------+
+          |
+    +-----+-------+
+    |  ALGORITHME |  <-- Validation de la vérité
+    | DE CONSENSUS|      (Exemple:PoW,PoS)
+    +-----+-------+
+          |
+==========================================================
+[ COUCHE PHYSIQUE ]  
+```
+On peut classifier les algorithmes de consensus de la façon suivante :
+```text
++-----------------------------------+-----------------+
+|        TYPE DE CONSENSUS          | CARACTÉRISTIQUE |
++-----------------------------------+-----------------+
+| Agrément Byzantin (BFT)           |  Déterministe   |
+|                                   |                 |
+| Consensus Nakamoto (PoW/PoS)      |  Probabiliste   |
+|                                   |                 |
+| Algorithme de Consensus Quantique |  Probabiliste   |
++-----------------------------------+-----------------+
+```
 
 ::: callout-warning
 Ce tableau de synthèse est une esquisse. Par exemple en quantique la mesure est probabiliste, par contre l’équation de Schrödinger est déterministe.

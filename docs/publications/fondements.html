@@ -393,10 +393,10 @@ window.Quarto = {
 </header>
 
 
+<p><strong>Informations légales et de version :</strong></p>
 <p><strong>Licence :</strong> Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).</p>
 <p><strong>Version :</strong> 1.0.4 (Dernière mise à jour : 03 janvier 2026)</p>
-<p><strong>Informations légales et de version :</strong></p>
-<p>Ce travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux.</p>
+<p>Ce travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux. Il ne remplace pas un cours universitaire standard (L3/M1)</p>
 <p>Ce document n’a fait l’objet d’aucune évaluation par les pairs (peer-review).</p>
 <section id="démarche-et-motivation-pédagogique" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Démarche et motivation pédagogique :</h1>
@@ -2217,28 +2217,33 @@ Note
 <p>Dans le second cas (off-chain) les parties prenantes vont se mettre d’accord sur quelque chose qui sera dans un second temps intégré dans le code par exemple sous forme d’une règle dans un smart contract.</p>
 <p>Dans le premier cas (on-chain) un consensus peut se faire sans intervention humaine. Toutefois on peut imaginer qu’ensuite des méchanismes de contrôle off-chain interviendront. L’algorithme de consensus quantique etant base sur les lois de la physique (puis traduit sous forme de code informatique) est on-chain.</p>
 <p>La dynamique on-chain / off-chain est avant tout celle d’une interaction entre ces deux facettes de la gouvernance.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Type de consensus</th>
-<th style="text-align: center;">Caractéristique</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Agrement byzantin</td>
-<td style="text-align: center;">deterministe</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Nakamoto consensus</td>
-<td style="text-align: center;">probabiliste</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Algorithme de consensus quantique</td>
-<td style="text-align: center;">probabiliste</td>
-</tr>
-</tbody>
-</table>
+<pre class="text"><code>[ GOUVERNANCE OFF-CHAIN ]  &lt;-- Humains / Stratégie
+          |
+==========================================================
+[ GOUVERNANCE ON-CHAIN ]
+          |
+    +-----+-------+
+    |    SMART    |  &lt;-- Logique métier automatisée
+    |  CONTRACTS  |      (Ex: "Si condition X alors action Y")
+    +-----+-------+
+          |
+    +-----+-------+
+    |  ALGORITHME |  &lt;-- Validation de la vérité
+    | DE CONSENSUS|      (Exemple:PoW,PoS)
+    +-----+-------+
+          |
+==========================================================
+[ COUCHE PHYSIQUE ]  </code></pre>
+<p>On peut classifier les algorithmes de consensus de la façon suivante :</p>
+<pre class="text"><code>+-----------------------------------+-----------------+
+|        TYPE DE CONSENSUS          | CARACTÉRISTIQUE |
++-----------------------------------+-----------------+
+| Agrément Byzantin (BFT)           |  Déterministe   |
+|                                   |                 |
+| Consensus Nakamoto (PoW/PoS)      |  Probabiliste   |
+|                                   |                 |
+| Algorithme de Consensus Quantique |  Probabiliste   |
++-----------------------------------+-----------------+</code></pre>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
