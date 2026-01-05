@@ -41,7 +41,9 @@ metadata:
 
 **Version :** 1.0.4 (Dernière mise à jour : 03 janvier 2026)
 
-Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux. Il ne remplace pas un cours universitaire standard (L3/M1)
+Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux. 
+
+Il ne remplace pas un cours universitaire standard (L3/M1 en cursus physique) notamment car le contenu mathématique est ici moins développé et le public n'est pas le même.
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
 
@@ -1588,6 +1590,8 @@ Toutefois la vitesse de phase de l'onde de De Broglie n'est pas la vitesse de la
 
 La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Toutefois elle a permis d'arriver à la conclusion qu'il faut voir un lien entre la position de la particule et celle de l'amplitude du paquet d'ondes.
 
+<!--
+
 |  |  |  |
 |------------------------|------------------------|------------------------|
 | **Caractéristique** | **Onde Plane Standard** | **Électron de De Broglie (1924)** |
@@ -1595,6 +1599,24 @@ La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Tout
 | **Énergie** | Densité constante partout. | Condensée mais indivisible (atome d'énergie). |
 | **Fréquence** | Paramètre mathématique pur. | Fréquence liée à la masse/énergie ($E=hf$). |
 | **Structure** | Sinusoïde infinie. | Proche du concept de **paquet d'ondes**. |
+
+-->
+
++-------------------+---------------------------+-----------------------------------+
+|  Caractéristique  |    Onde Plane Standard    |  Électron de De Broglie (1924)    |
++-------------------+---------------------------+-----------------------------------+
+|  Localisation     | Rigoureusement nulle      | Étale partout, mais               |
+|                   | (étalée partout)          | **condensé** en un point          |
++-------------------+---------------------------+-----------------------------------+
+|  Énergie          | Densité constante partout | Condensée mais indivisible        |
+|                   |                           | (atome d'énergie)                 |
++-------------------+---------------------------+-----------------------------------+
+|  Fréquence        | Paramètre mathématique    | Fréquence liée à la               |
+|                   | pur                       | masse/énergie (E=hf)              |
++-------------------+---------------------------+-----------------------------------+
+|  Structure        | Sinusoïde infinie         | Proche du concept de              |
+|                   |                           | **paquet d'ondes** |
++-------------------+---------------------------+-----------------------------------+
 
 # Principe d'incertitude d'Heisenberg :
 
@@ -2042,11 +2064,31 @@ Toutefois nous avons vu qu'en quantique il n'existe pas une expression d'un para
 
 Voici la correspondance entre grandeurs classiques et grandeurs quantiques :
 
+ 
+
+
+<!--Ce code forme un paragraphe 
+
 | Classique     |                  Quantique                   |
 |:--------------|:--------------------------------------------:|
 | Energie $E$   | $\hat{E} =i\hbar\frac{\partial}{\partial t}$ |
 | Impulsion $p$ |           $\hat{p}=-i\hbar\nabla$            |
 | Position $x$  |                 $x=\hat{x}$                  |
+
+-->
+
+```text
++---------------+--------------------------------------------+
+|   Classique   |                 Quantique                  |
++---------------+--------------------------------------------+
+|  Energie E    |      Ê = iℏ * ∂ / ∂t                       |
++---------------+--------------------------------------------+
+|  Impulsion p  |      p̂ = -iℏ∇                              |
++---------------+--------------------------------------------+
+|  Position x   |      x = x̂                                 |
++---------------+--------------------------------------------+
+```
+
 
 Ceci correspond à une représentation en position. Si nous utilisons une représentation en impulsion, la base est différente et les valeurs associées aux grandeurs seront différentes.
 
@@ -2357,6 +2399,8 @@ Dans ce cas, le domaine des réseaux informatiques n'est pas une application de 
 
 Voici un tableau de synthèse :
 
+<!--
+
 |  |  |  |
 |------------------------|------------------------|------------------------|
 | **Concept** | **Réseaux Classiques (IP)** | **Réseaux Quantiques** |
@@ -2365,6 +2409,25 @@ Voici un tableau de synthèse :
 | **Effet du temps** | Atténuation / Bruit | **Étalement / Décohérence** |
 | **Observation** | Copie possible (Monitoring) | **Mesure = Altération irréversible** |
 | **Objectif ingénieur** | Intégrité des données | **Maintien de la cohérence** |
+
+-->
+
++----------------------+---------------------------+--------------------------------+
+|       Concept        |  Réseaux Classiques (IP)  |       Réseaux Quantiques       |
++----------------------+---------------------------+--------------------------------+
+|  Vecteur d'info      | Flux de photons/électrons | Particule unique ou            |
+|                      | (Massif)                  | intrication                    |
++----------------------+---------------------------+--------------------------------+
+|  Nature du "paquet"  | Signal déterministe       | Paquet d'ondes                 |
+|                      | (0 ou 1)                  | (Potentialités)                |
++----------------------+---------------------------+--------------------------------+
+|  Effet du temps      | Atténuation / Bruit       | **Étalement / Décohérence** |
++----------------------+---------------------------+--------------------------------+
+|  Observation         | Copie possible            | **Mesure = Altération          |
+|                      | (Monitoring)              | irréversible** |
++----------------------+---------------------------+--------------------------------+
+|  Objectif ingénieur  | Intégrité des données     | **Maintien de la cohérence** |
++----------------------+---------------------------+--------------------------------+
 
 Prenons la question en sens inverse dans le paragraphe suivant.
 

@@ -396,7 +396,8 @@ window.Quarto = {
 <p><strong>Informations légales et de version :</strong></p>
 <p><strong>Licence :</strong> Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).</p>
 <p><strong>Version :</strong> 1.0.4 (Dernière mise à jour : 03 janvier 2026)</p>
-<p>Ce travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux. Il ne remplace pas un cours universitaire standard (L3/M1)</p>
+<p>Ce travail a pour vocation d’être un socle théorique et pédagogique en amont de formations appliquées. Il s’adresse aux gens concernés par la convergence entre quantique et réseaux.</p>
+<p>Il ne remplace pas un cours universitaire standard (L3/M1 en cursus physique) notamment car le contenu mathématique est ici moins développé et le public n’est pas le même.</p>
 <p>Ce document n’a fait l’objet d’aucune évaluation par les pairs (peer-review).</p>
 <section id="démarche-et-motivation-pédagogique" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Démarche et motivation pédagogique :</h1>
@@ -933,7 +934,7 @@ x  \\
 <p><span class="math display">B\left| V_1 \right\rangle=B_1¹\left| V1 \right\rangle + B_2¹\left| V2 \right\rangle + ... +B_n¹\left| Vn \right\rangle</span></p>
 <p><span class="math display">B\left| V_2 \right\rangle=B_1²\left| V1 \right\rangle + B_2²\left| V2 \right\rangle + ... +B_n²\left| Vn \right\rangle</span></p>
 <p><span class="math display">....</span></p>
-<div id="fig-vecteur" class="quarto-float quarto-figure quarto-figure-center anchored" width="50%" data-fig-align="center">
+<div id="fig-vecteur" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="50%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-vecteur-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Vecteur.png" id="fig-vecteur" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:50.0%">
@@ -1574,37 +1575,48 @@ En acoustique on associe bien grâce aux séries de fourier un spectre à une vo
 <p>Ces relations sont également valables pour les photons.</p>
 <p>Toutefois la vitesse de phase de l’onde de De Broglie n’est pas la vitesse de la particule mais une valeur approchée. Ainsi De Broglie envisage qu’une particule n’est pas représentée par une onde sinusoïdale pure mais par une superposition de plusieurs ondes sinusoïdales appelées paquet d’ondes.</p>
 <p>La relation <span class="math inline">\lambda=\frac{h}{p}</span> ne joue pas le rôle de postulat de base. Toutefois elle a permis d’arriver à la conclusion qu’il faut voir un lien entre la position de la particule et celle de l’amplitude du paquet d’ondes.</p>
+<!--
+
+|  |  |  |
+|------------------------|------------------------|------------------------|
+| **Caractéristique** | **Onde Plane Standard** | **Électron de De Broglie (1924)** |
+| **Localisation** | Rigoureusement nulle (étalée partout). | Étale partout, mais **condensé** en un point. |
+| **Énergie** | Densité constante partout. | Condensée mais indivisible (atome d'énergie). |
+| **Fréquence** | Paramètre mathématique pur. | Fréquence liée à la masse/énergie ($E=hf$). |
+| **Structure** | Sinusoïde infinie. | Proche du concept de **paquet d'ondes**. |
+
+-->
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 23%">
+<col style="width: 32%">
+<col style="width: 42%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Caractéristique</strong></td>
-<td><strong>Onde Plane Standard</strong></td>
-<td><strong>Électron de De Broglie (1924)</strong></td>
+<td>Caractéristique</td>
+<td>Onde Plane Standard</td>
+<td>Électron de De Broglie (1924)</td>
 </tr>
 <tr class="even">
-<td><strong>Localisation</strong></td>
-<td>Rigoureusement nulle (étalée partout).</td>
-<td>Étale partout, mais <strong>condensé</strong> en un point.</td>
+<td>Localisation</td>
+<td>Rigoureusement nulle (étalée partout)</td>
+<td>Étale partout, mais <strong>condensé</strong> en un point</td>
 </tr>
 <tr class="odd">
-<td><strong>Énergie</strong></td>
-<td>Densité constante partout.</td>
-<td>Condensée mais indivisible (atome d’énergie).</td>
+<td>Énergie</td>
+<td>Densité constante partout</td>
+<td>Condensée mais indivisible (atome d’énergie)</td>
 </tr>
 <tr class="even">
-<td><strong>Fréquence</strong></td>
-<td>Paramètre mathématique pur.</td>
-<td>Fréquence liée à la masse/énergie (<span class="math inline">E=hf</span>).</td>
+<td>Fréquence</td>
+<td>Paramètre mathématique pur</td>
+<td>Fréquence liée à la masse/énergie (E=hf)</td>
 </tr>
 <tr class="odd">
-<td><strong>Structure</strong></td>
-<td>Sinusoïde infinie.</td>
-<td>Proche du concept de <strong>paquet d’ondes</strong>.</td>
+<td>Structure</td>
+<td>Sinusoïde infinie</td>
+<td>Proche du concept de <strong>paquet d’ondes</strong> |</td>
 </tr>
 </tbody>
 </table>
@@ -1910,28 +1922,24 @@ Dans ce cas X(t) est un vecteur d’état qui représente par exemple le courant
 <p>Poser une équation même si elle est juste nous conserve dans le cas de la mécanique classique.</p>
 <p>Toutefois nous avons vu qu’en quantique il n’existe pas une expression d’un paramètre physique mais plusieurs qui dépendent de la base utilisée. C’est la raison pour laquelle l’équation de Schrödinger apparaît contre intuitive quand on la voit pour la première fois.</p>
 <p>Voici la correspondance entre grandeurs classiques et grandeurs quantiques :</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Classique</th>
-<th style="text-align: center;">Quantique</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Energie <span class="math inline">E</span></td>
-<td style="text-align: center;"><span class="math inline">\hat{E} =i\hbar\frac{\partial}{\partial t}</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Impulsion <span class="math inline">p</span></td>
-<td style="text-align: center;"><span class="math inline">\hat{p}=-i\hbar\nabla</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Position <span class="math inline">x</span></td>
-<td style="text-align: center;"><span class="math inline">x=\hat{x}</span></td>
-</tr>
-</tbody>
-</table>
+<!--Ce code forme un paragraphe 
+
+| Classique     |                  Quantique                   |
+|:--------------|:--------------------------------------------:|
+| Energie $E$   | $\hat{E} =i\hbar\frac{\partial}{\partial t}$ |
+| Impulsion $p$ |           $\hat{p}=-i\hbar\nabla$            |
+| Position $x$  |                 $x=\hat{x}$                  |
+
+-->
+<pre class="text"><code>+---------------+--------------------------------------------+
+|   Classique   |                 Quantique                  |
++---------------+--------------------------------------------+
+|  Energie E    |      Ê = iℏ * ∂ / ∂t                       |
++---------------+--------------------------------------------+
+|  Impulsion p  |      p̂ = -iℏ∇                              |
++---------------+--------------------------------------------+
+|  Position x   |      x = x̂                                 |
++---------------+--------------------------------------------+</code></pre>
 <p>Ceci correspond à une représentation en position. Si nous utilisons une représentation en impulsion, la base est différente et les valeurs associées aux grandeurs seront différentes.</p>
 <p>A titre d’illustration dans le cas classique <span class="math inline">p</span> correspond a une grandeur physique et dans le cas quantique à un opérateur <span class="math inline">\hat{p}</span>.</p>
 <p>Un opérateur agit sur une fonction : la fonction d’onde <span class="math inline">\Psi</span> solution de l’équation de Schrödinger.</p>
@@ -2140,42 +2148,54 @@ Dans ce cas X(t) est un vecteur d’état qui représente par exemple le courant
 <p>A l’horizon 5 ans il faudra adapter les infrastructures actuelles pour permettre l’émergence de l’internet quantique : à quoi ressemblera le réseau d’interconnexion des QPUs (distributed quantum computing)?</p>
 <p>Dans ce cas, le domaine des réseaux informatiques n’est pas une application de la quantique mais une infrastructure réseau adaptée aux ordinateurs quantiques constitue un besoin.</p>
 <p>Voici un tableau de synthèse :</p>
+<!--
+
+|  |  |  |
+|------------------------|------------------------|------------------------|
+| **Concept** | **Réseaux Classiques (IP)** | **Réseaux Quantiques** |
+| **Vecteur d'info** | Flux de photons/électrons (Massif) | Particule unique ou intrication |
+| **Nature du "paquet"** | Signal déterministe (0 ou 1) | Paquet d'ondes (Potentialités) |
+| **Effet du temps** | Atténuation / Bruit | **Étalement / Décohérence** |
+| **Observation** | Copie possible (Monitoring) | **Mesure = Altération irréversible** |
+| **Objectif ingénieur** | Intégrité des données | **Maintien de la cohérence** |
+
+-->
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 27%">
+<col style="width: 32%">
+<col style="width: 38%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Concept</strong></td>
-<td><strong>Réseaux Classiques (IP)</strong></td>
-<td><strong>Réseaux Quantiques</strong></td>
+<td><pre><code>  Concept</code></pre></td>
+<td>Réseaux Classiques (IP)</td>
+<td><pre><code>  Réseaux Quantiques</code></pre></td>
 </tr>
 <tr class="even">
-<td><strong>Vecteur d’info</strong></td>
+<td>Vecteur d’info</td>
 <td>Flux de photons/électrons (Massif)</td>
 <td>Particule unique ou intrication</td>
 </tr>
 <tr class="odd">
-<td><strong>Nature du “paquet”</strong></td>
+<td>Nature du “paquet”</td>
 <td>Signal déterministe (0 ou 1)</td>
 <td>Paquet d’ondes (Potentialités)</td>
 </tr>
 <tr class="even">
-<td><strong>Effet du temps</strong></td>
+<td>Effet du temps</td>
 <td>Atténuation / Bruit</td>
-<td><strong>Étalement / Décohérence</strong></td>
+<td><strong>Étalement / Décohérence</strong> |</td>
 </tr>
 <tr class="odd">
-<td><strong>Observation</strong></td>
+<td>Observation</td>
 <td>Copie possible (Monitoring)</td>
-<td><strong>Mesure = Altération irréversible</strong></td>
+<td><strong>Mesure = Altération irréversible</strong> |</td>
 </tr>
 <tr class="even">
-<td><strong>Objectif ingénieur</strong></td>
+<td>Objectif ingénieur</td>
 <td>Intégrité des données</td>
-<td><strong>Maintien de la cohérence</strong></td>
+<td><strong>Maintien de la cohérence</strong> |</td>
 </tr>
 </tbody>
 </table>
