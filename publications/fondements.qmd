@@ -1758,17 +1758,27 @@ Au contraire, dans le cas général, l'incertitude suit la forme d'une inégalit
 
 [@alma991013035899705804]
 
-![Cas 1](Incertitude1.png){#fig-incert1 fig-align="center" width="70%"}
+![Cas 1:incertitude forte sur la position](Incertitude1.png){#fig-incert1 fig-align="center" width="80%"}
 
 \begin{center}
-\begin{tikzpicture}[x=3.8cm/360]
-  \pgfplothandlerlineto
-\pgfplotfunction{\x}{-200,-199,...,0}{\pgfpointxy{\x}{0}}
-\pgfplotfunction{\x}{0,1,...,792}{\pgfpointxy{\x}{sin(5*\x)}}
- 
-\pgfplotfunction{\x}{793,794,...,900}{\pgfpointxy{\x}{0}}
-  \pgfusepath{stroke}
-\draw (4.5cm,1.5cm)  node [fill=green!20] {La bande est large, l'incertitude sur $\Delta x$ est élevée};
+\begin{tikzpicture}[x=1cm, y=1cm]
+    % Axes
+    \draw[->, >=stealth] (-1,0) -- (10,0) node[right] {$x$};
+    \draw[->, >=stealth] (0,-1.5) -- (0,1.5) node[above] {$\psi(x)$};
+
+    % Tracé de l'onde (Paquet large)
+    % On utilise une fonction sinus avec une enveloppe pour éviter les coupures nettes
+    \draw[blue, thick, samples=400, domain=0:9] 
+        plot (\x, {sin(5 * \x r)}); % 'r' pour radians
+
+    % Indication de l'incertitude (La "bande")
+    \draw[<->, >=stealth, red, thick] (0,-1.2) -- (9,-1.2) 
+        node[midway, below] {$\Delta x$ élevé};
+    
+    % Note explicative plus sobre
+    \node[draw, fill=green!10, text width=5cm, align=center, rounded corners] at (4.5, 2) 
+        {\small La bande est large : position peu précise, mais fréquence (impulsion $p$) mieux définie.};
+        
 \end{tikzpicture}
 \end{center}
 
@@ -1778,7 +1788,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 
 2.  Si vous voulons que l'énergie cinétique soit très petite nous devons accorde assez de place a l'électron : l'incertitude sur sa position doit être grande, sa distance moyenne au noyau doit alors être grande.
 
-![Cas 2](Incertitude2.png){#fig-incert2 fig-align="center" width="70%"}
+![Cas 2: incertitude floue sur la position](Incertitude2.png){#fig-incert2 fig-align="center" width="70%"}
 
 \begin{center}
 \begin{tikzpicture}
@@ -1795,6 +1805,49 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
     at (3.5, 2.5) {$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$ \\ \small Difficile de trancher l'incertitude ici.};
 \end{tikzpicture}
 \end{center}
+
+
+![Cas 3:incertitude faible sur la position](Incertitude3.png){#fig-incert3 fig-align="center" width="80%"}
+
+\begin{tikzpicture}[x=2cm, y=2cm]
+    % Axes
+    \draw[->, >=stealth] (-2.2,0) -- (2.2,0) node[right] {$x$};
+    % On décale le label psi(x) à gauche pour libérer l'espace du haut
+    \draw[->, >=stealth] (0,-1) -- (0,1.5) node[left, at start] {} node[near end, left] {$\psi(x)$};
+
+    % Le Paquet d'ondes serré (Delta x faible)
+    \draw[red, thick, samples=400, domain=-2:2] 
+        plot (\x, { exp(-8 * \x * \x) * cos(25 * \x r) }); 
+
+    % Indication Delta x sous la courbe pour ne rien surcharger
+    \draw[<->, >=stealth, blue, thick] (-0.35,-0.3) -- (0.35,-0.3) 
+        node[midway, below] {$\Delta x$ réduit};
+        
+    % Cartouche informatif placé dans un coin libre (en haut à droite)
+    \node[draw, fill=green!10, rounded corners, font=\small, text width=4cm, align=center] at (1.2, 1.2) {
+        \textbf{Localisation} \\ 
+        Somme d'une infinité de fréquences.
+    };
+\end{tikzpicture}
+
+C'est l'image type d'un photon ou d'un électron qui voyage dans un environnement sans obstacles.
+
+En resume :
+
+```text
++-----------+------------------+----------------------------------------------+
+| RÉFÉRENCE | ÉTAT PHYSIQUE    | TRADUCTION "RÉSEAU"                          |
++-----------+------------------+----------------------------------------------+
+| Figure 7  | Onde Pure        | Un signal continu (porteuse seule).          |
+|           | (Monochrome)     | Fréquence connue, position inconnue.         |
++-----------+------------------+----------------------------------------------+
+| Figure 8  | Interférence     | Un signal qui commence à être modulé.        |
+|           | (Battement)      | Perte de précision sur la fréquence brute.   |
++-----------+------------------+----------------------------------------------+
+| Figure 9  | Paquet d'ondes   | Un "Pulse" ou un Qubit qui voyage.           |
+|           | (Pulse localisé) | On sait quand il passe (timing précis).      |
++-----------+------------------+----------------------------------------------+
+```
 
 ## Premier principe d'incertitude d'Heisenberg (position-impulsion) :
 
