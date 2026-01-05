@@ -3,7 +3,7 @@ title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
 version: "1.0.4" 
-date_version: "03 janvier 2026"
+date_version: "05 janvier 2026"
 editor: visual
 format:
   html:
@@ -39,7 +39,7 @@ metadata:
 
 **Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-**Version :** 1.0.4 (Dernière mise à jour : 03 janvier 2026)
+**Version :** 1.0.4 (Dernière mise à jour : 05 janvier 2026)
 
 Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux. 
 
@@ -1758,7 +1758,7 @@ Au contraire, dans le cas général, l'incertitude suit la forme d'une inégalit
 
 [@alma991013035899705804]
 
-![Cas 1:incertitude forte sur la position](Incertitude1.png){#fig-incert1 fig-align="center" width="80%"}
+![Incertitude forte sur la position](Incertitude1.png){#fig-incert1 fig-align="center" width="80%"}
 
 \begin{center}
 \begin{tikzpicture}[x=1cm, y=1cm]
@@ -1788,7 +1788,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 
 2.  Si vous voulons que l'énergie cinétique soit très petite nous devons accorde assez de place a l'électron : l'incertitude sur sa position doit être grande, sa distance moyenne au noyau doit alors être grande.
 
-![Cas 2: incertitude floue sur la position](Incertitude2.png){#fig-incert2 fig-align="center" width="70%"}
+![Incertitude floue sur la position](Incertitude2.png){#fig-incert2 fig-align="center" width="70%"}
 
 \begin{center}
 \begin{tikzpicture}
@@ -1807,7 +1807,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 \end{center}
 
 
-![Cas 3:incertitude faible sur la position](Incertitude3.png){#fig-incert3 fig-align="center" width="80%"}
+![Incertitude faible sur la position](Incertitude3.png){#fig-incert3 fig-align="center" width="80%"}
 
 \begin{tikzpicture}[x=2cm, y=2cm]
     % Axes
@@ -1832,7 +1832,7 @@ Par exemple dans le cours de Berkeley [@alma991013035899705804] il est donné en
 
 C'est l'image type d'un photon ou d'un électron qui voyage dans un environnement sans obstacles.
 
-En resume :
+En résumé :
 
 ```text
 +-----------+------------------+----------------------------------------------+
