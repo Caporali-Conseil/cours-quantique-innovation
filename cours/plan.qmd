@@ -1,37 +1,30 @@
-<pre style="background-color: #fafafa; padding: 20px; border: 1px solid #333; font-family: 'Courier New', Courier, monospace; line-height: 1.3; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; color: #333;">
-===========================================================================
-      Concevoir des architectures résilientes à l'ère de la 
-             décentralisation : une approche holistique
-===========================================================================
+<div style="background-color: #fafafa; padding: 15px; border: 1px solid #333; font-family: monospace; font-size: 0.9em; line-height: 1.4; max-width: 100%; overflow-x: auto;">
 
-[ Ma valeur ajoutée ]
+**Concevoir des architectures résilientes à l'ère de la décentralisation : une approche holistique**
 
-  * Un outil : <a href="https://caporali-conseil.github.io/cours-quantique-innovation/publications/fondements.html" style="color: #1a5fb4; font-weight: bold; text-decoration: underline;">le document support théorique (socle de rigueur)</a>
+---
 
-  * Une méthodologie : approche orientée "cas d'usage" industriels
+**[ Ma valeur ajoutée ]**
 
----------------------------------------------------------------------------
+* Un outil : [le document support théorique (socle de rigueur)](https://caporali-conseil.github.io/cours-quantique-innovation/publications/fondements.html)
+* Une méthodologie : approche orientée "cas d'usage" industriels
 
-[ Structure du programme ]
+---
 
-  Partie 1 : l'entropie et l'information (le socle)
-             De la thermodynamique de Landauer aux limites de Shannon.
+**[ Structure du programme ]**
 
-  Partie 2 : de la tolérance aux fautes byzantines au consensus quantique
-             Sécuriser la décision par les lois de la physique.
+* **Partie 1 :** l'entropie et l'information (le socle). De la thermodynamique de Landauer aux limites de Shannon.
+* **Partie 2 :** de la tolérance aux fautes byzantines au consensus quantique. Sécuriser la décision par les lois de la physique.
+* **Partie 3 :** architectures de confiance critiques. Design résilient : blockchain, IoT et infrastructures vitales.
 
-  Partie 3 : architectures de confiance critiques
-             Design résilient : blockchain, IoT et infrastructures vitales.
+---
 
----------------------------------------------------------------------------
+**[ Informations pratiques ]**
 
-[ Informations pratiques ]
+* Public visé : futurs ingénieurs et architectes réseaux.
+* Format : distanciel (présentiel ponctuel sur demande).
+* Sur demande : plan détaillé et proposition d'intervention.
 
-  * Public visé : futurs ingénieurs et architectes réseaux.
-  * Format      : distanciel (présentiel ponctuel sur demande).
-  * Sur demande : plan détaillé et proposition d'intervention.
+**Contact : Stéphane Caporali - [www.caporali.fr](http://www.caporali.fr)**
 
-===========================================================================
-             Contact : Stéphane Caporali - www.caporali.fr
-===========================================================================
-</pre>
+</div>
