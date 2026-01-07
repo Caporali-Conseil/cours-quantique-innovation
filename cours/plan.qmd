@@ -14,22 +14,22 @@
 
 [ STRUCTURE DU PROGRAMME ]
 
-  PARTIE 1 : L'Entropie et l'Information (Le Socle)
+  PARTIE 1 : L'entropie et l'information (Le Socle)
              De la thermodynamique de Landauer aux limites de Shannon.
 
-  PARTIE 2 : De la Tolerance aux fautes Byzantines au Consensus Quantique
-             Securiser la decision par les lois de la physique.
+  PARTIE 2 : De la tolérance aux fautes byzantines au consensus quantique
+             Sécuriser la décision par les lois de la physique.
 
-  PARTIE 3 : Architectures de Confiance Critiques
-             Design resilient : Blockchain, IoT et infrastructures vitales.
+  PARTIE 3 : Architectures de confiance critiques
+             Design résilient : blockchain, IoT et infrastructures vitales.
 
 ---------------------------------------------------------------------------
 
 [ INFORMATIONS PRATIQUES ]
 
-  * PUBLIC VISE : Futurs ingenieurs et architectes reseaux.
-  * FORMAT       : Intervention distancielle (Expertise Quartier Latin).
-  * SUR DEMANDE : Plan detaille et proposition d'intervention.
+  * PUBLIC VISE : Futurs ingénieurs et architectes réseaux.
+  * FORMAT       : Intervention distancielle ou présentielle.
+  * SUR DEMANDE : Plan détaillé et proposition d'intervention.
 
 ===========================================================================
              Contact : Stephane Caporali - www.caporali.fr
