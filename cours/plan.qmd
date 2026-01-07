@@ -1,7 +1,4 @@
- 
-
-```text
-
+<pre style="background-color: #f4f4f4; padding: 15px; border: 1px solid #ddd; font-family: monospace; line-height: 1.2;">
 ===========================================================================
       CONCEVOIR DES ARCHITECTURES RESILIENTES A L'ERE DE LA 
              DECENTRALISATION : UNE APPROCHE HOLISTIQUE
@@ -9,9 +6,7 @@
 
 [ MA VALEUR AJOUTEE ]
 
-  * UN OUTIL : Le document support theorique (Socle de rigueur)
-    Lien : https://caporali-conseil.github.io/cours-quantique-innovation/
-           publications/fondements.html
+  * UN OUTIL : <a href="https://caporali-conseil.github.io/cours-quantique-innovation/publications/fondements.html" style="color: #007bff; text-decoration: underline;">Le document support theorique (Socle de rigueur)</a>
 
   * UNE METHODOLOGIE : Approche orientee "Cas d'Usage" industriels
 
@@ -33,11 +28,10 @@
 [ INFORMATIONS PRATIQUES ]
 
   * PUBLIC VISE : Futurs ingenieurs et architectes reseaux.
-  * FORMAT       : Intervention distancielle ou presentielle.
-  * SUR DEMANDE : Plan detaille, volume horaire et propositions tarifaires.
+  * FORMAT       : Intervention distancielle (Expertise Quartier Latin).
+  * SUR DEMANDE : Plan detaille et proposition d'intervention.
 
 ===========================================================================
              Contact : Stephane Caporali - www.caporali.fr
 ===========================================================================
-
-```
+</pre>
