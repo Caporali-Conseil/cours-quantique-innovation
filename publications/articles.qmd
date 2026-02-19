@@ -10,6 +10,18 @@ Cette page présente la liste des publications scientifiques et des communicatio
 
 *Ces articles explorent les liens entre les mécanismes de consensus de la blockchain et les principes de la thermodynamique et de la théorie de l'information.*
 
+# Travaux en cours de publication (Pre-prints)
+
+### Blockchain Consensus Based on a Work: Thermodynamic and Quantum-inspired Interpretations
+**Auteur :** Stéphane Caporali (2026)  
+**Statut :** Soumis le 28/01/2026 (En cours de référencement sur Orvium)
+
+[Télécharger le manuscrit (PDF)](../pdf/Caporali_Blockchain_Thermodynamics_2026.pdf)
+
+> Ce manuscrit pose les bases de la **métrologie physique** appliquée aux architectures décentralisées, en utilisant notamment le formalisme du rendement de Carnot pour auditer l'efficience des consensus.
+
+***
+
 Caporali, S. (18/04/2024)
 **"Blockchain consensus based on a work : an interpretation by the thermodynamics and application to state machine and to blockchain architecture"** 
 
