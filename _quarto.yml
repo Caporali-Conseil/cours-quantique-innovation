@@ -13,7 +13,7 @@ project:
   resources:
     - "*.tex"
     - "code_tikz/*.tex"
-    - "pdf/*.pdf"  
+    - "pdf/"
     
 
 website:
