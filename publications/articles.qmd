@@ -13,7 +13,9 @@ Cette page présente la liste des publications scientifiques et des communicatio
 ***
 
 Caporali, S. (28/01/2026)
-*** Blockchain Consensus Based on a Work: Thermodynamic and Quantum-inspired Interpretations ***
+**"Blockchain Consensus Based on a Work: Thermodynamic and
+Quantum-inspired Interpretations for State Machine
+Architectures (Version 2)"**
 Soumis le 28/01/2026 : en cours de référencement (pending) sur Orvium.
 
 [Télécharger le manuscrit (PDF)](../pdf/Caporali_Blockchain_Thermodynamics_2026.pdf)
