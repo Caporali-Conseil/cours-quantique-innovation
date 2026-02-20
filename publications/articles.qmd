@@ -2,19 +2,19 @@
 title: "Publications et articles de recherche"
 ---
 
-Cette page présente la liste des publications scientifiques et des communications techniques liées aux travaux de Caporali Conseil, notamment dans l'application de l'approche MAOS (Méthode d'Analyse des Opérations Systémiques) aux systèmes décentralisés et à la physique fondamentale.
+Cette page présente la liste des publications scientifiques et des communications techniques liées aux travaux de Caporali Conseil.
 
 ***
 
 # Blockchain et thermodynamique
 
 *Ces articles explorent les liens entre les mécanismes de consensus de la blockchain et les principes de la thermodynamique et de la théorie de l'information.*
+ 
+***
 
-# Travaux en cours de publication (Pre-prints)
-
-### Blockchain Consensus Based on a Work: Thermodynamic and Quantum-inspired Interpretations
-**Auteur :** Stéphane Caporali (2026)  
-**Statut :** Soumis le 28/01/2026 (En cours de référencement sur Orvium)
+Caporali, S. (28/01/2026)
+*** Blockchain Consensus Based on a Work: Thermodynamic and Quantum-inspired Interpretations ***
+Soumis le 28/01/2026 : en cours de référencement (pending) sur Orvium.
 
 [Télécharger le manuscrit (PDF)](../pdf/Caporali_Blockchain_Thermodynamics_2026.pdf)
 
