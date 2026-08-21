@@ -1,33 +1,27 @@
 ---
 title: "Accueil"
+toc: false
 ---
 
 Bienvenue dans l'espace de recherche et de modélisation de Caporali Conseil. Notre laboratoire est dédié à l'ingénierie de la résilience des systèmes complexes en l'ancrant dans les lois fondamentales de la physique.
 
 Nous transformons la cybersécurité et la gouvernance en un problème de Thermodynamique de l'Information.
 
-"L'information est physique, et les lois de la physique sont les lois de l'information."
+> « L'information est physique, et les lois de la physique sont les lois de l'information. »  
+> — **Rolf Landauer**, 1991
 
-— Rolf Landauer, 1991  
+La liste de mes publications n'est pas détaillée ici mais est disponible via les liens suivants :
 
-# Utilisez les liens ci-dessous pour accéder aux différents travaux du laboratoire :
+- [Profil Google Scholar](https://scholar.google.com/citations?user=Fcg7XacAAAAJ&hl=fr)
 
-## 1. Fondements théoriques de la mécanique quantique :
+- [Profil HAL](https://cv.hal.science/stephane-caporali)
 
-Il s'agit d'un support de cours que j'ai rédigé pour mon propre compte durant l'été 2025 sur les fondements de la mécanique quantique afin de rentrer dans le sujet. Il n'a pas d'autre vocation que d'être un cours d'introduction comme on en trouve dans les manuels universitaires. Toutefois il présente une originalité du fait des sources utilisées. J'ai choisi de le mettre en ligne mais avec une licence creative common : si vous l'utilisez merci de me citer.
+- [Profil Orvium](https://dapp.orvium.io/profile/stephane-caporali-4167)
 
-[Accès : Fondements Théoriques (CC-B)](publications/fondements.qmd)
+## Travaux du laboratoire
 
-## 2. Le Programme de cours :
+### 1. Proof of concept
+Directement inspirée de la dernière publication, cette page pose des éléments d'implémentation pour l'application de la matrice densité dans le domaine des systèmes distribués. Elle a vocation à devenir un espace collaboratif.
 
-Ceci correspond à une formation nouvelle que je propose dont voici le plan possible. Il est bien sûr à adapter au cas par cas en fonction du besoin spécifique.
-
-[Accès : Programme de Cours](cours/plan.qmd)
-
-## 3. Publications & présentations
-
-Retrouvez ici l'ensemble de nos contributions à la communauté scientifique et technique, incluant des articles de recherche originaux, des présentations de conférences.
-
-[Accès : Articles de Recherche](publications/articles.qmd)
-
-[Accès : Présentations et Conférences](publications/presentations.qmd)
+### 2. Support de cours : fondements théoriques de la quantique
+Ce cours, qui reprend les éléments habituels de la physique théorique, s'adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY.

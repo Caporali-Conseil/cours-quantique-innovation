@@ -7,40 +7,33 @@ project:
     - "*.qmd"
     - "!*.tex"
     - "!code_tikz/*"
-  
+
   # On définit ces fichiers comme ressources pour qu'ils soient quand même 
   # copiés dans le dossier final et accessibles par lien hypertexte
   resources:
     - "*.tex"
     - "code_tikz/*.tex"
     - "pdf/"
-    
 
 website:
   title: "Blog Scientifique : le laboratoire de Caporali Conseil"
-  
+
   navbar:
     background: primary
     left:
       - href: index.qmd
         text: Accueil
-      - href: cours/plan.qmd
-        text: "Programme de Cours"
-      - text: "Publications"
-        menu:
-          - text: "Articles de Recherche"
-            href: publications/articles.qmd
-          - text: "Présentations et Conférences"
-            href: publications/presentations.qmd
-          - text: "Fondement théorique de la quantique (CC-BY)"
-            href: publications/fondements.qmd
+      - href: PoC.qmd
+        text: "Proof of concept"
+      - href: publications/fondements.qmd
+        text: "Fondement théorique de la quantique (CC-BY)"
     right:
       - icon: github
         href: https://github.com/Caporali-Conseil
-  
+
   page-footer:
     right: "Caporali Conseil | Tous droits réservés | 2026"
-    left: "Basé sur les Sciences Physiques et le MAOS"
+    left: "Physique de l information et réseaux"
 
 format:
   html:
