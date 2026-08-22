@@ -2,8 +2,8 @@
 title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
-version: "1.0.4" 
-date_version: "05 janvier 2026"
+version: "1.0.5" 
+date_version: "22 août 2026"
 editor: visual
 format:
   html:
