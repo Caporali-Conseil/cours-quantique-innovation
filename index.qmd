@@ -26,10 +26,12 @@ La liste de mes publications n'est pas détaillée ici mais est disponible via l
 Directement inspirée de la dernière publication, cette page pose des éléments d'implémentation pour l'application de la matrice densité dans le domaine des systèmes distribués. Elle a vocation à devenir un espace collaboratif.
 
 ### 2. Support de cours : fondements théoriques de la quantique
-Ce cours, qui reprend les éléments habituels de la physique théorique, s'adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY.
 
-📄 **[Télécharger ou consulter le support de cours au format PDF](pdf/fondements.pdf)**
+📄 **[Consulter le support de cours complet](publications/fondements.html)**
 
 > 📜 **Historique des versions :** 
+> 
 > - **Version actuelle :** v1.0.5 (22 août 2026)
-> - **Ancienne version :** [Consulter la version 1.0.4](https://github.com/Caporali-Conseil/cours-quantique-innovation/blob/v1.0.4/publications/fondements.qmd)
+> - **Ancienne version :** [Consulter la version 1.0.4 sur GitHub](https://github.com/Caporali-Conseil/cours-quantique-innovation/blob/v1.0.4/publications/fondements.qmd)
+
+Ce cours, qui reprend les éléments habituels de la physique théorique, s'adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY.
