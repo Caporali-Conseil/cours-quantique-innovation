@@ -18,6 +18,8 @@ La liste de mes publications n'est pas détaillée ici mais est disponible via l
 
 - [Profil Orvium](https://dapp.orvium.io/profile/stephane-caporali-4167)
 
+> 🌐 **Site officiel :** Retrouvez l'ensemble de nos prestations et publications sur [www.caporali.fr](https://www.caporali.fr).
+
 ## Travaux du laboratoire
 
 ### 1. Proof of concept
@@ -25,6 +27,8 @@ Directement inspirée de la dernière publication, cette page pose des élément
 
 ### 2. Support de cours : fondements théoriques de la quantique
 Ce cours, qui reprend les éléments habituels de la physique théorique, s'adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY.
+
+📄 **[Télécharger ou consulter le support de cours au format PDF](pdf/fondements.pdf)**
 
 > 📜 **Historique des versions :** 
 > - **Version actuelle :** v1.0.5 (22 août 2026)
