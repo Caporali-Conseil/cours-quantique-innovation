@@ -31,9 +31,13 @@ website:
       - icon: github
         href: https://github.com/Caporali-Conseil
 
+   
   page-footer:
-    right: "Caporali Conseil | Tous droits réservés | 2026"
-    left: "Physique de l information et réseaux"
+    left: "Physique de l'information & réseaux"
+    center: "© 2026 [Caporali Conseil](https://www.caporali.fr) • Tous droits réservés"
+    right: "Licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+    border: true
+    background: light
 
 format:
   html:
