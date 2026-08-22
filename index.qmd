@@ -25,3 +25,7 @@ Directement inspirée de la dernière publication, cette page pose des élément
 
 ### 2. Support de cours : fondements théoriques de la quantique
 Ce cours, qui reprend les éléments habituels de la physique théorique, s'adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY.
+
+> 📜 **Historique des versions :** 
+> - **Version actuelle :** v1.0.5 (22 août 2026)
+> - **Ancienne version :** [Consulter la version 1.0.4 (GitHub Tag)](https://github.com/Caporali-Conseil/cours-quantique-innovation/tree/v1.0.4)

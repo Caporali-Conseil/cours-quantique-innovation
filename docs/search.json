@@ -613,7 +613,7 @@
     "href": "index.html#travaux-du-laboratoire",
     "title": "Accueil",
     "section": "Travaux du laboratoire",
-    "text": "Travaux du laboratoire\n\n1. Proof of concept\nDirectement inspirée de la dernière publication, cette page pose des éléments d’implémentation pour l’application de la matrice densité dans le domaine des systèmes distribués. Elle a vocation à devenir un espace collaboratif.\n\n\n2. Support de cours : fondements théoriques de la quantique\nCe cours, qui reprend les éléments habituels de la physique théorique, s’adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY."
+    "text": "Travaux du laboratoire\n\n1. Proof of concept\nDirectement inspirée de la dernière publication, cette page pose des éléments d’implémentation pour l’application de la matrice densité dans le domaine des systèmes distribués. Elle a vocation à devenir un espace collaboratif.\n\n\n2. Support de cours : fondements théoriques de la quantique\nCe cours, qui reprend les éléments habituels de la physique théorique, s’adresse aux experts en réseaux distribués souhaitant puiser dans la physique quantique — et notamment statistique — des briques mathématiques pour les réutiliser dans le cadre de la formalisation du mécanisme de consensus. Il est en ligne gratuitement sous licence CC-BY.\n\n📜 Historique des versions : - Version actuelle : v1.0.5 (22 août 2026) - Ancienne version : Consulter la version 1.0.4 (GitHub Tag)"
   },
   {
     "objectID": "publications/articles.html",
