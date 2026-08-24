@@ -2040,136 +2040,183 @@ De plus, ces fonctions forment un ensemble **complet** : n'importe quelle foncti
 
 $$g(x) = \sum_{k=-\infty}^{+\infty} c_k f_k(x)$$
 
-### Développement complexe de fourier :
+### Développement en série complexe de Fourier
 
 ::: callout-note
-En 1807 Joseph Fourier, alors préfet de l'Isère, présente ses travaux sur la propagation de la chaleur. Il émet l'idée révolutionnaire que n'importe quelle fonction périodique, aussi "brisée" soit-elle, peut être reconstruite par une somme de fonctions sinus et cosinus parfaitement lisses.
+**Note historique et mathématique : Les séries de Fourier**
 
-**Séries de Fourier :** [@Najib2022-qq]
+En 1807, Joseph Fourier présente ses travaux sur la propagation de la chaleur. Il y avance l'idée révolutionnaire que toute fonction périodique peut être reconstruite par une somme de fonctions sinus et cosinus.
 
-$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$
+**Série de Fourier complexe :** [@Najib2022-qq]
 
-Cette formule exprime que la fonction $f(x)$ est une superposition (une somme) d'ondes élémentaires.
+$$f(x) = \sum_{n=-\infty}^{+\infty} C_n e^{i 2\pi \frac{n}{T} x}$$
+
+Cette formule exprime la fonction $f(x)$ comme une superposition d'ondes élémentaires.
 
 **Coefficients de Fourier :**
 
-$$C_{n}={\frac {1}{T}}\int _{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t.$$ Chaque coefficient $C_n$ agit comme un "poids" qui détermine l'importance de l'harmonique $n$ dans le signal total.
+$$C_n = \frac{1}{T} \int_{0}^{T} f(t) e^{-i 2\pi \frac{n}{T} t} \, dt$$
+
+Chaque coefficient $C_n$ agit comme un « poids » qui détermine l'amplitude de l'harmonique $n$ dans le signal global.
 :::
 
-Sous forme algébrique, la décomposition d'un vecteur fonctionnel $\left| f \right\rangle$ sur la base des vecteurs propres $\left| f_n \right\rangle$ de l'opérateur $\frac{d^2}{dx^2}$ se traduit par l'identité :
+### L'analogie algébrique chez Blaquière
 
-$$f(x)=\sum _{n=-\infty }^{+\infty }C_{n}{e}^{{i}2\pi {\tfrac {n}{T}}x}$$
+Sous forme algébrique, la décomposition d'un vecteur fonctionnel $|f\rangle$ sur la base des vecteurs propres $|f_n\rangle$ de l'opérateur $\frac{d^2}{dx^2}$ se traduit par l'identité :
 
-dans laquelle nous supposons que $f(x)$ est une fonction réelle de la variable réelle $x$ définie sur l'intervalle $[0, T]$. On reconnaît sous cette forme le développement de $f(x)$ en série complexe de Fourier.
+$$f(x) = \sum_{n=-\infty}^{+\infty} C_n e^{i 2\pi \frac{n}{T} x}$$
 
-Les coefficients $C_n$ (qui sont les composantes du vecteur $\left| f \right\rangle$ dans cette base) se calculent par la formule de Fourier, qui est l'expression du produit hermitien entre $\left| f_n \right\rangle$ et $\left| f \right\rangle$ :
+où l'on suppose que $f(x)$ est une fonction définie sur l'intervalle $[0, T]$. On reconnaît sous cette forme exacte le développement de $f(x)$ en série de Fourier complexe.
 
-$$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t$$
+Les coefficients $C_n$ (qui représentent les composantes du vecteur $|f\rangle$ dans cette base) se calculent par le produit hermitien entre le vecteur de base $|f_n\rangle$ et le vecteur d'état $|f\rangle$ :
 
+$$\boxed{C_n = \langle f_n | f \rangle = \frac{1}{T} \int_{0}^{T} \left( e^{i 2\pi \frac{n}{T} t} \right)^* f(t) \, dt = \frac{1}{T} \int_{0}^{T} e^{-i 2\pi \frac{n}{T} t} f(t) \, dt}$$
+
+::: callout-tip
+### Synthèse conceptuelle
+Chez Blaquière, les coefficients de Fourier $C_n$ ne sont rien d'autre que les **composantes du vecteur fonctionnel dans la base des fonctions propres**. 
+
+En mécanique quantique, la projection $\langle f_n | f \rangle$ donne l'**amplitude de probabilité** d'observer le système dans l'état propre $|f_n\rangle$.
+:::
  
+::: callout-tip
+### Origine mathématique du terme $i \frac{2\pi}{T}$
 
-### Calcul pratique des éléments de la matrice $\mathbf{B}$ :
+L'apparition du terme $i \frac{2\pi}{T}$ dans l'expression des fonctions propres $f_k(x) = e^{i k \frac{2\pi}{T} x}$ résulte de deux contraintes physiques fondamentales :
+
+1. **L'apparition du $i$ ($\Delta < 0$) :** Pour que la solution ne diverge pas à l'infini et reste physiquement bornée, la valeur propre de l'opérateur $\frac{d^2}{dx^2}$ doit être négative. Le discriminant de l'équation caractéristique étant négatif, les solutions sont obligatoirement des exponentielles complexes oscillantes à base d'imaginaires purs ($i$).
+2. **L'apparition du $2\pi / T$ (conditions aux limites) :** L'exigence de continuité et de périodicité sur l'intervalle $[0, T]$ impose $f(0) = f(T)$, ce qui verrouille la constante de phase à des valeurs discrètes $\lambda = k \frac{2\pi}{T}$ avec $k \in \mathbb{Z}$.
+
+C'est la combinaison de la régularité physique ($\Delta < 0$) et du confinement spatial ($[0, T]$) qui fait émerger la quantification et le formalisme de Fourier.
+:::
+
+::: callout-important
+### Remarque fondamentale : La géométrie expérimentale sculpte la base de Hilbert
+
+L'équation différentielle (l'opérateur $\hat{H}$ ou $\frac{d^2}{dx^2}$) fournit la structure mathématique globale, mais **ce sont les conditions physiques et géométriques de l'expérience (le confinement et les parois) qui dictent la forme exacte des vecteurs de la base orthonormée.**
+
+Ce principe explique pourquoi un même opérateur différentiel génère des bases de fonctions complètement différentes selon le dispositif expérimental considéré :
+
+| Dispositif expérimental | Conditions aux limites (Contraintes physiques) | Forme des vecteurs de la base | Nature du spectre |
+| :--- | :--- | :--- | :--- |
+| **Puits infini / Boîte rigide** | Parois impénétrables en $x=0$ et $x=L$ :<br>$\psi(0) = \psi(L) = 0$ | Sinus réels :<br>$\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi}{L}x\right)$ | Discret ($n \in \mathbb{N}^*$) |
+| **Anneau quantique** | Conditions périodiques sur $[0, T]$ :<br>$\psi(0) = \psi(T)$ | Exponentielles complexes discrets :<br>$f_k(x) = e^{i k \frac{2\pi}{T} x}$ | Discret ($k \in \mathbb{Z}$) |
+| **Particule totalement libre** | Aucun confinement ($x \in ]-\infty, +\infty[$) :<br>Pas de conditions aux bords | Ondes planes continues :<br>$\psi_k(x) = e^{i k x}$ | Continu ($k \in \mathbb{R}$) |
+| **Atome d'hydrogène** | Potentiel central coulombien :<br>$\psi(r, \theta, \phi) \to 0$ quand $r \to \infty$ | Harmoniques sphériques $\times$ Polynômes de Laguerre | Discret ($n, l, m$) |
+
+#### Ce qu'il faut en retenir
+* **Confinement spatial (boîte, anneau, atome) $\implies$ Spectre discret :** Les conditions aux limites imposent une quantification. L'onde quantique doit « rentrer » dans le domaine sans s'auto-détruire par interférence destructive.
+* **Espace infini (particule libre) $\implies$ Spectre continu :** Sans parois pour imposer une longueur d'onde fixe, toutes les valeurs d'énergie et d'impulsion sont permises.
+
+À l'image d'une corde de guitare dont la longueur et les points d'attache fixent les fréquences harmoniques autorisées, **le piège expérimental sculpte la base des états propres accessibles au système.**
+:::
+
+::: callout-important
+### En synthèse : La base du puits est la base de l'Énergie
+
+L'erreur courante est de croire que la base du puits est soit une base de position, soit une base d'impulsion. En réalité :
+
+* Ce n'est pas une base de position $|x\rangle$ (la particule est étalée dans tout le puits).
+* Ce n'est pas une base d'impulsion $|p\rangle$ (c'est une superposition de $+p$ et $-p$ formant une onde stationnaire).
+* **C'est la base des états propres de l'énergie ($\hat{H}$)** : la géométrie du puits combine la contrainte spatiale ($x$) et le comportement ondulatoire ($p$) pour créer des modes de vibration stationnaires, exactement comme les notes d'une corde de guitare.
+:::
+
+::: callout-tip
+### L'analogie physique fondamentale : L'atome d'hydrogène
+
+L'étude du puits de potentiel unidimensionnel n'est pas un simple exercice académique : c'est le prototype de l'atome.
+
+Dans un atome, l'attraction coulombienne du noyau joue exactement le rôle du puits de potentiel. L'électron y forme une **onde stationnaire 3D**. 
+
+L'existence des niveaux d'énergie discrets ($n = 1, 2, 3\dots$) découle directement de la même contrainte mathématique développée par Blaquière : **seules les fonctions propres vérifiant les conditions aux limites du puits sont physiquement stables**, imposant la quantification de l'énergie et la structure en couches de la matière.
+:::
+
+### Calcul pratique des éléments de la matrice $\mathbf{B}$
 
 Nous allons calculer les éléments de la matrice $\mathbf{B}$ pour un opérateur spécifique $\hat{B}$ dans la base des fonctions propres de $\hat{A} = \frac{d^2}{dx^2}$.
 
-Nous rappelons deux théorèmes importants de l'algèbre linéaire [@Wiggins2024] :
+Rappelons deux théorèmes importants de l'algèbre linéaire [@Wiggins2024] :
 
-Opérateur de Projection : Soit $P : V \to V$ un opérateur linéaire sur un espace vectoriel $V$. $P$ est appelé opérateur de projection si $P^2=P$.
-
-Théorème Spectral pour les opérateurs auto-adjoints de dimension finie : Soit $\mathbf{A} : V \to V$ un opérateur linéaire auto-adjoint sur un espace produit scalaire complexe de dimension finie. Alors :
-
-$\mathbf{A}$ a des valeurs propres réelles, et les vecteurs propres de $\mathbf{A}$ correspondant à des valeurs propres distinctes sont orthogonaux.
-
-Les vecteurs propres de $\mathbf{A}$ engendrent $V$.
+* **Opérateur de projection :** Soit $P : V \to V$ un opérateur linéaire sur un espace vectoriel $V$. $P$ est appelé opérateur de projection si $P^2=P$.
+* **Théorème spectral (dimension finie) :** Soit $\mathbf{A} : V \to V$ un opérateur linéaire auto-adjoint sur un espace produit scalaire complexe. Alors $\mathbf{A}$ possède des valeurs propres réelles, ses vecteurs propres associés à des valeurs propres distinctes sont orthogonaux, et l'ensemble de ses vecteurs propres engendre $V$.
 
 #### Exemple 1 : Opérateur dérivée $\hat{B} = \frac{d}{dx}$
 
-Si $\hat{B}$ est l’opérateur de dérivation $\frac{d}{dx}$, et si nous adoptons pour base orthonormée les fonctions propres de l’opérateur $\hat{A} = \frac{d^2}{dx^2}$ déterminées précédemment :
+Si $\hat{B} = \frac{d}{dx}$, nous adoptons pour base orthonormée les fonctions propres de l'opérateur $\hat{A} = \frac{d^2}{dx^2}$ déterminées précédemment :
 
 $$f_n(x) = e^{in\omega x} \quad \text{avec } \omega = \frac{2\pi}{T}$$
 
-L'élément de matrice générique $\mathbf{B}_{kn} = \left\langle f_k \right| \hat{B} \left| f_n \right\rangle$ est donné par :
+L'élément générique de matrice $\mathbf{B}_{kn} = \left\langle f_k \right| \hat{B} \left| f_n \right\rangle$ s'écrit :
 
-$$\mathbf{B}_{kn} = \frac{1}{T}\int_{0}^{T} \overline{f_k(x)} \hat{B} f_n(x)\,dx = \frac{1}{T}\int_{0}^{T} e^{-ik\omega x} \frac{d}{dx} e^{in\omega x}\,dx$$
+$$\mathbf{B}_{kn} = \frac{1}{T}\int_{0}^{T} \overline{f_k(x)} \, \hat{B} f_n(x)\,dx = \frac{1}{T}\int_{0}^{T} e^{-ik\omega x} \frac{d}{dx} e^{in\omega x}\,dx$$
 
-Calcul des éléments non-diagonaux ($\mathbf{B}_{kn}$ avec $k \neq n$) :
+##### Calcul des éléments non diagonaux ($\mathbf{B}_{kn}$ avec $k \neq n$)
 
-Prenons l'exemple de l'élément $\mathbf{B}_{21} = \left\langle f_2 \right| \hat{B} \left| f_1 \right\rangle$ (avec $\omega$ implicite) :
+Illustrons d'abord avec l'élément $\mathbf{B}_{21} = \left\langle f_2 \right| \hat{B} \left| f_1 \right\rangle$ :
 
-$$\mathbf{B}_{21} = \frac{1}{T}\int_{0}^{T}e^{-i2\omega x} \frac{d}{dx} e^{i\omega x}\,dx$$
+$$\mathbf{B}_{21} = \frac{1}{T}\int_{0}^{T}e^{-i2\omega x} \frac{d}{dx} e^{i\omega x}\,dx = \frac{1}{T}\int_{0}^{T}e^{-i2\omega x} (i\omega e^{i\omega x})\,dx = \frac{i\omega}{T}\int_{0}^{T}e^{-i\omega x}\,dx$$
 
-$$=\frac{1}{T}\int_{0}^{T}e^{-i2\omega x} (i\omega e^{i\omega x})\,dx$$
+$$\mathbf{B}_{21} = \frac{i\omega}{T}\left[ \frac{e^{-i\omega x}}{-i\omega} \right]_{0}^{T} = \frac{i\omega}{T} \left( \frac{e^{-i\omega T} - 1}{-i\omega} \right)$$
 
-$$=\frac{i\omega}{T}\int_{0}^{T}e^{-i\omega x}\,dx$$
+Puisque $\omega T = 2\pi$, on a $e^{-i\omega T} = e^{-i2\pi} = 1$. D'où $\mathbf{B}_{21} = 0$.
 
-$$=\frac{i\omega}{T}\left[ \frac{e^{-i\omega x}}{-i\omega} \right]_{0}^{T} = \frac{i\omega}{T} \left( \frac{e^{-i\omega T} - e^{0}}{-i\omega} \right)$$
+Plus généralement, pour tout $k \neq n$ :
 
-Puisque $\omega = \frac{2\pi}{T}$, on a $\omega T = 2\pi$ et $e^{-i\omega T} = e^{-i2\pi} = 1$.
+$$\mathbf{B}_{kn} = \frac{i n \omega}{T}\int_{0}^{T}e^{-i(k-n)\omega x}\,dx = \frac{i n \omega}{T} \left[ \frac{e^{-i(k-n)\omega x}}{-i(k-n)\omega} \right]_{0}^{T} = 0$$
 
-$$\mathbf{B}_{21} = \frac{i\omega}{T} \left( \frac{1 - 1}{-i\omega} \right) = 0$$
+Les éléments non diagonaux de la matrice représentative de $\frac{d}{dx}$ sont donc tous nuls.
 
-Plus généralement, pour $k \neq n$ :
+##### Calcul des éléments diagonaux ($\mathbf{B}_{nn}$ avec $k = n$)
 
-$$\mathbf{B}_{kn} = \frac{i n \omega}{T}\int_{0}^{T}e^{-i(k-n)\omega x}\,dx = \frac{i n \omega}{T} \left[ \frac{e^{-i(k-n)\omega x}}{-i(k-n)\omega} \right]_{0}^{T}$$
+L'élément diagonal $\mathbf{B}_{nn}$ s'obtient directement :
 
-Puisque $(k-n)\omega T = (k-n)2\pi$, on a $e^{-i(k-n)\omega T} = 1$. L'expression s'annule : $\mathbf{B}_{kn} \propto (1 - 1) = 0$.
+$$\mathbf{B}_{nn} = \frac{1}{T}\int_{0}^{T}e^{-in\omega x} \frac{d}{dx} e^{in\omega x}\,dx = \frac{in\omega}{T}\int_{0}^{T}dx = in\omega$$
 
-Conclusion : Les éléments non diagonaux de la matrice représentative de $\frac{d}{dx}$ sont tous nuls.
-
-Calcul des éléments diagonaux ($\mathbf{B}_{nn}$ avec $k = n$) :
-
-L'élément diagonal $\mathbf{B}_{nn}$ s'obtient en remplaçant $k$ par $n$ :
-
-$$\mathbf{B}_{nn} = \frac{1}{T}\int_{0}^{T}e^{-in\omega x} \frac{d}{dx} e^{in\omega x}\,dx$$
-
-$$=\frac{1}{T}\int_{0}^{T}e^{-in\omega x} (in\omega e^{in\omega x})\,dx$$
-
-$$=\frac{in\omega}{T}\int_{0}^{T}dx$$
-
-$$=\frac{in\omega}{T}[x]_0^T = \frac{in\omega}{T} \cdot T$$
-
-$$\mathbf{B}_{nn} = in\omega$$
-
-où $\omega = \frac{2\pi}{T}$ est la fréquence angulaire de base.
-
-La matrice représentative de $\hat{B} = \frac{d}{dx}$ dans cette base est donc une matrice diagonale (ici, infinie, car $n \in \mathbb{Z}$), dont les éléments diagonaux sont les valeurs propres de $\hat{B}$ :
+La matrice représentative de $\hat{B} = \frac{d}{dx}$ dans cette base est donc strictement diagonale :
 
 $$\mathbf{B}=\begin{pmatrix}
 \ddots & & & & & & & \\
 & -i3\omega & 0 & 0 & 0 & 0 & 0 & \\
 & 0 & -i2\omega & 0 & 0 & 0 & 0 & \\
-& 0 & 0 & -i\omega  & 0 & 0 & 0 & \\
-& 0 & 0 & 0 & 0 & 0 & 0 & \\ % Pour n=0
+& 0 & 0 & -i\omega & 0 & 0 & 0 & \\
+& 0 & 0 & 0 & 0 & 0 & 0 & \\
 & 0 & 0 & 0 & 0 & i\omega & 0 & \\
 & 0 & 0 & 0 & 0 & 0 & i2\omega & \\
 & & & & & & & \ddots
 \end{pmatrix}$$
 
-Les termes diagonaux sont de la forme $in\omega$ et ne sont pas réels, donc la matrice $\mathbf{B}$ n'est pas hermitienne.
+Les termes diagonaux étant imaginaires purs ($in\omega$), la matrice $\mathbf{B}$ n'est pas hermitienne.
 
-Cependant, on obtiendrait une matrice hermitienne en considérant l’opérateur $\hat{P}_x = \frac{1}{i}\frac{d}{dx}$ (qui, dans sa forme physique $\hat{P}_x = \frac{\hbar}{i}\frac{d}{dx}$, représente la quantité de mouvement). L'élément de matrice pour $\hat{P}_x$ serait $\mathbf{P}_{nn} = \frac{1}{i} (in\omega) = n\omega$, qui est un nombre réel.
+En revanche, l'opérateur $\hat{P}_x = \frac{1}{i}\frac{d}{dx}$ (qui devient l'impulsion physique $\hat{P}_x = \frac{\hbar}{i}\frac{d}{dx}$) possède des éléments diagonaux réels $\mathbf{P}_{nn} = n\omega$, ce qui en fait un opérateur hermitien.
 
-Ce raisonnement se généralise et permet de représenter sous forme matricielle les opérateurs de dérivation successives $\frac{d^k}{dt^k}$.
+##### Généralisation aux dérivées successives
 
-Ces matrices sont toutes diagonales car elles ont le même système de vecteurs propres. Les valeurs propres sont les termes diagonaux, ce sont :
+Ce résultat se généralise immédiatement aux dérivées d'ordre supérieur $\frac{d^k}{dx^k}$. Les matrices associées sont toutes diagonales dans cette base, avec pour éléments diagonaux :
 
-Pour l’opérateur $\frac{d}{dt}$ :
+* **Pour $\frac{d}{dx}$ :** $\quad \ldots, -i2\omega, -i\omega, 0, i\omega, i2\omega, \ldots$
+* **Pour $\frac{d^2}{dx^2}$ :** $\quad \ldots, -4\omega^2, -\omega^2, 0, -\omega^2, -4\omega^2, \ldots$
 
-$$\ldots, -i2\omega_0, -i\omega_0, 0, i\omega_0, i2\omega_0, \ldots$$
-
-Pour l’opérateur $\frac{d^2}{dt^2}$ :
-
-$$\ldots, -4\omega_0^2, -\omega_0^2, 0, -\omega_0^2, -4\omega_0^2, \ldots$$
-
-Selon [@Wiggins2024] :
-
-Consider an approximately defined vector space of complex valued differentiable functions of a real scalar variable $x$. Then a linear operator on this vector space can be defined by differentiation as follows : $(\hat{A}\Phi)(x)=-i\frac{d\Phi}{dx}(x)$.
-
-Conclusion sur les opérateurs : L'opérateur de dérivation simple $\frac{d}{dx}$ n'est pas hermitien, car ses valeurs propres dans une base orthonormée sont purement imaginaires ($in\omega$). L'opérateur $\frac{1}{i}\frac{d}{dx}$ (ou $\frac{1}{i}\frac{d}{dt}$ dans le cas temporel) est, lui, hermitien, car ses valeurs propres sont réelles ($n\omega$).
+Selon [@Wiggins2024], pour un espace vectoriel de fonctions dérivables complexes, l'opérateur linéaire défini par $(\hat{A}\Phi)(x) = -i\frac{d\Phi}{dx}(x)$ est hermitien et possède des valeurs propres réelles.
 
 ::: callout-tip
-Une matrice représente une opération. Elle possède des vecteurs propres qui sont sa base privilégiée. La base n'est pas l'opération mais la structure de l'espace. Il est **étonnant** de voir qu'à partir de la série de fourier on peut construire une base, chaque harmonique étant associée à un vecteur. Cette base spécifique est base propre des fonctions : dérivées premières, secondes, ... Pour cette raison l 'appelle la représentation $v$, par opposition par exemple à la représentation en $x$. N'importe quelle opération représentée par une matrice peut être représentée dans cette base, mais seules certaines comme les dérivés successives auront une forme diagonale. Ceci nous mène droit vers le principe d'incertitude. Cette représentation classique de la fonction dérivée dans la base de fourier a une valeur pédagogique : elle prépare la représentation en quantique du vecteur impulsion dans l'espace de Hilbert. On est bien encore ici en classique car il existe une forme classique de l'impulsion (un nombre associé à l’espace des fréquences) et une forme quantique de l’impulsion (une matrice associée a l'espace des impulsions en accord avec le formalisme hamiltonien qui tient compte de la masse m).\
-En acoustique on associe bien grâce aux séries de fourier un spectre à une voix. Toutefois ici on génère un espace abstrait grâce à une base donc cela va plus loin. Quelques semaines après son article de 1925 Heisenberg est allé voir Hilbert qui travaillait depuis longtemps sur les espaces abstraits infinis et Heisenberg n’en a pas voulu. La différence culturelle était trop grande. Une thèse d’historien est que si cela avait collé entre les deux l'évènement de la création de l'équation de Schrödinger par Schrödinger en 1926 serait passée plus inaperçue alors qu’elle a été accueillie comme révolutionnaire.
+### Perspective historique et épistémologique
+
+Une matrice représente une opération, tandis que ses vecteurs propres constituent sa base privilégiée. Il est remarquable de constater qu'à partir de la série de Fourier, on construit une base dont chaque harmonique est un vecteur propre commun aux opérateurs de dérivation successifs ($\frac{d}{dx}, \frac{d^2}{dx^2}, \dots$). Pour cette raison, on l'appelle la **représentation en vitesse/impulsion**, par opposition à la **représentation en position $x$**.
+
+Cette construction prépare directement le formalisme quantique de l'espace de Hilbert. En acoustique classique, Fourier associe un spectre à un signal sonore. Mais ici, le formalisme génère un espace vectoriel abstrait.
+
+En 1925, quelques semaines après avoir posé les bases de la mécanique matricielle, Werner Heisenberg rencontre David Hilbert, qui travaillait depuis longtemps sur les espaces spectraux infinis. Heisenberg, très pragmatique et ancré dans les données observables, n'a pas saisi immédiatement l'intérêt du formalisme de Hilbert. Plusieurs historiens des sciences suggèrent que si la jonction entre Heisenberg et Hilbert s'était faite aussitôt, la formulation ondulatoire de Schrödinger en 1926 aurait paru moins révolutionnaire, car la théorie matricielle aurait déjà disposé de son cadre géométrique continu.
+:::
+
+::: callout-important
+### Propriété fondamentale : Commutation et matrices diagonales
+
+En mécanique quantique, si deux opérateurs commutent, ils sont représentés par des **matrices diagonales dans leur base commune de fonctions propres**.
+
+Ici, comme $[\frac{d}{dx}, \frac{d^2}{dx^2}] = 0$ :
+* La base des fonctions propres de $\frac{d^2}{dx^2}$ est **aussi** la base des fonctions propres de $\frac{d}{dx}$.
+* Le calcul $B_{kn} = \langle f_k | \frac{d}{dx} | f_n \rangle$ donne une **matrice strictement diagonale** dont les termes sont les valeurs propres imaginaires $i n \frac{2\pi}{T}$.
+* En multipliant par $-i\hbar$, on retrouve la matrice de l'impulsion $\mathbf{P}$, elle aussi diagonale, associée aux valeurs propres réelles $p_n = n \frac{2\pi\hbar}{T}$.
 :::
 
 #### Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$ :
