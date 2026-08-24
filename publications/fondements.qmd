@@ -1832,28 +1832,30 @@ $$\begin{vmatrix}
 
 *Ainsi nous voyons que nous avons intérêt à nous ramener dans la situation d'une matrice hermitique.*
 
- 
 
+## Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : 
+[@Delbarre2022-bb] 
 
-## Fonction propres et valeurs propres d'un opérateur fonctionnel :
-
-::: callout-note
-**Rappel :** méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : [@Delbarre2022-bb] $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
+$$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
 
 1.  Si $\Delta > 0$ on note r1 et r2 les deux solutions. Les solutions sont des fonctions du type $$y=A_1e^{r_1x} + A_2e^{r_2x}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
 
 2.  Si $\Delta = 0$ on note r la solution. Les solutions sont des fonctions du type $$y=A_1e^{rx} + A_2e^{rx}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
 
 3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
-:::
 
-::: callout-important
+
+## Fonction propres et valeurs propres d'un opérateur fonctionnel :
+
+
+*Définition :*
+
 On dit qu'une fonction $f$ est fonction propre de l'opérateur $\hat{A}$ avec la valeur propre $a$ (nombre indépendant des variables) si on a :
 
 $$\hat{A}f = af$$
 
 L'opération se réduit dans ce cas à une simple multiplication de la fonction $f$ par le nombre $a$.
-:::
+
 
 *Exemple 1 : Opérateur de dérivation du premier ordre*
 
@@ -1876,10 +1878,6 @@ Les fonctions propres de $\hat{A}=\frac{d}{dx}$ sont de la forme $f(x)=ke^{ax}$,
 ::: callout-tip
 Intuitivement, la fonction exponentielle est la seule à être aussi sa dérivée d’où la solution à l'équation aux valeurs propres est une fonction exponentielle. Toutefois je vous laisse appliquer la méthode générale de résolution d'une équation différentielle du premier ordre.
 :::
-
-*Spectre Continu :* Comme la valeur propre $a$ peut être un nombre réel ou complexe quelconque (en l'absence de conditions aux limites), l'ensemble des valeurs propres forme un spectre continu.
-
-*Spectre Discret (Rappel) :* Nous rencontrerons des cas où les valeurs propres d'un opérateur sont une suite de nombres discrets $a_1, a_2, \ldots, a_n, \ldots$, une fonction propre $f_n(x)$ étant attachée à chacun d'eux. Dans ce cas, on parle de spectre discret (ou spectre de raies).
 
 *Exemple 2 : Opérateur de dérivation du second ordre :*
 
@@ -1921,34 +1919,6 @@ Nous pouvons considérer ces fonctions propres complexes comme des vecteurs gén
 
 Il nous faut étendre à ces vecteurs fonctionnels complexes la définition du produit scalaire rencontrée dans le cas des vecteurs fonctionnels réels : il s'agira du \textbf{produit hermitien}.
 
-Pour simplifier l'écriture des vecteurs généralisés et des produits hermitiens, Paul Dirac a introduit en 1939 une notation symbolique élégante qui décompose le mot "Bracket" (crochet) en deux parties : le **Bra** et le **Ket**.
-
-### Le KET : L'état du système
-
-Le **Ket**, noté $|\psi\rangle$, représente le **vecteur d'état**.
-
-- C'est l'équivalent quantique d'un vecteur colonne en algèbre linéaire.
-
-- Il contient toute l'information sur le système physique (sa position, son énergie, etc.).
-
-- Mathématiquement, c'est un élément d'un espace de Hilbert.
-
-### Le BRA : Le vecteur "miroir"
-
-Le **Bra**, noté $\langle\phi|$, est le **vecteur dual** (ou vecteur ligne).
-
-- Il est obtenu en prenant le Ket, en le transposant et en prenant le complexe conjugué de ses composantes.
-
-- Si $|\psi\rangle$ est un vecteur colonne, $\langle\psi|$ est son équivalent sous forme de ligne "conjuguée".
-
-### Le BRA-KET : Le produit scalaire
-
-Lorsque l'on juxtapose un Bra et un Ket, on obtient un **Bra-Ket** $\langle\phi|\psi\rangle$, qui représente le **produit scalaire hermitien**.
-
-- Le résultat est toujours un **nombre complexe**.
-
-- Si on calcule $\langle\psi|\psi\rangle$, on obtient la **norme au carré** du vecteur, qui doit être égale à 1 (condition de normalisation) pour représenter une probabilité totale de 100%.
-
 Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
 
 Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l'intervalle $[0, T]$, et $\overline{f(x)}$ et $\overline{g(x)}$ leurs conjuguées complexes respectives.
@@ -1958,6 +1928,7 @@ Le produit hermitien (ou produit scalaire dans l'espace de Hilbert) est défini 
 $$\boxed{\left\langle f|g \right\rangle=\frac{1}{T}\int_{0}^{T} \overline{f(x)} g(x)\,dx}$$
 
 Ce produit hermitien est indispensable pour définir la norme des fonctions d'onde
+
 
 ## Propriété d'orthogonalité :
 
@@ -2204,5 +2175,38 @@ La matrice représentative de l'opérateur de position $\hat{X}$ dans la base de
 Éléments non-diagonaux ($\mathbf{X}_{pq}, p \neq q$) : $-i \frac{T}{2\pi (q-p)}$ (Purement imaginaires).
 
 La matrice $\mathbf{X}$ n'est donc pas réelle (elle est hermitienne).
+
+## Notation  BRA-KET
+
+Pour simplifier l'écriture des vecteurs généralisés et des produits hermitiens, Paul Dirac a introduit en 1939 une notation symbolique élégante qui décompose le mot "Bracket" (crochet) en deux parties : le **Bra** et le **Ket**.
+
+### Le KET : L'état du système
+
+Le **Ket**, noté $|\psi\rangle$, représente le **vecteur d'état**.
+
+- C'est l'équivalent quantique d'un vecteur colonne en algèbre linéaire.
+
+- Il contient toute l'information sur le système physique (sa position, son énergie, etc.).
+
+- Mathématiquement, c'est un élément d'un espace de Hilbert.
+
+### Le BRA : Le vecteur "miroir"
+
+Le **Bra**, noté $\langle\phi|$, est le **vecteur dual** (ou vecteur ligne).
+
+- Il est obtenu en prenant le Ket, en le transposant et en prenant le complexe conjugué de ses composantes.
+
+- Si $|\psi\rangle$ est un vecteur colonne, $\langle\psi|$ est son équivalent sous forme de ligne "conjuguée".
+
+### Le BRA-KET : Le produit scalaire
+
+Lorsque l'on juxtapose un Bra et un Ket, on obtient un **Bra-Ket** $\langle\phi|\psi\rangle$, qui représente le **produit scalaire hermitien**.
+
+- Le résultat est toujours un **nombre complexe**.
+
+- Si on calcule $\langle\psi|\psi\rangle$, on obtient la **norme au carré** du vecteur, qui doit être égale à 1 (condition de normalisation) pour représenter une probabilité totale de 100%.
+
+
+
 
 # Références :
