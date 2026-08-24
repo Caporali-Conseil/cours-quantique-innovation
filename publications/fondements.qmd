@@ -1585,86 +1585,172 @@ Au niveau américain Google, IBM et Microsoft sont très engagés sur le quantiq
 
 Les chinois sont également très en pointe.
 
+
 # Annexe mathématique
 
-## Vecteur :
+## Opérations sur les vecteurs
 
-### Définition : Espace Vectoriel :
+### Définition : vecteur
+
+Comme indiqué par Laurent Pluchart dans son préambule [@pluchart2014introduction], un vecteur est défini par l'algèbre linéaire comme un élément qui appartient à un espace vectoriel.
+
+### Définition : espace vectoriel
+
+Voici les définitions fondamentales adaptées de @Wiggins2024.
+
+::: callout-note
+Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ensemble des nombres complexes $\mathbb{C}$), est un ensemble d'éléments (appelés vecteurs) sur lequel deux opérations sont définies :
+
+1. **Addition vectorielle** : $\forall |\psi \rangle, |\phi\rangle \in \mathcal{V} \implies |\psi\rangle + |\phi\rangle \in \mathcal{V}$
+2. **Multiplication par un scalaire** : $\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}$
+:::
 
 ::: callout-tip
-Un jour étant étudiant j'avais été invite par un camarade à une soirée et là il y a avait un étudiant en mathématique qui disait que les mathématiciens étaient des gens formidables. Puis il a dit fièrement que la veille il s'était "amusé" à travailler avec des collègues sur un espace à environ 30 dimensions. J'étais surpris et septique sur l'utilité. Pourtant en physique quantique on travaille bien sur des espaces abstraits de dimension infinie. C'est une des raisons qui font que ce formalisme est réputé difficile.
+### Anecdote : de la dimension 30 à l'infini
+
+Lorsque j'étais étudiant, j'avais été invité à une soirée où un élève en mathématiques affirmait fièrement que les mathématiciens étaient des gens formidables. Il racontait que la veille, il s'était « amusé » avec des camarades à travailler sur un espace à une trentaine de dimensions. J'étais alors surpris et plutôt sceptique quant à l'utilité d'une telle démarche. 
+
+Pourtant, en physique quantique, on travaille bel et bien sur des espaces abstraits de **dimension infinie** (comme les espaces de Hilbert pour les fonctions d'onde). C'est précisément cette abstraction qui rend ce formalisme si puissant, mais aussi réputé difficile.
 :::
 
-L'informatique quantique repose sur le formalisme des espaces de Hilbert. Voici les définitions fondamentales adaptées de @Wiggins2024. Même si elles semblent abstraites il vaut mieux les accepter telles quelles pour l'instant.
+
+ 
+
+
+
+ 
+
+
+### Produit scalaire de deux vecteurs
+
+En géométrie classique (dans $\mathbb{R}^3$), le produit scalaire de deux vecteurs réels correspond au produit de leurs longueurs par le cosinus de l'angle qu'ils forment :
+
+$$\boxed{\vec{V_1} \cdot \vec{V_2} = V_1 \cdot V_2 \cdot \cos \theta}$$
+
+$\theta$ étant l'angle formé par les deux vecteurs $\vec{V_1}$ et $\vec{V_2}$.
+
+Si $(X_1, Y_1)$ et $(X_2, Y_2)$ sont les composantes respectives de $\vec{V_1}$ et $\vec{V_2}$, l'expression analytique de leur produit scalaire s'écrit :
+
+$$\vec{V_1} \cdot \vec{V_2} = X_1 X_2 + Y_1 Y_2$$
+
+Ce résultat peut être représenté sous forme matricielle :
+
+$$\begin{pmatrix} X_2 & Y_2 \end{pmatrix} \begin{pmatrix} X_1 \\ Y_1 \end{pmatrix} \quad \text{ou} \quad \begin{pmatrix} X_1 & Y_1 \end{pmatrix} \begin{pmatrix} X_2 \\ Y_2 \end{pmatrix}$$
+
+Deux vecteurs sont dits **orthogonaux** lorsque leur produit scalaire est nul.
 
 ::: callout-note
-
-Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ensemble des nombres complexes $\mathbb{C}$, est un ensemble d'éléments (appelés vecteurs) sur lequel deux opérations sont définies :
-
-1.  **Addition vectorielle** : $\forall |\psi \rangle |\phi\rangle \in \mathcal{V} \implies |\psi\rangle + |\phi\rangle \in \mathcal{V}$
-
-2.  Multiplication par un scalaire : $\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}$
+### Intérêt du produit scalaire
+Le produit scalaire est une opération qui prend deux vecteurs et résume leur relation spatiale sous la forme d'un **seul nombre (un scalaire)**. C'est tout son intérêt : synthétiser l'information vectorielle sous une forme réduite.
 :::
+
+### Norme d'un vecteur
+
+Selon Laurent Pluchart [@pluchart2014introduction], en géométrie euclidienne classique, la norme d'un vecteur représente la longueur du segment qui porte ce vecteur.
+
+Mathématiquement, pour un vecteur $\vec{v} = (v_1, v_2, \dots, v_n)$ dans un espace réel de dimension $n$, la norme est donnée par la formule :
+
+$$\boxed{\|\vec{v}\| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}}$$
+
+Voici une définition plus générale issue de l'algèbre linéaire :
+
+> For any vector $\Phi \in V$, we define the norm of $\Phi$, denoted $\|\Phi\|$, as follows: $\|\Phi\| = \sqrt{(\Phi,\Phi)}$ [@Wiggins2024]
+
+### Le produit hermitien (extension aux nombres complexes)
+
+*En anglais : complex inner product.*
+
+Le **produit hermitien** est la généralisation du produit scalaire aux espaces vectoriels complexes ($\mathbb{C}^n$). 
+
+Prenons l'exemple d'un vecteur d'état complexe $|V_1\rangle$ :
+
+$$|V_1\rangle = \begin{pmatrix} x \\ -ix \end{pmatrix}$$
+
+Le vecteur dual correspondant (le *bra* $\langle V_1|$), obtenu par transproposition et conjugaison complexe, s'écrit :
+
+$$\langle V_1| = \begin{pmatrix} x & ix \end{pmatrix}$$
+
+Le produit hermitien de $|V_1\rangle$ avec lui-même nous donne la norme au carré $\|V_1\|^2$ :
+
+$$\|V_1\|^2 = \langle V_1 | V_1 \rangle = \begin{pmatrix} x & ix \end{pmatrix} \begin{pmatrix} x \\ -ix \end{pmatrix} = x^2 + (ix)(-ix) = x^2 + x^2 = 2x^2$$
+
+La norme est donc $\|V_1\| = \sqrt{2x^2} = \sqrt{2}x$.
+
+Pour **normaliser** le vecteur $|V_1\rangle$ à l'unité ($\|V_1\| = 1$), il faut fixer la valeur $x = \frac{1}{\sqrt{2}}$. Le vecteur d'état normé s'écrit alors :
+
+$$|V_1\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -i \end{pmatrix}$$
+
+---
+
+#### Orthogonalité et propriété de symétrie hermitienne
+
+Deux vecteurs complexes $|V_1\rangle$ et $|V_2\rangle$ sont dits **orthogonaux** si leur produit hermitien est nul :
+
+$$\langle V_1 | V_2 \rangle = 0$$
+
+Contrairement au produit scalaire réel, le produit hermitien n'est pas commutatif. Il possède la propriété de **symétrie hermitienne** (la permutation des kets entraîne la conjugaison complexe) :
+
+$$\langle V_1 | V_2 \rangle = \overline{\langle V_2 | V_1 \rangle} \implies \langle V_1 | V_2 \rangle \neq \langle V_2 | V_1 \rangle$$
+
+Lorsque les vecteurs n'ont que des composantes réelles, le produit hermitien se confond parfaitement avec le produit scalaire classique.
+
+---
+
+#### Généralisation continue et définition rigoureuse
+
+Lorsque l'on passe de la dimension finie (matrices) à la dimension infinie (fonctions d'onde dans un domaine $D \subset \mathbb{R}$), la somme discrète devient une intégrale [@Wiggins2024] :
+
+$$(\Psi, \phi) = \int_D \overline{\Psi(x)} \, \phi(x) \, dx$$
+
+L'ensemble des fonctions vérifiant cette propriété forme l'espace de Hilbert $L^2(D)$.
+
+Voici la définition mathématique générale d'un produit interne complexe :
+
+> An inner product on a vector space $V$ is a map of an ordered pair of vectors $(\Psi, \phi)$ to the complex numbers that satisfies the following properties:
+> 
+> 1. $(\Psi, \alpha \phi + \beta \chi) = \alpha (\Psi, \phi) + \beta (\Psi, \chi)$
+> 2. $(\Psi, \phi) = \overline{(\phi, \Psi)}$
+> 3. $(\phi, \phi) \ge 0$, and equality holds if and only if $\phi = 0$,
+> 
+> for any $\alpha, \beta \in \mathbb{C}$ and $\Psi, \phi, \chi \in V$. [@Wiggins2024]
+
+### Produit vectoriel et produit mixte
+
+#### Produit vectoriel
+Contrairement au produit scalaire ou hermitien qui renvoie un nombre, le **produit vectoriel** de deux vecteurs de $\mathbb{R}^3$ (noté $\vec{U} \times \vec{V}$ ou $\vec{U} \wedge \vec{V}$) produit un **troisième vecteur** orthogonal au plan formé par les deux premiers. 
+
+Très utilisé en mécanique classique et en électromagnétisme (pour calculer un moment ou la force de Lorentz), il n'est **pas utilisé** dans la formulation standard des espaces d'états en mécanique quantique.
+
+#### Produit mixte
+Le **produit mixte** de trois vecteurs $(\vec{U}, \vec{V}, \vec{W})$ combine produit scalaire et produit vectoriel : $\vec{U} \cdot (\vec{V} \times \vec{W})$. Il correspond au volume orienté du parallélépipède formé par ces trois vecteurs.
+
+Comme le produit vectoriel, cette notion ne s'applique qu'en géométrie tridimensionnelle réelle et reste **hors du cadre** de notre étude des espaces d'états complexes.
+
+###  Notation Bra-Ket
+
+Introduite par Paul Dirac (du mot anglais *bracket*, qui signifie crochet), cette notation est simplement un jeu d'écriture pratique :
+
+* **Le Ket $|\psi\rangle$ :** C'est le **vecteur colonne** (l'état quantique).
+* **Le Bra $\langle\phi|$ :** C'est le **vecteur ligne** (le vecteur conjugué).
+* **Le Bra-Ket $\langle\phi|\psi\rangle$ :** C'est le **produit scalaire** entre le vecteur ligne et le vecteur colonne.
+
+Le résultat d'un Bra-Ket est toujours un simple nombre complexe. Si le vecteur est normé à 1, le produit $\langle\psi|\psi\rangle = 1$ signifie que la probabilité totale de trouver le système dans un état quelconque est de 100 %.
+
+### Espace de Hilbert
+
+Nous allons utiliser la définition donnée par Dotsenko et al. [@dotsenko2025methodes] : **l'espace des fonctions $L^2$ muni du produit scalaire $(f|g)$ et de la norme $\|f\|_2$ est un espace de Hilbert.**
+
+Comme le précisent les auteurs, il s'agit d'une définition restreinte à l'espace fonctionnel. Plus généralement, on considère un espace de Hilbert dans un sens plus large comme tout espace vectoriel équipé d'un produit scalaire pour ses éléments, y compris l'espace des vecteurs ordinaires en dimension finie.
 
 ::: callout-note
+### Idées reçues sur l'espace de Hilbert
 
-### Définition : Espace de Hilbert :
+Une grande partie de la difficulté d'abstraction de la physique quantique vient du fait que l'on travaille dans un espace de Hilbert, c'est-à-dire un espace abstrait.
 
-Un espace de Hilbert est un espace vectoriel $\mathcal{V}$ muni d'un produit scalaire et qui est complet (c'est-à-dire que toute suite de Cauchy converge fortement vers un vecteur appartenant à $\mathcal{V}$).
+On entend parfois des affirmations fausses par simplification :
+* **« L'espace de Hilbert est notre espace spatio-temporel avec un nombre infini de dimensions » : FAUX.**
+* **« L'espace de Hilbert est un simple espace informationnel » : FAUX AUSSI**, car le principe d'incertitude donne les incertitudes sur la mesure à partir d'opérateurs qui sont des bases dans l'espace de Hilbert. L'espace de Hilbert est plutôt l'espace qui décrit les phénomènes *avant* la mesure (voir le paragraphe sur la mesure quantique).
 :::
-
-::: callout-important
-
-### Définition : Vecteur d'état (State Vector) :
-
-L'espace des états d'un système de mécanique quantique est un espace de Hilbert complexe.
-
-Un vecteur d'état est un vecteur de cet espace ayant une norme unitaire :
-
-$\langle \psi | \psi \rangle = 1$
-:::
-
-### Produit scalaire de deux vecteurs :
-
-Le produit scalaire de deux vecteurs et le produit de leurs longueurs et du cosinus de l'angle qu'ils définissent.
-
-on écrit : $$\boxed{\vec{V_1} \times \vec{V_2}=V_1 \times V_2 \times cos \theta}$$ $\theta$ étant l'angle des deux vecteurs $\vec{V1}$ et $\vec{V2}$.
-
-Soient $X_1$ et $Y_1$ les composantes de $V_1$, $X_2$ et $Y_2$ les composantes de $V_2$
-
-L'expression analytique de leur produit scalaire est : $$\vec{V_1}\vec{V_2} = X_1X_2 + Y_1Y_2$$ pouvant être écrit sous la forme :
-
-$$\begin{pmatrix}
-X_2 & Y_2
-\end{pmatrix}\begin{pmatrix}
-X_1  \\
-Y_1
-\end{pmatrix}$$
-
-ou bien :
-
-$$\begin{pmatrix}
-X_1 & Y_1
-\end{pmatrix}\begin{pmatrix}
-X_2  \\
-Y_2
-\end{pmatrix}$$
-
-Les vecteurs sont orthogonaux lorsque leur produit scalaire est nul.
-
-Voici une definition plus mathematique :
-
-> An inner product on a vector space V is a map of an ordered pair of vectors $(\Psi, \phi)$ to the complex numbers that satisfy the following properties : 1. $(\Phi, \alpha \phi + \beta \chi)=\alpha(\Psi, \phi)+\beta(\Psi, \chi)$ 2. $(\Phi,\phi)=\overline{(\phi,\Phi)}$ 3. $(\phi, \phi)\geq 0$ and equality holds if and only if $\Phi=0$, for any $\alpha, \beta \in \mathbb{C}, \Phi, \phi, \chi \in V$.[@Wiggins2024]
-
-### Norme d'un vecteur :
-
-La norme d’un vecteur est une quantité qui caractérise sa longueur ou sa taille. Elle permet de mesurer la distance entre l’origine du repère et le point représenté par le vecteur. Mathématiquement, pour un vecteur $\vec{v} = (v1, v2, ..., v_n)$ dans un espace de dimension n, la norme est donnée par la formule :
-
-$$\boxed{|\vec{v}| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}}$$
-
-Voici une définition plus mathématique de la norme :
-
-> For any vector $\Phi \in V$, we define the norm of $\Phi$, denoted $\lVert \Phi \rVert$, as follow : $\lVert \Phi \rVert=\sqrt{(\Phi,\Phi)}$ [@Wiggins2024]
 
 ## Operateur matriciel :
 
@@ -1750,59 +1836,6 @@ On peut appeler cette équation une équation aux valeurs propres. Dans notre "c
 Nous parlerons plus loin de fonction d'onde $\Psi$ pour décrire l’état d'une particule. Nous poserons que si $|\Psi_n \rangle$ est vecteur propre de l’opérateur A, avec la valeur propre $a_n$ alors : $$\boxed{A|\Psi_n\rangle=a_n|\Psi_n}$$
 :::
 
-### Produit hermitien :
-
-En anglais complex inner product.
-
-Pour simplifier, le produit hermitien de deux vecteurs dans un espace vectoriel complexe est une opération qui associe à ces deux vecteurs un nombre complexe. Il est défini comme le produit du premier vecteur par le conjugué de l'autre vecteur.
-
-Prenons le cas de vecteurs complexes.
-
-$$\left| V_1 \right\rangle=\begin{pmatrix}
-x  \\
--ix
-\end{pmatrix}$$
-
-Le BRA correspondant est :
-
-$$\left\langle V_1 \right|=\begin{pmatrix}
-x  &
-ix \\
-\end{pmatrix}$$
-
-La norme de $\left| V_1 \right\rangle$ est alors par définition :
-
-$$\left\| V_1 \right\|
-=\begin{pmatrix}
-x  &
-ix \\ 
-\end{pmatrix}\begin{pmatrix}
-x  \\
--ix  
-\end{pmatrix}=2x²$$
-
-Pour normer le vecteur $\left |V_1\right\rangle$ à l'unité il faut donc donner à x la valeur $x=\frac{1}{\sqrt{2}}$
-
-Le vecteur normé est alors : $$\left| V_1 \right\rangle=\frac{1}{\sqrt{2}}\begin{pmatrix}
-1  \\
--i
-\end{pmatrix}$$
-
-Si on convient d'appeler vecteurs orthogonaux deux vecteur complexes $\left| V_1 \right\rangle$ , $\left| V_2 \right\rangle$
-
-pour lesquels on a : $$\left\langle V_1|V_2 \right\rangle=\left\langle V_2|V_1 \right\rangle=0$$
-
-nous voyons que le produit : $\left\langle V_1|V_2 \right\rangle$ qui généralise le produit scalaire de deux vecteurs réels est appelé produit hermitien de deux vecteurs complexes.
-
-Contrairement au produit scalaire, le produit hermitien n'est pas commutatif.
-
-$$\left\langle V_1|V_2 \right\rangle\neq\left\langle V_2|V_1 \right\rangle$$
-
-Il est clair que lorsque les vecteurs sont réels, cette définition se confond avec celle du produit scalaire.
-
-Selon [@Wiggins2024] page 6
-
-$(\Psi,\phi)=\int_D \overline{\Psi(x)}\phi(x)dx$ et $L^2(D)$ denote the set of all complex value functions of the real variable x, defined on some domain $D\in\mathbb{R}$
 
 ### Matrice hermitique :
 
@@ -1841,35 +1874,7 @@ $$\begin{vmatrix}
 
 *Ainsi nous voyons que nous avons intérêt à nous ramener dans la situation d'une matrice hermitique.*
 
-## Notation  BRA-KET
-
-Pour simplifier l'écriture des vecteurs généralisés et des produits hermitiens, Paul Dirac a introduit en 1939 une notation symbolique élégante qui décompose le mot "Bracket" (crochet) en deux parties : le **Bra** et le **Ket**.
-
-### Le KET : L'état du système
-
-Le **Ket**, noté $|\psi\rangle$, représente le **vecteur d'état**.
-
-- C'est l'équivalent quantique d'un vecteur colonne en algèbre linéaire.
-
-- Il contient toute l'information sur le système physique (sa position, son énergie, etc.).
-
-- Mathématiquement, c'est un élément d'un espace de Hilbert.
-
-### Le BRA : Le vecteur "miroir"
-
-Le **Bra**, noté $\langle\phi|$, est le **vecteur dual** (ou vecteur ligne).
-
-- Il est obtenu en prenant le Ket, en le transposant et en prenant le complexe conjugué de ses composantes.
-
-- Si $|\psi\rangle$ est un vecteur colonne, $\langle\psi|$ est son équivalent sous forme de ligne "conjuguée".
-
-### Le BRA-KET : Le produit scalaire
-
-Lorsque l'on juxtapose un Bra et un Ket, on obtient un **Bra-Ket** $\langle\phi|\psi\rangle$, qui représente le **produit scalaire hermitien**.
-
-- Le résultat est toujours un **nombre complexe**.
-
-- Si on calcule $\langle\psi|\psi\rangle$, on obtient la **norme au carré** du vecteur, qui doit être égale à 1 (condition de normalisation) pour représenter une probabilité totale de 100%.
+ 
 
 ## Operateurs fonctionnels :
 
@@ -2216,7 +2221,10 @@ La matrice représentative de l'opérateur de position $\hat{X}$ dans la base de
 
 La matrice $\mathbf{X}$ n'est donc pas réelle (elle est hermitienne).
 
+# Produit ouvert (outer product) et matrice densite
 
+
+# Produit tensoriel et intrication
 
 
 # Références :
