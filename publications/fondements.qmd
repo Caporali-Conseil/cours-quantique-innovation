@@ -1866,9 +1866,45 @@ $$\boxed{A |\Psi_n\rangle = a_n |\Psi_n\rangle}$$
 Dans une expérience, la quantité $a_n$ représente l'une des valeurs numériques que l'on peut effectivement obtenir lors d'une mesure de l'observable $A$.
 :::
 
-## Représentation fonctionnelle d'une observable :
 
-### Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : 
+## Représentation fonctionnelle d'une observable
+
+### Définition fonctionnelle de l'équation aux valeurs propres
+
+On dit qu'une fonction $f$ est fonction propre de l'opérateur $\hat{A}$ avec la valeur propre $a$ (nombre indépendant des variables) si l'on a :
+
+$$\hat{A}f = af$$
+
+L'opération se réduit dans ce cas à une simple multiplication de la fonction $f$ par le nombre $a$.
+
+### Exemple 1 : Opérateur de dérivation du premier ordre
+
+Cherchons les fonctions propres de l'opérateur :
+
+$$\hat{A} = \frac{d}{dx}$$
+
+Si la fonction $f(x)$ est fonction propre de $\hat{A}$, elle doit vérifier l'équation aux valeurs propres :
+
+$$\frac{d}{dx}f(x) = a f(x)$$
+
+où $a$ est la valeur propre associée.
+
+Cette équation différentielle du premier ordre à variables séparables s'intègre comme suit :
+
+$$\frac{1}{f}\frac{df}{dx} = a \quad \implies \quad \ln|f| = ax + C \quad \implies \quad f(x) = k e^{ax} \quad (k \in \mathbb{C})$$
+
+Les fonctions propres de $\hat{A} = \frac{d}{dx}$ sont donc de la forme $f(x) = k e^{ax}$, associée à la valeur propre $a$.
+
+::: callout-tip
+### Intuition mathématique
+Intuitivement, la fonction exponentielle est la seule fonction dont la dérivée est proportionnelle à elle-même (à une constante près). Il est donc tout à fait naturel d'obtenir une exponentielle comme solution de cette équation aux valeurs propres.
+:::
+ 
+
+### Exemple 2 : Opérateur de dérivation du second ordre
+
+::: callout-note
+**Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants :** 
 [@Delbarre2022-bb] 
 
 $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
@@ -1878,130 +1914,131 @@ $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br 
 2.  Si $\Delta = 0$ on note r la solution. Les solutions sont des fonctions du type $$y=A_1e^{rx} + A_2e^{rx}$$ avec $A_1$ et $A_2$ appartenant à $\mathbb{R}$
 
 3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
-
-
-### Fonction propres et valeurs propres d'un opérateur fonctionnel :
-
-
-*Définition :*
-
-On dit qu'une fonction $f$ est fonction propre de l'opérateur $\hat{A}$ avec la valeur propre $a$ (nombre indépendant des variables) si on a :
-
-$$\hat{A}f = af$$
-
-L'opération se réduit dans ce cas à une simple multiplication de la fonction $f$ par le nombre $a$.
-
-
-*Exemple 1 : Opérateur de dérivation du premier ordre*
-
-Cherchons les fonctions propres de l'opérateur
-
-$$\hat{A} = \frac{d}{dx}$$
-
-Si la fonction $f(x)$ est propre de $\hat{A}$, on doit avoir :
-
-$$\frac{d}{dx}f(x) = a f(x)$$
-
-où $a$ est la valeur propre.
-
-Cette équation différentielle du premier ordre s'intègre comme suit :
-
-$$\frac{1}{f}\frac{df}{dx} = a \quad \implies \quad \log|f| = ax + C \quad \implies \quad f(x) = k e^{a x}$$
-
-Les fonctions propres de $\hat{A}=\frac{d}{dx}$ sont de la forme $f(x)=ke^{ax}$, où $a$ est la valeur propre associée.
-
-::: callout-tip
-Intuitivement, la fonction exponentielle est la seule à être aussi sa dérivée d’où la solution à l'équation aux valeurs propres est une fonction exponentielle. Toutefois je vous laisse appliquer la méthode générale de résolution d'une équation différentielle du premier ordre.
 :::
 
-*Exemple 2 : Opérateur de dérivation du second ordre :*
-
-Cherchons les fonctions propres de l'opérateur
+Considérons maintenant l'opérateur du second ordre :
 
 $$\hat{B} = \frac{d^2}{dx^2}$$
 
-Si $f(x)$ est une fonction propre de $\hat{B}$, on doit avoir :
+Cherchons ses fonctions propres $f(x)$ associées à la valeur propre $b$ :
 
-$$\frac{d^2}{dx^2}f(x) = b f(x)$$
+$$\frac{d^2 f(x)}{dx^2} = b f(x)$$
 
-On est conduit à la résolution de l'équation différentielle du second ordre à coefficients constants :
+Il s'agit d'une équation différentielle linéaire du second ordre à coefficients constants. La nature des solutions dépend du signe de la valeur propre $b$ :
 
-$\frac{d^2}{dx^2}f - b f = 0$
+1. **Si $b > 0$ (valeur propre positive) :**
+   Les solutions sont des exponentielles réelles :
+   $$f(x) = C_1 e^{\sqrt{b}x} + C_2 e^{-\sqrt{b}x}$$
 
-Son équation caractéristique est :
-
-$m^2 - b = 0 \quad \implies \quad m = \pm \sqrt{b}$
-
-La solution générale est de la forme :
-
-$$f(x) = k_1 e^{\sqrt{b} x} + k_2 e^{-\sqrt{b} x}$$ Dans le cas où $b$ est quelconque, l'opérateur $\hat{B}$ possède également un spectre continu de valeurs propres.
-
-*Dégénérescence :*
-
-Ici, il y a dégénérescence car la valeur propre $b$ est associée à deux fonctions propres linéairement indépendantes ($e^{\sqrt{b} x}$ et $e^{-\sqrt{b} x}$). De plus, toute combinaison linéaire de ces fonctions propres est aussi fonction propre avec la même valeur $b$.
+2. **Si $b < 0$ (valeur propre négative) :**
+   En posant $b = -k^2$ (avec $k \in \mathbb{R}$), l'équation devient $\frac{d^2 f}{dx^2} + k^2 f = 0$. Les solutions sont des fonctions oscillantes (sinus, cosinus ou exponentielles complexes) :
+   $$f(x) = A e^{i k x} + B e^{-i k x} \quad \text{ou} \quad f(x) = C_1 \cos(kx) + C_2 \sin(kx)$$
 
 ::: callout-note
-Il est aise de vérifier cela sachant que avec $ar^2 + br + c=0$ on a : $a=1$, $b=0$ et $c=-b$. Le déterminant $\Delta = b^2 -4ac =0-4.1.-b=4b$. Ainsi $$x_1=\frac{0+\sqrt{4.b}}{2}=\frac{2\sqrt{b}}{2}=\sqrt{b}$$ et $$x_2=\frac{0-\sqrt{4.b}}{2}=-\sqrt{b}$$
+### Lien direct avec l'énergie cinétique
+En physique quantique, l'opérateur d'énergie cinétique s'écrit $\hat{T} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2}$. 
 
-On vérifie aisément que $\sqrt{b}$ est solution en rentrant la valeur dans l'équation initiale. Ainsi $$\frac{d^2}{dx^2}.exp{\sqrt{b}x -b.exp{\sqrt{b}x}}=\sqrt{b}^2.exp{\sqrt{b}x}-b.exp{\sqrt{b}.x}=0$$
+Pourquoi la physique quantique impose $\Delta < 0$ ?
+
+Une fonction d'onde $\psi(x)$ doit obligatoirement pouvoir être normalisée : la somme de ses probabilités sur tout l'espace doit être égale à 1 (espace $L^2$).
+
+Si $\Delta > 0$ ($b > 0$) : la solution $f(x) \propto e^{\sqrt{b}x}$ s'envole vers $+\infty$. Une telle particule aurait une probabilité infinie d'être à l'infini, ce qui n'a aucun sens physique (sauf dans des cas très particuliers comme l'effet tunnel à l'intérieur d'une barrière de potentiel).
+
+Si $\Delta < 0$ ($b < 0$) : la solution oscille ($e^{i k x}$), son module $\vert{}f(x)\vert{}^2$ reste borné et constant. C'est la signature d'une onde plane quantique associée à une particule libre de quantité de mouvement $p = \hbar k$.
+
+Le discriminant $\Delta$ est donc naturellement négatif, ce qui fait émerger les nombres complexes et les ondes directement de la structure mathématique de l'équation aux valeurs propres !
 :::
 
-De plus toute combinaisons linéaire de fonction propres est aussi fonction propre avec la même valeur b.
+### Produit scalaire hermitien de deux vecteurs fonctionnels complexes
 
-### Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
+Nous pouvons considérer ces fonctions propres complexes comme des vecteurs généralisés complexes, c'est-à-dire des vecteurs d'un espace de Hilbert (ou vecteurs d'état).
 
-Nous pouvons considérer ces fonctions propres complexes comme des vecteurs généralisés complexes c'est à dire des vecteurs d'un espace de Hilbert (ou vecteurs d'état).
+Il convient d'étendre à ces vecteurs fonctionnels complexes la définition du produit scalaire rencontrée dans le cas des vecteurs réels : il s'agit du **produit hermitien**.
 
-Il nous faut étendre à ces vecteurs fonctionnels complexes la définition du produit scalaire rencontrée dans le cas des vecteurs fonctionnels réels : il s'agira du \textbf{produit hermitien}.
+::: callout-note
+### Définition du produit hermitien sur un intervalle $[0, T]$
+Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l'intervalle $[0, T]$, et $f^*(x)$ (ou $\overline{f(x)}$ dans la notation de Blaquière) la fonction conjuguée complexe de $f(x)$.
 
-Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
+Le produit hermitien (ou produit scalaire dans cet espace fonctionnel) est défini par :
 
-Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l'intervalle $[0, T]$, et $\overline{f(x)}$ et $\overline{g(x)}$ leurs conjuguées complexes respectives.
+$$\boxed{\langle f | g \rangle = \frac{1}{T} \int_{0}^{T} f^*(x) g(x) \, dx}$$
 
-Le produit hermitien (ou produit scalaire dans l'espace de Hilbert) est défini par :
+Le facteur $\frac{1}{T}$ agit comme une moyenne spatiale ou temporelle sur l'intervalle d'intégration.
+:::
 
-$$\boxed{\left\langle f|g \right\rangle=\frac{1}{T}\int_{0}^{T} \overline{f(x)} g(x)\,dx}$$
+### Pourquoi le produit doit-il être hermitien ?
 
-Ce produit hermitien est indispensable pour définir la norme des fonctions d'onde
+Si l'on utilisait un produit scalaire classique sans la conjugaison complexe, la « norme au carré » d'une fonction complexe $f(x) = e^{i k x}$ serait :
 
+$$\int_{0}^{T} f(x) f(x) \, dx = \int_{0}^{T} e^{2i k x} \, dx \quad \implies \text{qui est un nombre complexe !}$$
 
-### Propriété d'orthogonalité :
+Or, en physique quantique, la norme d'un vecteur d'état doit être un **nombre réel positif** pour représenter une probabilité. Grâce à la conjugaison de la première fonction, le produit d'une fonction par elle-même donne :
 
-Les vecteurs fonctionnels complexes $\left|f\right\rangle$ et $\left| g \right\rangle$ sont dits "orthogonaux" si le produit hermitien est nul. On a alors :
+$$\langle f | f \rangle = \frac{1}{T} \int_{0}^{T} f^*(x) f(x) \, dx = \frac{1}{T} \int_{0}^{T} |f(x)|^2 \, dx \ge 0$$
 
-$$\left\langle f|g \right\rangle = 0$$
+Ce produit hermitien est donc indispensable pour définir la **norme** et l'**orthogonalité** des fonctions d'onde dans la base.
 
-Pour des fonctions complexes, l'orthogonalité est généralement définie par $\left\langle f|g \right\rangle = 0$. Du fait de la définition du produit hermitien, l'égalité $\left\langle g|f \right\rangle = \overline{\left\langle f|g \right\rangle}$ assure que si l'un est nul, l'autre l'est aussi : $\left\langle g|f \right\rangle = \overline{0} = 0$.
+### Propriété d'orthogonalité
 
-Les fonctions propres associées à des valeurs propres distinctes d'un opérateur hermitien (comme l'opérateur $\frac{d^2}{dx^2}$ sur un domaine fini) sont orthogonales.
+Deux vecteurs fonctionnels complexes $|f\rangle$ et $|g\rangle$ sont dits **orthogonaux** si leur produit hermitien est nul :
 
-Il revient au même de parler de "fonctions orthogonales" ou de "vecteurs orthogonaux" puisque nous avons montré que les fonctions envisagées sont assimilables à des vecteurs (dans l'espace de Hilbert).
+$$\boxed{\langle f | g \rangle = 0}$$
 
-### Norme :
+Du fait de la définition du produit hermitien, nous avons la propriété de symétrie complexe :
 
-On appelle norme du vecteur fonctionnel complexe $\left|f\right\rangle$ le produit hermitien de ce vecteur par lui-même, soit :
+$$\langle g | f \rangle = \langle f | g \rangle^*$$
 
-$$ \| f \|^2 = \langle f | f \rangle = \frac{1}{T} \int_{0}^{T} \overline{f(x)} f(x)\,dx = \frac{1}{T} \int_{0}^{T} |f(x)|^2 \, dx $$
+Ainsi, si $\langle f | g \rangle = 0$, alors son conjugué complexe $\langle g | f \rangle = 0^* = 0$. L'orthogonalité est donc une propriété mutuelle et symétrique.
 
-Lorsque nous parlerons plus tard de la fonction d'onde représentée par le vecteur $|\Psi\rangle$, nous dirons que la norme au carré de $|\Psi\rangle$ est :
+::: callout-important
+### Théorème fondamental d'orthogonalité
+Dans le formalisme fonctionnel, les fonctions propres d'un opérateur hermitien (comme l'opérateur $\frac{d^2}{dx^2}$ sous des conditions aux limites appropriées) associées à des **valeurs propres distinctes** sont automatiquement orthogonales entre elles.
 
-$$\langle \Psi | \Psi \rangle = |||\Psi\rangle||^2 = \sum_{i}c_i^*c_i = \sum_{i}|c_i|^2$$
+Par conséquent, parler de « fonctions orthogonales » ou de « vecteurs d'état orthogonaux » est strictement équivalent, puisque l'ensemble de ces fonctions forme la base d'un espace de Hilbert.
+:::
 
-### Norme des fonctions propres de $\frac{d^2}{dx^2}$ :
+### Norme d'un vecteur fonctionnel
 
-La norme des vecteurs de la suite $\left| f_k \right\rangle$, c'est à dire la norme des fonctions propres :
+On appelle **norme au carré** du vecteur fonctionnel complexe $|f\rangle$ le produit hermitien de ce vecteur par lui-même :
 
-$$f_k(x) = e^{ik\frac{2\pi}{T}x}$$
+$$\|f\|^2 = \langle f | f \rangle = \frac{1}{T} \int_{0}^{T} f^*(x) f(x) \, dx = \frac{1}{T} \int_{0}^{T} |f(x)|^2 \, dx$$
 
-de l'opérateur $\frac{d^2}{dx^2}$ a pour valeur :
+::: callout-note
+### Lien avec la fonction d'onde $|\Psi\rangle$
+Lorsque nous décomposerons la fonction d'onde $|\Psi\rangle$ sur une base de vecteurs propres ($|\Psi\rangle = \sum_i c_i |f_i\rangle$), la norme au carré s'exprimera très simplement par la somme des modules au carré des coefficients :
 
-$$||f_k||^2 = \left\langle f_k | f_k \right\rangle = \frac{1}{T} \int_{0}^{T} \overline{e^{ik\frac{2\pi}{T}x}} e^{ik\frac{2\pi}{T}x} \,dx = \frac{1}{T} \int_{0}^{T} e^{-ik\frac{2\pi}{T}x} e^{ik\frac{2\pi}{T}x} \,dx=\frac{1}{T} \int_{0}^{T}dx=1$$
+$$\langle \Psi | \Psi \rangle = \|\Psi\|^2 = \sum_{i} c_i^* c_i = \sum_{i} |c_i|^2 = 1$$
 
-Les vecteurs de la suite $\left| f_k \right\rangle$ ont donc pour norme l'unité.
+En physique quantique, cette égalité exprime le fait que la somme des probabilités de trouver le système dans un état donné est égale à 100% (conservation de la probabilité).
+:::
 
-L'ensemble des vecteurs propres de l'opérateur $\frac{d^2}{dx^2}$ orthogonaux et normés à l'unité forment un système orthonormé. On établit qu'ils peuvent être utilisés comme vecteurs de base et ainsi servir à la décomposition de n'importe quel autre vecteur.
+### Norme des fonctions propres de l'opérateur $\frac{d^2}{dx^2}$
 
-On exprime cette propriété en disant que la suite des vecteurs propres est complète.
+Calculons la norme des fonctions propres complexes associées à des conditions aux limites périodiques sur $[0, T]$ :
+
+$$f_k(x) = e^{i k \frac{2\pi}{T} x} \quad (k \in \mathbb{Z})$$
+
+Le calcul du produit hermitien de $f_k(x)$ par elle-même donne :
+
+$$\begin{aligned}
+\|f_k\|^2 = \langle f_k | f_k \rangle &= \frac{1}{T} \int_{0}^{T} \left( e^{i k \frac{2\pi}{T} x} \right)^* e^{i k \frac{2\pi}{T} x} \, dx \\
+&= \frac{1}{T} \int_{0}^{T} e^{-i k \frac{2\pi}{T} x} e^{i k \frac{2\pi}{T} x} \, dx \\
+&= \frac{1}{T} \int_{0}^{T} 1 \, dx = \frac{1}{T} \cdot T = 1
+\end{aligned}$$
+
+Les vecteurs de la suite $|f_k\rangle$ ont donc tous pour norme l'unité.
+
+### Système orthonormé et complétude de la base
+
+L'ensemble des fonctions propres $|f_k\rangle$ de l'opérateur $\frac{d^2}{dx^2}$ est à la fois **orthogonal** et **normé à l'unité**. On résume ces deux propriétés grâce au symbole de Kronecker $\delta_{jk}$ :
+
+$$\boxed{\langle f_j | f_k \rangle = \delta_{jk} = \begin{cases} 1 & \text{si } j = k \\ 0 & \text{si } j \neq k \end{cases}}$$
+
+Ces fonctions constituent un **système orthonormé**. 
+
+De plus, ces fonctions forment un ensemble **complet** : n'importe quelle fonction d'onde physique $g(x)$ définie sur $[0, T]$ peut être développée de façon unique sous la forme d'une série de Fourier (combinaison linéaire de la base) :
+
+$$g(x) = \sum_{k=-\infty}^{+\infty} c_k f_k(x)$$
 
 ### Développement complexe de fourier :
 
