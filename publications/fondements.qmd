@@ -1583,6 +1583,8 @@ Les chinois sont également très en pointe.
 
 # Annexe mathématique
 
+## Définition : Espace Vectoriel :
+
 ::: callout-tip
 Un jour étant étudiant j'avais été invite par un camarade à une soirée et là il y a avait un étudiant en mathématique qui disait que les mathématiciens étaient des gens formidables. Puis il a dit fièrement que la veille il s'était "amusé" à travailler avec des collègues sur un espace à environ 30 dimensions. J'étais surpris et septique sur l'utilité. Pourtant en physique quantique on travaille bien sur des espaces abstraits de dimension infinie. C'est une des raisons qui font que ce formalisme est réputé difficile.
 :::
@@ -1590,7 +1592,6 @@ Un jour étant étudiant j'avais été invite par un camarade à une soirée et 
 L'informatique quantique repose sur le formalisme des espaces de Hilbert. Voici les définitions fondamentales adaptées de @Wiggins2024. Même si elles semblent abstraites il vaut mieux les accepter telles quelles pour l'instant.
 
 ::: callout-note
-## Définition : Espace Vectoriel :
 
 Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ensemble des nombres complexes $\mathbb{C}$, est un ensemble d'éléments (appelés vecteurs) sur lequel deux opérations sont définies :
 
@@ -1600,6 +1601,7 @@ Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ense
 :::
 
 ::: callout-note
+
 ## Définition : Espace de Hilbert :
 
 Un espace de Hilbert est un espace vectoriel $\mathcal{V}$ muni d'un produit scalaire et qui est complet (c'est-à-dire que toute suite de Cauchy converge fortement vers un vecteur appartenant à $\mathcal{V}$).
@@ -1830,73 +1832,8 @@ $$\begin{vmatrix}
 
 *Ainsi nous voyons que nous avons intérêt à nous ramener dans la situation d'une matrice hermitique.*
 
-## Quelle est la représentation de la matrice hermitique A dans cette base particulière ? :
+ 
 
-Appliquons à l'opérateur A un vecteur $\left| V \right\rangle$ quelconque.
-
-On obtient :
-
-$$A\left| V \right\rangle = x_1A\left| V_1 \right\rangle + x_2A\left| V_2 \right\rangle + .... + x_nA\left| V_n \right\rangle$$
-
-Comme $\left| V_1 \right\rangle$, $\left| V_2 \right\rangle$, ... $\left| V_n \right\rangle$ sont vecteurs propres de A avec valeurs propres : $\lambda_1$, $\lambda_2$, ...., $\lambda_n$
-
-Cette loi de transformation s'écrit : $$A\left| V \right\rangle = \lambda_1x_1\left| V_1 \right\rangle + \lambda_2x_2\left| V_2 \right\rangle + .... + \lambda_n x_n\left| V_n \right\rangle$$
-
-On voit que la matrice qui représente l'opérateur A est de la forme :
-
-$$A=
-\begin{pmatrix}
-\lambda_1 & 0 & 0 & ... \\
-0 & \lambda_2 & 0 & ... \\
-0 & 0 & \lambda_3 & ....\\
-... & ... & .... & ....
-\end{pmatrix}$$
-
-C'est une matrice diagonale dont les élèments sont les valeurs propres de l'opérateur A.
-
-## Opérations sur des fonctions et opérations sur des vecteurs :
-
-Nous avons vu jusqu'ici qu'une opération linéaire portant sur un vecteur, c'est à dire une transformation linéaire qui fait passer d'un vecteur quelconque $\vec{V_1}$ à un vecteur $\vec{V_2}$ est représentable par une matrice M.
-
-Dans le cas des fonctions, nous connaissons des transformations linéaires simples qui au premier abord ne semblent pas nécessiter l'utilisation de matrices. Ainsi l'opération de dérivation d/dx fait passer de toute fonction dérivable f(x) à une autre fonction g(x) : $g(x)=\frac{\partial f(x)}{\partial x}$
-
-Cette opération est linéaire, car $f_{1}(x)$ et $f_{2}(x)$ étant deux fonctions dérivables quelconques, on a : $$\frac{d}{dx}[f_1(x) + f_2(x)]=\frac{d}{dx}f_1(x) + \frac{d}{dx}f_2(x)$$
-
-De plus si $\alpha$ est un scalaire et f(x) une fonction dérivable quelconque :
-
-$$\frac{d}{dx}\alpha f(x)=\alpha\frac{d}{dx}f(x)$$
-
-Si f(x) est considéré comme un vecteur et g(x) comme le vecteur transformé l'opérateur $\frac{d}{dx}$ doit être représentable par une matrice.
-
-Tout opérateur linéaire qu'il porte sur un vecteur classique ou une fonction (vecteur généralisé) peut être représenté par une matrice.
-
-Les deux aspects de la mécanique quantique, celui où les phénomènes sont décrits par une fonction d'onde et des opérateurs différentiels qui en régissent l'évolution, et celui ou les états du système étudié sont représentés par des vecteurs régis par des matrices, apparaitrons alors comme parfaitement équivalents.
-
-Les fondateurs de la mécanique quantique ont abordé les problèmes sous deux angles différents : Louis de Broglie, Schrödinger adoptaient pour point de départ les opérateurs différentiels tandis que Heisenberg utilisait la description matricielle, reprise sous une forme plus élaborée par Dirac.
-
-## Opérateurs fonctionnels, fonctions propres, valeurs propres :
-
-Un opérateur fonctionnel $\hat{A}$ transforme une fonction $f(x)$ en une autre fonction $g(x) = \hat{A}f(x)$. Les exemples typiques incluent les opérateurs de dérivation (comme $\frac{d}{dx}$) ou l'opérateur de multiplication par la variable ($\hat{X} = x \times$).
-
-Dans le cas des fonctions continues d'une variable $x$, on peut prendre par exemple les opérations de dérivation :
-
-$$\frac{d}{dx}$$
-
-$$\frac{d^2f}{dx^2}$$
-
-ou bien l'opérateur laplacien :
-
-$$\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}$$
-
-*Le symbole du laplacien est :* $\Delta$. Toutefois on peut trouver aussi $\nabla^2$, $\nabla$ représentant un gradient.
-
-On peut aussi imaginer des opérations qui ne font pas intervenir des symboles de dérivation. Par exemple à toute fonction f(x) d'une variable x on pourra faire correspondre la fonction transformée : $g(x)=xf(x)$
-
-L'opérateur sera noté ici $x \times$
-
-::: callout-tip
-D'un point de vue pratique, le passage d'une matrice à un opérateur peut sembler difficile à justifier. Par exemple, dans la base de Fourier les vecteurs sont bien séparés les uns des autres. Toutefois dans la base en x les vecteurs sont une infinité de peigne de Dirac très rapprochés correspondant aux différentes positions. On passe ainsi à un modèle continue qui justifie l'usage d'une fonction (un opérateur) plus qu'un tableau (une matrice). Donc une matrice (en relation avec un vecteur d'état) peut devenir un opérateur qui sera en relation avec une fonction d' état (la fonction d’onde de Schrödinger en étant un exemple).
-:::
 
 ## Fonction propres et valeurs propres d'un opérateur fonctionnel :
 
@@ -1977,82 +1914,6 @@ On vérifie aisément que $\sqrt{b}$ est solution en rentrant la valeur dans l'�
 :::
 
 De plus toute combinaisons linéaire de fonction propres est aussi fonction propre avec la même valeur b.
-
-## Conditions aux limites :
-
-L'application de conditions aux limites (ou conditions de bord) sur l'intervalle de définition de la fonction a pour effet de restreindre les valeurs propres possibles d'un opérateur. Cela conduit typiquement au remplacement d'un spectre continu par un spectre discret (quantification).
-
-![](Sinusoide.png){fig-align="center"}
-
-La figure montre une fonction sinusoïdale sur un intervalle $[0, T]$, illustrant comment les conditions aux limites $f(0)=0$ et $f(T)=0$ imposent des longueurs d'onde discrètes.
-
-\begin{figure}
-    
-\begin{tikzpicture}[scale=1]
-  % Tracé de la courbe sinusoïdale
-  \draw[thick, domain=0:4*pi, samples=100] plot (\x, {sin(\x r)});
-
-  % Axe horizontal
-  \draw[->] (0,0) -- (4*pi + 0.5, 0) node[right] {$x$};
-
-  % Axe vertical
-  \draw[->] (0,-1.5) -- (0,1.5) node[above] {$A(x)$};
-
-  % Indication de la période
-  \draw[<->, thick] (0, -1.8) -- (2*pi, -1.8) node[midway, below, red] {$T$};
-
-  % Marquage de la période
-  \node at (pi, -1.5) {$\pi$};
-  \node at (2*pi, -1.5) {$2\pi$};
-
-  % Points clés pour la période
-  \fill[blue] (0,0) circle (3pt);
-  \node[above, red] at (0,0.5) {Limite inferieure};
-  \fill[blue] (2*pi,0) circle (3pt) ; 
-  \node[above, red] at (2*pi,0.5) {Limite supérieure};
-  \fill (4*pi,0) circle (1pt);
-\end{tikzpicture}
-\caption{l'application des conditions au limites donne $A(0)=0$ et $A(2\pi)=0$}
- 
-\end{figure}
-
-Considérons à nouveau l'opérateur $\hat{B}=\frac{d^2}{dx^2}$ sur l'intervalle $[0, T]$, mais cette fois avec une condition de périodicité aux limites :
-
-$$f(0) = f(T)$$
-
-L'équation aux valeurs propres est toujours :
-
-$$\frac{d^2}{dx^2}f(x) = b f(x)$$
-
-Pour obtenir des solutions périodiques (oscillatoires), la valeur propre $b$ doit être négative. Posons $b = -\omega^2$. La solution générale est alors une combinaison linéaire d'exponentielles complexes :
-
-$$f(x) = C_1 e^{i\omega x} + C_2 e^{-i\omega x}$$
-
-En appliquant la condition aux limites $f(0) = f(T)$ :
-
-$$C_1 e^{0} + C_2 e^{0} = C_1 e^{i\omega T} + C_2 e^{-i\omega T}$$
-
-$$C_1 (1 - e^{i\omega T}) + C_2 (1 - e^{-i\omega T}) = 0$$
-
-Pour que des solutions non triviales existent, les valeurs $\omega$ doivent être discrètes. La condition la plus simple (et celle impliquée par l'utilisation d'une seule exponentielle complexe) est que $e^{i\omega T}$ soit égal à $1$.
-
-$$e^{i\omega T} = 1$$
-
-Ceci impose que l'argument $\omega T$ soit un multiple entier de $2\pi$ :
-
-$$\omega T = k 2\pi, \quad k \in \mathbb{Z}$$
-
-D'où les valeurs discrètes (quantifiées) pour $\omega$ :
-
-$$\omega_k = \frac{k 2\pi}{T}, \quad k = 0, \pm 1, \pm 2, \ldots$$
-
-Les fonctions propres de l'opérateur $\hat{B}=\frac{d^2}{dx^2}$ qui vérifient la condition de périodicité sur l'intervalle $(0, T)$ sont donc de la forme :
-
-$$f_k(x) = e^{i \frac{k 2\pi x}{T}} \quad \text{et} \quad f_{-k}(x) = e^{-i \frac{k 2\pi x}{T}}$$
-
-Les valeurs propres associées sont $b_k = -\omega_k^2 = -(\frac{k 2\pi}{T})^2$.
-
-Ceci constitue un spectre discret.
 
 ## Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
 
@@ -2162,96 +2023,7 @@ Les coefficients $C_n$ (qui sont les composantes du vecteur $\left| f \right\ran
 
 $$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\overline{e^{{i}2\pi {\tfrac {n}{T}}t}}\mathrm {d} t = {\frac {1}{T}}\int _{0}^{T}f(t){e}^{-{i}2\pi {\tfrac {n}{T}}t}\mathrm {d} t$$
 
-## Opérateurs hermitiques et grandeurs physiques :
-
-Après avoir fait le choix d'un intervalle de définition avec des conditions aux limites, nous appellerons opérateur fonctionnel hermitique un opérateur qui admet un système orthogonal complet de fonctions propres et dont les valeurs propres associées sont toutes réelles.
-
-Définition de l'opérateur fonctionnel hermitique : Admet un système orthogonal complet de fonctions propres et des valeurs propres associées qui sont toutes réelles.
-
-C'est le cas de l'opérateur
-
-$$\frac{d^2}{dx^2}$$
-
-(avec des conditions aux limites périodiques ou nulles) qui est donc un opérateur hermitique.
-
-L'importance des opérateurs hermitiques provient de ce que tous les opérateurs de la mécanique quantique qui représentent des grandeurs physiques (observables) sont des opérateurs hermitiques. Les valeurs propres réelles des opérateurs hermitiens garantissent que les résultats de mesure sont des nombres réels.
-
-L'opérateur $\frac{d^2}{dx^2}$ est un opérateur réel car il ne contient pas le symbole "$i$" mais la théorie s'applique plus généralement au cas d’opérateurs complexes tels que par exemple les opérateurs que nous rencontrerons en mécanique quantique :
-
-- L'opérateur quantité de mouvement selon $x$:
-
-$$\hat{P}_x = \frac{\hbar}{i}\frac{d}{dx} = \frac{h}{i2\pi}\frac{d}{dx}$$
-
-- L'opérateur quantité de mouvement selon $y$:
-
-$$\hat{P}_y = \frac{h}{i2\pi}\frac{d}{dy}$$
-
-- L'opérateur quantité de mouvement selon $z$:
-
-$$\hat{P}_z = \frac{h}{i2\pi}\frac{d}{dz}$$
-
-- L'opérateur énergie (Hamiltonien) dépendant du temps:
-
-$$\hat{E} = -\frac{\hbar}{i}\frac{d}{dt} = -\frac{h}{i2\pi}\frac{d}{dt}$$
-
-où $\hbar = \frac{h}{2\pi}$ est la constante de Planck réduite.
-
-## Représentation d'un opérateur fonctionnel par une matrice :
-
-Considérons maintenant un opérateur fonctionnel $\hat{B}$, hermitique ou non, distinct de $\hat{A}$. Toute fonction $f(x)$ est transformée par $\hat{B}$ en une autre fonction $g(x)$ suivant :
-
-$$g(x)=\hat{B}f(x)$$
-
-Remplaçons dans cette égalité fonctionnelle la fonction $f(x)$ par son développement sur la base des fonctions propres de $\hat{A}$, il vient :
-
-$$g(x)=a_1\hat{B}f_1(x) + a_2\hat{B}f_2(x) + \cdots + a_n\hat{B}f_n(x)$$
-
-Et chacune des fonctions transformées $\hat{B}f_1(x), \hat{B}f_2(x), \ldots, \hat{B}f_n(x)$ est elle-même développable dans le cas général sur la base des fonctions propres $f_1(x), f_2(x), \ldots, f_n(x)$ suivant :
-
-$$\begin{array}{rcl}
-\hat{B}f\_1(x) & = & B\_1^1f\_1(x) + B\_2^1f\_2(x) + \cdots + B\_n^1f\_n(x) \\
-\hat{B}f\_2(x) & = & B\_1^2f\_1(x) + B\_2^2f\_2(x) + \cdots + B\_n^2f\_n(x) \\
-& \vdots & \\
-\hat{B}f\_n(x) & = & B\_1^nf\_1(x) + B\_2^nf\_2(x) + \cdots + B\_n^nf\_n(x)
-\end{array}$$
-
-Ainsi sur la base des fonctions propres de $\hat{A}$, l’opérateur fonctionnel $\hat{B}$ est représentable par la matrice :
-
-$$\mathbf{B}=\begin{pmatrix}
-B\_1^1  & B\_1^2 & \cdots & B\_1^n \\
-B\_2^1  & B\_2^2  & \cdots & B\_2^n \\
-\vdots  & \vdots& \ddots& \vdots\\
-B\_n^1 & B\_n^2 & \cdots & B\_n^n \\ 
-\end{pmatrix}$$
-
-On reconnaît les relations qui ont servi à définir une transformation matricielle. Elles font passer des composantes du vecteur $\left| f \right\rangle$ aux composantes du vecteur $\left| g \right\rangle$ (notées $a'_k$) suivant :
-
-$$\begin{pmatrix}
-a\_1'  \\
-a\_2'  \\
-\vdots  \\
-a\_n'  \\ 
-\end{pmatrix}= \mathbf{B} \cdot \begin{pmatrix}
-a\_1  \\
-a\_2  \\
-\vdots  \\
-a\_n  \\ 
-\end{pmatrix}$$
-
-Pour plus d’élégance, on peut écrire les intégrales (calculant les coefficients $B_i^j$) sous forme vectorielle puisqu'elles représentent des produits hermitiens.
-
-Par exemple, le coefficient $B_i^j$ est donné par le produit hermitien $\left\langle f_i \right| \hat{B} \left| f_j \right\rangle$. L'élément $B_2^1$ de la matrice s'écrit alors $B_2^1=\left\langle f_2\right|\hat{B}|f_1\rangle$.
-
-La matrice représentative de l’opérateur $\hat{B}$ s’écrit alors :
-
-$$\mathbf{B}=\begin{pmatrix}
- \left\langle f\_1 \right|\hat{B}|f\_1\rangle & \left\langle f\_1 \right|\hat{B}|f\_2\rangle & \cdots & \left\langle f\_1 \right|\hat{B}|f\_n\rangle \\
-\left\langle f\_2 \right|\hat{B}|f\_1\rangle  & \left\langle f\_2 \right|\hat{B}|f\_2\rangle  & \cdots & \left\langle f\_2 \right|\hat{B}|f\_n\rangle \\
-\vdots  & \vdots& \ddots& \vdots\\
-\left\langle f\_n \right|\hat{B}|f\_1\rangle & \left\langle f\_n \right|\hat{B}|f\_2\rangle & \cdots & \left\langle f\_n \right|\hat{B}|f\_n\rangle \\ 
-\end{pmatrix}$$
-
-Ce sont les notations utilisées par Dirac.
+ 
 
 ## Calcul pratique des éléments de la matrice $\mathbf{B}$ :
 
