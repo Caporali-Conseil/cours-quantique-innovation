@@ -37,15 +37,19 @@ metadata:
 
 **Informations légales et de version :**
 
-**Licence :** Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
+*Licence :* Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-**Version :** 1.0.5 (Dernière mise à jour : 22 août 2026)
+*Version :* 1.0.5 (Dernière mise à jour : 24 août 2026)
 
-Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux gens concernés par la convergence entre quantique et réseaux.
+Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux acteurs et professionnels concernés par la convergence entre quantique et réseaux.
 
-Il ne remplace pas un cours universitaire standard (L3/M1 en cursus physique) notamment car le contenu mathématique est ici moins développé et le public n'est pas le même.
+Il ne remplace pas un cours universitaire standard (L3/M1 en cursus de physique), notamment car le contenu mathématique y est moins développé et le public visé diffère.
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
+
+:::{.callout-note title="Note d'édition"}
+Ce document a été rédigé et structuré par l'auteur. Une intelligence artificielle (LLM) a été utilisée comme outil d'assistance pour la relecture textuelle, la clarification de certaines notions théoriques et l'optimisation pédagogique du plan.
+:::
 
 # Démarche et motivation pédagogique :
 
@@ -1583,7 +1587,9 @@ Les chinois sont également très en pointe.
 
 # Annexe mathématique
 
-## Définition : Espace Vectoriel :
+## Vecteur :
+
+### Définition : Espace Vectoriel :
 
 ::: callout-tip
 Un jour étant étudiant j'avais été invite par un camarade à une soirée et là il y a avait un étudiant en mathématique qui disait que les mathématiciens étaient des gens formidables. Puis il a dit fièrement que la veille il s'était "amusé" à travailler avec des collègues sur un espace à environ 30 dimensions. J'étais surpris et septique sur l'utilité. Pourtant en physique quantique on travaille bien sur des espaces abstraits de dimension infinie. C'est une des raisons qui font que ce formalisme est réputé difficile.
@@ -1602,13 +1608,14 @@ Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ense
 
 ::: callout-note
 
-## Définition : Espace de Hilbert :
+### Définition : Espace de Hilbert :
 
 Un espace de Hilbert est un espace vectoriel $\mathcal{V}$ muni d'un produit scalaire et qui est complet (c'est-à-dire que toute suite de Cauchy converge fortement vers un vecteur appartenant à $\mathcal{V}$).
 :::
 
 ::: callout-important
-## Définition : Vecteur d'état (State Vector) :
+
+### Définition : Vecteur d'état (State Vector) :
 
 L'espace des états d'un système de mécanique quantique est un espace de Hilbert complexe.
 
@@ -1617,7 +1624,7 @@ Un vecteur d'état est un vecteur de cet espace ayant une norme unitaire :
 $\langle \psi | \psi \rangle = 1$
 :::
 
-## Produit scalaire de deux vecteurs :
+### Produit scalaire de deux vecteurs :
 
 Le produit scalaire de deux vecteurs et le produit de leurs longueurs et du cosinus de l'angle qu'ils définissent.
 
@@ -1649,7 +1656,7 @@ Voici une definition plus mathematique :
 
 > An inner product on a vector space V is a map of an ordered pair of vectors $(\Psi, \phi)$ to the complex numbers that satisfy the following properties : 1. $(\Phi, \alpha \phi + \beta \chi)=\alpha(\Psi, \phi)+\beta(\Psi, \chi)$ 2. $(\Phi,\phi)=\overline{(\phi,\Phi)}$ 3. $(\phi, \phi)\geq 0$ and equality holds if and only if $\Phi=0$, for any $\alpha, \beta \in \mathbb{C}, \Phi, \phi, \chi \in V$.[@Wiggins2024]
 
-## Norme d'un vecteur :
+### Norme d'un vecteur :
 
 La norme d’un vecteur est une quantité qui caractérise sa longueur ou sa taille. Elle permet de mesurer la distance entre l’origine du repère et le point représenté par le vecteur. Mathématiquement, pour un vecteur $\vec{v} = (v1, v2, ..., v_n)$ dans un espace de dimension n, la norme est donnée par la formule :
 
@@ -1659,7 +1666,9 @@ Voici une définition plus mathématique de la norme :
 
 > For any vector $\Phi \in V$, we define the norm of $\Phi$, denoted $\lVert \Phi \rVert$, as follow : $\lVert \Phi \rVert=\sqrt{(\Phi,\Phi)}$ [@Wiggins2024]
 
-## Equation aux valeurs propres :
+## Operateur matriciel :
+
+### Equation aux valeurs propres :
 
 Nous allons généraliser les résultats vu précédemment.
 
@@ -1741,7 +1750,7 @@ On peut appeler cette équation une équation aux valeurs propres. Dans notre "c
 Nous parlerons plus loin de fonction d'onde $\Psi$ pour décrire l’état d'une particule. Nous poserons que si $|\Psi_n \rangle$ est vecteur propre de l’opérateur A, avec la valeur propre $a_n$ alors : $$\boxed{A|\Psi_n\rangle=a_n|\Psi_n}$$
 :::
 
-## Produit hermitien :
+### Produit hermitien :
 
 En anglais complex inner product.
 
@@ -1795,7 +1804,7 @@ Selon [@Wiggins2024] page 6
 
 $(\Psi,\phi)=\int_D \overline{\Psi(x)}\phi(x)dx$ et $L^2(D)$ denote the set of all complex value functions of the real variable x, defined on some domain $D\in\mathbb{R}$
 
-## Matrice hermitique :
+### Matrice hermitique :
 
 Nous serons amenés à représenter les grandeurs physiques par des matrices, puis à préciser la notion de mesure.
 
@@ -1824,7 +1833,7 @@ $$\begin{vmatrix}
 -i & 0 
 \end{vmatrix}$$
 
-## Valeurs propres et vecteurs propres des matrices hermitiques :
+### Valeurs propres et vecteurs propres des matrices hermitiques :
 
 *Théorème 1* : les valeurs propres d'une matrice hermitique sont toutes réelles
 
@@ -1832,8 +1841,39 @@ $$\begin{vmatrix}
 
 *Ainsi nous voyons que nous avons intérêt à nous ramener dans la situation d'une matrice hermitique.*
 
+## Notation  BRA-KET
 
-## Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : 
+Pour simplifier l'écriture des vecteurs généralisés et des produits hermitiens, Paul Dirac a introduit en 1939 une notation symbolique élégante qui décompose le mot "Bracket" (crochet) en deux parties : le **Bra** et le **Ket**.
+
+### Le KET : L'état du système
+
+Le **Ket**, noté $|\psi\rangle$, représente le **vecteur d'état**.
+
+- C'est l'équivalent quantique d'un vecteur colonne en algèbre linéaire.
+
+- Il contient toute l'information sur le système physique (sa position, son énergie, etc.).
+
+- Mathématiquement, c'est un élément d'un espace de Hilbert.
+
+### Le BRA : Le vecteur "miroir"
+
+Le **Bra**, noté $\langle\phi|$, est le **vecteur dual** (ou vecteur ligne).
+
+- Il est obtenu en prenant le Ket, en le transposant et en prenant le complexe conjugué de ses composantes.
+
+- Si $|\psi\rangle$ est un vecteur colonne, $\langle\psi|$ est son équivalent sous forme de ligne "conjuguée".
+
+### Le BRA-KET : Le produit scalaire
+
+Lorsque l'on juxtapose un Bra et un Ket, on obtient un **Bra-Ket** $\langle\phi|\psi\rangle$, qui représente le **produit scalaire hermitien**.
+
+- Le résultat est toujours un **nombre complexe**.
+
+- Si on calcule $\langle\psi|\psi\rangle$, on obtient la **norme au carré** du vecteur, qui doit être égale à 1 (condition de normalisation) pour représenter une probabilité totale de 100%.
+
+## Operateurs fonctionnels :
+
+### Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : 
 [@Delbarre2022-bb] 
 
 $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
@@ -1845,7 +1885,7 @@ $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br 
 3.  Si $\Delta < 0$ on note $r_1$ et $r_2$ les deux solutions complexes conjuguées de R avec $$r_1=\Re{r_1} + i\Im{r_1}$$ et $$r_2=\Re{r_2} + i\Im{r_2}$$
 
 
-## Fonction propres et valeurs propres d'un opérateur fonctionnel :
+### Fonction propres et valeurs propres d'un opérateur fonctionnel :
 
 
 *Définition :*
@@ -1913,7 +1953,7 @@ On vérifie aisément que $\sqrt{b}$ est solution en rentrant la valeur dans l'�
 
 De plus toute combinaisons linéaire de fonction propres est aussi fonction propre avec la même valeur b.
 
-## Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
+### Produit scalaire hermitien de deux vecteurs fonctionnels complexes :
 
 Nous pouvons considérer ces fonctions propres complexes comme des vecteurs généralisés complexes c'est à dire des vecteurs d'un espace de Hilbert (ou vecteurs d'état).
 
@@ -1930,7 +1970,7 @@ $$\boxed{\left\langle f|g \right\rangle=\frac{1}{T}\int_{0}^{T} \overline{f(x)} 
 Ce produit hermitien est indispensable pour définir la norme des fonctions d'onde
 
 
-## Propriété d'orthogonalité :
+### Propriété d'orthogonalité :
 
 Les vecteurs fonctionnels complexes $\left|f\right\rangle$ et $\left| g \right\rangle$ sont dits "orthogonaux" si le produit hermitien est nul. On a alors :
 
@@ -1942,7 +1982,7 @@ Les fonctions propres associées à des valeurs propres distinctes d'un opérate
 
 Il revient au même de parler de "fonctions orthogonales" ou de "vecteurs orthogonaux" puisque nous avons montré que les fonctions envisagées sont assimilables à des vecteurs (dans l'espace de Hilbert).
 
-## Norme :
+### Norme :
 
 On appelle norme du vecteur fonctionnel complexe $\left|f\right\rangle$ le produit hermitien de ce vecteur par lui-même, soit :
 
@@ -1952,7 +1992,7 @@ Lorsque nous parlerons plus tard de la fonction d'onde représentée par le vect
 
 $$\langle \Psi | \Psi \rangle = |||\Psi\rangle||^2 = \sum_{i}c_i^*c_i = \sum_{i}|c_i|^2$$
 
-## Norme des fonctions propres de $\frac{d^2}{dx^2}$ :
+### Norme des fonctions propres de $\frac{d^2}{dx^2}$ :
 
 La norme des vecteurs de la suite $\left| f_k \right\rangle$, c'est à dire la norme des fonctions propres :
 
@@ -1968,7 +2008,7 @@ L'ensemble des vecteurs propres de l'opérateur $\frac{d^2}{dx^2}$ orthogonaux e
 
 On exprime cette propriété en disant que la suite des vecteurs propres est complète.
 
-## Développement complexe de fourier :
+### Développement complexe de fourier :
 
 ::: callout-note
 En 1807 Joseph Fourier, alors préfet de l'Isère, présente ses travaux sur la propagation de la chaleur. Il émet l'idée révolutionnaire que n'importe quelle fonction périodique, aussi "brisée" soit-elle, peut être reconstruite par une somme de fonctions sinus et cosinus parfaitement lisses.
@@ -1996,7 +2036,7 @@ $$C_{n} = \left\langle f_n | f \right\rangle = {\frac {1}{T}}\int _{0}^{T} f(t)\
 
  
 
-## Calcul pratique des éléments de la matrice $\mathbf{B}$ :
+### Calcul pratique des éléments de la matrice $\mathbf{B}$ :
 
 Nous allons calculer les éléments de la matrice $\mathbf{B}$ pour un opérateur spécifique $\hat{B}$ dans la base des fonctions propres de $\hat{A} = \frac{d^2}{dx^2}$.
 
@@ -2010,7 +2050,7 @@ $\mathbf{A}$ a des valeurs propres réelles, et les vecteurs propres de $\mathbf
 
 Les vecteurs propres de $\mathbf{A}$ engendrent $V$.
 
-### Exemple 1 : Opérateur dérivée $\hat{B} = \frac{d}{dx}$
+#### Exemple 1 : Opérateur dérivée $\hat{B} = \frac{d}{dx}$
 
 Si $\hat{B}$ est l’opérateur de dérivation $\frac{d}{dx}$, et si nous adoptons pour base orthonormée les fonctions propres de l’opérateur $\hat{A} = \frac{d^2}{dx^2}$ déterminées précédemment :
 
@@ -2100,7 +2140,7 @@ Une matrice représente une opération. Elle possède des vecteurs propres qui s
 En acoustique on associe bien grâce aux séries de fourier un spectre à une voix. Toutefois ici on génère un espace abstrait grâce à une base donc cela va plus loin. Quelques semaines après son article de 1925 Heisenberg est allé voir Hilbert qui travaillait depuis longtemps sur les espaces abstraits infinis et Heisenberg n’en a pas voulu. La différence culturelle était trop grande. Une thèse d’historien est que si cela avait collé entre les deux l'évènement de la création de l'équation de Schrödinger par Schrödinger en 1926 serait passée plus inaperçue alors qu’elle a été accueillie comme révolutionnaire.
 :::
 
-### Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$ :
+#### Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$ :
 
 Adoptons maintenant pour l'opérateur $\hat{B}$ l'opérateur de multiplication par la variable $\hat{X} = x \times$.
 
@@ -2175,36 +2215,6 @@ La matrice représentative de l'opérateur de position $\hat{X}$ dans la base de
 Éléments non-diagonaux ($\mathbf{X}_{pq}, p \neq q$) : $-i \frac{T}{2\pi (q-p)}$ (Purement imaginaires).
 
 La matrice $\mathbf{X}$ n'est donc pas réelle (elle est hermitienne).
-
-## Notation  BRA-KET
-
-Pour simplifier l'écriture des vecteurs généralisés et des produits hermitiens, Paul Dirac a introduit en 1939 une notation symbolique élégante qui décompose le mot "Bracket" (crochet) en deux parties : le **Bra** et le **Ket**.
-
-### Le KET : L'état du système
-
-Le **Ket**, noté $|\psi\rangle$, représente le **vecteur d'état**.
-
-- C'est l'équivalent quantique d'un vecteur colonne en algèbre linéaire.
-
-- Il contient toute l'information sur le système physique (sa position, son énergie, etc.).
-
-- Mathématiquement, c'est un élément d'un espace de Hilbert.
-
-### Le BRA : Le vecteur "miroir"
-
-Le **Bra**, noté $\langle\phi|$, est le **vecteur dual** (ou vecteur ligne).
-
-- Il est obtenu en prenant le Ket, en le transposant et en prenant le complexe conjugué de ses composantes.
-
-- Si $|\psi\rangle$ est un vecteur colonne, $\langle\psi|$ est son équivalent sous forme de ligne "conjuguée".
-
-### Le BRA-KET : Le produit scalaire
-
-Lorsque l'on juxtapose un Bra et un Ket, on obtient un **Bra-Ket** $\langle\phi|\psi\rangle$, qui représente le **produit scalaire hermitien**.
-
-- Le résultat est toujours un **nombre complexe**.
-
-- Si on calcule $\langle\psi|\psi\rangle$, on obtient la **norme au carré** du vecteur, qui doit être égale à 1 (condition de normalisation) pour représenter une probabilité totale de 100%.
 
 
 
