@@ -2219,81 +2219,83 @@ Ici, comme $[\frac{d}{dx}, \frac{d^2}{dx^2}] = 0$ :
 * En multipliant par $-i\hbar$, on retrouve la matrice de l'impulsion $\mathbf{P}$, elle aussi diagonale, associée aux valeurs propres réelles $p_n = n \frac{2\pi\hbar}{T}$.
 :::
 
-#### Exemple 2 : Matrice non diagonale. Opérateur $\hat{X} = x \times$ :
+::: callout-tip
+### Interprétation physique : Matrice diagonale et couplage
 
-Adoptons maintenant pour l'opérateur $\hat{B}$ l'opérateur de multiplication par la variable $\hat{X} = x \times$.
+La forme de la matrice traduit directement le degré d'isolement et la dynamique du système physique :
 
-Le terme général $\mathbf{X}_{pq} = \left\langle f_p \right| \hat{X} \left| f_q \right\rangle$ est donné par :
+* **Matrice diagonale ($B_{kn} = 0$ pour $k \neq n$) — Le système isolé :**
+  Lorsque la matrice d'un opérateur est strictement diagonale dans la base de l'énergie, chaque état propre $|f_n\rangle$ est un **état stationnaire**. En l'absence de perturbation extérieure ou de potentiel dépendant de la position, le système reste indéfiniment dans son état. Il n'existe aucun couplage entre les différents niveaux : la probabilité de passer de l'état $n$ à l'état $k$ est nulle.
 
-$$\mathbf{X}_{pq} = \frac{1}{T}\int_{0}^{T}e^{-ip\omega x}x e^{iq\omega x}\,dx \quad \text{avec } \omega = \frac{2\pi}{T}$$
+* **Matrice non diagonale ($B_{kn} \neq 0$) — Le système perturbé ou couplé :**
+  Dès que l'on applique une interaction extérieure (un champ électromagnétique, une force dépendante de $x$, ou une mesure), l'opérateur associé présente des éléments hors diagonale. Ces termes $B_{kn}$ mesurent l'amplitude de **transition quantique** : ils décrivent la capacité du système à « sauter » d'un niveau d'énergie $n$ à un niveau $k$ sous l'effet de cette perturbation.
 
-$$\mathbf{X}_{pq}=\frac{1}{T}\int_{0}^{T}x e^{i(q-p)\omega x}\,dx$$
+Retrouver une matrice diagonale revient donc à identifier les « axes naturels » (les modes propres) d'un système fermé, où l'énergie se conserve sans fuite ni transfert vers d'autres états.
+:::
 
-avec $p$ et $q$ entiers, et $\omega = \frac{2\pi}{T}$.
+#### Exemple 2 : Matrice non diagonale — Opérateur Position $\hat{X} = x \times$
 
-Cas $p = q$ (Éléments diagonaux) :
+::: callout-important
+### L'opérateur Position $x$ dans la base d'Énergie
 
-Si $p = q$, l'exponentielle est $e^0 = 1$. L'intégrale se simplifie :
+Pour calculer la matrice de l'opérateur position $\hat{X}$ dans la base de l'énergie (les fonctions propres $f_n(x) = e^{in\omega x}$ de $\frac{d^2}{dx^2}$), on évalue l'intégrale :
 
-$$\mathbf{X}_{nn} = \frac{1}{T}\int_{0}^{T}x \,dx = \frac{1}{T} \left[ \frac{x^2}{2} \right]_{0}^{T} = \frac{1}{T} \frac{T^2}{2}$$
+$$\mathbf{X}_{pq} = \langle f_p | \hat{X} | f_q \rangle = \frac{1}{T}\int_{0}^{T} e^{-ip\omega x} \cdot x \cdot e^{iq\omega x} \, dx = \frac{1}{T}\int_{0}^{T} x \, e^{i(q-p)\omega x} \, dx$$
 
-$$\mathbf{X}_{nn} = \frac{T}{2}$$
+Puisque $[x, \frac{d^2}{dx^2}] \neq 0$, la matrice obtenue **n'est pas diagonale** : l'opérateur position connecte les différents états d'énergie entre eux, illustrant les transitions quantiques.
+:::
 
-Tous les éléments diagonaux sont réels et égaux à $\frac{T}{2}$.
+Adoptons pour l'opérateur $\hat{B}$ l'opérateur de multiplication par la position $\hat{X} = x \times$. Le terme général $\mathbf{X}_{pq} = \left\langle f_p \right| \hat{X} \left| f_q \right\rangle$ s'écrit avec $\omega = \frac{2\pi}{T}$ :
 
-Cas $p \neq q$ (Éléments non-diagonaux) :
+$$\mathbf{X}_{pq} = \frac{1}{T}\int_{0}^{T} x \, e^{i(q-p)\omega x}\,dx$$
 
-Si $p \neq q$, posons $\alpha = (q-p)\omega = (q-p)\frac{2\pi}{T}$. Nous cherchons à calculer l'intégrale :
+##### Cas $p = q$ (Éléments diagonaux)
+
+Si $p = q$, l'exponentielle s'annule ($e^0 = 1$) et l'intégrale devient :
+
+$$\mathbf{X}_{nn} = \frac{1}{T}\int_{0}^{T}x \,dx = \frac{1}{T} \left[ \frac{x^2}{2} \right]_{0}^{T} = \frac{T}{2}$$
+
+Tous les éléments diagonaux sont réels et égaux à $\frac{T}{2}$. Physiquement, cela indique que dans n'importe quel état propre d'énergie $|f_n\rangle$, la **position moyenne** $\langle x \rangle$ de la particule est située au milieu du domaine $[0, T]$.
+
+##### Cas $p \neq q$ (Éléments non diagonaux)
+
+Posons $\alpha = (q-p)\omega = (q-p)\frac{2\pi}{T}$. L'intégrale à évaluer est :
 
 $$I_{pq} = \int_{0}^{T}x e^{i\alpha x}\,dx$$
 
-Nous utilisons l'intégration par parties : $\int u\,dv = uv - \int v\,du$. Posons $u = x$ (d'où $du = dx$) et $dv = e^{i\alpha x}\,dx$ (d'où $v = \frac{1}{i\alpha} e^{i\alpha x}$).
+Par intégration par parties ($\int u\,dv = uv - \int v\,du$) avec $u = x$ et $dv = e^{i\alpha x}dx$ :
 
 $$I_{pq} = \left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} - \int_{0}^{T} \frac{e^{i\alpha x}}{i\alpha} \,dx$$
 
-Terme non intégré :
+1. **Terme non intégré :**
+   $$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = T \frac{e^{i\alpha T}}{i\alpha} - 0$$
+   Comme $\alpha T = (q-p)2\pi$, $e^{i\alpha T} = 1$. Le terme vaut donc $\frac{T}{i\alpha}$.
 
-$$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \left( T \frac{e^{i\alpha T}}{i\alpha} \right) - (0)$$
+2. **Terme intégré :**
+   $$- \frac{1}{i\alpha} \left[ \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \frac{1}{\alpha^2} (e^{i\alpha T} - 1) = 0$$
 
-Comme $\alpha T = (q-p)\omega T = (q-p)2\pi$, l'exponentielle vaut $e^{i\alpha T} = e^{i(q-p)2\pi} = 1$.
+On obtient donc $I_{pq} = \frac{T}{i\alpha}$, d'où l'élément de matrice :
 
-$$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \frac{T}{i\alpha}$$
+$$\mathbf{X}_{pq} = \frac{1}{T} I_{pq} = \frac{1}{i\alpha} = \frac{1}{i(q-p)\frac{2\pi}{T}} = -i \frac{T}{2\pi (q-p)} = -i \frac{1}{\omega (q-p)}$$
 
-Terme intégré (reste) :
+##### Structure de la matrice de Position $\mathbf{X}$
 
-$$- \int_{0}^{T} \frac{e^{i\alpha x}}{i\alpha} \,dx = - \frac{1}{i\alpha} \left[ \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = - \frac{1}{(i\alpha)^2} \left[ e^{i\alpha x} \right]_{0}^{T}$$
+La matrice représentative de la position $\hat{X}$ dans la base de Fourier/Énergie est **pleinement non diagonale** :
 
-Puisque $e^{i\alpha T} = 1$, on a $e^{i\alpha T} - e^{0} = 1 - 1 = 0$. Le deuxième terme est nul.
+$$\mathbf{X} = \begin{pmatrix}
+\ddots & & & \vdots & & & \\
+& \frac{T}{2} & \frac{i}{\omega} & \frac{i}{2\omega} & \frac{i}{3\omega} & \\
+& -\frac{i}{\omega} & \frac{T}{2} & \frac{i}{\omega} & \frac{i}{2\omega} & \\
+\cdots & -\frac{i}{2\omega} & -\frac{i}{\omega} & \mathbf{\frac{T}{2}} & \frac{i}{\omega} & \frac{i}{2\omega} & \cdots \\
+& -\frac{i}{3\omega} & -\frac{i}{2\omega} & -\frac{i}{\omega} & \frac{T}{2} & \\
+& & & \vdots & & & \ddots
+\end{pmatrix}$$
 
-$$I_{pq} = \frac{T}{i\alpha} - 0 = \frac{T}{i\alpha}$$
-
-Calcul de l'élément de matrice $\mathbf{X}_{pq}$ :
-
-En substituant $I_{pq}$ dans l'expression du terme de matrice :
-
-$$\mathbf{X}_{pq} = \frac{1}{T} I_{pq} = \frac{1}{T} \left( \frac{T}{i\alpha} \right) = \frac{1}{i\alpha}$$
-
-En remplaçant $\alpha$ par sa valeur $\alpha = (q-p)\frac{2\pi}{T}$ :
-
-$$\mathbf{X}_{pq} = \frac{1}{i(q-p)\frac{2\pi}{T}} = \frac{T}{i(q-p)2\pi}$$
-
-Pour rendre l'expression plus propre, on peut multiplier le numérateur et le dénominateur par $i$ :
-
-$$\mathbf{X}_{pq} = \frac{i T}{i^2(q-p)2\pi} = -i \frac{T}{2\pi (q-p)}$$
-
-Ou en utilisant $\omega = \frac{2\pi}{T}$ :
-
-$$\mathbf{X}_{pq} = -i \frac{1}{\omega (q-p)}$$
-
-Conclusion sur l'opérateur $\hat{X} = x$ :
-
-La matrice représentative de l'opérateur de position $\hat{X}$ dans la base des fonctions de Fourier est une matrice non-diagonale.
-
-Éléments diagonaux ($\mathbf{X}_{nn}$) : $\frac{T}{2}$ (Réels).
-
-Éléments non-diagonaux ($\mathbf{X}_{pq}, p \neq q$) : $-i \frac{T}{2\pi (q-p)}$ (Purement imaginaires).
-
-La matrice $\mathbf{X}$ n'est donc pas réelle (elle est hermitienne).
+::: callout-tip
+### Conclusion sur l'opérateur Position
+* **Non diagonale :** L'opérateur $x$ ne commute pas avec $\frac{d^2}{dx^2}$, la position n'est pas conservée dans la base des états d'énergie.
+* **Hermiticité :** Bien que les termes hors diagonale soient imaginaires purs, la matrice vérifie $\mathbf{X}_{pq} = \overline{\mathbf{X}_{qp}}$. Elle est **hermitienne** ($\mathbf{X}^\dagger = \mathbf{X}$), garantissant que toute mesure physique de la position donnera une valeur propre réelle.
+:::
 
 # Produit ouvert (outer product) et matrice densite
 
