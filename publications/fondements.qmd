@@ -1752,131 +1752,121 @@ On entend parfois des affirmations fausses par simplification :
 * **« L'espace de Hilbert est un simple espace informationnel » : FAUX AUSSI**, car le principe d'incertitude donne les incertitudes sur la mesure à partir d'opérateurs qui sont des bases dans l'espace de Hilbert. L'espace de Hilbert est plutôt l'espace qui décrit les phénomènes *avant* la mesure (voir le paragraphe sur la mesure quantique).
 :::
 
-## Operateur matriciel :
+## Les opérateurs quantiques
 
-### Equation aux valeurs propres :
+Un **opérateur** est une application linéaire qui transforme un vecteur d'état (un Ket) en un autre vecteur d'état dans l'espace de Hilbert. Dans une base donnée, un opérateur se représente sous la forme d'une **matrice**.
 
-Nous allons généraliser les résultats vu précédemment.
+On distingue deux grands types d'opérateurs :
 
-Un vecteur est maintenant représenté par une matrice de rang n représenté ici par une matrice unicolonne.
+1. **Les observables (ex. Position $\hat{X}$, Impulsion $\hat{P}$, Hamiltonien $\hat{H}$) :** 
+   Ce sont des opérateurs hermitiens associés à des grandeurs physiques mesurables.
+   
+2. **L'opérateur densité (ou matrice densité $\hat{\rho}$) :** 
+   Contrairement aux observables, cet opérateur ne mesure pas une grandeur physique mais **décrit l'état du système lui-même** (notamment pour les états mixtes ou les systèmes ouverts). Pour un état pur $|\psi\rangle$, il s'écrit sous forme de projeteur :
+   
+   $$\hat{\rho} = |\psi\rangle\langle\psi|$$
 
-```{=html}
-<!-- ces lignes sont necessaires pour utiliser bra ket 
+### Comparaison des formalismes : Opérateurs matriciels et fonctionnels
 
-\newcommand{\bra}[1]{\left\langle #1 \right|}
+Dans son ouvrage de 1960, Austin Blaquière opère une comparaison entre le formalisme matriciel (issu de la mécanique matricielle d'Heisenberg) et le formalisme fonctionnel (la mécanique ondulatoire de Schrödinger). 
 
+::: callout-note
+**Précision sur le terme « d'opérateur » chez Blaquière**
+À l'époque de Blaquière, la notion d'opérateur s'appliquait essentiellement aux **observables** (les grandeurs physiques mesurables comme la position $\hat{X}$ ou l'impulsion $\hat{P}$) :
 
+* **Dans le formalisme fonctionnel (Schrödinger) :** L'observable est un **opérateur différentiel** agissant sur des fonctions d'onde $\psi(x)$ (ex. $\hat{P} = -i\hbar\frac{\partial}{\partial x}$).
+* **Dans le formalisme matriciel (Heisenberg) :** L'observable est une **matrice** (un opérateur matriciel) agissant sur des vecteurs d'état.
 
-\newcommand{\ket}[1]{\left| #1 \right\rangle}
+Il ne faut pas confondre ces **opérateurs d'observables** (qui agissent *sur* les états) avec la **matrice densité** introduite plus tardivement dans les cours d'introduction, qui est un **opérateur d'état** servant à décrire les mélanges statistiques.
+:::
 
--->
-```
+## Représentation matricielle d'une observable
 
+Généralisons les résultats vus précédemment.
 
-$$\left| V \right\rangle= \begin{pmatrix}
+Un vecteur est maintenant représenté dans une base à $n$ dimensions par une matrice unicolonne (un *ket*) :
+
+$$|V\rangle = \begin{pmatrix}
 x_1 \\
 x_2 \\
-. \\
-. \\
-. \\
+\vdots \\
 x_n
 \end{pmatrix}$$
 
-ou par sa matrice uniligne associée :
+ou par sa matrice uniligne associée (le *bra*) :
 
-$$\left\langle V \right|=\begin{pmatrix}
-x_1 & x_2 & . & . & . & x_n
-\end{pmatrix} $$ Une matrice carrée de rang n peut etre considérée comme un opérateur linéaire dans un espace à n dimensions.
+$$\langle V| = \begin{pmatrix} x_1 & x_2 & \dots & x_n \end{pmatrix}$$
 
-La loi de transformation s'exprime par l'égalité matricielle qui transformera un vecteur $\vec{V}$ en un vecteur $\vec{V'}$ :
+Une matrice carrée $A$ de dimension $n$ peut être considérée comme un opérateur linéaire agissant dans cet espace.
+
+La loi de transformation s'exprime par l'égalité matricielle qui transforme un vecteur $|V\rangle$ en un vecteur $|V'\rangle$ :
 
 $$\begin{pmatrix}
 x_1' \\
 x_2' \\
-. \\
-. \\
-. \\
-x_n '
+\vdots \\
+x_n'
 \end{pmatrix} =
- \begin{vmatrix}
-a_1¹ & a_1² & . & . & . & a_1^n \\
-. & . & . & . & . & . \\
-a_n¹ & a_n² & . & . & . & a_n^n 
-\end{vmatrix} 
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{pmatrix}
 \begin{pmatrix}
 x_1 \\
 x_2 \\
-. \\
-. \\
-. \\
+\vdots \\
 x_n
-\end{pmatrix}$$ équivalente au système d'équations linéaires :
+\end{pmatrix}$$
 
-$$x_1'=a_1¹x_1 + a_1²x_2 + ... + a_1^nx_n$$
+Ce produit matriciel est équivalent au système d'équations linéaires suivant :
 
-$$x_2'=a_2¹x_1 + a_2²x_2 + ... + a_2^nx_n$$
+$$\begin{cases}
+x_1' = a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n \\
+x_2' = a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n \\
+\quad \vdots \\
+x_n' = a_{n1}x_1 + a_{n2}x_2 + \dots + a_{nn}x_n
+\end{cases}$$
 
-$$...$$ $$x_n'=a_n¹x_1 + a_n²x_2 + ... + a_n^nx_n$$
+::: callout-note
+### Précision sur la notion de linéarité
 
-Un vecteur $\left| V \right\rangle$ sera dit vecteur propre de la matrice A si l'opération se réduit à une simple multiplication du vecteur $\left| V \right\rangle$ par le scalaire $\lambda$
+Dans son premier tome, Austin Blaquière pose le système d'équations algébriques linéaires comme fondement mathématique [@Blaquiere1960]. 
 
-Le transformé V' est alors de la forme : $\left| V' \right\rangle=\lambda \left| V \right\rangle$
+Lorsque l'on passe d'une représentation matricielle à une représentation fonctionnelle, l'équation aux valeurs propres prend la forme d'une **équation différentielle**. L'opérateur peut alors comporter des dérivées premières ou secondes ($\frac{d}{dx}, \frac{d^2}{dx^2}$), mais la fonction $f$ y apparaît toujours de façon linéaire (sans terme en $f^2$).
 
-Le facteur $\lambda$ est un nombre réel ou complexe.
+En réalité, le qualificatif **linéaire** ne dépend pas de l'ordre de dérivation, mais du fait que le système respecte le **principe de superposition** : si deux fonctions $f_1$ et $f_2$ sont solutions de l'équation, alors leur somme $f_1 + f_2$ (ou toute combinaison linéaire) est aussi solution.
 
-Ainsi la relation de définition d'un *vecteur propre* de la matrice A est :
-
-$$\boxed{A \left| V \right\rangle=\lambda \left| V \right\rangle}$$
-
-$\lambda$ est appelée valeur propre associée au vecteur propre $\left| V \right\rangle$.
-
-::: callout-important
-On peut appeler cette équation une équation aux valeurs propres. Dans notre "chemin pédagogique" nous allons voir que c'est une expression qui va nous intéresser dans la recherche des valeurs mesurables.
-
-Nous parlerons plus loin de fonction d'onde $\Psi$ pour décrire l’état d'une particule. Nous poserons que si $|\Psi_n \rangle$ est vecteur propre de l’opérateur A, avec la valeur propre $a_n$ alors : $$\boxed{A|\Psi_n\rangle=a_n|\Psi_n}$$
+Géométriquement, cela signifie que l'ensemble des solutions forme un sous-espace vectoriel : si l'on associe un vecteur à une fonction solution, toute combinaison linéaire de ces vecteurs reste dans le même espace. C'est cette propriété fondamentale que l'on nomme **linéarité**.
 :::
 
+### Équation aux valeurs propres
 
-### Matrice hermitique :
+Un vecteur $|V\rangle$ non nul est dit **vecteur propre** de la matrice $A$ si l'opération se réduit à une simple multiplication de ce vecteur par un scalaire $\lambda$ (réel ou complexe).
 
-Nous serons amenés à représenter les grandeurs physiques par des matrices, puis à préciser la notion de mesure.
+Le vecteur transformé $|V'\rangle$ est alors simplement colinéaire à $|V\rangle$ :
 
-Un postulat raisonnable sera d'admettre que la mesure de la grandeur envisagée est l'une des valeurs propres de sa matrice représentative.
+$$|V'\rangle = \lambda |V\rangle$$
 
-1.  Comme en mécanique classique le résultat d'une mesure est un *nombre*.
+La relation fondamentale définissant un vecteur propre de la matrice $A$ s'écrit donc :
 
-2.  Etant donné qu'une matrice possède tout un spectre de valeurs propres :
+$$\boxed{A |V\rangle = \lambda |V\rangle}$$
 
-$$\lambda_1 \lambda_2 . . .......\lambda_n$$
+Le nombre $\lambda$ est appelé la **valeur propre** associée au vecteur propre $|V\rangle$.
 
-La notion d'*indéterminisme* s'introduit : Rien ne permet de savoir en effet, à priori, quelle est la valeur propre qui sortira du lot lorsque l'on effectue la mesure.
+::: callout-important
+### Rôle dans la mesure quantique
+C'est cette **équation aux valeurs propres** qui va nous guider dans la recherche des grandeurs physiques mesurables.
 
-3.  Le résultat d'une mesure doit être un *nombre réel*. Or les seules matrices dont les valeurs propres sont toutes réelles sont les matrices hermitiques.
+Plus loin, nous utiliserons la fonction d'onde $\Psi$ pour décrire l'état d'une particule. Nous poserons que si $|\Psi_n\rangle$ est un vecteur propre d'un opérateur d'observable $A$ associé à la valeur propre $a_n$, alors :
 
-*Définition : Une matrice hermitique est une matrice carrée à nombres complexes qui est égale à sa transposée conjuguée. En termes simples, cela signifie que chaque élément de la matrice est le conjugué de l'élément symétrique par rapport à la diagonale principale, et que les éléments sur la diagonale sont des nombres réels.*
+$$\boxed{A |\Psi_n\rangle = a_n |\Psi_n\rangle}$$
 
-Comme la matrice adjointe d'une matrice donnée s'obtient en effectuant une symétrie par rapport à la diagonale principale, puis en prenant les conjugués des éléments, on voit qu'une matrice hermitique se caractérise par la propriété suivante :
+Dans une expérience, la quantité $a_n$ représente l'une des valeurs numériques que l'on peut effectivement obtenir lors d'une mesure de l'observable $A$.
+:::
 
-1.  Les éléments de la diagonale principale sont des nombres réels.
-
-2.  Les éléments non diagonaux symétriques par rapport à la diagonale principale sont des nombres complexes conjugués. Par exemple la matrice de Pauli est une matrice hermitique :
-
-$$\begin{vmatrix}
-0 & i \\
--i & 0 
-\end{vmatrix}$$
-
-### Valeurs propres et vecteurs propres des matrices hermitiques :
-
-*Théorème 1* : les valeurs propres d'une matrice hermitique sont toutes réelles
-
-*Théorème 2* : les vecteurs propres d'une matrice hermitique associée à des valeurs propres distinctes sont orthogonaux.
-
-*Ainsi nous voyons que nous avons intérêt à nous ramener dans la situation d'une matrice hermitique.*
-
- 
-
-## Operateurs fonctionnels :
+## Représentation fonctionnelle d'une observable :
 
 ### Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants : 
 [@Delbarre2022-bb] 
