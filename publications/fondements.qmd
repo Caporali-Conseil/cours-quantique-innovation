@@ -211,6 +211,204 @@ L'image ci-dessous présente les participants au congres de Solvay de 1927. En d
 
 ![Cinquième Congrès Solvay de physique, 1927. Légende (L-\>R) : 3e rang : Piccard, Henriot, Ehrenfest, Herzen, de Donder, Schrödinger, Verschaffelt, Pauli, Heisenberg, Fowler, Brillouin ; 2e rang : Debye, Knudsen, Bragg, Kramers, Dirac, Compton, de Broglie, Born, Bohr ; 1er rang : Langmuir, Planck, Mme Curie, Lorentz, Einstein, Langevin, Guye, Wilson, Richardson.](Solvay_conference_1927.jpg){#fig-solvay fig-align="center" width="100%"}
 
+# Faits experimentaux :
+
+## Le corps noir :
+
+Le corps noir n'est pas forcément noir. C'est un concept théorique désignant un objet idéal qui absorbe tout le rayonnement électromagnétique qu'il reçoit. Dans la pratique, il est modélisé par une cavité avec une ouverture qui piège les rayons lumineux à l'intérieur. S'il ne reçoit aucun rayonnement extérieur, l'objet émet son propre rayonnement (chaleur ou lumière), uniquement en fonction de sa température. C'est cette émission d'énergie, dont la courbe spectrale n'est pas explicable par la physique classique, qui a conduit à la quantification de l'énergie.
+
+![Principe du corps noir.](Noir.png){#fig-corps-noir fig-align="center" width="70%"}
+
+\usetikzlibrary{arrows}
+\begin{figure}
+\centering
+    
+ 
+\begin{tikzpicture}[scale=0.5]
+  \fill [fill=black!40, draw=black, very thick, semitransparent]  
+  (0,0) 
+    -- (10,0) 
+    -- (10,5.5) 
+    -- (9,5.5) 
+    -- (9,1)
+    -- (1,1)
+    -- (1,11)
+    -- (9,11)
+    -- (9,6.5)
+    -- (10,6.5)
+    -- (10,12)
+    -- (0,12) ;
+ \draw[->, magenta,line width=2pt] (12,7) -- (1,3.5) -- (4,11) -- (9,8) [dashed, blue] node[left, purple] {\begin{tabular}{c}L’énergie électromagnétique (lumière) \\ est piégée par le corps noir\end{tabular}};
+
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,2) -- (12,2);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,4) -- (12,4);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,8) -- (12,8);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,10) -- (12,10);
+
+\draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,2) -- (-2,2);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,4) -- (-2,4);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,8) -- (-2,8);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,10) -- (-2,10);
+
+\draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (1,12) -- (1,14);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] 
+ (3,12) -- (3,14);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (5,12) -- (5,14);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (7,12) -- (7,14);
+
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (1,12) -- (1,14);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] 
+ (3,12) -- (3,14);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (5,12) -- (5,14);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (7,12) -- (7,14);
+
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (1,0) -- (1,-2);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] 
+ (3,0) -- (3,-2);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (5,0) -- (5,-2);
+ \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (7,0) -- (7,-2);
+ \draw (5,-3) node [purple] {\begin{tabular}{c}L’énergie est ensuite restituée \\ sous forme de rayonnement thermique\end{tabular}};
+
+       
+\end{tikzpicture}
+       
+ 
+\caption{Certains objets, comme l'intérieur d'un four chauffé uniformément, peuvent approcher le modèle du corps noir.}
+\end{figure}
+
+A un moment Planck eut l'idée d'introduire une constante h qui règle le problème qui vaut : $h=6,626.10^{-34}J.s$. Il imaginait que le corps noir se comportait comme un oscillateur harmonique de fréquence $\mu$ mais dont les niveaux énergie sont quantifiés. Il s'agissait d'une astuce afin de faire coller les résultats avec l’expérience. Planck ne prévoyait pas un très grand avenir scientifique à la constante $h$ qu'il avait introduite. C'est Einstein qui valorisa cette constante en proposant en 1905 une interprétation simple et efficace de l'effet photoélectrique en postulant que le rayonnement électromagnétique était lui même composé de quantas de lumière, appelés plus tard photons d'énergie $\epsilon=h\mu$. Ces quantas d' énergie ne furent appelées photons qu'en 1926.
+
+![Loi de rayonnement du corps noir.](Corps.png){#fig-corps-noir2 fig-align="center" width="70%"}
+
+Max Planck [@Planck1901-fc] écrit :
+
+> "si nous appliquons la loi de déplacement de Wien sous sa dernière forme à l'expression de l'entropie S, nous nous rendons compte que l’élément d’énergie $\epsilon$ doit être proportionnel au nombre d'oscillations $\mu$ et que donc : $\epsilon=h\mu$"
+
+puis un peu plus loin Planck donne une première estimation pour $h$ : $h=6.55.10^{-27} erg.sec$
+
+A comparer avec la valeur réelle : $6,62607015 \times 10^{-34} J.s$
+
+$h$ s'exprime en joules secondes : en physique il s'agit d'une action. Pour cette raison on appelle aussi $h$ le quantum d'action.
+
+## L'effet photoélectrique :
+
+Albert Einstein écrit : [@Einstein1905-zf]
+
+> "Il me semble que les observations portant sur le "rayonnement noir" (...) apparaissent comme plus compréhensibles si on admet que l'energie de la lumière est distribuée de façon discontinue dans l'espace. Selon l’hypothèse envisagée ici, lors de la propagation d'un rayon lumineux émis par une source ponctuelle, l’énergie n'est pas distribuée de façon continue sur des espaces de plus en plus grands, mais est constituée d'un nombre fini de quantas d’énergie localises en des points de l'espace".
+
+Einstein pose dans cet article daté du 09 juin 1905 (soit environ 6 mois avant son célèbre article sur la relation masse énergie) la discontinuité de l'énergie non plus comme une constatation expérimentale mais comme un fondement théorique. Cet article lui vaudra le Prix Nobel de physique en 1921.
+
+![Principe de l'effet photoélectrique](Photoelectrique.png){#fig-photo-elec fig-align="center" width="50%"}
+
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {decorations.pathmorphing}
+\begin{figure} 
+\centering
+ 
+     
+ \begin{tikzpicture}[scale=0.5]
+
+ %   \tikzset{shift={(current page.center)},yshift=-1.5cm}
+  
+  \foreach \x in {-5,-4,-3,-2,-1,-2,0,1,2,3}
+    \foreach \y in {-1,0,1,2,3}
+      {
+        \draw [fill=red] (\x,\y) circle (0.3cm);
+      %  \fill (\x,\y) circle (0.1cm);
+      }
+
+ %   \draw[decorate,decoration={snake,segment length=2cm},->] (0,0) - - (10,0);
+    \draw[decorate,decoration=snake,magenta,-{Stealth[length=5mm]}] (-5,7) - - (-1,3.2) ;
+    \draw[decorate,decoration=snake,magenta,-{Stealth[length=5mm]}] (-6,7) - - (-2,3.2) ;
+    \draw[decorate,decoration=snake,magenta,-{Stealth[length=5mm]}] (-7,7) - - (-3,3.2) ;
+
+    
+    \draw [fill=blue] (2,5) circle (0.3cm);
+    \draw[blue,-{Stealth[length=5mm]}] (2,5) -- (3,8);
+
+     \draw [fill=blue] (0,4) circle (0.3cm);
+    \draw[blue,-{Stealth[length=5mm]}] (0,4) -- (1,6);
+    
+   % \draw[decorate,decoration=snake ] (0,0) arc (0:180:3 and 2);
+
+   
+   
+\end{tikzpicture}
+
+\caption{ L'énergie reçue par le rayonnement électromagnétique va permettre à des électrons de s'éjecter du matériau. On observe une corrélation entre l'énergie reçue (quantifiée) et celle de l'électron}
+\end{figure}
+
+L'équation d'Einstein pour l'effet photoélectrique s'écrit :
+
+$$ \boxed{h\nu =W_{S}+{\frac {1}{2}}mv^{2}}$$ où :
+
+$h\nu$ est l'énergie du photon ;
+
+$W_{S}$ est l'énergie de liaison de l'électron ;
+
+$\frac {1}{2}mv^{2}$ est l'énergie cinétique finale de l'électron. L'énergie d'un photon est caractérisée par la formule.
+
+*On considère que l'effet photoélectrique a fait apparaître l'aspect corpusculaire de la lumière (en plus de ondulatoire). [@Greiner2009-sw]*
+
+## Expérience des fentes d'Young :
+
+### Fentes d'Young avec la lumière :
+
+En optique on admet que les trous S1 et S2 se comportent comme des sources secondaires qui, issues de la même source primaire S, mettent de sondes sphériques cohérentes entre elles. C'est le principe d'Huygens-Fresnel.
+
+En tout point P du plan d'observation la fonction d'onde $\Phi$ résulte de la superposition linéaire des fonctions d'onde $\Phi 1$ et $\Phi 2$.
+
+$$\Phi=\Phi 1 +\Phi 2$$
+
+### Fentes d'Young avec des électrons :
+
+![](Young.png){fig-align="center"}
+
+\begin{tikzpicture}
+\draw[->] (1,0) -- (3,0);
+\draw[->] (3,0) -- (8,0);
+\draw (1,0) node[scale=1.2]{$\bullet$} node [left]{$S$};
+\draw[{-]}, blue] (3,2) -- (3,4) node[above]{};
+\node [red] (A) at (3,1.5) {$S_1$};
+\node [red] (B) at (3,-1.5) {$S_2$};
+%\node [red] (C) at (3,-5) {Trous d'Young};
+\node [red] (D) at (3,4.5) {Feuille de cuivre};
+\node [red] (E) at (10,-3) {\begin{tabular}{l}Plan d'observation \\ ou de détection \end{tabular}};
+\draw[{-]}, blue] (3,1) -- (3,-1);
+\draw[{-]}, blue] (3,-4) -- (3,-2);
+\draw[{-]}, red] (8,3) -- (8,-3);
+\draw[dashed, <->] (3,-3) -- node[above]{$d$} (8,-3) ;
+\draw[dashed, <->] (2,-2) -- node[above, right]{$a$} (2,-4) ;
+\draw[->, magenta] (1,0) -- (3,2);
+\draw[->, magenta] (1,0) -- (3,1);
+\draw[->, magenta] (1,0) -- (3,-1);
+\draw[->, magenta] (1,0) -- (3,-2);
+%realisation des franges d'interference
+\foreach \x in {0,0.1,...,0.8}
+{
+\draw [magenta] (7.8,\x) -- (8.2,\x+0.2); 
+}
+\foreach \x in {0,-0.1,...,-0.8}
+{
+\draw [magenta] (7.8,\x) -- (8.2,\x+0.2); 
+}
+\node [magenta] (F) at (10,0) {Franges d'interférence};
+
+\end{tikzpicture}
+
+L'expérience pionnière de Faget et Fert a été reproduite avec deux fentes et plus par le physicien allemand Claus Joösson en 1961. En envoyant des électrons d'énergie cinétique $E_{k}=50$ keV sur une feuille de cuivre percée de deux fentes de largeur $0,5\mu m$, distantes de $0,2\mu m$, Jönsson observa sur une plaque photographique placée dans le plan d'observation P, des franges d'interférence des ondes électroniques[@Perez2013-it].
+
+Dans l’expérience précédente la source primaire S émet des électrons que l'on détecte en P dans le plan P, après traversée des trous S1 et S2. En réduisant le flux d’électrons de telle sorte qu'entre S et P, à tout instant il n'y ait qu'un seul électron, on observe des points d'impact discrets dus aux électrons collectés pendant la durée d'exposition.
+
+Si cette durée est faible, les points d'impact semblent se répartir de manière aléatoire. En revanche, si elle est suffisante, les impacts se répartissent peu à peu selon la figure d'interférence. *Ceci est surprenant car à un électron unique on associe bien aussi une onde*.
+
+L'onde considérée en quantique est une onde de probabilité : elle diffère donc fondamentalement d'une onde physique habituelle, mécanique ou électromagnétique, puisque elle ne représente pas la variation d'une grandeur physique.
+
+*Nous reviendrons plus tard dans le cours sur l'approche statistique de la physique quantique.*
+
+
+
+
 
 # Principe d'incertitude d'Heisenberg :
 
@@ -426,324 +624,73 @@ Ce second principe n'existerait pas sans le postulat de Planck reliant la fréqu
 
 Dans un réseau de communication, cela signifie qu'une transition d'état extrêmement rapide exige une bande passante énergétique vaste.
 
-## Base en représentation par t :
+# L'onde de Louis de Broglie : la physique ondulatoire
 
-La problématique de départ est plus compliquée ici. Une derivee représente un intervalle entre 2 positions. Pour être dans une représentation en position on s’intéresse a un simple point dans l'espace. Toutefois dans notre démarche nous allons commencer par poser les choses en t et non pas en x comme si le point auquel on s’interesse mais pas un point dans l'espace mais dans le temps. Nous nous intéressons donc a un intervalle très court sur la ligne du temps et nous l'assimilons a une impulsion de Dirac.
+## Représentation temporelle et spatiale : de la fonction porte à la distribution de Dirac
 
-Physiquement parlant, une impulsion de Dirac peut se comparer en terme temporel a une timbale qui émet un son fort mais très bref. On va ainsi filtrer le signal sur un intervalle temporel très petit.
+Après avoir abordé le principe d'incertitude d'Heisenberg à travers le formalisme matriciel, nous nous intéressons désormais à la description ondulatoire. Paradoxalement, nous allons débuter par une contrainte expérimentale fondamentale.
 
-![](Dirac.png){fig-align="center"}
+Une onde quantique peut être représentée aussi bien dans la **base des positions** (la position $x$ en abscisse, l'amplitude de la fonction d'onde en ordonnée) que dans la **base des impulsions** (la quantité de mouvement $p$ en abscisse). Allons-nous choisir la représentation la plus simple sur le plan mathématique ? 
 
-\begin{figure}
-\centering
-\begin{tikzpicture}
-  % Définir la largeur epsilon
- % \def\epsilon{0.2}
-  
-  % Tracer l'axe horizontal
-  \draw[->] (0,0) -- (2,0) node[right, blue] {$x$};
-  \draw[->] (0,-0.2) -- (0,1.7) node[above, blue] {$f(x)=\delta^{\epsilon}(x-x_{0})$};
-  
-  % Tracer la fonction créneau
-  \draw[thick, blue] 
-    (1,0) -- (1,1) -- (1.3,1) -- (1.3,0);
-  
-  % Optionnel : ajouter des points ou des annotations
-  \fill (0,1) circle (1pt);
-  \fill (1.15,0) circle (1pt) node[below, red] {$x_{0}$} -- (1,1);
-%  \fill (0.5+\epsilon,1) circle (1pt);
-%  \fill (1,0) circle (1pt);
+En laboratoire, il est bien plus aisé de faire dériver ou impacter des particules sur un écran pour mesurer directement leur position $x$, plutôt que d'évaluer une vitesse ou une impulsion $p$ qui exige au moins deux mesures spatiales distinctes dans le temps. 
 
-\draw[dashed] (0,1) node[left, red] {\Large $\frac{1}{\epsilon}$} -- (1,1) ;
-  
-  % Ajouter des labels
- \node at (0, 1) {$\frac{1}{\epsilon}$};
+Ainsi, par pragmatisme expérimental, nous poserons comme point de départ que **l'étude d'une onde quantique s'effectue prioritairement dans la base en $x$**.
 
- \draw[<->,line width=0.5pt] (1,1.2) node[above, red] {\Large $\epsilon$} -- (1.3,1.2) ;
+### Du monde matriciel au continu spatial
 
-\end{tikzpicture}
-\end{figure}
+Dans les annexes mathématiques de ce document, nous avons étudié des matrices construites sur une base discrète d'énergie ou d'impulsion, dont les harmoniques de Fourier constituent les éléments de base. 
 
-> **Rappel** [@Najib2022-qq] La distribution de dirac appelée par abus de language fonction $\delta$ de dirac est informellement considérée comme une fonction $\delta(x-x_{0})$ qui n'a de valeur qu'au voisinage de $x_{0}$ et qui prend une valeur infinie en ce point et la valeur 0 partout ailleurs, et dont l'intégrale sur tout l'espace est égale à 1. Considérons $\delta^{\epsilon}(x-x_{0})=1$, alors $\int_{-\infty}^{+\infty}\delta^{\epsilon}(x-x_{0})=1$. La fonction de dirac est definie par : $\delta(x-x_{0})=\lim_{x \to 0}\delta^{\epsilon}(x-x_{0})$
+Dans le cas de la base en $x$, la situation devient continue : **chaque point de l'espace constitue un vecteur de la base** repérant une position précise. Ainsi, de manière idéale, l'espace continu des positions s'apparente à une somme infinie d'impulsions de Dirac $\delta(x - x_0)$ réparties sur tout le domaine spatial.
 
-Nous raisonnons en t. Une impulsion peut être un signal très bref en termes temporels. Toutefois en termes spatiaux cela peut se représenter par une distance très courte. Ici encore la fonction impulsion $\delta x$ s'applique
+### Synthèse des acquis avant d'aborder de Broglie
 
-## Utilité de la fonction porte :
+Cette introduction permet d'établir clairement le cadre physique et conceptuel :
 
-$\delta x$ est une vue théorique car sa largeur est nulle. En pratique nous allons utiliser la fonction échelon mais sur une distance très courte : c'est la fonction porte.
+1. **Le principe d'incertitude est posé :** la position et l'impulsion sont liées par la transformée de Fourier.
+2. **L'onde plane théorique :** une onde monochromatique possède une fréquence parfaitement définie (donc $\Delta p = 0$).
+3. **L'indétermination spatiale :** en vertu du principe d'incertitude, une onde de fréquence pure implique une ignorance totale quant à la position exacte de la particule ($\Delta x \to \infty$).
+4. **La structure de la base en $x$ :** l'état spatial idéal est perçu comme une superposition continue d'impulsions de Dirac.
 
-![](Sinuscar.png){fig-align="center"}
+Dans la théorie des systèmes et du traitement du signal (telle que développée par Austin Blaquière [@alma991002711779705804]), l'étude de l'état d'un système nécessite cette même rigueur dans le choix de la **base de représentation** (temporelle $t$ ou spatiale $x$).
 
-\begin{figure}
-\centering
-  \begin{tikzpicture}[scale=0.8]
-  \begin{axis}[
-    domain=-10:10,
-    samples=200,
-    axis lines=middle,
-    xlabel=$k$,
-    ylabel=$g(k)$,
-    xtick={-10,-8,...,10},
-    ytick={-0.5,0,0.5,1},
-    height=8cm,
-    width=12cm,
-    grid=both,
-    clip=false
-  ]
-    \addplot [blue, thick] {sin(deg(x))/x};
-    \addplot [mark=*, only marks] coordinates {(0,1)};
-  \end{axis}
-\end{tikzpicture}
-\caption{La fonction sinus cardinal qui est la TF de la fonction porte ici prise en exemple sur l'intervel [-10,10]}
-\end{figure}
+### 1. Filtrage temporel et impulsion de Dirac
 
-Attention :
+Pour échantillonner un état à un instant précis $t_0$, on utilise un intervalle temporel très court. Physiquement, une impulsion très brève s'assimile au coup d'une timbale (un signal court mais d'amplitude importante). 
 
-1.  La solution de l'équation de Schrödinger est une gaussienne dans le cas d'une particule libre. Dans le cas d'une particule confinée dans un puits de potentiel on se ramène à une onde stationnaire.
+Mathématiquement, lorsque cet intervalle tend vers zéro, on tend vers la **distribution de Dirac** $\delta(t - t_0)$.
 
-2.  Contrairement au cas de la lumière, pour le particule le milieu est dit dispersif, ce qui signifie que la gaussienne (c'est a dire la densité de probabilité) va s'étaler (s'aplatir) sur une surface de plus en plus grande au cours du temps.
+> **Rappel mathématique — La distribution de Dirac [@Najib2022-qq] :**
+> La distribution $\delta$ de Dirac est définie informellement comme la limite d'un créneau $\delta^{\epsilon}(x-x_{0})$ de largeur $\epsilon$ et de hauteur $\frac{1}{\epsilon}$ lorsque $\epsilon \to 0$ :
+> $$\int_{-\infty}^{+\infty}\delta(x-x_{0}) \, dx = 1 \quad \text{avec} \quad \delta(x-x_0) = \begin{cases} +\infty & \text{en } x = x_0 \\ 0 & \text{ailleurs} \end{cases}$$
 
-## Conséquence : concept de paquet d'onde :
+Bien que nous raisonnions ici sur le temps $t$, le même formalisme s'applique à la position $x$ pour définir un état parfaitement localisé en un point de l'espace.
 
-Nous devons parler ici du cas de la particule libre qui n'est pas confinée dans un espace comme c'est le cas dans un puits de potentiel.
+---
 
-*Délocalisation de la Particule Libre :*
+### 2. Utilité de la fonction porte et spectre en Sinus Cardinal
 
-La longueur d'onde de de Broglie implique du fait du principe d'incertitude que $\Delta x=+\infty$. Dans ce cas, on ne sait pas où chercher ce qui rend la mesure impossible.
+L'impulsion de Dirac est une vue théorique idéale ($\Delta x = 0$). En pratique, toute mesure ou confinement s'effectue sur une largeur finie $\epsilon$ via une **fonction porte** (ou fonction créneau).
 
-On dit que la particule n'est pas normalisable.
+Lorsqu'on passe du domaine spatial (ou temporel) au domaine fréquentiel par **Transformée de Fourier**, la réponse spectrale d'une fonction porte n'est plus un point unique, mais une fonction **Sinus Cardinal** ($\text{sinc}$) :
 
-*Localisation par Superposition :*
+$$\mathcal{F}\{\text{Porte}(x)\} \propto \frac{\sin(k)}{k} = \text{sinc}(k)$$
 
-Physiquement, une particule réelle (même libre) est toujours relativement localisée. Pour modéliser cette localisation, la mécanique quantique utilise le principe de superposition :
+![La fonction sinus cardinal $\text{sinc}(k)$, spectre fréquentiel issu de la transformée de Fourier d'une fonction porte.](Sinuscar.png){#fig-sinc fig-align="center" width="75%"}
 
-Formation du Paquet d'Ondes : Pour obtenir une fonction d'onde $\psi(x,t)$ localisée dans l'espace (petit $\Delta x$), on est obligé de la construire comme la somme (superposition) d'une infinité d'ondes planes de de Broglie, chacune ayant une impulsion ($p$) légèrement différente.
+---
 
-Rôle des Impulsions : Cette addition d'ondes de fréquences très proches crée une interférence constructive dans une petite région de l'espace, et une interférence destructive partout ailleurs.
+### 3. Remarques physiques fondamentales
 
-Le Paquet d'Ondes : La fonction d'onde résultante, $\psi(x,t)$, appelée paquet d'ondes, est localisée dans l'espace. Le cas le plus célèbre, car il représente l'état d'incertitude minimale, est le paquet d'ondes gaussien.
+Lorsqu'on applique ces concepts de signal aux particules quantiques (régies par l'équation de Schrödinger) :
 
-*Linéarité de l'Équation de Schrödinger :*
+1. **Particule libre vs confinée :** La solution d'onde pour une particule libre prend la forme d'un **paquet d'ondes gaussien** (et non d'une porte exacte). En revanche, pour une particule confinée dans un puits de potentiel rigide, le système impose des **ondes stationnaires**.
+2. **Dispersion du milieu :** Contrairement aux ondes lumineuses dans le vide, le milieu est **dispersif** pour une particule matérielle. Cela signifie que la densité de probabilité (la gaussienne) va naturellement **s'étaler et s'aplatir au cours du temps** au fur et à mesure que la particule se déplace.
 
-Le principe de superposition est valide car l'équation de Schrödinger est linéaire : toute onde qui est la somme d'ondes solutions de l’équation de Schrödinger est elle-même solution de l’équation de Schrödinger. $$ \Psi_{\text{paquet}} = \sum_i c_i \psi_i$$ où chaque $\psi_i$ est une solution de l'équation.
 
-## Vitesse de phase et vitesse de groupe :
 
-Nous continuons à parler d'une particule libre qui n'est pas soumise a un potentiel.
 
-On s'attend à ce que la vitesse de la particule soit celle de l'onde de De Broglie, c'est à dire l'onde individuelle. On peut en effet associer une vitesse *de phase* à l'onde de De Broglie. Toutefois ce n'est pas la vitesse de la particule mais une valeur approchée. C'est la *vitesse de groupe* qui constitue la vitesse de la particule.
 
-Plus précisément :
 
-Vitesse de phase : $$v_{\phi}=\frac{\omega}{k}$$
-
-Vitesse de groupe : $$v_{g}=\frac{d\omega}{dk}|_{k=k_{0}}$$
-
-*Conclusion :*
-
-La vitesse de groupe $v_{g}$ est rigoureusement égale à la vitesse classique de la particule, $v_{classique}$.
-
-En mécanique quantique, la vitesse physique d'une particule est donnée par la vitesse de groupe de son paquet d'ondes. Le paquet d'ondes est ainsi la contrepartie quantique de la particule localisée.
-
-# Faits experimentaux :
-
-## Le corps noir :
-
-Le corps noir n'est pas forcément noir. C'est un concept théorique désignant un objet idéal qui absorbe tout le rayonnement électromagnétique qu'il reçoit. Dans la pratique, il est modélisé par une cavité avec une ouverture qui piège les rayons lumineux à l'intérieur. S'il ne reçoit aucun rayonnement extérieur, l'objet émet son propre rayonnement (chaleur ou lumière), uniquement en fonction de sa température. C'est cette émission d'énergie, dont la courbe spectrale n'est pas explicable par la physique classique, qui a conduit à la quantification de l'énergie.
-
-![Principe du corps noir.](Noir.png){#fig-corps-noir fig-align="center" width="70%"}
-
-\usetikzlibrary{arrows}
-\begin{figure}
-\centering
-    
- 
-\begin{tikzpicture}[scale=0.5]
-  \fill [fill=black!40, draw=black, very thick, semitransparent]  
-  (0,0) 
-    -- (10,0) 
-    -- (10,5.5) 
-    -- (9,5.5) 
-    -- (9,1)
-    -- (1,1)
-    -- (1,11)
-    -- (9,11)
-    -- (9,6.5)
-    -- (10,6.5)
-    -- (10,12)
-    -- (0,12) ;
- \draw[->, magenta,line width=2pt] (12,7) -- (1,3.5) -- (4,11) -- (9,8) [dashed, blue] node[left, purple] {\begin{tabular}{c}L’énergie électromagnétique (lumière) \\ est piégée par le corps noir\end{tabular}};
-
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,2) -- (12,2);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,4) -- (12,4);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,8) -- (12,8);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (10,10) -- (12,10);
-
-\draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,2) -- (-2,2);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,4) -- (-2,4);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,8) -- (-2,8);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (0,10) -- (-2,10);
-
-\draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (1,12) -- (1,14);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] 
- (3,12) -- (3,14);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (5,12) -- (5,14);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (7,12) -- (7,14);
-
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (1,12) -- (1,14);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] 
- (3,12) -- (3,14);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (5,12) -- (5,14);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (7,12) -- (7,14);
-
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (1,0) -- (1,-2);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] 
- (3,0) -- (3,-2);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (5,0) -- (5,-2);
- \draw [arrows = {-Latex[width=7pt, length=7pt]},dashed, blue,line width=1pt] (7,0) -- (7,-2);
- \draw (5,-3) node [purple] {\begin{tabular}{c}L’énergie est ensuite restituée \\ sous forme de rayonnement thermique\end{tabular}};
-
-       
-\end{tikzpicture}
-       
- 
-\caption{Certains objets, comme l'intérieur d'un four chauffé uniformément, peuvent approcher le modèle du corps noir.}
-\end{figure}
-
-A un moment Planck eut l'idée d'introduire une constante h qui règle le problème qui vaut : $h=6,626.10^{-34}J.s$. Il imaginait que le corps noir se comportait comme un oscillateur harmonique de fréquence $\mu$ mais dont les niveaux énergie sont quantifiés. Il s'agissait d'une astuce afin de faire coller les résultats avec l’expérience. Planck ne prévoyait pas un très grand avenir scientifique à la constante $h$ qu'il avait introduite. C'est Einstein qui valorisa cette constante en proposant en 1905 une interprétation simple et efficace de l'effet photoélectrique en postulant que le rayonnement électromagnétique était lui même composé de quantas de lumière, appelés plus tard photons d'énergie $\epsilon=h\mu$. Ces quantas d' énergie ne furent appelées photons qu'en 1926.
-
-![Loi de rayonnement du corps noir.](Corps.png){#fig-corps-noir2 fig-align="center" width="70%"}
-
-Max Planck [@Planck1901-fc] écrit :
-
-> "si nous appliquons la loi de déplacement de Wien sous sa dernière forme à l'expression de l'entropie S, nous nous rendons compte que l’élément d’énergie $\epsilon$ doit être proportionnel au nombre d'oscillations $\mu$ et que donc : $\epsilon=h\mu$"
-
-puis un peu plus loin Planck donne une première estimation pour $h$ : $h=6.55.10^{-27} erg.sec$
-
-A comparer avec la valeur réelle : $6,62607015 \times 10^{-34} J.s$
-
-$h$ s'exprime en joules secondes : en physique il s'agit d'une action. Pour cette raison on appelle aussi $h$ le quantum d'action.
-
-## L'effet photoélectrique :
-
-Albert Einstein écrit : [@Einstein1905-zf]
-
-> "Il me semble que les observations portant sur le "rayonnement noir" (...) apparaissent comme plus compréhensibles si on admet que l'energie de la lumière est distribuée de façon discontinue dans l'espace. Selon l’hypothèse envisagée ici, lors de la propagation d'un rayon lumineux émis par une source ponctuelle, l’énergie n'est pas distribuée de façon continue sur des espaces de plus en plus grands, mais est constituée d'un nombre fini de quantas d’énergie localises en des points de l'espace".
-
-Einstein pose dans cet article daté du 09 juin 1905 (soit environ 6 mois avant son célèbre article sur la relation masse énergie) la discontinuité de l'énergie non plus comme une constatation expérimentale mais comme un fondement théorique. Cet article lui vaudra le Prix Nobel de physique en 1921.
-
-![Principe de l'effet photoélectrique](Photoelectrique.png){#fig-photo-elec fig-align="center" width="50%"}
-
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary {decorations.pathmorphing}
-\begin{figure} 
-\centering
- 
-     
- \begin{tikzpicture}[scale=0.5]
-
- %   \tikzset{shift={(current page.center)},yshift=-1.5cm}
-  
-  \foreach \x in {-5,-4,-3,-2,-1,-2,0,1,2,3}
-    \foreach \y in {-1,0,1,2,3}
-      {
-        \draw [fill=red] (\x,\y) circle (0.3cm);
-      %  \fill (\x,\y) circle (0.1cm);
-      }
-
- %   \draw[decorate,decoration={snake,segment length=2cm},->] (0,0) - - (10,0);
-    \draw[decorate,decoration=snake,magenta,-{Stealth[length=5mm]}] (-5,7) - - (-1,3.2) ;
-    \draw[decorate,decoration=snake,magenta,-{Stealth[length=5mm]}] (-6,7) - - (-2,3.2) ;
-    \draw[decorate,decoration=snake,magenta,-{Stealth[length=5mm]}] (-7,7) - - (-3,3.2) ;
-
-    
-    \draw [fill=blue] (2,5) circle (0.3cm);
-    \draw[blue,-{Stealth[length=5mm]}] (2,5) -- (3,8);
-
-     \draw [fill=blue] (0,4) circle (0.3cm);
-    \draw[blue,-{Stealth[length=5mm]}] (0,4) -- (1,6);
-    
-   % \draw[decorate,decoration=snake ] (0,0) arc (0:180:3 and 2);
-
-   
-   
-\end{tikzpicture}
-
-\caption{ L'énergie reçue par le rayonnement électromagnétique va permettre à des électrons de s'éjecter du matériau. On observe une corrélation entre l'énergie reçue (quantifiée) et celle de l'électron}
-\end{figure}
-
-L'équation d'Einstein pour l'effet photoélectrique s'écrit :
-
-$$ \boxed{h\nu =W_{S}+{\frac {1}{2}}mv^{2}}$$ où :
-
-$h\nu$ est l'énergie du photon ;
-
-$W_{S}$ est l'énergie de liaison de l'électron ;
-
-$\frac {1}{2}mv^{2}$ est l'énergie cinétique finale de l'électron. L'énergie d'un photon est caractérisée par la formule.
-
-*On considère que l'effet photoélectrique a fait apparaître l'aspect corpusculaire de la lumière (en plus de ondulatoire). [@Greiner2009-sw]*
-
-## Expérience des fentes d'Young :
-
-### Fentes d'Young avec la lumière :
-
-En optique on admet que les trous S1 et S2 se comportent comme des sources secondaires qui, issues de la même source primaire S, mettent de sondes sphériques cohérentes entre elles. C'est le principe d'Huygens-Fresnel.
-
-En tout point P du plan d'observation la fonction d'onde $\Phi$ résulte de la superposition linéaire des fonctions d'onde $\Phi 1$ et $\Phi 2$.
-
-$$\Phi=\Phi 1 +\Phi 2$$
-
-### Fentes d'Young avec des électrons :
-
-![](Young.png){fig-align="center"}
-
-\begin{tikzpicture}
-\draw[->] (1,0) -- (3,0);
-\draw[->] (3,0) -- (8,0);
-\draw (1,0) node[scale=1.2]{$\bullet$} node [left]{$S$};
-\draw[{-]}, blue] (3,2) -- (3,4) node[above]{};
-\node [red] (A) at (3,1.5) {$S_1$};
-\node [red] (B) at (3,-1.5) {$S_2$};
-%\node [red] (C) at (3,-5) {Trous d'Young};
-\node [red] (D) at (3,4.5) {Feuille de cuivre};
-\node [red] (E) at (10,-3) {\begin{tabular}{l}Plan d'observation \\ ou de détection \end{tabular}};
-\draw[{-]}, blue] (3,1) -- (3,-1);
-\draw[{-]}, blue] (3,-4) -- (3,-2);
-\draw[{-]}, red] (8,3) -- (8,-3);
-\draw[dashed, <->] (3,-3) -- node[above]{$d$} (8,-3) ;
-\draw[dashed, <->] (2,-2) -- node[above, right]{$a$} (2,-4) ;
-\draw[->, magenta] (1,0) -- (3,2);
-\draw[->, magenta] (1,0) -- (3,1);
-\draw[->, magenta] (1,0) -- (3,-1);
-\draw[->, magenta] (1,0) -- (3,-2);
-%realisation des franges d'interference
-\foreach \x in {0,0.1,...,0.8}
-{
-\draw [magenta] (7.8,\x) -- (8.2,\x+0.2); 
-}
-\foreach \x in {0,-0.1,...,-0.8}
-{
-\draw [magenta] (7.8,\x) -- (8.2,\x+0.2); 
-}
-\node [magenta] (F) at (10,0) {Franges d'interférence};
-
-\end{tikzpicture}
-
-L'expérience pionnière de Faget et Fert a été reproduite avec deux fentes et plus par le physicien allemand Claus Joösson en 1961. En envoyant des électrons d'énergie cinétique $E_{k}=50$ keV sur une feuille de cuivre percée de deux fentes de largeur $0,5\mu m$, distantes de $0,2\mu m$, Jönsson observa sur une plaque photographique placée dans le plan d'observation P, des franges d'interférence des ondes électroniques[@Perez2013-it].
-
-Dans l’expérience précédente la source primaire S émet des électrons que l'on détecte en P dans le plan P, après traversée des trous S1 et S2. En réduisant le flux d’électrons de telle sorte qu'entre S et P, à tout instant il n'y ait qu'un seul électron, on observe des points d'impact discrets dus aux électrons collectés pendant la durée d'exposition.
-
-Si cette durée est faible, les points d'impact semblent se répartir de manière aléatoire. En revanche, si elle est suffisante, les impacts se répartissent peu à peu selon la figure d'interférence. *Ceci est surprenant car à un électron unique on associe bien aussi une onde*.
-
-L'onde considérée en quantique est une onde de probabilité : elle diffère donc fondamentalement d'une onde physique habituelle, mécanique ou électromagnétique, puisque elle ne représente pas la variation d'une grandeur physique.
-
-*Nous reviendrons plus tard dans le cours sur l'approche statistique de la physique quantique.*
-
-
-
-
-# L'onde de Louis De Broglie :
 
 ## Equation des ondes ou de d'Alembert :
 
@@ -818,6 +765,23 @@ La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Tout
 +-----------------+---------------------------------------+----------------------------------------------+
 
 
+## Vitesse de phase et vitesse de groupe :
+
+Nous continuons à parler d'une particule libre qui n'est pas soumise a un potentiel.
+
+On s'attend à ce que la vitesse de la particule soit celle de l'onde de De Broglie, c'est à dire l'onde individuelle. On peut en effet associer une vitesse *de phase* à l'onde de De Broglie. Toutefois ce n'est pas la vitesse de la particule mais une valeur approchée. C'est la *vitesse de groupe* qui constitue la vitesse de la particule.
+
+Plus précisément :
+
+Vitesse de phase : $$v_{\phi}=\frac{\omega}{k}$$
+
+Vitesse de groupe : $$v_{g}=\frac{d\omega}{dk}|_{k=k_{0}}$$
+
+*Conclusion :*
+
+La vitesse de groupe $v_{g}$ est rigoureusement égale à la vitesse classique de la particule, $v_{classique}$.
+
+En mécanique quantique, la vitesse physique d'une particule est donnée par la vitesse de groupe de son paquet d'ondes. Le paquet d'ondes est ainsi la contrepartie quantique de la particule localisée.
 
 # Équation de Schrödinger :
 
