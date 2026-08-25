@@ -809,82 +809,96 @@ On pourrait naïvement s'attendre à ce que la vitesse réelle de la particule c
 La vitesse de groupe $v_{g}$ est **rigoureusement égale** à la vitesse classique de la particule ($v_{\text{classique}} = \frac{p}{m}$).
 
 En mécanique quantique, la vitesse physique observée d'une particule est la vitesse de groupe de son paquet d'ondes. Le **paquet d'ondes gaussien** constitue ainsi la contrepartie quantique naturelle d'une particule localisée en mouvement.
- 
 
 # Équation de Schrödinger :
 
-## Rappel de physique des ondes :
+## Rappels de physique des ondes
 
-Il s'agit simplement de faire quelques rappels terminologiques pour éviter toutes confusions dans les termes.
+Avant d'aborder le formalisme de Schrödinger, il est utile de fixer quelques définitions terminologiques fondamentales :
 
-*Onde progressive :* une onde progressive "progresse", par exemple le son se propage dans l'air. Elle transporte de l'énergie sans transport de matière.
+* **Onde progressive :** Une onde qui se propage dans l'espace (comme le son dans l'air ou la lumière dans le vide). Elle transporte de l'énergie sans transport global de matière.
+* **Onde stationnaire :** Une onde dont le profil ne se déplace pas mais oscille sur place. Elle résulte de l'interférence de deux ondes progressives identiques se déplaçant en sens inverses (par exemple, la corde d'une guitare pincée ou une onde électromagnétique piégée dans une cavité).
+* **Onde plane :** Une modélisation idéale où le front d'onde est un plan infini orthogonal à la direction de propagation. L'onde ne dépend que d'une seule coordonnée spatiale. C'est une abstraction pratique, irréalisable au sens strict dans la nature.
+* **Équation de d'Alembert (1746) :** L'équation différentielle fondamentale qui régit la propagation de toute onde classique en 3D (mécanique ou électromagnétique) :
 
-*Onde stationnaire :* C'est une onde qui apparaît immobile. Idéalement, elle est la conséquences de deux ondes progressives qui arrivent en sens opposées et interfèrent. "Naturellement" il faut des conditions très précises pour s'en approcher. On peut aussi penser a la corde d'une guitare classique qui va vibrer sur elle-même.
+$$\nabla^2 \vec{E} = \frac{\partial^2 \vec{E}}{\partial x^2} + \frac{\partial^2 \vec{E}}{\partial y^2} + \frac{\partial^2 \vec{E}}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2}$$
 
-*Onde plane :* il s'agit d'un concept plus que d'une onde que l'on rencontre réellement. Toutefois, c'est une modélisation suffisamment approchée dans certains milieux comme les milieux homogènes. Il s'agit bien d'une sinusoïde mais qui dépend d'une seule variable spatiale.
+On remarque que contrairement à l'équation de d'Alembert qui est du **second ordre en temps**, la future équation de Schrödinger sera du **premier ordre en temps**, marquant une rupture majeure avec la physique classique.
 
-*Équation d'onde :* Posée la première fois par Jean Le Rond d'Alembert en 1747 elle s'applique en toutes les ondes en physique classique. En physique quantique elle sera remplacée par équation de Schrödinger.
+### Le saut conceptuel : de l'onde progressive à l'onde stationnaire
 
-*Equation des ondes ou de d'Alembert :*
+En 1926, lorsqu'Erwin Schrödinger dérive son équation différentielle, il reconnaît explicitement sa dette envers de Broglie tout en soulignant sa propre contribution majeure :
 
-Le scientifique français Jean le Rond d'Alembert, qui a établi l'équation des ondes en une dimension d'espace en 1746. $$\frac {\partial ^{2}{\vec {\mathrm {E} }}}{{\partial x^{2}}} + \frac {\partial ^{2}\vec {\mathrm {E} }}{\partial y^{2}} + {\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial z^{2}}}={\frac {1}{c^{2}}}{\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial t^{2}}}$$ On remarque que le terme qui représente l'énergie est en dérivée seconde.
+> « Je ne saurais passer sous silence que je dois l’impulsion première qui a fait éclore ce travail pour la plus grande part à la remarquable thèse de Louis de Broglie. (…) La principale différence entre ses résultats et les nôtres consiste en ce que M. de Broglie imagine des ondes progressives, tandis que si on interprète nos formules au moyen d’une hypothèse ondulatoire, on est conduit à des vibrations d’ondes stationnaires. »  
+> — **Erwin Schrödinger (1926)**
+
+Cette remarque éclaire parfaitement notre démarche :
+* **L'approche de de Broglie** décrit une onde de matière *progressive* associant impulsion et propagation ($\lambda = h/p$).
+* **L'approche de Schrödinger** applique des conditions aux limites à cette onde. Le confinement transforme l'onde progressive en **onde stationnaire**, faisant émerger naturellement la **quantification de l'énergie**.
+
+
+### 4. La physique réelle : le règne des approximations
+
+En mécanique quantique théorique, nous manipulons trois idéalisations mathématiques strictes :
+
+1. **L'onde plane** (qui exigerait une extension spatiale et une énergie infinies),
+2. **L'équation de Schrödinger** (qui exigerait un système parfaitement isolé de l'Univers),
+3. **L'état pur** (qui exigerait l'absence totale d'interaction ou de bruit thermique).
+
+En pratique, l'expérimentateur ne manipule jamais ces objets idéaux : il travaille avec des **paquets d'ondes gaussiens**, des **systèmes ouverts** et des **états mixtes** régis par la décohérence. Les concepts d'ondes planes ou d'états purs ne sont que des **asymptotes d'étude** indispensables pour construire les bases du calcul.
 
  
+## Exemple tiré de l'électronique : de la représentation d'état à la physique quantique
 
-## Exemple tiré des télécommunications :
+Pour comprendre le formalisme quantique, on peut établir une analogie directe avec le traitement du signal et la théorie des systèmes.
 
-Voici l'exemple d'un circuit RLC (filtre passe bande).
+Considérons un circuit RLC série (un filtre passe-bande classique) composé d'une résistance $R$, d'une inductance $L$ et d'une capacité $C$.
 
-Les paramètres L, C et R sont appelés des impédances.
+![](Electronique.png){fig-align="center" width="60%"}
 
-![](Electronique.png){fig-align="center"}
-
-\begin{center}
-\begin{circuitikz}
-    \draw (0,0) to [short] ++(0,1) node [right] {$-$}
-    to [open, v^>=$E(t)$, o-o] ++(0,1) node [right] {$+$}
-    to [short] ++(0,1)
-    to [R=$R$, i>^=$I$, resistors/zigs=6] ++(4,0)
-    to [curved capacitor, l_=$C$, capacitors/thickness=8] ++(0,-3)
-    to [cute inductor, l_=$L$, mirror] ++(-4,0);
-\end{circuitikz}
-\end{center}
-
-La tension et l'intensite sont des grandeurs electriques que l'on peut representer par des sinusoides. Le comportement du circuit est decrit par une equation differentielle :
+La tension d'entrée $e(t)$ et le courant $i(t)$ sont des grandeurs électriques dépendant du temps. La loi des mailles et la relation de charge du condensateur régissent le système :
 
 $$ \left\{
     \begin{array}{ll}
-        L\frac{di(t)}{dt} =-Ri(t) -V_{c}(t) -e(t) \\
-        i(t)=C\frac{dv_{c}(t)}{dt}
+        L\dfrac{di(t)}{dt} = -R\,i(t) - v_c(t) + e(t) \\[6pt]
+        i(t) = C\dfrac{dv_c(t)}{dt}
     \end{array}
 \right.$$
 
-Notez qu'il s'agit d'une représentation fonctionnelle et on est tenté de remplacer les variables par des matrices. Ce n'est toutefois pas possible de façon directe.
+### Le passage à la représentation d'état
 
-Pour utiliser des matrices, l'équation doit être modifiée de la façon suivante :[@Dixneuf2007-oc] $$\frac{dX(t)}{dt}=\begin{bmatrix}
+En électronique moderne et en automatique, au lieu de manipuler cette équation sous forme fonctionnelle scalaire, on introduit la **notion d'état**. On regroupe les variables du système dans un **vecteur d'état** $X(t)$ :
+
+$$\frac{dX(t)}{dt} = \begin{bmatrix}
 -R/L & -1/L \\
 1/C & 0 
-\end{bmatrix}X(t)+\begin{bmatrix}
--1/L  \\
+\end{bmatrix} X(t) + \begin{bmatrix}
+1/L \\
 0 
-\end{bmatrix}U(t)$$\
-Dans ce cas X(t) est un vecteur d'état qui représente par exemple le courant. C'est une "vision moderne" ou on introduit la notion d'état en électronique.
+\end{bmatrix} e(t) \quad \text{avec} \quad X(t) = \begin{bmatrix} i(t) \\ v_c(t) \end{bmatrix}$$ [@Dixneuf2007-oc]
 
-En physique quantique on aussi besoin d'une équation différentielle pour décrire évolution de l’état d'un corpuscule.
+---
 
-C'est l'équation de Schrödinger.
+### Le parallèle direct avec l'équation de Schrödinger
 
-Elle est régie par des opérateurs (comme l'Hamiltonien $\hat{H}$) qui sont l'équivalent des paramètres physiques du système (tels que les impédances $R, L, C$).
+Cette approche matricielle des systèmes dynamiques classiques est l'exact pendant du formalisme de la mécanique quantique :
 
-La solution de l'équation de Schrödinger est la fonction d'onde $\Psi(x, t)$, qui est l'équivalent quantique du vecteur d'état $X(t)$ décrivant le système.
+| Électronique / Automatique (RLC) | Physique quantique |
+| :--- | :--- |
+| **Vecteur d'état** $X(t)$ (courant, tension) | **Fonction / Vector d'état** $\Psi(x,t)$ |
+| **Matrice de dynamique** $A$ (composants $R, L, C$) | **Opérateur Hamiltonien** $\hat{H}$ (énergie $T + V$) |
+| **Équation d'état** $\frac{dX}{dt} = AX + Bu$ | **Équation de Schrödinger** $i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi$ |
 
-## Extrait de la publication de Schrödinger de 1926 :
+En mécanique quantique, l'état d'une particule évolue ainsi sous l'action d'un **opérateur** ($\hat{H}$), de la même façon que l'état d'un circuit électrique évolue sous l'action de la matrice des propriétés physiques de ses composants.
 
-Erwin Schrödinger écrit : [@Schrodinger1926-vy]
+## Les multiples voies d'accès à l'équation de Schrödinger
 
-> Je ne saurais passer sous silence que je dois l'impulsion première qui a fait éclore ce travail pour la plus grande part a la remarquable thèse de Louis de Broglie. (...) la principale différence entre ses résultats et les nôtres consiste en ce que monsieur de Broglie imagine de sondes progressives tandis que si on interprète nos formules au moyens d'une hypothèse ondulatoire on est conduit a des vibrations d'ondes stationnaires.
+L'équation de Schrödinger est un postulat. Elle ne se « démontre » pas, mais elle s'introduit selon plusieurs perspectives :
 
-Cet extrait exprime la différence entre l'onde de De Broglie (onde progressive pour une particule libre) et la fonction d'onde solution de l'équation de Schrödinger (ondes stationnaires pour les états liés).
+* **L'approche hamiltonienne (Austin Blaquière) :** On part de la conservation classique de l'énergie $E = \frac{p^2}{2m} + V$ et l'on substitue les grandeurs dynamiques par leurs opérateurs ($E \to i\hbar \partial_t$ et $p \to -i\hbar \partial_x$).
+* **L'approche ondulatoire (Schrödinger) :** On adapte l'équation des ondes de d'Alembert en y injectant la relation de de Broglie $\lambda = h/p$.
+* **L'analogie thermodynamique :** Pour une particule libre, Schrödinger n'est autre qu'une **équation de la chaleur** à coefficient de diffusion imaginaire ($D = i\frac{\hbar}{2m}$), décrivant une diffusion cohérente et réversible.
+* **L'approche newtonienne (Potentiel quantique) :** En écrivant $\Psi = R \, e^{iS/\hbar}$, on retrouve l'équation de Newton $m\vec{a} = -\vec{\nabla}(V + Q)$, où $Q$ est un « potentiel quantique » d'origine purement ondulatoire.
 
 ## Equation de Schrödinger dépendante du temps :
 
@@ -1028,38 +1042,6 @@ C'est donc bien la solution générale de l'ESDT, mais elle est construite en ut
 
 
 # Mesure quantique :
-
-## Représentation d'une grandeur physique par un opérateur :
-
-Un système physique en mouvement étant décrit par une fonction d'onde $\phi(x,y,z,t)$, on convient de faire correspondre des opérateurs aux grandeurs physiques qui lui sont attachées.
-
-Ainsi, à une fonction classique $g(x,y,z,p_x,p_y,p_z,E)$ qui dépend de la position, des moments et de l'énergie, on associera l'opérateur $\hat{G}$ en effectuant les substitutions suivantes :
-
-Opérateur Position : Les opérateurs de position sont simplement la multiplication par la coordonnée :
-
-$$\hat{X} = x \times, \quad \hat{Y} = y \times, \quad \hat{Z} = z \times$$
-
-Opérateur Quantité de Mouvement : L'opérateur de la quantité de mouvement est donné par l'opérateur de dérivation spatial :
-
-$$\hat{P}_x = \frac{h}{i2\pi}\frac{d}{dx} = -i\hbar\frac{d}{dx}$$
-
-$$\hat{P}_y = \frac{h}{i2\pi}\frac{d}{dy} = -i\hbar\frac{d}{dy}$$
-
-$$\hat{P}_z = \frac{h}{i2\pi}\frac{d}{dz} = -i\hbar\frac{d}{dz}$$
-
-Opérateur Énergie : L'opérateur de l'énergie (souvent associé à l'Hamiltonien) est donné par l'opérateur de dérivation temporelle :
-
-$$\hat{E} = -\frac{h}{i2\pi}\frac{d}{dt} = i\hbar\frac{d}{dt}$$
-
-L'opérateur $\hat{G}$ associé à la grandeur physique $g$ est alors obtenu par la substitution dans la fonction classique $g$ :
-
-$$\hat{G} = g\left[x,y,z, \frac{h}{i2\pi}\frac{d}{dx}, \frac{h}{i2\pi}\frac{d}{dy}, \frac{h}{i2\pi}\frac{d}{dz}, -\frac{h}{i2\pi}\frac{d}{dt}\right]$$
-
-Cet opérateur agit sur une fonction, la fonction d'onde $\phi$ du système :
-
-$$\hat{G}\phi = g\left[x,y,z, -i\hbar\frac{d}{dx}, -i\hbar\frac{d}{dy}, -i\hbar\frac{d}{dz}, i\hbar\frac{d}{dt}\right]\phi(x,y,z,t)$$
-
-L'opérateur $\hat{G}$ ainsi construit doit être hermitique pour que ses valeurs propres (les résultats de mesure possibles) soient réelles.
 
 ## Mesure quantique : interaction et irréversibilité :
 
