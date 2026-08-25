@@ -679,30 +679,41 @@ $$\mathcal{F}\{\text{Porte}(x)\} \propto \frac{\sin(k)}{k} = \text{sinc}(k)$$
 
 ---
 
+ 
+
 ### 3. Remarques physiques fondamentales
 
-Lorsqu'on applique ces concepts de signal aux particules quantiques (régies par l'équation de Schrödinger) :
+Ici encore, ce sont les **conditions expérimentales** qui dictent le formalisme à retenir. L'utilisation de fentes et de diaphragmes en laboratoire rend naturelle l'utilisation de fonctions portes, qui constituent l'approximation pratique la plus directe de l'impulsion de Dirac.
 
-1. **Particule libre vs confinée :** La solution d'onde pour une particule libre prend la forme d'un **paquet d'ondes gaussien** (et non d'une porte exacte). En revanche, pour une particule confinée dans un puits de potentiel rigide, le système impose des **ondes stationnaires**.
-2. **Dispersion du milieu :** Contrairement aux ondes lumineuses dans le vide, le milieu est **dispersif** pour une particule matérielle. Cela signifie que la densité de probabilité (la gaussienne) va naturellement **s'étaler et s'aplatir au cours du temps** au fur et à mesure que la particule se déplace.
+* **La limite de l'onde plane :** Si l'on souhaite représenter une onde plane idéale (dont l'incertitude sur la position est infinie, $\Delta x \to \infty$), la fonction porte permet d'écrire une onde extrêmement étalée dans l'espace. Par transformée de Fourier, cette porte très large se resserre dans l'espace des impulsions $p$ pour tendre vers un pic (une impulsion de Dirac en $p$), traduisant une fréquence et une quantité de mouvement parfaitement définies ($\Delta p \to 0$).
 
+* **Du Sinus Cardinal à la Gaussienne :** Le sinus cardinal est la réponse spectrale naturelle d'une fonction porte aux bords tranchants. En pratique, lorsqu'une particule libre n'est pas tronquée artificiellement par une fente rigide, son profil spatial réel s'exprime sous la forme d'un **paquet d'ondes gaussien**. 
 
-
-
-
+* **La propriété remarquable de la Gaussienne :** La transformée de Fourier d'une gaussienne étant elle-même une gaussienne, ce formalisme permet de décrire élégamment un paquet formé d'une superposition d'ondes de fréquences très proches. Ce concept sera essentiel pour introduire plus loin les notions de **vitesse de phase** et de **vitesse de groupe**.
 
 
-## Equation des ondes ou de d'Alembert :
+> **Note épistémologique — L'élégance de Fourier vs le pragmatisme de la base en $x$ :**  
+> La représentation fréquentielle (issue des séries de Fourier) offre une base d'états propre, orthonormée et mathématiquement idéale. À l'inverse, la base en position $x$ peut sembler artificielle : elle associe à chaque point de l'espace un vecteur représenté par une distribution de Dirac $\delta(x - x_0)$, un objet qui n'est pas une fonction usuelle. C'est pourtant le prix mathématique à payer pour décrire la localisation spatiale et l'acte de mesure expérimentale.
 
-Le scientifique français Jean le Rond d'Alembert, qui a établi l'équation des ondes en une dimension d'espace en 1746. $$\frac {\partial ^{2}{\vec {\mathrm {E} }}}{{\partial x^{2}}} + \frac {\partial ^{2}\vec {\mathrm {E} }}{\partial y^{2}} + {\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial z^{2}}}={\frac {1}{c^{2}}}{\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial t^{2}}}$$ On remarque que le terme qui représente l'énergie est en dérivée seconde.
+## La thèse de Louis de Broglie (1924) : l'acte de naissance de la mécanique ondulatoire
 
-## La thèse de De Broglie de 1924 :
+Cette intuition d'un objet étalé dans l'espace auquel on associe une fréquence propre trouve son origine fondamentale dans la thèse de doctorat de Louis de Broglie [@debroglie:tel-00006807]. Il y écrit :
 
-Dans sa thèse de 1924, Louis de Broglie écrit : [@debroglie:tel-00006807]
+> « L’électron est pour nous le type du morceau d'énergie isolé, celui que nous croyons, peut-être à tort, le mieux connaître ; or d’après les conceptions reçues, l’énergie de l’électron est répandue dans tout l’espace avec une très forte condensation dans une région de très petites dimensions dont les propriétés nous sont d’ailleurs fort mal connues. Ce qui caractérise l’électron comme atome d’énergie, ce n’est pas la petite place qu’il occupe dans l’espace, je répète qu’il l’occupe tout entier, c’est le fait qu’il est insécable, qu’il forme une unité. Ayant admis l’existence d’une fréquence liée au morceau d’énergie, cherchons comment cette fréquence se manifeste à l’observateur fixe dont il fut question plus haut. »
 
-> "L’électron est pour nous le type du morceau isolé celui que nous croyons, peut-être à tort, le mieux connaître ; or d’après les conceptions reçues, l’énergie de l’électron est répandue dans tout l’espace avec une très forte condensation dans une région de très petites dimensions dont les propriétés nous sont d’ailleurs fort mal connues. Ce qui caractérise l’électron comme atome d’énergie, ce n’est pas la petite place qu’il occupe dans l’espace, je répète qu’il l’occupe tout entier, c’est le fait qu’il est insécable, non divisible, qu’il forme une unité. Ayant admis l’existence d’une fréquence liée au morceau d’énergie, cherchons comment cette fréquence se manifeste a l’observateur fixe dont il fut question plus haut."
+### La relation de de Broglie
 
-On lit que Louis de Broglie admet une fréquence liée : c'est le début de la relation onde-corpuscule. Cette intuition conduit de Broglie à sa célèbre relation : $\lambda = \frac{h}{p}$, reliant la longueur d'onde à la quantité de mouvement, pierre angulaire de la mécanique ondulatoire
+En postulant qu'à toute particule matérielle possédant une énergie est associée une fréquence interne $\nu$ (puis une longueur d'onde $\lambda$), de Broglie réalise la synthèse fondamentale entre la vision corpusculaire et l'approche ondulatoire. 
+
+Il en déduit la relation fondamentale reliant la longueur d'onde de la matière à sa quantité de mouvement $p$ :
+
+$$\lambda = \frac{h}{p}$$
+
+Où $h$ est la constante de Planck. 
+
+Cette équation constitue la pierre angulaire de la mécanique ondulatoire : 
+* Une particule dotée d'une impulsion $p$ parfaitement définie ($\Delta p = 0$) correspond à une **onde plane pure** de longueur d'onde $\lambda$.
+* Comme nous l'avons vu précédemment, dans la base des positions $x$, cette onde s'étend sur tout l'espace ($\Delta x \to \infty$), illustrant parfaitement le fait que l'électron « occupe tout l'espace ».
 
 ## Concept d'onde de matière :
 
@@ -736,52 +747,69 @@ Toutefois la vitesse de phase de l'onde de De Broglie n'est pas la vitesse de la
 
 La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Toutefois elle a permis d'arriver à la conclusion qu'il faut voir un lien entre la position de la particule et celle de l'amplitude du paquet d'ondes.
 
-```{=html}
-<!--
+## Concept d'onde de matière
 
-|  |  |  |
-|------------------------|------------------------|------------------------|
-| **Caractéristique** | **Onde Plane Standard** | **Électron de De Broglie (1924)** |
-| **Localisation** | Rigoureusement nulle (étalée partout). | Étale partout, mais **condensé** en un point. |
-| **Énergie** | Densité constante partout. | Condensée mais indivisible (atome d'énergie). |
-| **Fréquence** | Paramètre mathématique pur. | Fréquence liée à la masse/énergie ($E=hf$). |
-| **Structure** | Sinusoïde infinie. | Proche du concept de **paquet d'ondes**. |
+L’électron étant une particule massive, on nomme **onde de matière** (ou onde matérielle) l'onde associée à son déplacement.
 
--->
-```
+### Forme de la fonction d'onde complexe
 
-+-----------------+---------------------------------------+----------------------------------------------+
-|                 |                                       |                                              |
-+=================+=======================================+==============================================+
-| Caractéristique | Onde Plane Standard                   | Électron de De Broglie (1924)                |
-+-----------------+---------------------------------------+----------------------------------------------+
-| Localisation    | Rigoureusement nulle (étalée partout) | Étale partout, mais **condensé** en un point |
-+-----------------+---------------------------------------+----------------------------------------------+
-| Énergie         | Densité constante partout             | Condensée mais indivisible (atome d'énergie) |
-+-----------------+---------------------------------------+----------------------------------------------+
-| Fréquence       | Paramètre mathématique pur            | Fréquence liée à la masse/énergie (E=hf)     |
-+-----------------+---------------------------------------+----------------------------------------------+
-| Structure       | Sinusoïde infinie                     | Proche du concept de **paquet d'ondes** \|   |
-+-----------------+---------------------------------------+----------------------------------------------+
+Par analogie avec l'optique ondulatoire, cette onde plane monochromatique idéale s'exprime sous forme complexe :
 
+$$\boxed{\Psi(\vec{r},t) = a \, e^{-i(\omega t - \vec{k} \cdot \vec{r})}}$$
 
-## Vitesse de phase et vitesse de groupe :
+Avec :
 
-Nous continuons à parler d'une particule libre qui n'est pas soumise a un potentiel.
+* $a$ : l'amplitude de l'onde,
+* $\vec{k}$ : le vecteur d'onde (avec $k = \|\vec{k}\| = \frac{2\pi}{\lambda}$),
+* $\omega$ : la pulsation ($\omega = 2\pi\nu$, où $\nu$ est la fréquence),
+* $\vec{p} = \hbar \vec{k}$ : le vecteur quantité de mouvement (impulsion).
 
-On s'attend à ce que la vitesse de la particule soit celle de l'onde de De Broglie, c'est à dire l'onde individuelle. On peut en effet associer une vitesse *de phase* à l'onde de De Broglie. Toutefois ce n'est pas la vitesse de la particule mais une valeur approchée. C'est la *vitesse de groupe* qui constitue la vitesse de la particule.
+En substituant les relations quantiques $E = \hbar\omega$ et $\vec{p} = \hbar\vec{k}$, la fonction d'onde prend la forme fondamentale :
 
-Plus précisément :
+$$\Psi(\vec{r},t) = a \, e^{-\frac{i}{\hbar}(E t - \vec{p} \cdot \vec{r})}$$
 
-Vitesse de phase : $$v_{\phi}=\frac{\omega}{k}$$
+---
 
-Vitesse de groupe : $$v_{g}=\frac{d\omega}{dk}|_{k=k_{0}}$$
+### La relation de de Broglie et la dualité
 
-*Conclusion :*
+La relation de de Broglie relie directement la grandeur ondulatoire $\lambda$ à la grandeur corpusculaire $p$ :
 
-La vitesse de groupe $v_{g}$ est rigoureusement égale à la vitesse classique de la particule, $v_{classique}$.
+$$\boxed{p = \frac{h}{\lambda}}$$
 
-En mécanique quantique, la vitesse physique d'une particule est donnée par la vitesse de groupe de son paquet d'ondes. Le paquet d'ondes est ainsi la contrepartie quantique de la particule localisée.
+Cette formule — valable aussi bien pour les particules matérielles (électrons, neutrons) que pour les photons — constitue le pont formel de la **dualité onde-corpuscule**.
+
+---
+
+### De l'onde plane au paquet d'ondes physique
+
+Une difficulté majeure apparaît rapidement : la **vitesse de phase** $v_{\phi} = \frac{\omega}{k}$ d'une onde plane pure ne correspond pas à la vitesse physique de la particule ($v_{\text{particule}} \neq v_{\phi}$). 
+
+Pour résoudre ce paradoxe, de Broglie envisage qu'une particule réelle ne peut pas être représentée par une onde sinusoïdale pure et infinie (qui impliquerait une localisation totalement inconnue, $\Delta x \to \infty$). Elle doit être décrite par une **superposition d'ondes sinusoïdales de fréquences très proches : un paquet d'ondes**.
+
+> **Portée conceptuelle :**  
+> La relation $\lambda = \frac{h}{p}$ n'est pas un simple postulat isolé. Elle a permis de comprendre qu'il existe un lien étroit entre la **position physique de la particule** et l'**amplitude (l'enveloppe) du paquet d'ondes**, ouvrant la voie à l'interprétation probabiliste de la mécanique quantique.
+
+## Vitesse de phase et vitesse de groupe
+
+Dans toute cette analyse, nous continuons de considérer le cas d'une **particule libre**, c'est-à-dire affranchie de tout potentiel extérieur ($V = 0$).
+
+On pourrait naïvement s'attendre à ce que la vitesse réelle de la particule corresponde à la vitesse de l'onde sinusoïdale pure de de Broglie. Cette vitesse ondulatoire individuelle est appelée **vitesse de phase**. En réalité, la vitesse de phase ne correspond pas à la vitesse de déplacement physique de la particule. C'est la **vitesse de groupe** de l'enveloppe du paquet d'ondes qui incarne la véritable vitesse de la particule.
+
+### Définitions mathématiques
+
+* **Vitesse de phase :** 
+  $$v_{\phi} = \frac{\omega}{k}$$
+* **Vitesse de groupe :** 
+  $$v_{g} = \left. \frac{d\omega}{dk} \right|_{k=k_{0}}$$
+
+---
+
+### Conclusion fondamentale
+
+La vitesse de groupe $v_{g}$ est **rigoureusement égale** à la vitesse classique de la particule ($v_{\text{classique}} = \frac{p}{m}$).
+
+En mécanique quantique, la vitesse physique observée d'une particule est la vitesse de groupe de son paquet d'ondes. Le **paquet d'ondes gaussien** constitue ainsi la contrepartie quantique naturelle d'une particule localisée en mouvement.
+ 
 
 # Équation de Schrödinger :
 
@@ -797,9 +825,11 @@ Il s'agit simplement de faire quelques rappels terminologiques pour éviter tout
 
 *Équation d'onde :* Posée la première fois par Jean Le Rond d'Alembert en 1747 elle s'applique en toutes les ondes en physique classique. En physique quantique elle sera remplacée par équation de Schrödinger.
 
-Voici la formule de l'équation d'onde en une dimension :
+*Equation des ondes ou de d'Alembert :*
 
-$$\boxed{\frac{\partial^2 u}{\partial t^2} - c^2 \frac{\partial^2 u}{\partial x^2} = 0}$$
+Le scientifique français Jean le Rond d'Alembert, qui a établi l'équation des ondes en une dimension d'espace en 1746. $$\frac {\partial ^{2}{\vec {\mathrm {E} }}}{{\partial x^{2}}} + \frac {\partial ^{2}\vec {\mathrm {E} }}{\partial y^{2}} + {\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial z^{2}}}={\frac {1}{c^{2}}}{\frac {\partial ^{2}{\vec {\mathrm {E} }}}{\partial t^{2}}}$$ On remarque que le terme qui représente l'énergie est en dérivée seconde.
+
+ 
 
 ## Exemple tiré des télécommunications :
 
