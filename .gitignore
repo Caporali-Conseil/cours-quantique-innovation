@@ -232,3 +232,8 @@ __marimo__/
 
 /.quarto/
 *.deb
+
+# Quarto output and dependencies
+/_site/
+/site_libs/
+/.quarto/
