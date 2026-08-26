@@ -934,6 +934,147 @@ Dans un contexte applicatif réel (canaux de transmission, processeurs quantique
 
 Pour décrire la réalité expérimentale et la perte d'information, il est nécessaire de passer du vecteur d'état $|\Psi\rangle$ à l'**opérateur densité $\hat{\rho}$**.
 
+# L'état de superposition
+
+Cette approche s'inscrit dans les modèles récents d'application de l'information quantique aux systèmes distribués [@Caporali2026].
+
+### Peut-on parler du destin géometrique d'un point ?
+
+**Structure d'une matrice 2 fois 2 :**
+
+Prenons deux points : $P_1(x_1,y_1)$ et $P_2(x_2,y_2)$
+
+Nous allons considérer l'application linéaire suivante :
+
+$$
+\begin{cases}
+x_2 = ax_1 + by_1 \\
+y_2 = cx_1 + dy_1
+\end{cases}
+$$
+
+On voit que cela peut se représenter par une matrice carrée :
+
+$$
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
+L'information présente dans la matrice va décrire l'information (l’état) de $P1$ dans son chemin géométrique vers $P2$.
+
+$a$ et $d$ sont les éléments diagonaux, $c$ et $b$ sont les éléments non diagonaux.
+
+Voici quelques configurations possibles :
+
+**La matrice de rotation :**
+
+$$
+\begin{pmatrix}
+0 & -1 \\
+1 & 0
+\end{pmatrix}
+$$
+
+``` verbatim
+            Axe Y
+              ^
+              |
+      P2 *    |        
+ (-y1, x1)    |          
+              |       * P1 (x1, y1)  
+              |        
+    ---------+-------+-------> Axe X
+              O      x1
+```
+
+**La matrice de symétrie :**
+
+$$
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
+
+**La matrice de projection :**
+
+$$
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+$$
+
+**La matrice dégénérée :**
+
+$$
+\begin{pmatrix}
+1 & 1 \\
+1 & 1
+\end{pmatrix}
+$$
+
+
+On voit que ce sont les éléments non diagonaux qui font les propriétés géométrique de la matrice : par exemple la matrice de rotation fait réaliser une opération de rotation de $\frac{\pi}{2}$ au point P1.
+
+Quant aux éléments diagonaux, ils correspondent géométriquement à une homothétie : le point P1 subi une simple translation de {O,P1} vers {0,P2} sans rotation.
+
+### Loi dans le plan géometrique
+
+Selon Augustin Blaquiere @alma991002711779705804 [p. 9]
+
+> Etant donné un point P1 du plan on lui fait correspondre un point P2 par une loi donnée.
+
+Cela signifie qu'une application linéaire qui est un ensemble d'équations posséde une interprétation géométrique : il est tentant d’interpréter géométriquement les transformations mathématiques et remplacer un algorithme par le destin géométrique d'un point comme si l espace pouvait illustrer les mécanismes mathématiques sous-jacent.
+
+L'utilisation du produit extérieur $|v_1\rangle \langle v_2|$ permet de modéliser la **corrélation** entre deux entités du réseau. La matrice résultante : $$\begin{pmatrix} X_1 X_2 & X_1 Y_2 \\ Y_1 X_2 & Y_1 Y_2 \end{pmatrix}$$ montre que chaque cellule est une hybridation des deux points. On a crée un opérateur.
+
+Bien que mathématiquement cohérent, ce niveau d'abstraction nécessite d'être complété par un outil interprétable physiquement, afin de traduire les états du consensus en grandeurs observables.
+
+Alors Augustin Blaquiere va nous aider dans le tome II de son livre @alma991002711819705804 [p. 39] il dit :
+
+> Il faut remarquer que pour toute onde classique : onde acoustique, onde lumineuse ... nos sens sont impressionnés par le carré de l'amplitude $a^2$ et non pas l'amplitude elle-même. Ceci resulte du fait que nos organismes ne peuvent percevoir que des énergies. Or l'énergie transportée par une onde classique dans un temps donné, ou sa puissance, est proportionnelle au carré de son amplitude.
+
+On voudrait une matrice plus interprétable du style :
+
+$$\begin{pmatrix} X_1^2 & b \\ c & X_2^2 \end{pmatrix}$$ ou $X_1^2$ et $X_2^2$ sont des états issus de P1 et P2.
+
+A ce niveau on observe que : le produit $|v_1\rangle \langle v_2|$ ne peut jamais donner ta matrice $\begin{pmatrix} X_1^2 & a \\ a^* & X_2^2 \end{pmatrix}$
+
+Nous sommes ici dans une **impasse conceptuelle**.
+
+### Le saut dans le vide
+
+Une démarche qui ressemble à la rupture épistémologique initiée par Heisenberg (1925) [@heisenberg1925], qui privilégie les observables matricielles aux représentations cinématiques classiques est nécessaire. 
+
+Pour exprimer la position d'un particule $x$ à un instant donné, Heisenberg a renoncé à pouvoir le faire et a considéré que la seule expression possible est d'utiliser un tableau (l’ancêtre de la matrice position $X$) qui exprime les unes à côté des autres toutes les positions possibles.
+
+La clé consiste à raisonner non pas en coordonnées spatiales mais en potentialité de coordonnées spatiales. Ce n'est pas une position $x$ **OU** un autre position $x$ mais c'est une potentialité de position **ET** une autre potentialité de position.
+
+Ceci va nous amener à la notion de qubit. Le saut conceptuel du bit (élément informationnel en information classique) au qubit (élément informationnel en informatique quantique) n'a rien de facile.
+
+### Le qubit et la superposition d'états 
+
+Traduire le OU s'appelle la superposition d'état ou le fait d'être dans 2 états en même temps, qui parait tellement obscur aux gens qui découvrent la quantique,
+
+Il est nécessaire de commencer par admettre que le système est dans une superposition statistique de $P_1$ et $P_2$.
+
+On définit un nouveau vecteur $v_{mixte}$ :$$|v_{mixte}\rangle = \alpha |v_1\rangle + \beta |v_2\rangle$$
+
+Cette écriture s'interprète géométriquement comme une somme de vecteurs dans un espace de Hilbert, son interprétation physique directe nécessite de passer au module au carré :$|\alpha|^2$ et $|\beta|^2$ représentent les probabilités de trouver le système dans l'état 1 ou 2.
+
+$\alpha$ et $\beta$ sont des amplitudes de probabilité.
+
+Le "niveau de présence" et la phase : Elle s'exprime sous forme complexe : 
+
+Forme cartésienne : $\alpha = a + ib$ 
+
+Forme polaire : $\alpha = r e^{i\phi}$
+
+Ici, $r$ (le module) sert à calculer la probabilité ($P = r^2$), mais l'information de sens et de structure est contenue dans la phase $\phi$.
+
+
 # Mesure quantique :
 
 ## Mesure quantique : interaction et irréversibilité :
@@ -944,7 +1085,7 @@ Ce principe de perturbation est amplifié en mécanique quantique. L'acte de mes
 
 Niels Bohr [@BOHR1928] écrit à propos de la nature des transitions atomiques :
 
-Des lignes spectrales qui selon la théorie classique devraient provenir d'un même état de l'atome sont attribuées, d’après le postulat quantique, a différents processus de transition entre lesquels l'atome a le choix.
+> Des lignes spectrales qui selon la théorie classique devraient provenir d'un même état de l'atome sont attribuées, d’après le postulat quantique, à différents processus de transition entre lesquels l'atome a le choix.
 
 En d'autres termes, là où la théorie classique permet une somme continue de possibilités (comme la décomposition continue d'une voix en fréquences), la théorie quantique force l'état à choisir un niveau parmi un ensemble discret et possible.
 
@@ -954,31 +1095,34 @@ Les trois "règles" ou postulats fondamentaux de la mesure, formalisées par Max
 
 Selon [@Wiggins2024] page 67, ces règles sont :
 
-1.  Description de l'état et de l'observable
+###  Description de l'état et de l'observable
 
 L'état d'un système physique est décrit par un ket normalisé $|\Psi \rangle$ dans un espace de Hilbert $\mathcal{H}$.
 
 Chaque grandeur physique mesurable (observable) d'un système est décrite par un opérateur auto-adjoint $\hat{A}$ agissant sur l'espace de Hilbert $\mathcal{H}$.
 
-2.  Résultat de la mesure (postulat sur les valeurs)
+###  Résultat de la mesure (postulat sur les valeurs)
 
 Le seul résultat possible de la mesure d'une observable physique $\hat{A}$ est une valeur propre de $\hat{A}$, notée $\lambda$.
+ 
 
-3.  Probabilité pour un résultat particulier (règle de Born)
+### Probabilité d'un résultat (Règle de Born)
 
-Supposons que le système soit dans l'état $|\Psi \rangle$ et que l'observable $\hat{A}$ soit mesurée. La probabilité que la valeur propre $\lambda$ de $\hat{A}$ soit le résultat de la mesure est donnée par :
+Supposons le système dans l'état $|\Psi \rangle$. La probabilité que la mesure d'une observable $\hat{A}$ donne la valeur propre $\lambda$ s'écrit :
 
-$$\boxed{Prob_{\Psi}(\lambda)\equiv\langle\Psi|\hat{P}_{\lambda}|\Psi\rangle=||\hat{P}_{\lambda}|\Psi\rangle||^2}$$
+$$\boxed{\mathrm{Prob}_{\Psi}(\lambda) \equiv \langle\Psi|\hat{P}_{\lambda}|\Psi\rangle = \|\hat{P}_{\lambda}|\Psi\rangle\|^2}$$
 
-où $\hat{P}_{\lambda}$ est l'opérateur de projection orthogonal sur le sous-espace propre engendré par les vecteurs propres correspondant à la valeur propre $\lambda$.
+où $\hat{P}_{\lambda}$ est l'opérateur de projection orthogonal sur le sous-espace propre associé à $\lambda$.
 
-4.  État du système après la mesure (postulat de réduction)
+*Remarque intuitive :* Dans le cas simple où la valeur propre est associée à un unique état propre $|u_\lambda\rangle$, le projecteur vaut $\hat{P}_\lambda = |u_\lambda\rangle\langle u_\lambda|$. La formule redonne exactement la règle de Born classique : $\mathrm{Prob}(\lambda) = |\langle u_\lambda | \Psi \rangle|^2$.
 
-Si la mesure de $\hat{A}$ sur le système, initialement dans l'état $|\Psi\rangle$, donne le résultat $\lambda$, alors l'état du système immédiatement après la mesure est donné par le vecteur normalisé :
+### État du système après la mesure (Postulat de réduction)
 
-$$\boxed{\left| \Psi' \right\rangle = \frac{\hat{P}_{\lambda}|\Psi\rangle}{\sqrt{\langle{\Psi|\hat{P}_{\lambda}|\Psi\rangle}}}}$$
+Si la mesure donne le résultat $\lambda$, l'état du système immédiatement après la mesure s'effondre dans le vecteur projeté et renormalisé :
 
-Ce postulat formalise la réduction du paquet d'ondes (Postulat V) : le système "saute" dans le sous-espace propre associé à la valeur mesurée $\lambda$.
+$$\boxed{|\Psi'\rangle = \frac{\hat{P}_{\lambda}|\Psi\rangle}{\sqrt{\langle{\Psi|\hat{P}_{\lambda}|\Psi\rangle}}}}$$
+
+*Remarque intuitive :* Le numérateur $\hat{P}_{\lambda}|\Psi\rangle$ représente l'écrasement (la projection) de l'état initial sur le sous-espace mesuré. Le dénominateur divise simplement ce vecteur par sa norme $\sqrt{\mathrm{Prob}(\lambda)}$ pour garantir que l'état final reste de norme 1 ($\langle \Psi' | \Psi' \rangle = 1$).
 
 ## Le Pari sur l'aléatoire :
 
@@ -993,6 +1137,8 @@ Malgré les réserves d'Einstein et d'autres sur le fait que les lois de la phys
 Il est important de noter que l'utilisation des outils de la physique statistique ne se limite pas à la physique quantique. Elle est également fondamentale dans des domaines macroscopiques, comme la thermodynamique.
 
 Comme le présente le cours de François Chevoir [@Chevoir2013-fq], la physique statistique est l'outil qui permet de faire le pont entre le comportement microscopique d'un grand nombre de particules (atomes, molécules) et les propriétés macroscopiques d'un système, telles que la température, la pression ou l'entropie. En thermodynamique, elle permet de déduire des lois déterministes à partir de l'étude des probabilités d'états d'une collection immense d'éléments.
+
+# L'opérateur densité $\hat{\rho}$
  
 # Intrication quantique :
 
