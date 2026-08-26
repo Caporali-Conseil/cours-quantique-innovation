@@ -715,38 +715,6 @@ Cette équation constitue la pierre angulaire de la mécanique ondulatoire :
 * Une particule dotée d'une impulsion $p$ parfaitement définie ($\Delta p = 0$) correspond à une **onde plane pure** de longueur d'onde $\lambda$.
 * Comme nous l'avons vu précédemment, dans la base des positions $x$, cette onde s'étend sur tout l'espace ($\Delta x \to \infty$), illustrant parfaitement le fait que l'électron « occupe tout l'espace ».
 
-## Concept d'onde de matière :
-
-L’électron étant une particule matérielle on appelle par extension onde matérielle l'onde associée à une particule.
-
-On représente cette onde par la fonction d'onde complexe : $$\boxed{\Psi(\vec{r},t)=ae^{-i(wt-k\vec{r})}}$$ avec :
-
-- $a$ étant l'amplitude,
-- $k$ le vecteur d'onde,
-- $\omega$ la pulsation,
-- $\nu$ etant la fréquence.
-- $\vec{p}=\hbar \vec{k}$ le vecteur impulsion
-
-On peut ainsi trouver la forme suivante :
-
-$$\Psi(\vec{r},t)=ae^{-i(Et-\vec{p}\vec{r})/\hbar^2}$$
-
-Dans sa forme cette onde ressemble à une onde plane monochromatique que l'on utilise en optique,
-
-Voici la *relation de de Broglie ou relation de la longueur d'onde de de Broglie* :
-
-$$\boxed{p=\frac {h}{\lambda}}$$ $\lambda$ étant la longueur d'onde de l'onde de De Broglie.
-
-Elle traduit la dualité onde-corpuscule en associant la longueur d'onde $\lambda$ d’un rayonnement à la quantité de mouvement $p$ d’une particule.
-
-On trouve la forme suivante : $$\lambda=\frac{2\pi}{k}$$.
-
-Ces relations sont également valables pour les photons.
-
-Toutefois la vitesse de phase de l'onde de De Broglie n'est pas la vitesse de la particule mais une valeur approchée. Ainsi De Broglie envisage qu'une particule n'est pas représentée par une onde sinusoïdale pure mais par une superposition de plusieurs ondes sinusoïdales appelées paquet d'ondes.
-
-La relation $\lambda=\frac{h}{p}$ ne joue pas le rôle de postulat de base. Toutefois elle a permis d'arriver à la conclusion qu'il faut voir un lien entre la position de la particule et celle de l'amplitude du paquet d'ondes.
-
 ## Concept d'onde de matière
 
 L’électron étant une particule massive, on nomme **onde de matière** (ou onde matérielle) l'onde associée à son déplacement.
@@ -900,6 +868,73 @@ L'équation de Schrödinger est un postulat. Elle ne se « démontre » pas, mai
 * **L'analogie thermodynamique :** Pour une particule libre, Schrödinger n'est autre qu'une **équation de la chaleur** à coefficient de diffusion imaginaire ($D = i\frac{\hbar}{2m}$), décrivant une diffusion cohérente et réversible.
 * **L'approche newtonienne (Potentiel quantique) :** En écrivant $\Psi = R \, e^{iS/\hbar}$, on retrouve l'équation de Newton $m\vec{a} = -\vec{\nabla}(V + Q)$, où $Q$ est un « potentiel quantique » d'origine purement ondulatoire.
 
+## Equation de schrodinger a partir de l equation de la chaleur :
+
+Sur un modele proche de la methode utilsiee dans mes publications, plutot que d utiliser classiquement le principe de corespondace il est decide de partir de l eqaution de la chaleur. Ceci permet de mettre en valeur les affinites entre quantique et thermodynamque.
+
+Nous posons l eqautiond e la chaleur en physique classique :
+
+$$\frac{\partial u(x,t)}{\partial t} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
+$D$ etant un coefficient de diffusion $> 0$
+
+Nous pouvons constater que contrairement a l´eqaution d´onde dont le terme terme est en derivee seconde, il est ici en derivee premiere ce qui est une affinite avec l equation de schrodinger que nous souhaitons trouver.
+
+Par la rotation de wick nous remplacons le temps reel t par un temps imaginaire :
+
+$t \to i \tau$
+
+$$\frac{\partial u(x,\tau)}{\partial i \tau} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
+Comme $i²=-1$,
+
+$$\frac{-i\partial u(x,\tau)}{\partial \tau} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
+On constante que cette evolution est léquivalent du principe de correspondance.
+
+Pour la suite nous savons que l´équation de Schrödinger pour une particule libre :
+
+$$\boxed{i\hbar \frac{\partial \Psi(x,t)}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi(x,t)}{\partial x^2}}$$
+Il suffit de remplacer D par $-\frac{\hbar^2}{2m}$
+
+En effet on considere qu un coefficient de diffusion peut prendre n importe quelle valeur alor spourquoi pas celle la. Toutefois ceci est possible car il ne s agt pas d une descritpion mais on force le phenomene a passer dún processus irreversive amorti par frottemment a un processus reversible sans perte d energie. D est donc selectif. 
+
+## Équation de Schrödinger à partir de l'équation de la chaleur
+
+Plutôt que d'utiliser le traditionnel principe de correspondance, il est particulièrement instructif de partir de l'équation de la chaleur. Cette approche met en lumière les affinités profondes entre la mécanique quantique et la thermodynamique.
+
+Posons l'équation de la chaleur classique à une dimension :
+
+$$\frac{\partial u(x,t)}{\partial t} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
+
+où $D > 0$ représente le coefficient de diffusion.
+
+Contrairement à l'équation des ondes de d'Alembert (qui comporte une dérivée seconde en temps $\frac{\partial^2}{\partial t^2}$), l'équation de la chaleur présente une **dérivée première en temps**, tout comme l'équation de Schrödinger.
+
+En appliquant la **rotation de Wick**, nous faisons passer le temps du domaine réel au domaine imaginaire ($t \to i\tau$) :
+
+$$\frac{\partial u(x,\tau)}{\partial (i\tau)} = D \frac{\partial^2 u(x,\tau)}{\partial x^2} \implies -i \frac{\partial u(x,\tau)}{\partial \tau} = D \frac{\partial^2 u(x,\tau)}{\partial x^2}$$
+
+En multipliant l'ensemble par $-i\hbar$, l'équation devient :
+
+$$i\hbar \frac{\partial u(x,\tau)}{\partial \tau} = -\hbar D \frac{\partial^2 u(x,\tau)}{\partial x^2}$$
+
+---
+
+### Interprétation physique : du dissipatif au réversible
+
+En identifiant cette forme avec l'équation de Schrödinger pour une particule libre :
+
+$$\boxed{i\hbar \frac{\partial \Psi(x,t)}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi(x,t)}{\partial x^2}}$$
+
+nous constatons qu'il suffit de fixer le coefficient de diffusion quantique à :
+
+$$D = \frac{\hbar}{2m}$$
+
+**Portée conceptuelle :**  
+Fixer une valeur exacte au coefficient de diffusion revient à **forcer le phénomène à basculer d'un processus irréversible amorti (la diffusion thermique) vers un processus réversible sans perte d'énergie (la propagation de la fonction d'onde)**. L'unité imaginaire $i$ transforme l'étalement irréversible de la chaleur en une oscillation de phase qui conserve la probabilité.
+
+Comme le rappelle J.-P. Ansermet dans son traité de thermodynamique [@Ansermet2016], l'équation de la chaleur s'impose comme un modèle phénoménologique dont le coefficient de transport ($\lambda$ ou $D$) peut *a priori* adopter toute valeur adaptée au système étudié.
+
+En physique quantique, le choix $D = \frac{\hbar}{2m}$ n'est donc pas une hypothèse arbitraire, mais l'injection des constantes fondamentales du système (la constante de Planck réduite $\hbar$ et la masse $m$ de la particule) dans une structure de bilan de flux.
+
 ## Equation de Schrödinger dépendante du temps :
 
 ### Principe de conservation de l'énergie :
@@ -915,44 +950,6 @@ $V(x,y,z)$ son énergie potentielle qui ne dépend que des coordonnées de posit
 Ainsi :
 
 $$p_x^2 + p_y^2 + p_z^2 -2m(E-V)=0$$
-
-### Principe de correspondance :
-
-Poser une équation même si elle est juste nous conserve dans le cas de la mécanique classique.
-
-Toutefois nous avons vu qu'en quantique il n'existe pas une expression d'un paramètre physique mais plusieurs qui dépendent de la base utilisée. C'est la raison pour laquelle l'équation de Schrödinger apparaît contre intuitive quand on la voit pour la première fois.
-
-Voici la correspondance entre grandeurs classiques et grandeurs quantiques :
-
-```{=html}
-<!--Ce code forme un paragraphe 
-
-| Classique     |                  Quantique                   |
-|:--------------|:--------------------------------------------:|
-| Energie $E$   | $\hat{E} =i\hbar\frac{\partial}{\partial t}$ |
-| Impulsion $p$ |           $\hat{p}=-i\hbar\nabla$            |
-| Position $x$  |                 $x=\hat{x}$                  |
-
--->
-```
-
-``` text
-+---------------+--------------------------------------------+
-|   Classique   |                 Quantique                  |
-+---------------+--------------------------------------------+
-|  Energie E    |      Ê = iℏ * ∂ / ∂t                       |
-+---------------+--------------------------------------------+
-|  Impulsion p  |      p̂ = -iℏ∇                              |
-+---------------+--------------------------------------------+
-|  Position x   |      x = x̂                                 |
-+---------------+--------------------------------------------+
-```
-
-Ceci correspond à une représentation en position. Si nous utilisons une représentation en impulsion, la base est différente et les valeurs associées aux grandeurs seront différentes.
-
-A titre d'illustration dans le cas classique $p$ correspond a une grandeur physique et dans le cas quantique à un opérateur $\hat{p}$.
-
-Un opérateur agit sur une fonction : la fonction d'onde $\Psi$ solution de l'équation de Schrödinger.
 
 ### Expression de l'équation de Schrodinger dépendante du temps :
 
