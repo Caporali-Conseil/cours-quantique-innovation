@@ -47,7 +47,7 @@ Il ne remplace pas un cours universitaire standard (L3/M1 en cursus de physique)
 
 Ce document n'a fait l'objet d'aucune évaluation par les pairs (peer-review).
 
-:::{.callout-note title="Note d'édition"}
+::: {.callout-note title="Note d'édition"}
 Ce document a été rédigé et structuré par l'auteur. Une intelligence artificielle (LLM) a été utilisée comme outil d'assistance pour la relecture textuelle, la clarification de certaines notions théoriques et l'optimisation pédagogique du plan.
 :::
 
@@ -406,10 +406,6 @@ L'onde considérée en quantique est une onde de probabilité : elle diffère do
 
 *Nous reviendrons plus tard dans le cours sur l'approche statistique de la physique quantique.*
 
-
-
-
-
 # Principe d'incertitude d'Heisenberg :
 
 ## Expérience courante du principe d'incertitude
@@ -494,37 +490,34 @@ Comme le souligne Austin Blaquière [@alma991002711779705804], le concept de non
 
 Considérons les deux opérateurs mathématiques suivants :
 
-* **L'opérateur de position :** $\hat{x}$ (multiplication par $x$).
-* **L'opérateur de dérivation :** $\hat{D} = \frac{d}{dx}$.
+- **L'opérateur de position :** $\hat{x}$ (multiplication par $x$).
+- **L'opérateur de dérivation :** $\hat{D} = \frac{d}{dx}$.
 
 Appliquons ces opérateurs à la fonction $f(x)$ selon les deux ordres possibles pour évaluer leur différence (le commutateur).
 
 #### Ordre 1 ($\hat{D}\hat{x}$) : Multiplier par $x$, puis dériver
+
 $$\hat{D} \left[ x f(x) \right] = \frac{d}{dx} \left[ x f(x) \right]$$
 
-En utilisant la règle de dérivation d'un produit $(uv)' = u'v + uv'$ :
-$$\frac{d}{dx} \left[ x f(x) \right] = \left(\frac{dx}{dx}\right) f(x) + x \frac{df(x)}{dx} = f(x) + x \frac{df(x)}{dx}$$
+En utilisant la règle de dérivation d'un produit $(uv)' = u'v + uv'$ : $$\frac{d}{dx} \left[ x f(x) \right] = \left(\frac{dx}{dx}\right) f(x) + x \frac{df(x)}{dx} = f(x) + x \frac{df(x)}{dx}$$
 
 #### Ordre 2 ($\hat{x}\hat{D}$) : Dériver, puis multiplier par $x$
+
 $$\hat{x} \left[ \frac{d}{dx} f(x) \right] = x \frac{df(x)}{dx}$$
 
 #### Le Commutateur $[\hat{D}, \hat{x}]$
-Calculons la différence des deux opérations appliquées à $f(x)$ :
-$$\left( \frac{d}{dx} x - x \frac{d}{dx} \right) f(x) = \left( f(x) + x \frac{df(x)}{dx} \right) - x \frac{df(x)}{dx} = f(x)$$
 
-En isolant l'action de l'opérateur, nous obtenons la relation algébrique pure :
-$$\left[\frac{d}{dx}, x\right] = \frac{d}{dx} x - x \frac{d}{dx} = 1$$
+Calculons la différence des deux opérations appliquées à $f(x)$ : $$\left( \frac{d}{dx} x - x \frac{d}{dx} \right) f(x) = \left( f(x) + x \frac{df(x)}{dx} \right) - x \frac{df(x)}{dx} = f(x)$$
+
+En isolant l'action de l'opérateur, nous obtenons la relation algébrique pure : $$\left[\frac{d}{dx}, x\right] = \frac{d}{dx} x - x \frac{d}{dx} = 1$$
 
 #### Le passage à la mécanique quantique
-Cette propriété algébrique acquiert un sens physique fondamental via le **postulat de quantification**, qui définit l'opérateur d'impulsion $\hat{p}_x$ :
-$$\hat{p}_x = -i \hbar \frac{d}{dx} \implies \frac{d}{dx} = \frac{i}{\hbar} \hat{p}_x$$
 
-En remplaçant $\frac{d}{dx}$ dans notre relation de commutation mathématique :
-$$\left[ \frac{i}{\hbar} \hat{p}_x, x \right] = 1 \implies \frac{i}{\hbar} \left[ \hat{p}_x, x \right] = 1 \implies \left[ \hat{p}_x, x \right] = -i\hbar$$
+Cette propriété algébrique acquiert un sens physique fondamental via le **postulat de quantification**, qui définit l'opérateur d'impulsion $\hat{p}_x$ : $$\hat{p}_x = -i \hbar \frac{d}{dx} \implies \frac{d}{dx} = \frac{i}{\hbar} \hat{p}_x$$
 
-Par antisymétrie du commutateur ($[\hat{x}, \hat{p}] = -[\hat{p}, \hat{x}]$), on obtient la **relation de commutation fondamentale d'Heisenberg** :
-$$[\hat{x}, \hat{p}_x] = \hat{x}\hat{p}_x - \hat{p}_x\hat{x} = i\hbar$$
- 
+En remplaçant $\frac{d}{dx}$ dans notre relation de commutation mathématique : $$\left[ \frac{i}{\hbar} \hat{p}_x, x \right] = 1 \implies \frac{i}{\hbar} \left[ \hat{p}_x, x \right] = 1 \implies \left[ \hat{p}_x, x \right] = -i\hbar$$
+
+Par antisymétrie du commutateur ($[\hat{x}, \hat{p}] = -[\hat{p}, \hat{x}]$), on obtient la **relation de commutation fondamentale d'Heisenberg** : $$[\hat{x}, \hat{p}_x] = \hat{x}\hat{p}_x - \hat{p}_x\hat{x} = i\hbar$$
 
 ## Conclusion : formulation du principe d'incertitude d'Heisenberg (position-impulsion)
 
@@ -534,19 +527,19 @@ $$\boxed{\Delta x \cdot \Delta p \geq \frac{\hbar}{2}}$$
 
 Avec :
 
-* $\Delta x$ : l'incertitude (écart-type statistique) sur la mesure de la position.
-* $\Delta p$ : l'incertitude (écart-type statistique) sur la mesure de l'impulsion (quantité de mouvement).
-* $\hbar$ : la constante de Planck réduite (notée $\hbar = \frac{h}{2\pi} \approx 1{,}054 \times 10^{-34} \text{ J}\cdot\text{s}$).
+- $\Delta x$ : l'incertitude (écart-type statistique) sur la mesure de la position.
+- $\Delta p$ : l'incertitude (écart-type statistique) sur la mesure de l'impulsion (quantité de mouvement).
+- $\hbar$ : la constante de Planck réduite (notée $\hbar = \frac{h}{2\pi} \approx 1{,}054 \times 10^{-34} \text{ J}\cdot\text{s}$).
 
-**Portée fondamentale du principe : **
+**Portée fondamentale du principe :**
 
-Il est essentiel de bien saisir la portée théorique de cette inégalité : **il ne s'agit pas d'une simple contrainte expérimentale** liée aux imperfections de nos instruments de mesure. 
+Il est essentiel de bien saisir la portée théorique de cette inégalité : **il ne s'agit pas d'une simple contrainte expérimentale** liée aux imperfections de nos instruments de mesure.
 
 Même avec des appareils théoriquement parfaits, cette limite subsiste. C'est un **principe physique et ondulatoire intrinsèque** : une particule n'a pas simultanément une position et une vitesse parfaitement définies. La précision sur l'une floute inévitablement l'autre.
 
 ## Cas caractéristiques du principe d'incertitude position-impulsion
 
-Le principe d'incertitude s'exprime sous forme d'une inégalité : $\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$. 
+Le principe d'incertitude s'exprime sous forme d'une inégalité : $\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$.
 
 On appelle **états d'incertitude minimale** les paquets d'ondes (généralement de forme gaussienne) pour lesquels le produit des incertitudes atteint exactement le seuil théorique :
 
@@ -555,35 +548,42 @@ $$\Delta x \cdot \Delta p = \frac{\hbar}{2}$$
 Pour illustrer l'impact de la forme de l'onde sur la précision (comme le présente le cours de physique de Berkeley, [@alma991013035899705804]), examinons trois configurations :
 
 ### 1. L'onde plane (Incertitude maximale sur la position)
+
 Une particule dont l'impulsion (la fréquence) est parfaitement connue possède une onde purement sinusoïdale.
 
 ![Onde plane : fréquence (impulsion) définie, position complètement étalée.](Incertitude1.png){#fig-incert1 fig-align="center" width="80%"}
 
-* **Physique quantique :** $\Delta p$ est très faible (longueur d'onde $\lambda$ unique), mais $\Delta x$ tend vers l'infini. La particule peut se trouver n'importe où.
+- **Physique quantique :** $\Delta p$ est très faible (longueur d'onde $\lambda$ unique), mais $\Delta x$ tend vers l'infini. La particule peut se trouver n'importe où.
 
 ### 2. La superposition d'ondes (Battement)
+
 En superposant deux fréquences distinctes, on observe un phénomène de battement.
 
 ![Superposition de deux fréquences : l'incertitude commence à se structurer.](Incertitude2.png){#fig-incert2 fig-align="center" width="70%"}
 
-* **Physique quantique :** L'addition de fréquences commence à créer des zones de présence plus marquées, mais la position reste encore floue.
+- **Physique quantique :** L'addition de fréquences commence à créer des zones de présence plus marquées, mais la position reste encore floue.
 
 ### 3. Le paquet d'ondes localisé (Confinement spatio-temporel)
+
 En pratique, les particules se déplacent sous forme de **paquets d'ondes** (obtenus par la somme d'une infinité de fréquences via la transformée de Fourier).
 
 ![Paquet d'ondes gaussien : position localisée ($\Delta x$ faible).](Incertitude3.png){#fig-incert3 fig-align="center" width="80%"}
 
-* **Physique quantique :** Le paquet est bien localisé dans l'espace ($\Delta x$ est très réduit), mais cette localisation exige un large spectre de fréquences, ce qui augmente l'incertitude sur l'impulsion ($\Delta p$ élevé).
+- **Physique quantique :** Le paquet est bien localisé dans l'espace ($\Delta x$ est très réduit), mais cette localisation exige un large spectre de fréquences, ce qui augmente l'incertitude sur l'impulsion ($\Delta p$ élevé).
 
----
+------------------------------------------------------------------------
 
 ### Synthèse : Analogie avec le traitement du signal et les réseaux
 
-| Configuration | État physique | Traduction "Signal / Réseau" |
-| :--- | :--- | :--- |
-| **Onde plane** (@fig-incert1) | Onde pure monochrome | **Porteuse continue (CW)** : fréquence parfaitement connue, mais impossible de dater un événement. |
-| **Battement** (@fig-incert2) | Superposition modale | **Signal multi-porteuse** : début de structuration de l'information. |
-| **Paquet d'ondes** (@fig-incert3) | Pulse localisé | **Impulsion / Qubit transmis** : résolution temporelle/spatiale précise, mais occupation spectrale large. |
++-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
+| Configuration                     | État physique        | Traduction "Signal / Réseau"                                                                              |
++:==================================+:=====================+:==========================================================================================================+
+| **Onde plane** (@fig-incert1)     | Onde pure monochrome | **Porteuse continue (CW)** : fréquence parfaitement connue, mais impossible de dater un événement.        |
++-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
+| **Battement** (@fig-incert2)      | Superposition modale | **Signal multi-porteuse** : début de structuration de l'information.                                      |
++-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
+| **Paquet d'ondes** (@fig-incert3) | Pulse localisé       | **Impulsion / Qubit transmis** : résolution temporelle/spatiale précise, mais occupation spectrale large. |
++-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
 
 ## Principe d'incertitude temps-énergie
 
@@ -607,20 +607,20 @@ En formalisant cette approche par la mécanique ondulatoire rigoureuse, on obtie
 
 $$\boxed{\Delta E \cdot \Delta t \geq \frac{\hbar}{2}}$$
 
----
+------------------------------------------------------------------------
 
 ### 2. Interprétation et portée physique
 
 Dans cette inégalité :
 
-* **$\Delta E$** représente l'incertitude sur l'énergie du système (la largeur de l'état énergétique).
-* **$\Delta t$** représente la durée de vie de cet état quantique (ou le temps nécessaire pour que le système évolue de manière significative).
+- $\Delta E$ représente l'incertitude sur l'énergie du système (la largeur de l'état énergétique).
+- $\Delta t$ représente la durée de vie de cet état quantique (ou le temps nécessaire pour que le système évolue de manière significative).
 
 > **Exemple physique :** Plus la durée de vie d'un état excité est courte ($\Delta t$ petit), plus la largeur en énergie de cet état est grande ($\Delta E$ élevé), ce qui se traduit directement par un élargissement des raies spectrales en spectroscopie.
 
 ### 3. La rupture de la quantification
 
-Ce second principe n'existerait pas sans le postulat de Planck reliant la fréquence à l'énergie. Il traduit un fait fondamental et peu intuitif : **une fréquence élevée transporte une quantité d'énergie proportionnellement plus importante**. 
+Ce second principe n'existerait pas sans le postulat de Planck reliant la fréquence à l'énergie. Il traduit un fait fondamental et peu intuitif : **une fréquence élevée transporte une quantité d'énergie proportionnellement plus importante**.
 
 Dans un réseau de communication, cela signifie qu'une transition d'état extrêmement rapide exige une bande passante énergétique vaste.
 
@@ -630,15 +630,15 @@ Dans un réseau de communication, cela signifie qu'une transition d'état extrê
 
 Après avoir abordé le principe d'incertitude d'Heisenberg à travers le formalisme matriciel, nous nous intéressons désormais à la description ondulatoire. Paradoxalement, nous allons débuter par une contrainte expérimentale fondamentale.
 
-Une onde quantique peut être représentée aussi bien dans la **base des positions** (la position $x$ en abscisse, l'amplitude de la fonction d'onde en ordonnée) que dans la **base des impulsions** (la quantité de mouvement $p$ en abscisse). Allons-nous choisir la représentation la plus simple sur le plan mathématique ? 
+Une onde quantique peut être représentée aussi bien dans la **base des positions** (la position $x$ en abscisse, l'amplitude de la fonction d'onde en ordonnée) que dans la **base des impulsions** (la quantité de mouvement $p$ en abscisse). Allons-nous choisir la représentation la plus simple sur le plan mathématique ?
 
-En laboratoire, il est bien plus aisé de faire dériver ou impacter des particules sur un écran pour mesurer directement leur position $x$, plutôt que d'évaluer une vitesse ou une impulsion $p$ qui exige au moins deux mesures spatiales distinctes dans le temps. 
+En laboratoire, il est bien plus aisé de faire dériver ou impacter des particules sur un écran pour mesurer directement leur position $x$, plutôt que d'évaluer une vitesse ou une impulsion $p$ qui exige au moins deux mesures spatiales distinctes dans le temps.
 
-Ainsi, par pragmatisme expérimental, nous poserons comme point de départ que **l'étude d'une onde quantique s'effectue prioritairement dans la base en $x$**.
+Ainsi, par pragmatisme expérimental, nous poserons comme point de départ que **l'étude d'une onde quantique s'effectue prioritairement dans la base en** $x$.
 
 ### Du monde matriciel au continu spatial
 
-Dans les annexes mathématiques de ce document, nous avons étudié des matrices construites sur une base discrète d'énergie ou d'impulsion, dont les harmoniques de Fourier constituent les éléments de base. 
+Dans les annexes mathématiques de ce document, nous avons étudié des matrices construites sur une base discrète d'énergie ou d'impulsion, dont les harmoniques de Fourier constituent les éléments de base.
 
 Dans le cas de la base en $x$, la situation devient continue : **chaque point de l'espace constitue un vecteur de la base** repérant une position précise. Ainsi, de manière idéale, l'espace continu des positions s'apparente à une somme infinie d'impulsions de Dirac $\delta(x - x_0)$ réparties sur tout le domaine spatial.
 
@@ -646,26 +646,24 @@ Dans le cas de la base en $x$, la situation devient continue : **chaque point de
 
 Cette introduction permet d'établir clairement le cadre physique et conceptuel :
 
-1. **Le principe d'incertitude est posé :** la position et l'impulsion sont liées par la transformée de Fourier.
-2. **L'onde plane théorique :** une onde monochromatique possède une fréquence parfaitement définie (donc $\Delta p = 0$).
-3. **L'indétermination spatiale :** en vertu du principe d'incertitude, une onde de fréquence pure implique une ignorance totale quant à la position exacte de la particule ($\Delta x \to \infty$).
-4. **La structure de la base en $x$ :** l'état spatial idéal est perçu comme une superposition continue d'impulsions de Dirac.
+1.  **Le principe d'incertitude est posé :** la position et l'impulsion sont liées par la transformée de Fourier.
+2.  **L'onde plane théorique :** une onde monochromatique possède une fréquence parfaitement définie (donc $\Delta p = 0$).
+3.  **L'indétermination spatiale :** en vertu du principe d'incertitude, une onde de fréquence pure implique une ignorance totale quant à la position exacte de la particule ($\Delta x \to \infty$).
+4.  **La structure de la base en** $x$ : l'état spatial idéal est perçu comme une superposition continue d'impulsions de Dirac.
 
 Dans la théorie des systèmes et du traitement du signal (telle que développée par Austin Blaquière [@alma991002711779705804]), l'étude de l'état d'un système nécessite cette même rigueur dans le choix de la **base de représentation** (temporelle $t$ ou spatiale $x$).
 
 ### 1. Filtrage temporel et impulsion de Dirac
 
-Pour échantillonner un état à un instant précis $t_0$, on utilise un intervalle temporel très court. Physiquement, une impulsion très brève s'assimile au coup d'une timbale (un signal court mais d'amplitude importante). 
+Pour échantillonner un état à un instant précis $t_0$, on utilise un intervalle temporel très court. Physiquement, une impulsion très brève s'assimile au coup d'une timbale (un signal court mais d'amplitude importante).
 
 Mathématiquement, lorsque cet intervalle tend vers zéro, on tend vers la **distribution de Dirac** $\delta(t - t_0)$.
 
-> **Rappel mathématique — La distribution de Dirac [@Najib2022-qq] :**
-> La distribution $\delta$ de Dirac est définie informellement comme la limite d'un créneau $\delta^{\epsilon}(x-x_{0})$ de largeur $\epsilon$ et de hauteur $\frac{1}{\epsilon}$ lorsque $\epsilon \to 0$ :
-> $$\int_{-\infty}^{+\infty}\delta(x-x_{0}) \, dx = 1 \quad \text{avec} \quad \delta(x-x_0) = \begin{cases} +\infty & \text{en } x = x_0 \\ 0 & \text{ailleurs} \end{cases}$$
+> **Rappel mathématique — La distribution de Dirac [@Najib2022-qq] :** La distribution $\delta$ de Dirac est définie informellement comme la limite d'un créneau $\delta^{\epsilon}(x-x_{0})$ de largeur $\epsilon$ et de hauteur $\frac{1}{\epsilon}$ lorsque $\epsilon \to 0$ : $$\int_{-\infty}^{+\infty}\delta(x-x_{0}) \, dx = 1 \quad \text{avec} \quad \delta(x-x_0) = \begin{cases} +\infty & \text{en } x = x_0 \\ 0 & \text{ailleurs} \end{cases}$$
 
 Bien que nous raisonnions ici sur le temps $t$, le même formalisme s'applique à la position $x$ pour définir un état parfaitement localisé en un point de l'espace.
 
----
+------------------------------------------------------------------------
 
 ### 2. Utilité de la fonction porte et spectre en Sinus Cardinal
 
@@ -677,22 +675,19 @@ $$\mathcal{F}\{\text{Porte}(x)\} \propto \frac{\sin(k)}{k} = \text{sinc}(k)$$
 
 ![La fonction sinus cardinal $\text{sinc}(k)$, spectre fréquentiel issu de la transformée de Fourier d'une fonction porte.](Sinuscar.png){#fig-sinc fig-align="center" width="75%"}
 
----
-
- 
+------------------------------------------------------------------------
 
 ### 3. Remarques physiques fondamentales
 
 Ici encore, ce sont les **conditions expérimentales** qui dictent le formalisme à retenir. L'utilisation de fentes et de diaphragmes en laboratoire rend naturelle l'utilisation de fonctions portes, qui constituent l'approximation pratique la plus directe de l'impulsion de Dirac.
 
-* **La limite de l'onde plane :** Si l'on souhaite représenter une onde plane idéale (dont l'incertitude sur la position est infinie, $\Delta x \to \infty$), la fonction porte permet d'écrire une onde extrêmement étalée dans l'espace. Par transformée de Fourier, cette porte très large se resserre dans l'espace des impulsions $p$ pour tendre vers un pic (une impulsion de Dirac en $p$), traduisant une fréquence et une quantité de mouvement parfaitement définies ($\Delta p \to 0$).
+- **La limite de l'onde plane :** Si l'on souhaite représenter une onde plane idéale (dont l'incertitude sur la position est infinie, $\Delta x \to \infty$), la fonction porte permet d'écrire une onde extrêmement étalée dans l'espace. Par transformée de Fourier, cette porte très large se resserre dans l'espace des impulsions $p$ pour tendre vers un pic (une impulsion de Dirac en $p$), traduisant une fréquence et une quantité de mouvement parfaitement définies ($\Delta p \to 0$).
 
-* **Du Sinus Cardinal à la Gaussienne :** Le sinus cardinal est la réponse spectrale naturelle d'une fonction porte aux bords tranchants. En pratique, lorsqu'une particule libre n'est pas tronquée artificiellement par une fente rigide, son profil spatial réel s'exprime sous la forme d'un **paquet d'ondes gaussien**. 
+- **Du Sinus Cardinal à la Gaussienne :** Le sinus cardinal est la réponse spectrale naturelle d'une fonction porte aux bords tranchants. En pratique, lorsqu'une particule libre n'est pas tronquée artificiellement par une fente rigide, son profil spatial réel s'exprime sous la forme d'un **paquet d'ondes gaussien**.
 
-* **La propriété remarquable de la Gaussienne :** La transformée de Fourier d'une gaussienne étant elle-même une gaussienne, ce formalisme permet de décrire élégamment un paquet formé d'une superposition d'ondes de fréquences très proches. Ce concept sera essentiel pour introduire plus loin les notions de **vitesse de phase** et de **vitesse de groupe**.
+- **La propriété remarquable de la Gaussienne :** La transformée de Fourier d'une gaussienne étant elle-même une gaussienne, ce formalisme permet de décrire élégamment un paquet formé d'une superposition d'ondes de fréquences très proches. Ce concept sera essentiel pour introduire plus loin les notions de **vitesse de phase** et de **vitesse de groupe**.
 
-
-> **Note épistémologique — L'élégance de Fourier vs le pragmatisme de la base en $x$ :**  
+> **Note épistémologique — L'élégance de Fourier vs le pragmatisme de la base en** $x$ :\
 > La représentation fréquentielle (issue des séries de Fourier) offre une base d'états propre, orthonormée et mathématiquement idéale. À l'inverse, la base en position $x$ peut sembler artificielle : elle associe à chaque point de l'espace un vecteur représenté par une distribution de Dirac $\delta(x - x_0)$, un objet qui n'est pas une fonction usuelle. C'est pourtant le prix mathématique à payer pour décrire la localisation spatiale et l'acte de mesure expérimentale.
 
 ## La thèse de Louis de Broglie (1924) : l'acte de naissance de la mécanique ondulatoire
@@ -703,17 +698,15 @@ Cette intuition d'un objet étalé dans l'espace auquel on associe une fréquenc
 
 ### La relation de de Broglie
 
-En postulant qu'à toute particule matérielle possédant une énergie est associée une fréquence interne $\nu$ (puis une longueur d'onde $\lambda$), de Broglie réalise la synthèse fondamentale entre la vision corpusculaire et l'approche ondulatoire. 
+En postulant qu'à toute particule matérielle possédant une énergie est associée une fréquence interne $\nu$ (puis une longueur d'onde $\lambda$), de Broglie réalise la synthèse fondamentale entre la vision corpusculaire et l'approche ondulatoire.
 
 Il en déduit la relation fondamentale reliant la longueur d'onde de la matière à sa quantité de mouvement $p$ :
 
 $$\lambda = \frac{h}{p}$$
 
-Où $h$ est la constante de Planck. 
+Où $h$ est la constante de Planck.
 
-Cette équation constitue la pierre angulaire de la mécanique ondulatoire : 
-* Une particule dotée d'une impulsion $p$ parfaitement définie ($\Delta p = 0$) correspond à une **onde plane pure** de longueur d'onde $\lambda$.
-* Comme nous l'avons vu précédemment, dans la base des positions $x$, cette onde s'étend sur tout l'espace ($\Delta x \to \infty$), illustrant parfaitement le fait que l'électron « occupe tout l'espace ».
+Cette équation constitue la pierre angulaire de la mécanique ondulatoire : \* Une particule dotée d'une impulsion $p$ parfaitement définie ($\Delta p = 0$) correspond à une **onde plane pure** de longueur d'onde $\lambda$. \* Comme nous l'avons vu précédemment, dans la base des positions $x$, cette onde s'étend sur tout l'espace ($\Delta x \to \infty$), illustrant parfaitement le fait que l'électron « occupe tout l'espace ».
 
 ## Concept d'onde de matière
 
@@ -727,16 +720,16 @@ $$\boxed{\Psi(\vec{r},t) = a \, e^{-i(\omega t - \vec{k} \cdot \vec{r})}}$$
 
 Avec :
 
-* $a$ : l'amplitude de l'onde,
-* $\vec{k}$ : le vecteur d'onde (avec $k = \|\vec{k}\| = \frac{2\pi}{\lambda}$),
-* $\omega$ : la pulsation ($\omega = 2\pi\nu$, où $\nu$ est la fréquence),
-* $\vec{p} = \hbar \vec{k}$ : le vecteur quantité de mouvement (impulsion).
+- $a$ : l'amplitude de l'onde,
+- $\vec{k}$ : le vecteur d'onde (avec $k = \|\vec{k}\| = \frac{2\pi}{\lambda}$),
+- $\omega$ : la pulsation ($\omega = 2\pi\nu$, où $\nu$ est la fréquence),
+- $\vec{p} = \hbar \vec{k}$ : le vecteur quantité de mouvement (impulsion).
 
 En substituant les relations quantiques $E = \hbar\omega$ et $\vec{p} = \hbar\vec{k}$, la fonction d'onde prend la forme fondamentale :
 
 $$\Psi(\vec{r},t) = a \, e^{-\frac{i}{\hbar}(E t - \vec{p} \cdot \vec{r})}$$
 
----
+------------------------------------------------------------------------
 
 ### La relation de de Broglie et la dualité
 
@@ -746,15 +739,15 @@ $$\boxed{p = \frac{h}{\lambda}}$$
 
 Cette formule — valable aussi bien pour les particules matérielles (électrons, neutrons) que pour les photons — constitue le pont formel de la **dualité onde-corpuscule**.
 
----
+------------------------------------------------------------------------
 
 ### De l'onde plane au paquet d'ondes physique
 
-Une difficulté majeure apparaît rapidement : la **vitesse de phase** $v_{\phi} = \frac{\omega}{k}$ d'une onde plane pure ne correspond pas à la vitesse physique de la particule ($v_{\text{particule}} \neq v_{\phi}$). 
+Une difficulté majeure apparaît rapidement : la **vitesse de phase** $v_{\phi} = \frac{\omega}{k}$ d'une onde plane pure ne correspond pas à la vitesse physique de la particule ($v_{\text{particule}} \neq v_{\phi}$).
 
 Pour résoudre ce paradoxe, de Broglie envisage qu'une particule réelle ne peut pas être représentée par une onde sinusoïdale pure et infinie (qui impliquerait une localisation totalement inconnue, $\Delta x \to \infty$). Elle doit être décrite par une **superposition d'ondes sinusoïdales de fréquences très proches : un paquet d'ondes**.
 
-> **Portée conceptuelle :**  
+> **Portée conceptuelle :**\
 > La relation $\lambda = \frac{h}{p}$ n'est pas un simple postulat isolé. Elle a permis de comprendre qu'il existe un lien étroit entre la **position physique de la particule** et l'**amplitude (l'enveloppe) du paquet d'ondes**, ouvrant la voie à l'interprétation probabiliste de la mécanique quantique.
 
 ## Vitesse de phase et vitesse de groupe
@@ -765,12 +758,10 @@ On pourrait naïvement s'attendre à ce que la vitesse réelle de la particule c
 
 ### Définitions mathématiques
 
-* **Vitesse de phase :** 
-  $$v_{\phi} = \frac{\omega}{k}$$
-* **Vitesse de groupe :** 
-  $$v_{g} = \left. \frac{d\omega}{dk} \right|_{k=k_{0}}$$
+- **Vitesse de phase :** $$v_{\phi} = \frac{\omega}{k}$$
+- **Vitesse de groupe :** $$v_{g} = \left. \frac{d\omega}{dk} \right|_{k=k_{0}}$$
 
----
+------------------------------------------------------------------------
 
 ### Conclusion fondamentale
 
@@ -784,10 +775,10 @@ En mécanique quantique, la vitesse physique observée d'une particule est la vi
 
 Avant d'aborder le formalisme de Schrödinger, il est utile de fixer quelques définitions terminologiques fondamentales :
 
-* **Onde progressive :** Une onde qui se propage dans l'espace (comme le son dans l'air ou la lumière dans le vide). Elle transporte de l'énergie sans transport global de matière.
-* **Onde stationnaire :** Une onde dont le profil ne se déplace pas mais oscille sur place. Elle résulte de l'interférence de deux ondes progressives identiques se déplaçant en sens inverses (par exemple, la corde d'une guitare pincée ou une onde électromagnétique piégée dans une cavité).
-* **Onde plane :** Une modélisation idéale où le front d'onde est un plan infini orthogonal à la direction de propagation. L'onde ne dépend que d'une seule coordonnée spatiale. C'est une abstraction pratique, irréalisable au sens strict dans la nature.
-* **Équation de d'Alembert (1746) :** L'équation différentielle fondamentale qui régit la propagation de toute onde classique en 3D (mécanique ou électromagnétique) :
+- **Onde progressive :** Une onde qui se propage dans l'espace (comme le son dans l'air ou la lumière dans le vide). Elle transporte de l'énergie sans transport global de matière.
+- **Onde stationnaire :** Une onde dont le profil ne se déplace pas mais oscille sur place. Elle résulte de l'interférence de deux ondes progressives identiques se déplaçant en sens inverses (par exemple, la corde d'une guitare pincée ou une onde électromagnétique piégée dans une cavité).
+- **Onde plane :** Une modélisation idéale où le front d'onde est un plan infini orthogonal à la direction de propagation. L'onde ne dépend que d'une seule coordonnée spatiale. C'est une abstraction pratique, irréalisable au sens strict dans la nature.
+- **Équation de d'Alembert (1746) :** L'équation différentielle fondamentale qui régit la propagation de toute onde classique en 3D (mécanique ou électromagnétique) :
 
 $$\nabla^2 \vec{E} = \frac{\partial^2 \vec{E}}{\partial x^2} + \frac{\partial^2 \vec{E}}{\partial y^2} + \frac{\partial^2 \vec{E}}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2}$$
 
@@ -797,25 +788,21 @@ On remarque que contrairement à l'équation de d'Alembert qui est du **second o
 
 En 1926, lorsqu'Erwin Schrödinger dérive son équation différentielle, il reconnaît explicitement sa dette envers de Broglie tout en soulignant sa propre contribution majeure :
 
-> « Je ne saurais passer sous silence que je dois l’impulsion première qui a fait éclore ce travail pour la plus grande part à la remarquable thèse de Louis de Broglie. (…) La principale différence entre ses résultats et les nôtres consiste en ce que M. de Broglie imagine des ondes progressives, tandis que si on interprète nos formules au moyen d’une hypothèse ondulatoire, on est conduit à des vibrations d’ondes stationnaires. »  
+> « Je ne saurais passer sous silence que je dois l’impulsion première qui a fait éclore ce travail pour la plus grande part à la remarquable thèse de Louis de Broglie. (…) La principale différence entre ses résultats et les nôtres consiste en ce que M. de Broglie imagine des ondes progressives, tandis que si on interprète nos formules au moyen d’une hypothèse ondulatoire, on est conduit à des vibrations d’ondes stationnaires. »\
 > — **Erwin Schrödinger (1926)**
 
-Cette remarque éclaire parfaitement notre démarche :
-* **L'approche de de Broglie** décrit une onde de matière *progressive* associant impulsion et propagation ($\lambda = h/p$).
-* **L'approche de Schrödinger** applique des conditions aux limites à cette onde. Le confinement transforme l'onde progressive en **onde stationnaire**, faisant émerger naturellement la **quantification de l'énergie**.
-
+Cette remarque éclaire parfaitement notre démarche : \* **L'approche de de Broglie** décrit une onde de matière *progressive* associant impulsion et propagation ($\lambda = h/p$). \* **L'approche de Schrödinger** applique des conditions aux limites à cette onde. Le confinement transforme l'onde progressive en **onde stationnaire**, faisant émerger naturellement la **quantification de l'énergie**.
 
 ### 4. La physique réelle : le règne des approximations
 
 En mécanique quantique théorique, nous manipulons trois idéalisations mathématiques strictes :
 
-1. **L'onde plane** (qui exigerait une extension spatiale et une énergie infinies),
-2. **L'équation de Schrödinger** (qui exigerait un système parfaitement isolé de l'Univers),
-3. **L'état pur** (qui exigerait l'absence totale d'interaction ou de bruit thermique).
+1.  **L'onde plane** (qui exigerait une extension spatiale et une énergie infinies),
+2.  **L'équation de Schrödinger** (qui exigerait un système parfaitement isolé de l'Univers),
+3.  **L'état pur** (qui exigerait l'absence totale d'interaction ou de bruit thermique).
 
 En pratique, l'expérimentateur ne manipule jamais ces objets idéaux : il travaille avec des **paquets d'ondes gaussiens**, des **systèmes ouverts** et des **états mixtes** régis par la décohérence. Les concepts d'ondes planes ou d'états purs ne sont que des **asymptotes d'étude** indispensables pour construire les bases du calcul.
 
- 
 ## Exemple tiré de l'électronique : de la représentation d'état à la physique quantique
 
 Pour comprendre le formalisme quantique, on peut établir une analogie directe avec le traitement du signal et la théorie des systèmes.
@@ -845,17 +832,21 @@ $$\frac{dX(t)}{dt} = \begin{bmatrix}
 0 
 \end{bmatrix} e(t) \quad \text{avec} \quad X(t) = \begin{bmatrix} i(t) \\ v_c(t) \end{bmatrix}$$ [@Dixneuf2007-oc]
 
----
+------------------------------------------------------------------------
 
 ### Le parallèle direct avec l'équation de Schrödinger
 
 Cette approche matricielle des systèmes dynamiques classiques est l'exact pendant du formalisme de la mécanique quantique :
 
-| Électronique / Automatique (RLC) | Physique quantique |
-| :--- | :--- |
-| **Vecteur d'état** $X(t)$ (courant, tension) | **Fonction / Vector d'état** $\Psi(x,t)$ |
-| **Matrice de dynamique** $A$ (composants $R, L, C$) | **Opérateur Hamiltonien** $\hat{H}$ (énergie $T + V$) |
-| **Équation d'état** $\frac{dX}{dt} = AX + Bu$ | **Équation de Schrödinger** $i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi$ |
++-----------------------------------------------------+-------------------------------------------------------------------------------------+
+| Électronique / Automatique (RLC)                    | Physique quantique                                                                  |
++:====================================================+:====================================================================================+
+| **Vecteur d'état** $X(t)$ (courant, tension)        | **Fonction / Vector d'état** $\Psi(x,t)$                                            |
++-----------------------------------------------------+-------------------------------------------------------------------------------------+
+| **Matrice de dynamique** $A$ (composants $R, L, C$) | **Opérateur Hamiltonien** $\hat{H}$ (énergie $T + V$)                               |
++-----------------------------------------------------+-------------------------------------------------------------------------------------+
+| **Équation d'état** $\frac{dX}{dt} = AX + Bu$       | **Équation de Schrödinger** $i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi$ |
++-----------------------------------------------------+-------------------------------------------------------------------------------------+
 
 En mécanique quantique, l'état d'une particule évolue ainsi sous l'action d'un **opérateur** ($\hat{H}$), de la même façon que l'état d'un circuit électrique évolue sous l'action de la matrice des propriétés physiques de ses composants.
 
@@ -863,11 +854,10 @@ En mécanique quantique, l'état d'une particule évolue ainsi sous l'action d'u
 
 L'équation de Schrödinger est un postulat. Elle ne se « démontre » pas, mais elle s'introduit selon plusieurs perspectives :
 
-* **L'approche hamiltonienne (Austin Blaquière) :** On part de la conservation classique de l'énergie $E = \frac{p^2}{2m} + V$ et l'on substitue les grandeurs dynamiques par leurs opérateurs ($E \to i\hbar \partial_t$ et $p \to -i\hbar \partial_x$).
-* **L'approche ondulatoire (Schrödinger) :** On adapte l'équation des ondes de d'Alembert en y injectant la relation de de Broglie $\lambda = h/p$.
-* **L'analogie thermodynamique :** Pour une particule libre, l'équation de Schrödinger s'apparente à une **équation de la chaleur** à coefficient de diffusion réel $D = \frac{\hbar}{2m}$, mais appliquée à un temps imaginaire ($t \to i\tau$). Ce saut dans le domaine complexe transforme la diffusion irréversible en une propagation ondulatoire réversible.
-* **L'approche newtonienne (Potentiel quantique) :** En écrivant $\Psi = R \, e^{iS/\hbar}$, on retrouve l'équation de Newton $m\vec{a} = -\vec{\nabla}(V + Q)$, où $Q$ est un « potentiel quantique » d'origine purement ondulatoire.
-
+- **L'approche hamiltonienne (Austin Blaquière) :** On part de la conservation classique de l'énergie $E = \frac{p^2}{2m} + V$ et l'on substitue les grandeurs dynamiques par leurs opérateurs ($E \to i\hbar \partial_t$ et $p \to -i\hbar \partial_x$).
+- **L'approche ondulatoire (Schrödinger) :** On adapte l'équation des ondes de d'Alembert en y injectant la relation de de Broglie $\lambda = h/p$.
+- **L'analogie thermodynamique :** Pour une particule libre, l'équation de Schrödinger s'apparente à une **équation de la chaleur** à coefficient de diffusion réel $D = \frac{\hbar}{2m}$, mais appliquée à un temps imaginaire ($t \to i\tau$). Ce saut dans le domaine complexe transforme la diffusion irréversible en une propagation ondulatoire réversible.
+- **L'approche newtonienne (Potentiel quantique) :** En écrivant $\Psi = R \, e^{iS/\hbar}$, on retrouve l'équation de Newton $m\vec{a} = -\vec{\nabla}(V + Q)$, où $Q$ est un « potentiel quantique » d'origine purement ondulatoire.
 
 ## Équation de Schrödinger à partir de l'équation de la chaleur
 
@@ -889,7 +879,7 @@ En multipliant l'ensemble par $-i\hbar$, l'équation devient :
 
 $$i\hbar \frac{\partial u(x,\tau)}{\partial \tau} = -\hbar D \frac{\partial^2 u(x,\tau)}{\partial x^2}$$
 
----
+------------------------------------------------------------------------
 
 ### Interprétation physique : du dissipatif au réversible
 
@@ -901,7 +891,7 @@ nous constatons qu'il suffit de fixer le coefficient de diffusion quantique à :
 
 $$D = \frac{\hbar}{2m}$$
 
-**Portée conceptuelle :**  
+**Portée conceptuelle :**\
 Fixer une valeur exacte au coefficient de diffusion revient à **forcer le phénomène à basculer d'un processus irréversible amorti (la diffusion thermique) vers un processus réversible sans perte d'énergie (la propagation de la fonction d'onde)**. L'unité imaginaire $i$ transforme l'étalement irréversible de la chaleur en une oscillation de phase qui conserve la probabilité.
 
 Comme le rappelle J.-P. Ansermet dans son traité de thermodynamique [@Ansermet2016], l'équation de la chaleur s'impose comme un modèle phénoménologique dont le coefficient de transport ($\lambda$ ou $D$) peut *a priori* adopter toute valeur adaptée au système étudié.
@@ -920,159 +910,231 @@ où $\hat{H}$ est l'opérateur **Hamiltonien**, générateur des translations te
 
 ### Propriétés fondamentales de la dynamique :
 
-* **Linearité :** Si $|\Psi_1\rangle$ et $|\Psi_2\rangle$ sont des solutions, toute superposition linéaire $\alpha|\Psi_1\rangle + \beta|\Psi_2\rangle$ est également une solution. C'est le principe de superposition d'états.
-* **Unitarité et conservation :** L'opérateur d'évolution $U(t, t_0) = \exp\left(-\frac{i}{\hbar}\hat{H}(t - t_0)\right)$ est hermitien/unitaire. Il garantit la conservation stricte de la norme du vecteur d'état dans le temps ($\langle \Psi(t)|\Psi(t)\rangle = 1$), signifiant que la probabilité totale de présence reste constamment égale à $1$.
-* **Déterminisme de l'amplitude :** Bien que la mesure quantique soit probabiliste, l'évolution temporelle du vecteur d'état $|\Psi(t)\rangle$ avant la mesure est **rigoureusement déterministe**.
+- **Linearité :** Si $|\Psi_1\rangle$ et $|\Psi_2\rangle$ sont des solutions, toute superposition linéaire $\alpha|\Psi_1\rangle + \beta|\Psi_2\rangle$ est également une solution. C'est le principe de superposition d'états.
+- **Unitarité et conservation :** L'opérateur d'évolution $U(t, t_0) = \exp\left(-\frac{i}{\hbar}\hat{H}(t - t_0)\right)$ est hermitien/unitaire. Il garantit la conservation stricte de la norme du vecteur d'état dans le temps ($\langle \Psi(t)|\Psi(t)\rangle = 1$), signifiant que la probabilité totale de présence reste constamment égale à $1$.
+- **Déterminisme de l'amplitude :** Bien que la mesure quantique soit probabiliste, l'évolution temporelle du vecteur d'état $|\Psi(t)\rangle$ avant la mesure est **rigoureusement déterministe**.
 
----
+------------------------------------------------------------------------
 
 ### Pourquoi la résolution exacte s'arrête ici
 
-L'équation sous cette forme suppose un **système totalement isolé** décrivant un **état pur** parfait. 
+L'équation sous cette forme suppose un **système totalement isolé** décrivant un **état pur** parfait.
 
-Dans un contexte applicatif réel (canaux de transmission, processeurs quantiques, capteurs ou réseaux), un système n'est jamais isolé : il interagit en permanence avec son environnement (bruit, déphasage, dissipation). Poursuivre sur la résolution analytique d'états purs isolés est une modélisation incomplète. 
+Dans un contexte applicatif réel (canaux de transmission, processeurs quantiques, capteurs ou réseaux), un système n'est jamais isolé : il interagit en permanence avec son environnement (bruit, déphasage, dissipation). Poursuivre sur la résolution analytique d'états purs isolés est une modélisation incomplète.
 
-Pour décrire la réalité expérimentale et la perte d'information, il est nécessaire de passer du vecteur d'état $|\Psi\rangle$ à l'**opérateur densité $\hat{\rho}$**.
+Pour décrire la réalité expérimentale et la perte d'information, il est nécessaire de passer du vecteur d'état $|\Psi\rangle$ à l'**opérateur densité** $\hat{\rho}$.
 
 # L'état de superposition
 
 Cette approche s'inscrit dans les modèles récents d'application de l'information quantique aux systèmes distribués [@Caporali2026].
 
-### Peut-on parler du destin géometrique d'un point ?
+### Peut-on parler du destin géométrique d'un point ?
 
-**Structure d'une matrice 2 fois 2 :**
+**Structure d'une matrice** $2 \times 2$ :
 
-Prenons deux points : $P_1(x_1,y_1)$ et $P_2(x_2,y_2)$
+Prenons deux points $P_1(x_1, y_1)$ et $P_2(x_2, y_2)$. Nous allons considérer l'application linéaire suivante :
 
-Nous allons considérer l'application linéaire suivante :
+$$\begin{cases}
+x_2 = a x_1 + b y_1 \\
+y_2 = c x_1 + d y_1
+\end{cases}$$
 
-$$
-\begin{cases}
-x_2 = ax_1 + by_1 \\
-y_2 = cx_1 + dy_1
-\end{cases}
-$$
+Cela se représente par une matrice carrée :
 
-On voit que cela peut se représenter par une matrice carrée :
-
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 a & b \\
 c & d
-\end{pmatrix}
-$$
-L'information présente dans la matrice va décrire l'information (l’état) de $P1$ dans son chemin géométrique vers $P2$.
+\end{pmatrix}$$
 
-$a$ et $d$ sont les éléments diagonaux, $c$ et $b$ sont les éléments non diagonaux.
+L'information présente dans la matrice décrit l'état de $P_1$ dans son cheminement géométrique vers $P_2$. Les coefficients $a$ et $d$ sont les éléments diagonaux, tandis que $b$ et $c$ sont les éléments non diagonaux.
 
-Voici quelques configurations possibles :
+Voici quelques configurations fondamentales :
 
-**La matrice de rotation :**
+- **Matrice de rotation (**$\pi/2$) : $\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$
+- **Matrice de symétrie :** $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$
+- **Matrice de projection :** $\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$
+- **Matrice dégénérée :** $\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$
 
-$$
-\begin{pmatrix}
-0 & -1 \\
-1 & 0
-\end{pmatrix}
-$$
+Ce sont les éléments non diagonaux qui dictent la géométrie de la transformation (par exemple, la rotation d'un angle $\pi/2$). Les éléments diagonaux, quant à eux, correspondent géométriquement à des homothéties.
 
-``` verbatim
-            Axe Y
-              ^
-              |
-      P2 *    |        
- (-y1, x1)    |          
-              |       * P1 (x1, y1)  
-              |        
-    ---------+-------+-------> Axe X
-              O      x1
-```
+### Loi dans le plan géométrique
 
-**La matrice de symétrie :**
+Comme le rappelle Austin Blaquière dans son traité de mécanique [@Blaquiere1966_t1, p. 9] :
 
-$$
-\begin{pmatrix}
-0 & 1 \\
-1 & 0
-\end{pmatrix}
-$$
+> Étant donné un point $P_1$ du plan, on lui fait correspondre un point $P_2$ par une loi donnée.
 
-**La matrice de projection :**
+Une application linéaire possède une interprétation géométrique immédiate : il est tentant de remplacer un algorithme par le destin géométrique d'un point, comme si l'espace illustrait directement les mécanismes mathématiques sous-jacents.
 
-$$
-\begin{pmatrix}
-1 & 0 \\
-0 & 0
-\end{pmatrix}
-$$
+L'utilisation du produit extérieur $|v_1\rangle \langle v_2|$ permet de modéliser la **corrélation** entre deux entités du réseau. La matrice résultante :
 
-**La matrice dégénérée :**
+$$|v_1\rangle \langle v_2| = \begin{pmatrix} X_1 X_2 & X_1 Y_2 \\ Y_1 X_2 & Y_1 Y_2 \end{pmatrix}$$
 
-$$
-\begin{pmatrix}
-1 & 1 \\
-1 & 1
-\end{pmatrix}
-$$
+montre que chaque cellule est une hybridation des deux points. On a ainsi créé un opérateur.
 
+Bien que mathématiquement cohérent, ce niveau d'abstraction nécessite d'être complété par un outil interprétable physiquement, afin de traduire les états du consensus en grandeurs observables. Austin Blaquière souligne cette nécessité fondamentale dans le second tome de son ouvrage [@Blaquiere1966_t2, p. 39] :
 
-On voit que ce sont les éléments non diagonaux qui font les propriétés géométrique de la matrice : par exemple la matrice de rotation fait réaliser une opération de rotation de $\frac{\pi}{2}$ au point P1.
+> Il faut remarquer que pour toute onde classique — onde acoustique, onde lumineuse... — nos sens sont impressionnés par le carré de l'amplitude $a^2$ et non pas par l'amplitude elle-même. Ceci résulte du fait que nos organismes ne peuvent percevoir que des énergies. Or l'énergie transportée par une onde classique dans un temps donné, ou sa puissance, est proportionnelle au carré de son amplitude.
 
-Quant aux éléments diagonaux, ils correspondent géométriquement à une homothétie : le point P1 subi une simple translation de {O,P1} vers {0,P2} sans rotation.
+On chercherait ainsi une matrice plus directement interprétable, de la forme :
 
-### Loi dans le plan géometrique
+$$\begin{pmatrix} X_1^2 & b \\ c & X_2^2 \end{pmatrix}$$
 
-Selon Augustin Blaquiere @alma991002711779705804 [p. 9]
+où $X_1^2$ et $X_2^2$ représentent les intensités physiques issues de $P_1$ et $P_2$.
 
-> Etant donné un point P1 du plan on lui fait correspondre un point P2 par une loi donnée.
-
-Cela signifie qu'une application linéaire qui est un ensemble d'équations posséde une interprétation géométrique : il est tentant d’interpréter géométriquement les transformations mathématiques et remplacer un algorithme par le destin géométrique d'un point comme si l espace pouvait illustrer les mécanismes mathématiques sous-jacent.
-
-L'utilisation du produit extérieur $|v_1\rangle \langle v_2|$ permet de modéliser la **corrélation** entre deux entités du réseau. La matrice résultante : $$\begin{pmatrix} X_1 X_2 & X_1 Y_2 \\ Y_1 X_2 & Y_1 Y_2 \end{pmatrix}$$ montre que chaque cellule est une hybridation des deux points. On a crée un opérateur.
-
-Bien que mathématiquement cohérent, ce niveau d'abstraction nécessite d'être complété par un outil interprétable physiquement, afin de traduire les états du consensus en grandeurs observables.
-
-Alors Augustin Blaquiere va nous aider dans le tome II de son livre @alma991002711819705804 [p. 39] il dit :
-
-> Il faut remarquer que pour toute onde classique : onde acoustique, onde lumineuse ... nos sens sont impressionnés par le carré de l'amplitude $a^2$ et non pas l'amplitude elle-même. Ceci resulte du fait que nos organismes ne peuvent percevoir que des énergies. Or l'énergie transportée par une onde classique dans un temps donné, ou sa puissance, est proportionnelle au carré de son amplitude.
-
-On voudrait une matrice plus interprétable du style :
-
-$$\begin{pmatrix} X_1^2 & b \\ c & X_2^2 \end{pmatrix}$$ ou $X_1^2$ et $X_2^2$ sont des états issus de P1 et P2.
-
-A ce niveau on observe que : le produit $|v_1\rangle \langle v_2|$ ne peut jamais donner ta matrice $\begin{pmatrix} X_1^2 & a \\ a^* & X_2^2 \end{pmatrix}$
-
-Nous sommes ici dans une **impasse conceptuelle**.
+Cependant, le produit simple $|v_1\rangle \langle v_2|$ ne peut jamais fournir une structure du type $\begin{pmatrix} X_1^2 & a \\ a^* & X_2^2 \end{pmatrix}$. Nous nous heurtons ici à une **impasse conceptuelle**.
 
 ### Le saut dans le vide
 
-Une démarche qui ressemble à la rupture épistémologique initiée par Heisenberg (1925) [@heisenberg1925], qui privilégie les observables matricielles aux représentations cinématiques classiques est nécessaire. 
+Une démarche similaire à la rupture épistémologique initiée par Heisenberg (1925) [@heisenberg1925] devient alors nécessaire : abandonner les représentations cinématiques classiques au profit d'observables matricielles.
 
-Pour exprimer la position d'un particule $x$ à un instant donné, Heisenberg a renoncé à pouvoir le faire et a considéré que la seule expression possible est d'utiliser un tableau (l’ancêtre de la matrice position $X$) qui exprime les unes à côté des autres toutes les positions possibles.
+Pour exprimer la position $x$ d'une particule à un instant donné, Heisenberg renonce à une valeur unique et choisit de manipuler un tableau — l'ancêtre de la matrice position $\hat{X}$ — réunissant l'ensemble des positions possibles.
 
-La clé consiste à raisonner non pas en coordonnées spatiales mais en potentialité de coordonnées spatiales. Ce n'est pas une position $x$ **OU** un autre position $x$ mais c'est une potentialité de position **ET** une autre potentialité de position.
+La clé consiste à raisonner non plus en coordonnées spatiales définies, mais en **potentialités de coordonnées**. Ce n'est plus une position $x_1$ **OU** une position $x_2$, mais une potentialité de position $x_1$ **ET** une potentialité de position $x_2$.
 
-Ceci va nous amener à la notion de qubit. Le saut conceptuel du bit (élément informationnel en information classique) au qubit (élément informationnel en informatique quantique) n'a rien de facile.
+### Le qubit et la superposition d'états
 
-### Le qubit et la superposition d'états 
+Le saut conceptuel du bit (information classique) au qubit (information quantique) traduit cette bascule. La superposition d'états — le fait d'habiter simultanément plusieurs états — s'interprète en posant une superposition de $P_1$ et $P_2$.
 
-Traduire le OU s'appelle la superposition d'état ou le fait d'être dans 2 états en même temps, qui parait tellement obscur aux gens qui découvrent la quantique,
+On définit le vecteur d'état :
 
-Il est nécessaire de commencer par admettre que le système est dans une superposition statistique de $P_1$ et $P_2$.
+$$|v_{\text{mixte}}\rangle = \alpha |v_1\rangle + \beta |v_2\rangle$$
 
-On définit un nouveau vecteur $v_{mixte}$ :$$|v_{mixte}\rangle = \alpha |v_1\rangle + \beta |v_2\rangle$$
+Cette écriture s'interprète géométriquement comme une combinaison linéaire dans un espace de Hilbert. Son lien avec la mesure physique impose le passage au carré du module : $|\alpha|^2$ et $|\beta|^2$ représentent les probabilités de trouver le système respectivement dans l'état 1 ou 2.
 
-Cette écriture s'interprète géométriquement comme une somme de vecteurs dans un espace de Hilbert, son interprétation physique directe nécessite de passer au module au carré :$|\alpha|^2$ et $|\beta|^2$ représentent les probabilités de trouver le système dans l'état 1 ou 2.
+Les coefficients $\alpha$ et $\beta$ sont les **amplitudes de probabilité**. Exprimés sous forme complexe (cartésienne $\alpha = a + ib$ ou polaire $\alpha = r e^{i\phi}$), le module $r$ fixe le niveau de présence ($P = r^2$), tandis que la phase $\phi$ englobe l'information de structure et de cohérence.
 
-$\alpha$ et $\beta$ sont des amplitudes de probabilité.
+# L'opérateur densité $\hat{\rho}$
 
-Le "niveau de présence" et la phase : Elle s'exprime sous forme complexe : 
+::: {.callout-note title="Contexte historique : De la matrice statistique à la matrice densité"}
+On a souvent l'impression que la matrice densité est un outil récent en physique quantique. Pourtant, dans leur ouvrage fondateur, Fritz London et Edmond Bauer (1939) [@london1939theorie], cités par Leite Lopes et Escoubès [@leitelopes1994sources], introduisent déjà l'« opérateur statistique » et la « matrice statistique », que l'on nomme aujourd'hui **matrice densité**.
 
-Forme cartésienne : $\alpha = a + ib$ 
+En lisant ce texte rédigé en 1939, on est frappé par le chemin parcouru depuis les travaux pionniers des années 1925-1930. En appliquant le formalisme aux ensembles statistiques, London et Bauer écrivent :
 
-Forme polaire : $\alpha = r e^{i\phi}$
+> Appelons la matrice statistique d'un cas pur une « matrice élémentaire ». La matrice d'un mélange général $P$ peut alors être considérée comme une superposition linéaire de matrices élémentaires :
+> $$P = \sum_n p_n P^{(n)}$$
+:::
 
-Ici, $r$ (le module) sert à calculer la probabilité ($P = r^2$), mais l'information de sens et de structure est contenue dans la phase $\phi$.
+---
+
+### Rappel : le produit externe (*outer product*)
+
+Celui-ci est à ne pas confondre avec le produit extérieur (au sens de l'algèbre extérieure) ni avec le produit tensoriel.
+
+Si l'on pose :
+
+$$C = \begin{pmatrix} a \\ b \end{pmatrix} \quad \text{et} \quad L = \begin{pmatrix} c & d \end{pmatrix}$$
+
+Le produit $M = C \times L$ s'obtient en multipliant chaque élément de la colonne par chaque élément de la ligne :
+
+$$M = \begin{pmatrix} 
+a \times c & a \times d \\
+b \times c & b \times d 
+\end{pmatrix}$$
+
+Contrairement au produit scalaire (matrice ligne multipliée par une matrice colonne), on réalise l'opération inverse : une matrice colonne multipliée par une matrice ligne. C'est le **produit externe**. Au lieu de donner un scalaire, le résultat fournit une matrice carrée d'opérateur.
+
+### Utilisation de la notation bra-ket $\langle \cdot | \cdot \rangle$
+
+Dans le formalisme de Dirac :
+
+* $| v \rangle = \begin{pmatrix} x \\ y \end{pmatrix}$ représente un vecteur colonne (**ket**).
+* $\langle v' | = \begin{pmatrix} x'^* & y'^* \end{pmatrix}$ représente un vecteur ligne (**bra**), obtenu par transproposition conjuguée.
+
+Le **produit scalaire** de deux vecteurs d'état s'écrit :
+
+$$\langle v_1 | v_2 \rangle = X_1^* X_2 + Y_1^* Y_2 \in \mathbb{C}$$
+
+Le **produit externe** d'un vecteur $|v_1\rangle$ par un vecteur $|v_2\rangle$ s'écrit $|v_1 \rangle \langle v_2 |$.
+
+| Opération | Notation | Type de résultat | Analogie |
+| :--- | :--- | :--- | :--- |
+| **PRODUIT SCALAIRE** | $\langle v_1 \mid v_2 \rangle$ | Scalaire ($\mathbb{C}$) | Ligne $\times$ Colonne |
+| **PRODUIT TENSORIEL** | $|v_1\rangle \otimes |v_2\rangle$ | Vecteur d'espace étendu | Expansion d'espace |
+| **PRODUIT EXTERNE** | $|v_1\rangle\langle v_2|$ | Opérateur (Matrice) | Colonne $\times$ Ligne |
+
+### La matrice densité : formulation
+
+Si un système est dans l'état $|\psi\rangle = \begin{pmatrix} X_1 \\ Y_1 \end{pmatrix}$, la matrice densité $\rho$ est définie par le produit externe de l'état avec lui-même :
+
+$$\rho = |\psi\rangle \langle \psi| = \begin{pmatrix} X_1 \\ Y_1 \end{pmatrix} \begin{pmatrix} X_1^* & Y_1^* \end{pmatrix} = \begin{pmatrix} |X_1|^2 & X_1 Y_1^* \\ Y_1 X_1^* & |Y_1|^2 \end{pmatrix}$$
+
+Cette matrice décrit les probabilités d'états : le dégradé des états possibles s'étend de l'**état pur** aux **états mixtes**. On retrouve bien sur la diagonale les intensités physiques $|X_1|^2$ et $|Y_1|^2$ (qui résolvent l'impasse conceptuelle soulevée précédemment), tandis que les termes hors-diagonaux $X_1 Y_1^*$ codent les **cohérences quantiques**.
+
+*(Note : Dans le cas particulier d'un système intriqué, le sous-système peut se retrouver dans un état mixte alors que le système global reste dans un état pur).*
+
+Pour une introduction progressive à ces principes, on pourra consulter l'ouvrage de Michel Le Bellac [@le_bellac_2005], ainsi que les manuels de référence de Benenti et al. [@Benenti2004; @Benenti2007] pour les applications à l'information quantique.
+
+## Du vecteur d'état à l'opérateur densité
+
+Cette formulation répond exactement à l'impasse conceptuelle rencontrée précédemment : le simple vecteur d'état $|\Psi\rangle$ ne sait décrire qu'un **état pur** (une superposition cohérente quantique). Dès qu'un système interagit avec son environnement ou que l'observateur subit une ignorance statistique classique, il faut passer à l'opérateur densité $\hat{\rho}$.
+
+### 1. Définition de la matrice densite
+
+* **État pur (Cohérence quantique) :** Le système est parfaitement isolé et décrit par un unique ket $|\Psi\rangle$. Son opérateur densité est le projecteur direct :
+  $$\hat{\rho} = |\Psi\rangle\langle\Psi|$$
+
+* **Mélange statistique (Incertitude classique) :** Le système a une probabilité classique $p_k$ d'être dans l'état pur $|\Psi_k\rangle$ (avec $\sum_k p_k = 1$). Son opérateur densité s'écrit alors selon la formule de London et Bauer :
+  $$\hat{\rho} = \sum_k p_k |\Psi_k\rangle\langle\Psi_k|$$
+
+### 2. Propriétés fondamentales de l'opérateur densité
+
+Tout opérateur densité $\hat{\rho}$ vérifie trois propriétés mathématiques strictes :
+
+1. **Hermiticité :** $\hat{\rho}^\dagger = \hat{\rho}$ (ses valeurs propres sont réelles).
+2. **Conservation de la probabilité (Trace égale à 1) :** 
+   $$\mathrm{Tr}(\hat{\rho}) = 1$$
+3. **Positivité :** Pour tout ket $|\phi\rangle$, $\langle\phi|\hat{\rho}|\phi\rangle \ge 0$ (les probabilités de présence sont toujours positives).
+
+
+### 3. Critère de pureté et entropie de von Neumann
+
+Pour savoir si un système est dans un état pur ou un mélange statistique, on utilise deux indicateurs majeurs :
+
+* **La pureté $\gamma = \mathrm{Tr}(\hat{\rho}^2)$ :**
+  * Pour un **état pur** : $\mathrm{Tr}(\hat{\rho}^2) = 1$
+  * Pour un **mélange statistique** : $\mathrm{Tr}(\hat{\rho}^2) < 1$
+
+* **L'entropie de von Neumann $S$ :**
+  Elle généralise l'entropie de Gibbs-Boltzmann au cas quantique :
+  $$S = -k_\mathrm{B} \, \mathrm{Tr}(\hat{\rho} \ln \hat{\rho})$$
+  L'entropie est strictement nulle ($S = 0$) pour un état pur (information maximale) et maximale pour un mélange complètement désordonné (ignorance maximale).
+
+::: {.callout-note title="Escale historique : Le lien thermodynamique chez London et Bauer"}
+Cette irruption de l'entropie peut sembler abrupte. Pourtant, il ne s'agit pas d'une notion récente : dès 1939, London et Bauer [@london1939theorie] exposent clairement cette connexion fondatrice :
+
+> L'opérateur $P$ caractérise un ensemble de systèmes identiques qui sont distribués d'une manière quelconque sur des états différents. Il joue un rôle analogue à celui de la fonction de répartition en mécanique statistique ordinaire. Il doit donc y avoir une connexion entre l'opérateur $P$ et les grandeurs macroscopiques de la thermodynamique. [...] Tout est contenu dans la définition de l'entropie $S$ :
+> $$S = -k N \, \mathrm{Trace}(P \ln P)$$
+
+Ce saut conceptuel montre que l'opérateur densité n'est pas seulement un outil de calcul pour la mesure, mais la véritable passerelle entre la mécanique quantique et la physique statistique.
+:::
+
+### Importance de la matrice densité et de l'analogie avec le qubit pour les réseaux distribués
+
+Un qubit n'est pas intriqué avec lui-même : il ne peut être intriqué qu'avec un autre qubit. En revanche, un qubit individuel peut se trouver dans un **état de superposition**, ce qui signifie qu'il habite simultanément l'état $|0\rangle$ et l'état $|1\rangle$.
+
+Nous ne dirons pas que le qubit est « en consensus avec lui-même », mais plutôt qu'il est en superposition : il vaut $0$ et $1$ en même temps.
+
+Si, dans le domaine des réseaux distribués, nous considérons un nœud du réseau comme une entité élémentaire, nous pouvons modéliser ce nœud par analogie avec un qubit.
+
+Prenons l'exemple d'un nœud du réseau Bitcoin qui participe au minage :
+* Il cherche à résoudre le puzzle cryptographique. S'il est le premier à réussir, il devient le nœud gagnant et son état vaut $1$.
+* S'il échoue, son état vaut $0$.
+* Pendant la phase de recherche (environ 10 minutes), son état ne réside ni exclusivement en $0$ ni en $1$ : il se trouve dans une superposition des deux potentialités.
+
+Au bout de 10 minutes, la mesure (la découverte du bloc) réduit l'état à $0$ ou $1$. Mais pendant cet intervalle, l'état s'étire entre ces deux possibles.
+
+C'est le concept de **temps étiré** (*Proof of Stretching Time* - PoST) proposé dans l'étude sur le consensus [@Caporali2026] :
+
+::: {.callout-note icon="false" title="Extrait de : La matrice densité appliquée au consensus pour la blockchain [@Caporali2026]"}
+
+C'est cette attente des agents (le possible) qui constitue l'intermédiaire de confiance (le temps). Elle crée la concession du groupe. On peut appeler cette preuve : **preuve de temps étiré** car la structure du système s'étire entre présent et possible.
+
+#### Matrice densité individuelle
+Cette notion est commune aux agents et aux intermédiaires, mais chacun possède sa propre matrice densité.
+
+#### Matrice densité du système
+C'est la notion d'intrication.
+:::
 
 
 # Mesure quantique :
@@ -1095,16 +1157,15 @@ Les trois "règles" ou postulats fondamentaux de la mesure, formalisées par Max
 
 Selon [@Wiggins2024] page 67, ces règles sont :
 
-###  Description de l'état et de l'observable
+### Description de l'état et de l'observable
 
 L'état d'un système physique est décrit par un ket normalisé $|\Psi \rangle$ dans un espace de Hilbert $\mathcal{H}$.
 
 Chaque grandeur physique mesurable (observable) d'un système est décrite par un opérateur auto-adjoint $\hat{A}$ agissant sur l'espace de Hilbert $\mathcal{H}$.
 
-###  Résultat de la mesure (postulat sur les valeurs)
+### Résultat de la mesure (postulat sur les valeurs)
 
 Le seul résultat possible de la mesure d'une observable physique $\hat{A}$ est une valeur propre de $\hat{A}$, notée $\lambda$.
- 
 
 ### Probabilité d'un résultat (Règle de Born)
 
@@ -1138,8 +1199,6 @@ Il est important de noter que l'utilisation des outils de la physique statistiqu
 
 Comme le présente le cours de François Chevoir [@Chevoir2013-fq], la physique statistique est l'outil qui permet de faire le pont entre le comportement microscopique d'un grand nombre de particules (atomes, molécules) et les propriétés macroscopiques d'un système, telles que la température, la pression ou l'entropie. En thermodynamique, elle permet de déduire des lois déterministes à partir de l'étude des probabilités d'états d'une collection immense d'éléments.
 
-# L'opérateur densité $\hat{\rho}$
- 
 # Intrication quantique :
 
 ## Systèmes composés et influence locale :
@@ -1423,7 +1482,6 @@ Au niveau américain Google, IBM et Microsoft sont très engagés sur le quantiq
 
 Les chinois sont également très en pointe.
 
-
 # Annexe mathématique
 
 ## Opérations sur les vecteurs
@@ -1439,25 +1497,17 @@ Voici les définitions fondamentales adaptées de @Wiggins2024.
 ::: callout-note
 Un espace vectoriel, noté $\mathcal{V}$ sur un corps $\mathcal{F}$ (ici, l'ensemble des nombres complexes $\mathbb{C}$), est un ensemble d'éléments (appelés vecteurs) sur lequel deux opérations sont définies :
 
-1. **Addition vectorielle** : $\forall |\psi \rangle, |\phi\rangle \in \mathcal{V} \implies |\psi\rangle + |\phi\rangle \in \mathcal{V}$
-2. **Multiplication par un scalaire** : $\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}$
+1.  **Addition vectorielle** : $\forall |\psi \rangle, |\phi\rangle \in \mathcal{V} \implies |\psi\rangle + |\phi\rangle \in \mathcal{V}$
+2.  **Multiplication par un scalaire** : $\forall \alpha \in \mathbb{C}, |\psi \rangle \in \mathcal{V} \implies \alpha |\psi\rangle \in \mathcal{V}$
 :::
 
 ::: callout-tip
 ### Anecdote : de la dimension 30 à l'infini
 
-Lorsque j'étais étudiant, j'avais été invité à une soirée où un élève en mathématiques affirmait fièrement que les mathématiciens étaient des gens formidables. Il racontait que la veille, il s'était « amusé » avec des camarades à travailler sur un espace à une trentaine de dimensions. J'étais alors surpris et plutôt sceptique quant à l'utilité d'une telle démarche. 
+Lorsque j'étais étudiant, j'avais été invité à une soirée où un élève en mathématiques affirmait fièrement que les mathématiciens étaient des gens formidables. Il racontait que la veille, il s'était « amusé » avec des camarades à travailler sur un espace à une trentaine de dimensions. J'étais alors surpris et plutôt sceptique quant à l'utilité d'une telle démarche.
 
 Pourtant, en physique quantique, on travaille bel et bien sur des espaces abstraits de **dimension infinie** (comme les espaces de Hilbert pour les fonctions d'onde). C'est précisément cette abstraction qui rend ce formalisme si puissant, mais aussi réputé difficile.
 :::
-
-
- 
-
-
-
- 
-
 
 ### Produit scalaire de deux vecteurs
 
@@ -1479,6 +1529,7 @@ Deux vecteurs sont dits **orthogonaux** lorsque leur produit scalaire est nul.
 
 ::: callout-note
 ### Intérêt du produit scalaire
+
 Le produit scalaire est une opération qui prend deux vecteurs et résume leur relation spatiale sous la forme d'un **seul nombre (un scalaire)**. C'est tout son intérêt : synthétiser l'information vectorielle sous une forme réduite.
 :::
 
@@ -1498,7 +1549,7 @@ Voici une définition plus générale issue de l'algèbre linéaire :
 
 *En anglais : complex inner product.*
 
-Le **produit hermitien** est la généralisation du produit scalaire aux espaces vectoriels complexes ($\mathbb{C}^n$). 
+Le **produit hermitien** est la généralisation du produit scalaire aux espaces vectoriels complexes ($\mathbb{C}^n$).
 
 Prenons l'exemple d'un vecteur d'état complexe $|V_1\rangle$ :
 
@@ -1518,7 +1569,7 @@ Pour **normaliser** le vecteur $|V_1\rangle$ à l'unité ($\|V_1\| = 1$), il fau
 
 $$|V_1\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -i \end{pmatrix}$$
 
----
+------------------------------------------------------------------------
 
 #### Orthogonalité et propriété de symétrie hermitienne
 
@@ -1532,7 +1583,7 @@ $$\langle V_1 | V_2 \rangle = \overline{\langle V_2 | V_1 \rangle} \implies \lan
 
 Lorsque les vecteurs n'ont que des composantes réelles, le produit hermitien se confond parfaitement avec le produit scalaire classique.
 
----
+------------------------------------------------------------------------
 
 #### Généralisation continue et définition rigoureuse
 
@@ -1545,38 +1596,40 @@ L'ensemble des fonctions vérifiant cette propriété forme l'espace de Hilbert 
 Voici la définition mathématique générale d'un produit interne complexe :
 
 > An inner product on a vector space $V$ is a map of an ordered pair of vectors $(\Psi, \phi)$ to the complex numbers that satisfies the following properties:
-> 
-> 1. $(\Psi, \alpha \phi + \beta \chi) = \alpha (\Psi, \phi) + \beta (\Psi, \chi)$
-> 2. $(\Psi, \phi) = \overline{(\phi, \Psi)}$
-> 3. $(\phi, \phi) \ge 0$, and equality holds if and only if $\phi = 0$,
-> 
+>
+> 1.  $(\Psi, \alpha \phi + \beta \chi) = \alpha (\Psi, \phi) + \beta (\Psi, \chi)$
+> 2.  $(\Psi, \phi) = \overline{(\phi, \Psi)}$
+> 3.  $(\phi, \phi) \ge 0$, and equality holds if and only if $\phi = 0$,
+>
 > for any $\alpha, \beta \in \mathbb{C}$ and $\Psi, \phi, \chi \in V$. [@Wiggins2024]
 
 ### Produit vectoriel et produit mixte
 
 #### Produit vectoriel
-Contrairement au produit scalaire ou hermitien qui renvoie un nombre, le **produit vectoriel** de deux vecteurs de $\mathbb{R}^3$ (noté $\vec{U} \times \vec{V}$ ou $\vec{U} \wedge \vec{V}$) produit un **troisième vecteur** orthogonal au plan formé par les deux premiers. 
+
+Contrairement au produit scalaire ou hermitien qui renvoie un nombre, le **produit vectoriel** de deux vecteurs de $\mathbb{R}^3$ (noté $\vec{U} \times \vec{V}$ ou $\vec{U} \wedge \vec{V}$) produit un **troisième vecteur** orthogonal au plan formé par les deux premiers.
 
 Très utilisé en mécanique classique et en électromagnétisme (pour calculer un moment ou la force de Lorentz), il n'est **pas utilisé** dans la formulation standard des espaces d'états en mécanique quantique.
 
 #### Produit mixte
+
 Le **produit mixte** de trois vecteurs $(\vec{U}, \vec{V}, \vec{W})$ combine produit scalaire et produit vectoriel : $\vec{U} \cdot (\vec{V} \times \vec{W})$. Il correspond au volume orienté du parallélépipède formé par ces trois vecteurs.
 
 Comme le produit vectoriel, cette notion ne s'applique qu'en géométrie tridimensionnelle réelle et reste **hors du cadre** de notre étude des espaces d'états complexes.
 
-###  Notation Bra-Ket
+### Notation Bra-Ket
 
 Introduite par Paul Dirac (du mot anglais *bracket*, qui signifie crochet), cette notation est simplement un jeu d'écriture pratique :
 
-* **Le Ket $|\psi\rangle$ :** C'est le **vecteur colonne** (l'état quantique).
-* **Le Bra $\langle\phi|$ :** C'est le **vecteur ligne** (le vecteur conjugué).
-* **Le Bra-Ket $\langle\phi|\psi\rangle$ :** C'est le **produit scalaire** entre le vecteur ligne et le vecteur colonne.
+- **Le Ket** $|\psi\rangle$ : C'est le **vecteur colonne** (l'état quantique).
+- **Le Bra** $\langle\phi|$ : C'est le **vecteur ligne** (le vecteur conjugué).
+- **Le Bra-Ket** $\langle\phi|\psi\rangle$ : C'est le **produit scalaire** entre le vecteur ligne et le vecteur colonne.
 
 Le résultat d'un Bra-Ket est toujours un simple nombre complexe. Si le vecteur est normé à 1, le produit $\langle\psi|\psi\rangle = 1$ signifie que la probabilité totale de trouver le système dans un état quelconque est de 100 %.
 
 ### Espace de Hilbert
 
-Nous allons utiliser la définition donnée par Dotsenko et al. [@dotsenko2025methodes] : **l'espace des fonctions $L^2$ muni du produit scalaire $(f|g)$ et de la norme $\|f\|_2$ est un espace de Hilbert.**
+Nous allons utiliser la définition donnée par Dotsenko et al. [@dotsenko2025methodes] : **l'espace des fonctions** $L^2$ muni du produit scalaire $(f|g)$ et de la norme $\|f\|_2$ est un espace de Hilbert.
 
 Comme le précisent les auteurs, il s'agit d'une définition restreinte à l'espace fonctionnel. Plus généralement, on considère un espace de Hilbert dans un sens plus large comme tout espace vectoriel équipé d'un produit scalaire pour ses éléments, y compris l'espace des vecteurs ordinaires en dimension finie.
 
@@ -1585,9 +1638,7 @@ Comme le précisent les auteurs, il s'agit d'une définition restreinte à l'esp
 
 Une grande partie de la difficulté d'abstraction de la physique quantique vient du fait que l'on travaille dans un espace de Hilbert, c'est-à-dire un espace abstrait.
 
-On entend parfois des affirmations fausses par simplification :
-* **« L'espace de Hilbert est notre espace spatio-temporel avec un nombre infini de dimensions » : FAUX.**
-* **« L'espace de Hilbert est un simple espace informationnel » : FAUX AUSSI**, car le principe d'incertitude donne les incertitudes sur la mesure à partir d'opérateurs qui sont des bases dans l'espace de Hilbert. L'espace de Hilbert est plutôt l'espace qui décrit les phénomènes *avant* la mesure (voir le paragraphe sur la mesure quantique).
+On entend parfois des affirmations fausses par simplification : \* **« L'espace de Hilbert est notre espace spatio-temporel avec un nombre infini de dimensions » : FAUX.** \* **« L'espace de Hilbert est un simple espace informationnel » : FAUX AUSSI**, car le principe d'incertitude donne les incertitudes sur la mesure à partir d'opérateurs qui sont des bases dans l'espace de Hilbert. L'espace de Hilbert est plutôt l'espace qui décrit les phénomènes *avant* la mesure (voir le paragraphe sur la mesure quantique).
 :::
 
 ## Les opérateurs quantiques
@@ -1596,24 +1647,21 @@ Un **opérateur** est une application linéaire qui transforme un vecteur d'éta
 
 On distingue deux grands types d'opérateurs :
 
-1. **Les observables (ex. Position $\hat{X}$, Impulsion $\hat{P}$, Hamiltonien $\hat{H}$) :** 
-   Ce sont des opérateurs hermitiens associés à des grandeurs physiques mesurables.
-   
-2. **L'opérateur densité (ou matrice densité $\hat{\rho}$) :** 
-   Contrairement aux observables, cet opérateur ne mesure pas une grandeur physique mais **décrit l'état du système lui-même** (notamment pour les états mixtes ou les systèmes ouverts). Pour un état pur $|\psi\rangle$, il s'écrit sous forme de projeteur :
-   
-   $$\hat{\rho} = |\psi\rangle\langle\psi|$$
+1.  **Les observables (ex. Position** $\hat{X}$, Impulsion $\hat{P}$, Hamiltonien $\hat{H}$) : Ce sont des opérateurs hermitiens associés à des grandeurs physiques mesurables.
+
+2.  **L'opérateur densité (ou matrice densité** $\hat{\rho}$) : Contrairement aux observables, cet opérateur ne mesure pas une grandeur physique mais **décrit l'état du système lui-même** (notamment pour les états mixtes ou les systèmes ouverts). Pour un état pur $|\psi\rangle$, il s'écrit sous forme de projeteur :
+
+    $$\hat{\rho} = |\psi\rangle\langle\psi|$$
 
 ### Comparaison des formalismes : Opérateurs matriciels et fonctionnels
 
-Dans son ouvrage de 1960, Austin Blaquière opère une comparaison entre le formalisme matriciel (issu de la mécanique matricielle d'Heisenberg) et le formalisme fonctionnel (la mécanique ondulatoire de Schrödinger). 
+Dans son ouvrage de 1960, Austin Blaquière opère une comparaison entre le formalisme matriciel (issu de la mécanique matricielle d'Heisenberg) et le formalisme fonctionnel (la mécanique ondulatoire de Schrödinger).
 
 ::: callout-note
-**Précision sur le terme « d'opérateur » chez Blaquière**
-À l'époque de Blaquière, la notion d'opérateur s'appliquait essentiellement aux **observables** (les grandeurs physiques mesurables comme la position $\hat{X}$ ou l'impulsion $\hat{P}$) :
+**Précision sur le terme « d'opérateur » chez Blaquière** À l'époque de Blaquière, la notion d'opérateur s'appliquait essentiellement aux **observables** (les grandeurs physiques mesurables comme la position $\hat{X}$ ou l'impulsion $\hat{P}$) :
 
-* **Dans le formalisme fonctionnel (Schrödinger) :** L'observable est un **opérateur différentiel** agissant sur des fonctions d'onde $\psi(x)$ (ex. $\hat{P} = -i\hbar\frac{\partial}{\partial x}$).
-* **Dans le formalisme matriciel (Heisenberg) :** L'observable est une **matrice** (un opérateur matriciel) agissant sur des vecteurs d'état.
+- **Dans le formalisme fonctionnel (Schrödinger) :** L'observable est un **opérateur différentiel** agissant sur des fonctions d'onde $\psi(x)$ (ex. $\hat{P} = -i\hbar\frac{\partial}{\partial x}$).
+- **Dans le formalisme matriciel (Heisenberg) :** L'observable est une **matrice** (un opérateur matriciel) agissant sur des vecteurs d'état.
 
 Il ne faut pas confondre ces **opérateurs d'observables** (qui agissent *sur* les états) avec la **matrice densité** introduite plus tardivement dans les cours d'introduction, qui est un **opérateur d'état** servant à décrire les mélanges statistiques.
 :::
@@ -1670,7 +1718,7 @@ x_n' = a_{n1}x_1 + a_{n2}x_2 + \dots + a_{nn}x_n
 ::: callout-note
 ### Précision sur la notion de linéarité
 
-Dans son premier tome, Austin Blaquière pose le système d'équations algébriques linéaires comme fondement mathématique [@Blaquiere1960]. 
+Dans son premier tome, Austin Blaquière pose le système d'équations algébriques linéaires comme fondement mathématique [@Blaquiere1960].
 
 Lorsque l'on passe d'une représentation matricielle à une représentation fonctionnelle, l'équation aux valeurs propres prend la forme d'une **équation différentielle**. L'opérateur peut alors comporter des dérivées premières ou secondes ($\frac{d}{dx}, \frac{d^2}{dx^2}$), mais la fonction $f$ y apparaît toujours de façon linéaire (sans terme en $f^2$).
 
@@ -1695,6 +1743,7 @@ Le nombre $\lambda$ est appelé la **valeur propre** associée au vecteur propre
 
 ::: callout-important
 ### Rôle dans la mesure quantique
+
 C'est cette **équation aux valeurs propres** qui va nous guider dans la recherche des grandeurs physiques mesurables.
 
 Plus loin, nous utiliserons la fonction d'onde $\Psi$ pour décrire l'état d'une particule. Nous poserons que si $|\Psi_n\rangle$ est un vecteur propre d'un opérateur d'observable $A$ associé à la valeur propre $a_n$, alors :
@@ -1703,7 +1752,6 @@ $$\boxed{A |\Psi_n\rangle = a_n |\Psi_n\rangle}$$
 
 Dans une expérience, la quantité $a_n$ représente l'une des valeurs numériques que l'on peut effectivement obtenir lors d'une mesure de l'observable $A$.
 :::
-
 
 ## Représentation fonctionnelle d'une observable
 
@@ -1735,15 +1783,14 @@ Les fonctions propres de $\hat{A} = \frac{d}{dx}$ sont donc de la forme $f(x) = 
 
 ::: callout-tip
 ### Intuition mathématique
+
 Intuitivement, la fonction exponentielle est la seule fonction dont la dérivée est proportionnelle à elle-même (à une constante près). Il est donc tout à fait naturel d'obtenir une exponentielle comme solution de cette équation aux valeurs propres.
 :::
- 
 
 ### Exemple 2 : Opérateur de dérivation du second ordre
 
 ::: callout-note
-**Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants :** 
-[@Delbarre2022-bb] 
+**Rappel : méthode générale de résolution d'une équation différentielle du second ordre à coefficients constants :** [@Delbarre2022-bb]
 
 $$ay''+ by' + cy = 0$$ On considère l'équation caractéristique : $$ar² + br + c = 0$$ Soit $\Delta$ le discriminant de cette équation.
 
@@ -1764,17 +1811,14 @@ $$\frac{d^2 f(x)}{dx^2} = b f(x)$$
 
 Il s'agit d'une équation différentielle linéaire du second ordre à coefficients constants. La nature des solutions dépend du signe de la valeur propre $b$ :
 
-1. **Si $b > 0$ (valeur propre positive) :**
-   Les solutions sont des exponentielles réelles :
-   $$f(x) = C_1 e^{\sqrt{b}x} + C_2 e^{-\sqrt{b}x}$$
+1.  **Si** $b > 0$ (valeur propre positive) : Les solutions sont des exponentielles réelles : $$f(x) = C_1 e^{\sqrt{b}x} + C_2 e^{-\sqrt{b}x}$$
 
-2. **Si $b < 0$ (valeur propre négative) :**
-   En posant $b = -k^2$ (avec $k \in \mathbb{R}$), l'équation devient $\frac{d^2 f}{dx^2} + k^2 f = 0$. Les solutions sont des fonctions oscillantes (sinus, cosinus ou exponentielles complexes) :
-   $$f(x) = A e^{i k x} + B e^{-i k x} \quad \text{ou} \quad f(x) = C_1 \cos(kx) + C_2 \sin(kx)$$
+2.  **Si** $b < 0$ (valeur propre négative) : En posant $b = -k^2$ (avec $k \in \mathbb{R}$), l'équation devient $\frac{d^2 f}{dx^2} + k^2 f = 0$. Les solutions sont des fonctions oscillantes (sinus, cosinus ou exponentielles complexes) : $$f(x) = A e^{i k x} + B e^{-i k x} \quad \text{ou} \quad f(x) = C_1 \cos(kx) + C_2 \sin(kx)$$
 
 ::: callout-note
 ### Lien direct avec l'énergie cinétique
-En physique quantique, l'opérateur d'énergie cinétique s'écrit $\hat{T} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2}$. 
+
+En physique quantique, l'opérateur d'énergie cinétique s'écrit $\hat{T} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2}$.
 
 Pourquoi la physique quantique impose $\Delta < 0$ ?
 
@@ -1795,6 +1839,7 @@ Il convient d'étendre à ces vecteurs fonctionnels complexes la définition du 
 
 ::: callout-note
 ### Définition du produit hermitien sur un intervalle $[0, T]$
+
 Soient $f(x)$ et $g(x)$ deux fonctions complexes d'une variable réelle $x$, définies sur l'intervalle $[0, T]$, et $f^*(x)$ (ou $\overline{f(x)}$ dans la notation de Blaquière) la fonction conjuguée complexe de $f(x)$.
 
 Le produit hermitien (ou produit scalaire dans cet espace fonctionnel) est défini par :
@@ -1830,6 +1875,7 @@ Ainsi, si $\langle f | g \rangle = 0$, alors son conjugué complexe $\langle g |
 
 ::: callout-important
 ### Théorème fondamental d'orthogonalité
+
 Dans le formalisme fonctionnel, les fonctions propres d'un opérateur hermitien (comme l'opérateur $\frac{d^2}{dx^2}$ sous des conditions aux limites appropriées) associées à des **valeurs propres distinctes** sont automatiquement orthogonales entre elles.
 
 Par conséquent, parler de « fonctions orthogonales » ou de « vecteurs d'état orthogonaux » est strictement équivalent, puisque l'ensemble de ces fonctions forme la base d'un espace de Hilbert.
@@ -1843,6 +1889,7 @@ $$\|f\|^2 = \langle f | f \rangle = \frac{1}{T} \int_{0}^{T} f^*(x) f(x) \, dx =
 
 ::: callout-note
 ### Lien avec la fonction d'onde $|\Psi\rangle$
+
 Lorsque nous décomposerons la fonction d'onde $|\Psi\rangle$ sur une base de vecteurs propres ($|\Psi\rangle = \sum_i c_i |f_i\rangle$), la norme au carré s'exprimera très simplement par la somme des modules au carré des coefficients :
 
 $$\langle \Psi | \Psi \rangle = \|\Psi\|^2 = \sum_{i} c_i^* c_i = \sum_{i} |c_i|^2 = 1$$
@@ -1872,7 +1919,7 @@ L'ensemble des fonctions propres $|f_k\rangle$ de l'opérateur $\frac{d^2}{dx^2}
 
 $$\boxed{\langle f_j | f_k \rangle = \delta_{jk} = \begin{cases} 1 & \text{si } j = k \\ 0 & \text{si } j \neq k \end{cases}}$$
 
-Ces fonctions constituent un **système orthonormé**. 
+Ces fonctions constituent un **système orthonormé**.
 
 De plus, ces fonctions forment un ensemble **complet** : n'importe quelle fonction d'onde physique $g(x)$ définie sur $[0, T]$ peut être développée de façon unique sous la forme d'une série de Fourier (combinaison linéaire de la base) :
 
@@ -1912,18 +1959,19 @@ $$\boxed{C_n = \langle f_n | f \rangle = \frac{1}{T} \int_{0}^{T} \left( e^{i 2\
 
 ::: callout-tip
 ### Synthèse conceptuelle
-Chez Blaquière, les coefficients de Fourier $C_n$ ne sont rien d'autre que les **composantes du vecteur fonctionnel dans la base des fonctions propres**. 
+
+Chez Blaquière, les coefficients de Fourier $C_n$ ne sont rien d'autre que les **composantes du vecteur fonctionnel dans la base des fonctions propres**.
 
 En mécanique quantique, la projection $\langle f_n | f \rangle$ donne l'**amplitude de probabilité** d'observer le système dans l'état propre $|f_n\rangle$.
 :::
- 
+
 ::: callout-tip
 ### Origine mathématique du terme $i \frac{2\pi}{T}$
 
 L'apparition du terme $i \frac{2\pi}{T}$ dans l'expression des fonctions propres $f_k(x) = e^{i k \frac{2\pi}{T} x}$ résulte de deux contraintes physiques fondamentales :
 
-1. **L'apparition du $i$ ($\Delta < 0$) :** Pour que la solution ne diverge pas à l'infini et reste physiquement bornée, la valeur propre de l'opérateur $\frac{d^2}{dx^2}$ doit être négative. Le discriminant de l'équation caractéristique étant négatif, les solutions sont obligatoirement des exponentielles complexes oscillantes à base d'imaginaires purs ($i$).
-2. **L'apparition du $2\pi / T$ (conditions aux limites) :** L'exigence de continuité et de périodicité sur l'intervalle $[0, T]$ impose $f(0) = f(T)$, ce qui verrouille la constante de phase à des valeurs discrètes $\lambda = k \frac{2\pi}{T}$ avec $k \in \mathbb{Z}$.
+1.  **L'apparition du** $i$ ($\Delta < 0$) : Pour que la solution ne diverge pas à l'infini et reste physiquement bornée, la valeur propre de l'opérateur $\frac{d^2}{dx^2}$ doit être négative. Le discriminant de l'équation caractéristique étant négatif, les solutions sont obligatoirement des exponentielles complexes oscillantes à base d'imaginaires purs ($i$).
+2.  **L'apparition du** $2\pi / T$ (conditions aux limites) : L'exigence de continuité et de périodicité sur l'intervalle $[0, T]$ impose $f(0) = f(T)$, ce qui verrouille la constante de phase à des valeurs discrètes $\lambda = k \frac{2\pi}{T}$ avec $k \in \mathbb{Z}$.
 
 C'est la combinaison de la régularité physique ($\Delta < 0$) et du confinement spatial ($[0, T]$) qui fait émerger la quantification et le formalisme de Fourier.
 :::
@@ -1935,16 +1983,22 @@ L'équation différentielle (l'opérateur $\hat{H}$ ou $\frac{d^2}{dx^2}$) fourn
 
 Ce principe explique pourquoi un même opérateur différentiel génère des bases de fonctions complètement différentes selon le dispositif expérimental considéré :
 
-| Dispositif expérimental | Conditions aux limites (Contraintes physiques) | Forme des vecteurs de la base | Nature du spectre |
-| :--- | :--- | :--- | :--- |
-| **Puits infini / Boîte rigide** | Parois impénétrables en $x=0$ et $x=L$ :<br>$\psi(0) = \psi(L) = 0$ | Sinus réels :<br>$\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi}{L}x\right)$ | Discret ($n \in \mathbb{N}^*$) |
-| **Anneau quantique** | Conditions périodiques sur $[0, T]$ :<br>$\psi(0) = \psi(T)$ | Exponentielles complexes discrets :<br>$f_k(x) = e^{i k \frac{2\pi}{T} x}$ | Discret ($k \in \mathbb{Z}$) |
-| **Particule totalement libre** | Aucun confinement ($x \in ]-\infty, +\infty[$) :<br>Pas de conditions aux bords | Ondes planes continues :<br>$\psi_k(x) = e^{i k x}$ | Continu ($k \in \mathbb{R}$) |
-| **Atome d'hydrogène** | Potentiel central coulombien :<br>$\psi(r, \theta, \phi) \to 0$ quand $r \to \infty$ | Harmoniques sphériques $\times$ Polynômes de Laguerre | Discret ($n, l, m$) |
++---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
+| Dispositif expérimental         | Conditions aux limites (Contraintes physiques)                                       | Forme des vecteurs de la base                                                      | Nature du spectre              |
++:================================+:=====================================================================================+:===================================================================================+:===============================+
+| **Puits infini / Boîte rigide** | Parois impénétrables en $x=0$ et $x=L$ :<br>$\psi(0) = \psi(L) = 0$                  | Sinus réels :<br>$\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi}{L}x\right)$ | Discret ($n \in \mathbb{N}^*$) |
++---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
+| **Anneau quantique**            | Conditions périodiques sur $[0, T]$ :<br>$\psi(0) = \psi(T)$                         | Exponentielles complexes discrets :<br>$f_k(x) = e^{i k \frac{2\pi}{T} x}$         | Discret ($k \in \mathbb{Z}$)   |
++---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
+| **Particule totalement libre**  | Aucun confinement ($x \in ]-\infty, +\infty[$) :<br>Pas de conditions aux bords      | Ondes planes continues :<br>$\psi_k(x) = e^{i k x}$                                | Continu ($k \in \mathbb{R}$)   |
++---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
+| **Atome d'hydrogène**           | Potentiel central coulombien :<br>$\psi(r, \theta, \phi) \to 0$ quand $r \to \infty$ | Harmoniques sphériques $\times$ Polynômes de Laguerre                              | Discret ($n, l, m$)            |
++---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
 
 #### Ce qu'il faut en retenir
-* **Confinement spatial (boîte, anneau, atome) $\implies$ Spectre discret :** Les conditions aux limites imposent une quantification. L'onde quantique doit « rentrer » dans le domaine sans s'auto-détruire par interférence destructive.
-* **Espace infini (particule libre) $\implies$ Spectre continu :** Sans parois pour imposer une longueur d'onde fixe, toutes les valeurs d'énergie et d'impulsion sont permises.
+
+- **Confinement spatial (boîte, anneau, atome)** $\implies$ Spectre discret : Les conditions aux limites imposent une quantification. L'onde quantique doit « rentrer » dans le domaine sans s'auto-détruire par interférence destructive.
+- **Espace infini (particule libre)** $\implies$ Spectre continu : Sans parois pour imposer une longueur d'onde fixe, toutes les valeurs d'énergie et d'impulsion sont permises.
 
 À l'image d'une corde de guitare dont la longueur et les points d'attache fixent les fréquences harmoniques autorisées, **le piège expérimental sculpte la base des états propres accessibles au système.**
 :::
@@ -1954,9 +2008,9 @@ Ce principe explique pourquoi un même opérateur différentiel génère des bas
 
 L'erreur courante est de croire que la base du puits est soit une base de position, soit une base d'impulsion. En réalité :
 
-* Ce n'est pas une base de position $|x\rangle$ (la particule est étalée dans tout le puits).
-* Ce n'est pas une base d'impulsion $|p\rangle$ (c'est une superposition de $+p$ et $-p$ formant une onde stationnaire).
-* **C'est la base des états propres de l'énergie ($\hat{H}$)** : la géométrie du puits combine la contrainte spatiale ($x$) et le comportement ondulatoire ($p$) pour créer des modes de vibration stationnaires, exactement comme les notes d'une corde de guitare.
+- Ce n'est pas une base de position $|x\rangle$ (la particule est étalée dans tout le puits).
+- Ce n'est pas une base d'impulsion $|p\rangle$ (c'est une superposition de $+p$ et $-p$ formant une onde stationnaire).
+- **C'est la base des états propres de l'énergie (**$\hat{H}$) : la géométrie du puits combine la contrainte spatiale ($x$) et le comportement ondulatoire ($p$) pour créer des modes de vibration stationnaires, exactement comme les notes d'une corde de guitare.
 :::
 
 ::: callout-tip
@@ -1964,7 +2018,7 @@ L'erreur courante est de croire que la base du puits est soit une base de positi
 
 L'étude du puits de potentiel unidimensionnel n'est pas un simple exercice académique : c'est le prototype de l'atome.
 
-Dans un atome, l'attraction coulombienne du noyau joue exactement le rôle du puits de potentiel. L'électron y forme une **onde stationnaire 3D**. 
+Dans un atome, l'attraction coulombienne du noyau joue exactement le rôle du puits de potentiel. L'électron y forme une **onde stationnaire 3D**.
 
 L'existence des niveaux d'énergie discrets ($n = 1, 2, 3\dots$) découle directement de la même contrainte mathématique développée par Blaquière : **seules les fonctions propres vérifiant les conditions aux limites du puits sont physiquement stables**, imposant la quantification de l'énergie et la structure en couches de la matière.
 :::
@@ -1975,8 +2029,8 @@ Nous allons calculer les éléments de la matrice $\mathbf{B}$ pour un opérateu
 
 Rappelons deux théorèmes importants de l'algèbre linéaire [@Wiggins2024] :
 
-* **Opérateur de projection :** Soit $P : V \to V$ un opérateur linéaire sur un espace vectoriel $V$. $P$ est appelé opérateur de projection si $P^2=P$.
-* **Théorème spectral (dimension finie) :** Soit $\mathbf{A} : V \to V$ un opérateur linéaire auto-adjoint sur un espace produit scalaire complexe. Alors $\mathbf{A}$ possède des valeurs propres réelles, ses vecteurs propres associés à des valeurs propres distinctes sont orthogonaux, et l'ensemble de ses vecteurs propres engendre $V$.
+- **Opérateur de projection :** Soit $P : V \to V$ un opérateur linéaire sur un espace vectoriel $V$. $P$ est appelé opérateur de projection si $P^2=P$.
+- **Théorème spectral (dimension finie) :** Soit $\mathbf{A} : V \to V$ un opérateur linéaire auto-adjoint sur un espace produit scalaire complexe. Alors $\mathbf{A}$ possède des valeurs propres réelles, ses vecteurs propres associés à des valeurs propres distinctes sont orthogonaux, et l'ensemble de ses vecteurs propres engendre $V$.
 
 #### Exemple 1 : Opérateur dérivée $\hat{B} = \frac{d}{dx}$
 
@@ -2031,15 +2085,15 @@ En revanche, l'opérateur $\hat{P}_x = \frac{1}{i}\frac{d}{dx}$ (qui devient l'i
 
 Ce résultat se généralise immédiatement aux dérivées d'ordre supérieur $\frac{d^k}{dx^k}$. Les matrices associées sont toutes diagonales dans cette base, avec pour éléments diagonaux :
 
-* **Pour $\frac{d}{dx}$ :** $\quad \ldots, -i2\omega, -i\omega, 0, i\omega, i2\omega, \ldots$
-* **Pour $\frac{d^2}{dx^2}$ :** $\quad \ldots, -4\omega^2, -\omega^2, 0, -\omega^2, -4\omega^2, \ldots$
+- **Pour** $\frac{d}{dx}$ : $\quad \ldots, -i2\omega, -i\omega, 0, i\omega, i2\omega, \ldots$
+- **Pour** $\frac{d^2}{dx^2}$ : $\quad \ldots, -4\omega^2, -\omega^2, 0, -\omega^2, -4\omega^2, \ldots$
 
 Selon [@Wiggins2024], pour un espace vectoriel de fonctions dérivables complexes, l'opérateur linéaire défini par $(\hat{A}\Phi)(x) = -i\frac{d\Phi}{dx}(x)$ est hermitien et possède des valeurs propres réelles.
 
 ::: callout-tip
 ### Perspective historique et épistémologique
 
-Une matrice représente une opération, tandis que ses vecteurs propres constituent sa base privilégiée. Il est remarquable de constater qu'à partir de la série de Fourier, on construit une base dont chaque harmonique est un vecteur propre commun aux opérateurs de dérivation successifs ($\frac{d}{dx}, \frac{d^2}{dx^2}, \dots$). Pour cette raison, on l'appelle la **représentation en vitesse/impulsion**, par opposition à la **représentation en position $x$**.
+Une matrice représente une opération, tandis que ses vecteurs propres constituent sa base privilégiée. Il est remarquable de constater qu'à partir de la série de Fourier, on construit une base dont chaque harmonique est un vecteur propre commun aux opérateurs de dérivation successifs ($\frac{d}{dx}, \frac{d^2}{dx^2}, \dots$). Pour cette raison, on l'appelle la **représentation en vitesse/impulsion**, par opposition à la **représentation en position** $x$.
 
 Cette construction prépare directement le formalisme quantique de l'espace de Hilbert. En acoustique classique, Fourier associe un spectre à un signal sonore. Mais ici, le formalisme génère un espace vectoriel abstrait.
 
@@ -2051,10 +2105,7 @@ En 1925, quelques semaines après avoir posé les bases de la mécanique matrici
 
 En mécanique quantique, si deux opérateurs commutent, ils sont représentés par des **matrices diagonales dans leur base commune de fonctions propres**.
 
-Ici, comme $[\frac{d}{dx}, \frac{d^2}{dx^2}] = 0$ :
-* La base des fonctions propres de $\frac{d^2}{dx^2}$ est **aussi** la base des fonctions propres de $\frac{d}{dx}$.
-* Le calcul $B_{kn} = \langle f_k | \frac{d}{dx} | f_n \rangle$ donne une **matrice strictement diagonale** dont les termes sont les valeurs propres imaginaires $i n \frac{2\pi}{T}$.
-* En multipliant par $-i\hbar$, on retrouve la matrice de l'impulsion $\mathbf{P}$, elle aussi diagonale, associée aux valeurs propres réelles $p_n = n \frac{2\pi\hbar}{T}$.
+Ici, comme $[\frac{d}{dx}, \frac{d^2}{dx^2}] = 0$ : \* La base des fonctions propres de $\frac{d^2}{dx^2}$ est **aussi** la base des fonctions propres de $\frac{d}{dx}$. \* Le calcul $B_{kn} = \langle f_k | \frac{d}{dx} | f_n \rangle$ donne une **matrice strictement diagonale** dont les termes sont les valeurs propres imaginaires $i n \frac{2\pi}{T}$. \* En multipliant par $-i\hbar$, on retrouve la matrice de l'impulsion $\mathbf{P}$, elle aussi diagonale, associée aux valeurs propres réelles $p_n = n \frac{2\pi\hbar}{T}$.
 :::
 
 ::: callout-tip
@@ -2062,11 +2113,9 @@ Ici, comme $[\frac{d}{dx}, \frac{d^2}{dx^2}] = 0$ :
 
 La forme de la matrice traduit directement le degré d'isolement et la dynamique du système physique :
 
-* **Matrice diagonale ($B_{kn} = 0$ pour $k \neq n$) — Le système isolé :**
-  Lorsque la matrice d'un opérateur est strictement diagonale dans la base de l'énergie, chaque état propre $|f_n\rangle$ est un **état stationnaire**. En l'absence de perturbation extérieure ou de potentiel dépendant de la position, le système reste indéfiniment dans son état. Il n'existe aucun couplage entre les différents niveaux : la probabilité de passer de l'état $n$ à l'état $k$ est nulle.
+- **Matrice diagonale (**$B_{kn} = 0$ pour $k \neq n$) — Le système isolé : Lorsque la matrice d'un opérateur est strictement diagonale dans la base de l'énergie, chaque état propre $|f_n\rangle$ est un **état stationnaire**. En l'absence de perturbation extérieure ou de potentiel dépendant de la position, le système reste indéfiniment dans son état. Il n'existe aucun couplage entre les différents niveaux : la probabilité de passer de l'état $n$ à l'état $k$ est nulle.
 
-* **Matrice non diagonale ($B_{kn} \neq 0$) — Le système perturbé ou couplé :**
-  Dès que l'on applique une interaction extérieure (un champ électromagnétique, une force dépendante de $x$, ou une mesure), l'opérateur associé présente des éléments hors diagonale. Ces termes $B_{kn}$ mesurent l'amplitude de **transition quantique** : ils décrivent la capacité du système à « sauter » d'un niveau d'énergie $n$ à un niveau $k$ sous l'effet de cette perturbation.
+- **Matrice non diagonale (**$B_{kn} \neq 0$) — Le système perturbé ou couplé : Dès que l'on applique une interaction extérieure (un champ électromagnétique, une force dépendante de $x$, ou une mesure), l'opérateur associé présente des éléments hors diagonale. Ces termes $B_{kn}$ mesurent l'amplitude de **transition quantique** : ils décrivent la capacité du système à « sauter » d'un niveau d'énergie $n$ à un niveau $k$ sous l'effet de cette perturbation.
 
 Retrouver une matrice diagonale revient donc à identifier les « axes naturels » (les modes propres) d'un système fermé, où l'énergie se conserve sans fuite ni transfert vers d'autres états.
 :::
@@ -2105,12 +2154,9 @@ Par intégration par parties ($\int u\,dv = uv - \int v\,du$) avec $u = x$ et $d
 
 $$I_{pq} = \left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} - \int_{0}^{T} \frac{e^{i\alpha x}}{i\alpha} \,dx$$
 
-1. **Terme non intégré :**
-   $$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = T \frac{e^{i\alpha T}}{i\alpha} - 0$$
-   Comme $\alpha T = (q-p)2\pi$, $e^{i\alpha T} = 1$. Le terme vaut donc $\frac{T}{i\alpha}$.
+1.  **Terme non intégré :** $$\left[ x \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = T \frac{e^{i\alpha T}}{i\alpha} - 0$$ Comme $\alpha T = (q-p)2\pi$, $e^{i\alpha T} = 1$. Le terme vaut donc $\frac{T}{i\alpha}$.
 
-2. **Terme intégré :**
-   $$- \frac{1}{i\alpha} \left[ \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \frac{1}{\alpha^2} (e^{i\alpha T} - 1) = 0$$
+2.  **Terme intégré :** $$- \frac{1}{i\alpha} \left[ \frac{e^{i\alpha x}}{i\alpha} \right]_{0}^{T} = \frac{1}{\alpha^2} (e^{i\alpha T} - 1) = 0$$
 
 On obtient donc $I_{pq} = \frac{T}{i\alpha}$, d'où l'élément de matrice :
 
@@ -2131,14 +2177,13 @@ $$\mathbf{X} = \begin{pmatrix}
 
 ::: callout-tip
 ### Conclusion sur l'opérateur Position
-* **Non diagonale :** L'opérateur $x$ ne commute pas avec $\frac{d^2}{dx^2}$, la position n'est pas conservée dans la base des états d'énergie.
-* **Hermiticité :** Bien que les termes hors diagonale soient imaginaires purs, la matrice vérifie $\mathbf{X}_{pq} = \overline{\mathbf{X}_{qp}}$. Elle est **hermitienne** ($\mathbf{X}^\dagger = \mathbf{X}$), garantissant que toute mesure physique de la position donnera une valeur propre réelle.
+
+- **Non diagonale :** L'opérateur $x$ ne commute pas avec $\frac{d^2}{dx^2}$, la position n'est pas conservée dans la base des états d'énergie.
+- **Hermiticité :** Bien que les termes hors diagonale soient imaginaires purs, la matrice vérifie $\mathbf{X}_{pq} = \overline{\mathbf{X}_{qp}}$. Elle est **hermitienne** ($\mathbf{X}^\dagger = \mathbf{X}$), garantissant que toute mesure physique de la position donnera une valeur propre réelle.
 :::
 
 ## Produit ouvert (outer product) et matrice densite
 
-
 ## Produit tensoriel et intrication
-
 
 # Références :
