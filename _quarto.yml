@@ -46,4 +46,4 @@ format:
     toc: true
     # Support mathématique pour la physique quantique sans avoir besoin de LaTeX
     html-math-method: katex
-    code-copy: true
+    code-copy: true 
