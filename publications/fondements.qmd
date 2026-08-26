@@ -865,36 +865,9 @@ L'équation de Schrödinger est un postulat. Elle ne se « démontre » pas, mai
 
 * **L'approche hamiltonienne (Austin Blaquière) :** On part de la conservation classique de l'énergie $E = \frac{p^2}{2m} + V$ et l'on substitue les grandeurs dynamiques par leurs opérateurs ($E \to i\hbar \partial_t$ et $p \to -i\hbar \partial_x$).
 * **L'approche ondulatoire (Schrödinger) :** On adapte l'équation des ondes de d'Alembert en y injectant la relation de de Broglie $\lambda = h/p$.
-* **L'analogie thermodynamique :** Pour une particule libre, Schrödinger n'est autre qu'une **équation de la chaleur** à coefficient de diffusion imaginaire ($D = i\frac{\hbar}{2m}$), décrivant une diffusion cohérente et réversible.
+* **L'analogie thermodynamique :** Pour une particule libre, l'équation de Schrödinger s'apparente à une **équation de la chaleur** à coefficient de diffusion réel $D = \frac{\hbar}{2m}$, mais appliquée à un temps imaginaire ($t \to i\tau$). Ce saut dans le domaine complexe transforme la diffusion irréversible en une propagation ondulatoire réversible.
 * **L'approche newtonienne (Potentiel quantique) :** En écrivant $\Psi = R \, e^{iS/\hbar}$, on retrouve l'équation de Newton $m\vec{a} = -\vec{\nabla}(V + Q)$, où $Q$ est un « potentiel quantique » d'origine purement ondulatoire.
 
-## Equation de schrodinger a partir de l equation de la chaleur :
-
-Sur un modele proche de la methode utilsiee dans mes publications, plutot que d utiliser classiquement le principe de corespondace il est decide de partir de l eqaution de la chaleur. Ceci permet de mettre en valeur les affinites entre quantique et thermodynamque.
-
-Nous posons l eqautiond e la chaleur en physique classique :
-
-$$\frac{\partial u(x,t)}{\partial t} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
-$D$ etant un coefficient de diffusion $> 0$
-
-Nous pouvons constater que contrairement a l´eqaution d´onde dont le terme terme est en derivee seconde, il est ici en derivee premiere ce qui est une affinite avec l equation de schrodinger que nous souhaitons trouver.
-
-Par la rotation de wick nous remplacons le temps reel t par un temps imaginaire :
-
-$t \to i \tau$
-
-$$\frac{\partial u(x,\tau)}{\partial i \tau} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
-Comme $i²=-1$,
-
-$$\frac{-i\partial u(x,\tau)}{\partial \tau} = D \frac{\partial^2 u(x,t)}{\partial x^2}$$
-On constante que cette evolution est léquivalent du principe de correspondance.
-
-Pour la suite nous savons que l´équation de Schrödinger pour une particule libre :
-
-$$\boxed{i\hbar \frac{\partial \Psi(x,t)}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi(x,t)}{\partial x^2}}$$
-Il suffit de remplacer D par $-\frac{\hbar^2}{2m}$
-
-En effet on considere qu un coefficient de diffusion peut prendre n importe quelle valeur alor spourquoi pas celle la. Toutefois ceci est possible car il ne s agt pas d une descritpion mais on force le phenomene a passer dún processus irreversive amorti par frottemment a un processus reversible sans perte d energie. D est donc selectif. 
 
 ## Équation de Schrödinger à partir de l'équation de la chaleur
 
@@ -935,108 +908,31 @@ Comme le rappelle J.-P. Ansermet dans son traité de thermodynamique [@Ansermet2
 
 En physique quantique, le choix $D = \frac{\hbar}{2m}$ n'est donc pas une hypothèse arbitraire, mais l'injection des constantes fondamentales du système (la constante de Planck réduite $\hbar$ et la masse $m$ de la particule) dans une structure de bilan de flux.
 
-## Equation de Schrödinger dépendante du temps :
+## L'équation de Schrödinger dans son cadre général
 
-### Principe de conservation de l'énergie :
+Plutôt que de chercher à résoudre cette équation sur des cas d'école idéalisés (puits de potentiel infini, oscillateur harmonique), ce qui relève de la simple technique mathématique, il importe d'en saisir la structure formelle et la portée conceptuelle.
 
-Exprimons que pour une particule en mouvement dans un champ de force l' énergie totale est la somme de l' énergie cinétique et de l' énergie potentielle. Nous supposons le système isolé.
+L'état d'un système quantique est représenté par un vecteur d'état $|\Psi(t)\rangle$ dans un espace de Hilbert. Son évolution temporelle est régie par l'**équation de Schrödinger dépendant du temps** :
 
-Soit en adoptant l'approximation non relativiste si la particule est animée d'une assez faible vitesse (devant la vitesse de la lumière):
+$$\boxed{i\hbar \frac{\mathrm{d}}{\mathrm{d}t}|\Psi(t)\rangle = \hat{H} |\Psi(t)\rangle}$$
 
-$$E=\frac{p^2}{2m} + V(x,y,z)$$ $E$ est l’énergie totale de la particule
+où $\hat{H}$ est l'opérateur **Hamiltonien**, générateur des translations temporelles et observable associée à l'énergie totale du système.
 
-$V(x,y,z)$ son énergie potentielle qui ne dépend que des coordonnées de position.
+### Propriétés fondamentales de la dynamique :
 
-Ainsi :
+* **Linearité :** Si $|\Psi_1\rangle$ et $|\Psi_2\rangle$ sont des solutions, toute superposition linéaire $\alpha|\Psi_1\rangle + \beta|\Psi_2\rangle$ est également une solution. C'est le principe de superposition d'états.
+* **Unitarité et conservation :** L'opérateur d'évolution $U(t, t_0) = \exp\left(-\frac{i}{\hbar}\hat{H}(t - t_0)\right)$ est hermitien/unitaire. Il garantit la conservation stricte de la norme du vecteur d'état dans le temps ($\langle \Psi(t)|\Psi(t)\rangle = 1$), signifiant que la probabilité totale de présence reste constamment égale à $1$.
+* **Déterminisme de l'amplitude :** Bien que la mesure quantique soit probabiliste, l'évolution temporelle du vecteur d'état $|\Psi(t)\rangle$ avant la mesure est **rigoureusement déterministe**.
 
-$$p_x^2 + p_y^2 + p_z^2 -2m(E-V)=0$$
+---
 
-### Expression de l'équation de Schrodinger dépendante du temps :
+### Pourquoi la résolution exacte s'arrête ici
 
-Remplaçons les termes par les opérateurs qui leurs sont associés dans l'équation de l'énergie :
+L'équation sous cette forme suppose un **système totalement isolé** décrivant un **état pur** parfait. 
 
-Nous obtenons : $$\frac{h^2}{8\pi^2m}[\frac{d^2\Psi}{dx^2}+\frac{d^2\Psi}{dy^2}+\frac{d^2\Psi}{dz^2}]-\frac{h}{i2\pi}\frac{d\Psi}{dt} -V(x,y,z)\Psi=0$$ *C'est l’équation de Schrödinger.*
+Dans un contexte applicatif réel (canaux de transmission, processeurs quantiques, capteurs ou réseaux), un système n'est jamais isolé : il interagit en permanence avec son environnement (bruit, déphasage, dissipation). Poursuivre sur la résolution analytique d'états purs isolés est une modélisation incomplète. 
 
-On pose habituellement :
-
-$$\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}$$ Où $\nabla^2$ est l'opérateur Laplacien en coordonnées cartésiennes.
-
-Et en remplacant $\frac{h}{2\pi}$ par $\hbar$
-
-En utilisant l'opérateur Laplacien et en isolant le terme temporel à droite, nous retrouvons la forme canonique de l'équation de Schrödinger dépendante du temps (ESDT) :
-
-$\boxed{-\frac{\hbar}{2m}\nabla^2\Psi(r,t)+V(r,t)\Psi(r,t)=i\hbar\frac{\partial}{\partial t}\Psi(r,t)}$
-
-Attention à l'expression de l'énergie cinétique : il ne s'agit pas d’une dérivée en $t$ mais en $x$. Ce n'est donc pas la représentation classique de la vitesse mais l'expression de l'opérateur impulsion $\hat{p}$ exprimée dans une base en $x$ (représentation position). Ainsi l'équation de Schrödinger est une représentation en $x$. Si on voulait une représentation en $p$, il s'agirait d'une autre formulation de l'équation.
-
-Il faut remarquer que le terme d'énergie totale du système ($i\hbar\frac{\partial}{\partial t}\Psi$) est bien une fonction du temps, mais il s'agit d'une dérivée première et non d'une dérivée seconde. En cela, elle se différencie de l'équation d'onde classique.
-
-### Formulation moderne de l'équation de Schrödinger dépendante du temps :
-
-Nous utilisons le formalisme posé par Dirac dont nous avons longuement parlé dans ce cours avec l'utilisation des BRA et des KETS. Dans ce formalisme, l'état du système est représenté par le vecteur d'état $|\Psi(t)\rangle$ (le ket).
-
-L'opérateur Hamiltonien $\hat{H}$, qui représente l'énergie totale du système, est défini comme la somme des opérateurs d'énergie cinétique et d'énergie potentielle :
-
-$\hat{H} = \hat{T} + \hat{V} = \frac{{\hat{\vec{P}}}^{2}}{2m} + V({\hat{\vec{R}}}, t)$
-
-L'équation de Schrödinger dépendante du temps prend alors sa forme la plus compacte et la plus fondamentale, indépendante de la base de représentation choisie (position ou impulsion) :
-
-$\boxed{i\hbar \frac{\textrm{d}}{\textrm{d}t}|\Psi(t)\rangle = \hat{H}|\Psi(t)\rangle}$
-
-Si l'on explicite l'opérateur Hamiltonien, on retrouve la forme que vous avez mentionnée :
-
-$\boxed{{i}\hbar {{\textrm {d}} \over {\textrm {d}}t}|\Psi (t)\rangle = \left( {\frac {{\hat {\vec {P}}}^{2}}{2m}} + V{\Bigl (}{\hat {\vec {R}}},t{\Bigr )} \right)|\Psi (t)\rangle}$
-
-Cette formulation est l'expression la plus générale de l'équation fondamentale de la dynamique quantique. Elle décrit comment l'état quantique $|\Psi(t)\rangle$ évolue dans le temps sous l'influence de l'énergie $\hat{H}$.
-
-### Fonction d'onde solution de l'équation de Schrodinger dépendante du temps :
-
-Nous savons que l'onde de De Broglie est une solution de l'équation de Schrodinger et représente une onde plane. La fonction d'onde représente une somme d'ondes de De Broglie et il est normal qu'elle ait la forme d'une onde plane.
-
-$$\boxed{\psi(\vec{r},t)=ae^{-i\frac{(Et-\vec{p}\vec{r}}{\hbar}}}$$
-
-## L'Équation de Schrödinger Indépendante du Temps (ESIT) :
-
-L'ESIT n'est pas une équation d'évolution. C'est l'équation que l'on utilise uniquement pour trouver les états stationnaires (les états d'énergie bien définie) lorsque l'opérateur Hamiltonien $\hat{H}$ est constant dans le temps (c'est-à-dire que le potentiel $V$ ne dépend pas du temps).
-
-L'ESIT est une équation aux valeurs propres de l'opérateur Hamiltonien :
-
-$$\hat{H}\phi_k(\vec{r}) = E_k\phi_k(\vec{r})$$
-
-$\phi_k(\vec{r})$ : Ce sont les fonctions propres, appelées états stationnaires.
-
-$E_k$ : Ce sont les valeurs propres, représentant les énergies possibles (ou niveaux d'énergie) que le système peut posséder.
-
-## La solution de l'ESDT via les solutions de l'ESIT :
-
-Lorsque le potentiel $V(\vec{r})$ est indépendant du temps, la méthode de séparation des variables permet de décomposer la fonction d'onde totale $\Psi(\vec{r}, t)$ en un produit d'une partie spatiale et d'une partie temporelle :
-
-$$\Psi(\vec{r}, t) = \phi(\vec{r}) \cdot f(t)$$
-
-En insérant cette forme séparée dans l'ESDT, on obtient deux équations distinctes :
-
-L'équation pour la partie spatiale : C'est exactement l'ESIT.
-
-$$\hat{H}\phi(\vec{r}) = E\phi(\vec{r})$$
-
-L'équation pour la partie temporelle :
-
-$$i\hbar\frac{d}{dt}f(t) = E f(t)$$
-
-La solution de l'équation temporelle est :
-
-$$f_k(t) = e^\frac{-iE_{k}t}{\hbar}$$
-
-Par conséquent, chaque état propre $\phi_k(\vec{r})$ de l'ESIT correspond à une solution particulière de l'ESDT, appelée état stationnaire complet :
-
-$$\Psi_k(\vec{r}, t) = \phi_k(\vec{r}) e^\frac{-iE_{k}t}{\hbar}$$
-
-Enfin, par le principe de superposition, la solution générale de l'ESDT pour un potentiel indépendant du temps est la superposition linéaire de tous les états stationnaires complets :
-
-$$\Psi(\vec{r},t)=\sum_k c_{k}\Psi_{k}(\vec{r}, t) = \sum_k c_{k}e^\frac{-iE_{k}t}{\hbar}\phi_{k}(\vec{r})$$
-
-C'est donc bien la solution générale de l'ESDT, mais elle est construite en utilisant les solutions $\phi_k$ et $E_k$ de l'ESIT.
-
+Pour décrire la réalité expérimentale et la perte d'information, il est nécessaire de passer du vecteur d'état $|\Psi\rangle$ à l'**opérateur densité $\hat{\rho}$**.
 
 # Mesure quantique :
 
@@ -1097,117 +993,6 @@ Malgré les réserves d'Einstein et d'autres sur le fait que les lois de la phys
 Il est important de noter que l'utilisation des outils de la physique statistique ne se limite pas à la physique quantique. Elle est également fondamentale dans des domaines macroscopiques, comme la thermodynamique.
 
 Comme le présente le cours de François Chevoir [@Chevoir2013-fq], la physique statistique est l'outil qui permet de faire le pont entre le comportement microscopique d'un grand nombre de particules (atomes, molécules) et les propriétés macroscopiques d'un système, telles que la température, la pression ou l'entropie. En thermodynamique, elle permet de déduire des lois déterministes à partir de l'étude des probabilités d'états d'une collection immense d'éléments.
-
-## Précisions concernant le symbolisme matriciel :
-
-Le formalisme de P.A.M. Dirac est la base de l'algèbre quantique, permettant de manipuler les états et les opérateurs de manière compacte et élégante.
-
-À la fonction d'onde (ou état) $\phi$ correspond le KET (ou vecteur colonne) : $|\phi \rangle$. À la fonction conjuguée $\bar \phi$ (ou dual de l'état) correspond le BRA (ou vecteur ligne) : $\langle\phi|$.
-
-### Condition d'orthonormalité :
-
-Les fonctions propres $|\phi_i\rangle$ d'un opérateur hermitien sont supposées former une base orthonormée, ce qui implique les lois d'orthogonalité :
-
-$$\langle \phi_i | \phi_j \rangle = 0 \quad \text{si } i \neq j$$
-
-et de normalisation (si les vecteurs sont normés à l'unité) :
-
-$$\langle \phi_i | \phi_i \rangle = 1$$
-
-### Normalisation de l'état et probabilités :
-
-Le produit hermitien $\langle \phi | \phi \rangle$ donne la norme au carré de l'état $|\phi\rangle$. En utilisant la décomposition et les conditions d'orthonormalité :
-
-$$\langle \phi | \phi \rangle = \left( \sum_i \bar c_i \langle \phi_i | \right) \left( \sum_j c_j |\phi_j \rangle \right) = \sum_{i,j} \bar c_i c_j \langle \phi_i | \phi_j \rangle$$
-
-Puisque $\langle \phi_i | \phi_j \rangle = \delta_{ij}$ (symbole de Kronecker), la somme se réduit aux termes où $i=j$ :
-
-$$\langle \phi | \phi \rangle = \sum_{n=1}^{N} \bar c_n c_n \langle \phi_n | \phi_n \rangle$$
-
-En utilisant la relation $\bar c_n c_n = |c_n|^2$ et la condition de normalisation $\langle \phi_n | \phi_n \rangle = 1$, on obtient :
-
-$$\langle \phi | \phi \rangle = |c_1|^2 + |c_2|^2 + \cdots + |c_n|^2$$
-
-Pour un état $|\phi\rangle$ normalisé, on impose $\langle \phi | \phi \rangle = 1$. L'expression précédente devient :
-
-$$\boxed{|c_1|^2 + |c_2|^2 + \cdots + |c_n|^2 = 1}$$
-
-Selon la Règle de Born (Postulat III de la Mesure), le carré du module des coefficients de décomposition $|c_n|^2$ est la probabilité que le système "saute" dans l'état propre $|\phi_n\rangle$ et que la mesure de l'observable $\hat{A}$ donne la valeur propre $a_n$ associée.
-
-$|c_1|^2$ est la probabilité que le système saute dans l’état $|\phi_1\rangle$ et que l'on trouve la valeur $a_1$.
-
-$|c_n|^2$ est la probabilité que le système saute dans l’état $|\phi_n\rangle$ et que l'on trouve la valeur $a_n$.
-
-### L'Interprétation de la mesure et l'espérance mathématique :
-
-En présence d'un état de superposition, deux conceptions sont possibles :
-
-Conception de la présence simultanée de divers états selon des taux définis (souvent associée à l'interprétation des mondes multiples, non majoritaire).
-
-Conception de la réduction ou passage du système de l'état $|\phi\rangle$ à l'un ou l'autre des états propres de $\hat{A}$ (interprétation de Copenhague).
-
-Nous adoptons la seconde interprétation, celle de Copenhague.
-
-### Mesure certaine : état propre :
-
-Si le système est dans l'état propre $|\phi_{n}\rangle$ de l’opérateur $\hat{A}$ (c'est-à-dire $\phi$ est identique à $\phi_n$), la signification physique de l'expression :
-
-$$\langle \phi_n | \hat{A} | \phi_n \rangle$$
-
-est simple : c'est la mesure exacte de $\hat{A}$ lorsque le système est dans l’état $|\phi_n\rangle$. On a en effet, puisque $\hat{A}|\phi_n\rangle = a_n |\phi_n\rangle$ :
-
-$$\langle \phi_n | \hat{A} | \phi_n \rangle = \langle \phi_n | (a_n |\phi_n\rangle) = a_n \langle \phi_n | \phi_n \rangle = a_n \times 1 = a_n$$
-
-### Mesure probabiliste : valeur moyenne (espérance mathématique) :
-
-Essayons de comprendre le sens plus général de l'expression :
-
-$$\langle\phi|\hat{A}| \phi\rangle$$
-
-En utilisant la décomposition de $|\phi\rangle$ sur la base des états propres $|\phi_n\rangle$ de $\hat{A}$ (avec $\hat{A}|\phi_n\rangle = a_n |\phi_n\rangle$) et la condition d'orthonormalité :
-
-$$\begin{aligned}
-\langle\phi|\hat{A}| \phi\rangle &= \left( \sum\_i \bar c\_i \langle \phi\_i | \right) \hat{A} \left( \sum\_j c\_j |\phi\_j \rangle \right) \\
-&= \sum\_{i,j} \bar c\_i c\_j \langle \phi\_i | \hat{A} |\phi\_j \rangle \\
-&= \sum\_{i,j} \bar c\_i c\_j \langle \phi\_i | (a\_j |\phi\_j \rangle) \\
-&= \sum\_{i,j} \bar c\_i c\_j a\_j \langle \phi\_i | \phi\_j \rangle \\
-&= \sum\_{n} \bar c\_n c\_n a\_n \quad \text{car } \langle \phi\_i | \phi\_j \rangle = \delta\_{ij} \\
-\end{aligned}$$
-
-Donc :
-
-$$\boxed{\langle\phi|\hat{A}| \phi\rangle=|c_1|^2 a_1 + |c_2|^2 a_2 + \cdots + |c_n|^2 a_n}$$
-
-La signification de cette expression est celle d'une moyenne pondérée (ou Espérance Mathématique). Elle représente la moyenne des résultats que l'on obtiendrait en effectuant un grand nombre de mesures de l'observable $\hat{A}$ sur des systèmes préparés de manière identique dans l’état $|\phi\rangle$. Chaque valeur propre $a_n$ est pondérée par un coefficient égal à sa probabilité d'occurrence, $|c_n|^2$.
-
-### Cas d'opérateurs non commutables :
-
-Examinons un autre cas où le système est dans un état propre $|\phi_{n}\rangle$ de l’opérateur $\hat{A}$ (la mesure de $\hat{A}$ est certaine et donne $a_n$) et où l'on tente de mesurer une autre grandeur représentée par un opérateur $\hat{B}$ non commutable avec $\hat{A}$ (c'est-à-dire $[\hat{A}, \hat{B}] \neq 0$).
-
-Le système étant dans l'état $|\phi_{n}\rangle$, nous pouvons former les expressions :
-
-Mesure de $\hat{A}$ :
-
-$$\langle\phi_n|\hat{A}|\phi_n\rangle = a_n$$
-
-C'est la mesure exacte de $\hat{A}$.
-
-Mesure de $\hat{B}$ :
-
-$$\langle\phi_n|\hat{B}|\phi_n\rangle$$
-
-Puisque $|\phi_n\rangle$ n'est pas un état propre de $\hat{B}$ (car $\hat{B}$ n'est pas commutable avec $\hat{A}$), cette expression représente une valeur moyenne de $\hat{B}$.
-
-Si nous exigeons des mesures précises et simultanées de $\hat{A}$ et $\hat{B}$, cette tentative est vouée à l'échec en raison du principe d'incertitude : l'état $|\phi_n\rangle$ qui rend certaine la mesure de $\hat{A}$ rend incertaine celle de $\hat{B}$.
-
-Je vous renvoie vers le livre d'Augustin Blaquière [@alma991002711819705804] pour ces développements.
-
-De plus, selon [@Wiggins2024] page 17 :
-
-Let $A$ be a linear operator on $\mathbb{C}^2$. We consider $A|\Psi \rangle$ and the inner product of this vector with another vector $|\phi\rangle$ $(|\phi\rangle,A|\Psi \rangle)=\langle\phi|A|\Psi\rangle$. This is referred to as the expectation value of $A$ in the state $|\Psi\rangle$ when $|\phi\rangle=|\Psi\rangle$.
-
-The matrix element of $A$ in the basis $\{|e_i\rangle\}$ is given by $A_{ij}=\langle e_{i}|A|e_{j}\rangle$.
-
  
 # Intrication quantique :
 
