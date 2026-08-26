@@ -1,0 +1,21 @@
+/* custom_styles.css */
+
+/* MODIFICATION : Applique une couleur Gris plus clair pour les titres de niveau 1 */
+h1 {
+  color: #778899 !important; /* Gris Ardoise Clair (Light Slate Gray) */
+}
+
+/* Règle pour les titres de niveau 2 (Corail) */
+h2 {
+  color: #FF7F50 !important;
+}
+
+/* Règle pour les titres de niveau 3 (Vert Mélèze) */
+h3 {
+  color: #8BC34A !important;
+}
+
+/* Raccourci pour texte en ligne */
+.coral {
+  color: #FF7F50;
+}
