@@ -426,51 +426,66 @@ Intuitivement, quand un objet se déplace rapidement, sa trajectoire devient plu
 
 Cependant, cette incertitude macroscopique est uniquement liée aux limites de nos sens ou de nos instruments de mesure. À l'échelle quantique, l'impossibilité de connaître simultanément et avec une précision infinie la position et la vitesse d'une particule **n'est pas une simple contrainte expérimentale, mais une loi théorique fondamentale**.
 
-## Principe d'incertitude des radioelectriciens :
+## Le « principe d'incertitude des radioélectriciens »
 
-En principe le terme de principe d'incertitude des radioelectriciens n'est pas l'objet d'un usage. Il est toutefois cité par Augustin Blaquiere [@alma991002711819705804]. Je choisis de le mettre en valeur dans ce cours car il a un intérêt pédagogique : en effet il fait le pont entre une notion classique et une notion quantique. Dans le cas classique nous sommes tous familiarisés avec le fait par exemple que le son de la voix peut être représentée par son spectre.
+Bien que l'expression *« principe d'incertitude des radioélectriciens »* ne constitue pas un usage standardisé, elle est explicitement citée par Augustin Blaquière [@alma991002711819705804]. Son intérêt pédagogique est majeur : elle dresse un pont naturel entre la physique classique et la physique quantique. En effet, dans le domaine classique, nous sommes familiers avec l'idée qu'un signal temporel (comme le son de la voix ou une tension électrique) peut être équivalemment décrit par son spectre fréquentiel.
 
-Le principe d'incertitude est une propriété *mathématique des séries de fourier*. Il n'est pas spécifique à la physique quantique. Ainsi on le retrouve en électronique lorsqu'on on associe à un signal temporel un spectre en fréquence. Toutefois il existe des différences entre les deux :
+Le principe d'incertitude est fondamentalement une **propriété mathématique de la transformation de Fourier**. Il n'est donc pas exclusif à la physique quantique. On le retrouve en électronique dès lors qu'on associe à un signal temporel $s(t)$ son spectre en fréquence $S(f)$. 
 
-En électronique on raisonne systématiquement sur une amplitude (tension ou intensité) en fonction du temps, en physique quantique on parle le plus souvent d'une amplitude fonction de x.
+Une nuance d'usage sépare toutefois les deux domaines :
 
-Pour l’électronicien le principe d'incertitude prendra la forme $\Delta t \times \Delta f \approx 1$
+* En électronique, on raisonne généralement sur l'évolution d'une amplitude (tension ou intensité) en fonction du **temps** $t$.
 
-Lorsque le signal est une impulsion brève dans le temps, la gamme de fréquence est très étendue mais les fréquences sont très serrées. Lorsque $\Delta t$ tend vers 0 (impulsion breve) le spectre devient continu.
+* En physique quantique, on manipule une amplitude de probabilité (la fonction d'onde $\psi$) le plus souvent fonction de la **position** $x$.
 
-Avec le principe d'incertitude de radioelectriciens on ne prend pas en compte la condition de quantification présente dans la relation : $E=h\mu$
+Pour le radioélectricien ou l'électronicien, cette contrainte spectrale prend la forme du produit temps-fréquence :
+$$\Delta t \cdot \Delta f \ge C \quad (\text{avec } C \approx 1 \text{ selon la définition de la largeur})$$
+
+Lorsqu'un signal forme une impulsion très brève dans le temps ($\Delta t \to 0$), la bande de fréquences nécessaire pour le représenter s'étale indéfiniment ($\Delta f \to \infty$). Inversement, une onde purement monochromatique ($\Delta f \to 0$) exige une durée infinie ($\Delta t \to \infty$).
+
+Ce qui distingue fondamentalement le cas quantique du cas classique, c'est l'intervention de la constante de Planck $h$. Le principe d'incertitude classique devient quantique dès lors qu'on associe aux grandeurs de la wave-packet les relations de quantification de Planck-Einstein et de de Broglie : $E = h\nu$ et $p = \hbar k$.
 
 ::: callout-tip
-Il est intéressant de remarquer que dans un cas classique (électronique ou acoustique) si il est possible d'avoir une bande de fréquence très étirée (voir infinie) ce n'est pas en général la bande de fréquence "utile". Par exemple :
+### Utilité spectrale et filtrage
+En électronique comme en acoustique, disposer d'une bande de fréquences extrêmement large (voire infinie) n'est généralement pas souhaitable, car elle transporte du bruit inutile au message :
 
-1.  En électronique on a l'habitude de fabriquer des filtres passe haut, passe bas ou passe bande afin d’éliminer les fréquences excentrées qui constituent du bruit.
+1. **En électronique :** On conçoit des filtres (passe-bas, passe-haut, passe-bande) afin d'éliminer les fréquences excentrées hors de la bande utile.
+2. **En acoustique :** Le timbre d'une voix humaine est un mélange complexe de fréquences (personne ne parle de manière strictement « monocorde »). La compréhension du message repose pourtant sur une bande spectrale limitée. 
 
-2.  En acoustique, le timbre d'une voix humaine est un mélange de différentes fréquences. Personne n'a une voix “monocorde". Toutefois ici encore le message utile à la compréhension d'une voix humaine est regroupé sur une bande de fréquence limitée. On peut remarquer que en cas de bruit de fond, dans une salle très bruyante par exemple, à condition de se concentrer il est possible d'isoler la conversation qui nous intéresse comme si le cerveau avait une capacité de filtrage sélective. De même l'oreille réussit à isoler des sons isolés. Autre exemple : dans une salle de restaurant bruyante, si une cuillerée tombe par terre, on isole très bien cet "évènement" du bruit de fond constitué des autres sons.
+En cas de environnement bruyant (ex. *l'effet cocktail party* dans un restaurant), le cerveau humain est capable d'un filtrage sélectif remarquable pour isoler une conversation ou déceler un événement acoustique bref (comme la chute d'une cuillère) au milieu du fond sonore.
 :::
 
-## Transposition au domaine électromagnétique :
+## Du paquet d'ondes électromagnétique au principe d'incertitude : l'analyse de Bohr
 
-Toutefois on peut se demander si un principe équivalent au principe d'incertitude des radioelectriciens existe dans le cas d'ondes électromagnétiques c'est à dire d'ondes lumineuses.
+On peut naturellement se demander si un principe équivalent au principe d'incertitude des radioélectriciens existe pour les ondes électromagnétiques, c'est-à-dire pour la lumière.
 
-Nous savons qu’en quantique il y a une condition de quantification ($E=h\nu$). nous savons depuis l’expérience du corps noir que cette condition s'applique aux ondes lumineuses. Mais que se passe t il si on applique pas la condition de quantification et qu'on en reste a $\nu$ et pas à $E$.
+En physique quantique, l'énergie est quantifiée selon la relation d'Einstein-Planck ($E = h\nu$), une contrainte dont l'expérience du corps noir a montré l'application aux ondes lumineuses. Mais que se passe-t-il si l'on n'applique pas encore cette condition de quantification et que l'on conserve uniquement les grandeurs ondulatoires classiques ($\nu$ et $\sigma$) sans passer par l'énergie $E$ et la quantité de mouvement $p$ ?
 
-Bohr était un bon pédagogue et des 1928 il a pu communiquer une synthèse assez aboutie. Rappelez vous de la photo de la page 5 qui correspond au congre Solvay de 1927. Celui-ci a permis les discussions que l'on appelle quelquefois par abus de langage le "consensus de Copenhague".
+Niels Bohr, remarquable pédagogue, en propose une synthèse aboutie dès 1928 [@BOHR1928], dans la foulée des débats du 5ᵉ Congrès Solvay de 1927 (représenté sur la photographie de la page 5) qui jetèrent les bases de ce qu'on appelle communément l'« interprétation de Copenhague ».
 
-Ainsi Bohr [@BOHR1928] décrit cette forme première du principe d'incertitude avant quantification en prenant l'exemple d'une onde plane élémentaire ayant la forme : $$A\cos 2 \pi(\nu t -\sigma x -\sigma y -\sigma z + \delta)$$ ou $A$ et $\delta$ sont des constantes désignant l'amplitude et la phase ; $\mu$ est la fréquence ; $\sigma x$, $\sigma y$ et $\sigma z$ sont les nombres d'onde dans les directions des axes.
+Bohr y décrit la forme originelle du principe d'incertitude — avant toute quantification — en s'appuyant sur la superposition d'ondes planes élémentaires de la forme :
+$$A \cos\left(2\pi(\nu t - \sigma_x x - \sigma_y y - \sigma_z z) + \delta\right)$$
 
-Alors selon Bohr, stricto sensu la représentation d'un champ d'ondes limite exige une multiplicité d'ondes élémentaires correspondant à toutes les valeurs possibles de $\nu$ e de $\sigma$. Cependant *dans les cas les plus favorables* les valeurs moyennes des différentes grandeurs (...) seront données par la relation : $$\Delta t \Delta \nu = \Delta x \Delta \sigma x =  \Delta y \Delta \sigma y =  \Delta z \Delta \sigma z =1$$
+où $A$ et $\delta$ représentent respectivement l'amplitude et la phase initiale, $\nu$ désigne la fréquence temporelle, et $(\sigma_x, \sigma_y, \sigma_z)$ sont les nombres d'onde (avec $\sigma = 1/\lambda$) associés aux axes spatiaux.
 
-## La publication de 1925 d'Heisenberg : vers un nouveau formalisme :
+Selon Bohr, la représentation exacte d'un paquet d'ondes délimité dans l'espace et le temps exige la superposition d'une multiplicité d'ondes élémentaires s'étendant sur un éventail de valeurs de $\nu$ et de $\sigma$. *Dans les cas les plus favorables*, les étalements spectraux et spatiaux vérifient la relation :
 
-Revenons un peu en arriere. En 1924 alors qu'il n'est age que de 24 ans et qu'il n'a pas encore sa thèse, Heisenberg écrit : [@Heisenberg1925]
+$$\Delta t \cdot \Delta \nu \approx \Delta x \cdot \Delta \sigma_x \approx \Delta y \cdot \Delta \sigma_y \approx \Delta z \cdot \Delta \sigma_z \approx 1$$
 
-> "Dans cette situation, il paraît judicieux d'abandonner tout espoir d'observer des grandeurs jusqu'ici inobservables, comme la position et la période d'un électron, et d'admettre que l'accord partiel entre les règles quantiques et l’expérience est plus ou moins fortuit. Au lieu de cela, il semble plus raisonnable de tenter d’établir une mécanique de la théorie quantique analogue a la mécanique classique, mais dans laquelle seules apparaissent des relations entre des grandeurs observables."
+## La publication de 1925 d'Heisenberg : vers un nouveau formalisme
 
-On voit dans l'extrait ci-dessus que l'objectif d'Heisenberg est de ne baser l’interprétation que sur des résultats observables. Ainsi il s'agit de "renoncer" à une interprétation au delà de ce que la mesure peut nous donner.
+Revenons un peu en arrière. En 1925, alors qu'il n'a que 23 ans et qu'il travaille comme assistant de Max Born à Göttingen, Werner Heisenberg publie un article fondateur [@Heisenberg1925] dans lequel il rompt radicalement avec le modèle atomique de Bohr-Sommerfeld :
 
-Ceci est la première publication d'Heisenberg. Elle pose un formalisme base sur des tableaux. Heisenberg parlera de matrices un peu plus tard. Il posera le principe d'incertitude qui porte son nom en 1927.
+> « Dans cette situation, il paraît judicieux d'abandonner tout espoir d'observer des grandeurs jusqu'ici inobservables, comme la position et la période d'un électron, et d'admettre que l'accord partiel entre les règles quantiques et l'expérience est plus ou moins fortuit. Au lieu de cela, il semble plus raisonnable de tenter d'établir une mécanique quantique analogue à la mécanique classique, mais dans laquelle apparaissent exclusivement des relations entre des grandeurs observables. »
 
-Ainsi Andre Coret [@PHSC_2001__5_1_105_0] écrit : "En s'appuyant sur l’expérience c'est à dire sur la nécessite de considérer l émission lumineuse comme issue d'un changement d'état de l´electron et non de son mouvement, Heisenberg se permet une opération qu'il qualifie lui-même d'arbitraire (willkur)."
+L'objectif d'Heisenberg est clair : fonder la physique sur les seules grandeurs directement mesurables (comme les fréquences et les intensités des raies spectrales émises) et renoncer délibérément à représenter des trajectoires électroniques inaccessibles à l'expérience.
+
+Cet article pose les bases d'un formalisme mathématique inédit reposant sur des tableaux de nombres. C'est son directeur Max Born, épaulé par Pascual Jordan, qui identifiera rapidement ces tableaux comme étant des **matrices**, donnant naissance à la *mécanique matricielle*. Heisenberg n'énoncera le principe d'incertitude (ou d'indétermination) qui porte son nom que deux ans plus tard, en 1927.
+
+Comme le souligne André Coret [@PHSC_2001__5_1_105_0] : 
+> « En s'appuyant sur l'expérience, c'est-à-dire sur la nécessité de considérer l'émission lumineuse comme issue d'un changement d'état de l'électron et non de son mouvement, Heisenberg se permet une opération qu'il qualifie lui-même d'arbitraire (*willkürlich*). »
+
+Cette année 1925 marque le début d'un formidable « âge d'or » de la physique quantique. Pendant quatre ou cinq ans, une poignée de pionniers visionnaires va poser les fondations de la physique moderne. Nous verrons plus tard dans ce document qu'il faudra attendre 1939 et la publication magistrale de Fritz London et Edmond Bauer pour voir le problème de la mesure quantique formalisé au travers de l'opérateur densité (ou matrice statistique, concept introduit par Landau et von Neumann en 1927). Mais en 1939, la discipline aura déjà changé de siècle : l'ère des pionniers aura laissé place à celle d'une théorie accomplie.
 
 ## Apport du formalisme hamiltonien :
 
@@ -1010,11 +1025,10 @@ On a souvent l'impression que la matrice densité est un outil récent en physiq
 
 En lisant ce texte rédigé en 1939, on est frappé par le chemin parcouru depuis les travaux pionniers des années 1925-1930. En appliquant le formalisme aux ensembles statistiques, London et Bauer écrivent :
 
-> Appelons la matrice statistique d'un cas pur une « matrice élémentaire ». La matrice d'un mélange général $P$ peut alors être considérée comme une superposition linéaire de matrices élémentaires :
-> $$P = \sum_n p_n P^{(n)}$$
+> Appelons la matrice statistique d'un cas pur une « matrice élémentaire ». La matrice d'un mélange général $P$ peut alors être considérée comme une superposition linéaire de matrices élémentaires : $$P = \sum_n p_n P^{(n)}$$
 :::
 
----
+------------------------------------------------------------------------
 
 ### Rappel : le produit externe (*outer product*)
 
@@ -1037,8 +1051,8 @@ Contrairement au produit scalaire (matrice ligne multipliée par une matrice col
 
 Dans le formalisme de Dirac :
 
-* $| v \rangle = \begin{pmatrix} x \\ y \end{pmatrix}$ représente un vecteur colonne (**ket**).
-* $\langle v' | = \begin{pmatrix} x'^* & y'^* \end{pmatrix}$ représente un vecteur ligne (**bra**), obtenu par transproposition conjuguée.
+- $| v \rangle = \begin{pmatrix} x \\ y \end{pmatrix}$ représente un vecteur colonne (**ket**).
+- $\langle v' | = \begin{pmatrix} x'^* & y'^* \end{pmatrix}$ représente un vecteur ligne (**bra**), obtenu par transproposition conjuguée.
 
 Le **produit scalaire** de deux vecteurs d'état s'écrit :
 
@@ -1046,11 +1060,15 @@ $$\langle v_1 | v_2 \rangle = X_1^* X_2 + Y_1^* Y_2 \in \mathbb{C}$$
 
 Le **produit externe** d'un vecteur $|v_1\rangle$ par un vecteur $|v_2\rangle$ s'écrit $|v_1 \rangle \langle v_2 |$.
 
-| Opération | Notation | Type de résultat | Analogie |
-| :--- | :--- | :--- | :--- |
-| **PRODUIT SCALAIRE** | $\langle v_1 \mid v_2 \rangle$ | Scalaire ($\mathbb{C}$) | Ligne $\times$ Colonne |
-| **PRODUIT TENSORIEL** | $|v_1\rangle \otimes |v_2\rangle$ | Vecteur d'espace étendu | Expansion d'espace |
-| **PRODUIT EXTERNE** | $|v_1\rangle\langle v_2|$ | Opérateur (Matrice) | Colonne $\times$ Ligne |
++-----------------------+-----------------------------------+-------------------------+------------------------+
+| Opération             | Notation                          | Type de résultat        | Analogie               |
++:======================+:==================================+:========================+:=======================+
+| **PRODUIT SCALAIRE**  | $\langle v_1 \mid v_2 \rangle$    | Scalaire ($\mathbb{C}$) | Ligne $\times$ Colonne |
++-----------------------+-----------------------------------+-------------------------+------------------------+
+| **PRODUIT TENSORIEL** | $|v_1\rangle \otimes |v_2\rangle$ | Vecteur d'espace étendu | Expansion d'espace     |
++-----------------------+-----------------------------------+-------------------------+------------------------+
+| **PRODUIT EXTERNE**   | $|v_1\rangle\langle v_2|$         | Opérateur (Matrice)     | Colonne $\times$ Ligne |
++-----------------------+-----------------------------------+-------------------------+------------------------+
 
 ### La matrice densité : formulation
 
@@ -1070,40 +1088,31 @@ Cette formulation répond exactement à l'impasse conceptuelle rencontrée préc
 
 ### 1. Définition de la matrice densite
 
-* **État pur (Cohérence quantique) :** Le système est parfaitement isolé et décrit par un unique ket $|\Psi\rangle$. Son opérateur densité est le projecteur direct :
-  $$\hat{\rho} = |\Psi\rangle\langle\Psi|$$
+- **État pur (Cohérence quantique) :** Le système est parfaitement isolé et décrit par un unique ket $|\Psi\rangle$. Son opérateur densité est le projecteur direct : $$\hat{\rho} = |\Psi\rangle\langle\Psi|$$
 
-* **Mélange statistique (Incertitude classique) :** Le système a une probabilité classique $p_k$ d'être dans l'état pur $|\Psi_k\rangle$ (avec $\sum_k p_k = 1$). Son opérateur densité s'écrit alors selon la formule de London et Bauer :
-  $$\hat{\rho} = \sum_k p_k |\Psi_k\rangle\langle\Psi_k|$$
+- **Mélange statistique (Incertitude classique) :** Le système a une probabilité classique $p_k$ d'être dans l'état pur $|\Psi_k\rangle$ (avec $\sum_k p_k = 1$). Son opérateur densité s'écrit alors selon la formule de London et Bauer : $$\hat{\rho} = \sum_k p_k |\Psi_k\rangle\langle\Psi_k|$$
 
 ### 2. Propriétés fondamentales de l'opérateur densité
 
 Tout opérateur densité $\hat{\rho}$ vérifie trois propriétés mathématiques strictes :
 
-1. **Hermiticité :** $\hat{\rho}^\dagger = \hat{\rho}$ (ses valeurs propres sont réelles).
-2. **Conservation de la probabilité (Trace égale à 1) :** 
-   $$\mathrm{Tr}(\hat{\rho}) = 1$$
-3. **Positivité :** Pour tout ket $|\phi\rangle$, $\langle\phi|\hat{\rho}|\phi\rangle \ge 0$ (les probabilités de présence sont toujours positives).
-
+1.  **Hermiticité :** $\hat{\rho}^\dagger = \hat{\rho}$ (ses valeurs propres sont réelles).
+2.  **Conservation de la probabilité (Trace égale à 1) :** $$\mathrm{Tr}(\hat{\rho}) = 1$$
+3.  **Positivité :** Pour tout ket $|\phi\rangle$, $\langle\phi|\hat{\rho}|\phi\rangle \ge 0$ (les probabilités de présence sont toujours positives).
 
 ### 3. Critère de pureté et entropie de von Neumann
 
 Pour savoir si un système est dans un état pur ou un mélange statistique, on utilise deux indicateurs majeurs :
 
-* **La pureté $\gamma = \mathrm{Tr}(\hat{\rho}^2)$ :**
-  * Pour un **état pur** : $\mathrm{Tr}(\hat{\rho}^2) = 1$
-  * Pour un **mélange statistique** : $\mathrm{Tr}(\hat{\rho}^2) < 1$
-
-* **L'entropie de von Neumann $S$ :**
-  Elle généralise l'entropie de Gibbs-Boltzmann au cas quantique :
-  $$S = -k_\mathrm{B} \, \mathrm{Tr}(\hat{\rho} \ln \hat{\rho})$$
-  L'entropie est strictement nulle ($S = 0$) pour un état pur (information maximale) et maximale pour un mélange complètement désordonné (ignorance maximale).
+- **La pureté** $\gamma = \mathrm{Tr}(\hat{\rho}^2)$ :
+  - Pour un **état pur** : $\mathrm{Tr}(\hat{\rho}^2) = 1$
+  - Pour un **mélange statistique** : $\mathrm{Tr}(\hat{\rho}^2) < 1$
+- **L'entropie de von Neumann** $S$ : Elle généralise l'entropie de Gibbs-Boltzmann au cas quantique : $$S = -k_\mathrm{B} \, \mathrm{Tr}(\hat{\rho} \ln \hat{\rho})$$ L'entropie est strictement nulle ($S = 0$) pour un état pur (information maximale) et maximale pour un mélange complètement désordonné (ignorance maximale).
 
 ::: {.callout-note title="Escale historique : Le lien thermodynamique chez London et Bauer"}
 Cette irruption de l'entropie peut sembler abrupte. Pourtant, il ne s'agit pas d'une notion récente : dès 1939, London et Bauer [@london1939theorie] exposent clairement cette connexion fondatrice :
 
-> L'opérateur $P$ caractérise un ensemble de systèmes identiques qui sont distribués d'une manière quelconque sur des états différents. Il joue un rôle analogue à celui de la fonction de répartition en mécanique statistique ordinaire. Il doit donc y avoir une connexion entre l'opérateur $P$ et les grandeurs macroscopiques de la thermodynamique. [...] Tout est contenu dans la définition de l'entropie $S$ :
-> $$S = -k N \, \mathrm{Trace}(P \ln P)$$
+> L'opérateur $P$ caractérise un ensemble de systèmes identiques qui sont distribués d'une manière quelconque sur des états différents. Il joue un rôle analogue à celui de la fonction de répartition en mécanique statistique ordinaire. Il doit donc y avoir une connexion entre l'opérateur $P$ et les grandeurs macroscopiques de la thermodynamique. \[...\] Tout est contenu dans la définition de l'entropie $S$ : $$S = -k N \, \mathrm{Trace}(P \ln P)$$
 
 Ce saut conceptuel montre que l'opérateur densité n'est pas seulement un outil de calcul pour la mesure, mais la véritable passerelle entre la mécanique quantique et la physique statistique.
 :::
@@ -1116,26 +1125,23 @@ Nous ne dirons pas que le qubit est « en consensus avec lui-même », mais plut
 
 Si, dans le domaine des réseaux distribués, nous considérons un nœud du réseau comme une entité élémentaire, nous pouvons modéliser ce nœud par analogie avec un qubit.
 
-Prenons l'exemple d'un nœud du réseau Bitcoin qui participe au minage :
-* Il cherche à résoudre le puzzle cryptographique. S'il est le premier à réussir, il devient le nœud gagnant et son état vaut $1$.
-* S'il échoue, son état vaut $0$.
-* Pendant la phase de recherche (environ 10 minutes), son état ne réside ni exclusivement en $0$ ni en $1$ : il se trouve dans une superposition des deux potentialités.
+Prenons l'exemple d'un nœud du réseau Bitcoin qui participe au minage : \* Il cherche à résoudre le puzzle cryptographique. S'il est le premier à réussir, il devient le nœud gagnant et son état vaut $1$. \* S'il échoue, son état vaut $0$. \* Pendant la phase de recherche (environ 10 minutes), son état ne réside ni exclusivement en $0$ ni en $1$ : il se trouve dans une superposition des deux potentialités.
 
 Au bout de 10 minutes, la mesure (la découverte du bloc) réduit l'état à $0$ ou $1$. Mais pendant cet intervalle, l'état s'étire entre ces deux possibles.
 
 C'est le concept de **temps étiré** (*Proof of Stretching Time* - PoST) proposé dans l'étude sur le consensus [@Caporali2026] :
 
 ::: {.callout-note icon="false" title="Extrait de : La matrice densité appliquée au consensus pour la blockchain [@Caporali2026]"}
-
 C'est cette attente des agents (le possible) qui constitue l'intermédiaire de confiance (le temps). Elle crée la concession du groupe. On peut appeler cette preuve : **preuve de temps étiré** car la structure du système s'étire entre présent et possible.
 
 #### Matrice densité individuelle
+
 Cette notion est commune aux agents et aux intermédiaires, mais chacun possède sa propre matrice densité.
 
 #### Matrice densité du système
+
 C'est la notion d'intrication.
 :::
-
 
 # Mesure quantique :
 
