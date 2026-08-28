@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stéphane Caporali - Caporali Conseil">
+<meta name="keywords" content="Mécanique Quantique, Heisenberg 1925, Formalisme matriciel, Louis de Broglie, Séries de Fourier, Équation de Schrödinger, Intrication quantique, Blockchain et Quantique, Informatique Quantique, Algèbre Linéaire Physique, Innovation technologique, Caporali Conseil">
+
+<title>Blog Scientifique : le laboratoire de Caporali Conseil - tampon</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../custom_styles.css">
+<link rel="stylesheet" href="custom_styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Blog Scientifique : le laboratoire de Caporali Conseil</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../PoC.html"> 
+<span class="menu-text">Proof of concept</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/fondements.html"> 
+<span class="menu-text">Fondement théorique de la quantique (CC-BY)</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Caporali-Conseil"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">tampon</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stéphane Caporali - Caporali Conseil </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Ce document constitue un socle théorique et pédagogique conçu pour accompagner des formations appliquées à la convergence entre physique quantique et réseaux. À travers une approche privilégiant le formalisme matriciel de Heisenberg (1925) et les séries de Fourier, il explore la dualité onde-corpuscule de De Broglie, le principe d’incertitude et l’équation de Schrödinger. L’étude propose également une réflexion originale sur les analogies entre les formalismes quantiques et les architectures décentralisées (Blockchain), offrant aux ingénieurs un cadre conceptuel pour appréhender la seconde révolution quantique.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>Mécanique Quantique, Heisenberg 1925, Formalisme matriciel, Louis de Broglie, Séries de Fourier, Équation de Schrödinger, Intrication quantique, Blockchain et Quantique, Informatique Quantique, Algèbre Linéaire Physique, Innovation technologique, Caporali Conseil</p>
+  </div>
+</div>
+
+</header>
+
+
+<p>Dans le cadre du principe d’incertitude temps-énergie, le temps t n’est pas un opérateur d’observable classique (comme l’est la position x), mais un paramètre continu d’évolution. L’interprétation rigoureuse de <span class="math display">\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle</span> s’appuie sur le théorème de Mandelstam-Tamm, qui donne un sens mathématique et physique précis à la relation <span class="math display">\Delta E \cdot \Delta t \ge \frac{\hbar}{2}</span>. 1. La vitesse d’évolution selon Mandelstam-Tamm</p>
+<p>Dans la formulation quantique rigoureuse, la relation s’écrit : Où <span class="math inline">\Delta t</span> représente le temps caractéristique minimal requis pour que l’état <span class="math inline">\vert\psi(t)\rangle</span> évolue vers un état physiquement distinguable (orthogonale ou mesurable), et <span class="math inline">\Delta E</span> est l’incertitude (l’écart-type) sur le Hamiltonien du système <span class="math inline">\hat{H}</span>.</p>
+<ul>
+<li><p>Signification de <span class="math inline">\alpha(t)</span> et <span class="math inline">\beta(t)</span> : La variation temporelle des amplitudes de probabilité <span class="math inline">\frac{d\alpha}{dt}</span> et <span class="math inline">\frac{d\beta}{dt}</span> mesure la vitesse à laquelle le système transite de l’état initial <span class="math inline">\vert 0\rangle</span> (“bloc non trouvé / effort en cours”) vers l’état final <span class="math inline">\vert 1\rangle</span> (“bloc trouvé / preuve validée”).</p></li>
+<li><p>Le rôle de <span class="math inline">\Delta E</span> : La quantité d’énergie (ou de travail) disponible borne la vitesse de transformation de l’état. Si E , le système est dans un état propre d’énergie statique : (t)et (t)ne varient plus, le temps dynamique du système est « gelé ».</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Transposition thermodynamique au nœud mineur</li>
+</ol>
+<p>En transposant ce formalisme au modèle stochastique du minage (processus de Poisson sans mémoire) :</p>
+<p>A. Trajectoire des amplitudes <span class="math inline">\alpha(t)</span> et <span class="math inline">\beta(t)</span></p>
+<p>Au fur et à mesure que le temps t s’écoule au sein de la fenêtre de minage :</p>
+<ul>
+<li><p>Amplitude de statut quo : <span class="math inline">\alpha(t) = e^{-\frac{\lambda t}{2}}</span> (l’amplitude de rester dans l’état sans bloc décline).</p></li>
+<li><p>Amplitude de découverte : <span class="math inline">\beta(t) = \sqrt{1 - e^{-\lambda t}}</span> (le module au carré <span class="math inline">\vert\beta(t)\vert^2 = 1 - e^{-\lambda t}</span> retrouve exactement la fonction de distribution cumulée de la loi de Poisson).</p></li>
+</ul>
+<p>Le paramètre <span class="math inline">\lambda</span> représente le taux de hachage effectif du nœud rapporté à la difficulté globale.</p>
+<p>B. La borne <span class="math inline">\Delta E \cdot \Delta t</span> comme arbitrage architectural * <span class="math inline">\Delta E</span> (Le débit d’énergie / Hashrate) : Représente l’intensité de la puissance thermodynamique (joules par seconde) injectée par le nœud pour faire tourner ses puces ASICs et explorer l’espace des nonces. * <span class="math inline">\Delta t</span> (La résolution temporelle du consensus) : Représente l’incertitude sur l’instant exact de validation. Pour réduire l’incertitude sur la fenêtre de résolution <span class="math inline">\Delta t</span> (découvrir un bloc plus vite et resserrer le temps de consensus), le réseau ou le mineur est contraint d’augmenter E. Il est physiquement et thermodynamiquement impossible d’obtenir une certitude temporelle immédiate (<span class="math inline">\Delta t \to 0</span>) sans injecter une énergie infinie (<span class="math inline">\Delta E \to \infty</span>).</p>
+<ol start="3" type="1">
+<li>Formulation synthétique</li>
+</ol>
+<p>L’équation d’état <span class="math inline">\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle</span> décrit le taux de conversion de l’énergie <span class="math inline">\Delta E</span> en résolution temporelle <span class="math inline">\Delta t</span>. Tant que la mesure (diffusion du bloc sur le réseau P2P) n’a pas eu lieu, le système accumule du travail sous forme d’amplitude de phase <span class="math inline">\beta(t)</span>. Le principe d’incertitude temps-énergie garantit qu’un registre distribué ne peut pas acheter de la certitude sur son état temporel sans payer un coût d’incertitude énergétique équivalent.</p>
+<p>En inversant la polarité classique pour faire de <span class="math inline">\vert 0\rangle</span> le champ des possibles et de <span class="math inline">\vert 1\rangle</span> l’événement accompli, le qubit devient le moteur élémentaire de la temporalité.</p>
+<ol type="1">
+<li>La dualité Potentiel / Actuel (Potentia vs Actua)</li>
+</ol>
+<p>Dans cette grille de lecture, le vecteur d’état ne décrit plus seulement une information, mais une épaisseur du présent :</p>
+<ul>
+<li><p><span class="math inline">\vert 0\rangle</span> — Le Possible (L’horizon des potentiels) : C’est l’état du système où l’histoire n’est pas encore tranchée. Il contient la superposition de tous les nonces non encore découverts, de toutes les micro-probabilités de succès de tous les nœuds. C’est le réservoir d’entropie et de futur non réalisé.</p></li>
+<li><p><span class="math inline">\vert 1\rangle</span> — Le Présent (L’événement accompli) : C’est la matérialisation du bloc. Dès qu’il est produit et vérifié, l’état se réduit de façon irréversible. Le possible s’effondre pour devenir du présent, qui devient immédiatement du passé immuable (le registre de la blockchain). La fonction d’état <span class="math display">\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle</span> décrit alors la dynamique de transition entre le futur virtuel (<span class="math inline">\vert 0\rangle</span>) et le présent cristallisé (<span class="math inline">\vert 1\rangle</span>).</p></li>
+</ul>
+<ol start="2" type="1">
+<li>La construction de la structure temporelle</li>
+</ol>
+<p>Cette formulation permet de définir le temps non pas comme un axe absolu et passif, mais comme le produit du consensus thermodynamique :</p>
+<ul>
+<li><p>L’épaisseur du présent (<span class="math inline">\Delta t</span>) : Tant que <span class="math inline">\alpha(t) \neq 0 et \beta(t) \neq 0</span>, le système se trouve dans l’épaisseur du présent. C’est une phase d’indétermination où le bloc est à la fois potentiel et en cours d’actualisation.</p></li>
+<li><p>La flèche du temps par l’irréversibilité : La réduction du paquet d’ondes lors de la diffusion du bloc (<span class="math inline">\vert\psi\rangle \to \vert 1\rangle</span>) est une opération non unitaire et irréversible. C’est précisément cette irréversibilité qui crée la flèche du temps : impossible de restaurer la superposition <span class="math inline">\vert 0\rangle</span> une fois la preuve de travail mesurée par le réseau.</p></li>
+<li><p>L’horloge quantico-thermodynamique :</p>
+<p>Chaque bloc validé agit comme un “tictac” ontologique. Le temps du réseau n’est pas donné par des secondes, mais par la succession discrète de ces effondrements d’états potentiels <span class="math inline">\vert 0\rangle</span> en états réels <span class="math inline">\vert 1\rangle</span>.</p></li>
+</ul>
+<ol start="3" type="1">
+<li>Lien direct avec <span class="math inline">\Delta E \cdot \Delta t</span></li>
+</ol>
+<p>Dans ce cadre :</p>
+<ul>
+<li><span class="math inline">\Delta t</span> est la largeur de l’horizon du présent (la durée de la transition entre le virtuel et l’actuel ).</li>
+<li><span class="math inline">\Delta E</span> est le coût énergétique de la métamorphose (le travail nécessaire pour forcer le possible à devenir réel).</li>
+</ul>
+<p>Pour compresser le temps et faire advenir le présent plus vite (<span class="math inline">\Delta t \to 0</span>), il faut injecter une énergie infinie (<span class="math inline">\Delta E \to \infty</span>). C’est ce principe qui empêche le futur de s’effondrer instantanément dans le présent sans dépense thermodynamique. Veux-tu qu’on formalise cette distinction Potentiel / Actuel sous forme de schéma conceptuel pour la doc, ou tu l’intègres directement dans la section sur l’entropie et le consensus ?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Illustration tirée de l’électronique : le délai transitoire comme structure du temps
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour démystifier cette notion de structure temporelle et comprendre comment le temps peut être autre chose qu’un simple écoulement uniforme, l’analogie avec la charge d’un condensateur est particulièrement éclairante.</p>
+<p>Lorsqu’on applique une tension à un condensateur déchargé, le système ne réagit pas instantanément de manière homogène : - À l’instant initial (<span class="math inline">t = 0</span>), le courant <span class="math inline">i(t)</span> saute immédiatement à son maximum pour commencer à transférer les charges. La tension <span class="math inline">u_C(t)</span>, elle, est encore nulle. - La tension aux bornes du composant s’établit progressivement selon la loi : <span class="math display">u_C(t) = E \left(1 - e^{-\frac{t}{\tau}}\right)</span> tandis que le courant décroît à mesure que le condensateur se remplit.</p>
+<p>Il existe ainsi un <strong>décalage dynamique</strong> entre l’effort initial (le flux d’intensité) et l’établissement de la tension. Le condensateur introduit une <strong>temporisation</strong> : il emmagasine de l’énergie et réintroduit de la potentialité au cœur du circuit.</p>
+<p>Dans le cadre de notre structure temporelle, cette temporisation correspond précisément à la création d’une fenêtre de possible — le <em>futur</em>. Ralentir l’établissement d’une grandeur n’empêche pas le temps de s’écouler : c’est sculpter et compresser l’événement dans une fenêtre temporelle donnée.</p>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/Caporali-Conseil\.github\.io\/cours-quantique-innovation\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Physique de l’information &amp; réseaux</p>
+</div>   
+    <div class="nav-footer-center">
+<p>© 2026 <a href="https://www.caporali.fr">Caporali Conseil</a> • Tous droits réservés</p>
+</div>
+    <div class="nav-footer-right">
+<p>Licence <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
