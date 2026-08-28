@@ -219,9 +219,9 @@ window.Quarto = {
   <li><a href="#que-signifie-lincertitude-en-physique" id="toc-que-signifie-lincertitude-en-physique" class="nav-link" data-scroll-target="#que-signifie-lincertitude-en-physique"><span class="header-section-number">4.1.1</span> Que signifie l’incertitude en physique ?</a></li>
   <li><a href="#première-approche-du-principe-dincertitude" id="toc-première-approche-du-principe-dincertitude" class="nav-link" data-scroll-target="#première-approche-du-principe-dincertitude"><span class="header-section-number">4.1.2</span> Première approche du principe d’incertitude</a></li>
   </ul></li>
-  <li><a href="#principe-dincertitude-des-radioelectriciens" id="toc-principe-dincertitude-des-radioelectriciens" class="nav-link" data-scroll-target="#principe-dincertitude-des-radioelectriciens"><span class="header-section-number">4.2</span> Principe d’incertitude des radioelectriciens :</a></li>
-  <li><a href="#transposition-au-domaine-électromagnétique" id="toc-transposition-au-domaine-électromagnétique" class="nav-link" data-scroll-target="#transposition-au-domaine-électromagnétique"><span class="header-section-number">4.3</span> Transposition au domaine électromagnétique :</a></li>
-  <li><a href="#la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" id="toc-la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" class="nav-link" data-scroll-target="#la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme"><span class="header-section-number">4.4</span> La publication de 1925 d’Heisenberg : vers un nouveau formalisme :</a></li>
+  <li><a href="#le-principe-dincertitude-des-radioélectriciens" id="toc-le-principe-dincertitude-des-radioélectriciens" class="nav-link" data-scroll-target="#le-principe-dincertitude-des-radioélectriciens"><span class="header-section-number">4.2</span> Le « principe d’incertitude des radioélectriciens »</a></li>
+  <li><a href="#du-paquet-dondes-électromagnétique-au-principe-dincertitude-lanalyse-de-bohr" id="toc-du-paquet-dondes-électromagnétique-au-principe-dincertitude-lanalyse-de-bohr" class="nav-link" data-scroll-target="#du-paquet-dondes-électromagnétique-au-principe-dincertitude-lanalyse-de-bohr"><span class="header-section-number">4.3</span> Du paquet d’ondes électromagnétique au principe d’incertitude : l’analyse de Bohr</a></li>
+  <li><a href="#la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" id="toc-la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" class="nav-link" data-scroll-target="#la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme"><span class="header-section-number">4.4</span> La publication de 1925 d’Heisenberg : vers un nouveau formalisme</a></li>
   <li><a href="#apport-du-formalisme-hamiltonien" id="toc-apport-du-formalisme-hamiltonien" class="nav-link" data-scroll-target="#apport-du-formalisme-hamiltonien"><span class="header-section-number">4.5</span> Apport du formalisme hamiltonien :</a></li>
   <li><a href="#approche-intuitive-de-la-non-commutation-des-fonctions" id="toc-approche-intuitive-de-la-non-commutation-des-fonctions" class="nav-link" data-scroll-target="#approche-intuitive-de-la-non-commutation-des-fonctions"><span class="header-section-number">4.6</span> Approche intuitive de la non-commutation des fonctions</a></li>
   <li><a href="#conclusion-formulation-du-principe-dincertitude-dheisenberg-position-impulsion" id="toc-conclusion-formulation-du-principe-dincertitude-dheisenberg-position-impulsion" class="nav-link" data-scroll-target="#conclusion-formulation-du-principe-dincertitude-dheisenberg-position-impulsion"><span class="header-section-number">4.7</span> Conclusion : formulation du principe d’incertitude d’Heisenberg (position-impulsion)</a></li>
@@ -744,49 +744,57 @@ Figure&nbsp;5: Une chaise bleue miniature
 <p>Cependant, cette incertitude macroscopique est uniquement liée aux limites de nos sens ou de nos instruments de mesure. À l’échelle quantique, l’impossibilité de connaître simultanément et avec une précision infinie la position et la vitesse d’une particule <strong>n’est pas une simple contrainte expérimentale, mais une loi théorique fondamentale</strong>.</p>
 </section>
 </section>
-<section id="principe-dincertitude-des-radioelectriciens" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="principe-dincertitude-des-radioelectriciens"><span class="header-section-number">4.2</span> Principe d’incertitude des radioelectriciens :</h2>
-<p>En principe le terme de principe d’incertitude des radioelectriciens n’est pas l’objet d’un usage. Il est toutefois cité par Augustin Blaquiere <span class="citation" data-cites="alma991002711819705804">(<a href="#ref-alma991002711819705804" role="doc-biblioref">Blaquière 1960</a>)</span>. Je choisis de le mettre en valeur dans ce cours car il a un intérêt pédagogique : en effet il fait le pont entre une notion classique et une notion quantique. Dans le cas classique nous sommes tous familiarisés avec le fait par exemple que le son de la voix peut être représentée par son spectre.</p>
-<p>Le principe d’incertitude est une propriété <em>mathématique des séries de fourier</em>. Il n’est pas spécifique à la physique quantique. Ainsi on le retrouve en électronique lorsqu’on on associe à un signal temporel un spectre en fréquence. Toutefois il existe des différences entre les deux :</p>
-<p>En électronique on raisonne systématiquement sur une amplitude (tension ou intensité) en fonction du temps, en physique quantique on parle le plus souvent d’une amplitude fonction de x.</p>
-<p>Pour l’électronicien le principe d’incertitude prendra la forme <span class="math inline">\Delta t \times \Delta f \approx 1</span></p>
-<p>Lorsque le signal est une impulsion brève dans le temps, la gamme de fréquence est très étendue mais les fréquences sont très serrées. Lorsque <span class="math inline">\Delta t</span> tend vers 0 (impulsion breve) le spectre devient continu.</p>
-<p>Avec le principe d’incertitude de radioelectriciens on ne prend pas en compte la condition de quantification présente dans la relation : <span class="math inline">E=h\mu</span></p>
+<section id="le-principe-dincertitude-des-radioélectriciens" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="le-principe-dincertitude-des-radioélectriciens"><span class="header-section-number">4.2</span> Le « principe d’incertitude des radioélectriciens »</h2>
+<p>Bien que l’expression <em>« principe d’incertitude des radioélectriciens »</em> ne constitue pas un usage standardisé, elle est explicitement citée par Augustin Blaquière <span class="citation" data-cites="alma991002711819705804">(<a href="#ref-alma991002711819705804" role="doc-biblioref">Blaquière 1960</a>)</span>. Son intérêt pédagogique est majeur : elle dresse un pont naturel entre la physique classique et la physique quantique. En effet, dans le domaine classique, nous sommes familiers avec l’idée qu’un signal temporel (comme le son de la voix ou une tension électrique) peut être équivalemment décrit par son spectre fréquentiel.</p>
+<p>Le principe d’incertitude est fondamentalement une <strong>propriété mathématique de la transformation de Fourier</strong>. Il n’est donc pas exclusif à la physique quantique. On le retrouve en électronique dès lors qu’on associe à un signal temporel <span class="math inline">s(t)</span> son spectre en fréquence <span class="math inline">S(f)</span>.</p>
+<p>Une nuance d’usage sépare toutefois les deux domaines :</p>
+<ul>
+<li><p>En électronique, on raisonne généralement sur l’évolution d’une amplitude (tension ou intensité) en fonction du <strong>temps</strong> <span class="math inline">t</span>.</p></li>
+<li><p>En physique quantique, on manipule une amplitude de probabilité (la fonction d’onde <span class="math inline">\psi</span>) le plus souvent fonction de la <strong>position</strong> <span class="math inline">x</span>.</p></li>
+</ul>
+<p>Pour le radioélectricien ou l’électronicien, cette contrainte spectrale prend la forme du produit temps-fréquence : <span class="math display">\Delta t \cdot \Delta f \ge C \quad (\text{avec } C \approx 1 \text{ selon la définition de la largeur})</span></p>
+<p>Lorsqu’un signal forme une impulsion très brève dans le temps (<span class="math inline">\Delta t \to 0</span>), la bande de fréquences nécessaire pour le représenter s’étale indéfiniment (<span class="math inline">\Delta f \to \infty</span>). Inversement, une onde purement monochromatique (<span class="math inline">\Delta f \to 0</span>) exige une durée infinie (<span class="math inline">\Delta t \to \infty</span>).</p>
+<p>Ce qui distingue fondamentalement le cas quantique du cas classique, c’est l’intervention de la constante de Planck <span class="math inline">h</span>. Le principe d’incertitude classique devient quantique dès lors qu’on associe aux grandeurs de la wave-packet les relations de quantification de Planck-Einstein et de de Broglie : <span class="math inline">E = h\nu</span> et <span class="math inline">p = \hbar k</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Utilité spectrale et filtrage
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Il est intéressant de remarquer que dans un cas classique (électronique ou acoustique) si il est possible d’avoir une bande de fréquence très étirée (voir infinie) ce n’est pas en général la bande de fréquence “utile”. Par exemple :</p>
+<p>En électronique comme en acoustique, disposer d’une bande de fréquences extrêmement large (voire infinie) n’est généralement pas souhaitable, car elle transporte du bruit inutile au message :</p>
 <ol type="1">
-<li><p>En électronique on a l’habitude de fabriquer des filtres passe haut, passe bas ou passe bande afin d’éliminer les fréquences excentrées qui constituent du bruit.</p></li>
-<li><p>En acoustique, le timbre d’une voix humaine est un mélange de différentes fréquences. Personne n’a une voix “monocorde”. Toutefois ici encore le message utile à la compréhension d’une voix humaine est regroupé sur une bande de fréquence limitée. On peut remarquer que en cas de bruit de fond, dans une salle très bruyante par exemple, à condition de se concentrer il est possible d’isoler la conversation qui nous intéresse comme si le cerveau avait une capacité de filtrage sélective. De même l’oreille réussit à isoler des sons isolés. Autre exemple : dans une salle de restaurant bruyante, si une cuillerée tombe par terre, on isole très bien cet “évènement” du bruit de fond constitué des autres sons.</p></li>
+<li><strong>En électronique :</strong> On conçoit des filtres (passe-bas, passe-haut, passe-bande) afin d’éliminer les fréquences excentrées hors de la bande utile.</li>
+<li><strong>En acoustique :</strong> Le timbre d’une voix humaine est un mélange complexe de fréquences (personne ne parle de manière strictement « monocorde »). La compréhension du message repose pourtant sur une bande spectrale limitée.</li>
 </ol>
+<p>En cas de environnement bruyant (ex. <em>l’effet cocktail party</em> dans un restaurant), le cerveau humain est capable d’un filtrage sélectif remarquable pour isoler une conversation ou déceler un événement acoustique bref (comme la chute d’une cuillère) au milieu du fond sonore.</p>
 </div>
 </div>
 </section>
-<section id="transposition-au-domaine-électromagnétique" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="transposition-au-domaine-électromagnétique"><span class="header-section-number">4.3</span> Transposition au domaine électromagnétique :</h2>
-<p>Toutefois on peut se demander si un principe équivalent au principe d’incertitude des radioelectriciens existe dans le cas d’ondes électromagnétiques c’est à dire d’ondes lumineuses.</p>
-<p>Nous savons qu’en quantique il y a une condition de quantification (<span class="math inline">E=h\nu</span>). nous savons depuis l’expérience du corps noir que cette condition s’applique aux ondes lumineuses. Mais que se passe t il si on applique pas la condition de quantification et qu’on en reste a <span class="math inline">\nu</span> et pas à <span class="math inline">E</span>.</p>
-<p>Bohr était un bon pédagogue et des 1928 il a pu communiquer une synthèse assez aboutie. Rappelez vous de la photo de la page 5 qui correspond au congre Solvay de 1927. Celui-ci a permis les discussions que l’on appelle quelquefois par abus de langage le “consensus de Copenhague”.</p>
-<p>Ainsi Bohr <span class="citation" data-cites="BOHR1928">(<a href="#ref-BOHR1928" role="doc-biblioref">BOHR 1928</a>)</span> décrit cette forme première du principe d’incertitude avant quantification en prenant l’exemple d’une onde plane élémentaire ayant la forme : <span class="math display">A\cos 2 \pi(\nu t -\sigma x -\sigma y -\sigma z + \delta)</span> ou <span class="math inline">A</span> et <span class="math inline">\delta</span> sont des constantes désignant l’amplitude et la phase ; <span class="math inline">\mu</span> est la fréquence ; <span class="math inline">\sigma x</span>, <span class="math inline">\sigma y</span> et <span class="math inline">\sigma z</span> sont les nombres d’onde dans les directions des axes.</p>
-<p>Alors selon Bohr, stricto sensu la représentation d’un champ d’ondes limite exige une multiplicité d’ondes élémentaires correspondant à toutes les valeurs possibles de <span class="math inline">\nu</span> e de <span class="math inline">\sigma</span>. Cependant <em>dans les cas les plus favorables</em> les valeurs moyennes des différentes grandeurs (…) seront données par la relation : <span class="math display">\Delta t \Delta \nu = \Delta x \Delta \sigma x =  \Delta y \Delta \sigma y =  \Delta z \Delta \sigma z =1</span></p>
+<section id="du-paquet-dondes-électromagnétique-au-principe-dincertitude-lanalyse-de-bohr" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="du-paquet-dondes-électromagnétique-au-principe-dincertitude-lanalyse-de-bohr"><span class="header-section-number">4.3</span> Du paquet d’ondes électromagnétique au principe d’incertitude : l’analyse de Bohr</h2>
+<p>On peut naturellement se demander si un principe équivalent au principe d’incertitude des radioélectriciens existe pour les ondes électromagnétiques, c’est-à-dire pour la lumière.</p>
+<p>En physique quantique, l’énergie est quantifiée selon la relation d’Einstein-Planck (<span class="math inline">E = h\nu</span>), une contrainte dont l’expérience du corps noir a montré l’application aux ondes lumineuses. Mais que se passe-t-il si l’on n’applique pas encore cette condition de quantification et que l’on conserve uniquement les grandeurs ondulatoires classiques (<span class="math inline">\nu</span> et <span class="math inline">\sigma</span>) sans passer par l’énergie <span class="math inline">E</span> et la quantité de mouvement <span class="math inline">p</span> ?</p>
+<p>Niels Bohr, remarquable pédagogue, en propose une synthèse aboutie dès 1928 <span class="citation" data-cites="BOHR1928">(<a href="#ref-BOHR1928" role="doc-biblioref">BOHR 1928</a>)</span>, dans la foulée des débats du 5ᵉ Congrès Solvay de 1927 (représenté sur la photographie de la page 5) qui jetèrent les bases de ce qu’on appelle communément l’« interprétation de Copenhague ».</p>
+<p>Bohr y décrit la forme originelle du principe d’incertitude — avant toute quantification — en s’appuyant sur la superposition d’ondes planes élémentaires de la forme : <span class="math display">A \cos\left(2\pi(\nu t - \sigma_x x - \sigma_y y - \sigma_z z) + \delta\right)</span></p>
+<p>où <span class="math inline">A</span> et <span class="math inline">\delta</span> représentent respectivement l’amplitude et la phase initiale, <span class="math inline">\nu</span> désigne la fréquence temporelle, et <span class="math inline">(\sigma_x, \sigma_y, \sigma_z)</span> sont les nombres d’onde (avec <span class="math inline">\sigma = 1/\lambda</span>) associés aux axes spatiaux.</p>
+<p>Selon Bohr, la représentation exacte d’un paquet d’ondes délimité dans l’espace et le temps exige la superposition d’une multiplicité d’ondes élémentaires s’étendant sur un éventail de valeurs de <span class="math inline">\nu</span> et de <span class="math inline">\sigma</span>. <em>Dans les cas les plus favorables</em>, les étalements spectraux et spatiaux vérifient la relation :</p>
+<p><span class="math display">\Delta t \cdot \Delta \nu \approx \Delta x \cdot \Delta \sigma_x \approx \Delta y \cdot \Delta \sigma_y \approx \Delta z \cdot \Delta \sigma_z \approx 1</span></p>
 </section>
 <section id="la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme"><span class="header-section-number">4.4</span> La publication de 1925 d’Heisenberg : vers un nouveau formalisme :</h2>
-<p>Revenons un peu en arriere. En 1924 alors qu’il n’est age que de 24 ans et qu’il n’a pas encore sa thèse, Heisenberg écrit : <span class="citation" data-cites="Heisenberg1925">(<a href="#ref-Heisenberg1925" role="doc-biblioref">Heisenberg 1925</a>)</span></p>
+<h2 data-number="4.4" class="anchored" data-anchor-id="la-publication-de-1925-dheisenberg-vers-un-nouveau-formalisme"><span class="header-section-number">4.4</span> La publication de 1925 d’Heisenberg : vers un nouveau formalisme</h2>
+<p>Revenons un peu en arrière. En 1925, alors qu’il n’a que 23 ans et qu’il travaille comme assistant de Max Born à Göttingen, Werner Heisenberg publie un article fondateur <span class="citation" data-cites="Heisenberg1925">(<a href="#ref-Heisenberg1925" role="doc-biblioref">Heisenberg 1925</a>)</span> dans lequel il rompt radicalement avec le modèle atomique de Bohr-Sommerfeld :</p>
 <blockquote class="blockquote">
-<p>“Dans cette situation, il paraît judicieux d’abandonner tout espoir d’observer des grandeurs jusqu’ici inobservables, comme la position et la période d’un électron, et d’admettre que l’accord partiel entre les règles quantiques et l’expérience est plus ou moins fortuit. Au lieu de cela, il semble plus raisonnable de tenter d’établir une mécanique de la théorie quantique analogue a la mécanique classique, mais dans laquelle seules apparaissent des relations entre des grandeurs observables.”</p>
+<p>« Dans cette situation, il paraît judicieux d’abandonner tout espoir d’observer des grandeurs jusqu’ici inobservables, comme la position et la période d’un électron, et d’admettre que l’accord partiel entre les règles quantiques et l’expérience est plus ou moins fortuit. Au lieu de cela, il semble plus raisonnable de tenter d’établir une mécanique quantique analogue à la mécanique classique, mais dans laquelle apparaissent exclusivement des relations entre des grandeurs observables. »</p>
 </blockquote>
-<p>On voit dans l’extrait ci-dessus que l’objectif d’Heisenberg est de ne baser l’interprétation que sur des résultats observables. Ainsi il s’agit de “renoncer” à une interprétation au delà de ce que la mesure peut nous donner.</p>
-<p>Ceci est la première publication d’Heisenberg. Elle pose un formalisme base sur des tableaux. Heisenberg parlera de matrices un peu plus tard. Il posera le principe d’incertitude qui porte son nom en 1927.</p>
-<p>Ainsi Andre Coret <span class="citation" data-cites="PHSC_2001__5_1_105_0">(<a href="#ref-PHSC_2001__5_1_105_0" role="doc-biblioref">Coret 2001</a>)</span> écrit : “En s’appuyant sur l’expérience c’est à dire sur la nécessite de considérer l émission lumineuse comme issue d’un changement d’état de l´electron et non de son mouvement, Heisenberg se permet une opération qu’il qualifie lui-même d’arbitraire (willkur).”</p>
+<p>L’objectif d’Heisenberg est clair : fonder la physique sur les seules grandeurs directement mesurables (comme les fréquences et les intensités des raies spectrales émises) et renoncer délibérément à représenter des trajectoires électroniques inaccessibles à l’expérience.</p>
+<p>Cet article pose les bases d’un formalisme mathématique inédit reposant sur des tableaux de nombres. C’est son directeur Max Born, épaulé par Pascual Jordan, qui identifiera rapidement ces tableaux comme étant des <strong>matrices</strong>, donnant naissance à la <em>mécanique matricielle</em>. Heisenberg n’énoncera le principe d’incertitude (ou d’indétermination) qui porte son nom que deux ans plus tard, en 1927.</p>
+<p>Comme le souligne André Coret <span class="citation" data-cites="PHSC_2001__5_1_105_0">(<a href="#ref-PHSC_2001__5_1_105_0" role="doc-biblioref">Coret 2001</a>)</span> : &gt; « En s’appuyant sur l’expérience, c’est-à-dire sur la nécessité de considérer l’émission lumineuse comme issue d’un changement d’état de l’électron et non de son mouvement, Heisenberg se permet une opération qu’il qualifie lui-même d’arbitraire (<em>willkürlich</em>). »</p>
+<p>Cette année 1925 marque le début d’un formidable « âge d’or » de la physique quantique. Pendant quatre ou cinq ans, une poignée de pionniers visionnaires va poser les fondations de la physique moderne. Nous verrons plus tard dans ce document qu’il faudra attendre 1939 et la publication magistrale de Fritz London et Edmond Bauer pour voir le problème de la mesure quantique formalisé au travers de l’opérateur densité (ou matrice statistique, concept introduit par Landau et von Neumann en 1927). Mais en 1939, la discipline aura déjà changé de siècle : l’ère des pionniers aura laissé place à celle d’une théorie accomplie.</p>
 </section>
 <section id="apport-du-formalisme-hamiltonien" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="apport-du-formalisme-hamiltonien"><span class="header-section-number">4.5</span> Apport du formalisme hamiltonien :</h2>
@@ -1356,10 +1364,10 @@ b \times c &amp; b \times d
 <p>Le <strong>produit externe</strong> d’un vecteur <span class="math inline">|v_1\rangle</span> par un vecteur <span class="math inline">|v_2\rangle</span> s’écrit <span class="math inline">|v_1 \rangle \langle v_2 |</span>.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 21%">
+<col style="width: 31%">
+<col style="width: 23%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1422,12 +1430,12 @@ b \times c &amp; b \times d
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="critère-de-pureté-et-entropie-de-von-neumann"><span class="header-section-number">8.1.3</span> 3. Critère de pureté et entropie de von Neumann</h3>
 <p>Pour savoir si un système est dans un état pur ou un mélange statistique, on utilise deux indicateurs majeurs :</p>
 <ul>
-<li><strong>La pureté <span class="math inline">\gamma = \mathrm{Tr}(\hat{\rho}^2)</span> :</strong>
+<li><strong>La pureté</strong> <span class="math inline">\gamma = \mathrm{Tr}(\hat{\rho}^2)</span> :
 <ul>
 <li>Pour un <strong>état pur</strong> : <span class="math inline">\mathrm{Tr}(\hat{\rho}^2) = 1</span></li>
 <li>Pour un <strong>mélange statistique</strong> : <span class="math inline">\mathrm{Tr}(\hat{\rho}^2) &lt; 1</span></li>
 </ul></li>
-<li><strong>L’entropie de von Neumann <span class="math inline">S</span> :</strong> Elle généralise l’entropie de Gibbs-Boltzmann au cas quantique : <span class="math display">S = -k_\mathrm{B} \, \mathrm{Tr}(\hat{\rho} \ln \hat{\rho})</span> L’entropie est strictement nulle (<span class="math inline">S = 0</span>) pour un état pur (information maximale) et maximale pour un mélange complètement désordonné (ignorance maximale).</li>
+<li><strong>L’entropie de von Neumann</strong> <span class="math inline">S</span> : Elle généralise l’entropie de Gibbs-Boltzmann au cas quantique : <span class="math display">S = -k_\mathrm{B} \, \mathrm{Tr}(\hat{\rho} \ln \hat{\rho})</span> L’entropie est strictement nulle (<span class="math inline">S = 0</span>) pour un état pur (information maximale) et maximale pour un mélange complètement désordonné (ignorance maximale).</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Escale historique : Le lien thermodynamique chez London et Bauer">
 <div class="callout-header d-flex align-content-center">
