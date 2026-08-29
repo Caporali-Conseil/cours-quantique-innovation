@@ -3,40 +3,33 @@ title: "Proof of Concept"
 toc: true
 ---
 
-## Introduction : un espace collaboratif
+# Travaux Pratiques & Proof of Concept (PoC)
 
-L'objet de Caporali Conseil englobe la physique quantique dans son ensemble, mais cet espace se concentre spécifiquement sur les applications liées aux **réseaux distribués**, leur déploiement industriel étant le plus immédiat.
+Le PoC repose sur la trilogie de travaux combinant matrice densité, rotation de Wick et systèmes distribués. Les étudiants peuvent explorer la modélisation à travers trois niveaux d'abstraction :
 
-La publication ResearchGate — [*« Gestion de la faute par la matrice densité au travers d'un cas d'usage satellite : les états temporels de l'agent autonome dans la matrice densité »*](https://www.researchgate.net/publication/411011329) — nécessite des simulations sur des nœuds de réseaux afin de valider le formalisme de :
+::: {.callout-note icon=false}
+## 🔗 Ancrage théorique
+Avant d'entamer la modélisation et le développement de ce PoC, assurez-vous de bien maîtriser les équations et les concepts présentés dans le chapitre du cours :  
+👉 **[Accéder à la section : Application aux réseaux distribués](publications/fondements.html#application-reseaux)**
+:::
 
-- la matrice de densité,
 
-- du commutateur,
-
-- des états temporels de l'agent autonome.
-
-Ce travail, mené dans la foulée des publications de Caporali Conseil, a une portée normative et présente des enjeux industriels majeurs, notamment la création de nouvelles métriques pour les systèmes distribués.
-
-## Scénarios de simulation
-
-### Scénario 1 : transition nominale par accumulation d'information
-* **Détection** : un signal exogène (ex. un *« signal étrange venu de l'espace »*) est capté par un agent.
-* **État initial** : l'agent est en mode *Sofa*. Son état temporel $U(t)$ est proche de $1$ (isolation, mémoire préservée).
-* **Dynamique** : l'afflux d'information $\Delta Q$ augmente rapidement, faisant chuter sa résistance interne $R = \frac{\hbar}{Q^2}$.
-* **Bascule** : l'exponentielle s'effondre ($U(t) \to 0$). L'agent franchit un seuil critique et bascule en mode *Terrasse* pour émettre et partager l'information.
-
-### Scénario 2 : résilience individuelle face au piégeage byzantin
-* **Anomalie** : un agent reçoit un flux artificiellement constant (attaque par rétention ou blocage byzantin), visant à le maintenir figé indéfiniment en mode *Sofa*.
-* **Auto-libération** : malgré la constante de la charge $Q$, l'amortissement temporel naturel ($t \to \infty$) force $e^{-\frac{t Q^2}{\hbar C}} \to 0$.
-* **Résultat** : le composant se décharge et ouvre l'agent vers un nouvel état temporel. L'agent contourne le piège de manière autonome sans intervention extérieure.
-
-### Scénario 3 : rétroaction collective et protection du réseau
-* **Déviation** : le point de départ est identique au Scénario 2 (comportement anormal ou isolement d'un agent).
-* **Réaction du collectif** : la temporalité collective du réseau prend le relais face à l'agent défaillant.
-* **Décohérence** : la matrice densité de l'agent individuel est projetée sous une forme diagonale pure (l'agent est coupé de ses liaisons intriquées/interactives).
-* **Absorption** : l'information du signal est traitée directement à l'échelle de l'état temporel collectif.
-* **Résultat** : pour l'émetteur du signal, l'alerte est traitée de façon fluide et transparente. Le réseau se protège, décharge l'agent individuel et transfère la charge au niveau du consensus global.
 
 ---
 
-L'objectif de cette page et du laboratoire scientifique de Caporali Conseil est de fournir les résultats expérimentaux permettant de valider les concepts développés dans la publication.
+## 1. Niveau Système : Convergence et Consensus Réseau
+*Basé sur : « La matrice densité appliquée au consensus pour la blockchain »*
+* **Objectif :** Représenter l'état local des nœuds $\hat{\rho}_i$ et observer la convergence de la matrice globale du réseau $\hat{\rho}_{\text{réseau}}$ vers un état pur ($S \to 0$).
+
+---
+
+## 2. Niveau Charnière : La Rotation de Wick (Transition Dynamique -> Statistique)
+*Basé sur : « Matrice densité et ingénierie sociale : agents autonomes dans une constellation de satellites »*
+* **Objectif :** Utiliser la rotation de Wick ($\tau = it$) pour convertir les oscillations temporelles d'un agent / satellite en une matrice de probabilité d'équilibre thermodynamique.
+* ❗️ **Application PoC :** Modéliser la prise de décision collective ou le comportement d'essaim (*ingénierie sociale d'agents*) sous contrainte de synchronisation.
+
+---
+
+## 3. Niveau Agent : Gestion de la Faute et États Temporels
+*Basé sur : « Gestion de la faute par la matrice densité »*
+* **Objectif :** Suivre la trajectoire d'un agent autonome à travers ses états temporels locaux pour détecter la décohérence et la dérive de comportement.
