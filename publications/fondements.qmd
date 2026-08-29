@@ -1457,6 +1457,46 @@ En réalité, le saut conceptuel est ailleurs : **chaque mineur pris individuell
 La clé pour modéliser la matrice densité globale du système reste à déterminer, mais elle devra satisfaire le principe d'incertitude temps-énergie à son niveau d'observation. Nous ne sommes donc pas face à deux régimes de tailles différentes qui s'excluent, mais face à l'opposition fondamentale entre la **matrice densité individuelle du mineur** et la **matrice densité globale du réseau**.
 :::
 
+# Fiche Conceptuelle : Agent Classique vs Agent Quantique
+
+## 1. Tableau comparatif des paradigmes
+
+| Dimension | Agent Classique (Ex. Nœud Bitcoin) | Agent Quantique (Ex. Agent à superposition d'état) |
+| :--- | :--- | :--- |
+| **Formalisme mathématique** | Vectoriel classique : $\vec{p} = \begin{pmatrix} p_0 \\ p_1 \end{pmatrix}$ | Matrice de densité : $\hat{\rho} = \begin{pmatrix} \rho_{00} & \rho_{01} \\ \rho_{10} & \rho_{11} \end{pmatrix}$ |
+| **Cohérence interne** | **Nulle** ($\rho_{01} = 0$). L'agent est dans un état déterministe ou un mélange statistique passif. | **Active** ($\rho_{01} \neq 0$). L'agent maintient une superposition et une tension de phase ($\phi$). |
+| **Dynamique d'état** | Commutation binaire nette (ex. *Minage en cours* $\to$ *Bloc validé*). | Évolution continue d'amplitude et de phase entre deux pôles ($|0\rangle$ et $|1\rangle$). |
+| **Nature de la défaillance** | Panne franche, crash, timeout ou faute par transmission d'une valeur erronée. | **Décohérence progressive** : érosion des termes hors-diagonaux ($\rho_{01} \to 0$) sous l'effet du bruit. |
+| **Consensus / Synchronisation** | Alignement par transmission explicite de données et dépense d'énergie ($N$). | Alignement des phases collectives ($\phi$) et convergence de la pureté $\text{Tr}(\hat{\rho}^2) \to 1$. |
+
+<hr>
+
+## 2. Analyse détaillée
+
+### 2.1. L'Agent Classique : L'automate binaire
+
+Un nœud dans un réseau classique (comme Bitcoin) est modélisé par des états mutuellement exclusifs.
+
+* **Incertitude classique** – L'incertitude est uniquement liée à l'ignorance du résultat (processus stochastique). Les termes de la matrice de densité sont strictement diagonaux : $\rho_{00}$ et $\rho_{11}$ représentent les probabilités d'être dans l'état $0$ ou $1$.
+* **Absence d'interférence** – L'agent ne possède aucun état intermédiaire riche. Il ne peut pas exploiter la relation de phase entre ses états potentiels.
+* **Coût de synchronisation** – Pour faire converger le réseau, l'agent doit échanger des paquets explicites (messages réseau) ou injecter du travail brut (Proof-of-Work).
+
+### 2.2. L'Agent Quantique : Le système à mémoire de phase
+
+Un agent modélisé par une matrice de densité $\hat{\rho}_i$ possède la structure d'un **agent à superposition d'état** : il ne choisit pas entre deux extrêmes, il transporte leur interférence.
+
+* **Cohérence interne ($\rho_{01} \neq 0$)** – Les termes hors-diagonaux mesurent la capacité de l'agent à maintenir la superposition de deux modes (ex. *Travail local / Verrouillage global*). Cette cohérence représente sa mémoire d'onde et son horloge interne ($\phi$).
+* **Détection prédictive de défaillance** – Dans un réseau distribué, un agent ne tombe pas en panne subitement. On observe sa matrice locale : lorsque $\rho_{01} \to 0$, l'agent subit une décohérence. Il perd sa capacité de synchronisation **avant** même de transmettre une donnée erronée.
+* **Convergence vers l'état pur** – Le consensus à l'échelle du réseau ne repose pas sur une majorité de votes binaires, mais sur le verrouillage collectif des phases, faisant évoluer le réseau vers un état pur collectif ($S(\hat{\rho}_{\text{réseau}}) \to 0$).
+
+<hr>
+
+## 3. Synthèse pour l'ingénierie des systèmes distribués
+
+Pour un ingénieur réseau, introduire la matrice de densité permet de passer :
+
+1. D'un modèle d'agent **binaire et réactif** (automate à états classiques) ;
+2. À un modèle d'agent **ondulatoire et prédictif** (système à phase interne capable d'évaluer son incertitude avant décision).
 
 # L'écosystème de la quantique :
 
