@@ -1,11 +1,14 @@
 ---
-title: "Proof of Concept"
+title: ""
 toc: true
 ---
 
 # Travaux Pratiques & Proof of Concept (PoC)
 
-Le PoC repose sur la trilogie de travaux combinant matrice densité, rotation de Wick et systèmes distribués. Les étudiants peuvent explorer la modélisation à travers trois niveaux d'abstraction :
+Le PoC repose sur la trilogie de travaux combinant matrice densité, rotation de Wick et systèmes distribués. Les étudiants peuvent explorer la modélisation à travers trois niveaux d'abstraction.
+
+> 💡 **Positionnement stratégique ISO :**
+> Ne pas vendre "de la physique quantique", mais **une architecture multi-agents utilisant le formalisme des matrices de densité pour la gestion de la cohérence et de l'incertitude globale**.
 
 ::: {.callout-note icon=false}
 ## 🔗 Ancrage théorique
