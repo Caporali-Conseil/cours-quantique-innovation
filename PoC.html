@@ -166,12 +166,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-un-espace-collaboratif" id="toc-introduction-un-espace-collaboratif" class="nav-link active" data-scroll-target="#introduction-un-espace-collaboratif">Introduction : un espace collaboratif</a></li>
-  <li><a href="#scénarios-de-simulation" id="toc-scénarios-de-simulation" class="nav-link" data-scroll-target="#scénarios-de-simulation">Scénarios de simulation</a>
+  <li><a href="#travaux-pratiques-proof-of-concept-poc" id="toc-travaux-pratiques-proof-of-concept-poc" class="nav-link active" data-scroll-target="#travaux-pratiques-proof-of-concept-poc">Travaux Pratiques &amp; Proof of Concept (PoC)</a>
   <ul class="collapse">
-  <li><a href="#scénario-1-transition-nominale-par-accumulation-dinformation" id="toc-scénario-1-transition-nominale-par-accumulation-dinformation" class="nav-link" data-scroll-target="#scénario-1-transition-nominale-par-accumulation-dinformation">Scénario 1 : transition nominale par accumulation d’information</a></li>
-  <li><a href="#scénario-2-résilience-individuelle-face-au-piégeage-byzantin" id="toc-scénario-2-résilience-individuelle-face-au-piégeage-byzantin" class="nav-link" data-scroll-target="#scénario-2-résilience-individuelle-face-au-piégeage-byzantin">Scénario 2 : résilience individuelle face au piégeage byzantin</a></li>
-  <li><a href="#scénario-3-rétroaction-collective-et-protection-du-réseau" id="toc-scénario-3-rétroaction-collective-et-protection-du-réseau" class="nav-link" data-scroll-target="#scénario-3-rétroaction-collective-et-protection-du-réseau">Scénario 3 : rétroaction collective et protection du réseau</a></li>
+  <li><a href="#niveau-système-convergence-et-consensus-réseau" id="toc-niveau-système-convergence-et-consensus-réseau" class="nav-link" data-scroll-target="#niveau-système-convergence-et-consensus-réseau">1. Niveau Système : Convergence et Consensus Réseau</a></li>
+  <li><a href="#niveau-charnière-la-rotation-de-wick-transition-dynamique---statistique" id="toc-niveau-charnière-la-rotation-de-wick-transition-dynamique---statistique" class="nav-link" data-scroll-target="#niveau-charnière-la-rotation-de-wick-transition-dynamique---statistique">2. Niveau Charnière : La Rotation de Wick (Transition Dynamique -&gt; Statistique)</a></li>
+  <li><a href="#niveau-agent-gestion-de-la-faute-et-états-temporels" id="toc-niveau-agent-gestion-de-la-faute-et-états-temporels" class="nav-link" data-scroll-target="#niveau-agent-gestion-de-la-faute-et-états-temporels">3. Niveau Agent : Gestion de la Faute et États Temporels</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -198,47 +197,37 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction-un-espace-collaboratif" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-un-espace-collaboratif">Introduction : un espace collaboratif</h2>
-<p>L’objet de Caporali Conseil englobe la physique quantique dans son ensemble, mais cet espace se concentre spécifiquement sur les applications liées aux <strong>réseaux distribués</strong>, leur déploiement industriel étant le plus immédiat.</p>
-<p>La publication ResearchGate — <a href="https://www.researchgate.net/publication/411011329"><em>« Gestion de la faute par la matrice densité au travers d’un cas d’usage satellite : les états temporels de l’agent autonome dans la matrice densité »</em></a> — nécessite des simulations sur des nœuds de réseaux afin de valider le formalisme de :</p>
-<ul>
-<li><p>la matrice de densité,</p></li>
-<li><p>du commutateur,</p></li>
-<li><p>des états temporels de l’agent autonome.</p></li>
-</ul>
-<p>Ce travail, mené dans la foulée des publications de Caporali Conseil, a une portée normative et présente des enjeux industriels majeurs, notamment la création de nouvelles métriques pour les systèmes distribués.</p>
-</section>
-<section id="scénarios-de-simulation" class="level2">
-<h2 class="anchored" data-anchor-id="scénarios-de-simulation">Scénarios de simulation</h2>
-<section id="scénario-1-transition-nominale-par-accumulation-dinformation" class="level3">
-<h3 class="anchored" data-anchor-id="scénario-1-transition-nominale-par-accumulation-dinformation">Scénario 1 : transition nominale par accumulation d’information</h3>
-<ul>
-<li><strong>Détection</strong> : un signal exogène (ex. un <em>« signal étrange venu de l’espace »</em>) est capté par un agent.</li>
-<li><strong>État initial</strong> : l’agent est en mode <em>Sofa</em>. Son état temporel <span class="math inline">U(t)</span> est proche de <span class="math inline">1</span> (isolation, mémoire préservée).</li>
-<li><strong>Dynamique</strong> : l’afflux d’information <span class="math inline">\Delta Q</span> augmente rapidement, faisant chuter sa résistance interne <span class="math inline">R = \frac{\hbar}{Q^2}</span>.</li>
-<li><strong>Bascule</strong> : l’exponentielle s’effondre (<span class="math inline">U(t) \to 0</span>). L’agent franchit un seuil critique et bascule en mode <em>Terrasse</em> pour émettre et partager l’information.</li>
-</ul>
-</section>
-<section id="scénario-2-résilience-individuelle-face-au-piégeage-byzantin" class="level3">
-<h3 class="anchored" data-anchor-id="scénario-2-résilience-individuelle-face-au-piégeage-byzantin">Scénario 2 : résilience individuelle face au piégeage byzantin</h3>
-<ul>
-<li><strong>Anomalie</strong> : un agent reçoit un flux artificiellement constant (attaque par rétention ou blocage byzantin), visant à le maintenir figé indéfiniment en mode <em>Sofa</em>.</li>
-<li><strong>Auto-libération</strong> : malgré la constante de la charge <span class="math inline">Q</span>, l’amortissement temporel naturel (<span class="math inline">t \to \infty</span>) force <span class="math inline">e^{-\frac{t Q^2}{\hbar C}} \to 0</span>.</li>
-<li><strong>Résultat</strong> : le composant se décharge et ouvre l’agent vers un nouvel état temporel. L’agent contourne le piège de manière autonome sans intervention extérieure.</li>
-</ul>
-</section>
-<section id="scénario-3-rétroaction-collective-et-protection-du-réseau" class="level3">
-<h3 class="anchored" data-anchor-id="scénario-3-rétroaction-collective-et-protection-du-réseau">Scénario 3 : rétroaction collective et protection du réseau</h3>
-<ul>
-<li><strong>Déviation</strong> : le point de départ est identique au Scénario 2 (comportement anormal ou isolement d’un agent).</li>
-<li><strong>Réaction du collectif</strong> : la temporalité collective du réseau prend le relais face à l’agent défaillant.</li>
-<li><strong>Décohérence</strong> : la matrice densité de l’agent individuel est projetée sous une forme diagonale pure (l’agent est coupé de ses liaisons intriquées/interactives).</li>
-<li><strong>Absorption</strong> : l’information du signal est traitée directement à l’échelle de l’état temporel collectif.</li>
-<li><strong>Résultat</strong> : pour l’émetteur du signal, l’alerte est traitée de façon fluide et transparente. Le réseau se protège, décharge l’agent individuel et transfère la charge au niveau du consensus global.</li>
-</ul>
+<section id="travaux-pratiques-proof-of-concept-poc" class="level1">
+<h1>Travaux Pratiques &amp; Proof of Concept (PoC)</h1>
+<p>Le PoC repose sur la trilogie de travaux combinant matrice densité, rotation de Wick et systèmes distribués. Les étudiants peuvent explorer la modélisation à travers trois niveaux d’abstraction :</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🔗 Ancrage théorique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avant d’entamer la modélisation et le développement de ce PoC, assurez-vous de bien maîtriser les équations et les concepts présentés dans le chapitre du cours :<br>
+👉 <strong><a href="publications/fondements.html#application-reseaux">Accéder à la section : Application aux réseaux distribués</a></strong></p>
+</div>
+</div>
 <hr>
-<p>L’objectif de cette page et du laboratoire scientifique de Caporali Conseil est de fournir les résultats expérimentaux permettant de valider les concepts développés dans la publication.</p>
+<section id="niveau-système-convergence-et-consensus-réseau" class="level2">
+<h2 class="anchored" data-anchor-id="niveau-système-convergence-et-consensus-réseau">1. Niveau Système : Convergence et Consensus Réseau</h2>
+<p><em>Basé sur : « La matrice densité appliquée au consensus pour la blockchain »</em> * <strong>Objectif :</strong> Représenter l’état local des nœuds <span class="math inline">\hat{\rho}_i</span> et observer la convergence de la matrice globale du réseau <span class="math inline">\hat{\rho}_{\text{réseau}}</span> vers un état pur (<span class="math inline">S \to 0</span>).</p>
+<hr>
+</section>
+<section id="niveau-charnière-la-rotation-de-wick-transition-dynamique---statistique" class="level2">
+<h2 class="anchored" data-anchor-id="niveau-charnière-la-rotation-de-wick-transition-dynamique---statistique">2. Niveau Charnière : La Rotation de Wick (Transition Dynamique -&gt; Statistique)</h2>
+<p><em>Basé sur : « Matrice densité et ingénierie sociale : agents autonomes dans une constellation de satellites »</em> * <strong>Objectif :</strong> Utiliser la rotation de Wick (<span class="math inline">\tau = it</span>) pour convertir les oscillations temporelles d’un agent / satellite en une matrice de probabilité d’équilibre thermodynamique. * ❗️ <strong>Application PoC :</strong> Modéliser la prise de décision collective ou le comportement d’essaim (<em>ingénierie sociale d’agents</em>) sous contrainte de synchronisation.</p>
+<hr>
+</section>
+<section id="niveau-agent-gestion-de-la-faute-et-états-temporels" class="level2">
+<h2 class="anchored" data-anchor-id="niveau-agent-gestion-de-la-faute-et-états-temporels">3. Niveau Agent : Gestion de la Faute et États Temporels</h2>
+<p><em>Basé sur : « Gestion de la faute par la matrice densité »</em> * <strong>Objectif :</strong> Suivre la trajectoire d’un agent autonome à travers ses états temporels locaux pour détecter la décohérence et la dérive de comportement.</p>
 
 
 </section>
