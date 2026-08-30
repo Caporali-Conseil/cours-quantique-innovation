@@ -3,7 +3,7 @@ title: "Introduction à la théorie quantique"
 author: Stéphane Caporali - Caporali Conseil
 bibliography: fichier.bib 
 version: "1.0.5" 
-date_version: "22 août 2026"
+date_version: "30 août 2026"
 editor: visual
 format:
   html:
@@ -39,7 +39,7 @@ metadata:
 
 *Licence :* Ce document est placé sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-*Version :* 1.0.5 (Dernière mise à jour : 24 août 2026)
+*Version :* 1.0.5 (Dernière mise à jour : 30 août 2026)
 
 Ce travail a pour vocation d'être un socle théorique et pédagogique en amont de formations appliquées. Il s'adresse aux acteurs et professionnels concernés par la convergence entre quantique et réseaux.
 
@@ -63,7 +63,7 @@ Ce document est l'aboutissement d'une démarche construite sur trois piliers dis
 
 2.  **Valorisation pédagogique : l'approche par la mécanique matricielle**
 
-    - *Source :* l'ouvrage "Calcul matriciel. application à la physique quantique" [@alma991002711779705804] (1960).
+    - *Source :* l'ouvrage "Calcul matriciel. application à la physique quantique" [@Blaquiere1960_t2] (1960).
 
     - *Intérêt :* Proposer une approche progressive et ambitieuse du formalisme de l'algèbre linéaire, jugée particulièrement aidante pour l'appropriation par les non-mathématiciens.
 
@@ -72,8 +72,7 @@ Ce document est l'aboutissement d'une démarche construite sur trois piliers dis
     - **Problématique :** La représentation et la modélisation des architectures décentralisées de la technologie Blockchain nécessitent de nouveaux formalismes.
 
     - **Hypothèse de synergie :** Une recherche par analogie dans d'autres domaines, notamment la quantique, peut enrichir la conception de la blockchain, créant un bénéfice structurel et conceptuel réciproque.
-  
- 
+
 # Introduction historique :
 
 ## Le document de rupture de 1925 :
@@ -429,7 +428,7 @@ Cependant, cette incertitude macroscopique est uniquement liée aux limites de n
 
 ## Le « principe d'incertitude des radioélectriciens »
 
-Bien que l'expression *« principe d'incertitude des radioélectriciens »* ne constitue pas un usage standardisé, elle est explicitement citée par Augustin Blaquière [@alma991002711819705804]. Son intérêt pédagogique est majeur : elle dresse un pont naturel entre la physique classique et la physique quantique. En effet, dans le domaine classique, nous sommes familiers avec l'idée qu'un signal temporel (comme le son de la voix ou une tension électrique) peut être équivalemment décrit par son spectre fréquentiel.
+Bien que l'expression *« principe d'incertitude des radioélectriciens »* ne constitue pas un usage standardisé, elle est explicitement citée par Augustin Blaquière [@Blaquiere1960_t2]. Son intérêt pédagogique est majeur : elle dresse un pont naturel entre la physique classique et la physique quantique. En effet, dans le domaine classique, nous sommes familiers avec l'idée qu'un signal temporel (comme le son de la voix ou une tension électrique) peut être équivalemment décrit par son spectre fréquentiel.
 
 Le principe d'incertitude est fondamentalement une **propriété mathématique de la transformation de Fourier**. Il n'est donc pas exclusif à la physique quantique. On le retrouve en électronique dès lors qu'on associe à un signal temporel $s(t)$ son spectre en fréquence $S(f)$.
 
@@ -500,7 +499,7 @@ Ce que montre cette citation : La transition vers le quantique ne rejette pas l'
 
 ## Approche intuitive de la non-commutation des fonctions
 
-Comme le souligne Austin Blaquière [@alma991002711779705804], le concept de non-commutation peut être introduit par des opérations mathématiques simples appliquées à une fonction d'onde $\Psi(x)$ (que nous noterons ici $f(x)$).
+Comme le souligne Austin Blaquière [@Blaquiere1960_t2], le concept de non-commutation peut être introduit par des opérations mathématiques simples appliquées à une fonction d'onde $\Psi(x)$ (que nous noterons ici $f(x)$).
 
 Considérons les deux opérateurs mathématiques suivants :
 
@@ -589,15 +588,11 @@ En pratique, les particules se déplacent sous forme de **paquets d'ondes** (obt
 
 ### Synthèse : Analogie avec le traitement du signal et les réseaux
 
-+-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
-| Configuration                     | État physique        | Traduction "Signal / Réseau"                                                                              |
-+:==================================+:=====================+:==========================================================================================================+
-| **Onde plane** (@fig-incert1)     | Onde pure monochrome | **Porteuse continue (CW)** : fréquence parfaitement connue, mais impossible de dater un événement.        |
-+-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
-| **Battement** (@fig-incert2)      | Superposition modale | **Signal multi-porteuse** : début de structuration de l'information.                                      |
-+-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
-| **Paquet d'ondes** (@fig-incert3) | Pulse localisé       | **Impulsion / Qubit transmis** : résolution temporelle/spatiale précise, mais occupation spectrale large. |
-+-----------------------------------+----------------------+-----------------------------------------------------------------------------------------------------------+
+| Configuration | État physique | Traduction "Signal / Réseau" |
+|:--------------|:--------------|:-----------------------------------------|
+| **Onde plane** (@fig-incert1) | Onde pure monochrome | **Porteuse continue (CW)** : fréquence parfaitement connue, mais impossible de dater un événement. |
+| **Battement** (@fig-incert2) | Superposition modale | **Signal multi-porteuse** : début de structuration de l'information. |
+| **Paquet d'ondes** (@fig-incert3) | Pulse localisé | **Impulsion / Qubit transmis** : résolution temporelle/spatiale précise, mais occupation spectrale large. |
 
 ## Principe d'incertitude temps-énergie
 
@@ -661,7 +656,7 @@ Cette introduction permet d'établir clairement le cadre physique et conceptuel 
 3.  **L'indétermination spatiale :** en vertu du principe d'incertitude, une onde de fréquence pure implique une ignorance totale quant à la position exacte de la particule ($\Delta x \to \infty$).
 4.  **La structure de la base en** $x$ : l'état spatial idéal est perçu comme une superposition continue d'impulsions de Dirac.
 
-Dans la théorie des systèmes et du traitement du signal (telle que développée par Austin Blaquière [@alma991002711779705804]), l'étude de l'état d'un système nécessite cette même rigueur dans le choix de la **base de représentation** (temporelle $t$ ou spatiale $x$).
+Dans la théorie des systèmes et du traitement du signal (telle que développée par Austin Blaquière [@Blaquiere1960_t2]), l'étude de l'état d'un système nécessite cette même rigueur dans le choix de la **base de représentation** (temporelle $t$ ou spatiale $x$).
 
 ### 1. Filtrage temporel et impulsion de Dirac
 
@@ -848,15 +843,11 @@ $$\frac{dX(t)}{dt} = \begin{bmatrix}
 
 Cette approche matricielle des systèmes dynamiques classiques est l'exact pendant du formalisme de la mécanique quantique :
 
-+-----------------------------------------------------+-------------------------------------------------------------------------------------+
-| Électronique / Automatique (RLC)                    | Physique quantique                                                                  |
-+:====================================================+:====================================================================================+
-| **Vecteur d'état** $X(t)$ (courant, tension)        | **Fonction / Vector d'état** $\Psi(x,t)$                                            |
-+-----------------------------------------------------+-------------------------------------------------------------------------------------+
-| **Matrice de dynamique** $A$ (composants $R, L, C$) | **Opérateur Hamiltonien** $\hat{H}$ (énergie $T + V$)                               |
-+-----------------------------------------------------+-------------------------------------------------------------------------------------+
-| **Équation d'état** $\frac{dX}{dt} = AX + Bu$       | **Équation de Schrödinger** $i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi$ |
-+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+| Électronique / Automatique (RLC) | Physique quantique |
+|:---------------------------|:-------------------------------------------|
+| **Vecteur d'état** $X(t)$ (courant, tension) | **Fonction / Vector d'état** $\Psi(x,t)$ |
+| **Matrice de dynamique** $A$ (composants $R, L, C$) | **Opérateur Hamiltonien** $\hat{H}$ (énergie $T + V$) |
+| **Équation d'état** $\frac{dX}{dt} = AX + Bu$ | **Équation de Schrödinger** $i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi$ |
 
 En mécanique quantique, l'état d'une particule évolue ainsi sous l'action d'un **opérateur** ($\hat{H}$), de la même façon que l'état d'un circuit électrique évolue sous l'action de la matrice des propriétés physiques de ses composants.
 
@@ -969,7 +960,7 @@ Ce sont les éléments non diagonaux qui dictent la géométrie de la transforma
 
 ### Loi dans le plan géométrique
 
-Comme le rappelle Austin Blaquière dans son traité de mécanique [@Blaquiere1966_t1, p. 9] :
+Comme le rappelle Austin Blaquière dans son traité de mécanique [@Blaquiere1960_t1, p. 9] :
 
 > Étant donné un point $P_1$ du plan, on lui fait correspondre un point $P_2$ par une loi donnée.
 
@@ -981,7 +972,7 @@ $$|v_1\rangle \langle v_2| = \begin{pmatrix} X_1 X_2 & X_1 Y_2 \\ Y_1 X_2 & Y_1 
 
 montre que chaque cellule est une hybridation des deux points. On a ainsi créé un opérateur.
 
-Bien que mathématiquement cohérent, ce niveau d'abstraction nécessite d'être complété par un outil interprétable physiquement, afin de traduire les états du consensus en grandeurs observables. Austin Blaquière souligne cette nécessité fondamentale dans le second tome de son ouvrage [@Blaquiere1966_t2, p. 39] :
+Bien que mathématiquement cohérent, ce niveau d'abstraction nécessite d'être complété par un outil interprétable physiquement, afin de traduire les états du consensus en grandeurs observables. Austin Blaquière souligne cette nécessité fondamentale dans le second tome de son ouvrage [@Blaquiere1960_t2, p. 39] :
 
 > Il faut remarquer que pour toute onde classique — onde acoustique, onde lumineuse... — nos sens sont impressionnés par le carré de l'amplitude $a^2$ et non pas par l'amplitude elle-même. Ceci résulte du fait que nos organismes ne peuvent percevoir que des énergies. Or l'énergie transportée par une onde classique dans un temps donné, ou sa puissance, est proportionnelle au carré de son amplitude.
 
@@ -995,7 +986,7 @@ Cependant, le produit simple $|v_1\rangle \langle v_2|$ ne peut jamais fournir u
 
 ### Le saut dans le vide
 
-Une démarche similaire à la rupture épistémologique initiée par Heisenberg (1925) [@heisenberg1925] devient alors nécessaire : abandonner les représentations cinématiques classiques au profit d'observables matricielles.
+Une démarche similaire à la rupture épistémologique initiée par Heisenberg (1925) [@Heisenberg1925] devient alors nécessaire : abandonner les représentations cinématiques classiques au profit d'observables matricielles.
 
 Pour exprimer la position $x$ d'une particule à un instant donné, Heisenberg renonce à une valeur unique et choisit de manipuler un tableau — l'ancêtre de la matrice position $\hat{X}$ — réunissant l'ensemble des positions possibles.
 
@@ -1012,7 +1003,6 @@ $$|v_{\text{mixte}}\rangle = \alpha |v_1\rangle + \beta |v_2\rangle$$
 Cette écriture s'interprète géométriquement comme une combinaison linéaire dans un espace de Hilbert. Son lien avec la mesure physique impose le passage au carré du module : $|\alpha|^2$ et $|\beta|^2$ représentent les probabilités de trouver le système respectivement dans l'état 1 ou 2.
 
 Les coefficients $\alpha$ et $\beta$ sont les **amplitudes de probabilité**. Exprimés sous forme complexe (cartésienne $\alpha = a + ib$ ou polaire $\alpha = r e^{i\phi}$), le module $r$ fixe le niveau de présence ($P = r^2$), tandis que la phase $\phi$ englobe l'information de structure et de cohérence.
-
 
 # L'opérateur densité $\hat{\rho}$
 
@@ -1056,15 +1046,11 @@ $$\langle v_1 | v_2 \rangle = X_1^* X_2 + Y_1^* Y_2 \in \mathbb{C}$$
 
 Le **produit externe** d'un vecteur $|v_1\rangle$ par un vecteur $|v_2\rangle$ s'écrit $|v_1 \rangle \langle v_2 |$.
 
-+-----------------------+-----------------------------------+-------------------------+------------------------+
-| Opération             | Notation                          | Type de résultat        | Analogie               |
-+:======================+:==================================+:========================+:=======================+
-| **PRODUIT SCALAIRE**  | $\langle v_1 \mid v_2 \rangle$    | Scalaire ($\mathbb{C}$) | Ligne $\times$ Colonne |
-+-----------------------+-----------------------------------+-------------------------+------------------------+
-| **PRODUIT TENSORIEL** | $|v_1\rangle \otimes |v_2\rangle$ | Vecteur d'espace étendu | Expansion d'espace     |
-+-----------------------+-----------------------------------+-------------------------+------------------------+
-| **PRODUIT EXTERNE**   | $|v_1\rangle\langle v_2|$         | Opérateur (Matrice)     | Colonne $\times$ Ligne |
-+-----------------------+-----------------------------------+-------------------------+------------------------+
+| Opération | Notation | Type de résultat | Analogie |
+|:----------------|:--------------------|:----------------|:----------------|
+| **PRODUIT SCALAIRE** | $\langle v_1 \mid v_2 \rangle$ | Scalaire ($\mathbb{C}$) | Ligne $\times$ Colonne |
+| **PRODUIT TENSORIEL** | $|v_1\rangle \otimes |v_2\rangle$ | Vecteur d'espace étendu | Expansion d'espace |
+| **PRODUIT EXTERNE** | $|v_1\rangle\langle v_2|$ | Opérateur (Matrice) | Colonne $\times$ Ligne |
 
 ### La matrice densité : formulation
 
@@ -1294,16 +1280,15 @@ Non-localité : La corrélation semble se produire instantanément, indépendamm
 
 Non-réalité : La mécanique quantique implique que les propriétés n'existent pas avant la mesure, défiant la notion de réalité locale.
 
-
 # L'écosystème français et européen de la quantique (2025-2026)
 
 À l'occasion de la 4ᵉ édition de la conférence *France Quantum* (juin 2025 à Station F) [@FranceQuantum2025], cinq priorités technologiques majeures ont été mises en avant par l'écosystème :
 
-1. **L'intégration HPC-Quantique :** Le couplage des processeurs quantiques aux supercalculateurs classiques (ex. Pasqal fournissant un processeur de 100 qubits au CEA).
-2. **Le calcul quantique tolérant aux fautes (*FTQC*) :** Piloté notamment par le CEA et l'Inria à Grenoble, soutenu par le Ministère des Armées via un engagement sur 15 ans auprès de cinq startups clés (*Alice & Bob*, *C12*, *Pasqal*, *Quandela*, et *Quobly*).
-3. **Les capteurs quantiques (*Quantum Sensing*) :** Pour la métrologie et l'imagerie de haute précision.
-4. **La cryptographie post-quantique (*PQC*) :** La sécurisation des algorithmes contre les attaques quantiques futures.
-5. **Les réseaux de communication quantique sécurisés :** La distribution quantique de clés (*QKD*) et l'Internet quantique.
+1.  **L'intégration HPC-Quantique :** Le couplage des processeurs quantiques aux supercalculateurs classiques (ex. Pasqal fournissant un processeur de 100 qubits au CEA).
+2.  **Le calcul quantique tolérant aux fautes (*FTQC*) :** Piloté notamment par le CEA et l'Inria à Grenoble, soutenu par le Ministère des Armées via un engagement sur 15 ans auprès de cinq startups clés (*Alice & Bob*, *C12*, *Pasqal*, *Quandela*, et *Quobly*).
+3.  **Les capteurs quantiques (*Quantum Sensing*) :** Pour la métrologie et l'imagerie de haute précision.
+4.  **La cryptographie post-quantique (*PQC*) :** La sécurisation des algorithmes contre les attaques quantiques futures.
+5.  **Les réseaux de communication quantique sécurisés :** La distribution quantique de clés (*QKD*) et l'Internet quantique.
 
 ![Le hub d'innovation grenoblois, au cœur de la recherche sur le silicium quantique (CEA-Leti / Inria).](ESRF.jpg){fig-align="center" width="400"}
 
@@ -1314,7 +1299,6 @@ Si l'Europe ne compte pas encore de géant intégré comparables aux acteurs am�
 Sur le plan académique, la région Île-de-France constitue un pôle d'excellence historique (avec Sorbonne Université, Paris-Saclay, Télécom Paris) combinant recherche fondamentale et formations spécialisées.
 
 Au niveau communautaire, la *Stratégie Quantique Européenne* officialisée à l'été 2025 fixe le cap d'une souveraineté technologique d'ici 2030, renforcée par la préparation du *Quantum Act* européen.
-
 
 # Application aux réseaux distribués {#application-reseaux}
 
@@ -1336,9 +1320,9 @@ En transposant ce formalisme au modèle stochastique du minage (processus de Poi
 
 **A. Trajectoire des amplitudes** $\alpha(t)$ et $\beta(t)$\
 
-Au fur et à mesure que le temps $t$ s'écoule au sein de la fenêtre de minage : \* 
+Au fur et à mesure que le temps $t$ s'écoule au sein de la fenêtre de minage : \*
 
-**Amplitude de statu quo :** $\alpha(t) = e^{-\frac{\lambda t}{2}}$ (l'amplitude de rester dans l'état sans bloc décline). \* 
+**Amplitude de statu quo :** $\alpha(t) = e^{-\frac{\lambda t}{2}}$ (l'amplitude de rester dans l'état sans bloc décline). \*
 
 **Amplitude de découverte :** $\beta(t) = \sqrt{1 - e^{-\lambda t}}$ (le module au carré $\vert\beta(t)\vert^2 = 1 - e^{-\lambda t}$ retrouve exactement la fonction de distribution cumulée de la loi de Poisson).
 
@@ -1346,7 +1330,7 @@ Le paramètre $\lambda$ représente le taux de hachage effectif du nœud rapport
 
 **B. La borne** $\Delta E \cdot \Delta t$ comme arbitrage architectural\
 
-\* $\Delta E$ **(Le débit d'énergie / Hashrate) :** Représente l'intensité de la puissance thermodynamique (joules par seconde) injectée par le nœud pour alimenter ses puces ASIC et explorer l'espace des nonces. \* 
+\* $\Delta E$ **(Le débit d'énergie / Hashrate) :** Représente l'intensité de la puissance thermodynamique (joules par seconde) injectée par le nœud pour alimenter ses puces ASIC et explorer l'espace des nonces. \*
 
 $\Delta t$ **(La résolution temporelle du consensus) :** Représente l'incertitude sur l'instant exact de validation.
 
@@ -1479,12 +1463,12 @@ En réalité, le saut conceptuel est ailleurs : **chaque mineur pris individuell
 La clé pour modéliser la matrice densité globale du système reste à déterminer, mais elle devra satisfaire le principe d'incertitude temps-énergie à son niveau d'observation. Nous ne sommes donc pas face à deux régimes de tailles différentes qui s'excluent, mais face à l'opposition fondamentale entre la **matrice densité individuelle du mineur** et la **matrice densité globale du réseau**.
 :::
 
-# Fiche Conceptuelle : Agent Classique vs Agent Quantique
+# Fiche conceptuelle : agent classique vs agent quantique
 
 ## 1. Tableau comparatif des paradigmes
 
 | Dimension | Agent Classique (Ex. Nœud Bitcoin) | Agent Quantique (Ex. Agent à superposition d'état) |
-| :--- | :--- | :--- |
+|:-----------------------|:-----------------------|:-----------------------|
 | **Formalisme mathématique** | Vectoriel classique : $\vec{p} = \begin{pmatrix} p_0 \\ p_1 \end{pmatrix}$ | Matrice de densité : $\hat{\rho} = \begin{pmatrix} \rho_{00} & \rho_{01} \\ \rho_{10} & \rho_{11} \end{pmatrix}$ |
 | **Cohérence interne** | **Nulle** ($\rho_{01} = 0$). L'agent est dans un état déterministe ou un mélange statistique passif. | **Active** ($\rho_{01} \neq 0$). L'agent maintient une superposition et une tension de phase ($\phi$). |
 | **Dynamique d'état** | Commutation binaire nette (ex. *Minage en cours* $\to$ *Bloc validé*). | Évolution continue d'amplitude et de phase entre deux pôles ($|0\rangle$ et $|1\rangle$). |
@@ -1499,17 +1483,17 @@ La clé pour modéliser la matrice densité globale du système reste à déterm
 
 Un nœud dans un réseau classique (comme Bitcoin) est modélisé par des états mutuellement exclusifs.
 
-* **Incertitude classique** – L'incertitude est uniquement liée à l'ignorance du résultat (processus stochastique). Les termes de la matrice de densité sont strictement diagonaux : $\rho_{00}$ et $\rho_{11}$ représentent les probabilités d'être dans l'état $0$ ou $1$.
-* **Absence d'interférence** – L'agent ne possède aucun état intermédiaire riche. Il ne peut pas exploiter la relation de phase entre ses états potentiels.
-* **Coût de synchronisation** – Pour faire converger le réseau, l'agent doit échanger des paquets explicites (messages réseau) ou injecter du travail brut (Proof-of-Work).
+- **Incertitude classique** – L'incertitude est uniquement liée à l'ignorance du résultat (processus stochastique). Les termes de la matrice de densité sont strictement diagonaux : $\rho_{00}$ et $\rho_{11}$ représentent les probabilités d'être dans l'état $0$ ou $1$.
+- **Absence d'interférence** – L'agent ne possède aucun état intermédiaire riche. Il ne peut pas exploiter la relation de phase entre ses états potentiels.
+- **Coût de synchronisation** – Pour faire converger le réseau, l'agent doit échanger des paquets explicites (messages réseau) ou injecter du travail brut (Proof-of-Work).
 
 ### 2.2. L'Agent Quantique : Le système à mémoire de phase
 
 Un agent modélisé par une matrice de densité $\hat{\rho}_i$ possède la structure d'un **agent à superposition d'état** : il ne choisit pas entre deux extrêmes, il transporte leur interférence.
 
-* **Cohérence interne ($\rho_{01} \neq 0$)** – Les termes hors-diagonaux mesurent la capacité de l'agent à maintenir la superposition de deux modes (ex. *Travail local / Verrouillage global*). Cette cohérence représente sa mémoire d'onde et son horloge interne ($\phi$).
-* **Détection prédictive de défaillance** – Dans un réseau distribué, un agent ne tombe pas en panne subitement. On observe sa matrice locale : lorsque $\rho_{01} \to 0$, l'agent subit une décohérence. Il perd sa capacité de synchronisation **avant** même de transmettre une donnée erronée.
-* **Convergence vers l'état pur** – Le consensus à l'échelle du réseau ne repose pas sur une majorité de votes binaires, mais sur le verrouillage collectif des phases, faisant évoluer le réseau vers un état pur collectif ($S(\hat{\rho}_{\text{réseau}}) \to 0$).
+- **Cohérence interne (**$\rho_{01} \neq 0$) – Les termes hors-diagonaux mesurent la capacité de l'agent à maintenir la superposition de deux modes (ex. *Travail local / Verrouillage global*). Cette cohérence représente sa mémoire d'onde et son horloge interne ($\phi$).
+- **Détection prédictive de défaillance** – Dans un réseau distribué, un agent ne tombe pas en panne subitement. On observe sa matrice locale : lorsque $\rho_{01} \to 0$, l'agent subit une décohérence. Il perd sa capacité de synchronisation **avant** même de transmettre une donnée erronée.
+- **Convergence vers l'état pur** – Le consensus à l'échelle du réseau ne repose pas sur une majorité de votes binaires, mais sur le verrouillage collectif des phases, faisant évoluer le réseau vers un état pur collectif ($S(\hat{\rho}_{\text{réseau}}) \to 0$).
 
 <hr>
 
@@ -1517,9 +1501,8 @@ Un agent modélisé par une matrice de densité $\hat{\rho}_i$ possède la struc
 
 Pour un ingénieur réseau, introduire la matrice de densité permet de passer :
 
-1. D'un modèle d'agent **binaire et réactif** (automate à états classiques) ;
-2. À un modèle d'agent **ondulatoire et prédictif** (système à phase interne capable d'évaluer son incertitude avant décision).
-
+1.  D'un modèle d'agent **binaire et réactif** (automate à états classiques) ;
+2.  À un modèle d'agent **ondulatoire et prédictif** (système à phase interne capable d'évaluer son incertitude avant décision).
 
 # Annexe mathématique
 
@@ -1757,7 +1740,7 @@ x_n' = a_{n1}x_1 + a_{n2}x_2 + \dots + a_{nn}x_n
 ::: callout-note
 ### Précision sur la notion de linéarité
 
-Dans son premier tome, Austin Blaquière pose le système d'équations algébriques linéaires comme fondement mathématique [@Blaquiere1960].
+Dans son premier tome, Austin Blaquière pose le système d'équations algébriques linéaires comme fondement mathématique [@Blaquiere1960_t1].
 
 Lorsque l'on passe d'une représentation matricielle à une représentation fonctionnelle, l'équation aux valeurs propres prend la forme d'une **équation différentielle**. L'opérateur peut alors comporter des dérivées premières ou secondes ($\frac{d}{dx}, \frac{d^2}{dx^2}$), mais la fonction $f$ y apparaît toujours de façon linéaire (sans terme en $f^2$).
 
@@ -2022,17 +2005,12 @@ L'équation différentielle (l'opérateur $\hat{H}$ ou $\frac{d^2}{dx^2}$) fourn
 
 Ce principe explique pourquoi un même opérateur différentiel génère des bases de fonctions complètement différentes selon le dispositif expérimental considéré :
 
-+---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
-| Dispositif expérimental         | Conditions aux limites (Contraintes physiques)                                       | Forme des vecteurs de la base                                                      | Nature du spectre              |
-+:================================+:=====================================================================================+:===================================================================================+:===============================+
-| **Puits infini / Boîte rigide** | Parois impénétrables en $x=0$ et $x=L$ :<br>$\psi(0) = \psi(L) = 0$                  | Sinus réels :<br>$\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi}{L}x\right)$ | Discret ($n \in \mathbb{N}^*$) |
-+---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
-| **Anneau quantique**            | Conditions périodiques sur $[0, T]$ :<br>$\psi(0) = \psi(T)$                         | Exponentielles complexes discrets :<br>$f_k(x) = e^{i k \frac{2\pi}{T} x}$         | Discret ($k \in \mathbb{Z}$)   |
-+---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
-| **Particule totalement libre**  | Aucun confinement ($x \in ]-\infty, +\infty[$) :<br>Pas de conditions aux bords      | Ondes planes continues :<br>$\psi_k(x) = e^{i k x}$                                | Continu ($k \in \mathbb{R}$)   |
-+---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
-| **Atome d'hydrogène**           | Potentiel central coulombien :<br>$\psi(r, \theta, \phi) \to 0$ quand $r \to \infty$ | Harmoniques sphériques $\times$ Polynômes de Laguerre                              | Discret ($n, l, m$)            |
-+---------------------------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------------------------+
+| Dispositif expérimental | Conditions aux limites (Contraintes physiques) | Forme des vecteurs de la base | Nature du spectre |
+|:-------------|:---------------------|:--------------------|:-------------|
+| **Puits infini / Boîte rigide** | Parois impénétrables en $x=0$ et $x=L$ :<br>$\psi(0) = \psi(L) = 0$ | Sinus réels :<br>$\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi}{L}x\right)$ | Discret ($n \in \mathbb{N}^*$) |
+| **Anneau quantique** | Conditions périodiques sur $[0, T]$ :<br>$\psi(0) = \psi(T)$ | Exponentielles complexes discrets :<br>$f_k(x) = e^{i k \frac{2\pi}{T} x}$ | Discret ($k \in \mathbb{Z}$) |
+| **Particule totalement libre** | Aucun confinement ($x \in ]-\infty, +\infty[$) :<br>Pas de conditions aux bords | Ondes planes continues :<br>$\psi_k(x) = e^{i k x}$ | Continu ($k \in \mathbb{R}$) |
+| **Atome d'hydrogène** | Potentiel central coulombien :<br>$\psi(r, \theta, \phi) \to 0$ quand $r \to \infty$ | Harmoniques sphériques $\times$ Polynômes de Laguerre | Discret ($n, l, m$) |
 
 #### Ce qu'il faut en retenir
 
@@ -2220,7 +2198,5 @@ $$\mathbf{X} = \begin{pmatrix}
 - **Non diagonale :** L'opérateur $x$ ne commute pas avec $\frac{d^2}{dx^2}$, la position n'est pas conservée dans la base des états d'énergie.
 - **Hermiticité :** Bien que les termes hors diagonale soient imaginaires purs, la matrice vérifie $\mathbf{X}_{pq} = \overline{\mathbf{X}_{qp}}$. Elle est **hermitienne** ($\mathbf{X}^\dagger = \mathbf{X}$), garantissant que toute mesure physique de la position donnera une valeur propre réelle.
 :::
-
- 
 
 # Références :

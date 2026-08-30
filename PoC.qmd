@@ -36,3 +36,4 @@ Avant d'entamer la modélisation et le développement de ce PoC, assurez-vous de
 ## 3. Niveau Agent : Gestion de la Faute et États Temporels
 *Basé sur : « Gestion de la faute par la matrice densité »*
 * **Objectif :** Suivre la trajectoire d'un agent autonome à travers ses états temporels locaux pour détecter la décohérence et la dérive de comportement.
+
