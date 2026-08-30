@@ -1068,13 +1068,13 @@ Pour une introduction progressive à ces principes, on pourra consulter l'ouvrag
 
 Cette formulation répond exactement à l'impasse conceptuelle rencontrée précédemment : le simple vecteur d'état $|\Psi\rangle$ ne sait décrire qu'un **état pur** (une superposition cohérente quantique). Dès qu'un système interagit avec son environnement ou que l'observateur subit une ignorance statistique classique, il faut passer à l'opérateur densité $\hat{\rho}$.
 
-### 1. Définition de la matrice densite
+### Définition de la matrice densite
 
 - **État pur (Cohérence quantique) :** Le système est parfaitement isolé et décrit par un unique ket $|\Psi\rangle$. Son opérateur densité est le projecteur direct : $$\hat{\rho} = |\Psi\rangle\langle\Psi|$$
 
 - **Mélange statistique (Incertitude classique) :** Le système a une probabilité classique $p_k$ d'être dans l'état pur $|\Psi_k\rangle$ (avec $\sum_k p_k = 1$). Son opérateur densité s'écrit alors selon la formule de London et Bauer : $$\hat{\rho} = \sum_k p_k |\Psi_k\rangle\langle\Psi_k|$$
 
-### 2. Propriétés fondamentales de l'opérateur densité
+### Propriétés fondamentales de l'opérateur densité
 
 Tout opérateur densité $\hat{\rho}$ vérifie trois propriétés mathématiques strictes :
 
@@ -1082,7 +1082,7 @@ Tout opérateur densité $\hat{\rho}$ vérifie trois propriétés mathématiques
 2.  **Conservation de la probabilité (Trace égale à 1) :** $$\mathrm{Tr}(\hat{\rho}) = 1$$
 3.  **Positivité :** Pour tout ket $|\phi\rangle$, $\langle\phi|\hat{\rho}|\phi\rangle \ge 0$ (les probabilités de présence sont toujours positives).
 
-### 3. Critère de pureté et entropie de von Neumann
+### Critère de pureté et entropie de von Neumann
 
 Pour savoir si un système est dans un état pur ou un mélange statistique, on utilise deux indicateurs majeurs :
 
@@ -1302,11 +1302,11 @@ Au niveau communautaire, la *Stratégie Quantique Européenne* officialisée à 
 
 # Application aux réseaux distribués {#application-reseaux}
 
-### Rappel : principe d'incertitude temps-énergie
+## Rappel : principe d'incertitude temps-énergie
 
 Dans le cadre du principe d'incertitude temps-énergie, le temps $t$ n'est pas un opérateur d'observable classique (comme l'est la position $x$), mais un paramètre continu d'évolution. L'interprétation rigoureuse de $$\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle$$ s'appuie sur le théorème de Mandelstam-Tamm, qui donne un sens mathématique et physique précis à la relation : $$\Delta E \cdot \Delta t \ge \frac{\hbar}{2}$$
 
-#### 1. La vitesse d'évolution selon Mandelstam-Tamm
+### La vitesse d'évolution selon Mandelstam-Tamm
 
 Dans la formulation quantique rigoureuse, la relation de Mandelstam-Tamm s'écrit : $$\Delta t \ge \frac{\hbar}{2 \Delta E}$$ où $\Delta t$ représente le temps caractéristique minimal requis pour que l'état $\vert\psi(t)\rangle$ évolue vers un état orthogonal (physiquement distinguable ou mesurable), et $\Delta E$ est l'incertitude (l'écart-type) sur le Hamiltonien $\hat{H}$ du système.
 
@@ -1314,7 +1314,7 @@ Dans la formulation quantique rigoureuse, la relation de Mandelstam-Tamm s'écri
 
 - **Le rôle de** $\Delta E$ : La quantité d'énergie (ou de travail) disponible borne la vitesse de transformation de l'état. Si $\Delta E \to 0$, le système se trouve dans un état propre d'énergie statique : $\vert\alpha(t)\vert$ et $\vert\beta(t)\vert$ ne varient plus, le temps dynamique du système est « gelé ».
 
-#### 2. Transposition thermodynamique au nœud minier
+### Transposition thermodynamique au nœud minier
 
 En transposant ce formalisme au modèle stochastique du minage (processus de Poisson sans mémoire) :
 
@@ -1336,7 +1336,7 @@ $\Delta t$ **(La résolution temporelle du consensus) :** Représente l'incertit
 
 Pour réduire l'incertitude sur la fenêtre de résolution $\Delta t$ (découvrir un bloc plus vite et resserrer le temps de consensus), le réseau ou le mineur est contraint d'augmenter $\Delta E$. Il est physiquement et thermodynamiquement impossible d'obtenir une certitude temporelle immédiate ($\Delta t \to 0$) sans injecter une puissance infinie ($\Delta E \to \infty$).
 
-#### 3. Formulation synthétique
+### Formulation synthétique
 
 L'équation d'état $\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle$ décrit le taux de conversion de l'énergie $\Delta E$ en résolution temporelle $\Delta t$. Tant que la mesure (diffusion du bloc sur le réseau P2P) n'a pas eu lieu, le système accumule du travail sous forme d'amplitude de phase $\beta(t)$. Le principe d'incertitude temps-énergie garantit qu'un registre distribué ne peut pas acheter de certitude sur son état temporel sans payer un coût d'incertitude énergétique équivalent.
 
@@ -1344,7 +1344,7 @@ L'équation d'état $\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \
 
 En inversant la polarité classique pour faire de $\vert 0\rangle$ le champ des possibles et de $\vert 1\rangle$ l'événement accompli, le qubit devient le moteur élémentaire de la temporalité.
 
-#### 1. La dualité Potentiel / Actuel (*Potentia* vs *Actua*)
+### La dualité Potentiel / Actuel (*Potentia* vs *Actua*)
 
 Dans cette grille de lecture, le vecteur d'état ne décrit plus seulement une information, mais une épaisseur du présent :
 
@@ -1353,7 +1353,7 @@ Dans cette grille de lecture, le vecteur d'état ne décrit plus seulement une i
 
 La fonction d'état $\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle$ décrit alors la dynamique de transition entre le futur virtuel ($\vert 0\rangle$) et le présent cristallisé ($\vert 1\rangle$).
 
-#### 2. La construction de la structure temporelle
+### La construction de la structure temporelle
 
 Cette formulation permet de définir le temps non pas comme un axe absolu et passif, mais comme le produit d'un consensus thermodynamique :
 
@@ -1361,9 +1361,12 @@ Cette formulation permet de définir le temps non pas comme un axe absolu et pas
 - **La flèche du temps par l'irréversibilité :** La réduction du paquet d'ondes lors de la diffusion du bloc ($\vert\psi\rangle \to \vert 1\rangle$) est une opération non unitaire et irréversible. C'est précisément cette irréversibilité qui fonde la flèche du temps : impossible de restaurer la superposition $\vert 0\rangle$ une fois la preuve de travail mesurée par le réseau.
 - **L'horloge quantico-thermodynamique :** Chaque bloc validé agit comme un « tic-tac » ontologique. Le temps du réseau n'est pas donné par des secondes absolues, mais par la succession discrète de ces effondrements d'états potentiels $\vert 0\rangle$ en états réels $\vert 1\rangle$.
 
-#### 3. Lien direct avec $\Delta E \cdot \Delta t$
+### Lien direct avec $\Delta E \cdot \Delta t$
 
-Dans ce cadre : \* $\Delta t$ est la largeur de l'horizon du présent (la durée de la transition entre le virtuel $\vert 0\rangle$ et l'actuel $\vert 1\rangle$). \* $\Delta E$ est le coût énergétique de la métamorphose (le travail nécessaire pour forcer le possible à devenir réel).
+Dans ce cadre :
+
+* $\Delta t$ est la largeur de l'horizon du présent (la durée de la transition entre le virtuel $\vert 0\rangle$ et l'actuel $\vert 1\rangle$).
+* $\Delta E$ est le coût énergétique de la métamorphose (le travail nécessaire pour forcer le possible à devenir réel).
 
 Pour compresser le temps et faire advenir le présent plus vite ($\Delta t \to 0$), il faut injecter une énergie infinie ($\Delta E \to \infty$). C'est ce principe qui empêche le futur de s'effondrer instantanément dans le présent sans dépense thermodynamique.
 
@@ -1383,37 +1386,33 @@ Dans le cadre de notre structure temporelle, cette temporisation correspond pré
 
 Il faut convertir les constantes physiques en invariants de protocole.
 
-Voici la matrice de traduction directe de la physique aux spécifications d'architecture.
+Voici la matrice de traduction directe de la physique aux spécifications d'architecture :
 
-Spécifications du protocole réseau
+**1. Invariant de fenêtre temporelle ($\Delta t_{slot}$)**
 
-- 
+* **Dérivation :** $\Delta t \ge \frac{\hbar}{2 \Delta E}$
 
-  1.  Invariant de fenêtre temporelle ($\Delta t_{slot}$)
+* **Spécification :** Cadencement adaptatif par étirement. Le protocole doit interdire la finalité instantanée ($\Delta t \to 0$). Si la puissance d'énergie ou de mise en jeu ($\Delta E$) disponible sur le réseau chute, la fenêtre de slot $\Delta t$ doit s'étirer dynamiquement pour maintenir la constante de sécurité $K = \Delta E \cdot \Delta t$.
 
-  - Dérivation : $\Delta t \ge \frac{\hbar}{2 \Delta E}$
-  - Spec : Cadencement adaptatif par étirement. Le protocole doit interdire la finalité instantanée ($\Delta t \to 0$). Si la puissance d'énergie ou de mise en jeu ($\Delta E$) disponible sur le réseau chute, la fenêtre de slot $\Delta t$ doit s'étirer dynamiquement pour maintenir la constante de sécurité $K = \Delta E \cdot \Delta t$.
+**2. État du Mempool en superposition ($\vert\psi(t)\rangle$)**
 
-- 
+* **Dérivation :** $\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle$ avec $\vert 0\rangle = \text{Potentiel}$ et $\vert 1\rangle = \text{Actuel}$.
 
-  2.  État du Mempool en superposition ($\vert\psi(t)\rangle$)
+* **Spécification :** Évaluation probabiliste des transactions. Tant que la fenêtre d'étirement $\Delta t$ n'est pas close, les nœuds ne doivent pas traiter les blocs comme « valides » ou « invalides », mais leur attribuer un poids d'amplitude $w(t) = 1 - e^{-\lambda t}$. Les transactions non confirmées restent dans un état de superposition pondéré par le temps d'étirement accumulé.
 
-  - Dérivation : $\vert\psi(t)\rangle = \alpha(t) \vert 0\rangle + \beta(t) \vert 1\rangle avec \vert 0\rangle = \text{Potentiel}$ et $\vert 1\rangle = \text{Actuel}$.
-  - Spec : Évaluation probabiliste des transactions. Tant que la fenêtre de stretching $\Delta t$ n'est pas close, les nœuds ne doivent pas traiter les blocs comme « valides » ou « invalides », mais leur attribuer un poids d'amplitude $w(t) = 1 - e^{-\lambda t}$. Les transactions non confirmées restent dans un état de superposition pondéré par le temps d'étirement accumulé.
+**3. Condition de mesure et de décohérence (Le consensus)**
 
-- 
+* **Dérivation :** Réduction du paquet d'ondes par couplage avec l'environnement.
 
-  3.  Condition de mesure et de décohérence (Le consensus)
+* **Spécification :** Seuil de diffusion critique. La mesure (l'effondrement de $\vert 0\rangle$ vers $\vert 1\rangle$) ne se fait pas lors du calcul local par le nœud, mais lors de l'atteinte d'un seuil de propagation P2P (ex. réception du bloc par $N_{peers} \ge 2/3$). C'est le réseau qui joue le rôle de l'appareil de mesure irréversible.
 
-  - Dérivation : Réduction du paquet d'ondes par couplage avec l'environnement.
-  - Spec : Seuil de diffusion critique. La mesure (l'effondrement de $\vert 0\rangle$ vers $\vert 1\rangle$) ne se fait pas lors du calcul local par le nœud, mais lors de l'atteinte d'un seuil de propagation P2P (ex. réception du bloc par $N_{peers} \ge 2/3$). C'est le réseau qui joue le rôle de l'appareil de mesure irréversible.
+**4. Barrière d'immuabilité et réordonnancement (Coût de l'histoire)**
 
-- 
+* **Dérivation :** Irréversibilité thermodynamique de la mesure.
 
-  4.  Barrière d'immuabilité et réordonnancement (Coût de l'histoire)
+* **Spécification :** Coût d'annulation de temps. Pour réécrire ou réétirer une tranche de temps $T$ passée (fork alternatif), un nœud malveillant doit prouver la dépense d'une quantité d'énergie $\Delta E_{attaque}$ strictement supérieure à l'intégrale de l'énergie et du temps étiré par le réseau sur cet intervalle.
 
-  - Dérivation : Irréversibilité thermodynamique de la mesure.
-  - Spec : Coût d'annulation de temps. Pour réécrire ou réétirer une tranche de temps T passée (fork alternatif), un nœud malveillant doit prouver la dépense d'une quantité d'énergie $\Delta E_{attaque}$ strictement supérieure à l'intégrale de l'énergie et du temps étiré par le réseau sur cet intervalle :
+---
 
 Cette approche permet d'écrire le cahier des charges d'un consensus où le temps n'est pas lu sur une horloge externe, mais généré par le réseau lui-même via la dépense et l'étirement mesurés dans chaque bloc.
 
@@ -1432,12 +1431,12 @@ En mécanique quantique, les cas limites $\Delta t = 0$ et $\Delta E = 0$ sont d
 
 Lorsque le nombre de mineurs et le hashrate global deviennent colossaux, la loi des grands nombres lisse les fluctuations. L'approche de Pérez-Marco [@perezmarco2022heisenberg] doit donc se lire à travers une théorie des régimes d'échelle :
 
-### 1. Le régime stochastique / quantique (Petites chaînes ou sous-réseaux)
+### Le régime stochastique / quantique (petites chaînes ou sous-réseaux)
 
 - **Mécanique :** La puissance d'énergie $E$ injectée est faible et dispersée. La variance de la loi de Poisson domine largement.
 - **Comportement du temps :** L'incertitude $\Delta t$ est maximale. C'est le cœur du *Proof of Stretching Time* : faute d'énergie disponible pour fixer le réseau, la fenêtre temporelle s'étire obligatoirement pour préserver la sécurité.
 
-### 2. La limite thermodynamique (Réseau massif type Bitcoin)
+### La limite thermodynamique (réseau massif type Bitcoin)
 
 - **Mécanique :** Le système injecte une quantité d'énergie $E$ monstrueuse. À cette échelle, l'agrégation des péta-hashs par seconde fait émerger un comportement macroscopique continu.
 - **Comportement du temps :** L'incertitude relative $\frac{\Delta t}{\langle t \rangle}$ s'atténue. Même si chaque tirage individuel reste un processus de Poisson sans mémoire, la masse de calcul couplée à l'ajustement de difficulté garantit la convergence vers la moyenne cible des 10 minutes. Le temps stochastique décohère pour devenir un temps classique déterministe.
@@ -1465,7 +1464,7 @@ La clé pour modéliser la matrice densité globale du système reste à déterm
 
 # Fiche conceptuelle : agent classique vs agent quantique
 
-## 1. Tableau comparatif des paradigmes
+## Tableau comparatif des paradigmes
 
 | Dimension | Agent Classique (Ex. Nœud Bitcoin) | Agent Quantique (Ex. Agent à superposition d'état) |
 |:-----------------------|:-----------------------|:-----------------------|
@@ -1477,9 +1476,9 @@ La clé pour modéliser la matrice densité globale du système reste à déterm
 
 <hr>
 
-## 2. Analyse détaillée
+## Analyse détaillée
 
-### 2.1. L'Agent Classique : L'automate binaire
+### L'Agent classique : l'automate binaire
 
 Un nœud dans un réseau classique (comme Bitcoin) est modélisé par des états mutuellement exclusifs.
 
@@ -1487,7 +1486,7 @@ Un nœud dans un réseau classique (comme Bitcoin) est modélisé par des états
 - **Absence d'interférence** – L'agent ne possède aucun état intermédiaire riche. Il ne peut pas exploiter la relation de phase entre ses états potentiels.
 - **Coût de synchronisation** – Pour faire converger le réseau, l'agent doit échanger des paquets explicites (messages réseau) ou injecter du travail brut (Proof-of-Work).
 
-### 2.2. L'Agent Quantique : Le système à mémoire de phase
+### L'Agent quantique : Le système à mémoire de phase
 
 Un agent modélisé par une matrice de densité $\hat{\rho}_i$ possède la structure d'un **agent à superposition d'état** : il ne choisit pas entre deux extrêmes, il transporte leur interférence.
 
@@ -1497,7 +1496,7 @@ Un agent modélisé par une matrice de densité $\hat{\rho}_i$ possède la struc
 
 <hr>
 
-## 3. Synthèse pour l'ingénierie des systèmes distribués
+### Synthèse pour l'ingénierie des systèmes distribués
 
 Pour un ingénieur réseau, introduire la matrice de densité permet de passer :
 
